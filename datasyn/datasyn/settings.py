@@ -74,21 +74,33 @@ WSGI_APPLICATION = 'datasyn.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/2.1/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+#     }
+# }
+
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+    'default':{
+        'ENGINE':'django.db.backends.mysql',
+        'NAME':'user',
+        'USER':'root',
+        'PASSWORD':'root',
+        'HOST':'47.97.217.36',
+        'PORT':'3306',
     }
 }
+
 
 # DATABASES = {
 #     'default':{
 #         'ENGING':'django.db.backends.mysql',
 #         'NAME':'user',
 #         'USER':'root',
-#         'PASSWORD':'root',
-#         'HOST':'47.97.217.36',
-#         'PORT':'3306'
+#         'PASSWORD':'12345671',
+#         'HOST':'127.0.0.1',
+#         'PORT':'3306',
 #     }
 # }
 
@@ -128,4 +140,16 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
 
+# STATIC_URL = '/static/'
+# import dj_database_url
+# DATABASES['default'] =  dj_database_url.config()
+
+
+# import os
+# BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+# STATIC_ROOT = 'staticfiles'
 STATIC_URL = '/static/'
+#
+STATICFILES_DIRS = (
+    os.path.join(BASE_DIR, 'static'),
+)

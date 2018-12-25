@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>我的积分</title>
+</head>
+<body>
+    <table>
+    {% for line in jifen %}
+    <tr>
+        <td>{{line.name}}</td>
+        <td>{{line.password}}</td>
+    </tr>
+    {% endfor %}
+    </table>
+</body>
+</html>

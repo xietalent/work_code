@@ -25,7 +25,7 @@ from datasapp.views import info
 urlpatterns = [
     path('admin/', admin.site.urls),
     # url(r'^datas/$',datasy),
-    url(r'^datasapp/$',info),
+    url(r'^datasapp/',include(('datasapp.urls','datasapp'),namespace='datasapp')),
     # url(r'^datas/$',include('datasapp.urls')),
     # url(r'^info/$',include('datasapp.urls')),
     url(r'^index/$', TemplateView.as_view(template_name='index.html')),

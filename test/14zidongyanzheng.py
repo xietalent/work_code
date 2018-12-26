@@ -111,6 +111,7 @@ class SeleniumMiddleware():
 
         client = AipOcr(APP_ID, API_KEY, SECRET_KEY)
 
+
         """
         读取图片
         """
@@ -126,6 +127,7 @@ class SeleniumMiddleware():
 
         image = Image.open(r"E:\code\test\imcode.png")
         # image=PIL.Image.open(r"C:\Users\Administrator\Desktop\5107.jfif")
+
 
         # 灰度化
         image = image.convert('L')

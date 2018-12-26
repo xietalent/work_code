@@ -3,15 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <title>我的积分</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 </head>
 <body>
+
+<div align="center">
     <table>
-    {% for line in jifen %}
-    <tr>
-        <td>{{line.name}}</td>
-        <td>{{line.password}}</td>
-    </tr>
-    {% endfor %}
+        <form action="http://www.baidu.com/" method="get" class="act">
+            用户:&nbsp;<input type="text" name="username" id="" value=""/>
+            <br/>
+            密码:&nbsp;<input type="password" name="password" id="" value=""/>
+            <br/>
+            <input type="reset" value="重新输入"/>
+            <input type="submit" value="数据同步"/>
+
+        </form>
+        {% if messages %}
+        {% for message in messages %}
+            <div class="alert alert-success alert-dismissible" role="alert">
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span
+                        aria-hidden="true">&times;</span></button>
+                <h2>{{ message }}</h2>
+            </div>
+
+        {% endfor %}
+        {% endif %}
+
+
+        {% for line in jifen %}
+            <tr>
+                <h3>积分:{{ line.name }}</h3>
+
+                <h3>记录:{{ line.passwd }}</h3>
+            </tr>
+        {% endfor %}
     </table>
+</div>
+<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js"
+            integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+            crossorigin="anonymous"></script>
 </body>
 </html>

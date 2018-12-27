@@ -13,6 +13,8 @@ import pytesseract.pytesseract
 from urllib import request
 from PIL import Image
 
+import pymysql
+
 class SeleniumMiddleware():
     def __init__(self,timeout=None,service_args=[]):
         self.logger = getLogger(__name__)
@@ -212,6 +214,7 @@ class SeleniumMiddleware():
             print(my_integral)
             print(type(my_integral))
             print(items)
+            # return my_integral
 
 
         #2  打开信用卡积分明细查询
@@ -239,10 +242,13 @@ class SeleniumMiddleware():
             print(bill)
             print(type(bill))
             print(items)
+            # return bill
+        # my_integral = items["my_integral"]
+        # bill = items["bill"]
+        Mysql_input(my_integral,bill)
 
 
         return page_html
-
 
     def parses(self,page_html):
         response = etree.HTML(page_html,etree.HTMLParser)
@@ -250,9 +256,45 @@ class SeleniumMiddleware():
         my_integral = response.xpath(".//b[contains(text(),_积分)]").extract().strip()
         print(my_integral)
 
+class Mysql_input(object):
+    def __init__(self,host="47.97.217.36",user = "root",password="root",database="user",port = 3306,charset="utf8"):
+        self.host = host
+        self.user = user
+        self.password = password
+        self.database = database
+        self.port = port
+        self.charset = charset
+
+
+    def connect(self):
+        self.conn = pymysql.connect(host = self.host,user = self.user,password = self.password,database = self.database,port = self.port,charset = self.charset)
+        self.cursor = self.conn.cursor()
+
+    def set_data(self,my_integral="900",bill="12月消费100积分"):
+        self.connect()
+        try:
+            sql_1 = "INSERT INTO card_score VALUES(4,'{}','{}');".format(my_integral,bill)
+            self.cursor.execute(sql_1)
+            self.conn.commit()
+            print("添加成功")
+            res = self.cursor.fetchall()
+            if res != None:
+                self.close()
+                return res
+        except:
+            self.conn.rollback()
+
+
+    def close(self):
+        self.cursor.close()
+        self.conn.close()
+
 
 if __name__ == '__main__':
-    s = SeleniumMiddleware()
-    s.process_request()
+    # s = SeleniumMiddleware()
+    # s.process_request()
+    mm = Mysql_input()
+    mm.set_data()
+
 
 

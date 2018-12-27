@@ -9,19 +9,21 @@
 </head>
 <body>
 <div align="center">
-    <form action="{% url 'datasapp:info' %}" method="post" class="act">
-        {% csrf_token %}
-        用户:&nbsp;<input type="text" name="username" id="" value=""/>
-        {{ msg_username }}
-        <br/>
-        密码:&nbsp;<input type="password" name="password" id="" value=""/>
-        {{ msg_passwd }}
-        <br/>
-        <input type="reset" value="重新输入"/>
-        <input type="submit" value="数据同步"/>
-    </form>
+{#    <form action="{% url 'datasapp:info' %}" method="post" class="act">#}
+{#        {% csrf_token %}#}
+{#        用户:&nbsp;<input type="text" name="username" id="" value=""/>#}
+{#        {{ msg_username }}#}
+{#        <br/>#}
+{#        密码:&nbsp;<input type="password" name="password" id="" value=""/>#}
+{#        {{ msg_passwd }}#}
+{#        <br/>#}
+{#        <input type="reset" value="重新输入"/>#}
+{#        <input type="submit" value="数据同步"/>#}
+{#    </form>#}
 
     <br>
+
+{#通知成功#}
     {% if messages %}
         {% for message in messages %}
             <div class="alert alert-success alert-dismissible" role="alert">
@@ -29,10 +31,10 @@
                         aria-hidden="true">&times;</span></button>
                 <h2>{{ message }}</h2>
             </div>
-
         {% endfor %}
 
     {% endif %}
+
     <h3>当前积分:{{ points }}</h3>
     <h3>消费明细:暂无消费记录</h3>
     <br>
@@ -49,19 +51,26 @@
         {#    自定义form#}
         <form action="{% url 'datasapp:info' %}" method="post" class="act">
             {% csrf_token %}
-            {{ form.as_p }}
+{#            {{ form.as_p }}#}
+            {{ form.username.errors }}
+            <label >用户:</label><input type="text" name="name" placeholder="证件号/卡号/预留手机号"/>
+            <br>
+            {{ form.passwd.errors }}
+            <label >密码:</label><input type="text" name="passwd" placeholder="请输入密码"/>
             <br>
 
-{#            用户:&nbsp;<input type="text" name="username" id="" value=""/>#}
-{#            {{ msg_username }}#}
-{#            <br/>#}
-{#            密码:&nbsp;<input type="password" name="password" id="" value=""/>#}
-{#            {{ msg_passwd }}#}
             <br/>
             <input type="reset" value="重新输入"/>
             <input type="submit" value="数据同步"/>
 
         </form>
+        {% for line in jifen %}
+            <tr>
+                <h3>你的账号:{{ line.name }}</h3>
+
+                <h3>你的密码:{{ line.passwd }}</h3>
+            </tr>
+        {% endfor %}
 
     </table>
     <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>

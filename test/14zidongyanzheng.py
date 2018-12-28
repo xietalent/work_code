@@ -77,8 +77,8 @@ class SeleniumMiddleware():
         right = location['x'] + size['width']
         bottom = location['y'] + size['height']
 
-        imgages = page_snap_obj.crop((left, top, right, bottom))
-        imgages.save("imcode.png")
+        images = page_snap_obj.crop((left, top, right, bottom))
+        images.save("imcode.png")
         # imgages.show()
         # self.browser.save_screenshot("jifen02.png")
 
@@ -127,12 +127,12 @@ class SeleniumMiddleware():
             "detect_direction": "true",
         }
 
-        image = Image.open(r"E:\code\test\imcode.png")
+        # image = Image.open(r"E:\code\test\imcode.png")
         # image=PIL.Image.open(r"C:\Users\Administrator\Desktop\5107.jfif")
 
 
         # 灰度化
-        image = image.convert('L')
+        image = images.convert('L')
         # 杂点清除掉。只保留黑的和白的。返回像素对象
         data = image.load()
         w, h = image.size
@@ -143,9 +143,11 @@ class SeleniumMiddleware():
                 else:
                     data[i, j] = 0  # 纯黑
         image.save('clean_captcha.png')
+        image.show()
 
         # image2 = get_file_content(r'C:\Users\Administrator\Desktop\7708.jfif')
         image2 = get_file_content('clean_captcha.png')
+
         # print(image2)
         """
         调用数字识别
@@ -170,7 +172,7 @@ class SeleniumMiddleware():
 
         sleep(1)
         # imgcode = input("请输入验证码:{}".format(result))
-        sleep(2)
+        # sleep(2)
         self.browser.find_element_by_id("doLogin_loginNumber").send_keys("6259691129820511")
         self.browser.find_element_by_id("doLogin_loginPwd").send_keys("zc006688")
         # self.browser.find_element_by_name("imgCode").send_keys("{}".format(imgcode))
@@ -234,7 +236,6 @@ class SeleniumMiddleware():
         for div in divs:
             # item = {}
             bill = div.xpath(".//div[@class='details_member']//div[@class='faqBox']/em/text()")
-
             item = {
                 "bill": bill,
             }
@@ -242,19 +243,24 @@ class SeleniumMiddleware():
             print(bill)
             print(type(bill))
             print(items)
-            # return bill
-        # my_integral = items["my_integral"]
-        # bill = items["bill"]
-        Mysql_input(my_integral,bill)
+            return items
 
+        my_integral = items[0]['my_integral']
+        print("my_in"+my_integral)
+        bill = lp = items[1]['bill']
+        print("bill"+bill)
+        ll = Mysql_input(my_integral,bill)
+        ll.set_data()
+        ll.close()
+        sleep(10)
 
         return page_html
 
-    def parses(self,page_html):
-        response = etree.HTML(page_html,etree.HTMLParser)
-        # my_integral = response.xpath(".//div[@class='boundCarBox']/div").extract().strip()
-        my_integral = response.xpath(".//b[contains(text(),_积分)]").extract().strip()
-        print(my_integral)
+    # def parses(self,page_html):
+    #     response = etree.HTML(page_html,etree.HTMLParser)
+    #     # my_integral = response.xpath(".//div[@class='boundCarBox']/div").extract().strip()
+    #     my_integral = response.xpath(".//b[contains(text(),_积分)]").extract().strip()
+    #     print(my_integral)
 
 class Mysql_input(object):
     def __init__(self,host="47.97.217.36",user = "root",password="root",database="user",port = 3306,charset="utf8"):
@@ -273,7 +279,7 @@ class Mysql_input(object):
     def set_data(self,my_integral="900",bill="12月消费100积分"):
         self.connect()
         try:
-            sql_1 = "INSERT INTO card_score VALUES(4,'{}','{}');".format(my_integral,bill)
+            sql_1 = "INSERT INTO card_score VALUES(5,'{}','{}');".format(my_integral,bill)
             self.cursor.execute(sql_1)
             self.conn.commit()
             print("添加成功")
@@ -291,10 +297,10 @@ class Mysql_input(object):
 
 
 if __name__ == '__main__':
-    # s = SeleniumMiddleware()
-    # s.process_request()
-    mm = Mysql_input()
-    mm.set_data()
+    s = SeleniumMiddleware()
+    s.process_request()
+    # mm =Mysql_input()
+    # mm.set_data()
 
 
 

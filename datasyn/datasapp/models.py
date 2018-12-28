@@ -19,7 +19,8 @@ class Integral(models.Model):
     #积分和消费记录
     score = models.CharField(max_length=100)
     record = models.CharField(max_length=1000)
-    print("积分"+score)
+
+    print("积分"+str(score))
     print(record)
     class Meta:
         app_label='datasapp'

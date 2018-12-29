@@ -17,7 +17,7 @@
 {#            <br/>#}
 {#            <input type="reset" value="重新输入"/>#}
 {#            <input type="submit" value="数据同步"/>#}
-            <h1>show_info</h1>
+            <h1>您的个人账单</h1>
 
         </form>
         {% if messages %}
@@ -34,9 +34,9 @@
 
         {% for line in jifen %}
             <tr>
-                <h3>积分:{{ line.score }}</h3>
+                <h3>当前积分:{{ line.score }}</h3>
 
-                <h3>记录:{{ line.record }}</h3>
+                <h3>消费记录:{{ line.record }}</h3>
             </tr>
         {% endfor %}
     </table>

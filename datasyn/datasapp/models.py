@@ -15,7 +15,7 @@ class User(models.Model):
         app_label='datasapp'
         db_table ='user'
 
-class Integral(models.Model):
+class Card_score(models.Model):
     #积分和消费记录
     score = models.CharField(max_length=100)
     record = models.CharField(max_length=1000)

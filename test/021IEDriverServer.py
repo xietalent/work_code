@@ -5,9 +5,40 @@
 # browser.get('https://bank.pingan.com.cn/m/main/index.html')
 #
 
-items = [{'my_integral': '0积分'}, {'bill': []}]
+# items = [{'my_integral': '0积分'}, {'bill': []}]
+# ll = items[0]['my_integral']
+# lp = items[1]['bill']
+# print(lp)
+# print(ll)
+# print(
+#     ll.lstrip()
+# )
 
-ll = items[0]['my_integral']
-lp = items[1]['bill']
-print(lp)
-print(ll)
+# my_in = {'my_integral': '0积分'}
+# my_in = my_in["my_integral"]
+# print(my_in)
+
+from enum import Enum
+
+class Color(Enum):
+    red = 1
+    orange = 2
+    yellow = 3
+    green = 4
+    blue = 5
+    indigo = 6
+    purple = 7
+
+
+print(Color['red'])
+print(Color(2))
+
+ss = Color.red.name
+ss = Color.red.value
+
+print(
+    ss
+)
+
+for c in Color:
+    print(c)

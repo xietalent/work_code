@@ -188,30 +188,31 @@ class SeleniumMiddleware():
             # return items
 
         items = [{'my_integral': '0积分'}, {'bill': []}]
+        # score = items[0]['my_integral']
+        # record = items[1]['bill']
+        # if record == []:
+        #     record = "暂无消费记录"
+        #
+        # items = {
+        #     "score":score,
+        #     "record": record,
+        # }
+        # print(items)
+        # insert_ = Card_score.objects.create(items)
+
+
+        # 创建线程存储数据
         score = items[0]['my_integral']
+        # print("my_in"+my_integral)
         record = items[1]['bill']
         if record == []:
-            record = "暂无消费记录"
+            record = "当前没有消费记录"
+        ss = Mysql_input()
+        t2 = Thread(target=ss.set_data, args=(score, record,))
+        print("启动线程2")
+        t2.start()
 
-        items = {
-            "score":score,
-            "record": record,
-        }
-        print(items)
-        insert_ = Card_score.objects.create(items)
-
-
-        #创建线程存储数据
-        # my_integral = items[0]['my_integral']
-        # # print("my_in"+my_integral)
-        # bill = items[1]['bill']
-        # if bill == []:
-        #     bill = "当前没有消费记录"
-        # ss = Mysql_input()
-        # t2 = Thread(target=ss.set_data, args=(my_integral, bill,))
-        # print("启动线程2")
-        # t2.start()
-        # insert_ = Integral.objects.create(**items)
+        # insert_ = Card_score.objects.create(**items)
         return page_html
 
 class Mysql_input(object):

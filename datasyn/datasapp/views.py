@@ -67,7 +67,7 @@ def info(request):
             # 启动爬虫
             sp = SeleniumMiddleware(name,passwd)
             sp.process_request()
-            sleep(30)
+            sleep(5)
             # sp.close()
 
             # 用户密码存入数据库
@@ -96,7 +96,7 @@ def show_info(request):
     # return render(request,'bank/info.html',{"jifen":jifen})
     messages.success(request, "信息" + "同步成功")
     # jifen = models.User.objects.all()
-    jifen = Integral.objects.all()
+    jifen = Card_score.objects.all()
 
     return render(request, 'bank/show_info.html', {"jifen": jifen})
     # return render(request,'bank/show_info.html',locals())

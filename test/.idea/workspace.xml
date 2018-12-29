@@ -4,26 +4,12 @@
     <list default="true" id="c2bda450-287f-4bbb-88c8-67320b49c27e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/../datasyn/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../datasyn/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../datasyn/clean_captcha.png" beforeDir="false" afterPath="$PROJECT_DIR$/../datasyn/clean_captcha.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../datasyn/datasapp/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/../datasyn/datasapp/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../datasyn/datasapp/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/../datasyn/datasapp/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../datasyn/datasapp/spider_huaxia.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../datasyn/datasapp/templates/bank/show_info.html" beforeDir="false" afterPath="$PROJECT_DIR$/../datasyn/datasapp/templates/bank/show_info.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../datasyn/datasapp/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/../datasyn/datasapp/tests.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../datasyn/datasapp/Hxspider.py" beforeDir="false" afterPath="$PROJECT_DIR$/../datasyn/datasapp/Hxspider.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../datasyn/datasapp/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/../datasyn/datasapp/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../datasyn/datasyn/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/../datasyn/datasyn/__init__.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../datasyn/feng.png" beforeDir="false" afterPath="$PROJECT_DIR$/../datasyn/feng.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../datasyn/imcode.png" beforeDir="false" afterPath="$PROJECT_DIR$/../datasyn/imcode.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../datasyn/jifen001.png" beforeDir="false" afterPath="$PROJECT_DIR$/../datasyn/jifen001.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../datasyn/jifen03.png" beforeDir="false" afterPath="$PROJECT_DIR$/../datasyn/jifen03.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/021IEDriverServer.py" beforeDir="false" afterPath="$PROJECT_DIR$/021IEDriverServer.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/14zidongyanzheng.py" beforeDir="false" afterPath="$PROJECT_DIR$/14zidongyanzheng.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/clean_captcha.png" beforeDir="false" afterPath="$PROJECT_DIR$/clean_captcha.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/feng.png" beforeDir="false" afterPath="$PROJECT_DIR$/feng.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/imcode.png" beforeDir="false" afterPath="$PROJECT_DIR$/imcode.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jifen001.png" beforeDir="false" afterPath="$PROJECT_DIR$/jifen001.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jifen03.png" beforeDir="false" afterPath="$PROJECT_DIR$/jifen03.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/re模块.py" beforeDir="false" afterPath="$PROJECT_DIR$/re模块.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -139,7 +125,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/14zidongyanzheng.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="442">
@@ -184,10 +170,10 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/021IEDriverServer.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="242">
+            <state relative-caret-position="542">
               <caret line="37" lean-forward="true" selection-start-line="37" selection-end-line="37" />
             </state>
           </provider>
@@ -852,6 +838,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/021IEDriverServer.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="542">
+          <caret line="37" lean-forward="true" selection-start-line="37" selection-end-line="37" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/14zidongyanzheng.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="442">
@@ -862,13 +855,6 @@
             <marker date="1546072248585" expanded="true" signature="9665:10072" ph="..." />
             <marker date="1546072248585" expanded="true" signature="10236:10299" ph="..." />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/021IEDriverServer.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="37" lean-forward="true" selection-start-line="37" selection-end-line="37" />
         </state>
       </provider>
     </entry>

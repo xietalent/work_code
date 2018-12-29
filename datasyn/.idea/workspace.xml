@@ -4,26 +4,12 @@
     <list default="true" id="70ea17be-6bdc-4143-9000-b91015d485b7" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/clean_captcha.png" beforeDir="false" afterPath="$PROJECT_DIR$/clean_captcha.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/datasapp/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/datasapp/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/datasapp/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/datasapp/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/datasapp/spider_huaxia.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/datasapp/templates/bank/show_info.html" beforeDir="false" afterPath="$PROJECT_DIR$/datasapp/templates/bank/show_info.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/datasapp/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/datasapp/tests.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/datasapp/Hxspider.py" beforeDir="false" afterPath="$PROJECT_DIR$/datasapp/Hxspider.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/datasapp/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/datasapp/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/datasyn/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/datasyn/__init__.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/feng.png" beforeDir="false" afterPath="$PROJECT_DIR$/feng.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/imcode.png" beforeDir="false" afterPath="$PROJECT_DIR$/imcode.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/jifen001.png" beforeDir="false" afterPath="$PROJECT_DIR$/jifen001.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jifen03.png" beforeDir="false" afterPath="$PROJECT_DIR$/jifen03.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../test/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../test/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../test/021IEDriverServer.py" beforeDir="false" afterPath="$PROJECT_DIR$/../test/021IEDriverServer.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../test/14zidongyanzheng.py" beforeDir="false" afterPath="$PROJECT_DIR$/../test/14zidongyanzheng.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../test/clean_captcha.png" beforeDir="false" afterPath="$PROJECT_DIR$/../test/clean_captcha.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../test/feng.png" beforeDir="false" afterPath="$PROJECT_DIR$/../test/feng.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../test/imcode.png" beforeDir="false" afterPath="$PROJECT_DIR$/../test/imcode.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../test/jifen001.png" beforeDir="false" afterPath="$PROJECT_DIR$/../test/jifen001.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../test/jifen03.png" beforeDir="false" afterPath="$PROJECT_DIR$/../test/jifen03.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../test/re模块.py" beforeDir="false" afterPath="$PROJECT_DIR$/../test/re模块.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -124,7 +110,7 @@
           <entry key="cell" value="13" />
           <entry key="dummy" value="1" />
           <entry key="html" value="499" />
-          <entry key="py" value="2971" />
+          <entry key="py" value="2981" />
           <entry key="py@datasyn" value="305" />
           <entry key="sql" value="1" />
           <entry key="txt" value="18" />
@@ -135,7 +121,7 @@
           <entry key="CommandLine" value="251" />
           <entry key="HTML" value="499" />
           <entry key="PLAIN_TEXT" value="73" />
-          <entry key="Python" value="2971" />
+          <entry key="Python" value="2981" />
           <entry key="Scratch" value="14" />
         </counts>
       </usages-collector>
@@ -143,11 +129,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/datasapp/Hxspider.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2900">
-              <caret line="76" column="18" selection-start-line="76" selection-start-column="18" selection-end-line="76" selection-end-column="18" />
+            <state relative-caret-position="125">
+              <caret line="209" column="8" selection-start-line="209" selection-start-column="8" selection-end-line="209" selection-end-column="8" />
               <folding>
                 <element signature="e#0#30#0" expanded="true" />
               </folding>
@@ -164,11 +150,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/datasapp/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="81" column="52" selection-start-line="81" selection-start-column="52" selection-end-line="81" selection-end-column="52" />
+            <state relative-caret-position="325">
+              <caret line="73" column="36" lean-forward="true" selection-start-line="73" selection-start-column="36" selection-end-line="73" selection-end-column="36" />
               <folding>
                 <element signature="e#0#35#0" expanded="true" />
               </folding>
@@ -228,8 +214,8 @@
         <option value="$PROJECT_DIR$/datasapp/templates/bank/show_info.html" />
         <option value="$PROJECT_DIR$/datasapp/tests.py" />
         <option value="$PROJECT_DIR$/datasapp/models.py" />
-        <option value="$PROJECT_DIR$/datasapp/views.py" />
         <option value="$PROJECT_DIR$/datasapp/Hxspider.py" />
+        <option value="$PROJECT_DIR$/datasapp/views.py" />
       </list>
     </option>
   </component>
@@ -240,8 +226,8 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="766" />
-    <option name="y" value="117" />
+    <option name="x" value="268" />
+    <option name="y" value="74" />
     <option name="width" value="1185" />
     <option name="height" value="917" />
   </component>
@@ -322,7 +308,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.tests">
+  <component name="RunManager" selected="Django server.datasyn">
     <configuration name="14zidongyanzheng" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="datasyn" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -465,7 +451,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="305" y="72" width="1185" height="917" extended-state="1" />
+    <frame x="268" y="74" width="1185" height="917" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.22222222" />
@@ -731,20 +717,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/datasapp/tests.py">
+    <entry file="file://D:/virtu/spiderenv/Lib/site-packages/django/db/models/query.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="325">
-          <caret line="13" column="3" lean-forward="true" selection-start-line="13" selection-start-column="3" selection-end-line="13" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/datasapp/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="81" column="52" selection-start-line="81" selection-start-column="52" selection-end-line="81" selection-end-column="52" />
-          <folding>
-            <element signature="e#0#35#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="237">
+          <caret line="408" column="41" lean-forward="true" selection-start-line="408" selection-start-column="41" selection-end-line="408" selection-end-column="41" />
         </state>
       </provider>
     </entry>
@@ -760,19 +736,29 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://D:/virtu/spiderenv/Lib/site-packages/django/db/models/query.py">
+    <entry file="file://$PROJECT_DIR$/datasapp/tests.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="237">
-          <caret line="408" column="41" lean-forward="true" selection-start-line="408" selection-start-column="41" selection-end-line="408" selection-end-column="41" />
+        <state relative-caret-position="325">
+          <caret line="13" column="3" lean-forward="true" selection-start-line="13" selection-start-column="3" selection-end-line="13" selection-end-column="3" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/datasapp/Hxspider.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2900">
-          <caret line="76" column="18" selection-start-line="76" selection-start-column="18" selection-end-line="76" selection-end-column="18" />
+        <state relative-caret-position="125">
+          <caret line="209" column="8" selection-start-line="209" selection-start-column="8" selection-end-line="209" selection-end-column="8" />
           <folding>
             <element signature="e#0#30#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/datasapp/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="325">
+          <caret line="73" column="36" lean-forward="true" selection-start-line="73" selection-start-column="36" selection-end-line="73" selection-end-column="36" />
+          <folding>
+            <element signature="e#0#35#0" expanded="true" />
           </folding>
         </state>
       </provider>

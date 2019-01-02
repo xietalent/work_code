@@ -81,7 +81,7 @@ class SeleniumMiddleware():
 
         images = page_snap_obj.crop((left, top, right, bottom))
         images.save("imcode.png")
-        # imgages.show()
+        images.show()
         # self.browser.save_screenshot("jifen02.png")
 
 
@@ -94,14 +94,14 @@ class SeleniumMiddleware():
         # # 杂点清除掉。只保留黑的和白的。返回像素对象
         # data = image.load()
         # w, h = image.size
-        # for i in range(w):
-        #     for j in range(h):
-        #         if data[i, j] > 125:
-        #             data[i, j] = 255  # 纯白
-        #         else:
-        #             data[i, j] = 0  # 纯黑
-        # image.save('clean_captcha.png')
-        # image.show()
+        #         # for i in range(w):
+        #         #     for j in range(h):
+        #         #         if data[i, j] > 125:
+        #         #             data[i, j] = 255  # 纯白
+        #         #         else:
+        #         #             data[i, j] = 0  # 纯黑
+        #         # image.save('clean_captcha.png')
+        #         # image.show()
 
         # ""
         # 你的
@@ -119,6 +119,10 @@ class SeleniumMiddleware():
         """
         读取图片
         """
+
+
+
+
         def get_file_content(filePath):
             with open(filePath, 'rb') as fp:
                 return fp.read()

@@ -18,27 +18,42 @@
 # my_in = my_in["my_integral"]
 # print(my_in)
 
-from enum import Enum
+# from enum import Enum
+#
+# class Color(Enum):
+#     red = 1
+#     orange = 2
+#     yellow = 3
+#     green = 4
+#     blue = 5
+#     indigo = 6
+#     purple = 7
+#
+#
+# print(Color['red'])
+# print(Color(2))
+#
+# ss = Color.red.name
+# ss = Color.red.value
+#
+# print(
+#     ss
+# )
+#
+# for c in Color:
+#     print(c)
 
-class Color(Enum):
-    red = 1
-    orange = 2
-    yellow = 3
-    green = 4
-    blue = 5
-    indigo = 6
-    purple = 7
+data1 = {'name': '11111111111', 'passwd': 'zc006688', 'img_code': '000999'}
 
+name = data1["name"]
+print(name)
 
-print(Color['red'])
-print(Color(2))
+passwd = data1["passwd"]
 
-ss = Color.red.name
-ss = Color.red.value
+img_code = data1["img_code"]
+data2 = {
+    "name":name,
+    "passwd":passwd
+}
+print(data2)
 
-print(
-    ss
-)
-
-for c in Color:
-    print(c)

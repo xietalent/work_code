@@ -18,11 +18,12 @@ Including another URLconf
 from django.conf.urls import url
 # from django.urls import path
 # from datasapp.views import datasy
-from .views import info,show_info
+from .views import info,show_info,login
 
 urlpatterns = [
     # url(r'',datasy),
     url(r'^info/$',info,name='info'),
-    url(r'^show_info/$',show_info,name='show_info')
+    url(r'^show_info/$',show_info,name='show_info'),
+    url(r'^login/$',login,name='login')
     # url(r'^datas/$',datasy),
 ]

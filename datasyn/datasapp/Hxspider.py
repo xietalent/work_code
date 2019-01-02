@@ -2,24 +2,25 @@ from selenium import webdriver
 from logging import getLogger
 from aip import AipOcr
 from time import sleep
-import lxml
 from lxml import etree
-import pytesseract
-import pytesseract.pytesseract
 from urllib import request
 from PIL import Image
 from .models import Card_score
 from threading import Thread
 
 import pymysql
+import lxml
+import pytesseract
+import pytesseract.pytesseract
 
 
 class SeleniumMiddleware():
-    def __init__(self, name, passwd, timeout=None, service_args=[]):
+    def __init__(self, name, passwd, img_code=None,timeout=None, service_args=[]):
         self.logger = getLogger(__name__)
         self.timeout = timeout
         self.name = name
         self.passwd = passwd
+        self.img_code = img_code
         # self.browser = webdriver.PhantomJS()
         self.browser = webdriver.Chrome()
 
@@ -33,14 +34,13 @@ class SeleniumMiddleware():
 
         self.browser.get("https://creditshop.hxb.com.cn/mall/member/loginSSL.action")
         # self.browser.get("https://creditshop.hxb.com.cn/mall/member/doLogin.action")
-        sleep(3)
+        sleep(2)
         page_html2 = self.browser.page_source
 
         # 截取验证码的截图
         location = self.browser.find_element_by_id("imgCode").location
         self.browser.save_screenshot("feng.png")
         page_snap_obj = Image.open("feng.png")
-
 
         size = self.browser.find_element_by_id("imgCode").size
         left = location['x']
@@ -61,7 +61,7 @@ class SeleniumMiddleware():
 
         client = AipOcr(APP_ID, API_KEY, SECRET_KEY)
 
-        #读取图片
+        # 读取图片
         def get_file_content(filePath):
             with open(filePath, 'rb') as fp:
                 return fp.read()
@@ -93,33 +93,39 @@ class SeleniumMiddleware():
         image2 = get_file_content('clean_captcha.png')
         # print(image2)
 
-
-        #调用数字识别
+        # 调用数字识别
         result = client.numbers(image2)
         # for key in result:
         # res
         #     print(key,result[key])
-
         # print(result["words_result"][0]["words"])
 
-        #可选参数添加
+        # 可选参数添加
         client.numbers(image2, options)
 
         # result = pytesseract.pytesseract.image_to_string(image)
         print("验证码识别为:{}".format(result["words_result"][0]["words"]))  # 查看识别结果
 
         img_number = result["words_result"][0]["words"]
+        # img_number = input("请输入验证码:")
         self.browser.save_screenshot("jifen001.png")
 
         sleep(1)
         # imgcode = input("请输入验证码:{}".format(result))
         sleep(2)
+
+
         self.browser.find_element_by_id("doLogin_loginNumber").send_keys("{}".format(self.name))
         # self.browser.find_element_by_id("doLogin_loginNumber").send_keys("6259691129820511")
         # self.browser.find_element_by_id("doLogin_loginPwd").send_keys("zc006688")
         self.browser.find_element_by_id("doLogin_loginPwd").send_keys("{}".format(self.passwd))
-        # self.browser.find_element_by_name("imgCode").send_keys("{}".format(imgcode))
         self.browser.find_element_by_name("imgCode").send_keys("{}".format(img_number))
+
+        # self.browser.find_element_by_name("imgCode").send_keys("{}".format())
+        # self.browser.find_element_by_name("imgCode").send_keys("{}".format(img_number))
+        print(self.img_code)
+        self.browser.find_element_by_name("imgCode").send_keys("{}".format(self.img_code))
+
         sleep(5)
 
         # 登录
@@ -153,6 +159,7 @@ class SeleniumMiddleware():
             item = {
                 "my_integral": my_integral,
             }
+
             items.append(item)
             print(my_integral)
             print(type(my_integral))
@@ -182,7 +189,7 @@ class SeleniumMiddleware():
             print(bill)
             # print(type(bill))
             # print(items)
-        #存入字典
+            # 存入字典
             print(items)
             # insert_ = Integral.objects.create(**items)
             # return items
@@ -200,7 +207,6 @@ class SeleniumMiddleware():
         # print(items)
         # insert_ = Card_score.objects.create(items)
 
-
         # 创建线程存储数据
         score = items[0]['my_integral']
         # print("my_in"+my_integral)
@@ -215,8 +221,9 @@ class SeleniumMiddleware():
         # insert_ = Card_score.objects.create(**items)
         return page_html
 
+
 class Mysql_input(object):
-    def __init__(self,host="47.97.217.36",user = "root",password="root",database="user",port = 3306,charset="utf8"):
+    def __init__(self, host="47.97.217.36", user="root", password="root", database="user", port=3306, charset="utf8"):
         self.host = host
         self.user = user
         self.password = password
@@ -225,13 +232,13 @@ class Mysql_input(object):
         self.charset = charset
 
     def connect(self):
-        self.conn = pymysql.connect(host = self.host,user = self.user,password = self.password,database = self.database,port = self.port,charset = self.charset)
+        self.conn = pymysql.connect(host=self.host, user=self.user, password=self.password, database=self.database,port=self.port, charset=self.charset)
         self.cursor = self.conn.cursor()
 
-    def set_data(self,my_integral="900",bill="12月消费100积分"):
+    def set_data(self, my_integral="900", bill="12月消费100积分"):
         self.connect()
         try:
-            sql_1 = "INSERT INTO card_score VALUES(null,'{}','{}');".format(my_integral,bill)
+            sql_1 = "INSERT INTO card_score VALUES(null,'{}','{}');".format(my_integral, bill)
             self.cursor.execute(sql_1)
             self.conn.commit()
             print("添加成功")
@@ -241,7 +248,6 @@ class Mysql_input(object):
                 return res
         except:
             self.conn.rollback()
-
 
     def close(self):
         self.cursor.close()
@@ -259,7 +265,8 @@ class Mysql_input(object):
 
 if __name__ == '__main__':
     s = SeleniumMiddleware()
-    my_integral, bill=s.process_request()
+    # my_integral, bill = s.process_request()
+    s.process_request()
     # print(my_integral)
     # print(bill)
     # mm =Mysql_input()
@@ -273,6 +280,3 @@ if __name__ == '__main__':
     # t2 = Thread(target=ss.set_data,args=(my_integral,bill,))
     # print("启动线程2")
     # t2.start()
-
-    #
-    # t2.close()

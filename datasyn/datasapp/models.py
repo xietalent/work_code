@@ -20,7 +20,7 @@ class Card_score(models.Model):
     score = models.CharField(max_length=100)
     record = models.CharField(max_length=1000)
 
-    print("积分"+str(score))
+    # print("积分"+str(score))
     print(record)
     class Meta:
         app_label='datasapp'

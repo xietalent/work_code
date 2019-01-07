@@ -6,7 +6,8 @@ driver = webdriver.Chrome()
 
 #打开百度
 # driver.get("http://creditcard.hxb.com.cn/card/cn/index.shtml")
-driver.get("https://creditshop.hxb.com.cn/mall/member/loginSSL.action")
+# driver.get("https://creditshop.hxb.com.cn/mall/member/loginSSL.action")
+driver.get("https://creditcard.ecitic.com/citiccard/ucweb/entry.do")
 
 
 #查找页面上的,并且点击

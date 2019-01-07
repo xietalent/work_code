@@ -22,8 +22,9 @@ class SeleniumMiddleware():
         # self.name = name
         # self.passwd = passwd
         # self.img_code = img_code
-        self.browser = webdriver.PhantomJS()
-        # self.browser = webdriver.Chrome()
+
+        # self.browser = webdriver.PhantomJS()
+        self.browser = webdriver.Chrome()
 
     def __del__(self):
         self.browser.close()
@@ -32,6 +33,7 @@ class SeleniumMiddleware():
     def process_request(self):
         self.logger.debug('PhantomJS is Starting')
         # page = request.meta.get("https://creditshop.hxb.com.cn/mall/member/loginSSL.action")
+
         self.browser.get("https://creditshop.hxb.com.cn/mall/member/loginSSL.action")
         # self.browser.get("https://creditshop.hxb.com.cn/mall/member/doLogin.action")
         sleep(2)
@@ -50,43 +52,56 @@ class SeleniumMiddleware():
 
         images = page_snap_obj.crop((left, top, right, bottom))
         # sleep(1)
-        # images.save("imcode.png")
+        images.save("imcode.png")
         # image1 = images.save("./static/img/imgcode.png")
-        images.save("./static/img/imgcode.png")
+        # images.save("./static/img/imgcode.png")
         # images.show()
         brows = self.browser
         sleep(20)
         print("继续爬取")
         # print("brows的type:"+ type(brows))
-        return  Logindo()
+        Lo= Logindo(brows)
+        Lo.process_req()
+
 
 
 class Logindo():
-    def __init__(self,name,passwd,img_number,brows):
-    # def __init__(self,brows):
-        self.name = name
-        self.passwd = passwd
-        self.img_number = img_number
+    # def __init__(self,name,passwd,img_number,brows):
+    def __init__(self,brows):
+        # self.name = name
+        # self.passwd = passwd
+        # self.img_number = img_number
         self.browser = brows
 
     def process_req(self):
         "select * from test_limit order by id DESC limit 1;"
         # 读取图片
-        img_number =self.img_number
+        ss = Mysql_input()
+
+        name,passwd,img_number = ss.get_data()
+
+        # img_number =self.img_number
+        img_number =img_number
         # img_number = input("请输入验证码:")
         self.browser.save_screenshot("jifen001.png")
 
         sleep(1)
         # imgcode = input("请输入验证码:{}".format(result))
-        sleep(2)
-        self.browser.find_element_by_id("doLogin_loginNumber").send_keys("{}".format(self.name))
+        # sleep(2)
+        # self.browser.find_element_by_id("doLogin_loginNumber").send_keys("{}".format(self.name))
+        self.browser.find_element_by_id("doLogin_loginNumber").send_keys("{}".format(name))
         # self.browser.find_element_by_id("doLogin_loginNumber").send_keys("6259691129820511")
         # self.browser.find_element_by_id("doLogin_loginPwd").send_keys("zc006688")
-        self.browser.find_element_by_id("doLogin_loginPwd").send_keys("{}".format(self.passwd))
+        # self.browser.find_element_by_id("doLogin_loginPwd").send_keys("{}".format(self.passwd))
+        self.browser.find_element_by_id("doLogin_loginPwd").send_keys("{}".format(passwd))
         self.browser.find_element_by_name("imgCode").send_keys("{}".format(img_number))
 
-        sleep(5)
+        # self.browser.find_element_by_name("imgCode").send_keys("{}".format())
+        # self.browser.find_element_by_name("imgCode").send_keys("{}".format(img_number))
+        # print(self.img_code)
+        # self.browser.find_element_by_name("imgCode").send_keys("{}".format(self.img_code))
 
+        sleep(5)
 
         # 登录
         self.browser.find_element_by_id("doLogin_0").click()
@@ -128,6 +143,7 @@ class Logindo():
         # 2  打开信用卡积分明细查询
         self.browser.find_element_by_xpath("//div[(@class='details_member_left_box')][1]//li[2]/a").click()
         sleep(3)
+
         # 点击查询
         self.browser.find_element_by_class_name("inputBoxSubmit").click()
         sleep(2)
@@ -200,7 +216,11 @@ class Mysql_input(object):
         sql_2 = "select * from user1 order by id DESC limit 1;"
         self.cursor.execute(sql_2)
         res = self.cursor.fetchone()
-        return res
+        print(res)
+        name = res[1]
+        passwd = res[2]
+        img_number = res[3]
+        return name,passwd,img_number
 
     def set_data(self, my_integral="900", bill="12月消费100积分"):
         self.connect()
@@ -232,6 +252,8 @@ class Mysql_input(object):
 
 
 if __name__ == '__main__':
-    s = SeleniumMiddleware("6259691129820511","zc006688")
+    # s = SeleniumMiddleware("6259691129820511","zc006688")
+    s = SeleniumMiddleware()
     # my_integral, bill = s.process_request()
     s.process_request()
+

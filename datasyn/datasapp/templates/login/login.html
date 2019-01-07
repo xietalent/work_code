@@ -7,15 +7,35 @@
 <body>
 <table>
     <div align="center">
-        <form action="{%  url 'datasapp:info' %}" method="post" class="act">
+            <h2>请登录</h2>
+{#        <form action="{%  url 'datasapp:info' %}" method="post" class="act">#}
+{#            {% csrf_token %}#}
+{#            <h2>登陆</h2>#}
+{#            <br>#}
+{#            <label for="">账户:</label><input type="text">#}
+{#            <br>#}
+{#            <label for="">密码:</label><input type="text">#}
+{#            <br>#}
+{#            <input type="submit" value="登陆">#}
+{#        </form>#}
+        <form action="{% url 'datasapp:login' %}" method="post" class="act">
             {% csrf_token %}
-            <h2>登陆</h2>
+{#            {{ form.as_p }}#}
+            {{ form.username.errors }}
+            <label >用户:</label><input type="text" name="name" placeholder="证件号/卡号/预留手机号"/>
             <br>
-            <label for="">账户:</label><input type="text">
+            {{ form.passwd.errors }}
+            <label >密码:</label><input type="text" name="passwd" placeholder="请输入密码"/>
             <br>
-            <label for="">密码:</label><input type="text">
-            <br>
+{#            <label >验证码:</label><input type="text" name="img_code" placeholder="请输入验证码" size="15"/>#}
+{#            <img src="/static/img/imgcode.png" alt="">#}
+            <br/>
+            <input type="submit" value="注册"/>
+
+{#            <input type="submit" value="登陆" href="{% url 'datasapp:info' %}">#}
             <input type="submit" value="登陆">
+             <a href="{% url 'datasapp:info' %}">华夏银行信用卡同步</a>
+
         </form>
     </div>
 </table>

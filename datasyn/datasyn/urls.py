@@ -16,10 +16,10 @@ Including another URLconf
 from django.contrib import admin
 from django.conf.urls import url,include
 from django.views.generic import TemplateView
-
 from django.urls import path
 # from datasapp.views import datasy
 from datasapp.views import info
+
 
 
 urlpatterns = [
@@ -32,3 +32,5 @@ urlpatterns = [
     # url(r'')
     # url(r'^datas/$',include('datasapp.urls')),
 ]
+
+

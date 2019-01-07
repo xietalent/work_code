@@ -23,17 +23,6 @@
 
     <br>
 
-{#通知成功#}
-{#    {% if messages %}#}
-{#        {% for message in messages %}#}
-{#            <div class="alert alert-success alert-dismissible" role="alert">#}
-{#                <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span#}
-{#                        aria-hidden="true">&times;</span></button>#}
-{#                <h2>{{ message }}</h2>#}
-{#            </div>#}
-{#        {% endfor %}#}
-{##}
-{#    {% endif %}#}
 
 {#    <h3>当前积分:{{ points }}</h3>#}
     <h2>账号填写</h2>
@@ -50,8 +39,8 @@
 {#        {% endfor %}#}
 
         {#    自定义form#}
-{#        <form action="{% url 'datasapp:info' %}" method="post" class="act">#}
-        <form action="{% url 'datasapp:show_info' %}" method="post" class="act">
+        <form action="{% url 'datasapp:info' %}" method="post" class="act">
+{#        <form action="{% url 'datasapp:show_info' %}" method="post" class="act">#}
             {% csrf_token %}
 {#            {{ form.as_p }}#}
             {{ form.username.errors }}
@@ -64,20 +53,18 @@
             <img src="/static/img/imgcode.png" alt="">
 
             <br>
-{#                <form action="{% url 'datasapp:info' %}"  method="post" class="act">#}
-{#                    <label >验证码:</label><input type="text" name="img_code" placeholder="请输入验证码"/>#}
-{##}
-{#                </form>#}
-{#            <br>#}
+
 
             <br/>
             <input type="reset" value="重新输入"/>
-            <input type="submit" value="数据同步"/>
+            <input type="submit" value="数据同步" href="show_info"/>
+
 
         </form>
+{#        <a href="{% url 'show_info' %}"><input type="submit" value="数据同步"/></a>#}
         <br>
 
-{#        {% for line in jifen %}#}
+{#        {% for line in users %}#}
 {#            <tr>#}
 {#                <h3>你的账号:{{ line.name }}</h3>#}
 {##}

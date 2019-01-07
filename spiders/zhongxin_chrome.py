@@ -6,26 +6,30 @@ from scrapy.http import HtmlResponse
 from logging import getLogger
 from aip import AipOcr
 from time import sleep
+from selenium.webdriver.chrome.options import Options
 import lxml
 from lxml import etree
 import pytesseract
 import pytesseract.pytesseract
 from urllib import request
 from PIL import Image
-# from mysqlconn import Mysql_input
-from threading import Thread
-
-import pymysql
 
 class SeleniumMiddleware():
     def __init__(self,timeout=None,service_args=[]):
         self.logger = getLogger(__name__)
         self.timeout = timeout
         # self.browser = webdriver.PhantomJS()
-        self.browser = webdriver.Chrome()
-        # self.browser.set_window_rect(1400,700)
-        # self.browser.set_page_load_timeout(self.timeout)
-        # self.wait = WebDriverWait(self.browser,self.timeout)
+        self.browser_url = r'C:\Users\Administrator\AppData\Roaming\360se6\Application\360se.exe'
+
+        self.chrome_options = Options()
+        self.chrome_options.binary_location = self.browser_url
+        self.browser = webdriver.Chrome(chrome_options=self.chrome_options)
+        # dr.get('https://www.baidu.com/')
+
+        # self.browseelf.browser.set_window_rect(1400,700)
+        #         # sr.set_page_load_timeout(self.timeout)
+        #         # self.wait =r = webdriver.Chrome()
+        #         #         # self.browse WebDriverWait(self.browser,self.timeout)
 
     def __del__(self):
         self.browser.close()
@@ -35,11 +39,11 @@ class SeleniumMiddleware():
         self.logger.debug('PhantomJS is Starting')
         # page = request.meta.get("https://creditshop.hxb.com.cn/mall/member/loginSSL.action")
 
-        self.browser.get("https://creditshop.hxb.com.cn/mall/member/loginSSL.action")
+        self.browser.get("https://creditcard.ecitic.com/citiccard/ucweb/entry.do")
         # self.browser.get("https://creditshop.hxb.com.cn/mall/member/doLogin.action")
         sleep(3)
         page_html2 = self.browser.page_source
-        # print("当前网址"+self.browser.page_source)
+        print("当前网址"+self.browser.page_source)
         # return page_html
 
         #验证码url获取并下载
@@ -79,9 +83,9 @@ class SeleniumMiddleware():
         right = location['x'] + size['width']
         bottom = location['y'] + size['height']
 
-        images = page_snap_obj.crop((left, top, right, bottom))
-        images.save("imcode.png")
-        images.show()
+        imgages = page_snap_obj.crop((left, top, right, bottom))
+        imgages.save("imcode.png")
+        # imgages.show()
         # self.browser.save_screenshot("jifen02.png")
 
 
@@ -94,14 +98,14 @@ class SeleniumMiddleware():
         # # 杂点清除掉。只保留黑的和白的。返回像素对象
         # data = image.load()
         # w, h = image.size
-        #         # for i in range(w):
-        #         #     for j in range(h):
-        #         #         if data[i, j] > 125:
-        #         #             data[i, j] = 255  # 纯白
-        #         #         else:
-        #         #             data[i, j] = 0  # 纯黑
-        #         # image.save('clean_captcha.png')
-        #         # image.show()
+        # for i in range(w):
+        #     for j in range(h):
+        #         if data[i, j] > 125:
+        #             data[i, j] = 255  # 纯白
+        #         else:
+        #             data[i, j] = 0  # 纯黑
+        # image.save('clean_captcha.png')
+        # image.show()
 
         # ""
         # 你的
@@ -115,11 +119,9 @@ class SeleniumMiddleware():
 
         client = AipOcr(APP_ID, API_KEY, SECRET_KEY)
 
-
         """
         读取图片
         """
-
         def get_file_content(filePath):
             with open(filePath, 'rb') as fp:
                 return fp.read()
@@ -130,14 +132,11 @@ class SeleniumMiddleware():
             "detect_direction": "true",
         }
 
-        # image = Image.open(r"E:\code\test\imcode.png")
+        image = Image.open(r"E:\code\test\imcode.png")
         # image=PIL.Image.open(r"C:\Users\Administrator\Desktop\5107.jfif")
 
-
         # 灰度化
-        image = images.convert('L')
-
-        print(type(image))
+        image = image.convert('L')
         # 杂点清除掉。只保留黑的和白的。返回像素对象
         data = image.load()
         w, h = image.size
@@ -148,11 +147,9 @@ class SeleniumMiddleware():
                 else:
                     data[i, j] = 0  # 纯黑
         image.save('clean_captcha.png')
-        # image.show()
 
         # image2 = get_file_content(r'C:\Users\Administrator\Desktop\7708.jfif')
         image2 = get_file_content('clean_captcha.png')
-
         # print(image2)
         """
         调用数字识别
@@ -177,41 +174,32 @@ class SeleniumMiddleware():
 
         sleep(1)
         # imgcode = input("请输入验证码:{}".format(result))
-        # sleep(2)
+        sleep(2)
         self.browser.find_element_by_id("doLogin_loginNumber").send_keys("6259691129820511")
         self.browser.find_element_by_id("doLogin_loginPwd").send_keys("zc006688")
         # self.browser.find_element_by_name("imgCode").send_keys("{}".format(imgcode))
         self.browser.find_element_by_name("imgCode").send_keys("{}".format(img_number))
-        sleep(3)
+        sleep(5)
+
 
 
        # 登录
-       #  try:
         self.browser.find_element_by_id("doLogin_0").click()
-        sleep(2)
-        # except IOError:
-        #
-        #
-        # else:
-        #
-        # finally:
+        sleep(3)
 
         # 我的积分
         self.browser.find_element_by_id("leftMenu1").click()
-        sleep(1)
+        sleep(2)
 
         # 1  打开可用积分查询栏
         # self.browser.find_element_by_xpath("//div[(@class='details_member_left_box')][1]//li[1]/a/@href").click()
         self.browser.find_element_by_xpath("//div[(@class='details_member_left_box')][1]//li[1]/a").click()
-        sleep(2)
+        sleep(3)
 
         # 点击查询
         self.browser.find_element_by_class_name("inputBoxSubmit").click()
         sleep(2)
         self.browser.save_screenshot("jifen02.png")
-
-
-        #获取页面源码
         page_html = self.browser.page_source
 
         # print("当前网址"+self.browser.page_source)
@@ -230,12 +218,11 @@ class SeleniumMiddleware():
             print(my_integral)
             print(type(my_integral))
             print(items)
-            # return my_integral
 
 
         #2  打开信用卡积分明细查询
         self.browser.find_element_by_xpath("//div[(@class='details_member_left_box')][1]//li[2]/a").click()
-        sleep(2)
+        sleep(3)
 
         #点击查询
         self.browser.find_element_by_class_name("inputBoxSubmit").click()
@@ -250,6 +237,7 @@ class SeleniumMiddleware():
         for div in divs:
             # item = {}
             bill = div.xpath(".//div[@class='details_member']//div[@class='faqBox']/em/text()")
+
             item = {
                 "bill": bill,
             }
@@ -257,103 +245,20 @@ class SeleniumMiddleware():
             print(bill)
             print(type(bill))
             print(items)
-            # return items
 
 
-        my_integral = items[0]['my_integral']
-        # print("my_in"+my_integral)
-        bill = items[1]['bill']
-        # print("bill"+bill)
-        # ll = Mysql_input()
-        # ll.set_data()
-        # ll.close()
-        if bill == []:
-            bill = "当前没有消费记录"
-
-        #开启多线程
-        # ss = Mysql_input()
-        # t2 = Thread(target=ss.set_data, args=(my_integral, bill,))
-        # print("启动线程2")
-        # t2.start()
-
-        #普通方式
-        ss = Mysql_input()
-        ss.set_data(my_integral, bill,)
-        self.browser.quit()
-
-        return page_html,my_integral,bill
-
-    # def parses(self,page_html):
-    #     response = etree.HTML(page_html,etree.HTMLParser)
-    #     # my_integral = response.xpath(".//div[@class='boundCarBox']/div").extract().strip()
-    #     my_integral = response.xpath(".//b[contains(text(),_积分)]").extract().strip()
-    #     print(my_integral)
+        return page_html
 
 
-#数据库连接
-class Mysql_input(object):
-    def __init__(self,host="47.97.217.36",user = "root",password="root",database="user",port = 3306,charset="utf8"):
-        self.host = host
-        self.user = user
-        self.password = password
-        self.database = database
-        self.port = port
-        self.charset = charset
-
-
-    def connect(self):
-        self.conn = pymysql.connect(host = self.host,user = self.user,password = self.password,database = self.database,port = self.port,charset = self.charset)
-        self.cursor = self.conn.cursor()
-
-    def set_data(self,my_integral="900",bill="12月消费100积分"):
-        self.connect()
-        try:
-            sql_1 = "INSERT INTO card_score VALUES(null,'{}','{}');".format(my_integral,bill)
-            self.cursor.execute(sql_1)
-            self.conn.commit()
-            print("添加成功")
-            res = self.cursor.fetchall()
-            if res != None:
-                self.close()
-                return res
-        except:
-            self.conn.rollback()
-
-
-    def close(self):
-        self.cursor.close()
-        self.conn.close()
-
-
-# class  Runs():
-#     def __init__(self,page_html):
-#         self.page_html = page_html
-#
-#     def page_htm(self):
-#
-#         print(self.page_html)
+    def parses(self,page_html):
+        response = etree.HTML(page_html,etree.HTMLParser)
+        # my_integral = response.xpath(".//div[@class='boundCarBox']/div").extract().strip()
+        my_integral = response.xpath(".//b[contains(text(),_积分)]").extract().strip()
+        print(my_integral)
 
 
 if __name__ == '__main__':
     s = SeleniumMiddleware()
-    page_html,my_integral, bill=s.process_request()
-    # print(page_html)
-    # print(my_integral)
-    # print(bill)
-    # mm =Mysql_input()
-    # mm.set_data()
-    # my_integral = my_integral["my_integral"]
-    # bill = bill["bill"]
-    # print(bill)
-    # if bill == []:
-    #     bill = "当前没有消费记录"
-    # ss = Mysql_input()
-    # t2 = Thread(target=ss.set_data,args=(my_integral,bill,))
-    # print("启动线程2")
-    # t2.start()
-
-    #
-    # t2.close()
-
+    s.process_request()
 
 

@@ -30,10 +30,21 @@ class Zhongxin_I():
 
     def process_request(self):
         # phone_num = input("请输入手机号码:")
-        phone_num = "15071469916"
         # passwd = input("请输入密码:")
-        passwd = "zc006688"
-        self.logger.debug('Ie is Starting')
+        account = input("用谁的账户(1/2):")
+        if account == "1":
+            phone_num = "15071469916"
+            passwd = "zc006688"
+            #0755-27066666
+        else:
+            phone_num = "13728647735"
+            passwd = "419078chu"
+            print("陈")
+
+
+
+        # self.logger.debug('Ie is Starting')
+        self.logger.debug('Chromee is Starting')
 
         self.browser.get("https://creditcard.ecitic.com/citiccard/ucweb/entry.do")
         sleep(3)
@@ -41,7 +52,6 @@ class Zhongxin_I():
         # self.browser.save_screenshot("./images/login1.png")
         self.browser.find_element_by_id('phoneNbr').send_keys(phone_num)
         sleep(3)
-
 
 
         try:
@@ -60,8 +70,8 @@ class Zhongxin_I():
 
             #获取到验证码截图
             imgages.save("./images/zx_imcode.png")
-            imgages.show()
-            sleep(2)
+            # imgages.show()
+            sleep(1)
 
             #添加机器识别
 
@@ -78,7 +88,7 @@ class Zhongxin_I():
         #验证码
         ver_code = input("请输入手机验证码:")
         self.browser.find_element_by_id('valicode').send_keys(ver_code)
-        sleep(2)
+        sleep(1)
 
         #next
         self.browser.find_element_by_id('checkcode').click()
@@ -90,19 +100,74 @@ class Zhongxin_I():
 
         self.browser.save_screenshot("./images/index.png")
 
-        self.browser.find_element_by_xpath(".//div[@class='head']/div[@class='menu']//li[@class='yahei'][6]/a[@class='jffw']").click()
+
+        # self.browser.find_element_by_xpath("//div[@class='wrap']/div[@class='head']/div[@class='menu']/ul/li[@class='yahei'][6]/a[@class='jffw']").click()
+
+        self.browser.find_element_by_xpath("//div[@class='wrap']/div[@class='head']/div[@class='menu']/ul/li[@class='yahei'][5]/a[@class='jffw']").click()
 
         self.browser.save_screenshot("./images/jifen_page.png")
 
         page_html = self.browser.page_source
-        return page_html
+        sleep(3)
+        try:
+            self.browser.find_element_by_link_text("兑换明细").click()
+            print("1起效了")
+        except:
+            self.browser.find_element_by_xpath("//div[@class='wrap']/div[@class='main']/div[@class='sub_menu']/a[3]").click()
+            print("1没效果")
+
+
+        finally:
+            sleep(5)
+            self.browser.find_element_by_xpath(
+                "//div[@class='wrap']//div[@class='sl_data_a mt_10'][1]/div[@class='dh_link']/a[@id='last1Year']").click()
+            page_html2 = self.browser.page_source
+        return page_html,page_html2
+
 
 
     def parses(self):
 
-        page_html = self.process_request()
+        page_html,page_html2 = self.process_request()
         items = []
         response = etree.HTML(page_html)
+        divs = response.xpath(".//div[@class='main']")
+        for div in divs:
+            item={}
+            score = div.xpath(".//div[@class='table_mx score_jf_table']//tbody/tr[2]/td[1]/text()")[0]
+            score = str(score).strip("['']")
+            print("您当前可用积分为:"+score)
+            print(type(score))
+            # score = div.xpath(".//div[@class='table_mx score_jf_table']//tbody/tr[2]/td[1]")[0].strip()
+            # ex_score = div.xpath("")
+            item["score"] = score
+            items.append(item)
+
+        response2 = etree.HTML(page_html2)
+        divs = response2.xpath("//div[@class='wrap']/div[@id='oper_content']")
+        for div in divs:
+            item = {}
+        #     # record = div.xpath("//div[@class='mt_10']/div[@id='exchange_list']//tbody/tr[2]/td")
+            record = div.xpath("//div[@class='mt_10']/div[@id='exchange_list']//tbody/tr[2]/td/text()")[0]
+            record = str(record).strip("['']")
+            print("record"+record)
+            print(type(record))
+            item["record"] = record
+            items.append(item)
+
+        print(items)
+        my_integral = score
+        bill = record
+
+        # 普通方式
+        # ss = Mysql_input()
+        # ss.set_data(my_integral, bill )
+        # self.browser.quit()
+
+        # return my_integral, bill
+
+
+
 
 
 
@@ -125,10 +190,11 @@ class Mysql_input(object):
         self.conn = pymysql.connect(host = self.host,user = self.user,password = self.password,database = self.database,port = self.port,charset = self.charset)
         self.cursor = self.conn.cursor()
 
-    def set_data(self,my_integral="900",bill="12月消费100积分"):
+    def set_data(self,my_integral="12300",bill="12月消费800积分"):
         self.connect()
         try:
             sql_1 = "INSERT INTO card_score VALUES(null,'{}','{}');".format(my_integral,bill)
+            # sql_1 = "INSERT INTO card_score VALUES(null,'{}','{}');".format(my_integral,bill)
             self.cursor.execute(sql_1)
             self.conn.commit()
             print("添加成功")

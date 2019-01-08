@@ -79,7 +79,6 @@ class Xingye_C():
 
 
 
-
     def process_request(self):
         # login_method = input("登录方式(卡号/登录名):")
         login_method = "卡号"

@@ -27,8 +27,10 @@ class Pingan_C():
         self.browser.close()
 
     def process_request(self):
-        username = input("请输入用户名:")
-        passwd = input("请输入一账通密码:")
+        # username = input("请输入用户名:")
+        username = "654654654"
+        # passwd = input("请输入一账通密码:")
+        passwd = "fdsadf15465465"
         self.logger.debug('Ie is Starting')
 
         self.browser.get("https://creditcard.pingan.com.cn/financing/login.screen?sid_source=CreditcardCP")
@@ -36,6 +38,7 @@ class Pingan_C():
         sleep(3)
         # location = self.browser.find_element_by_id("imgCode").location
         self.browser.save_screenshot("./images/login1.png")
+
         self.browser.find_element_by_xpath('j_username').send_keys(username)
         self.browser.find_elements_by_link_text()
         # self.browser.find_element_by_id('j_username').send_keys(username)

@@ -173,6 +173,11 @@ class SeleniumMiddleware():
 
         img_number = result["words_result"][0]["words"]
 
+        if len(str(img_number)) != 4:
+            img_number = input("请手动输入验证码:")
+        else:
+            pass
+
         self.browser.save_screenshot("jifen001.png")
 
         sleep(1)
@@ -182,7 +187,7 @@ class SeleniumMiddleware():
         self.browser.find_element_by_id("doLogin_loginPwd").send_keys("zc006688")
         # self.browser.find_element_by_name("imgCode").send_keys("{}".format(imgcode))
         self.browser.find_element_by_name("imgCode").send_keys("{}".format(img_number))
-        sleep(3)
+        sleep(1)
 
 
        # 登录

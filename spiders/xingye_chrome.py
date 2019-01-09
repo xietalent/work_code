@@ -63,14 +63,12 @@ class Xingye_C():
         #     if button.text == "Post":
         #         button.click()
         # sleep(3)
-
         # 验证码
         # ver_code = input("请输入验证码:")
         # self.browser.find_element_by_id('check_code').send_keys(ver_code)
         # self.browser.find_element_by_id('mobilecaptchafield').send_keys(ver_code)
 
         self.browser.find_element_by_id('loginSubmitBtn').click()
-
         # next
         sleep(3)
         self.browser.save_screenshot("./images/jifen_page.png")

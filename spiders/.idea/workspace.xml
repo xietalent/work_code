@@ -2,14 +2,24 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e4e065ad-27a2-4502-a094-f64318782304" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/tools/test2.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/clean_captcha.png" beforeDir="false" afterPath="$PROJECT_DIR$/clean_captcha.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/feng.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hx_zidongyanzheng.py" beforeDir="false" afterPath="$PROJECT_DIR$/hx_zidongyanzheng.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/images/index.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/index.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/images/jifen_page.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/jifen_page.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/login1.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/login1.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/images/zx_imcode.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/zx_imcode.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/images/zx_login1.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/zx_login1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/imcode.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jifen001.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jifen02.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jifen03.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pingan_chrome.py" beforeDir="false" afterPath="$PROJECT_DIR$/pingan_chrome.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test2.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/xingye_chrome.py" beforeDir="false" afterPath="$PROJECT_DIR$/xingye_chrome.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/zhongxin_IE.py" beforeDir="false" afterPath="$PROJECT_DIR$/zhongxin_IE.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../test/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../test/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -19,13 +29,15 @@
   </component>
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/spiders$ershoufang.coverage" NAME="ershoufang Coverage Results" MODIFIED="1546854447324" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/spiders$zhongxin_IE.coverage" NAME="zhongxin_IE Coverage Results" MODIFIED="1546930478270" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/spiders$zhongxin_IE.coverage" NAME="zhongxin_IE Coverage Results" MODIFIED="1547027875616" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/spiders$zhongxing_360.coverage" NAME="zhongxing_360 Coverage Results" MODIFIED="1546595723515" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/spiders$pingan_chrome.coverage" NAME="pingan_chrome Coverage Results" MODIFIED="1546825787914" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/spiders$test2.coverage" NAME="test2 Coverage Results" MODIFIED="1546928641192" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/spiders$test2.coverage" NAME="test2 Coverage Results" MODIFIED="1546999523069" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/spiders$pingan_chrome.coverage" NAME="pingan_chrome Coverage Results" MODIFIED="1547026066499" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/spiders$test2__1_.coverage" NAME="test2 (1) Coverage Results" MODIFIED="1547027639394" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tools" />
     <SUITE FILE_PATH="coverage/spiders$zhongxing_chrome.coverage" NAME="zhongxing_chrome Coverage Results" MODIFIED="1546596420458" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/spiders$hx_zidongyanzheng.coverage" NAME="hx_zidongyanzheng Coverage Results" MODIFIED="1546934614718" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/spiders$xingye_chrome.coverage" NAME="xingye_chrome Coverage Results" MODIFIED="1546844463665" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/spiders$hx_zidongyanzheng.coverage" NAME="hx_zidongyanzheng Coverage Results" MODIFIED="1546998039105" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/spiders$ip_proxys.coverage" NAME="ip_proxys Coverage Results" MODIFIED="1547018627370" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tools" />
+    <SUITE FILE_PATH="coverage/spiders$xingye_chrome.coverage" NAME="xingye_chrome Coverage Results" MODIFIED="1547026059262" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/spiders$test.coverage" NAME="test Coverage Results" MODIFIED="1546844722883" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="FUSProjectUsageTrigger">
@@ -33,32 +45,36 @@
       <usages-collector id="statistics.lifecycle.project">
         <counts>
           <entry key="project.open.time.2" value="1" />
+          <entry key="project.open.time.20" value="1" />
           <entry key="project.open.time.4" value="1" />
-          <entry key="project.opened" value="2" />
+          <entry key="project.opened" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="png" value="10" />
-          <entry key="py" value="10" />
+          <entry key="png" value="14" />
+          <entry key="py" value="15" />
+          <entry key="txt" value="7" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="Image" value="10" />
-          <entry key="Python" value="10" />
+          <entry key="Image" value="14" />
+          <entry key="PLAIN_TEXT" value="7" />
+          <entry key="Python" value="15" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="6" />
-          <entry key="py" value="3311" />
+          <entry key="py" value="5621" />
+          <entry key="txt" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="PLAIN_TEXT" value="6" />
-          <entry key="Python" value="3311" />
+          <entry key="PLAIN_TEXT" value="7" />
+          <entry key="Python" value="5621" />
         </counts>
       </usages-collector>
     </session>
@@ -68,7 +84,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/zhongxin_chrome.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="793">
+            <state relative-caret-position="187">
               <caret line="259" column="26" selection-start-line="259" selection-start-column="26" selection-end-line="259" selection-end-column="26" />
               <folding>
                 <element signature="e#1#31#0" expanded="true" />
@@ -80,24 +96,10 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pingan_chrome.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="70">
-              <caret line="21" column="41" selection-start-line="21" selection-start-column="41" selection-end-line="21" selection-end-column="41" />
+            <state relative-caret-position="156">
+              <caret line="40" selection-start-line="40" selection-end-line="40" />
               <folding>
                 <element signature="e#0#30#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/xingye_chrome.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="643">
-              <caret line="79" selection-start-line="79" selection-end-line="79" />
-              <folding>
-                <element signature="e#0#30#0" expanded="true" />
-                <marker date="1546855496263" expanded="true" signature="886:2516" ph="..." />
-                <marker date="1546855496263" expanded="true" signature="2542:2551" ph="..." />
               </folding>
             </state>
           </provider>
@@ -106,22 +108,56 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/zhongxin_IE.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="209">
-              <caret line="43" lean-forward="true" selection-start-line="43" selection-end-line="43" />
+            <state relative-caret-position="133">
+              <caret line="173" lean-forward="true" selection-start-line="173" selection-end-line="173" />
               <folding>
                 <element signature="e#0#30#0" expanded="true" />
-                <marker date="1546931318206" expanded="true" signature="331:336" ph="..." />
-                <marker date="1546931318206" expanded="true" signature="368:373" ph="..." />
+                <marker date="1547027875587" expanded="true" signature="343:348" ph="..." />
+                <marker date="1547027875587" expanded="true" signature="380:385" ph="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test2.py">
+        <entry file="file://$PROJECT_DIR$/tools/test2.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="184">
-              <caret line="16" selection-start-line="16" selection-end-line="16" />
+            <state relative-caret-position="106">
+              <caret line="93" lean-forward="true" selection-start-line="93" selection-end-line="93" />
+              <folding>
+                <element signature="e#2#34#0" />
+                <element signature="e#387#406#0" />
+                <element signature="e#809#824#0" expanded="true" />
+                <marker date="1547027639371" expanded="true" signature="1655:1660" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tools/ip_proxys.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="318">
+              <caret line="93" column="12" lean-forward="true" selection-start-line="93" selection-start-column="12" selection-end-line="93" selection-end-column="12" />
+              <folding>
+                <element signature="e#1#10#0" expanded="true" />
+                <marker date="1547018627348" expanded="true" signature="174:179" ph="..." />
+                <marker date="1547018627348" expanded="true" signature="2886:2888" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/text/ss.txt">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/text/proxy.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="80">
+              <caret line="73" column="18" selection-start-line="73" selection-start-column="18" selection-end-line="73" selection-end-column="18" />
             </state>
           </provider>
         </entry>
@@ -129,8 +165,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/hx_zidongyanzheng.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="278">
-              <caret line="260" column="13" lean-forward="true" selection-start-line="260" selection-start-column="13" selection-end-line="260" selection-end-column="13" />
+            <state relative-caret-position="467">
+              <caret line="177" column="13" selection-start-line="177" selection-start-column="13" selection-end-line="177" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -142,7 +178,6 @@
               <caret line="23" column="29" selection-start-line="23" selection-start-column="29" selection-end-line="23" selection-end-column="29" />
               <folding>
                 <element signature="e#1#23#0" expanded="true" />
-                <marker date="1546854745291" expanded="true" signature="217:1301" ph="..." />
               </folding>
             </state>
           </provider>
@@ -165,14 +200,18 @@
       <list>
         <option value="$PROJECT_DIR$/zhongxing_360.py" />
         <option value="$PROJECT_DIR$/zhongxing_chrome.py" />
-        <option value="$PROJECT_DIR$/pingan_chrome.py" />
         <option value="$PROJECT_DIR$/test.py" />
         <option value="$PROJECT_DIR$/zhongxin_chrome.py" />
         <option value="$PROJECT_DIR$/ershoufang.py" />
-        <option value="$PROJECT_DIR$/xingye_chrome.py" />
-        <option value="$PROJECT_DIR$/test2.py" />
-        <option value="$PROJECT_DIR$/zhongxin_IE.py" />
         <option value="$PROJECT_DIR$/hx_zidongyanzheng.py" />
+        <option value="$PROJECT_DIR$/bin/start.py" />
+        <option value="$PROJECT_DIR$/test2.py" />
+        <option value="$PROJECT_DIR$/text/proxy.txt" />
+        <option value="$PROJECT_DIR$/tools/ip_proxys.py" />
+        <option value="$PROJECT_DIR$/xingye_chrome.py" />
+        <option value="$PROJECT_DIR$/pingan_chrome.py" />
+        <option value="$PROJECT_DIR$/tools/test2.py" />
+        <option value="$PROJECT_DIR$/zhongxin_IE.py" />
       </list>
     </option>
   </component>
@@ -182,11 +221,11 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="1">
-    <option name="x" value="496" />
-    <option name="y" value="150" />
-    <option name="width" value="1070" />
-    <option name="height" value="889" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="406" />
+    <option name="y" value="70" />
+    <option name="width" value="1123" />
+    <option name="height" value="905" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="1" id="Add" />
@@ -207,7 +246,7 @@
             <path>
               <item name="spiders" type="b2602c69:ProjectViewProjectNode" />
               <item name="spiders" type="462c0819:PsiDirectoryNode" />
-              <item name="images" type="462c0819:PsiDirectoryNode" />
+              <item name="text" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -219,9 +258,12 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="settings.editor.selected.configurable" value="configurable.group.appearance" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\code\spiders\tools" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="E:\code\spiders" />
     </key>
@@ -238,8 +280,8 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.hx_zidongyanzheng">
-    <configuration name="ershoufang" type="PythonConfigurationType" factoryName="Python" temporary="true">
+  <component name="RunManager" selected="Python.zhongxin_IE">
+    <configuration name="ip_proxys" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="spiders" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -247,12 +289,12 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tools" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/ershoufang.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/tools/ip_proxys.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -261,7 +303,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="hx_zidongyanzheng" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="pingan_chrome" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="spiders" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -274,7 +316,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/hx_zidongyanzheng.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/pingan_chrome.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -283,7 +325,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="test" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="test2 (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="spiders" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -291,12 +333,12 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tools" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/tools/test2.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -305,7 +347,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="test2" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="xingye_chrome" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="spiders" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -318,7 +360,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test2.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/xingye_chrome.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -351,18 +393,18 @@
     </configuration>
     <list>
       <item itemvalue="Python.zhongxin_IE" />
-      <item itemvalue="Python.test" />
-      <item itemvalue="Python.ershoufang" />
-      <item itemvalue="Python.test2" />
-      <item itemvalue="Python.hx_zidongyanzheng" />
+      <item itemvalue="Python.test2 (1)" />
+      <item itemvalue="Python.ip_proxys" />
+      <item itemvalue="Python.pingan_chrome" />
+      <item itemvalue="Python.xingye_chrome" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.hx_zidongyanzheng" />
         <item itemvalue="Python.zhongxin_IE" />
-        <item itemvalue="Python.test2" />
-        <item itemvalue="Python.ershoufang" />
-        <item itemvalue="Python.test" />
+        <item itemvalue="Python.test2 (1)" />
+        <item itemvalue="Python.pingan_chrome" />
+        <item itemvalue="Python.xingye_chrome" />
+        <item itemvalue="Python.ip_proxys" />
       </list>
     </recent_temporary>
   </component>
@@ -380,15 +422,15 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="496" y="150" width="1070" height="889" extended-state="1" />
+    <frame x="406" y="70" width="1123" height="905" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.14653465" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18532455" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.41986755" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32980132" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.30220494" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -397,7 +439,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" order="11" />
+      <window_info anchor="bottom" id="Terminal" order="11" weight="0.23178808" />
       <window_info anchor="bottom" id="Python Console" order="12" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -406,12 +448,12 @@
       <window_info anchor="right" id="Database" order="4" />
     </layout>
     <layout-to-restore>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.15384616" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18532455" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.35496688" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32980132" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.45033112" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -420,7 +462,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" order="11" />
+      <window_info anchor="bottom" id="Terminal" order="11" weight="0.23178808" />
       <window_info anchor="bottom" id="Python Console" order="12" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -442,31 +484,14 @@
     <entry file="file://$PROJECT_DIR$/images/login1.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/images/zx_imcode.png">
+    <entry file="file://$PROJECT_DIR$/images/xylogin1.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
     <entry file="file://$PROJECT_DIR$/images/zx_login1.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/zhongxin_chrome.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="793">
-          <caret line="259" column="26" selection-start-line="259" selection-start-column="26" selection-end-line="259" selection-end-column="26" />
-          <folding>
-            <element signature="e#1#31#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pingan_chrome.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="70">
-          <caret line="21" column="41" selection-start-line="21" selection-start-column="41" selection-end-line="21" selection-end-column="41" />
-          <folding>
-            <element signature="e#0#30#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/images/zx_imcode.png">
+      <provider selected="true" editor-type-id="images" />
     </entry>
     <entry file="file://$PROJECT_DIR$/ershoufang.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -474,58 +499,118 @@
           <caret line="23" column="29" selection-start-line="23" selection-start-column="29" selection-end-line="23" selection-end-column="29" />
           <folding>
             <element signature="e#1#23#0" expanded="true" />
-            <marker date="1546854745291" expanded="true" signature="217:1301" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/images/xylogin1.png">
+    <entry file="file://$PROJECT_DIR$/clean_captcha.png">
       <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/feng.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bin/start.py">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/test.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-591">
-          <caret line="88" column="39" lean-forward="true" selection-start-line="88" selection-start-column="39" selection-end-line="88" selection-end-column="39" />
+        <state relative-caret-position="125">
+          <caret line="91" lean-forward="true" selection-start-line="91" selection-end-line="91" />
           <folding>
             <element signature="e#1#31#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/xingye_chrome.py">
+    <entry file="file://$PROJECT_DIR$/requirements.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="643">
-          <caret line="79" selection-start-line="79" selection-end-line="79" />
-          <folding>
-            <element signature="e#0#30#0" expanded="true" />
-            <marker date="1546855496263" expanded="true" signature="886:2516" ph="..." />
-            <marker date="1546855496263" expanded="true" signature="2542:2551" ph="..." />
-          </folding>
+        <state relative-caret-position="1575">
+          <caret line="63" column="21" lean-forward="true" selection-start-line="63" selection-start-column="21" selection-end-line="63" selection-end-column="21" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test2.py">
+    <entry file="file://$PROJECT_DIR$/zhongxin_chrome.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="16" selection-start-line="16" selection-end-line="16" />
+        <state relative-caret-position="187">
+          <caret line="259" column="26" selection-start-line="259" selection-start-column="26" selection-end-line="259" selection-end-column="26" />
+          <folding>
+            <element signature="e#1#31#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/hx_zidongyanzheng.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="278">
-          <caret line="260" column="13" lean-forward="true" selection-start-line="260" selection-start-column="13" selection-end-line="260" selection-end-column="13" />
+        <state relative-caret-position="467">
+          <caret line="177" column="13" selection-start-line="177" selection-start-column="13" selection-end-line="177" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/xingye_chrome.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="70" column="24" lean-forward="true" selection-start-line="70" selection-start-column="24" selection-end-line="70" selection-end-column="24" />
+          <folding>
+            <element signature="e#0#30#0" expanded="true" />
+            <marker date="1547019932975" expanded="true" signature="886:2514" ph="..." />
+            <marker date="1547019932975" expanded="true" signature="2540:2549" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pingan_chrome.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="156">
+          <caret line="40" selection-start-line="40" selection-end-line="40" />
+          <folding>
+            <element signature="e#0#30#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/text/ss.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/text/proxy.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="80">
+          <caret line="73" column="18" selection-start-line="73" selection-start-column="18" selection-end-line="73" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tools/test2.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="106">
+          <caret line="93" lean-forward="true" selection-start-line="93" selection-end-line="93" />
+          <folding>
+            <element signature="e#2#34#0" />
+            <element signature="e#387#406#0" />
+            <element signature="e#809#824#0" expanded="true" />
+            <marker date="1547027639371" expanded="true" signature="1655:1660" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tools/ip_proxys.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="318">
+          <caret line="93" column="12" lean-forward="true" selection-start-line="93" selection-start-column="12" selection-end-line="93" selection-end-column="12" />
+          <folding>
+            <element signature="e#1#10#0" expanded="true" />
+            <marker date="1547018627348" expanded="true" signature="174:179" ph="..." />
+            <marker date="1547018627348" expanded="true" signature="2886:2888" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/zhongxin_IE.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="43" lean-forward="true" selection-start-line="43" selection-end-line="43" />
+        <state relative-caret-position="133">
+          <caret line="173" lean-forward="true" selection-start-line="173" selection-end-line="173" />
           <folding>
             <element signature="e#0#30#0" expanded="true" />
-            <marker date="1546931318206" expanded="true" signature="331:336" ph="..." />
-            <marker date="1546931318206" expanded="true" signature="368:373" ph="..." />
+            <marker date="1547027875587" expanded="true" signature="343:348" ph="..." />
+            <marker date="1547027875587" expanded="true" signature="380:385" ph="..." />
           </folding>
         </state>
       </provider>

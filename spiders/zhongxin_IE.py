@@ -11,6 +11,7 @@ from urllib import request
 from PIL import Image
 
 import pymysql
+import time
 
 class Zhongxin_I():
     def __init__(self,timeout=None):
@@ -115,19 +116,27 @@ class Zhongxin_I():
         except:
             self.browser.find_element_by_xpath("//div[@class='wrap']/div[@class='main']/div[@class='sub_menu']/a[3]").click()
             print("1没效果")
-
-
         finally:
-            sleep(5)
-            self.browser.find_element_by_xpath(
-                "//div[@class='wrap']//div[@class='sl_data_a mt_10'][1]/div[@class='dh_link']/a[@id='last1Year']").click()
-            page_html2 = self.browser.page_source
+            pass
+        sleep(3)
+
+        try:
+            self.browser.find_element_by_xpath("//div[@class='wrap']//div[@class='sl_data_a mt_10'][1]/div[@class='dh_link']/a[@href][3]").click()
+            # self.browser.find_element_by_xpath("//div[@class='wrap']//div[@class='sl_data_a mt_10'][1]/div[@class='dh_link']/a[@id='last1Year']").click()
+            print("a标签")
+        except:
+            self.browser.find_element_by_link_text("1年").click()
+            print("text生效")
+        finally:
+            pass
+
+        page_html2 = self.browser.page_source
         return page_html,page_html2
 
 
 
     def parses(self):
-
+        t1 = time.clock()
         page_html,page_html2 = self.process_request()
         items = []
         response = etree.HTML(page_html)
@@ -143,12 +152,14 @@ class Zhongxin_I():
             item["score"] = score
             items.append(item)
 
+        sleep(3)
+
         response2 = etree.HTML(page_html2)
-        divs = response2.xpath("//div[@class='wrap']/div[@id='oper_content']")
+        divs = response2.xpath(".//div[@class='wrap']/div[@id='oper_content']")
         for div in divs:
             item = {}
         #     # record = div.xpath("//div[@class='mt_10']/div[@id='exchange_list']//tbody/tr[2]/td")
-            record = div.xpath("//div[@class='mt_10']/div[@id='exchange_list']//tbody/tr[2]/td/text()")[0]
+            record = div.xpath(".//div[@class='mt_10']/div[@id='exchange_list']//tbody/tr[2]/td/text()")[0]
             record = str(record).strip("['']")
             print("record"+record)
             print(type(record))
@@ -156,6 +167,8 @@ class Zhongxin_I():
             items.append(item)
 
         print(items)
+        t2 = time.clock()
+        print(t2)
         my_integral = score
         bill = record
 

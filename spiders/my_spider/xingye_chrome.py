@@ -23,11 +23,11 @@ class Xingye_C():
         self.logger = getLogger(__name__)
         self.timeout = timeout
 
-        chrome_options = Options()
         # 设置chrome浏览器无界面模式
-        # chrome_options.add_argument('--headless')
-        # self.browser = webdriver.Chrome(chrome_options=chrome_options)
-        self.browser = webdriver.Chrome()
+        chrome_options = Options()
+        chrome_options.add_argument('--headless')
+        self.browser = webdriver.Chrome(chrome_options=chrome_options)
+        # self.browser = webdriver.Chrome()
 
         # self.phone_num = phone_num
         # self.passwd = passwd

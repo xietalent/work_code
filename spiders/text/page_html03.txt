@@ -1,0 +1,519 @@
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml"><head><script type="text/javascript">
+    window.serverTime=1547202171416;
+</script>
+
+
+
+
+    
+    	<meta http-equiv="Expires" content="0" />
+    	<meta http-equiv="Pragma" content="no-cache" />
+    	<meta http-equiv="Cache-Control" content="No-cache,must-revalidate" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>在线兴业</title>
+                <link href="/pers/main/resources/css/redmond/core.css?v=72be91f387" rel="stylesheet" type="text/css" media="all" />
+        <!--[if lte IE 7]>
+        <link href="/pers/main/resources/css/redmond/patch.css?v=b97ff1777a" rel="stylesheet" type="text/css" media="all"/>
+        <![endif]-->
+        <link rel="stylesheet" href="/pers/main/resources/css/redmond/jquery-ui.css?v=661179c862" type="text/css" />
+        <link rel="stylesheet" href="/pers/main/resources/css/redmond/jqgrid.css?v=340a0db9dc" type="text/css" />
+        <script type="text/javascript" src="/pers/main/resources/js/core.js?v=ee306c39dd"></script>
+        <script type="text/javascript" src="/pers/main/resources/js/cib.js?v=b52abae553"></script>
+            <script type="text/javascript" src="/pers/main/resources/js/i18n/i18n-cn.js?v=37f5ea4a3d"></script>
+        <!--[if  IE 6]>
+        <script type="text/javascript">try{document.execCommand("BackgroundImageCache",false,true);}catch(e){}</script>
+        <![endif]-->
+        <script type="text/javascript" src="/pers/main/resources/js/jqui.js?v=57a6fed345"></script>
+        <script type="text/javascript" src="/pers/main/resources/js/jqgrid.js?v=0e8c733c58"></script>
+
+        
+                <link href="/pers/main/resources/css/redmond/jqform.css?v=3e771975e5" rel="stylesheet" type="text/css" media="all" />
+        <script type="text/javascript" src="/pers/main/resources/js/jqform.js?v=70e2d4a0cc"></script>
+
+        <style type="text/css">
+	    #detailList tbody td{
+	    	padding: 0 10px;
+	    }
+    	</style>
+    	<style media="print">
+        	#page_header,#flow,#col1,#splitter,#page_helps,#crumbs {display: none }
+        </style>
+    
+		<style type="text/css">
+      
+            .blkContainerSblk {height:35px; line-height:35px; overflow:hidden; text-align:center; font-family:"黑体"; font-size:20px; font-weight:normal; color:#03005C;}
+             #page_content{height:auto;}
+            </style>
+	
+        <script>var MA_URL = 'https://bigdata.cib.com.cn:80';</script>
+        <script src="/pers/main/resources/js/init.js?v=e52e36400f"></script>
+        
+        
+        
+            <script type="text/javascript">
+        parent &amp;&amp; parent.mainframeMessageTip &amp;&amp; parent.mainframeMessageTip({opt:'tip', alertOpt:{width: 380}});
+    </script>
+
+        <script type="text/javascript">
+         
+             if((parent.document.getElementById("mainframe")===undefined||parent.document.getElementById("mainframe")==null) &amp;&amp; (parent.mainframe===undefined)){
+                      document.location.href="/pers/main/login.do";
+            }
+            top.keepAlive();
+        </script>
+    </head>
+    <body>
+        <div class="page_margins" id="bigpage">
+            <div class="page">
+                <div id="main">
+                    <div id="col1" style="min-height: 626px; height: 626px;">
+                        <div id="col1_content" class="clearfix">
+                             <div id="search">
+                                 <input id="search_keyword" class="ent_enabled" type="text" value="" placeholder="功能搜索" /><a id="search-btn" href="javascript:funcSearch();"> </a>
+			    </div>
+                            <div id="sidebar">
+				<div id="fast-way" class="item current" style="position: relative">
+					<div class="cib-iconBg setting" onclick="javascript:location.href='/pers/main/customer/fastwaySetting.do'">设置</div>
+				    <h3 class="title">快速通道</h3>
+				    <ul class="show">
+                                        
+                                            <li class="odd clearfix">
+                                                <a href="/pers/main/query/queryBalance.do?FUNID=FIN01|FIN01_01">
+                                                    存款余额查询
+                                                </a>
+                                            </li>
+                                          
+                                            <li class="even clearfix">
+                                                <a href="/pers/main/account/queryTrans.do?FUNID=FIN01|FIN01_02">
+                                                    交易明细查询
+                                                </a>
+                                            </li>
+                                          
+                                            <li class="odd clearfix">
+                                                <a href="/pers/main/transfer/innerTransfer.do?FUNID=FIN03|FIN03_01">
+                                                    行内转账
+                                                </a>
+                                            </li>
+                                          
+                                            <li class="even clearfix">
+                                                <a href="/pers/main/creditCard/transferToCreditCard.do?FUNID=FIN09|FIN09_02|FIN09_02_01">
+                                                    人民币/购汇还款
+                                                </a>
+                                            </li>
+                                          
+                                            <li class="odd clearfix">
+                                                <a href="/pers/fin/financing/finProdBuy.do?FUNID=FIN04|FIN04_05|FIN04_05_02">
+                                                    理财产品购买
+                                                </a>
+                                            </li>
+                                          
+                                            <li class="even clearfix">
+                                                <a href="/pers/fin/openfund/fundList.do?FUNID=FIN04|FIN04_02|FIN04_02_02">
+                                                    代销基金列表
+                                                </a>
+                                            </li>
+                                          
+                                            <li class="odd clearfix">
+                                                <a href="https://e.cib.com.cn/app/quickApplyCard/quickApplyCard.do?offlcode=1001&amp;sourceSite=1007">
+                                                    信用卡首次申请
+                                                </a>
+                                            </li>
+                                          
+                                          <li class="bottom"></li>
+                                    </ul>
+				</div>
+				
+                                
+				<div id="links" class="item current">
+				    <h3 class="title">相关链接</h3>
+				    <ul class="show">    
+                                        
+                                            <li class="odd clearfix">
+                                                <a href="/pers/main/query/queryBalance.do?FUNID=FIN01|FIN01_01">
+                                                    存款余额查询
+                                                </a>
+                                            </li>
+                                        
+                                            <li class="even clearfix">
+                                                <a href="/pers/main/customer/netbankFuncMgr.do?FUNID=FIN02|FIN02_04|FIN02_04_01">
+                                                    网上银行功能设置
+                                                </a>
+                                            </li>
+                                        
+                                            <li class="odd clearfix">
+                                                <a href="/pers/main/account/queryTrans.do?FUNID=FIN01|FIN01_02">
+                                                    交易明细查询
+                                                </a>
+                                            </li>
+                                        
+                                        <li class="bottom"></li>
+                                    </ul>
+				</div>
+				
+				<div id="security-message">
+				<img id="securityTitle" class="icon" src="/pers/main/resources/images/space.gif" /><b>安全提示</b><br />
+		        
+				<p class="text" style="height:110px;">
+	               您目前尚未设置预留验证信息。
+				   <br />
+				   <a href="/pers/main/customer/customerMessage.do?FUNID=FIN02|FIN02_05|FIN02_05_02">修改预留验证信息</a>
+		        </p>
+				</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="splitter" title="收起/打开边栏" style="min-height: 626px; height: 626px;"><div id="splitter-btn" class="cib-iconBg">收起快速通道<br />&lt;&lt;</div></div>
+                    <div id="col3">
+                        <div id="col3_content" class="clearfix" style="margin-top: 2px; min-height: 626px;">
+                            <div id="crumbs" class="curr_pos clearfix">
+    <div class="left">当前位置： 
+                <span class="node">信用卡</span>
+                &gt;
+                <span class="node">信用卡查询</span>
+                &gt;
+                <span class="node">积分查询</span>
+                &gt;
+                <span class="highLight">积分明细查询</span>
+                
+    </div>
+    <span class="right"><a href="http://www.cib.com.cn/cn/e-banking/personal/faqs/help/" target="_blank" id="online-help">在线帮助</a></span>
+</div>
+
+                                   
+		<div id="page_margin">
+			<div id="page">
+				<div id="page_header">
+					
+            
+					<div id="page_oper_step">
+            
+                
+                
+            <div class="flowbox" id="flow">
+    <ul class="flow">
+            <li class="page_item first before_current" id="flow_1" style="width:49.8%"><span>1. 选择信用卡账户</span></li>            <li class="last  current current_last" id="flow_2" style="width:49.8%"><span>2. 积分明细查询</span></li>    </ul>
+</div>
+
+
+            <script type="text/javascript">
+    $(function() {
+		var id = "2";
+		var bef = parseInt(id)-1;
+		$("#flow_"+bef).addClass("before_current");
+        $("#flow_"+id).addClass("current");
+        if($("#flow_"+id).hasClass("first")){
+			$("#flow_"+id).addClass("current_first");
+		};
+		if($("#flow_"+id).hasClass("last")){
+			$("#flow_"+id).addClass("current_last");
+		};
+    });
+</script>
+        </div>
+				</div>
+				<div id="page_content">
+				
+        <form id="form" name="form" action="/pers/creditCard/query/queryBonusDetail!query.do" method="post" class="form clearfix">
+        	<input type="hidden" name="withinMonth" id="withinMonth" />
+            
+
+<div class="info-show">
+    <span class="item">
+        <label id="form_label_creditCardNo_title">信用卡卡号：</label>
+        5240707969398113
+    </span>
+    <span class="item">
+        <label id="form_label_creditOwnerName_title">持卡人姓名：</label>
+        张洋
+    </span>
+</div>
+            <p class="form-p">
+            <label class="form-label">起始日期：</label>
+			<input id="startDate" name="startDate" class="text validate[required] datepicker validate[dateInRange] hasDatepicker" value="2018-07-11" style="width: 80px;" /><span class="ui-datepicker-trigger"></span>
+			<label class="form-label">截止日期：</label>
+			<input id="endDate" name="endDate" class="text validate[required] datepicker validate[dateInRange] hasDatepicker validate[compareDate[startDate]]" value="2019-01-11" style="width: 80px;" /><span class="ui-datepicker-trigger"></span>
+			  <span class="cibButton-wrap"><input type="submit" value="查询" id="form_0" onclick="return query();" class="ui-cib-button" role="button" aria-disabled="false" style="vertical-align: middle;" /><span class="cib-btnR"></span></span>
+
+			  <span class="cibButton-wrap"><input type="submit" value="一个月" id="form_2" onclick="return query('1');" class="ui-cib-button" role="button" aria-disabled="false" style="vertical-align: middle;" /><span class="cib-btnR"></span></span>
+
+              <span class="cibButton-wrap"><input type="submit" value="三个月" id="form_4" onclick="return query('3');" class="ui-cib-button" role="button" aria-disabled="false" style="vertical-align: middle;" /><span class="cib-btnR"></span></span>
+
+              <span class="cibButton-wrap"><input type="submit" value="六个月" id="form_6" onclick="return query('6');" class="ui-cib-button" role="button" aria-disabled="false" style="vertical-align: middle;" /><span class="cib-btnR"></span></span>
+
+            </p>
+            
+            <div class="grid-div">
+                <div class="ui-jqgrid ui-widget ui-widget-content ui-corner-all" id="gbox_detailList" dir="ltr" style="width: 725px;"><div class="ui-widget-overlay jqgrid-overlay" id="lui_detailList"></div><div class="loading ui-state-default ui-state-active" id="load_detailList" style="display: none;">读取中...</div><div class="ui-jqgrid-view" id="gview_detailList" style="width: 725px;"><div class="ui-jqgrid-titlebar ui-widget-header ui-corner-top ui-helper-clearfix"><span class="ui-jqgrid-title">信用卡积分明细</span></div><div class="ui-state-default ui-jqgrid-hdiv" style="width: 725px;"><div class="ui-jqgrid-hbox"><table class="ui-jqgrid-htable" style="width:725px" role="grid" aria-labelledby="gbox_detailList" cellspacing="0" cellpadding="0" border="0"><thead><tr class="ui-jqgrid-labels" role="rowheader"><th id="detailList_pointDate" role="columnheader" class="ui-state-default ui-th-column ui-th-ltr" style="width: 125px;"><div id="jqgh_pointDate">日期<span class="s-ico" style="display:none"><span sort="asc" class="ui-grid-ico-sort ui-icon-asc ui-state-disabled ui-icon ui-icon-triangle-1-n ui-sort-ltr"></span><span sort="desc" class="ui-grid-ico-sort ui-icon-desc ui-state-disabled ui-icon ui-icon-triangle-1-s ui-sort-ltr"></span></span></div></th><th id="detailList_tranNo" role="columnheader" class="ui-state-default ui-th-column ui-th-ltr" style="width: 121px;"><div id="jqgh_tranNo">交易<span class="s-ico" style="display:none"><span sort="asc" class="ui-grid-ico-sort ui-icon-asc ui-state-disabled ui-icon ui-icon-triangle-1-n ui-sort-ltr"></span><span sort="desc" class="ui-grid-ico-sort ui-icon-desc ui-state-disabled ui-icon ui-icon-triangle-1-s ui-sort-ltr"></span></span></div></th><th id="detailList_tranAmount" role="columnheader" class="ui-state-default ui-th-column ui-th-ltr" style="width: 118px;"><div id="jqgh_tranAmount">交易金额<span class="s-ico" style="display:none"><span sort="asc" class="ui-grid-ico-sort ui-icon-asc ui-state-disabled ui-icon ui-icon-triangle-1-n ui-sort-ltr"></span><span sort="desc" class="ui-grid-ico-sort ui-icon-desc ui-state-disabled ui-icon ui-icon-triangle-1-s ui-sort-ltr"></span></span></div></th><th id="detailList_showPoint" role="columnheader" class="ui-state-default ui-th-column ui-th-ltr" style="width: 122px;"><div id="jqgh_showPoint">积分变动<span class="s-ico" style="display:none"><span sort="asc" class="ui-grid-ico-sort ui-icon-asc ui-state-disabled ui-icon ui-icon-triangle-1-n ui-sort-ltr"></span><span sort="desc" class="ui-grid-ico-sort ui-icon-desc ui-state-disabled ui-icon ui-icon-triangle-1-s ui-sort-ltr"></span></span></div></th><th id="detailList_tranDesc" role="columnheader" class="ui-state-default ui-th-column ui-th-ltr" style="width: 134px;"><div id="jqgh_tranDesc">交易描述<span class="s-ico" style="display:none"><span sort="asc" class="ui-grid-ico-sort ui-icon-asc ui-state-disabled ui-icon ui-icon-triangle-1-n ui-sort-ltr"></span><span sort="desc" class="ui-grid-ico-sort ui-icon-desc ui-state-disabled ui-icon ui-icon-triangle-1-s ui-sort-ltr"></span></span></div></th></tr></thead></table></div></div><div class="ui-jqgrid-bdiv" style="height: 100%; width: 725px;"><div style="position:relative;"><div id="detailList_empty" class="emptyrecords" style="display:none">无数据显示</div><div></div><table id="detailList" class="myGrid ui-jqgrid-btable" cellspacing="0" cellpadding="0" border="0" role="grid" aria-multiselectable="false" aria-labelledby="gbox_detailList" style="table-layout: auto; width: 725px;"><tbody><tr class="jqgfirstrow" role="row" style="height:auto"><td role="gridcell" style="height:0px;width:145px;"></td><td role="gridcell" style="height:0px;width:145px;"></td><td role="gridcell" style="height:0px;width:145px;"></td><td role="gridcell" style="height:0px;width:145px;"></td><td role="gridcell" style="height:0px;width:145px;"></td></tr><tr id="0" role="row" class="ui-widget-content jqgrowOdd jqgrow ui-row-ltr"><td role="gridcell" style="text-align:center;" title="2018-11-15" aria-describedby="detailList_pointDate">2018-11-15</td><td role="gridcell" style="text-align:center;" title="221444" aria-describedby="detailList_tranNo">221444</td><td role="gridcell" style="text-align:center;" title="0.00" aria-describedby="detailList_tranAmount">0.00</td><td role="gridcell" style="text-align:center;" title="-286000" aria-describedby="detailList_showPoint">-286000</td><td role="gridcell" style="text-align:left;" title="2026积分礼品兑换" aria-describedby="detailList_tranDesc">2026积分礼品兑换</td></tr></tbody></table></div></div></div><div class="ui-jqgrid-resize-mark" id="rs_mdetailList"> </div><div id="pager" class="ui-state-default ui-jqgrid-pager ui-corner-bottom" dir="ltr" style="width: 725px;"><div id="pg_pager" class="ui-pager-control" role="group"><table cellspacing="0" cellpadding="0" border="0" class="ui-pg-table" style="width:100%;table-layout:fixed;height:100%;" role="row"><tbody><tr><td id="pager_left" align="left"></td><td id="pager_center" align="center" style="white-space: pre; width: 435px;"><table cellspacing="0" cellpadding="0" border="0" style="table-layout:auto;" class="ui-pg-table"><tbody><tr><td id="first" class="ui-pg-button ui-corner-all ui-state-disabled">首页</td><td id="prev" class="ui-pg-button ui-corner-all ui-state-disabled">上一页</td><td id="next" class="ui-pg-button ui-corner-all ui-state-disabled">下一页</td><td id="last" class="ui-pg-button ui-corner-all ui-state-disabled">末页</td><td class="ui-pg-button ui-state-disabled" style="width:4px;"><span class="ui-separator"></span></td><td dir="ltr"> 第 <span id="curpg">1</span> 页/共 <span id="sp_2">1</span> 页</td><td class="ui-pg-button ui-state-disabled" style="width:4px;"><span class="ui-separator"></span></td><td dir="ltr"> 到第 <input class="ui-pg-input ent_enabled" type="text" size="2" maxlength="7" value="0" role="textbox" /> 页</td><td id="btnInput" class="ui-pg-button ui-corner-all">[确定]</td><td class="ui-pg-button ui-state-disabled" style="width:4px;"><span class="ui-separator"></span></td></tr></tbody></table></td><td id="pager_right" align="right"><div dir="ltr" style="text-align:right" class="ui-paging-info">1 - 1　共 1 条</div></td></tr></tbody></table></div></div></div>
+                    
+                    
+                    
+                    
+                    
+                <script type="text/javascript">jQuery(window).load(function(){ jQuery("#detailList").jqGrid({
+adjustMode:true,autowidth:true,caption:'信用卡积分明细',datatype:'json',
+height:'100%',
+loadComplete:loadComplete,loadError:defaultLoadError,loadonce:true,
+
+pager:'#pager',
+prmNames:getPrmNames('dataSet'),
+radio:false,rowNum:10,shrinkToFit:true,url:'/pers/creditCard/query/queryBonusDetail!list.do',viewrecords:true,
+colModel:[  
+{name:'pointDate',align:'center'} ,
+{name:'tranNo',align:'center'} ,
+{name:'tranAmount',align:'center'} ,
+{name:'showPoint',align:'center'} ,
+{name:'tranDesc',align:'left'}     ],
+colNames:[
+  '日期' ,
+  '交易' ,
+  '交易金额' ,
+  '积分变动' ,
+  '交易描述' ]
+     });
+ });
+</script>
+            </div>
+
+            <div class="form-btn-div">
+            	<span class="cibButton-wrap"><input type="submit" value="打印" id="printBtn" name="method:doPrint" onclick="doPrint();return false;" class="ui-cib-button" role="button" aria-disabled="false" style="vertical-align: middle;" /><span class="cib-btnR"></span></span>
+
+				
+            </div>
+        
+</form>
+
+
+
+      	<script type="text/javascript">
+           	$(document).ready(function(){
+           		$("#printBtn").cibButton({disabled:true});
+           		var maxDate = "2019-01-11";
+           		var minDate = "2014-01-11";
+           		jDate("endDate","yy-mm-dd",minDate,maxDate,true);
+	            jDate("startDate","yy-mm-dd",minDate,maxDate,true);
+	            jDateRange("startDate","endDate");
+	            $("#form").validationEngine();
+	            $("#startDate,#endDate").css("width","80px");
+           	});
+           	
+           	function query(withinMonth){
+            	
+	        	if(withinMonth){
+	        		$("#form").validationEngine("detach");
+	        		$("#withinMonth").val(withinMonth);
+            	} else if(!$("#form").validationEngine("validate")){
+	        		return false;
+	        	}
+	        	$("#col3_content").mask("交易正在处理中，请稍候...");
+            	return true;
+           	}
+           	
+           	function loadComplete(){
+               	var records = $("#detailList").jqGrid('getGridParam','records');
+               	if( records != null &amp;&amp; records != '' &amp;&amp; records &gt; 0) {
+               		$("#printBtn").cibButton({disabled:false});
+               	}
+           	}
+           
+            function goBack(){
+    			document.location = "/pers/creditCard/query/queryBonusDetail.do";
+    		}
+            
+            function doPrint(){
+            	jPageDialog('信用卡积分明细查询','/pers/creditCard/query/queryBonusDetail!doPrint.do',800,550,true);
+            }
+        </script>
+    
+				</div>
+				<div id="page_helps">
+				
+            <div class="help_bottom"><a href="/pers/main/customer/functionMap.do" id="func-map">功能地图</a><span id="pageNo">页面编号： 09080302_B</span></div>
+
+        
+				</div>
+			</div>
+		</div>
+	
+                            
+                            <div id="ie_clearing">   </div>
+                        </div>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+                
+            </div>
+        </div>
+		<iframe style="display:none;position:absolute;" width="0" length="0" src="/pers/main/master/keepAlive?loginTicket=e53b5716749f6217990abb66e26932a9"></iframe>
+        <script type="text/javascript">
+            var splitter;
+            var col1 = document.getElementById("col1");
+            var col3 = document.getElementById("col3");
+            $(function(){
+                var H = top.window.document.body.offsetHeight;
+                H = H - 230;
+                var $main = $("#main");
+                var mainH = $main.height()+22;
+                var minH = Math.max(H,mainH);
+                
+               $("#col1, #col3_content, #splitter").css("min-height", minH+"px");
+                
+                if($.browser.msie &amp;&amp; parseFloat($.browser.version)&lt;7){
+                    
+                    $("#col1,#col3_content,#splitter").css("height", mainH+"px");
+                }
+                splitter= $("#splitter");
+                window.setTimeout(reinitCols,200);
+            });
+            function reinitCols(){
+        
+                try{
+                    var height = $(col3).height();
+                    $(col1).height(height);
+                    splitter.height(height);
+                }catch(ex){
+                }
+                window.setTimeout(reinitCols,200);
+            }
+           
+
+              function clearN(){
+                for ( var id in jQuery.cache ) {
+                    var obj=jQuery.cache[ id ];
+                    for ( var name in obj ) {
+                        if ( obj[ name ].handle ) {
+                            
+                            try {
+                                jQuery.event.remove( obj[ name ].handle.elem );
+                            } catch(e) {											
+                            }
+                        }
+                    }
+                }
+            }
+            try{window.attachEvent("onunload",clearN);}catch(er){}
+                      
+            function themeSelecter_onChanged()
+            {
+                document.getElementById("themeForm").submit();
+            }
+            function switchSide(sideStatus)
+            {
+                if(sideStatus == "on"){
+                        $("#col1").animate({marginLeft:"-199px"},"fast");
+                        $("#splitter").animate({left:"2px"},"fast");
+                        $("#col3").animate({marginLeft:"15px"},"fast",function(){gridThings()});
+                        $("#splitter-btn").html("展开快速通道&lt;br&gt;&amp;gt;&amp;gt;");     
+               }else if(sideStatus == "off"){
+                        $("#col3").animate({marginLeft:"218px"},"fast");
+                        $("#splitter").animate({left:"204px"},"fast");
+                        $("#col1").animate({marginLeft:"0px"},"fast",function(){gridThings()});
+                        $("#splitter-btn").html("收起快速通道&lt;br&gt;&amp;lt;&amp;lt;");
+                }
+            }
+            $(function($) {
+                 
+                $("#links .title").bind("click",function(){
+                        if($(this).parent().hasClass("current")){
+                                $(this).parent().find("ul").hide().end().removeClass("current");                              
+                        }else{
+                             $(this).parent().addClass("current").find("ul").show();                        
+                        }
+                });
+                $("#fast-way .title").bind("click",function(){
+                	location.href='/pers/main/customer/fastwaySetting.do';
+                });
+                $(":submit, :reset, :button, button, a.btn").cibButton().css("vertical-align","middle");
+                selectmenu();
+                splitterInit();
+			$("#splitter-btn").click(function(){
+				var sideStatus = parent.$("#out_main").data("sideStatus");
+				if(sideStatus == undefined){sideStatus = "on";}
+                                if(sideStatus == "on"){
+                                    parent.$("#out_main").data("sideStatus","off");
+                                 }else if(sideStatus == "off"){
+                                    parent.$("#out_main").data("sideStatus","on");
+                                 }
+				switchSide(sideStatus);
+			});
+			$("input:text:disabled").addClass("disabled");
+			
+			try{
+				parent.sessionHold();
+				parent.initLogoutTimer();
+			}catch(er){}
+                        doPlaceholder();
+		});
+		function splitterInit(){
+			var sideStatus = parent.$("#out_main").data("sideStatus");
+			if(sideStatus == "on"){
+				$("#col1").css("marginLeft","0px");
+				$("#col3").css("marginLeft","218px");
+                                $("#splitter-btn").html("收起快速通道&lt;br&gt;&amp;lt;&amp;lt;");
+				$("#splitter").css({left:"204px"});
+				gridThings();
+			}else if(sideStatus == "off"){
+				$("#col1").css("marginLeft","-199px");
+				$("#col3").css("marginLeft","15px");
+                                $("#splitter-btn").html("展开快速通道&lt;br&gt;&amp;gt;&amp;gt;");
+				$("#splitter").css({left:"2px"});
+				gridThings();
+			}
+		}
+	
+            function gridThings(){
+                if($(".grid-div").length &gt; 0){
+                    gridResize();
+                }
+            }
+            function selectmenu()
+            {
+                try{
+                    var funid='FIN09|FIN09_08|FIN09_08_03|FIN09_08_03_02';
+                    parent.selectMenu(funid);
+                }catch(e)
+                {
+                      
+                }
+            }
+            function jalert(msg,options){
+		parent.jalert(msg,options);
+            }
+           	function jconfirm(str,title,myWidth,myHeight,fn,closeFn,options){
+                parent.jconfirm(str,title,myWidth,myHeight,fn,closeFn,options);
+            }
+            function jPageDialog(titleStr,url,width,height,scrollable,closeFn,options){
+		parent.jPageDialog(titleStr,url,width,height,scrollable,closeFn,options);
+            }
+        	function closeDialog() {
+        		parent.closeDialog();
+            }
+        	$('#search_keyword').keydown(function(event) {
+                if (event.which == 13) {
+                   event.preventDefault();
+                   funcSearch();
+             }
+          	});
+            function funcSearch(){
+                if($("#search_keyword").hasClass('placeholder'))
+                {
+                    jalert('功能名称不能为空');
+                    return ;
+                }
+                if($.trim($("#search_keyword").val()).length&lt;=0){
+                    jalert('功能名称不能为空');
+                    return ;
+                }
+                toUrl=encodeURI('/pers/main/customer/search.do?keyword='+$("#search_keyword").val());
+                document.location=toUrl;
+                
+            }
+            function fastwaySetting(){
+             document.location='/pers/main/customer/fastwaySetting.do';
+            }
+  		function clearIt(event){
+            	parent.clearIt();
+            }
+        </script>
+    
+
+<div id="ui-datepicker-div" class="ui-datepicker ui-widget ui-widget-content ui-helper-clearfix ui-corner-all" style="display: none;"></div></body></html>

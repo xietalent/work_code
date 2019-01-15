@@ -21,13 +21,18 @@ class Ershoufang():
 
     def parses(self):
         page_html = requests.get(self.url,headers=self.headers)
-        print(page_html.text)
+        # print(page_html.text)
+        # page_html = page_html.replace('<html><head></head><body><pre style="word-wrap: break-word; white-space: pre-wrap;">', '')
+        # page_html= page_html.replace('</pre></body></html>', '')
+        # json_data = page_html.json()
+        # print(json_data)
+        # print(type(json_data))
         response = etree.HTML(page_html.text)
         print(type(response))
 
         fangs = response.xpath(".//div[@class='content']/div[@class='leftContent']/ul[@class='sellListContent']")
         # fangs = page_html.xpath(".//div[@class='content']/div[@class='leftContent']")
-        print(fangs)
+        # print(fangs)
         items =[]
         for fang in fangs:
             item={}
@@ -44,6 +49,6 @@ class Ershoufang():
 
 
 if __name__ == '__main__':
-    for num in range(100):
+    for num in range(1,100):
         req = Ershoufang(num)
         req.parses()

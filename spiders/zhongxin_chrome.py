@@ -13,6 +13,7 @@ import pytesseract
 import pytesseract.pytesseract
 from urllib import request
 from PIL import Image
+import time
 
 class SeleniumMiddleware():
     def __init__(self,timeout=None,service_args=[]):

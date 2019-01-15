@@ -218,7 +218,6 @@ class SeleniumMiddleware():
 
         #获取页面源码
         page_html = self.browser.page_source
-
         # print("当前网址"+self.browser.page_source)
         # return page_html
         items = []

@@ -1,0 +1,1979 @@
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml"><head><script type="text/javascript">
+    window.serverTime=1547108765417;
+</script>
+
+
+
+
+    
+
+    	<meta http-equiv="Expires" content="0" />
+
+    	<meta http-equiv="Pragma" content="No-cache" />
+
+    	<meta http-equiv="cache-control" content="no-cache,must-revalidate" />
+
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+     	<base target="workframe" />
+
+        <title>在线兴业</title>
+
+        <link rel="shortcut icon" href="/pers/main/resources/favicon.ico" />
+
+                <link href="/pers/main/resources/css/redmond/core.css?v=72be91f387" rel="stylesheet" type="text/css" media="all" />
+        <!--[if lte IE 7]>
+        <link href="/pers/main/resources/css/redmond/patch.css?v=b97ff1777a" rel="stylesheet" type="text/css" media="all"/>
+        <![endif]-->
+        <link href="/pers/main/resources/css/redmond/menu.css?v=8a0d069e82" rel="stylesheet" type="text/css" media="all" />
+        <link rel="stylesheet" href="/pers/main/resources/css/redmond/jquery-ui.css?v=661179c862" type="text/css" />
+        <script type="text/javascript" src="/pers/main/resources/js/core.js?v=ee306c39dd"></script>
+        <script type="text/javascript" src="/pers/main/resources/js/cib.js?v=b52abae553"></script>
+            <script type="text/javascript" src="/pers/main/resources/js/i18n/i18n-cn.js?v=37f5ea4a3d"></script>
+        <!--[if  IE 6]>
+        <script type="text/javascript">try{document.execCommand("BackgroundImageCache",false,true);}catch(e){}</script>
+        <![endif]-->
+        <script type="text/javascript" src="/pers/main/resources/js/menu.js?v=1e18c204ad"></script>
+        <script type="text/javascript" src="/pers/main/resources/js/jqui.js?v=57a6fed345"></script>
+
+
+        <script type="text/javascript">
+	smPublicKeyX = "DD14159A4ED0296BBBA9EBDA1C3B05165D4C211CA15E1D7A6D328CBA358B7AE6";
+	smPublicKeyY = "7441433F7B305B31F20B4B93CD4AD8A54AAA9186BD6D2F34B4CEDA002DB1CCC3";
+</script>
+
+
+    <script type="text/javascript">
+    (function(para) {
+        window['sensorsDataAnalytic201505'] = para.name;
+        window[para.name] = {
+            para: para
+        };
+    })({
+        name: 'sa',
+        server_url: 'https://bigdata.cib.com.cn/sa?project=grwy',
+        show_log: false
+    });
+</script>
+<script type="text/javascript" src="/pers/main/resources/js/sensorsdata.min.js"></script>
+<script type="text/javascript">
+     var loginType="1";
+           var ubsData={};
+           if(loginType!=null){
+           ubsData={'loginType':loginType};
+         }
+         sa.track('pc_login_visit',ubsData);
+</script>
+        <script type="text/javascript">
+
+            var timeout = new Number("900") - 30;
+
+            var leftTime = timeout;
+
+            var useCertSign = false;
+
+			
+            var autoLogout = window.setInterval("showLogout()",1000);
+
+            function showLogout() {
+
+            	leftTime--;
+
+            	var tod = $("#TOD");
+
+            	
+
+            	if (tod.dialog("isOpen") &amp;&amp; leftTime &gt; 60) {
+
+            		tod.dialog("close");
+
+            	}
+
+                if (leftTime == 60) {
+
+                	tod.dialog("open");
+
+                }
+
+                if (leftTime &lt;= 60) {
+
+                	
+
+                	if (leftTime &gt; 0) {
+
+                		$("#tc").text(leftTime);
+
+                	} else {
+
+                		
+
+                		$("#tc").text("0");
+
+                		clearInterval(autoLogout);
+
+                		if($.browser.webkit){
+                 	      	window.onbeforeunload = null;
+                 	      }
+
+                		$(window).unbind("unload");
+                    	window.location = "/pers/main/j_spring_security_logout";
+
+                	}
+
+                }
+
+            }
+
+            function themeSelecter_onChanged(){
+
+                document.getElementById("themeForm").submit();
+
+            }
+
+            function initLogoutTimer(){
+
+            	leftTime = timeout;
+
+            }
+
+            function windowUnbindUnload(){
+
+                $(window).unbind("unload");
+
+            }
+
+            
+			function subSessionHold(){
+            	
+            	jQuery.ajax("/pers/fin/session.html?timestamp=" + new Date().getTime());
+			}
+            function sessionHold(){
+
+            	leftTime = timeout;
+
+            	jQuery.ajax("/pers/main/session.html?timestamp=" + new Date().getTime());
+
+            }
+
+            $(function(){
+
+            	if($.browser.mozilla){
+            		window.onbeforeunload = function(){
+                		location.href = "/pers/main/j_spring_security_logout";
+                		alert("感谢您使用兴业银行个人网上银行，如您的计算机已插入网盾证书，请您务必拔出网盾。");
+                	}
+            	}else if($.browser.webkit){
+            		window.onbeforeunload = function(){
+                		return "感谢您使用兴业银行个人网上银行，如您的计算机已插入网盾证书，请您务必拔出网盾。";
+                	}
+                	window.onunload = function(){
+
+                		 var xmlHttp = false;
+                            try {
+                                xmlHttp = new ActiveXObject("Msxml2.XMLHTTP");
+                            } catch (e) {
+                                try {
+                                    xmlHttp = new ActiveXObject("Microsoft.XMLHTTP");
+                                } catch (e2) {
+                                    xmlHttp = false;
+                                }
+                            }
+                            if (!xmlHttp &amp;&amp; typeof XMLHttpRequest != 'undefined') {
+                            xmlHttp = new XMLHttpRequest();
+                            }
+                            var url = "/pers/main/j_spring_security_logout";
+                            xmlHttp.open("POST", url, false);
+                            
+                            xmlHttp.send(null);
+                             window.open('', '_self', ''); 
+                             window.close();
+
+                	}
+            	}else{
+            		$(window).bind("unload", function(){
+            			window.location = "/pers/main/j_spring_security_logout";
+		            	alert("感谢您使用兴业银行个人网上银行，如您的计算机已插入网盾证书，请您务必拔出网盾。");
+		           	});
+            	}
+
+                $("#selectError").dialog({resizable:false,modal:true,bgiframe:true,autoOpen:false});
+
+                $("#autoLogoutDialog").dialog({resizable:false,modal:true,bgiframe:true,autoOpen:false});
+
+				$("#TOD").dialog({
+
+					autoOpen:false,
+
+					width:480,
+
+					modal:true,
+
+					title:"温馨提示",
+
+					buttons:{
+
+						"继续":function(){
+
+							sessionHold();
+
+							
+							
+							
+            				subSessionHold();
+
+							$(this).dialog("close");
+
+						},
+
+						"退出":function(){
+
+							$(this).dialog("close");
+
+							if($.browser.webkit){
+                 	      	window.onbeforeunload = null;
+                 	      }
+							window.location = "/pers/main/j_spring_security_logout";
+
+						}
+
+					},
+
+					beforeClose:function(){
+
+						sessionHold();
+
+                    }
+
+				});
+
+                                
+
+                                $("#Destory_Personal_Exsit").dialog({
+
+					autoOpen:false,
+
+					modal:true,
+
+					title:"温馨提示",
+
+					buttons:{
+
+						"立即退出":function(){
+
+							//$(this).dialog("close");
+							window.parent.location.replace("/pers/main/j_spring_security_logout");
+
+						}
+
+					},
+
+                                        close:function(){
+                                            window.parent.location.replace("/pers/main/j_spring_security_logout");
+
+                                        }
+
+				});
+
+                try{
+                	
+                	$.ajax({async:true,url: '/pers/main/login!cleanLoginInfo.do',type:'POST'});
+                }
+                catch(e){
+                }
+               
+                try{
+                    
+                    $.ajax({async:true,url: '/pers/main/index!multiLoginRemind.do',type:'POST'}); 
+                }catch(e){
+                }
+            });
+            function beforeLogout() {
+            	toLogoutPS();
+            }
+            function toLogoutCC() {
+            	$.ajax({
+            		dataType: "jsonp",
+            		type: "POST",
+                    url: "https://ccbank.cib.com.cn/transaction/Logout4Pers.jsp",
+                    success: function(data){
+                    	toLogoutPS();
+                    },
+                    timeout:5000,
+                    error:function(){
+                    	toLogoutPS();
+                    }
+                });
+            }
+			function toLogoutPS() {
+				document.location='/pers/main/j_spring_security_logout';
+			}
+			function toLogoutPPS() {
+				window.parent.location.replace("/pers/main/j_spring_security_logout");
+			}
+        </script>
+
+        <!--[if lt IE 8]>
+
+		<style type="text/css">
+
+			#wrap {display:table;height:100%}
+
+		</style>
+
+		<![endif]-->
+
+        <!--[if IE 7]>
+
+		<style type="text/css">
+
+			#wrap {display:block;height:auto}
+
+		</style>
+
+		<![endif]-->
+
+    </head>
+
+    <body id="mainframe" ondragstart="return false;">
+
+
+        
+
+        <div class="page_margins" id="wrap">
+
+
+
+            <div id="header">
+				
+				
+				<img id="logo" src="/pers/main/resources/images/logo_pers.png" />
+				
+
+
+
+
+                <div id="topnav">
+
+                    <ul>
+
+                    	
+
+                        
+                        
+						
+						<li id="top-diversity" class="cib-iconBg item"><a href="###" onclick="javascript:goPortal();return false;">多元金融</a></li>
+						
+						
+                        <li id="top-wel" class="cib-iconBg item "><a href="/pers/main/welcome.do?aliveToken=1547108765374">欢迎页</a></li>
+                        
+                        
+						 
+                         
+	                        <li id="top-serv" class="cib-iconBg item"><a href="/pers/ebpp/community/customerOnline.do?aliveToken=1547108765374" onclick="javascript:goCustomerOnlineInput();return false;">在线客服</a></li>
+							
+							
+	 					
+                        
+
+                        <li id="top-logout" class="cib-iconBg item last"><a href="###" onclick="return confirmToExit();">安全退出</a></li>
+
+                    </ul>
+
+
+
+                    
+
+                    
+
+                        
+
+                    
+
+                </div>
+
+            </div>
+
+            <div id="nav" class="menu-container" style="border:none; border-bottom-width:0px">
+
+                
+
+                
+
+                
+                 
+				
+				
+
+				<div id="menu-container">
+<ul id="primary-nav" class="menu">
+    <li class="top" id="liFIN14">
+        <a id="FIN14" target="_self" class="l1" href="#">财富总览</a>
+        <ul id="ulFIN14" class="sub-menu" style="min-width: 10px; width: 400px;">
+            <li id="liFIN14_02" class="second ">
+                <a href="/pers/fin/efortune/index!wealth.do?FUNID=FIN14|FIN14_02&amp;aliveToken=1547108765374" id="FIN14_02" class="l2">财富总览</a>
+            </li>
+            <li class="sec-split">
+            </li><li id="liFIN14_03" class="second ">
+                <a href="/pers/fin/efortune/index!wealthTrend.do?FUNID=FIN14|FIN14_03&amp;aliveToken=1547108765374" id="FIN14_03" class="l2">财富走势</a>
+            </li>
+            <li class="sec-split">
+            </li><li id="liFIN14_04" class="second ">
+                <a href="/pers/fin/efortune/index!balanceTrend.do?FUNID=FIN14|FIN14_04&amp;aliveToken=1547108765374" id="FIN14_04" class="l2">收支走势</a>
+            </li>
+            <li class="sec-split">
+            </li><li id="liFIN14_05" class="second ">
+                <a href="/pers/fin/efortune/index!finadvise.do?FUNID=FIN14|FIN14_05&amp;aliveToken=1547108765374" id="FIN14_05" class="l2">理财建议</a>
+            </li>
+            <li class="sec-split">
+            </li><li id="liFIN14_06" class="second ">
+                <a href="/pers/fin/efortune/eventaxes.do?FUNID=FIN14|FIN14_06&amp;aliveToken=1547108765374" id="FIN14_06" class="l2">消息提醒</a>
+            </li>
+            <li class="sec-split">
+        </li></ul>
+    </li>
+    <li class="top" id="liFIN01">
+        <a id="FIN01" target="_self" class="l1" href="#">账户查询</a>
+        <ul id="ulFIN01" class="sub-menu">
+            <li id="liFIN01_01" class="second ">
+                <a href="/pers/main/query/queryBalance.do?FUNID=FIN01|FIN01_01&amp;aliveToken=1547108765374" id="FIN01_01" class="l2">存款余额查询</a>
+            </li>
+            <li class="sec-split">
+            </li><li id="liFIN01_02" class="second ">
+                <a href="/pers/main/account/queryTrans.do?FUNID=FIN01|FIN01_02&amp;aliveToken=1547108765374" id="FIN01_02" class="l2">交易明细查询</a>
+            </li>
+            <li class="sec-split">
+            </li><li id="liFIN01_03" class="second ">
+                <a href="/pers/fin/collection/interBankAcctInfoQuery.do?FUNID=FIN01|FIN01_03&amp;aliveToken=1547108765374" id="FIN01_03" class="l2">实时跨行查询</a>
+            </li>
+            <li class="sec-split">
+            </li><li id="liFIN01_04" class="second ">
+                <a href="/pers/fin/persloan/queryPersLoan.do?FUNID=FIN01|FIN01_04&amp;aliveToken=1547108765374" id="FIN01_04" class="l2">贷款信息查询</a>
+            </li>
+            <li class="sec-split">
+            </li><li id="liFIN01_05" class="second arrow-down">
+                <a target="_self" href="#" id="FIN01_05" class="l2">证券资金查询</a>
+                <ul id="ulFIN01_05" class="down-menu">
+                    <li id="liFIN01_05_01" class="third " style="width: 10.6em;">
+                        <a href="/pers/fin/bankstock/thirdparty.do?FUNID=FIN01|FIN01_05|FIN01_05_01&amp;aliveToken=1547108765374" id="FIN01_05_01" class="l3">普通存管证券资金查询</a>
+                    </li>
+                    <li id="liFIN01_05_02" class="third " style="width: 10.6em;">
+                        <a href="/pers/fin/bankstock/financingstock.do?FUNID=FIN01|FIN01_05|FIN01_05_02&amp;aliveToken=1547108765374" id="FIN01_05_02" class="l3">融资融券证券资金查询</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="sec-split">
+            </li><li id="liFIN01_08" class="second ">
+                <a href="/pers/fin/financing/finProdQueryHold.do?FUNID=FIN01|FIN01_08&amp;aliveToken=1547108765374" id="FIN01_08" class="l2">理财产品查询</a>
+            </li>
+            <li class="sec-split">
+            </li><li id="liFIN01_06" class="second ">
+                <a href="/pers/fin/goldtrade/search/goldTradeDepositQueryAction.do?FUNID=FIN01|FIN01_06&amp;aliveToken=1547108765374" id="FIN01_06" class="l2">贵金属资金查询</a>
+            </li>
+            <li class="sec-split">
+            </li><li id="liFIN01_09" class="second arrow-down">
+                <a target="_self" href="#" id="FIN01_09" class="l2">国债查询</a>
+                <ul id="ulFIN01_09" class="down-menu">
+                    <li id="liFIN01_09_01" class="third " style="width: 10em;">
+                        <a href="/pers/fin/bond/voucherbond/voucherBondQueryAction.do?FUNID=FIN01|FIN01_09|FIN01_09_01&amp;aliveToken=1547108765374" id="FIN01_09_01" class="l3">凭证式国债查询</a>
+                    </li>
+                    <li id="liFIN01_09_02" class="third " style="width: 10em;">
+                        <a href="/pers/fin/bond/ebond/eBondQueryAction.do?FUNID=FIN01|FIN01_09|FIN01_09_02&amp;aliveToken=1547108765374" id="FIN01_09_02" class="l3">储蓄式国债查询</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="sec-split">
+            </li><li id="liFIN01_14" class="second ">
+                <a href="/pers/main/query/queryVasPoint.do?FUNID=FIN01|FIN01_14&amp;aliveToken=1547108765374" id="FIN01_14" class="l2">客户层级和贵宾积点</a>
+            </li>
+            <li class="sec-split">
+            </li><li id="liFIN01_12" class="second arrow-down">
+                <a target="_self" href="#" id="FIN01_12" class="l2">其他查询</a>
+                <ul id="ulFIN01_12" class="down-menu">
+                    <li id="liFIN01_12_01" class="third arrow-right" style="width: 10em;">
+                        <a target="_self" href="#" id="FIN01_12_01" class="l3">公积金业务</a>
+                        <ul id="ulFIN01_12_01" class="poll-menu" style="left: 10em;">
+                            <li id="liFIN01_12_01_01" class="last" style="width: 10em;"><a href="/pers/main/query/queryProvidentFund.do?FUNID=FIN01|FIN01_12|FIN01_12_01|FIN01_12_01_01&amp;aliveToken=1547108765374" id="FIN01_12_01_01" class="l4">成都公积金</a></li>
+			            </ul>
+                    </li>
+                    <li id="liFIN01_12_02" class="third " style="width: 10em;">
+                        <a href="/pers/main/query/queryOpenAcct.do?FUNID=FIN01|FIN01_12|FIN01_12_02&amp;aliveToken=1547108765374" id="FIN01_12_02" class="l3">开户网点查询</a>
+                    </li>
+                    <li id="liFIN01_12_05" class="third " style="width: 10em;">
+                        <a href="/pers/main/account/netOperationQuery.do?FUNID=FIN01|FIN01_12|FIN01_12_05&amp;aliveToken=1547108765374" id="FIN01_12_05" class="l3">网银操作查询</a>
+                    </li>
+                    <li id="liFIN01_12_06" class="third " style="width: 10em;">
+                        <a href="/pers/main/query/queryElecPayroll.do?FUNID=FIN01|FIN01_12|FIN01_12_06&amp;aliveToken=1547108765374" id="FIN01_12_06" class="l3">电子工资单查询</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="sec-split">
+        </li></ul>
+    </li>
+    <li class="top" id="liFIN02">
+        <a id="FIN02" target="_self" class="l1" href="#">服务管理</a>
+        <ul id="ulFIN02" class="sub-menu">
+            <li id="liFIN02_01" class="second ">
+                <a href="/pers/main/account/emergencyDealLostAction.do?FUNID=FIN02|FIN02_01&amp;aliveToken=1547108765374" id="FIN02_01" class="l2">紧急挂失</a>
+            </li>
+            <li class="sec-split">
+            </li><li id="liFIN02_02" class="second arrow-down">
+                <a target="_self" href="#" id="FIN02_02" class="l2">账户管理</a>
+                <ul id="ulFIN02_02" class="down-menu">
+                    <li id="liFIN02_02_01" class="third " style="width: 10em;">
+                        <a href="/pers/main/account/accountMgr.do?FUNID=FIN02|FIN02_02|FIN02_02_01&amp;aliveToken=1547108765374" id="FIN02_02_01" class="l3">行内账户管理</a>
+                    </li>
+                    <li id="liFIN02_02_02" class="third " style="width: 10em;">
+                        <a href="/pers/main/account/toInterBankCollectionMgr.do?FUNID=FIN02|FIN02_02|FIN02_02_02&amp;aliveToken=1547108765374" id="FIN02_02_02" class="l3">他行账户管理</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="sec-split">
+            </li><li id="liFIN02_04" class="second arrow-down">
+                <a target="_self" href="#" id="FIN02_04" class="l2">功能与限额设置</a>
+                <ul id="ulFIN02_04" class="down-menu">
+                    <li id="liFIN02_04_01" class="third " style="width: 10em;">
+                        <a href="/pers/main/customer/netbankFuncMgr.do?FUNID=FIN02|FIN02_04|FIN02_04_01&amp;aliveToken=1547108765374" id="FIN02_04_01" class="l3">网上银行功能设置</a>
+                    </li>
+                    <li id="liFIN02_04_02" class="third " style="width: 10em;">
+                        <a href="/pers/main/customer/phoneBankMgr.do?FUNID=FIN02|FIN02_04|FIN02_04_02&amp;aliveToken=1547108765374" id="FIN02_04_02" class="l3">电话银行功能设置</a>
+                    </li>
+                    <li id="liFIN02_04_03" class="third " style="width: 10em;">
+                        <a href="/pers/main/customer/mBankMgr.do?FUNID=FIN02|FIN02_04|FIN02_04_03&amp;aliveToken=1547108765374" id="FIN02_04_03" class="l3">手机银行功能设置</a>
+                    </li>
+                    <li id="liFIN02_04_05" class="third " style="width: 10em;">
+                        <a href="/pers/main/customer/fairyMgr.do?FUNID=FIN02|FIN02_04|FIN02_04_05&amp;aliveToken=1547108765374" id="FIN02_04_05" class="l3">精灵信使功能设置</a>
+                    </li>
+                    <li id="liFIN02_04_06" class="third " style="width: 10em;">
+                        <a href="/pers/main/transfer/mptrans.do?FUNID=FIN02|FIN02_04|FIN02_04_06&amp;aliveToken=1547108765374" id="FIN02_04_06" class="l3">收款类型功能设置</a>
+                    </li>
+                    <li id="liFIN02_04_07" class="third " style="width: 10em;">
+                        <a href="/pers/main/transfer/editMpNo.do?FUNID=FIN02|FIN02_04|FIN02_04_07&amp;aliveToken=1547108765374" id="FIN02_04_07" class="l3">账户昵称功能设置</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="sec-split">
+            </li><li id="liFIN02_05" class="second arrow-down">
+                <a target="_self" href="#" id="FIN02_05" class="l2">安全保护</a>
+                <ul id="ulFIN02_05" class="down-menu">
+                    <li id="liFIN02_05_01" class="third " style="width: 10em;">
+                        <a href="/pers/main/customer/smsManage.do?FUNID=FIN02|FIN02_05|FIN02_05_01&amp;aliveToken=1547108765374" id="FIN02_05_01" class="l3">短信口令</a>
+                    </li>
+                    <li id="liFIN02_05_03" class="third " style="width: 10em;">
+                        <a href="/pers/main/customer/certManager.do?FUNID=FIN02|FIN02_05|FIN02_05_03&amp;aliveToken=1547108765374" id="FIN02_05_03" class="l3">证书管理</a>
+                    </li>
+                    <li id="liFIN02_05_02" class="third " style="width: 10em;">
+                        <a href="/pers/main/customer/customerMessage.do?FUNID=FIN02|FIN02_05|FIN02_05_02&amp;aliveToken=1547108765374" id="FIN02_05_02" class="l3">预留验证信息</a>
+                    </li>
+                    <li id="liFIN02_05_04" class="third arrow-right" style="width: 10em;">
+                        <a target="_self" href="#" id="FIN02_05_04" class="l3">令牌</a>
+                        <ul id="ulFIN02_05_04" class="poll-menu" style="left: 10em;">
+                            <li id="liFIN02_05_04_01" class="last" style="width: 10em;"><a href="/pers/main/acctProtect/tokenManager.do?FUNID=FIN02|FIN02_05|FIN02_05_04|FIN02_05_04_01&amp;aliveToken=1547108765374" id="FIN02_05_04_01" class="l4">绑定与解绑</a></li>
+                            <li id="liFIN02_05_04_02" class="last" style="width: 10em;"><a href="/pers/main/acctProtect/tokenSynchronize.do?FUNID=FIN02|FIN02_05|FIN02_05_04|FIN02_05_04_02&amp;aliveToken=1547108765374" id="FIN02_05_04_02" class="l4">令牌同步</a></li>
+                            <li id="liFIN02_05_04_03" class="last" style="width: 10em;"><a href="/pers/main/acctProtect/tokenLost.do?FUNID=FIN02|FIN02_05|FIN02_05_04|FIN02_05_04_03&amp;aliveToken=1547108765374" id="FIN02_05_04_03" class="l4">令牌挂失</a></li>
+			            </ul>
+                    </li>
+                </ul>
+            </li>
+            <li class="sec-split">
+            </li><li id="liFIN02_12" class="second arrow-down">
+                <a target="_self" href="#" id="FIN02_12" class="l2">密码修改</a>
+                <ul id="ulFIN02_12" class="down-menu">
+                    <li id="liFIN02_12_01" class="third " style="width: 10em;">
+                        <a href="/pers/main/customer/modifyAccountPwd.do?FUNID=FIN02|FIN02_12|FIN02_12_01&amp;aliveToken=1547108765374" id="FIN02_12_01" class="l3">取款密码修改</a>
+                    </li>
+                    <li id="liFIN02_12_02" class="third " style="width: 10em;">
+                        <a href="/pers/main/netpayment/modifyNetpaymentPwd.do?FUNID=FIN02|FIN02_12|FIN02_12_02&amp;aliveToken=1547108765374" id="FIN02_12_02" class="l3">网上支付密码重置</a>
+                    </li>
+                    <li id="liFIN02_12_03" class="third " style="width: 10em;">
+                        <a href="/pers/main/customer/modifyLoginPwd.do?FUNID=FIN02|FIN02_12|FIN02_12_03&amp;aliveToken=1547108765374" id="FIN02_12_03" class="l3">登录密码修改</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="sec-split">
+            </li><li id="liFIN02_06" class="second ">
+                <a href="/pers/main/customer/customerDetail.do?FUNID=FIN02|FIN02_06&amp;aliveToken=1547108765374" id="FIN02_06" class="l2">个人资料修改</a>
+            </li>
+            <li class="sec-split">
+            </li><li id="liFIN02_14" class="second ">
+                <a href="/pers/main/customer/taxResident.do?FUNID=FIN02|FIN02_14&amp;aliveToken=1547108765374" id="FIN02_14" class="l2">税收居民信息</a>
+            </li>
+            <li class="sec-split">
+            </li><li id="liFIN02_07" class="second ">
+                <a href="/pers/main/customer/modifyLoginType.do?FUNID=FIN02|FIN02_07&amp;aliveToken=1547108765374" id="FIN02_07" class="l2">登录方式管理</a>
+            </li>
+            <li class="sec-split">
+            </li><li id="liFIN02_08" class="second ">
+                <a href="/pers/main/account/netOperationQuery.do?FUNID=FIN02|FIN02_08&amp;aliveToken=1547108765374" id="FIN02_08" class="l2">网银操作查询</a>
+            </li>
+            <li class="sec-split">
+            </li><li id="liFIN02_09" class="second ">
+                <a href="/pers/main/customer/checkGuarantee.do?FUNID=FIN02|FIN02_09&amp;aliveToken=1547108765374" id="FIN02_09" class="l2">支票保付</a>
+            </li>
+            <li class="sec-split">
+            </li><li id="liFIN02_11" class="second ">
+                <a href="/pers/main/customer/destoryPersonal.do?FUNID=FIN02|FIN02_11&amp;aliveToken=1547108765374" id="FIN02_11" class="l2">注销客户号</a>
+            </li>
+            <li class="sec-split">
+            </li><li id="liFIN02_13" class="second arrow-down">
+                <a target="_self" href="#" id="FIN02_13" class="l2">服务预约</a>
+                <ul id="ulFIN02_13" class="down-menu">
+                    <li id="liFIN02_13_01" class="third " style="width: 10em;">
+                        <a href="/pers/main/reserve/reserveService.do?FUNID=FIN02|FIN02_13|FIN02_13_01&amp;aliveToken=1547108765374" id="FIN02_13_01" class="l3">预约办理借记卡</a>
+                    </li>
+                    <li id="liFIN02_13_02" class="third " style="width: 10em;">
+                        <a href="/pers/main/reserve/reserveService.do?FUNID=FIN02|FIN02_13|FIN02_13_02&amp;aliveToken=1547108765374" id="FIN02_13_02" class="l3">预约换卡</a>
+                    </li>
+                    <li id="liFIN02_13_03" class="third " style="width: 10em;">
+                        <a href="/pers/main/reserve/reserveService.do?FUNID=FIN02|FIN02_13|FIN02_13_03&amp;aliveToken=1547108765374" id="FIN02_13_03" class="l3">预约理财风险评估</a>
+                    </li>
+                    <li id="liFIN02_13_04" class="third " style="width: 10em;">
+                        <a href="/pers/main/reserve/reserveService.do?FUNID=FIN02|FIN02_13|FIN02_13_04&amp;aliveToken=1547108765374" id="FIN02_13_04" class="l3">预约签约电子银行</a>
+                    </li>
+                    <li id="liFIN02_13_05" class="third " style="width: 10em;">
+                        <a href="/pers/main/reserve/reserveService.do?FUNID=FIN02|FIN02_13|FIN02_13_05&amp;aliveToken=1547108765374" id="FIN02_13_05" class="l3">预约修改个人资料</a>
+                    </li>
+                    <li id="liFIN02_13_06" class="third " style="width: 10em;">
+                        <a href="/pers/main/reserve/reserveService.do?FUNID=FIN02|FIN02_13|FIN02_13_06&amp;aliveToken=1547108765374" id="FIN02_13_06" class="l3">预约记录查询与修改</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="sec-split">
+        </li></ul>
+    </li>
+    <li class="top" id="liFIN03">
+        <a id="FIN03" target="_self" class="l1" href="#">转账汇款</a>
+        <ul id="ulFIN03" class="sub-menu">
+            <li id="liFIN03_01" class="second ">
+                <a href="/pers/main/transfer/innerTransfer.do?FUNID=FIN03|FIN03_01&amp;aliveToken=1547108765374" id="FIN03_01" class="l2">行内转账</a>
+            </li>
+            <li class="sec-split">
+            </li><li id="liFIN03_11" class="second ">
+                <a href="/pers/main/transfer/crossTrans.do?FUNID=FIN03|FIN03_11&amp;aliveToken=1547108765374" id="FIN03_11" class="l2">跨行转账</a>
+            </li>
+            <li class="sec-split">
+            </li><li id="liFIN03_03" class="second ">
+                <a href="/pers/fin/collection/realtimeInterBankTransfer.do?FUNID=FIN03|FIN03_03&amp;aliveToken=1547108765374" id="FIN03_03" class="l2">跨行转入</a>
+            </li>
+            <li class="sec-split">
+            </li><li id="liFIN03_05" class="second ">
+                <a href="/pers/main/transfer/presetTransferAction.do?FUNID=FIN03|FIN03_05&amp;aliveToken=1547108765374" id="FIN03_05" class="l2">预约转账</a>
+            </li>
+            <li class="sec-split">
+            </li><li id="liFIN03_06" class="second ">
+                <a href="/pers/main/transfer/batchTransfer.do?FUNID=FIN03|FIN03_06&amp;aliveToken=1547108765374" id="FIN03_06" class="l2">批量转账</a>
+            </li>
+            <li class="sec-split">
+            </li><li id="liFIN03_10" class="second ">
+                <a href="/pers/main/transfer/transAction.do?FUNID=FIN03|FIN03_10&amp;aliveToken=1547108765374" id="FIN03_10" class="l2">一键直转</a>
+            </li>
+            <li class="sec-split">
+            </li><li id="liFIN03_12" class="second ">
+                <a href="/pers/main/transfer/foreignExchangeTransfer.do?FUNID=FIN03|FIN03_12&amp;aliveToken=1547108765374" id="FIN03_12" class="l2">外汇汇款</a>
+            </li>
+            <li class="sec-split">
+            </li><li id="liFIN03_07" class="second arrow-down">
+                <a target="_self" href="#" id="FIN03_07" class="l2">其他转账</a>
+                <ul id="ulFIN03_07" class="down-menu">
+                    <li id="liFIN03_07_03" class="third " style="width: 10em;">
+                        <a href="/pers/main/transfer/counter/counterTransfer.do?FUNID=FIN03|FIN03_07|FIN03_07_03&amp;aliveToken=1547108765374" id="FIN03_07_03" class="l3">柜面通跨行转账</a>
+                    </li>
+                    <li id="liFIN03_07_04" class="third " style="width: 10em;">
+                        <a href="/pers/main/transfer/cardMutualTransfer.do?FUNID=FIN03|FIN03_07|FIN03_07_04&amp;aliveToken=1547108765374" id="FIN03_07_04" class="l3">卡内账户转账</a>
+                    </li>
+                    <li id="liFIN03_07_05" class="third arrow-right" style="width: 10em;">
+                        <a target="_self" href="#" id="FIN03_07_05" class="l3">兴银通转账</a>
+                        <ul id="ulFIN03_07_05" class="poll-menu" style="left: 10em;">
+                            <li id="liFIN03_07_05_02" class="last" style="width: 10em;"><a href="/pers/fin/fintone/withdraw.do?FUNID=FIN03|FIN03_07|FIN03_07_05|FIN03_07_05_02&amp;aliveToken=1547108765374" id="FIN03_07_05_02" class="l4">转出</a></li>
+                            <li id="liFIN03_07_05_03" class="last" style="width: 10em;"><a href="/pers/fin/fintone/transferDetail.do?FUNID=FIN03|FIN03_07|FIN03_07_05|FIN03_07_05_03&amp;aliveToken=1547108765374" id="FIN03_07_05_03" class="l4">转入转出明细查询</a></li>
+			            </ul>
+                    </li>
+                </ul>
+            </li>
+            <li class="sec-split">
+            </li><li id="liFIN03_08" class="second ">
+                <a href="/pers/main/query/queryNetTrans.do?FUNID=FIN03|FIN03_08&amp;aliveToken=1547108765374" id="FIN03_08" class="l2">转账明细及回单查询</a>
+            </li>
+            <li class="sec-split">
+            </li><li id="liFIN03_09" class="second ">
+                <a href="/pers/main/transfer/cussentAccountMgr.do?FUNID=FIN03|FIN03_09&amp;aliveToken=1547108765374" id="FIN03_09" class="l2">常用收款账户管理</a>
+            </li>
+            <li class="sec-split">
+        </li></ul>
+    </li>
+    <li class="top" id="liFIN13">
+        <a id="FIN13" target="_self" class="l1" href="#">资金归集</a>
+        <ul id="ulFIN13" class="sub-menu" style="min-width: 10px; left: 200px;">
+            <li id="liFIN13_01" class="second arrow-down">
+                <a target="_self" href="#" id="FIN13_01" class="l2">跨行归集</a>
+                <ul id="ulFIN13_01" class="down-menu">
+                    <li id="liFIN13_01_01" class="third " style="width: 10em;">
+                        <a href="/pers/fin/collection/interBankCollectionMgr.do?FUNID=FIN13|FIN13_01|FIN13_01_01&amp;aliveToken=1547108765374" id="FIN13_01_01" class="l3">跨行协议管理</a>
+                    </li>
+                    <li id="liFIN13_01_02" class="third " style="width: 10em;">
+                        <a href="/pers/fin/collection/interBankAcctInfoQuery.do?FUNID=FIN13|FIN13_01|FIN13_01_02&amp;aliveToken=1547108765374" id="FIN13_01_02" class="l3">实时跨行查询</a>
+                    </li>
+                    <li id="liFIN13_01_03" class="third " style="width: 10em;">
+                        <a href="/pers/fin/collection/realtimeInterBankTransfer.do?FUNID=FIN13|FIN13_01|FIN13_01_03&amp;aliveToken=1547108765374" id="FIN13_01_03" class="l3">跨行转入</a>
+                    </li>
+                    <li id="liFIN13_01_04" class="third " style="width: 10em;">
+                        <a href="/pers/fin/collection/interbankOneKeyCollection.do?FUNID=FIN13|FIN13_01|FIN13_01_04&amp;aliveToken=1547108765374" id="FIN13_01_04" class="l3">一键归集</a>
+                    </li>
+                    <li id="liFIN13_01_05" class="third " style="width: 10em;">
+                        <a href="/pers/fin/collection/setAutoCashSweepMgr.do?FUNID=FIN13|FIN13_01|FIN13_01_05&amp;aliveToken=1547108765374" id="FIN13_01_05" class="l3">自动归集设置</a>
+                    </li>
+                    <li id="liFIN13_01_06" class="third " style="width: 10em;">
+                        <a href="/pers/fin/collection/queryDetail.do?FUNID=FIN13|FIN13_01|FIN13_01_06&amp;aliveToken=1547108765374" id="FIN13_01_06" class="l3">归集明细查询</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="sec-split">
+            </li><li id="liFIN13_02" class="second arrow-down">
+                <a target="_self" href="#" id="FIN13_02" class="l2">行内归集</a>
+                <ul id="ulFIN13_02" class="down-menu">
+                    <li id="liFIN13_02_01" class="third " style="width: 10em;">
+                        <a href="/pers/fin/collection/innerBankCollectionMgr.do?FUNID=FIN13|FIN13_02|FIN13_02_01&amp;aliveToken=1547108765374" id="FIN13_02_01" class="l3">行内协议管理</a>
+                    </li>
+                    <li id="liFIN13_02_02" class="third " style="width: 10em;">
+                        <a href="/pers/fin/collection/realtimePeerBankQuery.do?FUNID=FIN13|FIN13_02|FIN13_02_02&amp;aliveToken=1547108765374" id="FIN13_02_02" class="l3">实时行内查询</a>
+                    </li>
+                    <li id="liFIN13_02_05" class="third " style="width: 10em;">
+                        <a href="/pers/fin/collection/autoCollectionMgr.do?FUNID=FIN13|FIN13_02|FIN13_02_05&amp;aliveToken=1547108765374" id="FIN13_02_05" class="l3">自动归集设置</a>
+                    </li>
+                    <li id="liFIN13_02_06" class="third " style="width: 10em;">
+                        <a href="/pers/fin/collection/queryCollectionInfo.do?FUNID=FIN13|FIN13_02|FIN13_02_06&amp;aliveToken=1547108765374" id="FIN13_02_06" class="l3">归集明细查询</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="sec-split">
+        </li></ul>
+    </li>
+    <li class="top" id="liFIN04">
+        <a id="FIN04" target="_self" class="l1" href="#">投资理财</a>
+        <ul id="ulFIN04" class="sub-menu">
+            <li id="liFIN04_01" class="second arrow-down">
+                <a target="_self" href="#" id="FIN04_01" class="l2">贵金属</a>
+                <ul id="ulFIN04_01" class="down-menu">
+                    <li id="liFIN04_01_01" class="third " style="width: 11.5em;">
+                        <a href="/pers/fin/goldtrade/customerManage/registerCustomer.do?FUNID=FIN04|FIN04_01|FIN04_01_01&amp;aliveToken=1547108765374" id="FIN04_01_01" class="l3">开户</a>
+                    </li>
+                    <li id="liFIN04_01_11" class="third " style="width: 11.5em;">
+                        <a href="/pers/fin/goldtrade/marketquery/marketQuery.do?FUNID=FIN04|FIN04_01|FIN04_01_11&amp;aliveToken=1547108765374" id="FIN04_01_11" class="l3">行情查询</a>
+                    </li>
+                    <li id="liFIN04_01_14" class="third arrow-right" style="width: 11.5em;">
+                        <a target="_self" href="#" id="FIN04_01_14" class="l3">现货交易</a>
+                        <ul id="ulFIN04_01_14" class="poll-menu" style="left: 11.5em;">
+                            <li id="liFIN04_01_14_01" class="last" style="width: 10em;"><a href="/pers/fin/goldtrade/goldmarket/queryMarketInfo!toNowBuyResult.do?FUNID=FIN04|FIN04_01|FIN04_01_14|FIN04_01_14_01&amp;aliveToken=1547108765374" id="FIN04_01_14_01" class="l4">委托买入</a></li>
+                            <li id="liFIN04_01_14_02" class="last" style="width: 10em;"><a href="/pers/fin/goldtrade/goldmarket/queryMarketInfo!toNowSellResult.do?FUNID=FIN04|FIN04_01|FIN04_01_14|FIN04_01_14_02&amp;aliveToken=1547108765374" id="FIN04_01_14_02" class="l4">委托卖出</a></li>
+			            </ul>
+                    </li>
+                    <li id="liFIN04_01_15" class="third arrow-right" style="width: 11.5em;">
+                        <a target="_self" href="#" id="FIN04_01_15" class="l3">延期交易</a>
+                        <ul id="ulFIN04_01_15" class="poll-menu" style="left: 11.5em;">
+                            <li id="liFIN04_01_15_01" class="last" style="width: 10em;"><a href="/pers/fin/goldtrade/goldmarket/queryMarketInfo!toDelayOpenResult.do?FUNID=FIN04|FIN04_01|FIN04_01_15|FIN04_01_15_01&amp;aliveToken=1547108765374" id="FIN04_01_15_01" class="l4">委托开仓</a></li>
+                            <li id="liFIN04_01_15_02" class="last" style="width: 10em;"><a href="/pers/fin/goldtrade/goldmarket/queryMarketInfo!toDelayCloseResult.do?FUNID=FIN04|FIN04_01|FIN04_01_15|FIN04_01_15_02&amp;aliveToken=1547108765374" id="FIN04_01_15_02" class="l4">委托平仓</a></li>
+                            <li id="liFIN04_01_15_03" class="last" style="width: 10em;"><a href="/pers/fin/goldtrade/goldmarket/queryMarketInfo!toDeferAndNeutralResult.do?FUNID=FIN04|FIN04_01|FIN04_01_15|FIN04_01_15_03&amp;aliveToken=1547108765374" id="FIN04_01_15_03" class="l4">交割&amp;中立仓</a></li>
+			            </ul>
+                    </li>
+                    <li id="liFIN04_01_03" class="third " style="width: 11.5em;">
+                        <a href="/pers/fin/goldtrade/entrust/entrustCancle.do?FUNID=FIN04|FIN04_01|FIN04_01_03&amp;aliveToken=1547108765374" id="FIN04_01_03" class="l3">撤销申报</a>
+                    </li>
+                    <li id="liFIN04_01_16" class="third " style="width: 11.5em;">
+                        <a href="/pers/fin/goldtrade/fund/fundInput.do?FUNID=FIN04|FIN04_01|FIN04_01_16&amp;aliveToken=1547108765374" id="FIN04_01_16" class="l3">出入金</a>
+                    </li>
+                    <li id="liFIN04_01_06" class="third arrow-right" style="width: 11.5em;">
+                        <a target="_self" href="#" id="FIN04_01_06" class="l3">查询</a>
+                        <ul id="ulFIN04_01_06" class="poll-menu" style="left: 11.5em;">
+                            <li id="liFIN04_01_06_02" class="last" style="width: 10em;"><a href="/pers/fin/goldtrade/search/goldTradeDepositQueryAction.do?FUNID=FIN04|FIN04_01|FIN04_01_06|FIN04_01_06_02&amp;aliveToken=1547108765374" id="FIN04_01_06_02" class="l4">资金查询</a></li>
+                            <li id="liFIN04_01_06_03" class="last" style="width: 10em;"><a href="/pers/fin/goldtrade/search/entrustQuery.do?FUNID=FIN04|FIN04_01|FIN04_01_06|FIN04_01_06_03&amp;aliveToken=1547108765374" id="FIN04_01_06_03" class="l4">委托查询</a></li>
+                            <li id="liFIN04_01_06_04" class="last" style="width: 10em;"><a href="/pers/fin/goldtrade/search/bargainQuery.do?FUNID=FIN04|FIN04_01|FIN04_01_06|FIN04_01_06_04&amp;aliveToken=1547108765374" id="FIN04_01_06_04" class="l4">成交查询</a></li>
+                            <li id="liFIN04_01_06_07" class="last" style="width: 10em;"><a href="/pers/fin/goldtrade/search/goldTradeHoldQueryAction.do?FUNID=FIN04|FIN04_01|FIN04_01_06|FIN04_01_06_07&amp;aliveToken=1547108765374" id="FIN04_01_06_07" class="l4">持仓查询</a></li>
+                            <li id="liFIN04_01_06_06" class="last" style="width: 10em;"><a href="/pers/fin/goldtrade/search/goldTradeStorageQueryAction.do?FUNID=FIN04|FIN04_01|FIN04_01_06|FIN04_01_06_06&amp;aliveToken=1547108765374" id="FIN04_01_06_06" class="l4">库存查询</a></li>
+                            <li id="liFIN04_01_06_09" class="last" style="width: 10em;"><a href="/pers/fin/goldtrade/fund/fundTradeSearch.do?FUNID=FIN04|FIN04_01|FIN04_01_06|FIN04_01_06_09&amp;aliveToken=1547108765374" id="FIN04_01_06_09" class="l4">出入金查询</a></li>
+                            <li id="liFIN04_01_06_08" class="last" style="width: 10em;"><a href="/pers/fin/goldtrade/search/goldTradePickupQueryAction.do?FUNID=FIN04|FIN04_01|FIN04_01_06|FIN04_01_06_08&amp;aliveToken=1547108765374" id="FIN04_01_06_08" class="l4">提货查询</a></li>
+                            <li id="liFIN04_01_06_10" class="last" style="width: 10em;"><a href="/pers/fin/goldtrade/search/requisitionQuery.do?FUNID=FIN04|FIN04_01|FIN04_01_06|FIN04_01_06_10&amp;aliveToken=1547108765374" id="FIN04_01_06_10" class="l4">通知单查询</a></li>
+                            <li id="liFIN04_01_06_01" class="last" style="width: 10em;"><a href="/pers/fin/goldtrade/search/goldTradeBalanceTabQueryAction.do?FUNID=FIN04|FIN04_01|FIN04_01_06|FIN04_01_06_01&amp;aliveToken=1547108765374" id="FIN04_01_06_01" class="l4">结算单查询</a></li>
+                            <li id="liFIN04_01_06_05" class="last" style="width: 10em;"><a href="/pers/fin/goldtrade/search/goldTradeSignQueryAction.do?FUNID=FIN04|FIN04_01|FIN04_01_06|FIN04_01_06_05&amp;aliveToken=1547108765374" id="FIN04_01_06_05" class="l4">签约查询</a></li>
+			            </ul>
+                    </li>
+                    <li id="liFIN04_01_17" class="third arrow-right" style="width: 11.5em;">
+                        <a target="_self" href="#" id="FIN04_01_17" class="l3">密码管理</a>
+                        <ul id="ulFIN04_01_17" class="poll-menu" style="left: 11.5em;">
+                            <li id="liFIN04_01_17_01" class="last" style="width: 10em;"><a href="/pers/fin/goldtrade/customerManage/changePassword.do?FUNID=FIN04|FIN04_01|FIN04_01_17|FIN04_01_17_01&amp;aliveToken=1547108765374" id="FIN04_01_17_01" class="l4">密码修改</a></li>
+                            <li id="liFIN04_01_17_02" class="last" style="width: 10em;"><a href="/pers/fin/goldtrade/customerManage/resetPassword.do?FUNID=FIN04|FIN04_01|FIN04_01_17|FIN04_01_17_02&amp;aliveToken=1547108765374" id="FIN04_01_17_02" class="l4">密码重置</a></li>
+			            </ul>
+                    </li>
+                    <li id="liFIN04_01_08" class="third " style="width: 11.5em;">
+                        <a href="/pers/fin/goldtrade/search/goldTradeStorageQueryAction.do?FUNID=FIN04|FIN04_01|FIN04_01_08&amp;aliveToken=1547108765374" id="FIN04_01_08" class="l3">提货申请</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="sec-split">
+            </li><li id="liFIN04_02" class="second arrow-down">
+                <a target="_self" href="#" id="FIN04_02" class="l2">基金及券商产品代销</a>
+                <ul id="ulFIN04_02" class="down-menu">
+                    <li id="liFIN04_02_01" class="third " style="width: 12em;">
+                        <a href="/pers/fin/openfund/riskEvaluate.do?FUNID=FIN04|FIN04_02|FIN04_02_01&amp;aliveToken=1547108765374" id="FIN04_02_01" class="l3">风险评估</a>
+                    </li>
+                    <li id="liFIN04_02_02" class="third " style="width: 12em;">
+                        <a href="/pers/fin/openfund/fundList.do?FUNID=FIN04|FIN04_02|FIN04_02_02&amp;aliveToken=1547108765374" id="FIN04_02_02" class="l3">代销产品列表</a>
+                    </li>
+                    <li id="liFIN04_02_04" class="third arrow-right" style="width: 12em;">
+                        <a target="_self" href="#" id="FIN04_02_04" class="l3">查询</a>
+                        <ul id="ulFIN04_02_04" class="poll-menu" style="left: 12em;">
+                            <li id="liFIN04_02_04_01" class="last" style="width: 10em;"><a href="/pers/fin/openfund/query/holdQuery.do?FUNID=FIN04|FIN04_02|FIN04_02_04|FIN04_02_04_01&amp;aliveToken=1547108765374" id="FIN04_02_04_01" class="l4">持仓查询</a></li>
+                            <li id="liFIN04_02_04_06" class="last" style="width: 10em;"><a href="/pers/fin/openfund/query/fundDetailQuery.do?FUNID=FIN04|FIN04_02|FIN04_02_04|FIN04_02_04_06&amp;aliveToken=1547108765374" id="FIN04_02_04_06" class="l4">交易查询</a></li>
+                            <li id="liFIN04_02_04_04" class="last" style="width: 10em;"><a href="/pers/fin/openfund/query/accountQuery.do?FUNID=FIN04|FIN04_02|FIN04_02_04|FIN04_02_04_04&amp;aliveToken=1547108765374" id="FIN04_02_04_04" class="l4">账户信息查询</a></li>
+                            <li id="liFIN04_02_04_05" class="last" style="width: 10em;"><a href="/pers/fin/openfund/query/queryMatchOpenfund.do?FUNID=FIN04|FIN04_02|FIN04_02_04|FIN04_02_04_05&amp;aliveToken=1547108765374" id="FIN04_02_04_05" class="l4">风险匹配产品查询</a></li>
+                            <li id="liFIN04_02_04_08" class="last" style="width: 10em;"><a href="/pers/fin/openfund/query/eprotocolQuery.do?FUNID=FIN04|FIN04_02|FIN04_02_04|FIN04_02_04_08&amp;aliveToken=1547108765374" id="FIN04_02_04_08" class="l4">查询电子签名约定书</a></li>
+                            <li id="liFIN04_02_04_07" class="last" style="width: 10em;"><a href="/pers/fin/openfund/query/econtractQuery.do?FUNID=FIN04|FIN04_02|FIN04_02_04|FIN04_02_04_07&amp;aliveToken=1547108765374" id="FIN04_02_04_07" class="l4">查询电子合同</a></li>
+			            </ul>
+                    </li>
+                    <li id="liFIN04_02_06" class="third " style="width: 12em;">
+                        <a href="/pers/fin/openfund/timeInvestConsign.do?FUNID=FIN04|FIN04_02|FIN04_02_06&amp;aliveToken=1547108765374" id="FIN04_02_06" class="l3">定投</a>
+                    </li>
+                    <li id="liFIN04_02_09" class="third " style="width: 12em;">
+                        <a href="/pers/fin/openfund/buyFund.do?FUNID=FIN04|FIN04_02|FIN04_02_09&amp;aliveToken=1547108765374" id="FIN04_02_09" class="l3">购买</a>
+                    </li>
+                    <li id="liFIN04_02_10" class="third " style="width: 12em;">
+                        <a href="/pers/fin/openfund/redempt.do?FUNID=FIN04|FIN04_02|FIN04_02_10&amp;aliveToken=1547108765374" id="FIN04_02_10" class="l3">赎回</a>
+                    </li>
+                    <li id="liFIN04_02_11" class="third " style="width: 12em;">
+                        <a href="/pers/fin/openfund/fundExchange.do?FUNID=FIN04|FIN04_02|FIN04_02_11&amp;aliveToken=1547108765374" id="FIN04_02_11" class="l3">转换</a>
+                    </li>
+                    <li id="liFIN04_02_12" class="third " style="width: 12em;">
+                        <a href="/pers/fin/openfund/modifyIncomeMethod.do?FUNID=FIN04|FIN04_02|FIN04_02_12&amp;aliveToken=1547108765374" id="FIN04_02_12" class="l3">收益分配方式修改</a>
+                    </li>
+                    <li id="liFIN04_02_07" class="third " style="width: 12em;">
+                        <a href="/pers/fin/openfund/withdrawOrder.do?FUNID=FIN04|FIN04_02|FIN04_02_07&amp;aliveToken=1547108765374" id="FIN04_02_07" class="l3">撤单</a>
+                    </li>
+                    <li id="liFIN04_02_08" class="third " style="width: 12em;">
+                        <a href="/pers/fin/openfund/fundSms.do?FUNID=FIN04|FIN04_02|FIN04_02_08&amp;aliveToken=1547108765374" id="FIN04_02_08" class="l3">基金短信</a>
+                    </li>
+                    <li id="liFIN04_02_13" class="third " style="width: 12em;">
+                        <a href="/pers/fin/openfund/customerInfo.do?FUNID=FIN04|FIN04_02|FIN04_02_13&amp;aliveToken=1547108765374" id="FIN04_02_13" class="l3">客户资料修改</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="sec-split">
+            </li><li id="liFIN04_17" class="second arrow-down">
+                <a target="_self" href="#" id="FIN04_17" class="l2">实物金</a>
+                <ul id="ulFIN04_17" class="down-menu">
+                    <li id="liFIN04_17_01" class="third " style="width: 10em;">
+                        <a href="/pers/fin/realgold/realgoldBuy.do?FUNID=FIN04|FIN04_17|FIN04_17_01&amp;aliveToken=1547108765374" id="FIN04_17_01" class="l3">购买</a>
+                    </li>
+                    <li id="liFIN04_17_02" class="third " style="width: 10em;">
+                        <a href="/pers/fin/realgold/realgoldDetailed.do?FUNID=FIN04|FIN04_17|FIN04_17_02&amp;aliveToken=1547108765374" id="FIN04_17_02" class="l3">明细查询</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="sec-split">
+            </li><li id="liFIN04_04" class="second arrow-down">
+                <a target="_self" href="#" id="FIN04_04" class="l2">银证业务</a>
+                <ul id="ulFIN04_04" class="down-menu">
+                    <li id="liFIN04_04_04" class="third " style="width: 10em;">
+                        <a href="/pers/fin/bankstock/sign/sign.do?FUNID=FIN04|FIN04_04|FIN04_04_04&amp;aliveToken=1547108765374" id="FIN04_04_04" class="l3">自助签约</a>
+                    </li>
+                    <li id="liFIN04_04_01" class="third " style="width: 10em;">
+                        <a href="/pers/fin/bankstock/thirdparty.do?FUNID=FIN04|FIN04_04|FIN04_04_01&amp;aliveToken=1547108765374" id="FIN04_04_01" class="l3">普通存管</a>
+                    </li>
+                    <li id="liFIN04_04_02" class="third " style="width: 10em;">
+                        <a href="/pers/fin/bankstock/financingstock.do?FUNID=FIN04|FIN04_04|FIN04_04_02&amp;aliveToken=1547108765374" id="FIN04_04_02" class="l3">融资融券</a>
+                    </li>
+                    <li id="liFIN04_04_03" class="third " style="width: 10em;">
+                        <a href="/pers/fin/bankstock/bankderivative.do?FUNID=FIN04|FIN04_04|FIN04_04_03&amp;aliveToken=1547108765374" id="FIN04_04_03" class="l3">银衍业务</a>
+                    </li>
+                    <li id="liFIN04_04_06" class="third " style="width: 10em;">
+                        <a href="/pers/fin/bankstock/stockOpen.do?FUNID=FIN04|FIN04_04|FIN04_04_06&amp;aliveToken=1547108765374" id="FIN04_04_06" class="l3">证券开户</a>
+                    </li>
+                    <li id="liFIN04_04_05" class="third arrow-right" style="width: 10em;">
+                        <a target="_self" href="#" id="FIN04_04_05" class="l3">新股网下申购划款</a>
+                        <ul id="ulFIN04_04_05" class="poll-menu" style="left: 10em;">
+                            <li id="liFIN04_04_05_01" class="last" style="width: 10em;"><a href="/pers/fin/bankstock/placingTransfer.do?FUNID=FIN04|FIN04_04|FIN04_04_05|FIN04_04_05_01&amp;aliveToken=1547108765374" id="FIN04_04_05_01" class="l4">转账划款</a></li>
+                            <li id="liFIN04_04_05_02" class="last" style="width: 10em;"><a href="/pers/fin/bankstock/placingTransferQueryAndPrint.do?FUNID=FIN04|FIN04_04|FIN04_04_05|FIN04_04_05_02&amp;aliveToken=1547108765374" id="FIN04_04_05_02" class="l4">查询及回单打印</a></li>
+			            </ul>
+                    </li>
+                </ul>
+            </li>
+            <li class="sec-split">
+            </li><li id="liFIN04_05" class="second arrow-down">
+                <a target="_self" href="#" id="FIN04_05" class="l2">理财产品</a>
+                <ul id="ulFIN04_05" class="down-menu">
+                    <li id="liFIN04_05_02" class="third " style="width: 10em;">
+                        <a href="/pers/fin/financing/finProdBuy.do?FUNID=FIN04|FIN04_05|FIN04_05_02&amp;aliveToken=1547108765374" id="FIN04_05_02" class="l3">在售查询与购买</a>
+                    </li>
+                    <li id="liFIN04_05_03" class="third " style="width: 10em;">
+                        <a href="/pers/fin/financing/finProdRedempt.do?FUNID=FIN04|FIN04_05|FIN04_05_03&amp;aliveToken=1547108765374" id="FIN04_05_03" class="l3">赎回</a>
+                    </li>
+                    <li id="liFIN04_05_04" class="third " style="width: 10em;">
+                        <a href="/pers/fin/financing/finProdRetract.do?FUNID=FIN04|FIN04_05|FIN04_05_04&amp;aliveToken=1547108765374" id="FIN04_05_04" class="l3">撤销</a>
+                    </li>
+                    <li id="liFIN04_05_01" class="third " style="width: 10em;">
+                        <a href="/pers/fin/financing/finProdQueryHold.do?FUNID=FIN04|FIN04_05|FIN04_05_01&amp;aliveToken=1547108765374" id="FIN04_05_01" class="l3">持仓查询</a>
+                    </li>
+                    <li id="liFIN04_05_05" class="third " style="width: 10em;">
+                        <a href="/pers/fin/financing/finProdQueryTrans.do?FUNID=FIN04|FIN04_05|FIN04_05_05&amp;aliveToken=1547108765374" id="FIN04_05_05" class="l3">交易明细查询</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="sec-split">
+            </li><li id="liFIN04_25" class="second arrow-down">
+                <a target="_self" href="#" id="FIN04_25" class="l2">保险代销</a>
+                <ul id="ulFIN04_25" class="down-menu">
+                    <li id="liFIN04_25_01" class="third " style="width: 10em;">
+                        <a href="/pers/fin/ins/insBuy.do?FUNID=FIN04|FIN04_25|FIN04_25_01&amp;aliveToken=1547108765374" id="FIN04_25_01" class="l3">购买</a>
+                    </li>
+                    <li id="liFIN04_25_02" class="third " style="width: 10em;">
+                        <a href="/pers/fin/ins/insQueryOrder.do?FUNID=FIN04|FIN04_25|FIN04_25_02&amp;aliveToken=1547108765374" id="FIN04_25_02" class="l3">保单查询</a>
+                    </li>
+                    <li id="liFIN04_25_03" class="third " style="width: 10em;">
+                        <a href="/pers/fin/ins/insWithdrawOrder.do?FUNID=FIN04|FIN04_25|FIN04_25_03&amp;aliveToken=1547108765374" id="FIN04_25_03" class="l3">撤销</a>
+                    </li>
+                    <li id="liFIN04_25_05" class="third " style="width: 10em;">
+                        <a href="/pers/fin/ins/insQueryTxnDetail.do?FUNID=FIN04|FIN04_25|FIN04_25_05&amp;aliveToken=1547108765374" id="FIN04_25_05" class="l3">交易明细查询</a>
+                    </li>
+                    <li id="liFIN04_25_04" class="third " style="width: 10em;">
+                        <a href="/pers/fin/ins/insSurrOrder.do?FUNID=FIN04|FIN04_25|FIN04_25_04&amp;aliveToken=1547108765374" id="FIN04_25_04" class="l3">退保申请</a>
+                    </li>
+                    <li id="liFIN04_25_06" class="third " style="width: 10em;">
+                        <a href="/pers/fin/ins/insWithdrawSurrOrder.do?FUNID=FIN04|FIN04_25|FIN04_25_06&amp;aliveToken=1547108765374" id="FIN04_25_06" class="l3">退保申请撤单</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="sec-split">
+            </li><li id="liFIN04_06" class="second arrow-down">
+                <a target="_self" href="#" id="FIN04_06" class="l2">国债</a>
+                <ul id="ulFIN04_06" class="down-menu">
+                    <li id="liFIN04_06_01" class="third arrow-right" style="width: 11.1em;">
+                        <a target="_self" href="#" id="FIN04_06_01" class="l3">凭证式国债</a>
+                        <ul id="ulFIN04_06_01" class="poll-menu" style="left: 11.1em;">
+                            <li id="liFIN04_06_01_01" class="last" style="width: 10em;"><a href="/pers/fin/bond/voucherbond/voucherBondQueryAction.do?FUNID=FIN04|FIN04_06|FIN04_06_01|FIN04_06_01_01&amp;aliveToken=1547108765374" id="FIN04_06_01_01" class="l4">查询</a></li>
+			            </ul>
+                    </li>
+                    <li id="liFIN04_06_02" class="third arrow-right" style="width: 11.1em;">
+                        <a target="_self" href="#" id="FIN04_06_02" class="l3">储蓄国债（电子式）</a>
+                        <ul id="ulFIN04_06_02" class="poll-menu" style="left: 11.1em;">
+                            <li id="liFIN04_06_02_01" class="last" style="width: 10em;"><a href="/pers/fin/bond/ebond/eBondQueryAction.do?FUNID=FIN04|FIN04_06|FIN04_06_02|FIN04_06_02_01&amp;aliveToken=1547108765374" id="FIN04_06_02_01" class="l4">持有国债查询</a></li>
+                            <li id="liFIN04_06_02_02" class="last" style="width: 10em;"><a href="/pers/fin/bond/ebond/eBondTradeDetailQueryAction.do?FUNID=FIN04|FIN04_06|FIN04_06_02|FIN04_06_02_02&amp;aliveToken=1547108765374" id="FIN04_06_02_02" class="l4">交易明细查询</a></li>
+                            <li id="liFIN04_06_02_03" class="last" style="width: 10em;"><a href="/pers/fin/bond/ebond/eBondCustomerInfoQueryAction.do?FUNID=FIN04|FIN04_06|FIN04_06_02|FIN04_06_02_03&amp;aliveToken=1547108765374" id="FIN04_06_02_03" class="l4">客户信息查询</a></li>
+                            <li id="liFIN04_06_02_04" class="last" style="width: 10em;"><a href="/pers/fin/bond/ebond/eBondPublishQueryAction.do?FUNID=FIN04|FIN04_06|FIN04_06_02|FIN04_06_02_04&amp;aliveToken=1547108765374" id="FIN04_06_02_04" class="l4">国债信息查询</a></li>
+                            <li id="liFIN04_06_02_05" class="last" style="width: 10em;"><a href="/pers/fin/bond/ebond/purchaseEBond.do?FUNID=FIN04|FIN04_06|FIN04_06_02|FIN04_06_02_05&amp;aliveToken=1547108765374" id="FIN04_06_02_05" class="l4">认购</a></li>
+                            <li id="liFIN04_06_02_08" class="last" style="width: 10em;"><a href="/pers/fin/bond/ebond/eBondPasswdLossReportAction.do?FUNID=FIN04|FIN04_06|FIN04_06_02|FIN04_06_02_08&amp;aliveToken=1547108765374" id="FIN04_06_02_08" class="l4">电话查询密码挂失</a></li>
+			            </ul>
+                    </li>
+                </ul>
+            </li>
+            <li class="sec-split">
+            </li><li id="liFIN04_26" class="second arrow-down">
+                <a target="_self" href="#" id="FIN04_26" class="l2">储蓄产品</a>
+                <ul id="ulFIN04_26" class="down-menu">
+                    <li id="liFIN04_26_01" class="third arrow-right" style="width: 10em;">
+                        <a target="_self" href="#" id="FIN04_26_01" class="l3">通知存款</a>
+                        <ul id="ulFIN04_26_01" class="poll-menu" style="left: 10em;">
+                            <li id="liFIN04_26_01_01" class="last" style="width: 10em;"><a href="/pers/fin/noticedeposit/smartnotice/registerMgr.do?FUNID=FIN04|FIN04_26|FIN04_26_01|FIN04_26_01_01&amp;aliveToken=1547108765374" id="FIN04_26_01_01" class="l4">智能通知存款</a></li>
+                            <li id="liFIN04_26_01_02" class="last" style="width: 10em;"><a href="/pers/fin/noticedeposit/depositatNotice.do?FUNID=FIN04|FIN04_26|FIN04_26_01|FIN04_26_01_02&amp;aliveToken=1547108765374" id="FIN04_26_01_02" class="l4">普通通知存款</a></li>
+			            </ul>
+                    </li>
+                    <li id="liFIN04_26_02" class="third " style="width: 10em;">
+                        <a href="/pers/fin/timedeposit/currentToFixedAction.do?FUNID=FIN04|FIN04_26|FIN04_26_02&amp;aliveToken=1547108765374" id="FIN04_26_02" class="l3">定期存款</a>
+                    </li>
+                    <li id="liFIN04_26_03" class="third arrow-right" style="width: 10em;">
+                        <a target="_self" href="#" id="FIN04_26_03" class="l3">大额存单</a>
+                        <ul id="ulFIN04_26_03" class="poll-menu" style="left: 10em;">
+                            <li id="liFIN04_26_03_01" class="last" style="width: 10em;"><a href="/pers/fin/certificatesDeposit/buyCertificatesDeposit.do?FUNID=FIN04|FIN04_26|FIN04_26_03|FIN04_26_03_01&amp;aliveToken=1547108765374" id="FIN04_26_03_01" class="l4">购买</a></li>
+                            <li id="liFIN04_26_03_02" class="last" style="width: 10em;"><a href="/pers/fin/certificatesDeposit/drawCertificatesDeposit.do?FUNID=FIN04|FIN04_26|FIN04_26_03|FIN04_26_03_02&amp;aliveToken=1547108765374" id="FIN04_26_03_02" class="l4">支取</a></li>
+                            <li id="liFIN04_26_03_03" class="last" style="width: 10em;"><a href="/pers/fin/certificatesDeposit/queryCertificatesDeposit.do?FUNID=FIN04|FIN04_26|FIN04_26_03|FIN04_26_03_03&amp;aliveToken=1547108765374" id="FIN04_26_03_03" class="l4">查询</a></li>
+			            </ul>
+                    </li>
+                    <li id="liFIN04_26_04" class="third arrow-right" style="width: 10em;">
+                        <a target="_self" href="#" id="FIN04_26_04" class="l3">安愉储蓄</a>
+                        <ul id="ulFIN04_26_04" class="poll-menu" style="left: 10em;">
+                            <li id="liFIN04_26_04_01" class="last" style="width: 10em;"><a href="/pers/fin/anYuDeposit/anYuDepositBuy.do?FUNID=FIN04|FIN04_26|FIN04_26_04|FIN04_26_04_01&amp;aliveToken=1547108765374" id="FIN04_26_04_01" class="l4">购买</a></li>
+                            <li id="liFIN04_26_04_02" class="last" style="width: 10em;"><a href="/pers/fin/anYuDeposit/anYuDepositQuery.do?FUNID=FIN04|FIN04_26|FIN04_26_04|FIN04_26_04_02&amp;aliveToken=1547108765374" id="FIN04_26_04_02" class="l4">查询/支取</a></li>
+			            </ul>
+                    </li>
+                </ul>
+            </li>
+            <li class="sec-split">
+            </li><li id="liFIN04_18" class="second arrow-down">
+                <a target="_self" href="#" id="FIN04_18" class="l2">外汇业务</a>
+                <ul id="ulFIN04_18" class="down-menu">
+                    <li id="liFIN04_18_01" class="third " style="width: 11.9em;">
+                        <a href="/pers/fin/foreignExchange/persForeignExchange.do?FUNID=FIN04|FIN04_18|FIN04_18_01&amp;aliveToken=1547108765374" id="FIN04_18_01" class="l3">购汇/结汇</a>
+                    </li>
+                    <li id="liFIN04_18_04" class="third " style="width: 11.9em;">
+                        <a href="/pers/fin/foreignExchange/forexBuyApplication.do?FUNID=FIN04|FIN04_18|FIN04_18_04&amp;aliveToken=1547108765374" id="FIN04_18_04" class="l3">购汇申请书查询与修改</a>
+                    </li>
+                    <li id="liFIN04_18_02" class="third " style="width: 11.9em;">
+                        <a href="/pers/fin/foreignExchange/persForeignExchangeDetailQuery.do?FUNID=FIN04|FIN04_18|FIN04_18_02&amp;aliveToken=1547108765374" id="FIN04_18_02" class="l3">购汇/结汇交易明细查询</a>
+                    </li>
+                    <li id="liFIN04_18_03" class="third " style="width: 11.9em;">
+                        <a target="_blank" href="/pers/main/pubinfo/ifxQuotationQuery.do?FUNID=FIN04|FIN04_18|FIN04_18_03&amp;aliveToken=1547108765374" id="FIN04_18_03" class="l3">购汇/结汇牌价查询</a>
+                    </li>
+                    <li id="liFIN04_18_05" class="third " style="width: 11.9em;">
+                        <a target="_blank" href="https://fx.cib.com.cn/ivrouter/load.html" id="FIN04_18_05" class="l3">外汇买卖</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="sec-split">
+            </li><li id="liFIN04_13" class="second arrow-down">
+                <a target="_self" href="#" id="FIN04_13" class="l2">银期业务</a>
+                <ul id="ulFIN04_13" class="down-menu">
+                    <li id="liFIN04_13_01" class="third arrow-right" style="width: 10em;">
+                        <a target="_self" href="#" id="FIN04_13_01" class="l3">签约管理</a>
+                        <ul id="ulFIN04_13_01" class="poll-menu" style="left: 10em;">
+                            <li id="liFIN04_13_01_01" class="last" style="width: 10em;"><a href="/pers/fin/bankfutures/signmanage/sign.do?FUNID=FIN04|FIN04_13|FIN04_13_01|FIN04_13_01_01&amp;aliveToken=1547108765374" id="FIN04_13_01_01" class="l4">签约</a></li>
+                            <li id="liFIN04_13_01_02" class="last" style="width: 10em;"><a href="/pers/fin/bankfutures/signmanage/terminateAgreement.do?FUNID=FIN04|FIN04_13|FIN04_13_01|FIN04_13_01_02&amp;aliveToken=1547108765374" id="FIN04_13_01_02" class="l4">解约</a></li>
+                            <li id="liFIN04_13_01_03" class="last" style="width: 10em;"><a href="/pers/fin/bankfutures/signmanage/dataManage.do?FUNID=FIN04|FIN04_13|FIN04_13_01|FIN04_13_01_03&amp;aliveToken=1547108765374" id="FIN04_13_01_03" class="l4">客户资料管理</a></li>
+			            </ul>
+                    </li>
+                    <li id="liFIN04_13_02" class="third " style="width: 10em;">
+                        <a href="/pers/fin/bankfutures/transferaccounts/transferAccounts.do?FUNID=FIN04|FIN04_13|FIN04_13_02&amp;aliveToken=1547108765374" id="FIN04_13_02" class="l3">银期转账</a>
+                    </li>
+                    <li id="liFIN04_13_03" class="third arrow-right" style="width: 10em;">
+                        <a target="_self" href="#" id="FIN04_13_03" class="l3">期证通</a>
+                        <ul id="ulFIN04_13_03" class="poll-menu" style="left: 10em;">
+                            <li id="liFIN04_13_03_01" class="last" style="width: 10em;"><a href="/pers/fin/futureStock/futureToStock.do?FUNID=FIN04|FIN04_13|FIN04_13_03|FIN04_13_03_01&amp;aliveToken=1547108765374" id="FIN04_13_03_01" class="l4">期转证</a></li>
+                            <li id="liFIN04_13_03_02" class="last" style="width: 10em;"><a href="/pers/fin/futureStock/stockToFuture.do?FUNID=FIN04|FIN04_13|FIN04_13_03|FIN04_13_03_02&amp;aliveToken=1547108765374" id="FIN04_13_03_02" class="l4">证转期</a></li>
+			            </ul>
+                    </li>
+                </ul>
+            </li>
+            <li class="sec-split">
+            </li><li id="liFIN04_27" class="second arrow-down">
+                <a target="_self" href="#" id="FIN04_27" class="l2">期权现货</a>
+                <ul id="ulFIN04_27" class="down-menu">
+                    <li id="liFIN04_27_01" class="third arrow-right" style="width: 10em;">
+                        <a target="_self" href="#" id="FIN04_27_01" class="l3">签约管理</a>
+                        <ul id="ulFIN04_27_01" class="poll-menu" style="left: 10em;">
+                            <li id="liFIN04_27_01_01" class="last" style="width: 10em;"><a href="/pers/fin/bankfutures/signmanage/sign!executeOptionSpot.do?FUNID=FIN04|FIN04_27|FIN04_27_01|FIN04_27_01_01&amp;aliveToken=1547108765374" id="FIN04_27_01_01" class="l4">签约</a></li>
+                            <li id="liFIN04_27_01_02" class="last" style="width: 10em;"><a href="/pers/fin/bankfutures/signmanage/terminateAgreement!executeOptionSpot.do?FUNID=FIN04|FIN04_27|FIN04_27_01|FIN04_27_01_02&amp;aliveToken=1547108765374" id="FIN04_27_01_02" class="l4">解约</a></li>
+                            <li id="liFIN04_27_01_03" class="last" style="width: 10em;"><a href="/pers/fin/bankfutures/signmanage/dataManage!executeOptionSpot.do?FUNID=FIN04|FIN04_27|FIN04_27_01|FIN04_27_01_03&amp;aliveToken=1547108765374" id="FIN04_27_01_03" class="l4">客户资料管理</a></li>
+			            </ul>
+                    </li>
+                    <li id="liFIN04_27_02" class="third " style="width: 10em;">
+                        <a href="/pers/fin/bankfutures/transferaccounts/transferAccounts!executeOptionSpot.do?FUNID=FIN04|FIN04_27|FIN04_27_02&amp;aliveToken=1547108765374" id="FIN04_27_02" class="l3">期权现货转账</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="sec-split">
+            </li><li id="liFIN04_03" class="second ">
+                <a href="/pers/fin/link/toUnionPayFund.do?FUNID=FIN04|FIN04_03&amp;aliveToken=1547108765374" id="FIN04_03" class="l2">银联通基金</a>
+            </li>
+            <li class="sec-split">
+            </li><li id="liFIN04_21" class="second arrow-down">
+                <a target="_self" href="#" id="FIN04_21" class="l2">产品转让</a>
+                <ul id="ulFIN04_21" class="down-menu">
+                    <li id="liFIN04_21_01" class="third arrow-right" style="width: 10em;">
+                        <a target="_self" href="#" id="FIN04_21_01" class="l3">委托挂单</a>
+                        <ul id="ulFIN04_21_01" class="poll-menu" style="left: 10em;">
+                            <li id="liFIN04_21_01_01" class="last" style="width: 10em;"><a href="/pers/fin/finExchangePla/finExchangePlaEntrustBuy.do?FUNID=FIN04|FIN04_21|FIN04_21_01|FIN04_21_01_01&amp;aliveToken=1547108765374" id="FIN04_21_01_01" class="l4">委托买入</a></li>
+                            <li id="liFIN04_21_01_02" class="last" style="width: 10em;"><a href="/pers/fin/finExchangePla/finExchangePlaEntrustSale.do?FUNID=FIN04|FIN04_21|FIN04_21_01|FIN04_21_01_02&amp;aliveToken=1547108765374" id="FIN04_21_01_02" class="l4">委托卖出</a></li>
+                            <li id="liFIN04_21_01_03" class="last" style="width: 10em;"><a href="/pers/fin/finExchangePla/finExchangePlaPointTrans.do?FUNID=FIN04|FIN04_21|FIN04_21_01|FIN04_21_01_03&amp;aliveToken=1547108765374" id="FIN04_21_01_03" class="l4">指定卖单买入</a></li>
+			            </ul>
+                    </li>
+                    <li id="liFIN04_21_02" class="third " style="width: 10em;">
+                        <a href="/pers/fin/finExchangePla/finExchangePlaRetract.do?FUNID=FIN04|FIN04_21|FIN04_21_02&amp;aliveToken=1547108765374" id="FIN04_21_02" class="l3">撤单</a>
+                    </li>
+                    <li id="liFIN04_21_03" class="third " style="width: 10em;">
+                        <a href="/pers/fin/finExchangePla/finExchangePlaQueryTrans.do?FUNID=FIN04|FIN04_21|FIN04_21_03&amp;aliveToken=1547108765374" id="FIN04_21_03" class="l3">交易明细查询</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="sec-split">
+            </li><li id="liFIN04_23" class="second arrow-down">
+                <a target="_self" href="#" id="FIN04_23" class="l2">福满金-黄金账户</a>
+                <ul id="ulFIN04_23" class="down-menu">
+                    <li id="liFIN04_23_01" class="third arrow-right" style="width: 10em;">
+                        <a target="_self" href="#" id="FIN04_23_01" class="l3">黄金账户活期</a>
+                        <ul id="ulFIN04_23_01" class="poll-menu" style="left: 10em;">
+                            <li id="liFIN04_23_01_01" class="last" style="width: 10em;"><a href="/pers/fin/interest/interestBuy.do?FUNID=FIN04|FIN04_23|FIN04_23_01|FIN04_23_01_01&amp;aliveToken=1547108765374" id="FIN04_23_01_01" class="l4">购买</a></li>
+                            <li id="liFIN04_23_01_02" class="last" style="width: 10em;"><a href="/pers/fin/interest/timeInvest.do?FUNID=FIN04|FIN04_23|FIN04_23_01|FIN04_23_01_02&amp;aliveToken=1547108765374" id="FIN04_23_01_02" class="l4">定投</a></li>
+                            <li id="liFIN04_23_01_03" class="last" style="width: 10em;"><a href="/pers/fin/interest/insureRedempt.do?FUNID=FIN04|FIN04_23|FIN04_23_01|FIN04_23_01_03&amp;aliveToken=1547108765374" id="FIN04_23_01_03" class="l4">赎回</a></li>
+                            <li id="liFIN04_23_01_04" class="last" style="width: 10em;"><a href="/pers/fin/interest/holdQuery.do?FUNID=FIN04|FIN04_23|FIN04_23_01|FIN04_23_01_04&amp;aliveToken=1547108765374" id="FIN04_23_01_04" class="l4">持仓/明细查询</a></li>
+                            <li id="liFIN04_23_01_05" class="last" style="width: 10em;"><a href="/pers/fin/interest/incomeQuery.do?FUNID=FIN04|FIN04_23|FIN04_23_01|FIN04_23_01_05&amp;aliveToken=1547108765374" id="FIN04_23_01_05" class="l4">收益查询</a></li>
+                            <li id="liFIN04_23_01_06" class="last" style="width: 10em;"><a href="/pers/fin/interest/interestGoldExchange.do?FUNID=FIN04|FIN04_23|FIN04_23_01|FIN04_23_01_06&amp;aliveToken=1547108765374" id="FIN04_23_01_06" class="l4">兑换实物金</a></li>
+                            <li id="liFIN04_23_01_07" class="last" style="width: 10em;"><a href="/pers/fin/interest/interestGoldExchangeRecordQuery.do?FUNID=FIN04|FIN04_23|FIN04_23_01|FIN04_23_01_07&amp;aliveToken=1547108765374" id="FIN04_23_01_07" class="l4">兑换记录查询</a></li>
+			            </ul>
+                    </li>
+                    <li id="liFIN04_23_02" class="third arrow-right" style="width: 10em;">
+                        <a target="_self" href="#" id="FIN04_23_02" class="l3">黄金账户定期金条</a>
+                        <ul id="ulFIN04_23_02" class="poll-menu" style="left: 10em;">
+                            <li id="liFIN04_23_02_01" class="last" style="width: 10em;"><a href="/pers/fin/interest/fixedDeposit/buy.do?FUNID=FIN04|FIN04_23|FIN04_23_02|FIN04_23_02_01&amp;aliveToken=1547108765374" id="FIN04_23_02_01" class="l4">申购</a></li>
+                            <li id="liFIN04_23_02_02" class="last" style="width: 10em;"><a href="/pers/fin/interest/fixedDeposit/currentToFixed.do?FUNID=FIN04|FIN04_23|FIN04_23_02|FIN04_23_02_02&amp;aliveToken=1547108765374" id="FIN04_23_02_02" class="l4">活转定</a></li>
+                            <li id="liFIN04_23_02_03" class="last" style="width: 10em;"><a href="/pers/fin/interest/fixedDeposit/holdQuery.do?FUNID=FIN04|FIN04_23|FIN04_23_02|FIN04_23_02_03&amp;aliveToken=1547108765374" id="FIN04_23_02_03" class="l4">持仓查询</a></li>
+			            </ul>
+                    </li>
+                </ul>
+            </li>
+            <li class="sec-split">
+            </li><li id="liFIN04_28" class="second arrow-down">
+                <a target="_self" href="#" id="FIN04_28" class="l2">养老金第三支柱</a>
+                <ul id="ulFIN04_28" class="down-menu">
+                    <li id="liFIN04_28_01" class="third " style="width: 10em;">
+                        <a href="/pers/fin/thirdPillarPension/thirdPillarPensionOpen.do?FUNID=FIN04|FIN04_28|FIN04_28_01&amp;aliveToken=1547108765374" id="FIN04_28_01" class="l3">开户</a>
+                    </li>
+                    <li id="liFIN04_28_02" class="third " style="width: 10em;">
+                        <a href="/pers/fin/thirdPillarPension/thirdPillarPensionActivate.do?FUNID=FIN04|FIN04_28|FIN04_28_02&amp;aliveToken=1547108765374" id="FIN04_28_02" class="l3">激活</a>
+                    </li>
+                    <li id="liFIN04_28_03" class="third " style="width: 10em;">
+                        <a href="/pers/fin/thirdPillarPension/thirdPillarPensionQuery.do?FUNID=FIN04|FIN04_28|FIN04_28_03&amp;aliveToken=1547108765374" id="FIN04_28_03" class="l3">账户查询</a>
+                    </li>
+                    <li id="liFIN04_28_04" class="third " style="width: 10em;">
+                        <a href="/pers/fin/thirdPillarPension/thirdPillarPensionPwd.do?FUNID=FIN04|FIN04_28|FIN04_28_04&amp;aliveToken=1547108765374" id="FIN04_28_04" class="l3">密码管理</a>
+                    </li>
+                    <li id="liFIN04_28_05" class="third arrow-right" style="width: 10em;">
+                        <a target="_self" href="#" id="FIN04_28_05" class="l3">投资计划</a>
+                        <ul id="ulFIN04_28_05" class="poll-menu" style="left: 10em;">
+                            <li id="liFIN04_28_05_01" class="last" style="width: 10em;"><a href="/pers/fin/thirdPillarPension/thirdPillarPensionPlan!buy.do?FUNID=FIN04|FIN04_28|FIN04_28_05|FIN04_28_05_01&amp;aliveToken=1547108765374" id="FIN04_28_05_01" class="l4">购买</a></li>
+                            <li id="liFIN04_28_05_02" class="last" style="width: 10em;"><a href="/pers/fin/thirdPillarPension/thirdPillarPensionPlan!query.do?FUNID=FIN04|FIN04_28|FIN04_28_05|FIN04_28_05_02&amp;aliveToken=1547108765374" id="FIN04_28_05_02" class="l4">查询</a></li>
+			            </ul>
+                    </li>
+                </ul>
+            </li>
+            <li class="sec-split">
+            </li><li id="liFIN04_24" class="second arrow-down">
+                <a target="_self" href="#" id="FIN04_24" class="l2">账户类投资</a>
+                <ul id="ulFIN04_24" class="down-menu">
+                    <li id="liFIN04_24_01" class="third " style="width: 10em;">
+                        <a href="/pers/fin/accountInvest/registerAccount.do?FUNID=FIN04|FIN04_24|FIN04_24_01&amp;aliveToken=1547108765374" id="FIN04_24_01" class="l3">开户</a>
+                    </li>
+                    <li id="liFIN04_24_02" class="third " style="width: 10em;">
+                        <a href="/pers/fin/accountInvest/productSet.do?FUNID=FIN04|FIN04_24|FIN04_24_02&amp;aliveToken=1547108765374" id="FIN04_24_02" class="l3">产品设置</a>
+                    </li>
+                    <li id="liFIN04_24_03" class="third " style="width: 10em;">
+                        <a href="/pers/fin/accountInvest/queryAccount.do?FUNID=FIN04|FIN04_24|FIN04_24_03&amp;aliveToken=1547108765374" id="FIN04_24_03" class="l3">账户信息查询</a>
+                    </li>
+                    <li id="liFIN04_24_04" class="third " style="width: 10em;">
+                        <a href="/pers/fin/accountInvest/resetPassword.do?FUNID=FIN04|FIN04_24|FIN04_24_04&amp;aliveToken=1547108765374" id="FIN04_24_04" class="l3">交易密码修改</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="sec-split">
+            </li><li id="liFIN04_16" class="second arrow-down">
+                <a target="_self" href="#" id="FIN04_16" class="l2">保险理财</a>
+                <ul id="ulFIN04_16" class="down-menu">
+                    <li id="liFIN04_16_01" class="third " style="width: 10em;">
+                        <a href="/pers/fin/oldagesecurity/oldAgeSecRiskEvaluate.do?FUNID=FIN04|FIN04_16|FIN04_16_01&amp;aliveToken=1547108765374" id="FIN04_16_01" class="l3">风险评估</a>
+                    </li>
+                    <li id="liFIN04_16_02" class="third " style="width: 10em;">
+                        <a href="/pers/fin/oldagesecurity/oldAgeSecurityList.do?FUNID=FIN04|FIN04_16|FIN04_16_02&amp;aliveToken=1547108765374" id="FIN04_16_02" class="l3">产品查询</a>
+                    </li>
+                    <li id="liFIN04_16_03" class="third " style="width: 10em;">
+                        <a href="/pers/fin/oldagesecurity/buyOldAgeSec.do?FUNID=FIN04|FIN04_16|FIN04_16_03&amp;aliveToken=1547108765374" id="FIN04_16_03" class="l3">购买</a>
+                    </li>
+                    <li id="liFIN04_16_04" class="third " style="width: 10em;">
+                        <a href="/pers/fin/oldagesecurity/query/oldAgeSecHoldQuery.do?FUNID=FIN04|FIN04_16|FIN04_16_04&amp;aliveToken=1547108765374" id="FIN04_16_04" class="l3">持仓查询</a>
+                    </li>
+                    <li id="liFIN04_16_05" class="third " style="width: 10em;">
+                        <a href="/pers/fin/oldagesecurity/oldAgeSecWithdrawOrder.do?FUNID=FIN04|FIN04_16|FIN04_16_05&amp;aliveToken=1547108765374" id="FIN04_16_05" class="l3">撤单</a>
+                    </li>
+                    <li id="liFIN04_16_06" class="third " style="width: 10em;">
+                        <a href="/pers/fin/oldagesecurity/query/oldAgeSecDetailQuery.do?FUNID=FIN04|FIN04_16|FIN04_16_06&amp;aliveToken=1547108765374" id="FIN04_16_06" class="l3">交易明细查询</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="sec-split">
+            </li><li id="liFIN04_29" class="second arrow-down">
+                <a target="_self" href="#" id="FIN04_29" class="l2">信托计划</a>
+                <ul id="ulFIN04_29" class="down-menu">
+                    <li id="liFIN04_29_01" class="third " style="width: 10.5em;">
+                        <a href="/pers/fin/trust/trustRiskEvaluate.do?FUNID=FIN04|FIN04_29|FIN04_29_01&amp;aliveToken=1547108765374" id="FIN04_29_01" class="l3">风险评估</a>
+                    </li>
+                    <li id="liFIN04_29_02" class="third " style="width: 10.5em;">
+                        <a href="/pers/fin/trust/trustInvestorAffirm.do?FUNID=FIN04|FIN04_29|FIN04_29_02&amp;aliveToken=1547108765374" id="FIN04_29_02" class="l3">投资者认定</a>
+                    </li>
+                    <li id="liFIN04_29_03" class="third arrow-right" style="width: 10.5em;">
+                        <a target="_self" href="#" id="FIN04_29_03" class="l3">查询</a>
+                        <ul id="ulFIN04_29_03" class="poll-menu" style="left: 10.5em;">
+                            <li id="liFIN04_29_03_01" class="last" style="width: 10em;"><a href="/pers/fin/trust/query/holdQuery.do?FUNID=FIN04|FIN04_29|FIN04_29_03|FIN04_29_03_01&amp;aliveToken=1547108765374" id="FIN04_29_03_01" class="l4">持仓查询</a></li>
+                            <li id="liFIN04_29_03_02" class="last" style="width: 10em;"><a href="/pers/fin/trust/query/transDetailQuery.do?FUNID=FIN04|FIN04_29|FIN04_29_03|FIN04_29_03_02&amp;aliveToken=1547108765374" id="FIN04_29_03_02" class="l4">交易明细查询</a></li>
+                            <li id="liFIN04_29_03_03" class="last" style="width: 10em;"><a href="/pers/fin/trust/query/eprotocolQuery.do?FUNID=FIN04|FIN04_29|FIN04_29_03|FIN04_29_03_03&amp;aliveToken=1547108765374" id="FIN04_29_03_03" class="l4">查询电子签名约定书</a></li>
+                            <li id="liFIN04_29_03_04" class="last" style="width: 10em;"><a href="/pers/fin/trust/query/econtractQuery.do?FUNID=FIN04|FIN04_29|FIN04_29_03|FIN04_29_03_04&amp;aliveToken=1547108765374" id="FIN04_29_03_04" class="l4">电子合同查询</a></li>
+			            </ul>
+                    </li>
+                    <li id="liFIN04_29_04" class="third " style="width: 10.5em;">
+                        <a href="/pers/fin/trust/trustBuy.do?FUNID=FIN04|FIN04_29|FIN04_29_04&amp;aliveToken=1547108765374" id="FIN04_29_04" class="l3">购买</a>
+                    </li>
+                    <li id="liFIN04_29_05" class="third " style="width: 10.5em;">
+                        <a href="/pers/fin/trust/trustRedempt.do?FUNID=FIN04|FIN04_29|FIN04_29_05&amp;aliveToken=1547108765374" id="FIN04_29_05" class="l3">赎回</a>
+                    </li>
+                    <li id="liFIN04_29_06" class="third " style="width: 10.5em;">
+                        <a href="/pers/fin/trust/trustWithdrawOrder.do?FUNID=FIN04|FIN04_29|FIN04_29_06&amp;aliveToken=1547108765374" id="FIN04_29_06" class="l3">撤单</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="sec-split">
+        </li></ul>
+    </li>
+    <li class="top" id="liFIN05">
+        <a id="FIN05" target="_self" class="l1" href="#">网上支付</a>
+        <ul id="ulFIN05" class="sub-menu" style="min-width: 10px; width: 780px; left: 180px;">
+            <li id="liFIN05_02" class="second ">
+                <a href="/pers/main/netpayment/netPaymentDetailQuery.do?FUNID=FIN05|FIN05_02&amp;aliveToken=1547108765374" id="FIN05_02" class="l2">网上支付明细查询</a>
+            </li>
+            <li class="sec-split">
+            </li><li id="liFIN05_01" class="second ">
+                <a href="/pers/main/netpayment/openNetPayment.do?FUNID=FIN05|FIN05_01&amp;aliveToken=1547108765374" id="FIN05_01" class="l2">开通/关闭网上支付</a>
+            </li>
+            <li class="sec-split">
+            </li><li id="liFIN05_05" class="second ">
+                <a href="/pers/main/netpayment/modifyNetpaymentPwd.do?FUNID=FIN05|FIN05_05&amp;aliveToken=1547108765374" id="FIN05_05" class="l2">网上支付密码重置</a>
+            </li>
+            <li class="sec-split">
+            </li><li id="liFIN05_06" class="second ">
+                <a href="/pers/main/netpayment/modifyDayLimit.do?FUNID=FIN05|FIN05_06&amp;aliveToken=1547108765374" id="FIN05_06" class="l2">网上支付日限额修改</a>
+            </li>
+            <li class="sec-split">
+            </li><li id="liFIN05_07" class="second ">
+                <a href="/pers/main/netpayment/easyPaymentManager.do?FUNID=FIN05|FIN05_07&amp;aliveToken=1547108765374" id="FIN05_07" class="l2">快捷支付</a>
+            </li>
+            <li class="sec-split">
+            </li><li id="liFIN05_08" class="second ">
+                <a href="/pers/main/netpayment/netCertificateQuery.do?FUNID=FIN05|FIN05_08&amp;aliveToken=1547108765374" id="FIN05_08" class="l2">银信证明细查询</a>
+            </li>
+            <li class="sec-split">
+            </li><li id="liFIN05_09" class="second arrow-down">
+                <a target="_self" href="#" id="FIN05_09" class="l2">银联无卡支付</a>
+                <ul id="ulFIN05_09" class="down-menu">
+                    <li id="liFIN05_09_01" class="third " style="width: 10em;">
+                        <a href="/pers/main/netpayment/noCardFunction.do?FUNID=FIN05|FIN05_09|FIN05_09_01&amp;aliveToken=1547108765374" id="FIN05_09_01" class="l3">功能设置</a>
+                    </li>
+                    <li id="liFIN05_09_02" class="third " style="width: 10em;">
+                        <a href="/pers/main/netpayment/noCardDetail.do?FUNID=FIN05|FIN05_09|FIN05_09_02&amp;aliveToken=1547108765374" id="FIN05_09_02" class="l3">交易明细查询</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="sec-split">
+            </li><li id="liFIN05_04" class="second ">
+                <a target="_blank" href="http://shop.cib.com.cn/" id="FIN05_04" class="l2">网上商城</a>
+            </li>
+            <li class="sec-split">
+            </li><li id="liFIN05_10" class="second ">
+                <a href="/pers/main/netpayment/withholdAgrManager.do?FUNID=FIN05|FIN05_10&amp;aliveToken=1547108765374" id="FIN05_10" class="l2">代扣业务签约查询</a>
+            </li>
+            <li class="sec-split">
+        </li></ul>
+    </li>
+    <li class="top" id="liFIN06">
+        <a id="FIN06" target="_self" class="l1" href="#">贷款融资</a>
+        <ul id="ulFIN06" class="sub-menu" style="min-width: 10px; width: 680px; left: 240px;">
+            <li id="liFIN06_01" class="second arrow-down">
+                <a target="_self" href="#" id="FIN06_01" class="l2">自助质押贷款</a>
+                <ul id="ulFIN06_01" class="down-menu">
+                    <li id="liFIN06_01_01" class="third " style="width: 10em;">
+                        <a href="/pers/fin/persloan/pledgeloan/openOrClose.do?FUNID=FIN06|FIN06_01|FIN06_01_01&amp;aliveToken=1547108765374" id="FIN06_01_01" class="l3">开通/关闭</a>
+                    </li>
+                    <li id="liFIN06_01_02" class="third " style="width: 10em;">
+                        <a href="/pers/fin/persloan/pledgeloan/pledgeLoanQueryAction.do?FUNID=FIN06|FIN06_01|FIN06_01_02&amp;aliveToken=1547108765374" id="FIN06_01_02" class="l3">查询</a>
+                    </li>
+                    <li id="liFIN06_01_03" class="third " style="width: 10em;">
+                        <a href="/pers/fin/persloan/pledgeloan/apply.do?FUNID=FIN06|FIN06_01|FIN06_01_03&amp;aliveToken=1547108765374" id="FIN06_01_03" class="l3">申请</a>
+                    </li>
+                    <li id="liFIN06_01_04" class="third " style="width: 10em;">
+                        <a href="/pers/fin/persloan/pledgeloan/pledgeLoanQueryAction.do?FUNID=FIN06|FIN06_01|FIN06_01_04&amp;aliveToken=1547108765374" id="FIN06_01_04" class="l3">偿还</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="sec-split">
+            </li><li id="liFIN06_02" class="second arrow-down">
+                <a target="_self" href="#" id="FIN06_02" class="l2">自助循环贷款</a>
+                <ul id="ulFIN06_02" class="down-menu">
+                    <li id="liFIN06_02_01" class="third " style="width: 10em;">
+                        <a href="/pers/fin/persloan/circulationloan/circulationApply.do?FUNID=FIN06|FIN06_02|FIN06_02_01&amp;aliveToken=1547108765374" id="FIN06_02_01" class="l3">贷款申领</a>
+                    </li>
+                    <li id="liFIN06_02_02" class="third " style="width: 10em;">
+                        <a href="/pers/fin/persloan/circulationloan/queryCirculationLoan.do?FUNID=FIN06|FIN06_02|FIN06_02_02&amp;aliveToken=1547108765374" id="FIN06_02_02" class="l3">贷款查询</a>
+                    </li>
+                    <li id="liFIN06_02_03" class="third " style="width: 10em;">
+                        <a href="/pers/fin/persloan/circulationloan/queryCirculationLoan.do?FUNID=FIN06|FIN06_02|FIN06_02_03&amp;aliveToken=1547108765374" id="FIN06_02_03" class="l3">偿还</a>
+                    </li>
+                    <li id="liFIN06_02_04" class="third " style="width: 10em;">
+                        <a href="/pers/fin/persloan/circulationloan/queryDetail.do?FUNID=FIN06|FIN06_02|FIN06_02_04&amp;aliveToken=1547108765374" id="FIN06_02_04" class="l3">交易明细查询</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="sec-split">
+            </li><li id="liFIN06_07" class="second arrow-down">
+                <a target="_self" href="#" id="FIN06_07" class="l2">兴业通-简捷贷</a>
+                <ul id="ulFIN06_07" class="down-menu">
+                    <li id="liFIN06_07_01" class="third " style="width: 10em;">
+                        <a href="/pers/fin/persloan/shortloan/shortLoanApply.do?FUNID=FIN06|FIN06_07|FIN06_07_01&amp;aliveToken=1547108765374" id="FIN06_07_01" class="l3">发放</a>
+                    </li>
+                    <li id="liFIN06_07_02" class="third " style="width: 10em;">
+                        <a href="/pers/fin/persloan/shortloan/shortLoanRepay.do?FUNID=FIN06|FIN06_07|FIN06_07_02&amp;aliveToken=1547108765374" id="FIN06_07_02" class="l3">偿还</a>
+                    </li>
+                    <li id="liFIN06_07_03" class="third " style="width: 10em;">
+                        <a href="/pers/fin/persloan/shortloan/calculate.do?FUNID=FIN06|FIN06_07|FIN06_07_03&amp;aliveToken=1547108765374" id="FIN06_07_03" class="l3">试算器</a>
+                    </li>
+                    <li id="liFIN06_07_04" class="third " style="width: 10em;">
+                        <a href="/pers/fin/persloan/shortloan/infoquery.do?FUNID=FIN06|FIN06_07|FIN06_07_04&amp;aliveToken=1547108765374" id="FIN06_07_04" class="l3">查询</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="sec-split">
+            </li><li id="liFIN06_04" class="second ">
+                <a href="/pers/fin/persloan/queryPersLoan.do?FUNID=FIN06|FIN06_04&amp;aliveToken=1547108765374" id="FIN06_04" class="l2">贷款信息查询</a>
+            </li>
+            <li class="sec-split">
+            </li><li id="liFIN06_05" class="second ">
+                <a href="/pers/fin/persloan/queryRetailLoanQuota.do?FUNID=FIN06|FIN06_05&amp;aliveToken=1547108765374" id="FIN06_05" class="l2">贷款额度查询</a>
+            </li>
+            <li class="sec-split">
+            </li><li id="liFIN06_06" class="second ">
+                <a href="/pers/fin/persloan/otherFinance.do?FUNID=FIN06|FIN06_06&amp;aliveToken=1547108765374" id="FIN06_06" class="l2">其他融资登记</a>
+            </li>
+            <li class="sec-split">
+        </li></ul>
+    </li>
+    <li class="top" id="liFIN15">
+        <a id="FIN15" target="_self" class="l1" href="#">自助缴费</a>
+        <ul id="ulFIN15" class="sub-menu" style="min-width: 10px; width: 680px; left: 450px;">
+            <li id="liFIN15_02" class="second ">
+                <a href="/pers/ebpp/billpay/billPayLife.do?FUNID=FIN15|FIN15_02&amp;aliveToken=1547108765374" id="FIN15_02" class="l2">在线缴费</a>
+            </li>
+            <li class="sec-split">
+            </li><li id="liFIN15_03" class="second ">
+                <a href="/pers/ebpp/billpay/withholdManage.do?FUNID=FIN15|FIN15_03&amp;aliveToken=1547108765374" id="FIN15_03" class="l2">代扣管理</a>
+            </li>
+            <li class="sec-split">
+            </li><li id="liFIN15_04" class="second ">
+                <a href="/pers/ebpp/ebpp/billDetailQuery.do?FUNID=FIN15|FIN15_04&amp;aliveToken=1547108765374" id="FIN15_04" class="l2">历史缴费查询</a>
+            </li>
+            <li class="sec-split">
+            </li><li id="liFIN15_05" class="second ">
+                <a href="/pers/ebpp/billpay/billPayOneKey.do?FUNID=FIN15|FIN15_05&amp;aliveToken=1547108765374" id="FIN15_05" class="l2">一键直缴</a>
+            </li>
+            <li class="sec-split">
+            </li><li id="liFIN15_06" class="second ">
+                <a href="/pers/ebpp/billpay/schedulePay.do?FUNID=FIN15|FIN15_06&amp;aliveToken=1547108765374" id="FIN15_06" class="l2">预约缴费</a>
+            </li>
+            <li class="sec-split">
+        </li></ul>
+    </li>
+    <li class="top" id="liFIN08">
+        <a id="FIN08" target="_self" class="l1" href="#">电子账户</a>
+        <ul id="ulFIN08" class="sub-menu" style="min-width: 10px; width: 140px; left: 650px;">
+            <li id="liFIN08_07" class="second arrow-down">
+                <a target="_self" href="#" id="FIN08_07" class="l2">II类户</a>
+                <ul id="ulFIN08_07" class="down-menu">
+                    <li id="liFIN08_07_01" class="third " style="width: 10em;">
+                        <a href="/pers/main/ecard/applying.do?FUNID=FIN08|FIN08_07|FIN08_07_01&amp;aliveToken=1547108765374" id="FIN08_07_01" class="l3">在线申请</a>
+                    </li>
+                    <li id="liFIN08_07_02" class="third " style="width: 10em;">
+                        <a href="/pers/main/ecard/realCardMgr.do?FUNID=FIN08|FIN08_07|FIN08_07_02&amp;aliveToken=1547108765374" id="FIN08_07_02" class="l3">实物卡管理</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="sec-split">
+            </li><li id="liFIN08_06" class="second ">
+                <a href="/pers/main/acct3/open.do?FUNID=FIN08|FIN08_06&amp;aliveToken=1547108765374" id="FIN08_06" class="l2">III类户</a>
+            </li>
+            <li class="sec-split">
+        </li></ul>
+    </li>
+    <li class="top current selected" id="liFIN09">
+        <a id="FIN09" target="_self" class="l1" href="#">信用卡</a>
+        <ul id="ulFIN09" class="sub-menu" style="min-width: 10px; left: 50px;">
+            <li id="liFIN09_08" class="second arrow-down highlight">
+                <a target="_self" href="#" id="FIN09_08" class="l2">信用卡查询</a>
+                <ul id="ulFIN09_08" class="down-menu" style="display: none;">
+                    <li id="liFIN09_08_01" class="third " style="width: 10.6em;">
+                        <a href="/pers/creditCard/query/queryAcctInfo.do?FUNID=FIN09|FIN09_08|FIN09_08_01&amp;aliveToken=1547108765374" id="FIN09_08_01" class="l3">账户信息</a>
+                    </li>
+                    <li id="liFIN09_08_02" class="third arrow-right" style="width: 10.6em;">
+                        <a target="_self" href="#" id="FIN09_08_02" class="l3">账单查询</a>
+                        <ul id="ulFIN09_08_02" class="poll-menu" style="left: 10.6em;">
+                            <li id="liFIN09_08_02_02" class="last" style="width: 10em;"><a href="/pers/creditCard/query/queryPastBill.do?FUNID=FIN09|FIN09_08|FIN09_08_02|FIN09_08_02_02&amp;aliveToken=1547108765374" id="FIN09_08_02_02" class="l4">已出/未出账单</a></li>
+                            <li id="liFIN09_08_02_03" class="last" style="width: 10em;"><a href="/pers/creditCard/query/queryBillDay.do?FUNID=FIN09|FIN09_08|FIN09_08_02|FIN09_08_02_03&amp;aliveToken=1547108765374" id="FIN09_08_02_03" class="l4">账单日查询</a></li>
+			            </ul>
+                    </li>
+                    <li id="liFIN09_08_03" class="third arrow-right highlight" style="width: 10.6em; z-index: 901;">
+                        <a target="_self" href="#" id="FIN09_08_03" class="l3">积分查询</a>
+                        <ul id="ulFIN09_08_03" class="poll-menu" style="left: 127px; display: none;">
+                            <li id="liFIN09_08_03_01" class="last" style="width: 10em;"><a href="/pers/creditCard/query/queryBonus.do?FUNID=FIN09|FIN09_08|FIN09_08_03|FIN09_08_03_01&amp;aliveToken=1547108765374" id="FIN09_08_03_01" class="l4">积分余额查询</a></li>
+                            <li id="liFIN09_08_03_02" class="last highlight" style="width: 10em;"><a href="/pers/creditCard/query/queryBonusDetail.do?FUNID=FIN09|FIN09_08|FIN09_08_03|FIN09_08_03_02&amp;aliveToken=1547108765374" id="FIN09_08_03_02" class="l4">积分明细查询</a></li>
+			            </ul>
+                    </li>
+                    <li id="liFIN09_08_04" class="third " style="width: 10.6em;">
+                        <a href="/pers/creditCard/query/queryPurchaseExchange.do?FUNID=FIN09|FIN09_08|FIN09_08_04&amp;aliveToken=1547108765374" id="FIN09_08_04" class="l3">购汇查询</a>
+                    </li>
+                    <li id="liFIN09_08_06" class="third " style="width: 10.6em;">
+                        <a href="/pers/creditCard/stage/queryBillStage.do?FUNID=FIN09|FIN09_08|FIN09_08_06&amp;aliveToken=1547108765374" id="FIN09_08_06" class="l3">账单分期查询</a>
+                    </li>
+                    <li id="liFIN09_08_07" class="third " style="width: 10.6em;">
+                        <a href="/pers/creditCard/stage/managConsumeStage.do?FUNID=FIN09|FIN09_08|FIN09_08_07&amp;aliveToken=1547108765374" id="FIN09_08_07" class="l3">消费分期查询</a>
+                    </li>
+                    <li id="liFIN09_08_05" class="third " style="width: 10.6em;">
+                        <a href="/pers/creditCard/query/queryAuthorInfo.do?FUNID=FIN09|FIN09_08|FIN09_08_05&amp;aliveToken=1547108765374" id="FIN09_08_05" class="l3">授权信息查询</a>
+                    </li>
+                    <li id="liFIN09_08_08" class="third " style="width: 10.6em;">
+                        <a href="/pers/creditCard/onlinePay/onlinePayDetailQuery.do?FUNID=FIN09|FIN09_08|FIN09_08_08&amp;aliveToken=1547108765374" id="FIN09_08_08" class="l3">网上支付交易明细查询</a>
+                    </li>
+                    <li id="liFIN09_08_10" class="third " style="width: 10.6em;">
+                        <a href="/pers/creditCard/qqshow/qqshowMgr!queryStandardList.do?FUNID=FIN09|FIN09_08|FIN09_08_10&amp;aliveToken=1547108765374" id="FIN09_08_10" class="l3">QQ秀虚拟信用卡查询</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="sec-split">
+            </li><li id="liFIN09_02" class="second arrow-down">
+                <a target="_self" href="#" id="FIN09_02" class="l2">行内信用卡还款</a>
+                <ul id="ulFIN09_02" class="down-menu">
+                    <li id="liFIN09_02_01" class="third " style="width: 10em;">
+                        <a href="/pers/main/creditCard/transferToCreditCard.do?FUNID=FIN09|FIN09_02|FIN09_02_01&amp;aliveToken=1547108765374" id="FIN09_02_01" class="l3">人民币/购汇还款</a>
+                    </li>
+                    <li id="liFIN09_02_02" class="third " style="width: 10em;">
+                        <a href="/pers/main/creditCard/creditCardUSDRefund.do?FUNID=FIN09|FIN09_02|FIN09_02_02&amp;aliveToken=1547108765374" id="FIN09_02_02" class="l3">美元还款</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="sec-split">
+            </li><li id="liFIN09_03" class="second ">
+                <a href="/pers/main/creditCard/oneKeyRepay.do?FUNID=FIN09|FIN09_03&amp;aliveToken=1547108765374" id="FIN09_03" class="l2">一键还款</a>
+            </li>
+            <li class="sec-split">
+            </li><li id="liFIN09_04" class="second arrow-down">
+                <a target="_self" href="#" id="FIN09_04" class="l2">信用卡申请</a>
+                <ul id="ulFIN09_04" class="down-menu">
+                    <li id="liFIN09_04_01" class="third " style="width: 10em;">
+                        <a target="_blank" href="https://e.cib.com.cn/app/quickApplyCard/quickApplyCard.do?offlcode=1001&amp;sourceSite=1007" id="FIN09_04_01" class="l3">首次申请</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="sec-split">
+            </li><li id="liFIN09_05" class="second arrow-down">
+                <a target="_self" href="#" id="FIN09_05" class="l2">服务设置</a>
+                <ul id="ulFIN09_05" class="down-menu">
+                    <li id="liFIN09_05_01" class="third " style="width: 11.5em;">
+                        <a href="/pers/creditCard/servSet/autoRefundRelation.do?FUNID=FIN09|FIN09_05|FIN09_05_01&amp;aliveToken=1547108765374" id="FIN09_05_01" class="l3">自动还款关系设置</a>
+                    </li>
+                    <li id="liFIN09_05_02" class="third " style="width: 11.5em;">
+                        <a href="/pers/creditCard/servSet/purchaseRefundSet.do?FUNID=FIN09|FIN09_05|FIN09_05_02&amp;aliveToken=1547108765374" id="FIN09_05_02" class="l3">购汇还款设置</a>
+                    </li>
+                    <li id="liFIN09_05_03" class="third " style="width: 11.5em;">
+                        <a href="/pers/creditCard/servSet/cusumeMsgSwitch.do?FUNID=FIN09|FIN09_05|FIN09_05_03&amp;aliveToken=1547108765374" id="FIN09_05_03" class="l3">交易短信通知设置</a>
+                    </li>
+                    <li id="liFIN09_05_04" class="third " style="width: 11.5em;">
+                        <a href="/pers/creditCard/servSet/subQRatioSet.do?FUNID=FIN09|FIN09_05|FIN09_05_04&amp;aliveToken=1547108765374" id="FIN09_05_04" class="l3">附卡限额管理</a>
+                    </li>
+                    <li id="liFIN09_05_05" class="third " style="width: 11.5em;">
+                        <a href="/pers/creditCard/servSet/modifyCustData.do?FUNID=FIN09|FIN09_05|FIN09_05_05&amp;aliveToken=1547108765374" id="FIN09_05_05" class="l3">个人资料修改</a>
+                    </li>
+                    <li id="liFIN09_05_06" class="third " style="width: 11.5em;">
+                        <a href="/pers/creditCard/servSet/modifyBillTypeAddr.do?FUNID=FIN09|FIN09_05|FIN09_05_06&amp;aliveToken=1547108765374" id="FIN09_05_06" class="l3">账单寄送地址及方式</a>
+                    </li>
+                    <li id="liFIN09_05_07" class="third " style="width: 11.5em;">
+                        <a href="/pers/creditCard/account/switchConsumePwd.do?FUNID=FIN09|FIN09_05|FIN09_05_07&amp;aliveToken=1547108765374" id="FIN09_05_07" class="l3">消费使用交易密码设置</a>
+                    </li>
+                    <li id="liFIN09_05_08" class="third arrow-right" style="width: 11.5em;">
+                        <a target="_self" href="#" id="FIN09_05_08" class="l3">额度管理</a>
+                        <ul id="ulFIN09_05_08" class="poll-menu" style="left: 11.5em;">
+                            <li id="liFIN09_05_08_01" class="last" style="width: 10em;"><a href="/pers/creditCard/servSet/tempQuotaManage.do?FUNID=FIN09|FIN09_05|FIN09_05_08|FIN09_05_08_01&amp;aliveToken=1547108765374" id="FIN09_05_08_01" class="l4">临时额度管理</a></li>
+                            <li id="liFIN09_05_08_02" class="last" style="width: 10em;"><a href="/pers/creditCard/servSet/fixedQuotaManage.do?FUNID=FIN09|FIN09_05|FIN09_05_08|FIN09_05_08_02&amp;aliveToken=1547108765374" id="FIN09_05_08_02" class="l4">固定额度管理</a></li>
+			            </ul>
+                    </li>
+                    <li id="liFIN09_05_09" class="third " style="width: 11.5em;">
+                        <a href="/pers/creditCard/servSet/billDayMgr.do?FUNID=FIN09|FIN09_05|FIN09_05_09&amp;aliveToken=1547108765374" id="FIN09_05_09" class="l3">账单日管理</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="sec-split">
+            </li><li id="liFIN09_07" class="second arrow-down">
+                <a target="_self" href="#" id="FIN09_07" class="l2">密码修改</a>
+                <ul id="ulFIN09_07" class="down-menu">
+                    <li id="liFIN09_07_01" class="third " style="width: 10em;">
+                        <a href="/pers/creditCard/account/managerQueryPwd.do?FUNID=FIN09|FIN09_07|FIN09_07_01&amp;aliveToken=1547108765374" id="FIN09_07_01" class="l3">查询密码重置/修改</a>
+                    </li>
+                    <li id="liFIN09_07_02" class="third " style="width: 10em;">
+                        <a href="/pers/creditCard/account/managerCashPwd.do?FUNID=FIN09|FIN09_07|FIN09_07_02&amp;aliveToken=1547108765374" id="FIN09_07_02" class="l3">交易密码设置/修改</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="sec-split">
+            </li><li id="liFIN09_06" class="second arrow-down">
+                <a target="_self" href="#" id="FIN09_06" class="l2">网上支付</a>
+                <ul id="ulFIN09_06" class="down-menu">
+                    <li id="liFIN09_06_01" class="third " style="width: 12.2em;">
+                        <a href="/pers/creditCard/onlinePay/onlinePayFuncSet.do?FUNID=FIN09|FIN09_06|FIN09_06_01&amp;aliveToken=1547108765374" id="FIN09_06_01" class="l3">开通/关闭网上支付功能</a>
+                    </li>
+                    <li id="liFIN09_06_02" class="third " style="width: 12.2em;">
+                        <a href="/pers/creditCard/onlinePay/onlinePayQuotaSet.do?FUNID=FIN09|FIN09_06|FIN09_06_02&amp;aliveToken=1547108765374" id="FIN09_06_02" class="l3">网上支付限额设置</a>
+                    </li>
+                    <li id="liFIN09_06_03" class="third " style="width: 12.2em;">
+                        <a href="/pers/creditCard/onlinePay/onlinePayDetailQuery.do?FUNID=FIN09|FIN09_06|FIN09_06_03&amp;aliveToken=1547108765374" id="FIN09_06_03" class="l3">网上支付交易明细查询</a>
+                    </li>
+                    <li id="liFIN09_06_04" class="third " style="width: 12.2em;">
+                        <a href="/pers/creditCard/onlinePay/onlinePay3DCheck.do?FUNID=FIN09|FIN09_06|FIN09_06_04&amp;aliveToken=1547108765374" id="FIN09_06_04" class="l3">3D验证</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="sec-split">
+            </li><li id="liFIN09_09" class="second arrow-down">
+                <a target="_self" href="#" id="FIN09_09" class="l2">分期业务</a>
+                <ul id="ulFIN09_09" class="down-menu">
+                    <li id="liFIN09_09_01" class="third arrow-right" style="width: 11.8em;">
+                        <a target="_self" href="#" id="FIN09_09_01" class="l3">账单分期</a>
+                        <ul id="ulFIN09_09_01" class="poll-menu" style="left: 11.8em;">
+                            <li id="liFIN09_09_01_01" class="last" style="width: 10em;"><a href="/pers/creditCard/stage/applyBillStage.do?FUNID=FIN09|FIN09_09|FIN09_09_01|FIN09_09_01_01&amp;aliveToken=1547108765374" id="FIN09_09_01_01" class="l4">账单分期申请</a></li>
+                            <li id="liFIN09_09_01_02" class="last" style="width: 10em;"><a href="/pers/creditCard/stage/queryBillStage.do?FUNID=FIN09|FIN09_09|FIN09_09_01|FIN09_09_01_02&amp;aliveToken=1547108765374" id="FIN09_09_01_02" class="l4">账单分期查询</a></li>
+			            </ul>
+                    </li>
+                    <li id="liFIN09_09_02" class="third arrow-right" style="width: 11.8em;">
+                        <a target="_self" href="#" id="FIN09_09_02" class="l3">消费分期</a>
+                        <ul id="ulFIN09_09_02" class="poll-menu" style="left: 11.8em;">
+                            <li id="liFIN09_09_02_01" class="last" style="width: 10.3em;"><a href="/pers/creditCard/stage/applyConsumeStage.do?FUNID=FIN09|FIN09_09|FIN09_09_02|FIN09_09_02_01&amp;aliveToken=1547108765374" id="FIN09_09_02_01" class="l4">消费分期申请</a></li>
+                            <li id="liFIN09_09_02_02" class="last" style="width: 10.3em;"><a href="/pers/creditCard/stage/managConsumeStage.do?FUNID=FIN09|FIN09_09|FIN09_09_02|FIN09_09_02_02&amp;aliveToken=1547108765374" id="FIN09_09_02_02" class="l4">查询、撤销及提前还款</a></li>
+			            </ul>
+                    </li>
+                    <li id="liFIN09_09_03" class="third arrow-right" style="width: 11.8em;">
+                        <a target="_self" href="#" id="FIN09_09_03" class="l3">现金分期</a>
+                        <ul id="ulFIN09_09_03" class="poll-menu" style="left: 11.8em;">
+                            <li id="liFIN09_09_03_01" class="last" style="width: 10em;"><a href="/pers/creditCard/stage/applyCashStage.do?FUNID=FIN09|FIN09_09|FIN09_09_03|FIN09_09_03_01&amp;aliveToken=1547108765374" id="FIN09_09_03_01" class="l4">现金分期申请</a></li>
+			            </ul>
+                    </li>
+                    <li id="liFIN09_09_04" class="third arrow-right" style="width: 11.8em;">
+                        <a target="_self" href="#" id="FIN09_09_04" class="l3">自动分期</a>
+                        <ul id="ulFIN09_09_04" class="poll-menu" style="left: 11.8em;">
+                            <li id="liFIN09_09_04_01" class="last" style="width: 10em;"><a href="/pers/creditCard/stage/applyAutoStage.do?FUNID=FIN09|FIN09_09|FIN09_09_04|FIN09_09_04_01&amp;aliveToken=1547108765374" id="FIN09_09_04_01" class="l4">自动分期申请</a></li>
+                            <li id="liFIN09_09_04_02" class="last" style="width: 10em;"><a href="/pers/creditCard/stage/manageAutoStage.do?FUNID=FIN09|FIN09_09|FIN09_09_04|FIN09_09_04_02&amp;aliveToken=1547108765374" id="FIN09_09_04_02" class="l4">修改与撤销</a></li>
+			            </ul>
+                    </li>
+                </ul>
+            </li>
+            <li class="sec-split">
+            </li><li id="liFIN09_10" class="second ">
+                <a href="/pers/creditCard/safeLock/securitySetting.do?FUNID=FIN09|FIN09_10&amp;aliveToken=1547108765374" id="FIN09_10" class="l2">安全设置</a>
+            </li>
+            <li class="sec-split">
+            </li><li id="liFIN09_11" class="second arrow-down">
+                <a target="_self" href="#" id="FIN09_11" class="l2">预借现金</a>
+                <ul id="ulFIN09_11" class="down-menu">
+                    <li id="liFIN09_11_01" class="third " style="width: 10em;">
+                        <a href="/pers/main/creditCard/cashBorrow.do?FUNID=FIN09|FIN09_11|FIN09_11_01&amp;aliveToken=1547108765374" id="FIN09_11_01" class="l3">预借现金</a>
+                    </li>
+                    <li id="liFIN09_11_02" class="third " style="width: 10em;">
+                        <a href="/pers/main/creditCard/creditCardUSDExcessivePay.do?FUNID=FIN09|FIN09_11|FIN09_11_02&amp;aliveToken=1547108765374" id="FIN09_11_02" class="l3">行内美元溢缴款转账</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="sec-split">
+            </li><li id="liFIN09_14" class="second arrow-down">
+                <a target="_self" href="#" id="FIN09_14" class="l2">随借金</a>
+                <ul id="ulFIN09_14" class="down-menu">
+                    <li id="liFIN09_14_01" class="third " style="width: 10em;">
+                        <a target="_blank" href="http://creditcard.cib.com.cn/credit/suijiejin/sjj.html" id="FIN09_14_01" class="l3">随借金功能介绍</a>
+                    </li>
+                    <li id="liFIN09_14_02" class="third " style="width: 10em;">
+                        <a href="/pers/creditCard/cashloan/cashLoanApply.do?FUNID=FIN09|FIN09_14|FIN09_14_02&amp;aliveToken=1547108765374" id="FIN09_14_02" class="l3">随借金业务办理</a>
+                    </li>
+                    <li id="liFIN09_14_03" class="third " style="width: 10em;">
+                        <a href="/pers/creditCard/cashloan/queryTrans.do?FUNID=FIN09|FIN09_14|FIN09_14_03&amp;aliveToken=1547108765374" id="FIN09_14_03" class="l3">交易查询</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="sec-split">
+            </li><li id="liFIN09_13" class="second ">
+                <a target="_blank" href="http://creditcard.cib.com.cn/promotion/specialCut.html" id="FIN09_13" class="l2">特惠商户</a>
+            </li>
+            <li class="sec-split">
+        </li></ul>
+    </li>
+    <li class="top" id="liFIN10">
+        <a id="FIN10" target="_self" class="l1" href="#">理财助手</a>
+        <ul id="ulFIN10" class="sub-menu" style="min-width: 10px; width: 800px; left: 350px;">
+            <li id="liFIN10_01" class="second ">
+                <a target="_blank" href="/pers/main/pubinfo/financingCount.do?FUNID=FIN10|FIN10_01&amp;aliveToken=1547108765374" id="FIN10_01" class="l2">理财计算器</a>
+            </li>
+            <li class="sec-split">
+            </li><li id="liFIN10_02" class="second ">
+                <a target="_blank" href="http://www.cib.com.cn/cn/personal/saving/rates/index.html" id="FIN10_02" class="l2">存贷利率</a>
+            </li>
+            <li class="sec-split">
+            </li><li id="liFIN10_03" class="second ">
+                <a target="_blank" href="/pers/main/pubinfo/ifxQuotationQuery.do?FUNID=FIN10|FIN10_03&amp;aliveToken=1547108765374" id="FIN10_03" class="l2">外汇牌价</a>
+            </li>
+            <li class="sec-split">
+            </li><li id="liFIN10_04" class="second ">
+                <a href="/pers/main/customer/assistant/notepad.do?FUNID=FIN10|FIN10_04&amp;aliveToken=1547108765374" id="FIN10_04" class="l2">记事簿</a>
+            </li>
+            <li class="sec-split">
+            </li><li id="liFIN10_05" class="second ">
+                <a target="_blank" href="http://www.cib.com.cn/cn/aboutCIB/about/charges/index.html" id="FIN10_05" class="l2">资费标准</a>
+            </li>
+            <li class="sec-split">
+            </li><li id="liFIN10_06" class="second ">
+                <a href="/pers/main/customer/assistant/otherBankAccountRegister.do?FUNID=FIN10|FIN10_06&amp;aliveToken=1547108765374" id="FIN10_06" class="l2">他行账户登记</a>
+            </li>
+            <li class="sec-split">
+            </li><li id="liFIN10_07" class="second ">
+                <a href="/pers/main/customer/assistant/otherAsset.do?FUNID=FIN10|FIN10_07&amp;aliveToken=1547108765374" id="FIN10_07" class="l2">其他资产登记</a>
+            </li>
+            <li class="sec-split">
+        </li></ul>
+    </li>
+</ul>
+</div>
+
+
+				
+
+            </div>
+
+
+
+            <div id="out_main">
+
+
+
+                
+
+                
+         		
+                
+
+                	<iframe id="workframe" name="workframe" src="/pers/main/welcome.do" style=" overflow: hidden;" width="100%" height="654" scrolling="no" frameborder="0"></iframe>
+
+                
+
+            </div>
+
+        </div>
+
+		<div id="guideDiv" style="position:absolute;width:100%;height:100%;left:0;top:0;display:none;cursor:pointer;"><img src="/pers/main/resources/images/guide/intro.png" width="100%" height="100%" /></div>
+
+        
+
+        <div id="footer">
+
+                <div class="left"><span class="cib-iconBg about">兴业银行版权所有</span></div>
+
+                <div class="right"><span class="cib-iconBg about">全国统一客户服务热线：95561</span><span class="cib-iconBg about">信用卡贵宾专线：400-88-95561</span></div>
+
+        </div>
+
+		
+
+		<div class="dialogDiv" id="confirmDiv1" title="" style=" display:none;">
+
+                    <p style="line-height: 1.5em; float: left; display: block; position: relative; padding:0px 10px 0px 70px;margin-top: 18px;"><span class="cib-icon cib-icon-alert"></span><span id="tip_logout">您已经安全退出个人网上银行。</span></p>
+
+         </div>
+
+        
+
+                
+        <form id="forms2" style="display:none;" target="formNew" method="post"></form>
+        <input type="hidden" id="tipMessageStore" />
+        <script type="text/javascript">
+        $(function(){
+        	
+        	$('#topnav a, #nav a').each(function() {
+        		var url = $(this).attr('href');
+        		if (url.indexOf('/pers/') === 0 &amp;&amp; url.indexOf('.do') &gt; -1) {
+        			url += url.indexOf('.do?') &gt; -1 ? '&amp;' : '?';
+        			url += 'aliveToken=1547108765374';
+        		}
+        		$(this).prop('href', url);
+        	});
+        	$("#guideDiv").click(function(){
+        		$(this).remove();
+        		$("#workframe").attr("src","/pers/main/welcome.do");
+        	});
+        	$("a[target='_self']").click(function(){
+        		var href = $(this).attr("href");
+        		if(typeof(href)!=="undefined" &amp;&amp; href.length&gt;1 &amp;&amp; href.substring(0,1)!=='#'){
+        			unbindWinEv();
+        		}
+        	});
+            $("li.second&gt;a").click(function(){
+                var name=this.innerHTML;
+                var ubsData={'subMenuName':name};
+                sa.track('pc_subMenu_visit',ubsData);
+                return true;
+            })
+        });
+        function keepAlive() {
+        	$.ajax({
+        		dataType: "json",
+        		type: "POST",
+        		data: {aliveToken: "1547108765374"},
+                url: "/pers/main/index!keepAlive.do",
+                success: function(data){
+                	if(!data.isValidAliveToken){
+                		unbindWinEv();
+                		toLogoutPS();
+                	}
+                },
+                timeout:5000,
+                error:function(){
+                }
+            });
+        }
+        function unbindWinEv(){
+        	if($.browser.webkit){
+    			window.onbeforeunload = null;
+    		}
+        	else if($.browser.mozilla){
+        		window.onbeforeunload = null;
+        	}
+    		$(window).unbind("unload");
+    		window.onunload=null;
+        }
+			$("#ulFIN05,#ulFIN06,#ulFIN15,#ulFIN08,#ulFIN09,#ulFIN10,#ulFIN13,#ulFIN14").css("min-width","10px");
+
+			$("#ulFIN05").css("width","780px");
+			$("#ulFIN06").css("width","680px");
+			$("#ulFIN15").css("width","680px");
+			$("#ulFIN08").css("width","140px");
+			$("#ulFIN10").css("width","800px");
+			$("#ulFIN14").css("width","400px");
+
+			$("#ulFIN05").css("left","180px");
+			$("#ulFIN06").css("left","240px");
+			$("#ulFIN15").css("left","450px");
+			$("#ulFIN08").css("left","650px");
+			$("#ulFIN09").css("left","50px");
+			$("#ulFIN10").css("left","350px");
+			$("#ulFIN13").css("left","200px");
+
+        	
+
+            function reinitIframe(){
+
+                var iframe = document.getElementById("workframe");
+
+                try{
+
+                    var height = iframe.contentWindow.document.body.scrollHeight;
+
+                    if($.browser.webkit){
+
+                        height = $(iframe.contentWindow.document.body).height();
+
+                    }
+
+                    var docHeight = $(iframe).offset().top + $(iframe).height();
+
+                    iframe.height = height-10;
+
+                    
+                    if (height &gt; docHeight) {
+                        $(window).resize();
+                    }
+
+
+
+                }catch(ex){
+
+                }
+
+                iframe=null;
+
+                window.setTimeout(reinitIframe,300);
+
+            }
+
+              window.setTimeout(reinitIframe,300);
+
+              
+
+              function confirmToExit(){
+              	unbindWinEv();
+              	$.ajax({
+              		dataType: "json",
+              		type: "POST",
+                      url: "/pers/main/index!keepAlive.do",
+                      success: function(data){
+                  		logoutDialog(null,400,165,function(){
+                  			beforeLogout();
+                  		});
+                      },
+                      timeout:5000,
+                      error:function(){
+                  		var msg = useCertSign ? '您已经安全退出个人网上银行。如您的计算机已插入网盾证书，请您务必拔出网盾。' : "您已经安全退出个人网上银行。";
+                  		jconfirm(msg,null,400,165,null,function(){
+                  			beforeLogout();
+                  		},{
+              				buttons: {
+              					'确定': function(){
+              						closeDialog();
+              					}
+              				},
+              				showTitlebarClose: false
+              			});
+                      }
+                  });
+              	return false;
+              }
+
+            function clearIt(){
+
+            	$("#workframe").empty();
+
+            	CollectGarbage();
+
+            }
+
+            function logoutDialog(titleStr,width,height,fn){
+
+				var $dialogDiv = $("#confirmDiv1");
+				if(useCertSign){
+                    $("#tip_logout").html('您即将安全退出个人网上银行。如您的计算机已插入网盾证书，请您务必拔出网盾。');
+                }
+				$dialogDiv.dialog({
+
+					autoOpen: false,
+
+					modal: true,
+
+					title: titleStr,
+
+					buttons: {
+
+						'确定': function(){
+
+							$(this).dialog('close');
+
+							
+
+						}
+
+					},
+
+					close: function(){if(fn !=null)fn();}
+
+				});
+
+				if(width != null){
+
+					$dialogDiv.dialog( "option", "width", width );
+
+				}
+
+				if(height != null){
+
+					$dialogDiv.dialog( "option", "height", height );
+
+				}
+
+				$dialogDiv.dialog("open");
+
+			}
+            
+            function goPortal() {
+            	$("#mainframe").mask("正在帮您跳转，请稍等！");
+            	$.ajax({ type:"POST",url:"/pers/main/portal.do",dataType:"json"
+                	,data: {aliveToken: "1547108765374"}
+                	,success:function(json){
+                		$("#mainframe").unmask();
+                		if(typeof(json.error) != "undefined" &amp;&amp; json.error == true){
+	        				jalert(json.msg);
+	        				return;
+                		}
+	        			if(json != undefined &amp;&amp; json != null){
+	        				if(json.directUrl){
+	        					window.open(json.directUrl);
+	        					return;
+	        				}
+	        			}
+                	}
+                    ,timeout:30000
+                    ,error:function(){
+                    	$("#mainframe").unmask();
+                        jalert("系统超时");
+                        return false;
+                    }
+                });
+            }
+            
+            function goCustomerOnlineInput(){
+            	$.ajax({ type:"POST",url:"/pers/ebpp/community/customerOnline!init.do",dataType:"json"
+                	,data:{}
+                	,success:function(json){
+                		if(typeof(json.error) != "undefined" &amp;&amp; json.error == true){
+	        				jalert(json.msg);
+	        				return;
+                		}
+	        			if(json != undefined &amp;&amp; json != null){
+	        				if(json.chatHostAddress != undefined &amp;&amp; json.chatHostAddress != ""){
+	        					window.open(json.chatHostAddress, '', 'top=100,left=120,width=1040,height=588,scrollbars=yes,status=no,toolbar=no,location=no,menu=no,resizable=no');
+	        				//	parent.closeDialog();
+	        					return;
+	        				}else if(json.errorInfo != undefined &amp;&amp; json.errorInfo != ""){
+	        					jalert(json.errorInfo);
+	        					return;
+	        				}
+	        			}
+                	}
+                    ,timeout:30000
+                    ,error:function(){
+                        jalert("系统超时");
+                        return false;
+                    }
+                });
+            }
+
+            function refreshWorkframe() {
+            	$("#workframe").attr("src","/pers/main/welcome.do");
+            }
+            function gotodirectbank(){
+            	unbindWinEv();
+            	$("#mainframe").mask("正在帮您跳转到直销银行，请稍等！");
+            	document.location='/pers/main/sso/jump/targetA';
+            	return false;
+            }
+            function mainframeMessageTip(parm) {
+            	if(!parm){
+            		return ;
+            	}
+            	if(parm.opt === 'tip'){
+            		if($('#tipMessageStore').val()){
+            			jalert($('#tipMessageStore').val(), parm.alertOpt || {});
+            			$('#tipMessageStore').val('');
+            		}
+            	} else if(parm.opt === 'save' &amp;&amp; parm.msg){
+            		$('#tipMessageStore').val(parm.msg);
+            	}
+            }
+        </script>
+
+
+
+    
+
+
+
+<div class="ui-dialog ui-widget ui-widget-content ui-corner-all" tabindex="-1" role="dialog" aria-labelledby="ui-dialog-title-autoLogoutDialog" style="display: none; z-index: 1000; outline: 0px;"><div class="ui-dialog-titlebar ui-widget-header ui-corner-all ui-helper-clearfix"><span class="ui-dialog-title" id="ui-dialog-title-autoLogoutDialog"> </span><a href="#" class="ui-dialog-titlebar-close ui-corner-all" role="button"><span class="ui-icon ui-icon-closethick">close</span></a></div><div id="autoLogoutDialog" style="" class="ui-dialog-content ui-widget-content">
+
+                    <p></p>
+
+                </div></div><div class="ui-dialog ui-widget ui-widget-content ui-corner-all" tabindex="-1" role="dialog" aria-labelledby="ui-dialog-title-TOD" style="display: none; z-index: 1000; outline: 0px;"><div class="ui-dialog-titlebar ui-widget-header ui-corner-all ui-helper-clearfix"><span class="ui-dialog-title" id="ui-dialog-title-TOD">温馨提示</span><a href="#" class="ui-dialog-titlebar-close ui-corner-all" role="button"><span class="ui-icon ui-icon-closethick">close</span></a></div><div id="TOD" class="hide ui-dialog-content ui-widget-content" style="padding: 18px 24px; display: block;">
+
+			<p>尊敬的张洋客户：</p>
+
+			<p>
+
+				    您登录网上银行后已14分钟未操作，为安全起见，1分钟倒数计时结束后，若您仍未进行任何操作，将为您自动退出网上银行。请您确认是否希望继续操作?
+
+			</p>
+
+			<p align="center">
+
+			1分钟倒数计时<label style="color:red">剩余时间<span id="tc"></span>秒</label>
+
+			</p>
+
+		</div><div class="ui-dialog-buttonpane ui-widget-content ui-helper-clearfix"><div class="ui-dialog-buttonset"><button type="button" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" role="button" aria-disabled="false"><span class="ui-button-text">继续</span></button><button type="button" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" role="button" aria-disabled="false"><span class="ui-button-text">退出</span></button></div></div></div><div class="ui-dialog ui-widget ui-widget-content ui-corner-all" tabindex="-1" role="dialog" aria-labelledby="ui-dialog-title-Destory_Personal_Exsit" style="display: none; z-index: 1000; outline: 0px;"><div class="ui-dialog-titlebar ui-widget-header ui-corner-all ui-helper-clearfix"><span class="ui-dialog-title" id="ui-dialog-title-Destory_Personal_Exsit">温馨提示</span><a href="#" class="ui-dialog-titlebar-close ui-corner-all" role="button"><span class="ui-icon ui-icon-closethick">close</span></a></div><div id="Destory_Personal_Exsit" class="hide ui-dialog-content ui-widget-content" style="display: block;">
+
+                    <p style="text-align: center">
+
+                        注销成功。
+
+                     </p>
+
+                     <p style="text-align: center">
+
+                        还剩<span id="dtc">10</span>秒，自动退出网银！
+
+                    </p>
+
+                </div><div class="ui-dialog-buttonpane ui-widget-content ui-helper-clearfix"><div class="ui-dialog-buttonset"><button type="button" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" role="button" aria-disabled="false"><span class="ui-button-text">立即退出</span></button></div></div></div></body></html>

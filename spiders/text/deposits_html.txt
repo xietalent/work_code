@@ -1,0 +1,820 @@
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml"><head><script type="text/javascript">
+    window.serverTime=1547429383910;
+</script>
+
+
+
+    
+    	<meta http-equiv="Expires" content="-10" />
+    	<meta http-equiv="Pragma" content="no-cache" />
+    	<meta http-equiv="Cache-Control" content="No-cache,must-revalidate" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>在线兴业</title>
+                <link href="/pers/main/resources/css/redmond/core.css?v=72be91f387" rel="stylesheet" type="text/css" media="all" />
+        <!--[if lte IE 7]>
+        <link href="/pers/main/resources/css/redmond/patch.css?v=b97ff1777a" rel="stylesheet" type="text/css" media="all"/>
+        <![endif]-->
+        <link href="/pers/main/resources/css/redmond/jqform.css?v=3e771975e5" rel="stylesheet" type="text/css" media="all" />
+        <link rel="stylesheet" href="/pers/main/resources/css/redmond/jquery-ui.css?v=661179c862" type="text/css" />
+        <link rel="stylesheet" href="/pers/main/resources/css/redmond/jqgrid.css?v=340a0db9dc" type="text/css" />
+        <script type="text/javascript" src="/pers/main/resources/js/core.js?v=ee306c39dd"></script>
+        <script type="text/javascript" src="/pers/main/resources/js/cib.js?v=b52abae553"></script>
+            <script type="text/javascript" src="/pers/main/resources/js/i18n/i18n-cn.js?v=37f5ea4a3d"></script>
+        <!--[if  IE 6]>
+        <script type="text/javascript">try{document.execCommand("BackgroundImageCache",false,true);}catch(e){}</script>
+        <![endif]-->
+        <script type="text/javascript" src="/pers/main/resources/js/jqform.js?v=70e2d4a0cc"></script>
+        <script type="text/javascript" src="/pers/main/resources/js/jqui.js?v=57a6fed345"></script>
+        <script type="text/javascript" src="/pers/main/resources/js/jqgrid.js?v=0e8c733c58"></script>
+
+        
+		<style type="text/css">
+      
+            .blkContainerSblk {height:35px; line-height:35px; overflow:hidden; text-align:center; font-family:"黑体"; font-size:20px; font-weight:normal; color:#03005C;}
+             #page_content{height:auto;}
+            </style>
+	
+        <script>var MA_URL = 'https://bigdata.cib.com.cn:80';</script>
+        <script src="/pers/main/resources/js/init.js?v=e52e36400f"></script>
+
+        
+        
+            <script type="text/javascript">
+        parent &amp;&amp; parent.mainframeMessageTip &amp;&amp; parent.mainframeMessageTip({opt:'tip', alertOpt:{width: 380}});
+    </script>
+
+        <script type="text/javascript">
+         
+             if((parent.document.getElementById("mainframe")===undefined||parent.document.getElementById("mainframe")==null) &amp;&amp; (parent.mainframe===undefined)){
+                document.location.href="/pers/main/login.do";
+            }
+            top.keepAlive();
+        </script>
+    </head>
+    <body>
+        <div class="page_margins" id="bigpage">
+            <div class="page">
+                <div id="main">
+                
+                    <div id="col1" style="min-height: 946px; height: 946px;">
+                        <div id="col1_content" class="clearfix">
+                             <div id="search">
+                                 <input id="search_keyword" class="ent_enabled" type="text" value="" placeholder="功能搜索" /><a id="search-btn" href="javascript:funcSearch();"> </a>
+			    			 </div>
+                <div id="sidebar">
+				<div id="fast-way" class="item current" style="position: relative">
+					<div class="cib-iconBg setting" onclick="javascript:location.href='/pers/main/customer/fastwaySetting.do'">设置</div>
+				    <h3 class="title">快速通道</h3>
+				    <ul class="show">
+                       
+                           <li class="odd clearfix">
+                               <a href="/pers/main/query/queryBalance.do?FUNID=FIN01|FIN01_01" onclick="return goFastWayMenu('存款余额查询');" target="">
+                                   存款余额查询
+                               </a>
+                           </li>
+                         
+                           <li class="even clearfix">
+                               <a href="/pers/main/account/queryTrans.do?FUNID=FIN01|FIN01_02" onclick="return goFastWayMenu('交易明细查询');" target="">
+                                   交易明细查询
+                               </a>
+                           </li>
+                         
+                           <li class="odd clearfix">
+                               <a href="/pers/main/transfer/innerTransfer.do?FUNID=FIN03|FIN03_01" onclick="return goFastWayMenu('行内转账');" target="">
+                                   行内转账
+                               </a>
+                           </li>
+                         
+                           <li class="even clearfix">
+                               <a href="/pers/main/creditCard/transferToCreditCard.do?FUNID=FIN09|FIN09_02|FIN09_02_01" onclick="return goFastWayMenu('人民币/购汇还款');" target="">
+                                   人民币/购汇还款
+                               </a>
+                           </li>
+                         
+                           <li class="odd clearfix">
+                               <a href="/pers/fin/financing/finProdBuy.do?FUNID=FIN04|FIN04_05|FIN04_05_02" onclick="return goFastWayMenu('理财产品购买');" target="">
+                                   理财产品购买
+                               </a>
+                           </li>
+                         
+                           <li class="even clearfix">
+                               <a href="/pers/fin/openfund/fundList.do?FUNID=FIN04|FIN04_02|FIN04_02_02" onclick="return goFastWayMenu('代销基金列表');" target="">
+                                   代销基金列表
+                               </a>
+                           </li>
+                         
+                           <li class="odd clearfix">
+                               <a href="https://e.cib.com.cn/app/quickApplyCard/quickApplyCard.do?offlcode=1001&amp;sourceSite=1007" onclick="return goFastWayMenu('信用卡首次申请');" target="_blank">
+                                   信用卡首次申请
+                               </a>
+                           </li>
+                         
+                         <li class="bottom"></li>
+                   </ul>
+				</div>
+				
+				
+				<div id="links" class="item current">
+				    <h3 class="title">相关链接</h3>
+				    <ul class="show">
+                        
+                            <li class="odd clearfix">
+                                <a href="/pers/main/account/queryTrans.do?FUNID=FIN01|FIN01_02" target="">
+                                    交易明细查询
+                                </a>
+                            </li>
+                        
+                            <li class="even clearfix">
+                                <a href="/pers/fin/collection/realtimeInterBankTransfer.do?FUNID=FIN03|FIN03_03" target="">
+                                    跨行转入
+                                </a>
+                            </li>
+                        
+                        <li class="bottom"></li>
+                    </ul>
+				</div>
+				
+				<div id="security-message">
+				<img id="securityTitle" class="icon" src="/pers/main/resources/images/space.gif" /><b>安全提示</b><br />
+		        
+					<p class="text">
+	               		<span class="highlight">
+	                    	您已2,473天未修改登录密码，建议您立即<a href="/pers/main/customer/modifyLoginPwd.do?FUNID=FIN02|FIN02_12|FIN02_12_03">修改登录密码</a>
+	                    </span>
+					</p>
+				
+				<p class="text" style="height:110px;">
+	               您目前尚未设置预留验证信息。
+				   <br />
+				   <a href="/pers/main/customer/customerMessage.do?FUNID=FIN02|FIN02_05|FIN02_05_02">修改预留验证信息</a>
+		        </p>
+				</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="splitter" title="收起/打开边栏" style="min-height: 946px; height: 946px;"><div id="splitter-btn" class="cib-iconBg">收起快速通道<br />&lt;&lt;</div></div>
+                
+                    <div id="col3">
+                        <div id="col3_content" class="clearfix" style="margin-top: 2px; min-height: 946px;">
+                            <div id="crumbs" class="curr_pos clearfix">
+    <div class="left">当前位置： 
+                <span class="node">账户查询</span>
+                &gt;
+                <span class="highLight">存款余额查询</span>
+                
+    </div>
+    <span class="right"><a href="http://www.cib.com.cn/cn/e-banking/personal/faqs/help/" target="_blank" id="online-help">在线帮助</a></span>
+</div>
+
+                                   
+		<div id="page_margin">
+			<div id="page">
+				<div id="page_header">
+					
+            
+					<div id="page_oper_step">
+            
+                
+                
+
+            <div class="flowbox" id="flow">
+    <ul class="flow">
+            <li class="page_item first before_current" id="flow_1" style="width:49.8%"><span>1. 选择银行账户</span></li>            <li class="last  current current_last" id="flow_2" style="width:49.8%"><span>2. 查询账户余额</span></li>    </ul>
+</div>
+
+
+            <script type="text/javascript">
+    $(function() {
+		var id = "2";
+		var bef = parseInt(id)-1;
+		$("#flow_"+bef).addClass("before_current");
+        $("#flow_"+id).addClass("current");
+        if($("#flow_"+id).hasClass("first")){
+			$("#flow_"+id).addClass("current_first");
+		};
+		if($("#flow_"+id).hasClass("last")){
+			$("#flow_"+id).addClass("current_last");
+		};
+    });
+</script>
+        </div>
+				</div>
+				<div id="page_content">
+				
+            <form id="form" name="form" action="/pers/main/query/queryBalance.do" method="post" class="form">
+                
+                
+                    
+                       	<div class="info-show">
+                            <span class="item"><label>账户类型：</label>借记卡</span>
+                            
+                            <span class="item"><label>账户户名：</label>张洋</span>
+                            <span class="item"><label>账户账号：</label>622909393225799016</span>
+                            <span class="item"><label>状态：</label>有效</span>
+                        </div>
+                        <table align="center" class="table-h">
+                            <thead>
+                                <tr>
+                                    <th style="width:4.4%">序号</th>
+                                    <th style="width:11.6%">储种</th>
+                                    <th style="width:6.2%">币种</th>
+                                    
+                                    <th style="width:4.4%">钞汇</th>
+                                    
+                                    <th style="width:16%">余额</th>
+                                    <th style="width:16%">可用余额</th>
+                                    <th style="width:9.7%">开户日期</th>
+                                    <th style="width:5.2%">存期</th>
+                                    <th style="width:9.7%">到期日期</th>
+                                    <th style="width:8%">续存存期</th>
+                                    <th style="width:4.4%">状态</th>
+                                    <th style="width:4.4%">操作</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                
+                                    <tr>
+                                        <td>001</td>
+                                        <td>人民币活期</td>
+                                        <td>人民币</td>
+                                        
+                                        <td>现钞</td>
+                                        
+                                        <td style="text-align: right">
+                                            2,352.30
+                                        </td>
+                                        <td style="text-align: right">2,352.30</td>
+                                        <td>2005-06-17</td>
+                                        <td></td>
+                                        <td>
+																						</td>
+                                        <td></td>
+                                        <td>有效</td>
+                                       	<td>
+                                            
+                                               <a href="###" style="text-decoration: underline" onclick="openQueryTransLink('0','001');">明细</a>
+                                            
+                                            
+                                            
+                                            
+                                        </td>
+                                    </tr>
+                                
+                                    <tr class="odd">
+                                        <td>002</td>
+                                        <td>外币活期</td>
+                                        <td>港币</td>
+                                        
+                                        <td>现钞</td>
+                                        
+                                        <td style="text-align: right">
+                                            22.91
+                                        </td>
+                                        <td style="text-align: right">22.91</td>
+                                        <td>2006-06-08</td>
+                                        <td></td>
+                                        <td>
+																						</td>
+                                        <td></td>
+                                        <td>有效</td>
+                                       	<td>
+                                            
+                                               <a href="###" style="text-decoration: underline" onclick="openQueryTransLink('0','002');">明细</a>
+                                            
+                                            
+                                            
+                                            
+                                        </td>
+                                    </tr>
+                                
+                            </tbody>
+                        </table>
+                    
+                       	<div class="info-show">
+                            <span class="item"><label>账户类型：</label>借记卡</span>
+                            
+                            <span class="item"><label>账户户名：</label>张洋</span>
+                            <span class="item"><label>账户账号：</label>622908396492598814</span>
+                            <span class="item"><label>状态：</label>有效</span>
+                        </div>
+                        <table align="center" class="table-h">
+                            <thead>
+                                <tr>
+                                    <th style="width:4.4%">序号</th>
+                                    <th style="width:11.6%">储种</th>
+                                    <th style="width:6.2%">币种</th>
+                                    
+                                    <th style="width:4.4%">钞汇</th>
+                                    
+                                    <th style="width:16%">余额</th>
+                                    <th style="width:16%">可用余额</th>
+                                    <th style="width:9.7%">开户日期</th>
+                                    <th style="width:5.2%">存期</th>
+                                    <th style="width:9.7%">到期日期</th>
+                                    <th style="width:8%">续存存期</th>
+                                    <th style="width:4.4%">状态</th>
+                                    <th style="width:4.4%">操作</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                
+                                    <tr>
+                                        <td>001</td>
+                                        <td>人民币活期</td>
+                                        <td>人民币</td>
+                                        
+                                        <td>现钞</td>
+                                        
+                                        <td style="text-align: right">
+                                            671.67
+                                        </td>
+                                        <td style="text-align: right">671.67</td>
+                                        <td>2010-04-07</td>
+                                        <td></td>
+                                        <td>
+																						</td>
+                                        <td></td>
+                                        <td>有效</td>
+                                       	<td>
+                                            
+                                               <a href="###" style="text-decoration: underline" onclick="openQueryTransLink('1','001');">明细</a>
+                                            
+                                            
+                                            
+                                            
+                                        </td>
+                                    </tr>
+                                
+                                    <tr class="odd">
+                                        <td>002</td>
+                                        <td>外币活期</td>
+                                        <td>港币</td>
+                                        
+                                        <td>现钞</td>
+                                        
+                                        <td style="text-align: right">
+                                            1,503.70
+                                        </td>
+                                        <td style="text-align: right">1,503.70</td>
+                                        <td>2014-02-17</td>
+                                        <td></td>
+                                        <td>
+																						</td>
+                                        <td></td>
+                                        <td>有效</td>
+                                       	<td>
+                                            
+                                               <a href="###" style="text-decoration: underline" onclick="openQueryTransLink('1','002');">明细</a>
+                                            
+                                            
+                                            
+                                            
+                                        </td>
+                                    </tr>
+                                
+                                    <tr>
+                                        <td>003</td>
+                                        <td>外币活期</td>
+                                        <td>美元</td>
+                                        
+                                        <td>现汇</td>
+                                        
+                                        <td style="text-align: right">
+                                            110.11
+                                        </td>
+                                        <td style="text-align: right">110.11</td>
+                                        <td>2016-02-23</td>
+                                        <td></td>
+                                        <td>
+																						</td>
+                                        <td></td>
+                                        <td>有效</td>
+                                       	<td>
+                                            
+                                               <a href="###" style="text-decoration: underline" onclick="openQueryTransLink('1','003');">明细</a>
+                                            
+                                            
+                                            
+                                            
+                                        </td>
+                                    </tr>
+                                
+                            </tbody>
+                        </table>
+                    
+                       	<div class="info-show">
+                            <span class="item"><label>账户类型：</label>借记卡</span>
+                            
+                            <span class="item"><label>账户户名：</label>张洋</span>
+                            <span class="item"><label>账户账号：</label>622908391487666817</span>
+                            <span class="item"><label>状态：</label>有效</span>
+                        </div>
+                        <table align="center" class="table-h">
+                            <thead>
+                                <tr>
+                                    <th style="width:4.4%">序号</th>
+                                    <th style="width:11.6%">储种</th>
+                                    <th style="width:6.2%">币种</th>
+                                    
+                                    <th style="width:4.4%">钞汇</th>
+                                    
+                                    <th style="width:16%">余额</th>
+                                    <th style="width:16%">可用余额</th>
+                                    <th style="width:9.7%">开户日期</th>
+                                    <th style="width:5.2%">存期</th>
+                                    <th style="width:9.7%">到期日期</th>
+                                    <th style="width:8%">续存存期</th>
+                                    <th style="width:4.4%">状态</th>
+                                    <th style="width:4.4%">操作</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                
+                                    <tr class="odd">
+                                        <td>001</td>
+                                        <td>人民币活期</td>
+                                        <td>人民币</td>
+                                        
+                                        <td>现钞</td>
+                                        
+                                        <td style="text-align: right">
+                                            0.00
+                                        </td>
+                                        <td style="text-align: right">0.00</td>
+                                        <td>2016-04-01</td>
+                                        <td></td>
+                                        <td>
+																						</td>
+                                        <td></td>
+                                        <td>有效</td>
+                                       	<td>
+                                            
+                                               <a href="###" style="text-decoration: underline" onclick="openQueryTransLink('2','001');">明细</a>
+                                            
+                                            
+                                            
+                                            
+                                        </td>
+                                    </tr>
+                                
+                            </tbody>
+                        </table>
+                    
+                       	<div class="info-show">
+                            <span class="item"><label>账户类型：</label>借记卡</span>
+                            
+                            <span class="item"><label>账户户名：</label>张洋</span>
+                            <span class="item"><label>账户账号：</label>966666393441901713</span>
+                            <span class="item"><label>状态：</label>有效</span>
+                        </div>
+                        <table align="center" class="table-h">
+                            <thead>
+                                <tr>
+                                    <th style="width:4.4%">序号</th>
+                                    <th style="width:11.6%">储种</th>
+                                    <th style="width:6.2%">币种</th>
+                                    
+                                    <th style="width:4.4%">钞汇</th>
+                                    
+                                    <th style="width:16%">余额</th>
+                                    <th style="width:16%">可用余额</th>
+                                    <th style="width:9.7%">开户日期</th>
+                                    <th style="width:5.2%">存期</th>
+                                    <th style="width:9.7%">到期日期</th>
+                                    <th style="width:8%">续存存期</th>
+                                    <th style="width:4.4%">状态</th>
+                                    <th style="width:4.4%">操作</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                
+                                    <tr>
+                                        <td>001</td>
+                                        <td>人民币活期</td>
+                                        <td>人民币</td>
+                                        
+                                        <td>现钞</td>
+                                        
+                                        <td style="text-align: right">
+                                            101.10
+                                        </td>
+                                        <td style="text-align: right">101.10</td>
+                                        <td>2005-12-12</td>
+                                        <td></td>
+                                        <td>
+																						</td>
+                                        <td></td>
+                                        <td>有效</td>
+                                       	<td>
+                                            
+                                               <a href="###" style="text-decoration: underline" onclick="openQueryTransLink('3','001');">明细</a>
+                                            
+                                            
+                                            
+                                            
+                                        </td>
+                                    </tr>
+                                
+                            </tbody>
+                        </table>
+                    
+                
+                
+                
+                    <table align="center" class="table-h">
+                        <caption>账户余额汇总</caption>
+                        <thead>
+                            <tr>
+                                <th width="20%">币种</th>
+                                <th width="20%">余额汇总</th>
+                                <th width="15%">活期总额</th>
+                                <th width="15%">活期占比</th>
+                                <th width="15%">非活期总额</th>
+                                <th width="15%">非活期占比</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            
+                                <tr class="odd">
+                                    <td>
+                                        港币
+                                    </td>
+                                    <td style="text-align: right">
+                                        1,526.61
+                                    </td>
+                                    <td style="text-align: right">1,526.61</td>
+                                    <td>100.00%</td>
+                                    <td style="text-align: right">0.00</td>
+                                    <td>0.00%</td>
+                                </tr>
+                            
+                                <tr>
+                                    <td>
+                                        美元
+                                    </td>
+                                    <td style="text-align: right">
+                                        110.11
+                                    </td>
+                                    <td style="text-align: right">110.11</td>
+                                    <td>100.00%</td>
+                                    <td style="text-align: right">0.00</td>
+                                    <td>0.00%</td>
+                                </tr>
+                            
+                                <tr class="odd">
+                                    <td>
+                                        人民币
+                                    </td>
+                                    <td style="text-align: right">
+                                        3,125.07
+                                    </td>
+                                    <td style="text-align: right">3,125.07</td>
+                                    <td>100.00%</td>
+                                    <td style="text-align: right">0.00</td>
+                                    <td>0.00%</td>
+                                </tr>
+                            
+                        </tbody>
+                    </table>
+                
+                
+	                <div class="form-btn-div">
+	                	
+	                    	<span class="cibButton-wrap"><input type="submit" value="返回" id="form_0" class="ui-cib-button" role="button" aria-disabled="false" style="vertical-align: middle;" /><span class="cib-btnR"></span></span>
+
+	                </div>
+                
+                <input type="hidden" name="selectedRows" value="0,1,2,3" id="selectedRows" />
+            
+</form>
+
+
+
+            <script type="text/javascript">
+                $(function() {
+                    $("tbody&gt;tr:odd").addClass("odd");
+                });
+                function openQueryTransLink(cibIndex,innerIndex){
+                    var title = '交易明细';
+                    var url="/pers/main/account/queryTrans!queryTransListForBalance.do?index=" + cibIndex+"&amp;targetSeqence="+innerIndex;
+                    jPageDialog(title, url, 900,550,true);
+                }
+                function openCurrentToFixedLink(cibAccountNo,innerIndex,usableBalance){
+                	
+                	var url="/pers/fin/timedeposit/currentToFixedAction!fixedToCurrCofirmFTest.do?FUNID=FIN04|FIN04_26|FIN04_26_02&amp;cibAccountNo="+cibAccountNo+"&amp;targetSeqence="+innerIndex+"&amp;amountString="+usableBalance;
+                	window.location=url;
+                }
+                function toDrawPage(cibAccountNo,innerIndex){
+                	var url="/pers/fin/certificatesDeposit/drawCertificatesDeposit!toDrawPageFromOtherPage.do?FUNID=FIN04|FIN04_26|FIN04_26_03|FIN04_26_03_02&amp;cibAccountNo="+cibAccountNo+"&amp;seqence="+innerIndex;
+                	window.location=url;
+                }
+                
+            </script>
+        
+				</div>
+				<div id="page_helps">
+				
+                <h5 class="title">猜您喜欢</h5>
+    <div class="text-info-box text-info-box2">
+          <p>☆ <a href="/pers/main/customer/fairyMgr.do?FUNID=FIN02|FIN02_04|FIN02_04_05">精灵信使</a><br />☆ 体验<a href="http://www.cib.com.cn/cn/e-banking/wallet/App.html" target="_blank">Apple Pay</a>和<a href="http://www.cib.com.cn/cn/e-banking/wallet/yunshanfu/Android.html" target="_blank">云闪付（安卓版）</a><br />☆ 在微信中搜索并关注微信公众号“兴业银行”</p>
+    </div>
+    <h5 class="title">帮助信息</h5>
+    <div class="text-info-box">
+          <p>1、如需办理活期转定期业务，请通过投资理财-定期存款板块办理。<br />2、查询<a href="http://www.cib.com.cn/cn/Personal_Banking/Deposit_Loan_Rates/RMB_Deposit_Rates.html" target="_blank">人民币存款参考利率</a>，查询<a href="http://www.cib.com.cn/cn/personal/saving/rates/foreign.html" target="_blank">外汇存款参考利率</a>。</p>
+    </div>
+<div class="help_bottom"><a href="/pers/main/customer/functionMap.do" id="func-map">功能地图</a><span id="pageNo">页面编号： 01010000_B</span></div>
+
+        
+				</div>
+			</div>
+		</div>
+	
+                            
+                            <div id="ie_clearing">   </div>
+                        </div>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+                
+            </div>
+        </div>
+        <script type="text/javascript">
+            var splitter;
+            var col1 = document.getElementById("col1");
+            var col3 = document.getElementById("col3");
+            $(function(){
+                var H = top.window.document.body.offsetHeight;
+                H = H - 230;
+                var $main = $("#main");
+                var mainH = $main.height()+22;
+                var minH = Math.max(H,mainH);
+                
+               $("#col1, #col3_content, #splitter").css("min-height", minH+"px");
+                
+                if($.browser.msie &amp;&amp; parseFloat($.browser.version)&lt;7){
+                    
+                    $("#col1,#col3_content,#splitter").css("height", mainH+"px");
+                }
+                splitter= $("#splitter");
+                window.setTimeout(reinitCols,200);
+            });
+            function reinitCols(){
+
+                try{
+                    var height = $(col3).height();
+                    $(col1).height(height);
+                    splitter.height(height);
+                }catch(ex){
+                }
+                window.setTimeout(reinitCols,200);
+            }
+
+
+              function clearN(){
+                for ( var id in jQuery.cache ) {
+                    var obj=jQuery.cache[ id ];
+                    for ( var name in obj ) {
+                        if ( obj[ name ].handle ) {
+                            
+                            try {
+                                jQuery.event.remove( obj[ name ].handle.elem );
+                            } catch(e) {
+                            }
+                        }
+                    }
+                }
+            }
+            try{window.attachEvent("onunload",clearN);}catch(er){}
+
+            function themeSelecter_onChanged()
+            {
+                document.getElementById("themeForm").submit();
+            }
+            function switchSide(sideStatus)
+            {
+                if(sideStatus == "on"){
+                        $("#col1").animate({marginLeft:"-199px"},"fast");
+                        $("#splitter").animate({left:"2px"},"fast");
+                        $("#col3").animate({marginLeft:"15px"},"fast",function(){gridThings()});
+                        $("#splitter-btn").html("展开快速通道&lt;br&gt;&amp;gt;&amp;gt;");
+               }else if(sideStatus == "off"){
+                        $("#col3").animate({marginLeft:"218px"},"fast");
+                        $("#splitter").animate({left:"204px"},"fast");
+                        $("#col1").animate({marginLeft:"0px"},"fast",function(){gridThings()});
+                        $("#splitter-btn").html("收起快速通道&lt;br&gt;&amp;lt;&amp;lt;");
+                }
+            }
+            $(function($) {
+                 
+                $("#links .title").bind("click",function(){
+                        if($(this).parent().hasClass("current")){
+                                $(this).parent().find("ul").hide().end().removeClass("current");
+                        }else{
+                             $(this).parent().addClass("current").find("ul").show();
+                        }
+                });
+                $("#fast-way .title").bind("click",function(){
+                	location.href='/pers/main/customer/fastwaySetting.do';
+            });
+                $(":submit, :reset, :button, button, a.btn").cibButton().css("vertical-align","middle");
+                selectmenu();
+                splitterInit();
+			$("#splitter-btn").click(function(){
+				var sideStatus = parent.$("#out_main").data("sideStatus");
+				if(sideStatus == undefined){sideStatus = "on";}
+                                if(sideStatus == "on"){
+                                    parent.$("#out_main").data("sideStatus","off");
+                                 }else if(sideStatus == "off"){
+                                    parent.$("#out_main").data("sideStatus","on");
+                                 }
+				switchSide(sideStatus);
+			});
+			$("input:text:disabled").addClass("disabled");
+			try{parent.initLogoutTimer();}catch(er){}
+                        doPlaceholder();
+		});
+
+		function splitterInit(){
+			var sideStatus = parent.$("#out_main").data("sideStatus");
+			if(sideStatus == "on"){
+				$("#col1").css("marginLeft","0px");
+				$("#col3").css("marginLeft","218px");
+                                $("#splitter-btn").html("收起快速通道&lt;br&gt;&amp;lt;&amp;lt;");
+				$("#splitter").css({left:"204px"});
+				gridThings();
+			}else if(sideStatus == "off"){
+				$("#col1").css("marginLeft","-199px");
+				$("#col3").css("marginLeft","15px");
+                                $("#splitter-btn").html("展开快速通道&lt;br&gt;&amp;gt;&amp;gt;");
+				$("#splitter").css({left:"2px"});
+				gridThings();
+			}
+		}
+	
+            function gridThings(){
+                if($(".grid-div").length &gt; 0){
+                    gridResize();
+                }
+            }
+            function selectmenu()
+            {
+                try{
+                    var funid='FIN01|FIN01_01';
+                    parent.selectMenu(funid);
+                }catch(e)
+                {
+
+                }
+            }
+            function jalert(msg,options){
+		parent.jalert(msg,options);
+            }
+            function jconfirm(str,title,myWidth,myHeight,fn,closeFn,options){
+                parent.jconfirm(str,title,myWidth,myHeight,fn,closeFn,options);
+            }
+            function jPageDialog(titleStr,url,width,height,scrollable,closeFn,options){
+		parent.jPageDialog(titleStr,url,width,height,scrollable,closeFn,options);
+            }
+        	function closeDialog() {
+        		parent.closeDialog();
+            }
+        	$('#search_keyword').keydown(function(event) {
+                if (event.which == 13) {
+                   event.preventDefault();
+                   funcSearch();
+             }
+          	});
+            function funcSearch(){
+                if($("#search_keyword").hasClass('placeholder'))
+                {
+                    jalert('功能名称不能为空');
+                    return ;
+                }
+                if($.trim($("#search_keyword").val()).length&lt;=0){
+                    jalert('功能名称不能为空');
+                    return ;
+                }
+                toUrl=encodeURI('/pers/main/customer/search.do?keyword='+$("#search_keyword").val());
+                document.location=toUrl;
+
+            }
+            function fastwaySetting(){
+             document.location='/pers/main/customer/fastwaySetting.do';
+            }
+  		function clearIt(event){
+            	parent.clearIt();
+            }
+  		function cibDialog(title,url,width,height){
+			parent.CIB.dialog.apply(this,arguments);
+		}
+
+        function goFastWayMenu(name){
+            
+            var ubsData={'subMenuName':name};
+            window.parent.sa.track('pc_subMenu_visit',ubsData);
+            return true;
+        }
+        </script>
+    
+
+</body></html>

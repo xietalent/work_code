@@ -85,6 +85,7 @@ def input_str(s):
     k.press_key(k.tab_key)
     k.type_string('xinshi')
     sleep(2)
+
     k.press_key(k.enter_key)
 input_str("hello")
 sleep(2)
@@ -93,4 +94,4 @@ sleep(2)
 sleep(5)
 
 # driver.close()
-# driver.quit()
+driver.quit()

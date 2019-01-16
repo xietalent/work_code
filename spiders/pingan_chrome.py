@@ -101,14 +101,14 @@ class Pingan_C():
 
         self.browser.find_element_by_id('loginlink').click()
 
-        sleep(3)
+        sleep(4)
         #next
 
+        page_html = self.browser.page_source
 
-        self.password = password
-        self.database = database
-        self.port = port
-        self.charset = charset
+
+
+
 
 
     def connect(self):

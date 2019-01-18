@@ -1,0 +1,336 @@
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml"><head><style type="text/css">@charset "UTF-8";[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide{display:none !important;}ng\:form{display:block;}.ng-animate-block-transitions{transition:0s all!important;-webkit-transition:0s all!important;}</style>
+    <meta charset="UTF-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=emulateie8" />
+    <title>信用卡网银首页（新）</title>
+    <link rel="stylesheet" href="https://resources.pingan.com/app_css/newtoa/v20/bank/creditcard/public.css" />
+    <link rel="stylesheet" href="https://resources.pingan.com/app_css/newtoa/v20/bank/creditcard/new_commen.css" />
+    <link rel="stylesheet" href="css/home.css" />
+    <script type="text/javascript" src="../../../config/creditcard-config.js"></script><script type="text/javascript" src="https://rmb.pingan.com.cn/credit/dlds/cust/dfp/downloads/frms-fingerprint.js?custID=133&amp;serviceUrl=https://rmb.pingan.com.cn/credit/dlds/cust/dfp/generate/jsonp&amp;loadSource=script"></script>
+    <script type="text/javascript" src="../common/js/tools/pawebjs-1.3.0.js"></script>
+  <!--   <script type="text/javascript" data-main="build/main-built.js" src="../../js_lib/require/require.min.js"></script> -->
+    <script type="text/javascript" data-main="js/main.js" src="../../js_lib/require/require.min.js"></script>
+<script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="main" src="js/main.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="app" src="js/app.js?3.4.3"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="common_tool/accountPurview" src="js/../../common/js/tools/accountPurview.js?3.4.3"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="jiankong" src="js/../../common/js/tools/jiankong.js?3.4.3"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="common_tool/browserAgent" src="js/../../common/js/tools/browserAgent.js?3.4.3"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="angular" src="js/../../../js_lib/angular/angular.js?3.4.3"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="Draw2DX" src="js/../../../js_lib/paui/jsDraw2DX.js?3.4.3"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="cardchart" src="js/../../../js_lib/ui/cardchart-new.js?3.4.3"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="angularAMD" src="js/../../../js_lib/require/angularAMD.js?3.4.3"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="angular-route" src="js/../../../js_lib/angular/angular-route.js?3.4.3"></script><meta name="WT.page_name" content="信用卡网银首页（新）" /><meta name="WT.pn_sku" content="" /><script src="https://www.pingan.com/app_js/sdc/src/toa.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="js/controller/homeCtrl.js" src="js/controller/homeCtrl.js?3.4.3"></script><script type="text/javascript" async="" src="https://pa-ssl.pingan.com/app_js/sdc/prd/sdc9.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="filter/moneyFilter" src="js/filter/moneyFilter.js?3.4.3"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="jquery" src="js/../../../js_lib/jquery/jquery-1.9.1.min.js?3.4.3"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="js/../../../common/js/tools/accountPurview" src="js/js/../../../common/js/tools/accountPurview.js?3.4.3"></script></head>
+<body>
+    <!-- ngView:  --><div id="context" class="pa_warp ng-scope" ng-view=""><div class="pa_header ng-scope">
+    <div class="pa_nav">
+        <div id="nav" class="posr">
+            <ul id="nav_child">
+                <li id="Tarrow01" ng-click="showAccListFn(model.showAccList)" class="">
+                	<a class="w110 pa_li_on"><span class="modifyAddToLeft ng-binding">个人信用卡</span> <i ng-class="{nav_icon:!model.showAccList,nav_icon01:model.showAccList}" id="icons" ng-show="model.showAccIcon" class="nav_icon ng-hide"></i></a>
+                	<ul class="nav_ul posa ng-hide" ng-show="model.showAccList">
+                        <!-- ngRepeat: acc in model.accountInfo.detailList --><li ng-repeat="acc in model.accountInfo.detailList" class="ng-scope">
+                            <a data-logo="998" data-acctlogodesc="个人信用卡" data-acctdesc="" ng-click="selectAccount(acc)" class="ng-binding">
+                            个人信用卡</a></li><!-- end ngRepeat: acc in model.accountInfo.detailList -->
+                    </ul>
+                </li>
+                <li class="">
+                	<a ng-href="../my_bill/index.html#index" otitle="我的账单" otype="我的账单" ng-class="{pa_prohibit:!model.accountInfo.HOME_1}" id="lia" class="" href="../my_bill/index.html#index">我的账单</a>
+                	<ul id="liChild" class="nav_ul_li02">
+                		<li><a href="../my_bill/index.html#index" otype="menu" otitle="本期账单" ng-show="newModel.MYBILL_1" class="">本期账单</a></li>
+                		<li><a href="../my_bill/index.html#hasBill" otype="menu" otitle="已出账单" ng-show="newModel.MYBILL_2" class="">已出账单</a></li>
+                		<li><a href="../my_bill/index.html#noBill" otype="menu" otitle="未出账单" ng-show="newModel.MYBILL_3" class="">未出账单</a></li>
+                		<li><a href="../my_bill/index.html#dList" otype="menu" otitle="交易明细查询" ng-show="false" class="ng-hide">交易明细查询</a></li>
+                		<li><a href="../my_bill/index.html#electCash" otype="menu" otitle="电子现金交易查询" ng-show="newModel.MYBILL_5" class="">电子现金交易查询</a></li>
+                		<li><a href="../my_bill/index.html#myMessage" otype="menu" otitle="我的消息" ng-show="newModel.MYBILL_6" id="message" onclick="javascript:document.getElementById('msg').innerHTML='0';" class="">我的消息</a></li>
+                		<li><a href="../my_bill/index.html#hycard" otype="menu" otitle="历史交易明细查询" ng-show="newModel.MYBILL_7" class="ng-hide">历史交易明细查询</a></li>
+                	</ul>
+                </li>
+                <li class="">
+                	<a ng-href="../account_manage/index.html#index" otitle="账户管理" otype="账户管理" ng-class="{pa_prohibit:!model.accountInfo.HOME_2}" class="" href="../account_manage/index.html#index">账户管理</a>
+                	<ul id="liChild" class="nav_ul_li02">
+                		<li><a href="../account_manage/index.html#index" otype="menu" otitle="账户信息" ng-show="newModel.ACCTM_1" class="">账户信息</a></li>
+                		<li><a href="../account_manage/index.html#cardManage" otype="menu" otitle="卡片管理" ng-show="newModel.ACCTM_2" class="">卡片管理</a></li>
+                		<li><a href="../account_manage/index.html#pwdManage" otype="menu" otitle="密码管理" ng-show="newModel.ACCTM_3" class="">密码管理</a></li>
+                		<li><a href="../account_manage/index.html#tempQuotaManage" otype="menu" otitle="额度管理" ng-show="newModel.ACCTM_4" class="">额度管理</a></li>
+                		<li><a href="../account_manage/index.html#autoSetting" otype="menu" otitle="自动还款设置" ng-show="false" class="ng-hide">自动还款设置</a></li>
+                		<li><a href="../account_manage/index.html#billSendSetting" otype="menu" otitle="账单管理" ng-show="newModel.ACCTM_6" class="">账单管理</a></li>
+                		<li><a href="../account_manage/index.html#myInfo" otype="menu" otitle="个人信息管理" ng-show="newModel.ACCTM_7" class="">个人信息管理</a></li>
+                		<li><a href="../account_manage/index.html#logindynamic" otype="menu" otitle="登录验证设置" ng-show="newModel.ACCTM_8" class="">登录验证设置</a></li>
+                		<li><a href="../account_manage/index.html#imageUpload" otype="menu" otitle="资料上传" ng-show="newModel.ACCTM_9" class="">资料上传</a></li>
+                	</ul>
+                </li>
+                <li class="">
+                	<a ng-href="../points_droit/index.html#queryWltPointDetailsBill" otitle="积分权利" otype="积分权利" ng-class="{pa_prohibit:!model.accountInfo.HOME_3}" class="" href="../points_droit/index.html#queryWltPointDetailsBill">积分权利</a>
+                	<ul id="liChild" class="nav_ul_li02">
+                		<li><a href="../points_droit/index.html#queryWltPointDetailsBill" otype="menu" otitle="万里通积分" ng-show="newModel.POINTS_1" class="">万里通积分</a></li>
+                		<li><a href="../points_droit/index.html#ctripPoint" otype="menu" otitle="携程积分" ng-show="newModel.POINTS_2" class="">携程积分</a></li>
+                		<li><a href="../points_droit/index.html#backCoin" otype="menu" otitle="回馈金" ng-show="newModel.POINTS_3" class="">回馈金</a></li>
+                		<li><a href="../points_droit/index.html#queryRightPointsBill" otype="menu" otitle="我的权利" ng-show="newModel.POINTS_4" class="">我的权利</a></li>
+                	</ul>
+                </li>
+                <!--
+                <li ng-cloak>
+                	<a ng-href="{{model.accountInfo.HOME_4?model.accountInfo.PAYNET_URL:'javascript:void(0)'}}" otitle="网络支付" otype="网络支付" ng-class="{pa_prohibit:!model.accountInfo.HOME_4}">网络支付</a>
+                	<ul id="liChild" class="nav_ul_li02">
+                		<li><a href="../pay_net/index.html#setLimitEveryDay" otype="menu" otitle="网络支付限额设置" ng-show="newModel.PAYNET_5">网络支付限额设置</a></li>
+                	</ul>
+                </li>
+                -->
+                <li class="">
+                	<a ng-href="../installments_financial/index.html#billInstall" otitle="分期理财" otype="分期理财" ng-class="{pa_prohibit:!model.accountInfo.HOME_5}" class="" href="../installments_financial/index.html#billInstall">分期理财</a>
+                	<ul id="liChild" class="nav_ul_li02">
+                		<li><a href="../installments_financial/index.html#billInstall" otype="menu" otitle="账单分期" ng-show="newModel.INSF_1" class="">账单分期</a></li>
+                		<li><a href="../installments_financial/index.html#singleSum" otype="menu" otitle="单笔消费分期" ng-show="newModel.INSF_2" class="">单笔消费分期</a></li>
+                		<li><a href="../installments_financial/index.html#cardSingleSumOs" otype="menu" otitle="欧尚店内专享单笔分期" ng-show="newModel.INSF_9&amp;&amp;newModel.isShowSingleSumOs" class="ng-hide">欧尚店内专享单笔分期</a></li>
+                		<li><a href="../installments_financial/index.html#payInstallment" otype="menu" otitle="保费分期" ng-show="newModel.INSF_3" class="">保费分期</a></li>
+                		<li><a href="../installments_financial/index.html#agilityMoney" otype="menu" otitle="灵用金" ng-show="newModel.INSF_4" class="">灵用金</a></li>
+                		<li><a href="../installments_financial/index.html#imprest" otype="menu" otitle="消费专用备用金分期" ng-show="newModel.INSF_5" class="">消费专用备用金分期</a></li>
+                		<li><a href="../installments_financial/index.html#uniInstall" otype="menu" otitle="由你分" ng-show="newModel.INSF_10&amp;&amp;newModel.isUniInstallFlag&amp;&amp;newModel.isModFlag" class="ng-hide">由你分</a></li>
+                		<li><a href="../installments_financial/index.html#uniInstall/uniInstallToAgility" otype="menu" otitle="由你分" ng-show="newModel.INSF_10&amp;&amp;newModel.isUniInstallFlag&amp;&amp;!newModel.isModFlag" class="ng-hide">由你分</a></li>
+                 		<li><a href="../installments_financial/index.html#safeEasyLoan" otype="menu" otitle="优享金" ng-show="newModel.INSF_11&amp;&amp;newModel.safeEasyLoanDisplay" class="ng-hide">优享金</a></li>
+                 		<li><a href="../installments_financial/index.html#installList" otype="menu" otitle="分期交易查询" ng-show="newModel.INSF_7" class="">分期交易查询</a></li>
+                	    <li><a href="../installments_financial/index.html#autoSingleSum" otype="menu" otitle="单笔消费自动分期申请" ng-show="newModel.INSF_8&amp;&amp;newModel.autoSingleDisplay" class="">单笔消费自动分期申请</a></li>
+                	</ul>
+                </li>
+                <li class="">
+                	<a ng-href="../apply_for_credit/index.html#index" otitle="信用卡申请" otype="信用卡申请" ng-class="{pa_prohibit:!model.accountInfo.HOME_6}" class="" href="../apply_for_credit/index.html#index">信用卡申请</a>
+                	<ul id="liChild" class="nav_ul_li02">
+                		<li><a href="../apply_for_credit/index.html#index" otype="menu" otitle="信用卡申请" ng-show="newModel.APPLY_1" class="">信用卡申请</a></li>
+                		<li><a href="../apply_for_credit/index.html#recommendNewCard" otype="menu" otitle="推荐办卡" ng-show="newModel.APPLY_2" class="">推荐办卡</a></li>
+                		<li><a href="../apply_for_credit/index.html#selectrecommendNewCard" otype="menu" otitle="推荐查询" ng-show="newModel.APPLY_3" class="">推荐查询</a></li>
+                	</ul>
+                </li>
+                <li class="">
+                	<a ng-href="../home/index.html#index" otitle="增值服务" otype="增值服务" ng-class="{pa_prohibit:!model.accountInfo.HOME_7}" class="" href="../home/index.html#index">增值服务</a>
+                	<ul id="liChild" class="nav_ul_li02">
+                		<li><a href="../increment_service/index.html#payPhone" otype="menu" otitle="手机充值" ng-show="newModel.INCREMENT_1" class="">手机充值</a></li>
+                		<li><a href="../increment_service/index.html#publicPaymentWithholding" otype="menu" otitle="公共事业费代扣" ng-show="newModel.INCREMENT_2" class="">公共事业费代扣</a></li>
+                		<li><a href="../increment_service/index.html#queryPaymentRecord" otype="menu" otitle="充值缴费记录查询" ng-show="newModel.INCREMENT_3" class="">充值缴费记录查询</a></li>
+                		<li><a href="../increment_service/index.html#overflowPaymentBack" otype="menu" otitle="溢缴款领回" ng-show="newModel.INCREMENT_7" class="ng-hide">溢缴款领回</a></li>
+                		<li><a href="../increment_service/index.html#overFlowReceiveLink" otype="menu" otitle="溢缴款领回查询" ng-show="newModel.INCREMENT_9" class="ng-hide">溢缴款领回查询</a></li>
+                		<li><a href="../increment_service/index.html#pingAnShouHu1" otype="menu" otitle="平安守护I" ng-show="newModel.INCREMENT_4" class="">平安守护I</a></li>
+                		<li><a href="../increment_service/index.html#pingAnGuardIIManage" otype="menu" otitle="平安守护II" ng-show="newModel.INCREMENT_5" class="">平安守护II</a></li>
+                		<li><a href="../increment_service/index.html#repay" otype="menu" otitle="代缴平安寿险续期保费" ng-show="newModel.INCREMENT_6" class="ng-hide">代缴平安寿险续期保费</a></li>
+                		<li><a href="../increment_service/index.html#smsService" otype="menu" otitle="消费短信提醒服务" ng-show="newModel.INCREMENT_8" class="">消费短信提醒服务</a></li>
+                	</ul>
+                </li>
+                <li class="">
+                	<a ng-href="../recharge_payment/index.html#shortCutOne" otitle="我要还款" otype="我要还款" ng-class="{pa_prohibit:!model.accountInfo.HOME_8}" class="" href="../recharge_payment/index.html#shortCutOne">我要还款</a>
+                	<ul id="liChild" class="nav_ul_li02">
+                		<li><a href="../recharge_payment/index.html#shortCutOne" otype="menu" otitle="快捷还款" ng-show="newModel.RP_1" class="">快捷还款</a></li>
+                		<li><a href="../recharge_payment/index.html#autoSetting" otype="menu" otitle="自动还款设置" ng-show="newModel.RP_2" class="">自动还款设置</a></li>
+                		<li><a href="../recharge_payment/index.html#autoBuyDollar" otype="menu" otitle="自动购汇设置" ng-show="newModel.RP_3" class="ng-hide">自动购汇设置</a></li>
+                		<li><a href="../recharge_payment/index.html#auto" otype="menu" otitle="网上还款" ng-show="newModel.RP_4" class="">网上还款</a></li>
+                		<li><a href="../recharge_payment/index.html#payBackProfit" otype="menu" otitle="还款也能赚" ng-show="newModel.RP_5" class="ng-hide">还款也能赚</a></li>
+                	</ul>
+                </li>
+                <li class="">
+                	<a ng-href="javascript:void(0)" otitle="贵宾服务" otype="贵宾服务" ng-class="{pa_prohibit:!model.accountInfo.HOME_9}" class="pa_prohibit" href="javascript:void(0)">贵宾服务</a>
+                  	<ul id="liChild" class="nav_ul_li02">
+                		<!-- <li><a href="../upscale_services/index.html#index" otype="menu" otitle="钻石权益" ng-show="model.isCardOwnerD">钻石权益</a></li> -->
+                		<!-- <li><a href="../upscale_services/index.html#platinum" otype="menu" otitle="白金权益" ng-show="newModel.UPSCALE_2">白金权益</a></li> -->
+                		<li><a href="javascript:void(0)" ng-click="hrefAddress()" id="consultQuery" otype="menu" otitle="咨讯查询" ng-show="newModel.UPSCALE_3" class="">咨讯查询</a></li>
+                	</ul>
+                     <div class="ph_conwarp" style="display: none;">
+                        <div class="ph_con">
+                            <i class="ph_con_icon"></i>
+                            <div class="ph_con_text ng-binding">您尚未持有本行白金/钻石卡，若有需要可前往平安银行网点申请。</div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="pa_content m_t20 p_b40 ng-scope">
+    <div class="pa_conbox01">
+        <div class="pa_con01_l" style="height:173px;">
+            <div class="pa_name">
+                <i class="fl"><img ng-src="image/nan.png" src="image/nan.png" /></i>
+                <div class="fl m_l15 w126">
+                    <h2 ng-class="{f12:model.accountInfo.CUSTOMER.userName.length&gt;7,f16:model.accountInfo.CUSTOMER.userName.length&lt;=7}" class="ng-binding f16">陈慧聪</h2>
+                    <span class="modifyLineHeight ng-binding">上次登录时间：<br />2019.01.17 17:24</span>
+                </div>
+            </div>
+            <div class="pa_namet">
+                <a href="../my_bill/index.html#myMessage" class="fl w78 b_1sr">
+                    <span class="pa_email ng-binding">0</span>
+                </a>
+                <a href="../account_manage/index.html#cardManage" class="fl w159">
+                    <div class="m_t13_l24">
+                        <i class="pa_xyknum fl"></i>
+                        <p class="fl modifyLineToHigher f14">
+                            信用卡 <span class="c_f96 ng-binding"> 1</span> <br />
+                            未激活 <span class="c_f96 ng-binding"> 0</span>
+                        </p>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="pa_con01_c" ng-hide="model.accountInfo.detail.logo==992">
+            <!-- ngIf: showDollarFlag=='true' --><div class="con02_cleft fl ng-scope" ng-if="showDollarFlag=='true'">
+                <h2 style="font-size:15px;line-height:2">额度信息</h2>
+                <p class="c_666 f14 m_t8" style="font-size:12px;line-height:2">
+                    可用额度:
+                    <span class="c_f96 f20 ng-binding" style="font-size:12px;line-height:2">¥-8,307.33</span>
+                     <br />
+               约  等 值:
+                      <span class="c_f96 f20 ng-binding" style="font-size:12px;line-height:2">$-1,213</span>
+                </p>
+                <p class="c_666 f14 m_t1" style="font-size:12px;line-height:2">
+                    信用额度:
+                    <span class="f20 ng-binding" style="font-size:12px;line-height:2">¥25,000.00</span>
+               <br />
+               约  等 值:
+               <span class="f20 ng-binding" style="font-size:12px;line-height:2">$3,650</span>
+                </p>
+            </div><!-- end ngIf: showDollarFlag=='true' -->
+             <!-- ngIf: showDollarFlag=='false' -->
+            <!--<div class="con02_cright fr m_t32 eDuGraph" ></div>eDuGraph-->
+            <div class="fr m_t15">
+                <div class="con02_cright eDuGraph" id="eDu" style="overflow: hidden;">
+                <svg xmlns="http://www.w3.org/2000/svg" style="position: absolute; top: 0px; left: 0px; width: 100%; height: 100%;"><defs/><path stroke="#eaedf1" stroke-width="1px" fill="#eaedf1" d="M46 50 L1 50.00000000000001 A45 45 0 0 1 91 49.999999999999986 Z" style=""/><circle stroke="#ffffff" stroke-width="1px" fill="#ffffff" cx="46" cy="50" r="30" style="position: absolute;"/><text stroke="#68c0f7" stroke-width="1px" fill="#68c0f7" font-family="微软雅黑" font-weight="100" font-size="15px" font-style="" font-variant="normal" x="32" y="50" transform="rotate(0 32,50)" style="">可用</text><text stroke="#68c0f7" stroke-width="1px" fill="#68c0f7" font-family="宋体" font-weight="100" font-size="23px" font-style="" font-variant="normal" x="17" y="77" transform="rotate(0 17,77)" style="">0.00%</text></svg></div>
+            		<!-- ngIf: isVisaFlag=='false' --><div ng-if="isVisaFlag=='false'" class="ng-scope">
+                   		<a href="../installments_financial/index.html#agilityMoney" class="money_h" title="我要现金" otype="我要现金" otitle="我要现金"> <i class="money_icon"></i><span>我要现金</span></a>
+                   	</div><!-- end ngIf: isVisaFlag=='false' -->
+                   	<!-- ngIf: isVisaFlag -->
+            </div>
+        </div>
+        <div class="pa_con01_c ng-hide" ng-show="model.accountInfo.detail.logo==992" style="padding:0px; height:173px; width:282px;">
+        	<img src="image/huayangka01_282X170.jpg" />
+        </div>
+        <div class="pa_con01_r" ng-hide="model.accountInfo.detail.logo==992">
+            <div class="com_txt">
+                <h2 class="fl">近一年消费走势</h2>
+                <span id="currTab" class="fr" ng-show="model.billInfo.SERVICE_RESPONSE_RESULT.isDoubleCurr">
+                    <span ng-class="{tab_money:model.kitDollar,tab_dollar:!model.kitDollar}" class="fl tab_modey_left tab_money" ng-click="chooseCurComp(0,model.kitDollar)">人民币</span>
+                    <span ng-class="{tab_money:!model.kitDollar,tab_dollar:model.kitDollar}" class="fl tab_moden_right tab_dollar" ng-click="chooseCurComp(1,model.kitDollar)">美元</span>
+                </span>
+            </div>
+           <div id="consumptionForm" class="consumption">
+               <div class="com_tip" id="tip">
+                   <div class="com_tip_txt" id="tiptext"></div>
+               </div>
+               <div id="consumption" style="overflow: hidden;"><svg xmlns="http://www.w3.org/2000/svg" style="position: absolute; top: 0px; left: 0px; width: 100%; height: 100%;"><defs/><line stroke="#f5f5f5" stroke-width="1px" x1="17" y1="0" x2="17" y2="68" style=""/><line stroke="#f5f5f5" stroke-width="1px" x1="52" y1="0" x2="52" y2="68" style=""/><line stroke="#f5f5f5" stroke-width="1px" x1="87" y1="0" x2="87" y2="68" style=""/><line stroke="#f5f5f5" stroke-width="1px" x1="122" y1="0" x2="122" y2="68" style=""/><line stroke="#f5f5f5" stroke-width="1px" x1="157" y1="0" x2="157" y2="68" style=""/><line stroke="#f5f5f5" stroke-width="1px" x1="192" y1="0" x2="192" y2="68" style=""/><line stroke="#f5f5f5" stroke-width="1px" x1="227" y1="0" x2="227" y2="68" style=""/><line stroke="#f5f5f5" stroke-width="1px" x1="262" y1="0" x2="262" y2="68" style=""/><line stroke="#f5f5f5" stroke-width="1px" x1="297" y1="0" x2="297" y2="68" style=""/><line stroke="#f5f5f5" stroke-width="1px" x1="332" y1="0" x2="332" y2="68" style=""/><line stroke="#f5f5f5" stroke-width="1px" x1="367" y1="0" x2="367" y2="68" style=""/><line stroke="#f5f5f5" stroke-width="1px" x1="402" y1="0" x2="402" y2="68" style=""/><text stroke="#666666" stroke-width="1px" fill="#68c0f7" font-family="宋体" font-weight="100" font-size="13px" font-style="" font-variant="normal" x="5" y="93" transform="rotate(0 5,93)" style="">2月</text><line stroke="#eaedf1" stroke-width="1px" x1="0" y1="45" x2="437" y2="45" style=""/><text stroke="#666666" stroke-width="1px" fill="#68c0f7" font-family="宋体" font-weight="100" font-size="13px" font-style="" font-variant="normal" x="40" y="93" transform="rotate(0 40,93)" style="">3月</text><line stroke="#eaedf1" stroke-width="1px" x1="0" y1="45" x2="437" y2="45" style=""/><text stroke="#666666" stroke-width="1px" fill="#68c0f7" font-family="宋体" font-weight="100" font-size="13px" font-style="" font-variant="normal" x="75" y="93" transform="rotate(0 75,93)" style="">4月</text><line stroke="#eaedf1" stroke-width="1px" x1="0" y1="45" x2="437" y2="45" style=""/><text stroke="#666666" stroke-width="1px" fill="#68c0f7" font-family="宋体" font-weight="100" font-size="13px" font-style="" font-variant="normal" x="110" y="93" transform="rotate(0 110,93)" style="">5月</text><line stroke="#eaedf1" stroke-width="1px" x1="0" y1="45" x2="437" y2="45" style=""/><text stroke="#666666" stroke-width="1px" fill="#68c0f7" font-family="宋体" font-weight="100" font-size="13px" font-style="" font-variant="normal" x="145" y="93" transform="rotate(0 145,93)" style="">6月</text><line stroke="#eaedf1" stroke-width="1px" x1="0" y1="45" x2="437" y2="45" style=""/><text stroke="#666666" stroke-width="1px" fill="#68c0f7" font-family="宋体" font-weight="100" font-size="13px" font-style="" font-variant="normal" x="180" y="93" transform="rotate(0 180,93)" style="">7月</text><line stroke="#eaedf1" stroke-width="1px" x1="0" y1="45" x2="437" y2="45" style=""/><text stroke="#666666" stroke-width="1px" fill="#68c0f7" font-family="宋体" font-weight="100" font-size="13px" font-style="" font-variant="normal" x="215" y="93" transform="rotate(0 215,93)" style="">8月</text><line stroke="#eaedf1" stroke-width="1px" x1="0" y1="45" x2="437" y2="45" style=""/><text stroke="#666666" stroke-width="1px" fill="#68c0f7" font-family="宋体" font-weight="100" font-size="13px" font-style="" font-variant="normal" x="250" y="93" transform="rotate(0 250,93)" style="">9月</text><line stroke="#eaedf1" stroke-width="1px" x1="0" y1="45" x2="437" y2="45" style=""/><text stroke="#666666" stroke-width="1px" fill="#68c0f7" font-family="宋体" font-weight="100" font-size="13px" font-style="" font-variant="normal" x="285" y="93" transform="rotate(0 285,93)" style="">10月</text><line stroke="#eaedf1" stroke-width="1px" x1="0" y1="45" x2="437" y2="45" style=""/><text stroke="#666666" stroke-width="1px" fill="#68c0f7" font-family="宋体" font-weight="100" font-size="13px" font-style="" font-variant="normal" x="320" y="93" transform="rotate(0 320,93)" style="">11月</text><line stroke="#eaedf1" stroke-width="1px" x1="0" y1="45" x2="437" y2="45" style=""/><text stroke="#666666" stroke-width="1px" fill="#68c0f7" font-family="宋体" font-weight="100" font-size="13px" font-style="" font-variant="normal" x="355" y="93" transform="rotate(0 355,93)" style="">12月</text><line stroke="#eaedf1" stroke-width="1px" x1="0" y1="45" x2="437" y2="45" style=""/><text stroke="#666666" stroke-width="1px" fill="#68c0f7" font-family="宋体" font-weight="100" font-size="13px" font-style="" font-variant="normal" x="390" y="93" transform="rotate(0 390,93)" style="">1月</text><line stroke="#eaedf1" stroke-width="1px" x1="0" y1="45" x2="437" y2="45" style=""/><path stroke="none" fill="#F1FDFF" d="M17,68 C17,64,11,52,17,45 C23,38,40,21,52,25 C64,29,75,70,87,68 C99,66,110,21,122,11 C134,2,145,11,157,11 C169,12,180,14,192,14 C204,14,215,13,227,12 C239,12,250,10,262,11 C274,12,285,18,297,18 C309,18,320,12,332,11 C344,10,355,12,367,12 C379,12,396,0,402,9 C408,18,402,58,402,68" style=""/><polyline stroke="#47a5df" stroke-width="2" fill="none" points="17,45 52,25 87,68 122,11 157,11 192,14 227,12 262,11 297,18 332,11 367,12 402,9 " style="position: absolute;"/><polyline stroke="#eaedf1" stroke-width="2" fill="none" points="17,45 " style="position: absolute;"/><circle stroke="#47a5df" stroke-width="2" fill="#ffffff" cx="52" cy="25" r="6" style="position: absolute;"/><circle stroke="#47a5df" stroke-width="2" fill="#ffffff" cx="87" cy="68" r="6" style="position: absolute;"/><circle stroke="#47a5df" stroke-width="2" fill="#ffffff" cx="122" cy="11" r="6" style="position: absolute;"/><circle stroke="#47a5df" stroke-width="2" fill="#ffffff" cx="157" cy="11" r="6" style="position: absolute;"/><circle stroke="#47a5df" stroke-width="2" fill="#ffffff" cx="192" cy="14" r="6" style="position: absolute;"/><circle stroke="#47a5df" stroke-width="2" fill="#ffffff" cx="227" cy="12" r="6" style="position: absolute;"/><circle stroke="#47a5df" stroke-width="2" fill="#ffffff" cx="262" cy="11" r="6" style="position: absolute;"/><circle stroke="#47a5df" stroke-width="2" fill="#ffffff" cx="297" cy="18" r="6" style="position: absolute;"/><circle stroke="#47a5df" stroke-width="2" fill="#ffffff" cx="332" cy="11" r="6" style="position: absolute;"/><circle stroke="#47a5df" stroke-width="2" fill="#ffffff" cx="367" cy="12" r="6" style="position: absolute;"/><circle stroke="#47a5df" stroke-width="2" fill="#ffffff" cx="402" cy="9" r="6" style="position: absolute;"/><circle stroke="#eaedf1" stroke-width="2" fill="#ffffff" cx="17" cy="45" r="6" style="position: absolute;"/></svg></div>
+           </div>
+        </div>
+        <div class="pa_con01_r ng-hide" ng-show="model.accountInfo.detail.logo==992" style="padding:0px; height:173px;">
+        	<a href="https://www.1qianbao.com/" target="_blank">
+        		<img src="image/huayangka02_438X170.jpg" />
+        	</a>
+        </div>
+    </div>
+    <div class="pa_conbox02 m_t10">
+        <div class="pa_con02_l fl" ng-hide="model.accountInfo.detail.logo==992">
+            <div class="pa_con02_ltime fl">
+                <h2>本期账单</h2>
+                <p class="m_t25 f14"><i class="time_icon02 fl"></i>本期账单日 <b class="ng-binding">2018.12.17</b></p>
+                <p class="m_t20 f14"><i class="time_icon01 fl"></i>本期还款日 <b class="c_009 modifyFontBold ng-binding"> 2019.01.05</b></p>
+                <div class="pa_riqi m_t20">
+                    <h4 class="modifyZuiDiHuanKuanE">距本期最后还款日还有</h4>
+                    <p class="ng-binding">0<span class="f24">天</span><i class="riqi_icon"></i></p>
+                </div>
+            </div>
+            <div class="pa_con02_ltext fl">
+                <table width="100%" border="0" cellspacing="0" cellpadding="0" class="m_t20">
+                    <tbody><tr>
+                        <td width="165" height="45" class="b_1sb f14">本期应还金额 </td>
+                        <td align="right" class="b_1sb"><span class="c_f96 ng-binding">¥24,556.33</span></td>
+                        <td align="right" class="b_1sb" ng-show="model.billInfo.SERVICE_RESPONSE_RESULT.isDoubleCurr"><span class="c_green ng-binding">$0.00</span></td>
+                    </tr>
+                    <tr>
+                        <td height="45" class="b_1sb f14">本期最低应还金额</td>
+                        <td align="right" class="b_1sb"><span class="c_f96 ng-binding">¥1,227.82</span></td>
+                        <td align="right" class="b_1sb" ng-show="model.billInfo.SERVICE_RESPONSE_RESULT.isDoubleCurr"><span class="c_green ng-binding">$0.00</span></td>
+                    </tr>
+                    <tr>
+                        <td height="45" class="b_1sb f14">本期剩余应还金额</td>
+                        <td align="right" class="b_1sb ng-binding">¥0.00</td>
+                        <td align="right" class="b_1sb ng-binding" ng-show="model.billInfo.SERVICE_RESPONSE_RESULT.isDoubleCurr">$0.00</td>
+                    </tr>
+                    <tr>
+                        <td height="45" class=" f14">本期剩余最低应还金额</td>
+                        <td align="right" class="ng-binding">¥0.00</td>
+                        <td align="right" ng-show="model.billInfo.SERVICE_RESPONSE_RESULT.isDoubleCurr" class="ng-binding">$0.00</td>
+                    </tr>
+                    <tr>
+                        <td colspan="3" height="70">
+                            <table width="100%">
+                                <tbody><tr>
+                                    <td width="30%"><a href="../recharge_payment/index.html#shortCutOne" title="立即还款" otype="本期账单" otitle="立即还款" class="pa_btn_haikuan">立即还款</a></td>
+	                                <td width="30%" align="center">
+	                                	<!-- ngIf: isVisaFlag=='false' --><div ng-if="isVisaFlag=='false'" class="ng-scope">
+		                                	<a ng-class="{pa_btn_haikuan:model.appDisBtnFlag,pa_btn_mingxi:!model.appDisBtnFlag}" ng-click="redirDisHref()" title="" otype="本期账单" otitle="账单分期" class="pa_btn_mingxi">账单分期</a>
+	                                	</div><!-- end ngIf: isVisaFlag=='false' -->
+	                                	<!-- ngIf: isVisaFlag -->
+	                                </td>
+                                    <td width="30%" align="right"><a href="../my_bill/index.html#index" title="账单明细" otype="本期账单" otitle="账单明细" class="pa_btn_mingxi">账单明细</a></td>
+                                </tr>
+                                </tbody></table>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="pa_con02_l fl ng-hide" ng-show="model.accountInfo.detail.logo==992">
+        	<img src="image/huayangka03_660X320.jpg" />
+        </div>
+        <div class="pa_con02_r fr m_l10">
+            <div class="pa_con02_pic">
+                <ul>
+                    <li><img width="310px" height="320px" alt="" src="image/ZHANGWEISHI2241529463870796.jpg" onclick="window.open('https://b.pingan.com.cn/creditcard/huodong/pc/downapp/index.shtml')" /></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+    <div class="pa_conbox03 m_t10">
+        <div class="pa_cbox03_l fl">
+            <span class="modifyAddNewLineBlue fl">
+               <!-- <a><image src='image/219x174-0517HK.jpg'></image></a> -->
+               <a href="http://creditcard.pingan.com/youhuihuodong/1409291627105.shtml"><img src="image/xinkoudai_app_home.jpg" /></a>
+            </span>
+            <span class="modifyAddNewLineGreen fl">
+                <a><img src="image/0605banner02_220X174.png" /></a>
+            </span>
+            <span class="b_2styellow fl">
+                <a href="../account_manage/index.html#billSendSetting"><img src="image/0605banner03_220X174.png" /></a>
+            </span>
+        </div>
+        <!-- ng-show="model.hideCertAdFlag" -->
+        <div class="pa_cbox03_r fr ng-hide" ng-show="model.hideCertAdFlag">
+            <p class="fl pa_cbox03_pic"></p>
+            <h6 class="fl">
+                申请信用卡
+                <a href="../apply_for_credit/index.html#index" class="btn_shenqing">立即申请 &gt;</a>
+            </h6>
+        </div>
+        <div class="pa_banner fl m_l10" style="height:176px;width:308px;padding: 0px;" ng-show="model.showCertAdFlag">
+    		<img src="image/xjb_banner_308_176.png" title="扫码立即购买" />
+    	</div>
+		 
+    </div>
+    </div>
+
+<div id="systemNoticeTmpContentDiv" style="display:none" class="ng-scope"></div>
+<div id="systemNoticeTmpURL" style="display:none" class="ng-scope"></div>
+<div id="mod" style="display:none;" class="ng-scope">
+    <div class="fade"></div>
+    <div class="modContxt">
+        <div class="modTitle ng-binding"></div>
+        <iframe width="830px" height="516px" ng-src=""></iframe>
+    </div>
+</div>
+<div class="pop ng-scope" id="pop" style="display:none;"></div> 
+<div id="reminder" style="display:none;top: 20%;left: 25%;z-index: 2048;  position: absolute;  width: 605px;height: 605px;" class="ng-scope">
+        <iframe scrolling="no" style="width: 605px;height: 605px;border:0;overflwo:hidden;" ng-src=""></iframe>
+</div>
+
+<div id="suspension" class="ng-scope">
+	<a href="http://eim.pingan.com.cn/web/webtalk?businessType=3&amp;encryptStr=D3B41F676DF88934B87F8CD9485834ED0E0C3F7B70BD1F08A019B4560C173C55A2768D8FC7E590B479F0C98BB99CB0028390A66ABEC1780B59E2FA86B48A074F0FE9CB5DBE1A5EA9" id="service" class="fixPngImg" title="客服" otitle="网银首页客服" otype="button" target="_blank" style="display: block"></a>
+	<div style="font-size:15px;width:88px;text-align:center;margin-top: -15px;"><strong>在线客服</strong></div>
+</div>
+<style type="text/css" class="ng-scope">
+&lt;!-- --&gt;
+.test1{height:40px; line-height:40px; background:#55616e; width:118px;}
+.moneyDis{color: gainsboro;cursor: default;}
+/* #suspension #service{background:url(image/xiaoan.png) no-repeat;}  */
+</style>
+</div>
+    <iframe style="display:none" id="finger" src="../../../public_js/js_lib/finger.html"></iframe>
+<script type="text/javascript">
+document.getElementById("finger").onload=function(){}
+</script>
+
+<div id="userdata_el" style="visibility: hidden; position: absolute;"></div></body></html>

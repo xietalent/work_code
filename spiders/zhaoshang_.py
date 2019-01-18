@@ -43,12 +43,13 @@ class SeleniumMiddleware():
         self.logger.debug('PhantomJS is Starting')
         # page = request.meta.get("https://creditshop.hxb.com.cn/mall/member/loginSSL.action")
 
-        self.browser.get("https://user.cmbchina.com/User/Login")
+        # self.browser.get("https://user.cmbchina.com/User/Login")
+        self.browser.get("https://pbsz.ebank.cmbchina.com/CmbBank_GenShell/UI/GenShellPC/Login/Login.aspx?logintype=C")
         # self.browser.get("https://creditshop.hxb.com.cn/mall/member/doLogin.action")
-        sleep(3)
+        sleep(4)
         page_html = self.browser.page_source
         print("当前网址"+self.browser.page_source)
-        return page_html
+
         sleep(2)
 
         html = self.browser.execute_script("return document.documentElement.outerHTML")
@@ -57,8 +58,8 @@ class SeleniumMiddleware():
 
         print(html)
 
-        user_name = "5456465465465"
-        passwd = "213154sdf"
+        user_name = "13728647735"
+        passwd = "419078"
 
         self.browser.find_element_by_id("spnLoginName").click()
         self.browser.find_element_by_id("spnLoginName").send_keys(Keys.CONTROL,'a')
@@ -69,12 +70,10 @@ class SeleniumMiddleware():
 
 
 
-
-
-
 if __name__ == '__main__':
     s = SeleniumMiddleware()
     s.process_request()
+    del s
 
 
 

@@ -1,0 +1,1591 @@
+﻿
+
+<!DOCTYPE html>
+<html>
+<head><title>
+
+</title><meta charset="utf-8" /><meta http-equiv="X-UA-Compatible" content="IE=edge" /><link href="../../Base/doc/dist/asset/css/cmbbank-ui-min.css" rel="stylesheet" type="text/css" charset="utf-8" /><link href="../doc/Styles/Pro8/uni-login.css?t=20180811" rel="stylesheet" type="text/css" charset="utf-8" />
+
+    <script language="javascript" src="../../Base/doc/Scripts/sdc_web.js"></script>
+    <script language="javascript" src="../../Base/doc/Scripts/sdc_cmb.js"></script>
+
+
+    <script language="javascript" src="../../Base/doc/Scripts/default.js"></script>
+
+    <script language="javascript" src="../../Base/doc/Scripts/CommUtils.js"></script>
+
+    <script language="javascript" src="../../Base/doc/Scripts/XmlUtils.js"></script>
+
+    <script language="javascript" src="../../Base/doc/Scripts/DynaForm.js"></script>
+
+    <script language="javascript" src="../../Base/doc/Scripts/DynaXmlHttp.js"></script>
+
+    <script language="javascript" src="../doc/Scripts/GenUtils.js"></script>
+
+    <script language="javascript" src="../../Base/doc/Scripts/Cookie.js"></script>
+
+    <script language="javascript" src="../doc/Scripts/MultiStyle.js"></script>
+
+    <script language="javascript" type="text/javascript" src="../../Base/doc/scripts/pro/jquery-1.7.1.min.js"></script>
+    <script src="../../Base/doc/dist/asset/js/cmbbank-ui.js" type="text/javascript" charset="utf-8"></script>
+    <script language="javascript" src="../doc/Scripts/Pro8/actionselect.js" type="text/javascript" charset="utf-8"></script>
+    <script type="text/javascript" src="../../Base/doc/Scripts/pro/jquery.qrcode.js"></script>
+    <script type="text/javascript" src="../../Base/doc/Scripts/pro/qrcode.js"></script>
+    <!--[if lte IE 9]>
+        <script type="text/javascript" src="../../Base/doc/Scripts/pro/jquery.xdomainrequest.min.js"></script>
+    <![endif]-->
+
+    <script type="text/javascript">
+
+        var g_CreditCardVersion = "2.0";
+        function InitWindow() {
+            try {
+                moveTo(0, 0);
+                resizeTo(screen.width, screen.height);
+            } catch (e) {
+            }
+        }
+        InitWindow();
+
+
+        window.name = "CMB_Gen";
+
+        var CookieGenServer = new Cookie(document, "CMB_GenServer", 24 * 365 * 10);
+
+        var GenServerLoginUrl = "/CmbBank_GenShell/UI/GenShellPC/Login/GenUniLogin.aspx";
+        var GenServerVerifyM2Url = "/CmbBank_GenShell/UI/GenShellPC/Login/GenLoginVerifyM2.aspx";
+        var GenServerIndexUrl = "/CmbBank_GenShell/UI/GenShellPC/Login/GenIndex.aspx";
+        var GenShellServerUrl = "/CmbBank_GenShell/UI/GenShellPC/";
+
+        var BranchNoHide = true;
+        var ExtraPwdHide = true;
+
+        var ImgExtraPwdSrc = "";
+
+        var ag = navigator.userAgent,
+			IE = /.*msie.*/i.test(ag) || /.*Trident.*/i.test(ag),
+			IE6 = /msie 6\.0/i.test(ag),
+			IE7 = /msie 7\.0/i.test(ag),
+			IE8 = /msie 8\.0/i.test(ag),
+            IE9 = /msie 9\.0/i.test(ag),
+			CHROME = /.*Chrome.*/i.test(ag),
+			FIREFOX = /.*Firefox.*/i.test(ag),
+			SAFARI = /.*Safari.*/i.test(ag);
+
+        var totalTimeStep1 = 123;
+        var totalTimeStep2 = 30;
+        var g_leftTime = totalTimeStep1;
+        var g_timeInterval = 1000;
+        var g_pollingTimer;
+        var g_countDownTimer;
+        var currentPage;
+        var scanStep = 0;
+        var firstIn = true;
+
+        function DebitCardGetPwdBaseWinOpen() {
+            window.open('https://pbsz.ebank.cmbchina.com/CmbBank_DebitCard_AccountManager/UI/DebitCard/AccountSet/am_NonLoginModiPwd.aspx', 'NonLoginModiPwd', 'menubar=no,toolbar=no,location=no,directories=no,status=yes,resizable=yes,scrollbars=yes,width=780,height=500,top=0,left=0')
+        }
+
+        function CreditCardApplyWinOpen() {
+            var nWinLeft = 0;
+            var nWinTop = 0;
+            window.open('/CmbBank_CreditCard_Customer/UI/CreditCard/Customer/na_QuerySchedule.aspx', 'CreditCardApply', 'scrollbars=yes,toolbar=no,location=no,status=no,menubar=no,resizable=no,dependent=no,width=850,height=500,top=' + nWinTop + ',left=' + nWinLeft);
+
+        }
+        function CreditCardActivateWinOpen() {
+            var nWinLeft = 0;
+            var nWinTop = 0;
+            window.open('/CmbBank_CreditCard_Card/UI/CreditCard/Card/Pro8/cs_ProOfActivate.aspx', 'CreditCardActivate', 'scrollbars=yes,toolbar=no,location=no,status=no,menubar=no,resizable=no,dependent=no,width=1000,height=600,top=' + nWinTop + ',left=' + nWinLeft);
+
+        }
+        function OnlineCustomerServiceWinOpen() {
+            var nWinLeft = 0;
+            var nWinTop = 0;
+            var sUrl = document.getElementById("OnlineCustomerServiceURL").value;
+            window.open(sUrl, 'OnlineCustomerService', 'menubar=no,toolbar=no,location=no,directories=no,status=yes,resizable=yes,scrollbars=no,width=600,height=450,top=' + nWinTop + ',left=' + nWinLeft);
+
+        }
+        function EAccountGetLoginNameWinOpen() {
+            var nWinLeft = 0;
+            var nWinTop = 0;
+            window.open('https://user.cmbchina.com/user/UsernameRecovery', 'EAccountGetLoginName', 'menubar=no,toolbar=no,location=no,directories=no,status=yes,resizable=yes,scrollbars=yes,width=780,height=500,top=' + nWinTop + ',left=' + nWinLeft);
+        }
+        function EAccountGetPwdBaseWinOpen() {
+            var nWinLeft = 0;
+            var nWinTop = 0;
+            window.open('https://user.cmbchina.com/User/PasswordRecovery', 'EAccountGetPwdBase', 'menubar=no,toolbar=no,location=no,directories=no,status=yes,resizable=yes,scrollbars=yes,width=780,height=500,top=' + nWinTop + ',left=' + nWinLeft);
+        }
+        function WangDunOpen() {
+            var nWinLeft = (screen.width - 660) / 2;
+            var nWinTop = (screen.height - 550) / 2;
+            window.open('http://sec.cmbchina.com/webprotect/download.htm', 'WangDunOpen', 'menubar=no,toolbar=no,location=no,directories=no,status=no,resizable=no,scrollbars=yes,width=660,height=490,top=' + nWinTop + ',left=' + nWinLeft);
+        }
+        function SecurityTipWinOpen() {
+            var nWinLeft = 0;
+            var nWinTop = 0;
+            window.open('http://www.cmbchina.com/personal/common.aspx?pageid=safe', 'SecurityTip', 'menubar=no,toolbar=no,location=no,directories=no,status=no,resizable=yes,scrollbars=yes,width=800,height=500,top=' + nWinTop + ',left=' + nWinLeft);
+        }
+        function CertificateWinOpen() {
+            var nWinLeft = 0;
+            var nWinTop = 0;
+            window.open('http://www.cmbchina.com/webpages/certificate.htm', 'Certificate', 'menubar=no,toolbar=no,location=no,directories=no,status=no,resizable=no,scrollbars=no,width=600,height=500,top=' + nWinTop + ',left=' + nWinLeft);
+        }
+
+        function EAccountRegisterWinOpen() {
+            var nWinLeft = 0;
+            var nWinTop = 0;
+            window.open('https://user.cmbchina.com/User/CellphoneRegister?returnUrl=%2f', 'EAccountRegister', 'menubar=no,toolbar=no,location=no,directories=no,status=yes,resizable=yes,scrollbars=yes,width=780,height=500,top=' + nWinTop + ',left=' + nWinLeft);
+        }
+
+        function refreshExtraPwd() {
+            UniLoginForm.ImgExtraPwd.src = ImgExtraPwdSrc + "&" + Math.random();
+            $("#ExtraPwd").val("");
+        }
+
+        function AppDownloadWinOpen() {
+            var nWinLeft = 0;
+            var nWinTop = 0;
+            window.open('http://www.cmbchina.com/mbankweb/');
+        }
+
+        function MacLogin() {
+            var isMac = (navigator.platform == "Mac68K") || (navigator.platform == "MacPPC") || (navigator.platform == "Macintosh") || (navigator.platform == "MacIntel");
+            if (isMac) {
+                $(".container-cmbedit").hide();
+                $(".container-login").hide();
+                $(".container-qrlogin").hide();
+                $(".container-register").hide();
+                $(".container-maclogin").show();
+                $("#height-span-1").show();
+                $("#height-span-2").hide();
+
+                $('#creditCardLinkDiv').hide();
+                $('#helpCenterLinkDiv').hide();
+                $('#englishLinkDiv').hide();
+                $('#englishLinkLabel').hide(); 
+                return true;
+            } else {
+                return false;
+            }
+        }
+
+        function BannerErrorCorrection() {
+            var sUrl = $("#banner_url").val();
+            var ImgObj = new Image();
+            ImgObj.onerror = function () {
+                $("#banner1").css("background-image", "url(../doc/images/pro8/login/banner_1.jpg)");
+                $("#banner1").css("background-color", "#dddeeb");
+                $("#banner2").css("background-image", "url(../doc/images/pro8/login/banner_1.jpg)");
+            };
+            ImgObj.src = sUrl;
+        }
+
+        function initPage() {
+            if (MacLogin()) {
+                return;
+            }
+            InitSafeEditDownload();
+            InitGenShellLogin(GenShell_ClientNo);
+            initUserCustom();
+            ImgExtraPwdSrc = UniLoginForm.ImgExtraPwd.src;
+            notIEInitPageStatistic();
+            HideImgExtraPwd();
+            HideCitySelect();
+
+            if (navigator.appName == "Microsoft Internet Explorer" && parseInt(navigator.appVersion.split(";")[1].replace(/[ ]/g, "").replace("MSIE", "")) < 8) {
+                $("#scanLogo").hide();
+                $("#IE7Tips").show();
+            } else if ($("#QRCode").val() === "") {
+                QRExpiry("二维码加载失败");
+            } else if (g_leftTime > 0) {
+                InitQRImg();
+                StartPoll();
+                StartQRCodeAnimation();
+                setTimeout(function () {
+                    EndQRCodeAnimation();
+                    $('#qrcodeImgDiv').mouseenter(StartQRCodeAnimation);
+                    $('#qrcodeImgDiv').mouseleave(EndQRCodeAnimation);
+                    $('#qrcodeImgDiv').mouseenter(StartQRCodeAnimation);
+                    $('#qrcodeImgDiv').mouseleave(EndQRCodeAnimation);
+                }, 3000);
+                
+            } else  {
+                QRExpiry("二维码加载失败");
+            }
+            currentPage = "QRCodeLogin";
+            setTimeout("BannerErrorCorrection()", 100);
+        }
+
+        function StartQRCodeAnimation() {
+            $("#qrcodecanvas").stop().animate({ 'padding-left': '10px' }, "slow", function () {
+                $("#exampleDiv").show();
+            });
+        }
+
+        function EndQRCodeAnimation() {
+            $("#exampleDiv").hide();
+            $("#qrcodecanvas").stop().animate({ 'padding-left': '86px' }, "slow");
+        }
+
+        function CountDown() {
+            g_leftTime--;
+            StartCountDown();
+        }
+
+        function StartCountDown() {
+            g_countDownTimer = setTimeout("CountDown()", g_timeInterval)
+        }
+
+        function StartPoll() {
+            StartCountDown()
+            g_pollingTimer = setTimeout("RefreshBillStatusFromPolling()", g_timeInterval);
+        }
+
+        function InitQRImg() {
+            $('#successfulScan').hide();
+            $('.container-qrlogin .page-form-footer').show();
+            $('.container-qrlogin hr').show();
+
+            $('#qrcodecanvas').hide()
+            $('#refresh').hide();
+            $('#loading').show();
+            $('#qrcodeImgDiv').html("").qrcode({
+                text: $("#QRCode").val(),
+                correctLevel: 1,
+                width: 188,
+                height: 188,
+                imgWidth: 40,
+                imgHeight: 40,
+                src: '../doc/Images/pro8/login/cmb_qrlogo.png'
+            }).show();
+            scanStep = 1;
+            $('#qrcodecanvas').show();
+            $('#loading').hide();
+            var animationDiv = "<div id='exampleDiv' style='background-image: url(../doc/Images/pro8/login/example.png); height: 189px; width: 141px; margin-right: 10px; float: right; display: none'></div>";
+            $('#qrcodecanvas').append(animationDiv);
+        }
+
+        function RefreshQRImg() {
+            $('#goPassWordLogin').attr("onclick", "");
+            $('#goPassWordLogin').unbind("click");
+            $('#goPassWordLogin').bind("click", function () {
+                showPassWordLogin();
+            });
+            clearTimeout(g_countDownTimer);
+            clearTimeout(g_pollingTimer);
+
+            $('#successfulScan').hide();
+            $('.container-qrlogin .page-form-footer').show();
+            $('.container-qrlogin hr').show();
+
+            $('#qrcodecanvas').hide()
+            $('#refresh').hide();
+            $('#loading').show();
+
+            setTimeout(function () {
+                try {
+                    var dynaXmlhttp = new DynaXmlHttp();
+                    dynaXmlhttp.setAction("/CmbBank_GenShell/UI/GenShellPC/Login/Login.aspx");
+                    dynaXmlhttp.addParam("Action", "Refresh");
+                    var xmlhttpobj = createXmlHttp();
+                    dynaXmlhttp.setXmlHttpObj(xmlhttpobj);
+                    if (dynaXmlhttp.send()) {
+                        var responseText = dynaXmlhttp.getResponseText();
+                        var sClientNo = XMLGetFirstValue(responseText, "ClinetNo");
+                        var sQRCode = XMLGetFirstValue(responseText, "QRCode");
+                        var sErrorMsg = XMLGetFirstValue(responseText, "ErrorMsg");
+
+                        if (sQRCode !== "") {
+                            GenShell_ClientNo = sClientNo
+                            $("#QRCode").val(sQRCode);
+                            ImgExtraPwdSrc = ImgExtraPwdSrc.replace(/ClientNo=.*&width/g, "ClientNo=" + sClientNo + "&width");
+                            refreshExtraPwd();
+                            InitGenShellLogin(GenShell_ClientNo);
+                            InitQRImg();
+                            g_leftTime = totalTimeStep1;
+                            StartPoll();
+                        } else {
+                            throw ("");
+                        }
+                    }
+                }
+                catch (e) {
+                    QRExpiry("二维码加载失败");
+                }
+            }, 100)
+        }
+
+        function RefreshBillStatusFromPolling() {
+            var GenShellPollUrl = $("#GenShellPollUrl").val();
+            try {
+                if (g_leftTime > 0) {
+                    if (IE8 || IE9) {
+                        $.ajax({
+                            url: GenShellPollUrl,
+                            data: { "TrxID": GenShell_ClientNo, "TrxName": "CBQRLogin" },
+                            contentType: 'text/plain',
+                            type: 'post',
+                            dataType: 'text',
+                            error: function () {
+                                QRExpiry("二维码已失效")
+                            },
+                            success: function (data) {
+                                PollSuccessAction(data);
+                            }
+                        });
+                    } else {
+                        var dynaXmlhttp = new DynaXmlHttp();
+                        dynaXmlhttp.setAction(GenShellPollUrl);
+                        dynaXmlhttp.addParam("TrxID", GenShell_ClientNo);
+                        dynaXmlhttp.addParam("TrxName", "CBQRLogin");
+                        var xmlhttpobj = createXmlHttp();
+                        dynaXmlhttp.setXmlHttpObj(xmlhttpobj);
+                        if (dynaXmlhttp.send()) {
+                            var responseText = dynaXmlhttp.getResponseText();
+                            PollSuccessAction(responseText)
+                        }
+                    }
+                } else {
+                    QRExpiry("二维码已失效");
+                }
+            }
+            catch (e) {
+                g_pollingTimer = setTimeout("RefreshBillStatusFromPolling()", g_timeInterval);
+            }
+        }
+
+        function PollSuccessAction(data) {
+            var sResultCode = XMLGetFirstValue(data, "Code");
+            if (sResultCode === "00") {
+                var sValue = XMLGetFirstValue(data, "Value");
+                //根据轮询结果显示页面
+                if (sValue === "01") {
+                    g_pollingTimer = setTimeout("RefreshBillStatusFromPolling()", g_timeInterval);
+                } else if (sValue === "02") {
+                    if (scanStep === 1) {
+                        scanStep = 2;
+                        clearTimeout(g_countDownTimer);
+                        clearTimeout(g_pollingTimer);
+                        showSuccessfulScanPage();
+                        g_leftTime = totalTimeStep2;
+                        StartPoll();
+                    } else {
+                        g_pollingTimer = setTimeout("RefreshBillStatusFromPolling()", g_timeInterval);
+                    }
+                } else if (sValue === "03") {
+                    QRExpiry("二维码已失效");
+                } else if (sValue === "04") {
+                    QRExpiry("二维码已失效");
+                } else if (sValue === "05") {
+                    if (scanStep === 1) {
+                        scanStep = 2;
+                        clearTimeout(g_countDownTimer);
+                        clearTimeout(g_pollingTimer);
+                        showSuccessfulScanPage();
+                        g_leftTime = totalTimeStep2;
+                        StartPoll();
+                    } else if (scanStep === 2) {
+                        scanStep = 3;
+                        clearTimeout(g_countDownTimer);
+                        clearTimeout(g_pollingTimer);
+                        $("#goBackQRCode").attr("href", "javascript:void(0);")
+                        var loginInfo = {};
+                        loginInfo.EntranceType = "QRCode";
+                        loginInfo.CreditCardVersion = g_CreditCardVersion;
+                        loginInfo.ClientNo = GenShell_ClientNo;
+                        loginInfo.qrCodeSeq = $("#QRCode").val();
+                        if (GetBrowserVersion() === "IE") {
+                            document.getElementById("UniLoginUser_Ctrl").info = GenShell_ClientNo;
+                            document.getElementById("UniLoginUser_Ctrl").Lic = GenShell_ClientNo;
+                            loginInfo.AccountNo = loginInfo.Password = document.getElementById("UniLoginUser_Ctrl").IValue;
+                            loginInfo.HardStamp = document.getElementById("UniLoginUser_Ctrl").Lic;
+                            try {
+                                var sLicex_HiddenSafeCMBEdit = document.getElementById("UniLoginUser_Ctrl").Licex;
+                                if (sLicex_HiddenSafeCMBEdit != null && sLicex_HiddenSafeCMBEdit != 'undefined') {
+                                    loginInfo.Licex = sLicex_HiddenSafeCMBEdit;
+                                }
+                            }
+                            catch (e)
+                            { }
+                        } else {
+                            document.getElementById("HiddenSafeCMBEdit").info = GenShell_ClientNo;
+                            document.getElementById("HiddenSafeCMBEdit").Lic = GenShell_ClientNo;
+                            loginInfo.AccountNo = loginInfo.Password = document.getElementById("HiddenSafeCMBEdit").IValue;
+                            loginInfo.HardStamp = document.getElementById("HiddenSafeCMBEdit").Lic;
+                            try {
+                                var sLicex_HiddenSafeCMBEdit = document.getElementById("HiddenSafeCMBEdit").Licex;
+                                if (sLicex_HiddenSafeCMBEdit != null && sLicex_HiddenSafeCMBEdit != 'undefined') {
+                                    loginInfo.Licex = sLicex_HiddenSafeCMBEdit;
+                                }
+                            }
+                            catch (e)
+                            { }
+                        }
+
+                        var ret = GenUniLoginShell(loginInfo, GenServerLoginUrl, GenServerIndexUrl, GenServerVerifyM2Url);
+                        if (!ret) {
+                            alert($("#errMsgSpan").html());
+                            ShowErrorMsg("");
+                            $('.errmsg-div').hide();
+                            QRExpiry("二维码已失效");
+                        }
+                        $("#goBackQRCode").attr("href", "javascript:RefreshQRImg();")
+                    } else {
+                        g_pollingTimer = setTimeout("RefreshBillStatusFromPolling()", g_timeInterval);
+                    }
+                } else if (sValue === "06") {
+                    QRExpiry("二维码已失效");
+                } else if (sValue === "07") {
+                    RefreshQRImg();
+                } else {
+                    g_pollingTimer = setTimeout("RefreshBillStatusFromPolling()", g_timeInterval);
+                }
+            } else if (sResultCode === "99") {
+                QRExpiry("二维码已失效");
+            } else {
+                QRExpiry("二维码已失效");
+            }
+        }
+
+        function QRExpiry(msg) {
+            clearTimeout(g_pollingTimer);
+            clearTimeout(g_countDownTimer);
+
+            $('#loading').hide()
+            $('#qrcodecanvas').hide()
+            $('#refresh p').html(msg);
+            $('#refresh').show();
+
+            $('.container-qrlogin .page-form-footer').show();
+            $('.container-qrlogin hr').show();
+            $('#successfulScan').hide();
+
+            $('#goPassWordLogin').attr("onclick", "");
+            $('#goPassWordLogin').unbind("click");
+            $('#goPassWordLogin').bind("click", function () {
+                showPassWordLogin();
+            });
+        }
+
+        function showQRLogin() {
+            $(".container-cmbedit").hide();
+            $(".container-login").hide();
+            $(".container-qrlogin").show();
+            $(".container-register").hide();
+            $(".container-maclogin").hide();
+            $("#height-span-1").show();
+            $("#height-span-2").hide();
+            currentPage = "QRCodeLogin";
+        }
+
+        function showPassWordLogin() {
+            $(".container-cmbedit").hide();
+            $(".container-login").show();
+            $(".container-qrlogin").hide();
+            $(".container-register").hide();
+            $(".container-maclogin").hide();
+            $("#height-span-1").hide();
+            $("#height-span-2").show();
+            currentPage = "PassWordLogin";
+            showQRCodeSecurityTip();
+            if (GetBrowserVersion() !== "IE" || firstIn) {
+                document.getElementById("UniLoginUser_Ctrl").focus();
+                firstIn = false;
+            }
+        }
+
+        function showSuccessfulScanPage() {
+            $('#loading').hide()
+            $('#qrcodecanvas').hide()
+            $('#refresh').hide();
+
+            $('.container-qrlogin .page-form-footer').hide();
+            $('.container-qrlogin hr').hide();
+            $('#successfulScan').show();
+
+            $('#goPassWordLogin').attr("onclick", "");
+            $('#goPassWordLogin').unbind("click");
+        }
+
+        function doRegister() {
+            $(".container-cmbedit").hide();
+            $(".container-login").hide();
+            $(".container-qrlogin").hide();
+            $(".container-register").show();
+            $(".container-maclogin").hide();
+            $("#height-span-1").show();
+            $("#height-span-2").hide();
+        }
+
+        function goLoginPage() {
+            if (currentPage === "PassWordLogin") {
+                showPassWordLogin();
+            }
+            else if (currentPage === "QRCodeLogin") {
+                showQRLogin();
+            }
+        }
+
+        function InitSafeEditDownload() {
+            if (GetBrowserVersion() == "IE") {
+                document.getElementById("downloadurl").href = "http://site.cmbchina.com/download/SafeEditInstall.exe";
+            }
+            else {
+                if (navigator.platform == "MacIntel") {
+                    document.getElementById("downloadurl").href = "http://site.cmbchina.com/download/CMBSecurityPlugin.dmg";
+                }
+                else {
+                    document.getElementById("downloadurl").href = "http://site.cmbchina.com/download/NPSafeEditInstall.exe";
+                }
+            }
+
+            if (GetBrowserVersion() !== "IE")
+            {
+                $(".container-login").show();
+                $(".container-qrlogin").hide();
+            }
+
+            if (document.getElementById("UniLoginUser_Ctrl") == null) {
+                $(".container-cmbedit").show();
+                $(".container-login").hide();
+                $(".container-qrlogin").hide();
+            }else if (document.getElementById("UniLoginUser_Ctrl").nodeName != "INPUT") {
+                if (document.getElementById("UniLoginUser_Ctrl").IValue == undefined) {
+                    $(".container-cmbedit").show();
+                    $(".container-login").hide();
+                    $(".container-qrlogin").hide();
+                }
+                else {
+                    showQRLogin();
+                    if (GetBrowserVersion() !== "IE") {
+                        var hiddenSafeCMBEdit = document.getElementById("UniLoginUser_Ctrl").cloneNode(true);
+                        hiddenSafeCMBEdit.setAttribute("id", "HiddenSafeCMBEdit")
+                        hiddenSafeCMBEdit.setAttribute("Style", "width: 0px; height: 0px;")
+                        hiddenSafeCMBEdit.setAttribute("TabIndex", "-1")
+                        document.body.appendChild(hiddenSafeCMBEdit);
+                    }
+                }
+            }
+        }
+
+        function initUserCustom() {
+            if (CookieGenServer.load()) {
+                var userBranchNo = CookieGenServer.BranchNo;
+                BranchNo_SetValue(userBranchNo);
+            }
+        }
+
+        function notIEInitPageStatistic() {
+            try {
+                if (GetBrowserVersion() != "IE") {
+                    if (navigator.platform == "MacIntel") {
+                        EventTrack('MacLogin.aspx', '大众版Mac登录页PV');
+                    }
+                    else {
+                        EventTrack('ChromeAndFirefoxLogin.htm', '大众版Chrome和FireFox等登录页PV');
+                    }
+                }
+            } catch (ex) { }
+        }
+
+        function storeUserCustom() {
+            CookieGenServer.BranchNo = UniLoginForm.BranchNo.value;
+            CookieGenServer.store();
+        }
+
+        function doLogin() {
+            ResetErrorMsg();
+            setTimeout(function () {
+                document.body.style.cursor = "wait";
+
+                if (GenShell_ClientNo == undefined) {
+                    alert(Gen_ErrMsg);
+                    document.body.style.cursor = "";
+                    return next(false);
+                }
+
+                storeUserCustom();
+
+                var loginInfo = new Object();
+                loginInfo.ClientNo = GenShell_ClientNo;
+
+                if (!ExtraPwdHide) {
+                    var extraPwd = UniLoginForm.ExtraPwd.value;
+                    loginInfo.ExtraPwd = extraPwd;
+                }
+
+                if (!BranchNoHide) {
+                    loginInfo.BranchNo = UniLoginForm.BranchNo.value;
+                }
+
+                loginInfo.CreditCardVersion = g_CreditCardVersion;
+
+                var sUniLoginUser = document.getElementById("UniLoginUser_Ctrl");
+                var sUniLoginPwd = document.getElementById("UniLoginPwd_Ctrl");
+
+                sUniLoginUser.info = GenShell_ClientNo;
+                sUniLoginPwd.info = GenShell_ClientNo;
+                loginInfo.AccountNo = sUniLoginUser.IValue;
+                loginInfo.Password = sUniLoginPwd.IValue;
+
+                sUniLoginPwd.Lic = GenShell_ClientNo;
+                loginInfo.HardStamp = sUniLoginPwd.Lic;
+                try {
+                    var sVersionInfo = sUniLoginPwd.VersionInfo;
+                    if (sVersionInfo !== null && sVersionInfo !== undefined) {
+                        if (parseInt(sVersionInfo.split(".").join("")) >= 12011) {
+                            sUniLoginUser.Lic = GenShell_ClientNo;
+                            var sLicex_UniLoginUser_Ctrl = sUniLoginUser.Licex;
+                            if (sLicex_UniLoginUser_Ctrl != null && sLicex_UniLoginUser_Ctrl != 'undefined') {
+                                loginInfo.AccLicex = sLicex_UniLoginUser_Ctrl;
+                            }
+                        }
+                    }
+                }
+                catch (e)
+                { }
+                try {
+                    var sLicex_UniLoginPwd_Ctrl = sUniLoginPwd.Licex;
+                    if (sLicex_UniLoginPwd_Ctrl != null && sLicex_UniLoginPwd_Ctrl != 'undefined') {
+                        loginInfo.Licex = sLicex_UniLoginPwd_Ctrl;
+                    }
+                }
+                catch (e)
+                { }
+
+
+                var ret = GenUniLoginShell(loginInfo, GenServerLoginUrl, GenServerIndexUrl, GenServerVerifyM2Url);
+
+                if (!ret) {
+                    if (!ExtraPwdHide) {
+                        refreshExtraPwd();
+                        UniLoginForm.ExtraPwd.value = "";
+                    }
+                    document.body.style.cursor = "";
+
+                    return next(false);
+                }
+
+                return next(false);
+            }, 100);
+            return next(false);
+        }
+
+        function ShowImgExtraPwd() {
+            ExtraPwdHide = false;
+            $(".page-form-item.extra-code-item").show();
+            $(".page-form-item.quick-link-item").addClass("validate-extra-code");
+            if ($("#ExtraPwd").val() == "") {
+                $("#ExtraPwd").addClass("focus-input");
+            }
+            else {
+                $("#ExtraPwd").removeClass("focus-input");
+            }
+            ChangePageSize();
+        }
+
+        function HideImgExtraPwd() {
+            ExtraPwdHide = true;
+            $(".page-form-item.extra-code-item").hide();
+            $(".page-form-item.quick-link-item").removeClass("validate-extra-code");
+            ChangePageSize();
+        }
+
+        function ShowCitySelect() {
+            BranchNoHide = false;
+            $(".page-form-item.page-form-branchno").show();
+            $("#BranchLabel").show();
+            if (UniLoginForm.BranchNo.value == "") {
+                $(".control-input.branchno").addClass("focus-input");
+            }
+            else {
+                $(".control-input.branchno").removeClass("focus-input");
+            }
+            ChangePageSize();
+        }
+
+        function HideCitySelect() {
+            BranchNoHide = true;
+            $(".page-form-item.page-form-branchno").hide();
+            $("#BranchLabel").hide();
+            ChangePageSize();
+        }
+
+        function ChangePageSize() {
+            var marginTop1 = 30;
+            var marginTop2 = 76;
+            if (IE7) {
+                marginTop1 = 22;
+                marginTop2 = 68;
+            }
+            if (!ExtraPwdHide && !BranchNoHide) {
+                $("#height-span-2").css("height", "6px");
+                $("#password-login-line").css("margin-top", marginTop1 + "px");
+            } else if (!ExtraPwdHide) {
+                $("#height-span-2").css("height", "39px");
+                $("#password-login-line").css("margin-top", marginTop1 + "px");
+            } else if (!BranchNoHide) {
+                $("#height-span-2").css("height", "34px");
+                $("#password-login-line").css("margin-top", marginTop1 + "px");
+            } else {
+                $("#height-span-2").css("height", "44px");
+                $("#password-login-line").css("margin-top", marginTop2 + "px");
+            }
+            showQRCodeSecurityTip();
+        }
+
+        function showQRCodeSecurityTip() {
+            $("#qrcodetip").show()
+        }
+
+        function ShowErrorMsg(msg) {
+            $("#LoginBtn").val("登录");
+            $("#LoginBtn").removeAttr("disabled");
+            if (currentPage === "PassWordLogin") {
+                document.getElementById("UniLoginPwd_Ctrl").focus();
+            }
+
+            $("#errMsgSpan").html(msg);
+            $('.errmsg-div').show();
+
+            if ($("#errMsgFatherDiv .errmsg-div").height() > 45) {
+                $("#errMsgFatherDiv").css("height", $("#errMsgFatherDiv .errmsg-div").height() + "px");
+            } else {
+                $("#errMsgFatherDiv").css("height", "40px");
+            }
+        }
+
+        function ResetErrorMsg() {
+            $("#LoginBtn").val("正在登录……");
+            $("#LoginBtn").attr("disabled", "disabled");
+        }
+
+        function ShowQRCodeBubble() {
+            var vTop = Math.ceil($("#creditCardLink").position().top) + 25;
+            var vLeft = Math.ceil($("#creditCardLink").position().left) + 442;
+            if (IE7) {
+                vTop = Math.ceil($("#creditCardLink").position().top + 55);
+                vLeft = Math.ceil($("#creditCardLink").position().left + 622);
+            }
+            $("#divQRCodeBubble").css("top", vTop + "px");
+            $("#divQRCodeBubble").css("left", vLeft + "px");
+            $("#divQRCodeBubble").show();
+            $("#iframeQRCodeBubble").css("top", vTop + "px");
+            $("#iframeQRCodeBubble").css("left", vLeft + "px");
+            $("#iframeQRCodeBubble").show();
+            $('#creditCardLink').mouseleave(HideQRCodeBubble);
+        }
+
+        function HideQRCodeBubble() {
+            $("#divQRCodeBubble").hide();
+            $("#iframeQRCodeBubble").hide();
+        }
+
+    </script>
+
+</head>
+<body class="login-page" onload="initPage()">
+    <div class="header">
+        <div class="header-container">
+            <div class="page-header">
+                <div class="page-header-logo"  style="z-index: 4;">
+                    <div class="page-header-logo-div">
+                        个人银行大众版<p class="page-header-logo-p">客服热线：95555</p>
+                    </div>
+                    <div id="iframeQRCodeBubble" style="z-index: 4;position: absolute; height: 422px; width: 322px; display: none; border-style: none; opacity: 0; filter: progid:DXImageTransform.Microsoft.Alpha(style=0,opacity=0); filter: alpha(opacity=0);">
+                        <iframe style="height: 100%; width: 100%; opacity: 0; border-style: none; filter: progid:DXImageTransform.Microsoft.Alpha(style=0,opacity=0); filter: alpha(opacity=0);"></iframe>
+                    </div>
+                    <div id="divQRCodeBubble" class="divQRCodeBubble" onclick="" style="position: absolute; height: 422px; width: 322px; background-image: url(../doc/Images/pro8/login/creditcard_bubble.png); display: none;">
+                        <div style="background-image: url(../doc/Images/pro8/login/qrcode_creditcard.png); width: 233px; height: 233px; margin-top: 66px; margin-left: 45px;"></div>
+                        <div style="text-align:center; font-size: 16px; color:#383838; margin-top: 15px;">
+                            <p style="line-height: 24px; margin:0">扫描二维码进入招商银行App</p>
+                            <p style="line-height: 24px; margin:0">查询信用卡申请进度</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="page-header-link page-header-link-ex">
+                    <div class="page-header-link-container">
+                        
+                        <div class="actionselect headerarea actionselectex">
+                            <a data-toggle="actionselect" data-actionselect-type="header">信用卡<i class="glyphicon icon-down" title="down"></i><i class="glyphicon icon-up" title="up"></i></a>
+                            <ul class="actionselect-menu" role="menu">
+                                <li><a role="menuitem" href="javascript:CreditCardActivateWinOpen();">信用卡开卡</a></li>
+                                <li><a role="menuitem" href="javascript:CreditCardApplyWinOpen();">信用卡申请进度查询</a></li>
+                            </ul>
+                        </div>
+                        <label></label><div id="helpCenterLinkDiv">
+                            <a target="helpcenter" href="/CmbBank_HelpCenter/UI/GenShellAcc/Default.aspx">常见问题</a>
+                        </div>
+                        <label></label><div>
+                            <a href="javascript:OnlineCustomerServiceWinOpen();">在线客服</a>
+                        </div>
+                        <label id="englishLinkLabel"></label><div id="englishLinkDiv">
+                            <a href="../../GenShellPC_EN/Login/Login.aspx">English</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div id="banner1" class="container clearfix" style="background-image: url(../doc/images/pro8/login/banner_5.png); background-color: #f98c40">
+        
+        <div id="banner2" class="container-banner clearfix" style="background-image: url(../doc/images/pro8/login/banner_5.png)">
+            <div id="height-span-1" class="container-oldversion" style="height: 44px;"></div>
+            <div id="height-span-2" class="container-oldversion" style="height: 44px; display: none"></div>
+            <div class="container-login page-form" style="display: none">
+                <fieldset>
+                    <div id="goQRCodeLogin" class="radus-right-img" style="background-image: url(../doc/Images/pro8/login/qrlogin.png);" onclick="showQRLogin()">
+                        <div id="qrcodetip" class="qrcodetip" style="left: -56px; top: -41px;">
+                            <div></div>
+                            <p style="float: left">扫码登录更安全</p>
+                        </div>
+                    </div>
+                    <div class="legend">密码登录</div>
+                    <form name="UniLoginForm" method="post" action="./Login.aspx?logintype=C" id="UniLoginForm" onsubmit="return doLogin();">
+<div>
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/RaLOACp1kdL4j7cYrUiysHCKTm9Ww2vF526jAfu3e/BgkIlZD/2d+rvKRLNSKoPqxm9s3WdIsqarj9douBLk0YHir8Mjr92Pvq8UwJ5JdG0qev9aVnT25yasKpKD2kwo0wLJNecd91kZgKNS9O0KkvUtVG77zan7rqP7p032aKOrRIeliqDd5CLwpL0dsdP/BIU/42RlUw7j6BZ3PJ8qQ4N/bTguokfuZopekCVrzr4MlHyK7skk2o2J5OWETJUzkQDgHDUx2CmSE6I+EaPOwu5yWDGnNFWhB0noFNadET+jvGW4DL424zdGTp69pzxzJ4MYBUeJJHyNUezlSDhE51egj5sedr51C0IZMW0InLgfEwtvqJa71C3h8d9skxh51Ddmp8OJl4ykZxCoCj2vM5Tmcsb6GDFHTjUGywKs70=" />
+</div>
+
+<div>
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="94AB7F06" />
+	<input type="hidden" name="UniLoginUser" id="UniLoginUser" value="" />
+	<input type="hidden" name="UniLoginPwd" id="UniLoginPwd" value="" />
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="DrNgdqW56TjGDps2ICjQMvW7EVIk7uH1RrsiJyG2R+rVjlAFwEGA6Nk7sCHZlm61fFJ7SL13PHIp+h9w4qPU7ZWsf004GA6hu28ohd5Xx5hNNMRz4R9vPQ0wNXdv69dTne4+cT6dCllc/vOT39Ni/ZuEJyx+7v5gAZcFGIiwa/k=" />
+</div>
+                        <div id="errMsgFatherDiv" class="page-form-item" style="padding: 0; height: 40px; position:relative">
+                            <div class="errmsg-div" style="bottom: 0; left: 30px; display: none; word-wrap: break-word;">
+                                <i class="glyphicon" style="width: 12px; height: 14px; background-image:url(../doc/Images/pro8/login/errmsg_tip.png);" ></i><span id="errMsgSpan"></span>
+                            </div>
+                        </div>
+                        <div class="page-form-item">
+                            <label class="control-label" style="height: 14px; line-height: 14px;"></label>
+                            <div class="input-head">
+                                账号<span>（一网通/一卡通/信用卡/存折账号）</span>
+                            </div>
+                        </div>
+                        <div class="page-form-item">
+                            <label class="control-label"></label>
+                            <div class="page-form-item-controls" style="height: 35px;">
+                                <OBJECT id="UniLoginUser_Ctrl" classid="clsid:0CA54D3F-CEAE-48AF-9A2B-31909CB9515D" codebase="https://site.cmbchina.com/download/CMBEdit.cab#version=1,2,0,1" width="228px" height=""  Style="width: 300px; height: 36px;"  tabindex=1><SPAN>未安装控件，<a class=Login1 target='_blank' href='/CmbBank_HelpCenter/UI/GenShellAcc/Default.aspx' style="color:red">点此查看如何安装</a>。</SPAN></OBJECT><script language="javascript">
+			function initUniLoginUser_Ctrl()
+            {
+                try
+                {
+                    document.getElementById('UniLoginUser_Ctrl').MaxLength = "32";
+			        if (!false) document.getElementById('UniLoginUser_Ctrl').PasswdCtrl = false;
+                    if (true) document.getElementById('UniLoginUser_Ctrl').Option("#1#https://pbsz.ebank.cmbchina.com/CmbBank_GenShell/UI/Manage/GetInfo.aspx?ClientNo=009CCF5758B59681BD2BA154BF4F34D1309758789933354000019469");
+                    //if ("009CCF5758B59681BD2BA154BF4F34D1309758789933354000019469" != "") document.getElementById('UniLoginUser_Ctrl').Info = "009CCF5758B59681BD2BA154BF4F34D1309758789933354000019469";
+					document.getElementById('UniLoginUser_Ctrl').Info = "009CCF5758B59681BD2BA154BF4F34D1309758789933354000019469";
+					document.getElementById('UniLoginUser_Ctrl').value = "";
+                }
+                catch(err)
+                {
+                    //window.alert('sorry, please install safe input control first.');
+                }
+			}
+			
+            if (window.attachEvent) 
+            {//For IE
+               window.attachEvent("onload", initUniLoginUser_Ctrl);
+            } 
+            else if (window.addEventListener) 
+            {//For FireFox
+                if(document.getElementById('UniLoginUser_Ctrl').MaxLength != undefined)
+				{
+                    window.addEventListener("load", initUniLoginUser_Ctrl, "false");
+                }
+            } 
+            else 
+            {
+                window["onload"] = initUniLoginUser_Ctrl;
+            }
+			</script><script language="javascript">
+			function fillUniLoginUser_Ctrl()
+            {
+                try
+                {
+				document.getElementById('UniLoginUser_Ctrl').Info = "009CCF5758B59681BD2BA154BF4F34D1309758789933354000019469";
+			        if (true) document.getElementById('UniLoginUser').value = document.getElementById('UniLoginUser_Ctrl').IValue;
+			        else document.getElementById('UniLoginUser').value = document.getElementById('UniLoginUser_Ctrl').value;
+					//if ("009CCF5758B59681BD2BA154BF4F34D1309758789933354000019469" != "") document.getElementById('UniLoginUser_Ctrl').Info = "009CCF5758B59681BD2BA154BF4F34D1309758789933354000019469";
+					
+                    return true;
+    			}
+                catch(err)
+                {
+                    /*因为登陆页面Login.aspx上登录成功后，会删除LoginForm，所以在LoginForm上的安全控件就都会
+                      被删除，提交时再通过document.getElementById取安全控件就会取不到了，所以不做相关提示了。*/
+                    //window.alert('很抱歉，请先安装或更新安全控件。');
+                    return false;
+                }
+            }
+			
+            if (document.forms[0].attachEvent) 
+            {//For IE
+                document.forms[0].attachEvent("onsubmit", fillUniLoginUser_Ctrl);
+            }               
+            else if (document.forms[0].addEventListener) 
+            {//For FireFox
+                document.forms[0].addEventListener("submit", fillUniLoginUser_Ctrl, false);
+            } 
+            else 
+            {
+                document.forms[0]["onsubmit"] = fillUniLoginUser_Ctrl;
+            }
+			</script><script language="javascript">
+			function focusUniLoginUser_Ctrl()
+            {
+                try
+                {
+                    document.getElementById('UniLoginUser_Ctrl').MaxLength = "32";
+			        if (!false) document.getElementById('UniLoginUser_Ctrl').PasswdCtrl = false;
+                    if (true) document.getElementById('UniLoginUser_Ctrl').Option("#1#https://pbsz.ebank.cmbchina.com/CmbBank_GenShell/UI/Manage/GetInfo.aspx?ClientNo=009CCF5758B59681BD2BA154BF4F34D1309758789933354000019469");
+                }
+                catch(err)
+                {
+      
+                }
+			}
+
+            if (window.addEventListener) 
+            {
+                document.getElementById('UniLoginUser_Ctrl').addEventListener("focus", focusUniLoginUser_Ctrl, "false");
+            } 
+			</script>
+                            </div>
+                        </div>
+                        <div id="BranchLabel" class="page-form-item" style="margin-top: 2px;">
+                            <label class="control-label" style="height: 14px; line-height: 14px;"></label>
+                            <div class="input-head" style="line-height: 14px;">
+                                地区
+                            </div>
+                        </div>
+                        <div class="page-form-item page-form-branchno">
+                            <label class="control-label"></label>
+                            <div class="page-form-item-controls">
+                                <input name="BranchNo$tbxAddress" type="text" id="BranchNo_tbxAddress" class="control-input branchno" onclick="BranchNo_ShowDiv(this.value)" onkeydown="BranchNo_keydown()" readOnly="true" /><input name="BranchNo$branchNo" type="text" id="BranchNo_branchNo" style="display: none" /><input id="BranchNo_hiddenBranchNo"
+        type="hidden" name="BranchNo">
+<script language="javascript" type="text/javascript" src="/CmbBank_GenShell/UI/Base/doc/dist/asset/js/CitySelectBar.js"></script>
+<style type="text/css">
+    .control-input.branchno.open
+	{
+		background-position: right center;
+		background-repeat: no-repeat;
+		background-image: url("/CmbBank_GenShell/UI/Base/doc/dist/asset/img/cityselect/branch_up.png");
+	}
+
+	.control-input.branchno
+	{
+	    width:300px; 
+	    *width:298px;
+	    height: 36px;
+	    *height: 34px;
+		background-position: right center;
+		background-repeat: no-repeat;
+		background-image: url("/CmbBank_GenShell/UI/Base/doc/dist/asset/img/cityselect/branch_down.png");
+	}
+	
+	.control-input.branchno:hover
+	{
+	    cursor: pointer;
+	}
+	
+	.popupcontent
+	{
+		width: 300px;
+		*width: 298px;
+		height: 300px;
+		*height:298px;
+		overflow: hidden;
+		padding: 0;
+		border: 1px solid #898989;
+		background-color: #fff;
+	}
+
+	.popupcontent-mask
+	{
+		display: none;
+		position: absolute;
+		top:-300px;
+		left:-300px;
+		width: 300px;
+		height: 300px;
+		z-index: 1;
+	}
+
+	.popupcontent-mask .mask
+	{
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		left: 0;
+		top: 0;
+		z-index: -1;
+		_filter: alpha(opacity=0);
+		opacity: 0;
+		border-style: none;
+		filter: progid:DXImageTransform.Microsoft.Alpha(style=0, opacity=0);
+	}
+
+	.popupcontent_scrollarea
+	{
+		height: 298px;
+		width: 298px;
+		overflow: hidden;
+		position: relative;
+	}
+
+	.popupcontent dl
+	{
+		margin: 10px 10px 10px 0;
+		line-height: 2em;
+		overflow: hidden;
+	}
+
+	.popupcontent dl dt
+	{
+		float: left;
+		width: 36px;
+		text-align: left;
+		font-size: 16px;
+		color: #cbcbcb;
+		text-indent: 12px;
+		line-height: 20px;
+		-webkit-line-height:24px;
+	}
+
+	.popupcontent dl dd
+	{
+		width: 180px;
+		float: left;
+		text-align: center;
+	}
+
+	.popupcontent dl dd a,
+	.popupcontent dl dd a:visited
+	{
+		width: 60px;
+		*width: 56px;
+		float: left;
+		padding: 0 2px;
+		_padding: 0;
+		text-decoration: none;
+		line-height: 20px;
+		color: #666666;
+	}
+
+	.popupcontent dl dd a:hover,
+	.popupcontent dl dd a:focus
+	{
+		text-decoration: underline;
+	}
+
+	.popupcontent dl dd a.small span
+	{
+		display: block;
+		/*font-size : 12px;*/
+		-webkit-text-size-adjust:none;
+		-webkit-transform : scale(0.91, 0.91);
+		/*transform:scale(0.91, 0.90);*/
+		font-size:11px;
+		_font-size:10px;
+		width:66px;
+		_width:56px;
+		margin-left: -6px;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+	}
+
+	.popupcontent dl dd a.currcity,
+	.popupcontent dl dd a.currcity:visited
+	{
+		color:#c8152d;
+	}
+
+	.CitySelectBar
+	{
+	    background-color: #eeeeee;
+	    position: absolute;
+	    /*opacity: 0.7;
+	    filter: Alpha(opacity=70);*/
+	    z-index: 2;
+	}
+	.CitySelectBar:hover
+	{
+	    opacity: 1;
+	    filter: Alpha(opacity=100);
+	}
+	.CitySelectBar div
+	{
+	    background-color: #bcbcbc;
+	    position: absolute;
+	    left: 0px;
+	    top: 0px;
+	    cursor: pointer;
+	    border-radius: 4px;
+	}
+</style>
+<script type="text/javascript">
+    function BranchNo_SetBranchNo(no)
+	{
+		document.getElementById("BranchNo_branchNo").value = no;
+		document.getElementById("BranchNo_hiddenBranchNo").value = no;
+	}
+		
+	function BranchNo_SetValue(no)
+	{
+		document.getElementById("BranchNo_branchNo").value = no;
+		document.getElementById("BranchNo_hiddenBranchNo").value = no;
+		var ds = BranchNo_dataSource;
+		for(var i=0;i<ds.length;i++)
+		{
+			for(j=1;j<ds[i].length;j++)
+			{
+				if(no==ds[i][j][0])
+				{
+					document.getElementById("BranchNo_tbxAddress").value = ds[i][j][1];
+				}
+			}
+		}
+	}
+
+    function BranchNo_GetPos(control,pos)
+	{
+		pos.top = control.offsetTop;
+		pos.left = control.offsetLeft;
+		    
+		while(control = control.offsetParent)
+		{
+		    pos.top += control.offsetTop;
+		    pos.left += control.offsetLeft;
+		}
+	}
+		
+	function BranchNo_VisibleToggle() 
+    { 
+        var DivRef = document.getElementById('BranchNo_popupcontent_mask'); 
+        var tbxAddress = document.getElementById("BranchNo_tbxAddress");
+        var isActive = document.getElementById("BranchNo_tbxAddress").className.indexOf("open") > -1;
+        if(!isActive) 
+        { 
+            if(window.jQuery)
+                $(window).on('resize.BranchNo_resize', BranchNo_place);
+            DivRef.style.display = "block"; 
+            tbxAddress.className = "control-input branchno open";
+            InitScrollBar("BranchNo_scrollarea", { width: 10 });
+        } 
+        else 
+        { 
+            if(window.jQuery)
+                $(window).off('resize.BranchNo_resize', BranchNo_place);
+            tbxAddress.className = "control-input branchno";
+            DivRef.style.display = "none"; 
+            RemoveScrollBar("BranchNo_scrollarea");
+        }
+    } 
+
+    function BranchNo_place()
+    {
+        var textInput = document.getElementById("BranchNo_tbxAddress");
+
+	    var pos = new Object();
+        pos.left = 0;
+        pos.top = 0;
+        BranchNo_GetPos(textInput,pos);
+        BranchNo_pop.style.left = pos.left + "px"; 
+
+        if(IE7 || IE6)
+            BranchNo_pop.style.left = pos.left + 1 + "px"; 
+
+	    BranchNo_pop.style.top = pos.top+textInput.offsetHeight + 2 + "px";
+    }
+
+    function BranchNo_ShowDiv(value)
+	{
+        if(!BranchNo_inited)
+		{
+		    BranchNo_inited = BranchNo_Init();
+		}
+		if(window.event!=null)
+			window.event.returnValue = false;
+
+		var isActive = document.getElementById("BranchNo_tbxAddress").className.indexOf("open") > -1;
+
+		if(isActive)
+		{
+			BranchNo_VisibleToggle();
+			return false;
+		}				
+
+		document.getElementById("BranchNo_scrollarea").innerHTML = BranchNo_html;
+		var address = document.getElementsByName("BranchNo_address");
+			
+		for(var i=0;i<address.length;i++)
+		{
+			if(address[i].getElementsByTagName("span")[0].innerHTML == value)
+			{
+				address[i].className += " currcity";
+				break;
+			}
+		}
+			
+		BranchNo_place();
+		
+		BranchNo_VisibleToggle(); 
+		if(top.ResetHeight)
+		    top.ResetHeight();
+			
+		return false;
+	}
+		
+		
+	function BranchNo_HideDiv(value,no)
+	{
+		var text = document.getElementById("BranchNo_tbxAddress");
+		text.value = value;
+			
+			
+		document.getElementById("BranchNo_hiddenBranchNo").value = no;
+		document.getElementById("BranchNo_branchNo").value = no;
+
+		if(text.nextId!=null)
+		{
+			try{document.getElementById(text.nextId).focus();}catch(e){}
+		}
+			
+		BranchNo_VisibleToggle(); 
+	}
+
+    var BranchNo_dataSource = [["A",["0372","安阳"],["0412","鞍山"],["0556","安庆"]],["B",["0010","北京"],["0472","包头"],["0130","滨海"],["0543","滨州"],["0918","宝鸡"]],["C",["0023","重庆"],["0028","成都"],["0731","长沙"],["0519","常州"],["0431","长春"]],["D",["0411","大连"],["0769","东莞"],["0415","丹东"],["0546","东营"],["0459","大庆"]],["E",["0477","鄂尔多斯"]],["F",["0591","福州"],["0757","佛山"],["0413","抚顺"],["0593","福州自贸区"],["0599","福建自贸试验区厦门片区"]],["G",["0020","广州"],["0797","赣州"],["0851","贵阳"]],["H",["0571","杭州"],["0551","合肥"],["0451","哈尔滨"],["0714","黄石"],["0471","呼和浩特"],["0572","湖州"],["0554","淮南"],["0734","衡阳"],["0752","惠州"],["0873","红河"],["0713","黄冈"],["0470","呼伦贝尔"],["0898","海口"],["0561","淮北"]],["J",["0531","济南"],["0579","金华"],["0573","嘉兴"],["0613","江都"],["0432","吉林"],["0792","九江"],["0356","晋城"],["0537","济宁"],["0511","江阴"],["0750","江门"],["0416","锦州"],["0716","荆州"],["0798","景德镇"]],["K",["0871","昆明"]],["L",["0931","兰州"],["0888","丽江"],["0833","乐山"],["0539","临沂"],["0379","洛阳"],["0772","柳州"],["0830","泸州"],["0597","龙岩"],["0738","娄底"],["0358","吕梁"],["0638","聊城"],["0518","连云港"],["0858","六盘水"],["0564","六安"],["0316","廊坊"]],["M",["0981","绵阳"],["0555","马鞍山"]],["N",["0025","南京"],["0791","南昌"],["0574","宁波"],["0513","南通"],["0771","南宁"],["0377","南阳"]],["P",["0427","盘锦"],["0594","莆田"]],["Q",["0532","青岛"],["0595","泉州"],["0570","衢州"],["0874","曲靖"],["0657","前海"],["0763","清远"]],["R",["0587","瑞安"],["0633","日照"]],["S",["0755","深圳"],["0021","上海"],["0024","沈阳"],["0512","苏州"],["0575","绍兴"],["0311","石家庄"],["0793","上饶"],["0719","十堰"],["0349","朔州"],["0598","三明"],["0993","石河子"]],["T",["0022","天津"],["0351","太原"],["0576","台州"],["0523","泰州"],["0435","通化"],["0315","唐山"],["0330","天津自贸区"]],["W",["0027","武汉"],["0991","乌鲁木齐"],["0510","无锡"],["0577","温州"],["0536","潍坊"],["0553","芜湖"],["0631","威海"]],["X",["0029","西安"],["0592","厦门"],["0732","湘潭"],["0910","咸阳"],["0712","孝感"],["0710","襄樊"],["0516","徐州"],["0972","西宁"],["0374","许昌"]],["Y",["0717","宜昌"],["0535","烟台"],["0514","扬州"],["0610","宜兴"],["0912","榆林"],["0417","营口"],["0951","银川"],["0515","盐城"]],["Z",["0371","郑州"],["0733","株洲"],["0612","镇江"],["0533","淄博"],["0760","中山"],["0596","漳州"],["0656","珠海"],["0850","遵义"],["0759","湛江"],["0322","自贸试验区"]]];
+	var BranchNo_pop = null;
+	var BranchNo_html;
+	var BranchNo_gpopwidth;
+	var BranchNo_inited = false;
+    var BranchNo_template = '<iframe class="mask" frameBorder="0"></iframe>' + 
+							'<div class="popupcontent" id="BranchNo_popupcontent">' + 
+							'<div class="popupcontent_scrollarea" id="BranchNo_scrollarea">' +
+							'</div></div>';
+
+	var ag = navigator.userAgent,
+			IE = /.*msie.*/i.test(ag) || /.*Trident.*/i.test(ag),
+			IE6 = /msie 6\.0/i.test(ag),
+			IE7 = /msie 7\.0/i.test(ag),
+			IE8 = /msie 8\.0/i.test(ag),
+			CHROME = /.*Chrome.*/i.test(ag),
+			FIREFOX = /.*Firefox.*/i.test(ag),
+			SAFARI = /.*Safari.*/i.test(ag);
+
+    var cancelDocumentEvent = false;
+
+    function BranchNo_Init(event)
+	{
+		BranchNo_pop = document.createElement("div");
+
+		if(BranchNo_pop==null)
+		{
+		    alert("弹出城市选择控件被拦截，请关闭拦截程序后再按F5或者刷新重试！");
+		    return false;
+		} 
+
+		BranchNo_pop.className = "popupcontent-mask";
+		BranchNo_pop.id = "BranchNo_popupcontent_mask";
+		BranchNo_pop.innerHTML = BranchNo_template;
+
+		document.body.appendChild(BranchNo_pop);
+
+		var dataSource = BranchNo_dataSource;
+		var html = "";
+		for(var i=0;i<dataSource.length;i++)
+		{
+			var currSeries = dataSource[i];
+
+			html += "<dl>";
+
+			for(var j=0;j<currSeries.length;j++)
+			{
+				if(j==0)
+					html += "<dt>"+currSeries[j]+"</dt><dd>";
+				else
+				{
+					if(currSeries[j][1].length > 3)
+					{
+						html += "<a name='BranchNo_address' class='small' href='#'  onclick=\"BranchNo_HideDiv('" + currSeries[j][1] +"','" + currSeries[j][0] +"');return false;\"><span>" + currSeries[j][1] + "</span></a>";
+					}
+					else
+					{
+						html += "<a name='BranchNo_address' href='#'  onclick=\"BranchNo_HideDiv('" + currSeries[j][1] +"','" + currSeries[j][0] +"');return false;\"><span>" + currSeries[j][1] + "</span></a>";
+					}					    
+				}
+			}
+			html += "</dd></dl>";
+		}			
+			
+		BranchNo_html = html;
+		    
+		return true;
+	}
+	if(""!="")
+	{
+		BranchNo_SetValue("");
+	}
+
+	document.onclick=function(event)
+	{
+        if(cancelDocumentEvent)
+        {
+            cancelDocumentEvent = false;
+            return;
+        }
+	    event = event? event:window.event;   
+	    var srcelement = event.target?event.target:event.srcElement; 
+	    var docDivs = document.getElementsByTagName("div");
+	    var front = "";
+	    for(var i=0;i<docDivs.length;i++)
+	    {
+	        try{
+	            if(docDivs[i].id !=null && docDivs[i].id.indexOf("_popupcontent_mask")!=-1 && (docDivs[i].style.display==""||docDivs[i].style.display=="block"))
+	            {
+	                front=docDivs[i].id;
+	                break;
+	            }
+	        }catch(err){}
+	    }
+	    if(front!=""&& (srcelement.id==null || (srcelement.id.indexOf(front)==-1 && srcelement.id!="BranchNo_tbxAddress")))
+	    {
+	        var DivRef = document.getElementById(front); 
+            if(DivRef!=null)
+                BranchNo_VisibleToggle(); 
+	    }
+	}
+
+	function BranchNo_keydown()
+	{
+	    if (event.keyCode==13 || event.keyCode==8)
+	    	return false;
+	}
+</script>
+
+                            </div>
+                        </div>
+                        <div class="page-form-item" style="margin-top: 2px;">
+                            <label class="control-label" style="height: 14px; line-height: 14px;"></label>
+                            <div class="input-head" style="line-height: 14px;">
+                                密码
+                            </div>
+                        </div>
+                        <div class="page-form-item" style="padding-bottom: 20px;">
+                            <label class="control-label"></label>
+                            <div class="page-form-item-controls"  style="height: 35px;">
+                                <OBJECT id="UniLoginPwd_Ctrl" classid="clsid:0CA54D3F-CEAE-48AF-9A2B-31909CB9515D" codebase="https://site.cmbchina.com/download/CMBEdit.cab#version=1,2,0,1" width="" height=""  Style="width: 300px; height: 36px;"  tabindex=2><SPAN>未安装控件，<a class=Login1 target='_blank' href='/CmbBank_HelpCenter/UI/GenShellAcc/Default.aspx' style="color:red">点此查看如何安装</a>。</SPAN></OBJECT><script language="javascript">
+			function initUniLoginPwd_Ctrl()
+            {
+                try
+                {
+                    document.getElementById('UniLoginPwd_Ctrl').MaxLength = "32";
+			        if (!true) document.getElementById('UniLoginPwd_Ctrl').PasswdCtrl = false;
+                    if (true) document.getElementById('UniLoginPwd_Ctrl').Option("#1#https://pbsz.ebank.cmbchina.com/CmbBank_GenShell/UI/Manage/GetInfo.aspx?ClientNo=009CCF5758B59681BD2BA154BF4F34D1309758789933354000019469");
+                    //if ("009CCF5758B59681BD2BA154BF4F34D1309758789933354000019469" != "") document.getElementById('UniLoginPwd_Ctrl').Info = "009CCF5758B59681BD2BA154BF4F34D1309758789933354000019469";
+					document.getElementById('UniLoginPwd_Ctrl').Info = "009CCF5758B59681BD2BA154BF4F34D1309758789933354000019469";
+					document.getElementById('UniLoginPwd_Ctrl').value = "";
+                }
+                catch(err)
+                {
+                    //window.alert('sorry, please install safe input control first.');
+                }
+			}
+			
+            if (window.attachEvent) 
+            {//For IE
+               window.attachEvent("onload", initUniLoginPwd_Ctrl);
+            } 
+            else if (window.addEventListener) 
+            {//For FireFox
+                if(document.getElementById('UniLoginPwd_Ctrl').MaxLength != undefined)
+				{
+                    window.addEventListener("load", initUniLoginPwd_Ctrl, "false");
+                }
+            } 
+            else 
+            {
+                window["onload"] = initUniLoginPwd_Ctrl;
+            }
+			</script><script language="javascript">
+			function fillUniLoginPwd_Ctrl()
+            {
+                try
+                {
+				document.getElementById('UniLoginPwd_Ctrl').Info = "009CCF5758B59681BD2BA154BF4F34D1309758789933354000019469";
+			        if (true) document.getElementById('UniLoginPwd').value = document.getElementById('UniLoginPwd_Ctrl').IValue;
+			        else document.getElementById('UniLoginPwd').value = document.getElementById('UniLoginPwd_Ctrl').value;
+					//if ("009CCF5758B59681BD2BA154BF4F34D1309758789933354000019469" != "") document.getElementById('UniLoginPwd_Ctrl').Info = "009CCF5758B59681BD2BA154BF4F34D1309758789933354000019469";
+					
+                    return true;
+    			}
+                catch(err)
+                {
+                    /*因为登陆页面Login.aspx上登录成功后，会删除LoginForm，所以在LoginForm上的安全控件就都会
+                      被删除，提交时再通过document.getElementById取安全控件就会取不到了，所以不做相关提示了。*/
+                    //window.alert('很抱歉，请先安装或更新安全控件。');
+                    return false;
+                }
+            }
+			
+            if (document.forms[0].attachEvent) 
+            {//For IE
+                document.forms[0].attachEvent("onsubmit", fillUniLoginPwd_Ctrl);
+            }               
+            else if (document.forms[0].addEventListener) 
+            {//For FireFox
+                document.forms[0].addEventListener("submit", fillUniLoginPwd_Ctrl, false);
+            } 
+            else 
+            {
+                document.forms[0]["onsubmit"] = fillUniLoginPwd_Ctrl;
+            }
+			</script><script language="javascript">
+			function focusUniLoginPwd_Ctrl()
+            {
+                try
+                {
+                    document.getElementById('UniLoginPwd_Ctrl').MaxLength = "32";
+			        if (!true) document.getElementById('UniLoginPwd_Ctrl').PasswdCtrl = false;
+                    if (true) document.getElementById('UniLoginPwd_Ctrl').Option("#1#https://pbsz.ebank.cmbchina.com/CmbBank_GenShell/UI/Manage/GetInfo.aspx?ClientNo=009CCF5758B59681BD2BA154BF4F34D1309758789933354000019469");
+                }
+                catch(err)
+                {
+      
+                }
+			}
+
+            if (window.addEventListener) 
+            {
+                document.getElementById('UniLoginPwd_Ctrl').addEventListener("focus", focusUniLoginPwd_Ctrl, "false");
+            } 
+			</script>
+                            </div>
+                        </div>
+                        <div class="page-form-item extra-code-item">
+                            <input id="ExtraPwd" name="ExtraPwd" class="control-input" type="text" style="width: 130px; *width: 128px;" />
+                            <div class="control-input-shortcut">
+                                <img src="../../Base/ExtraWord.aspx?ClientNo=009CCF5758B59681BD2BA154BF4F34D1309758789933354000019469&width=92&height=36&type=2" id="ImgExtraPwd" class="control-input" style="cursor: pointer; width: 130px; *width: 92px;" name="ImgExtraPwd" alt="验证码" align="top" />
+                                <a class="control-shortcut" onclick="refreshExtraPwd();"></a>
+                            </div>
+                        </div>
+                        <div style="display: none">
+                            <input name="OnlineCustomerServiceURL" type="hidden" id="OnlineCustomerServiceURL" value="https://forum.cmbchina.com/PCS2012/Service.aspx?hdVersion=20190118&amp;hdType=Normal&amp;hdToken=jKEcP0jG%2fs4EMQHlJh*OB7xSElY2LAiARTWIAl2FRfifmovvRhqJSA00o*fXZHrprqs3zkOgdDWf1Tw1G9niuobeEYW9XoK4GEAthN54G6*TPJBLEm3w%2fvLROF0UIHQFluXLMJdyI67NJLQsHNlks%2fvQLGzUiyZUy6*IjUsEgpw0dnlukgIIdHPcRAI%2fenPWftZqHIHfkfH4i3g%2fn16053IgKE5Siwq7k7xS*p9r5LMzmxCvJBzY*Nas27IuUgtcLZvaXO5Lr*ZjIY1JfyIjlC9CsYXoZvz7zyqr6GFIMNT3wMCdR97hGNJccokFZohzEa6PIj4oO27AYlRaBWkcRQ%3d%3d" />
+                        </div>
+                    
+<script language=javascript>var GenShell_ClientNo="009CCF5758B59681BD2BA154BF4F34D1309758789933354000019469";</script></form>
+                    <div class="page-form-footer" style="margin-top: 5px; height: 40px; line-height: 0px;">
+                        <input type="button" class="btn btn-primary btn-lg" tabindex="3" value="登 录" id="LoginBtn" onclick="javascript: $('#UniLoginForm').trigger('submit');" />
+                    </div>
+                    <div style="height: 12px; margin-top: 10px;">
+                        <div class="quick-link" style="float: right; padding-right: 30px;">
+                            <a href="javascript:EAccountGetLoginNameWinOpen();">忘记账号&nbsp;</a>
+                            <span>|</span>
+                            <a href="javascript:EAccountGetPwdBaseWinOpen();">&nbsp;忘记密码</a>
+                        </div>
+                    </div>
+                    <hr id="password-login-line" style="border:none; height: 1px; background-color: #EEEEEE; color: #EEEEEE;"/>
+                    <div class="page-form-footer change" style="margin-top: 15px; *margin-top: 7px; margin-bottom: 16px; cursor: pointer;" onclick="doRegister()">
+                        注册一网通
+                    </div>
+                </fieldset>
+            </div>
+            <div class="container-cmbedit extra" style="height:430px; display: none;">
+                <fieldset>
+                    <div class="legend">欢迎登入个人银行</div>
+                    <div class="container-cmbedit-logo"></div>
+                    <div class="container-cmbedit-intro">
+                        <p>安装安全控件</p>
+                        <p>会让您的登录环境更安全</p>
+                        <p>资产安全有保障</p>
+                    </div>
+                    <div class="container-cmbedit-refresh"><a href="javascript:window.location.reload(true);">已经安装？请刷新页面</a></div>
+                    <div class="container-cmbedit-download"><a class="btn btn-primary btn-lg" id="downloadurl" href="http://site.cmbchina.com/download/SafeEditInstall.exe">安装安全登录控件</a></div>
+                </fieldset>
+            </div>
+            <div class="container-qrlogin">
+                <fieldset>
+                    <div id="goPassWordLogin" class="radus-right-img" style="background-image: url(../doc/Images/pro8/login/passwordlogin.png);" onclick="showPassWordLogin()"></div>
+                    <div class="legend">扫码登录</div>
+                    <div id="loading" class="qrcodecanvas" style="margin-top: 40px; margin-bottom: 40px; height: 188px;">
+                        <div style="height: 188px; width: 188px; margin-left:86px; *margin-left:0px; background-image: url(../doc/Images/pro8/login/qrcode_loading_background.png);">
+                            <div style="height: 78px;"></div>
+                            <div class="loading" style="background-image: url(../doc/Images/pro8/login/qrcode_loading.png);"></div>
+                        </div>
+                    </div>
+                    <div id="qrcodecanvas" class="qrcodecanvas" style="margin-top: 40px; margin-bottom: 40px; height: 188px; text-align:left; padding-left: 86px; display: none">
+                        <div id="qrcodeImgDiv" style="width: 188px; height: 188px; float: left"></div>
+                    </div>
+                    <div id="refresh" class="qrcodecanvas" style="margin-top: 40px; margin-bottom: 40px; height: 188px; display: none">
+                        <div style="height: 188px; width: 188px; margin-left:86px; *margin-left: 0px; background-image: url(../doc/Images/pro8/login/qrcode_loading_background.png);">
+                            <div style="height: 51px;"></div>
+                            <p style="margin-bottom: 21px;">二维码加载失败</p>
+                            <input type="button" class="btn btn-primary btn-lg" style="width: 155px; height: 40px;" value="点击刷新" onclick="RefreshQRImg()" />
+                        </div>
+                    </div>
+                    <div id="successfulScan" class="scan_success" style="display: none">
+                        <div class="scan_success_img"></div>
+                        <p style="font-size: 24px; color: #000000; height: 24px; line-height: 24px;">扫码成功</p>
+                        <p style="font-size: 18px; color: #929292; height: 18px; line-height: 18px; margin-top: 15px;">请在手机上确认登录</p>
+                        <div  style="margin-top: 30px; margin-bottom: 106px; height: 16px;">
+                            <a id="goBackQRCode" style="text-decoration: none; font-size: 16px; color: #5995EF;" href="javascript:RefreshQRImg();">返回二维码</a>
+                        </div>
+                    </div>
+                    <div id="scanLogo" class="page-form-footer" style="height: 38px; width: 158px;">
+                        <div style="margin: 0 auto; height: 38px; width: 168px;">
+                            <div style="background-image: url(../doc/Images/pro8/login/scan_black.png); height: 38px; width: 38px; float: left"></div>
+                            <div style="float: left; height: 38px; width: 120px; margin-left: 10px;">
+                                <p>打开</p><p style="color: #5995EF; cursor: pointer;" onclick="AppDownloadWinOpen()">招商银行App</p>
+                                <p>扫一扫登录</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="IE7Tips" class="ie7-explain" style="display: none; margin-top: -10px;">
+                        <p>大众版扫码登录不支持IE7.0以下版本</p>
+                        <p>请先升级您的IE浏览器</p>
+                    </div>
+                    <hr style="border:none; height: 1px; background-color: #EEEEEE; color:#EEEEEE; margin-top: 23px; *margin-top: 15px;"/>
+                    <div class="page-form-footer change" style="margin-top: 15px; *margin-top: 7px; margin-bottom: 16px; cursor: pointer;" onclick="doRegister()">
+                        注册一网通
+                    </div>
+                </fieldset>
+            </div>
+            <div class="container-register" style="display: none">
+                <div id="registerQRCode" style="height: 188px; margin-top: 70px; margin-bottom: 40px;">
+                    <div style="height: 188px; width: 188px; margin-left:86px; background-image: url(../doc/Images/pro8/login/qrcode_register.png);"></div>
+                </div>
+                <div class="register-explain">
+                    <p>请扫描二维码下载招商银行App</p>
+                    <p>注册一网通用户</p>
+                </div>
+                <hr style="border:none; height: 1px; background-color: #EEEEEE; color: #EEEEEE; margin-top: 33px; *margin-top: 25px;"/>
+                <div class="page-form-footer change" style="margin-top: 15px; *margin-top: 7px; margin-bottom: 16px; cursor: pointer;" onclick="goLoginPage()">
+                    登录一网通
+                </div>
+            </div>
+            <div class="container-maclogin" style="height: 430px; display: none">
+                <div style="height: 188px; margin-top: 70px; margin-bottom: 40px;">
+                    <div style="height: 188px; width: 188px; margin-left:86px; background-image: url(../doc/Images/pro8/login/qrcode_mac.png);"></div>
+                </div>
+                <div class="maclogin-explain">
+                    <p>大众版暂不支持 Mac OS X 系统</p>
+                    <p>请扫码下载招商银行App办理业务</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer footerex">
+        <a href="javascript:WangDunOpen();">一网通网盾下载</a><span></span><!--<a target="helpcenter" href="/CmbBank_HelpCenter/UI/GenShellAcc/Default.aspx">常见问题</a><span>|</span>--><a href="javascript:SecurityTipWinOpen();">安全指引</a><span></span><a href="javascript:CertificateWinOpen()">安全认证</a><span></span>CopyRight© 2016 招商银行 版权所有
+    </div>
+    <div style="display: none">
+        <input name="QRCode" type="hidden" id="QRCode" autocomplete="off" value="http://cmbt.cn/mnF67V?data=WeQizCIr6cGu%2fhMeXO0oxLNrL7M76X9l6Ij9OxZ3gH*fzKBdRzuohcQQLcz*vnBLIt4lsZ9gzVnIR5G5BZYvgw%3d%3d" />
+        <input name="GenShellPollUrl" type="hidden" id="GenShellPollUrl" value="https://polling.netpay.cmbchina.com/netbank/CBLoginResult.do" />
+        <input name="banner_url" type="hidden" id="banner_url" value="../doc/images/pro8/login/banner_5.png" />
+    </div>
+</body>
+</html>

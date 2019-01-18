@@ -361,10 +361,9 @@ class Pingan_C():
 
 
 if __name__ == '__main__':
-    pingan = Pingan_C()
+    zx = Pingan_C()
     t1 = time.clock()
-    pingan.process_request()
+    zx.process_request()
     t2 = time.clock()
     print("z最终耗时:{}".format(t2))
-    del pingan
 

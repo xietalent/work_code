@@ -1,0 +1,210 @@
+<html xmlns="http://www.w3.org/1999/xhtml"><head><script type="text/javascript" language="javascript" src="/ibp/portal/domain.jsp"></script>
+
+
+
+<script language="javascript">
+
+var isToa=1;
+
+var blankUrl='/ibp/portal/blank.jsp';
+
+//屏蔽鼠标右键
+function click(e) {
+ if (document.all) { //ie
+  if (event.button==1||event.button==2||event.button==3) {
+   oncontextmenu='return false';
+  }
+ }
+ if (document.layers) { //ff
+  if (e.which == 3) {
+   oncontextmenu='return false';
+  }
+ }
+}
+if (document.layers) {//other
+ document.captureEvents(Event.MOUSEDOWN);
+}
+document.onmousedown=click;
+document.oncontextmenu = new Function("return false;");
+
+
+
+//屏蔽退格键(backspace) 但文本框中还可用
+document.onkeydown = function () {backSpace(true);handleEvent(event);}
+function backSpace(yesOrNo){
+
+        if(window.event.keyCode == 8 &amp;&amp; yesOrNo){
+                if(event.srcElement.tagName=="INPUT" &amp;&amp; event.srcElement.type =="text")
+                         return true;
+                else{
+                   window.event.keyCode = 0;
+                   return false;
+       }
+    }else
+        return true;
+}
+
+
+//弹出窗口的公用函数
+function openWindow(hrefz){
+    openWindow(hrefz,null);
+}
+
+function openWindow(hrefz,namez){
+
+Pa_Modal.Open(hrefz,700,500,null,0,0);
+return false;
+}
+
+function handleEvent(oEvent){
+    try{
+    if(oEvent.ctrlKey &amp;&amp; oEvent.keyCode == "78")
+        oEvent.returnValue = false;
+    if(oEvent.shiftKey){
+        if(oEvent.keyCode == "13" || oEvent.keyCode=="0" &amp;&amp; oEvent.button == "0" ){
+        oEvent.returnValue = false;
+        }
+    }
+    if(oEvent.keyCode == "8"){
+        var targetTag = oEvent.srcElement.tagName;
+        if("INPUT" != targetTag &amp;&amp; "TEXTAREA" != targetTag)
+        oEvent.returnValue = false;
+    }
+    }catch(e){}
+}
+
+
+</script>
+
+
+
+
+
+
+
+
+
+
+  
+
+
+    <title></title>
+
+	<meta http-equiv="pragma" content="no-cache" />
+	<meta http-equiv="cache-control" content="no-cache" />
+	<meta http-equiv="expires" content="0" />
+	<meta http-equiv="keywords" content="keyword1,keyword2,keyword3" />
+	<meta http-equiv="description" content="This is my page" />
+	<link rel="stylesheet" href="../../css/bank.css?v=4.19.0" type="text/css" />
+	<!--
+	<link rel="stylesheet" type="text/css" href="styles.css">
+	-->
+	<script language="javascript" src="../../js/ajax.js?v=4.19.0"></script>
+	<script language="javascript">
+		document.domain="pingan.com.cn";
+	</script>
+	<script type="text/javascript">
+
+	var isSSO=""
+	var isBinded="0"
+	var creditTartgetUrl="https://creditcard.pingan.com.cn/financing/newccuser/userToaDirectCreditCard.do?directToMenu=creditcard_xyksy_EBK910700"
+	var target="top"
+	var serviceID="toa"
+
+	function gotoCredit()
+	{
+
+		if(isSSO=="true")
+		{
+			if(serviceID!="toa"&amp;&amp;serviceID!="credit")
+			{
+				if(target!=null&amp;&amp;target=="top")
+				{
+					top.header.gotoCredit();
+				}
+			}
+		//	window.location.href=creditTartgetUrl;
+
+		 parent.body1.location.href=creditTartgetUrl;
+		//parent.contextFrameName.location.href=creditTartgetUrl;
+		}
+		else
+		{
+			SSO();
+		}
+
+
+	}
+	function SSO()
+	{
+		//alert("isBinded:"+isBinded);
+		var ifrmstr='&lt;iframe src=\"setPFToken.jsp?url=https://bank.pingan.com.cn/idp/startSSO.ping?PartnerSpId=creditBankSP%26TargetResource=https://creditcard.pingan.com.cn/financing/ccuser/IBPSSOCreditCard.do" name=\"HidIfrm\" onLoad=\"gotoTarget();\" style=\"width:100%; height:100%;\" frameborder=\"no\"&gt;&lt;/iframe&gt;';
+		var selObj=document.getElementById("zhzhenghe");
+		selObj.innerHTML=ifrmstr;
+	}
+
+	function gotoTarget()
+	{
+		try{
+
+
+			var errObj=HidIfrm.document.getElementById("errorTitle");
+			if(errObj!=null)
+			{
+				parent.body1.location.href="https://creditcard.pingan.com.cn/financing/ccuser/IBPSSOCreditCard.do"
+				//parent.contextFrameName.location.href="https://creditcard.pingan.com.cn/financing/ccuser/IBPSSOCreditCard.do"
+				return;
+			}
+			var res=HidIfrm.document.getElementById("ds").value;
+			if(res=="success"){
+				if(serviceID!="toa"&amp;&amp;serviceID!="credit")
+				{
+					if(target!=null&amp;&amp;target=="top")
+					{
+						top.header.gotoCredit();
+					}
+					top.header.sso="true";
+				}
+
+				var xmlHttp=newXMLHttpRequest();
+				xmlHttp.open("GET", "/ibp/work/bindCredit.do?type=session&amp;timestamp=1547714952803");
+				xmlHttp.send();
+				//alert(creditTartgetUrl);
+				parent.body1.location.href=creditTartgetUrl;
+				//parent.contextFrameName.location.href=creditTartgetUrl;
+				//top.body.contextFrameName.location.href=creditTartgetUrl;
+				return;
+			}
+			else
+			{
+				if(target!=null&amp;&amp;target=="top")
+				{
+					parent.body1.location.href="../body_syy.jsp?type=3";
+					//parent.contextFrameName.location.href="../body_syy.jsp?type=3";
+				}
+				else
+				{
+					parent.body1.location.href="bind_error.jsp?type=3";
+					//parent.contextFrameName.location.href="bind_error.jsp?type=3";
+				}
+			}
+
+		}
+		catch(oException)
+		{
+			//alert("Exception:"+oException.description);
+
+		}
+	}
+
+
+
+	</script>
+  </head>
+
+  <body onload="gotoCredit()">
+     <div id="zhzhenghe"><iframe src="setPFToken.jsp?url=https://bank.pingan.com.cn/idp/startSSO.ping?PartnerSpId=creditBankSP%26TargetResource=https://creditcard.pingan.com.cn/financing/ccuser/IBPSSOCreditCard.do" name="HidIfrm" onload="gotoTarget();" style="width:100%; height:100%;" frameborder="no"></iframe></div>
+
+  
+
+</body></html>

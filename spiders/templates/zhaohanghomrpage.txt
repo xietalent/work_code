@@ -1,0 +1,183 @@
+<HTML><HEAD><TITLE></TITLE>
+<META charset=utf-8>
+<META http-equiv=X-UA-Compatible content=IE=edge><LINK href="../../Base/doc/dist/asset/css/cmbbank-ui-min.css" rel=stylesheet type=text/css>
+<STYLE type=text/css>.page-panel-block {
+	MARGIN-BOTTOM: 24px; MARGIN-TOP: 24px; BORDER-LEFT: #5d9dd8 5px solid
+}
+.page-table-common TH:first-child {
+	WIDTH: 30%
+}
+.page-table-common TD:first-child {
+	WIDTH: 30%
+}
+.page-table-common TH:first-child ~ TH {
+	WIDTH: 35%
+}
+.page-table-common TH:first-child ~ TD {
+	WIDTH: 35%
+}
+.page-table-common TH {
+	WHITE-SPACE: normal; TEXT-ALIGN: left; TEXT-INDENT: 10px
+}
+.page-table-common TD {
+	WHITE-SPACE: normal; TEXT-ALIGN: left; TEXT-INDENT: 10px
+}
+.page-table-common TH A {
+	MARGIN-LEFT: 16px
+}
+.page-table-common TD A {
+	MARGIN-LEFT: 16px
+}
+</STYLE>
+
+<SCRIPT src="../../Base/doc/Scripts/DynaForm.js" type=text/javascript></SCRIPT>
+
+<SCRIPT src="../../Base/doc/Scripts/FuncTrigger.js" type=text/javascript></SCRIPT>
+
+<SCRIPT src="../../Base/doc/Scripts/default.js" type=text/javascript></SCRIPT>
+
+<SCRIPT src="../../Base/doc/scripts/pro/jquery-1.12.3.min.js" type=text/javascript></SCRIPT>
+
+<SCRIPT type=text/javascript>
+        $(document).ready(function () {
+            $("#ZHXX table tbody tr:odd").addClass("odd");
+            $("#HQXX table tbody tr:odd").addClass("odd");
+        });
+
+
+        //快速还款
+        function GoToFastPayment() {
+            var CreditAccNo = 'CreditAccNo=' + document.getElementById("HidCreditAccNo").value;
+            CallFuncEx3('rm_FastPayment$$220002', 'C', 'CBANK_CREDITCARD_REPAYMENT', 'Repayment/rm_FastPayment.aspx', 'FORM', null, CreditAccNo);
+        }
+
+        //查看分期详细
+        function GoToReckoningDetail() {
+            var CreditAccNo = 'CreditAccNo=' + document.getElementById("HidCreditAccNo").value;
+            triggerFuncEx("./am_ReckoningDetailForD.aspx", "FORM", "_self", CreditAccNo);
+        }
+    </SCRIPT>
+</HEAD>
+<BODY class=page style="OVERFLOW-X: auto; OVERFLOW-Y: auto">
+<FORM name=am_QueryAccount id=am_QueryAccount action=./am_QueryAccount.aspx method=post>
+<DIV><INPUT name=__EVENTTARGET id=__EVENTTARGET type=hidden> <INPUT name=__EVENTARGUMENT id=__EVENTARGUMENT type=hidden> <INPUT name=__LASTFOCUS id=__LASTFOCUS type=hidden> <INPUT name=__VIEWSTATE id=__VIEWSTATE type=hidden value=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> </DIV>
+<SCRIPT type=text/javascript>
+//<![CDATA[
+var theForm = document.forms['am_QueryAccount'];
+if (!theForm) {
+    theForm = document.am_QueryAccount;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</SCRIPT>
+
+<DIV><INPUT name=__VIEWSTATEGENERATOR id=__VIEWSTATEGENERATOR type=hidden value=BFF49BA8> <INPUT name=__EVENTVALIDATION id=__EVENTVALIDATION type=hidden value=QSTMz1fvO8vgmzg5WRWWrtCmuiblSQC+sJOC+o2ri/GqfFQuPyK15Uy8a1PW061WQJLo+d0gLnzTHDk/SNlIIF+Skcuim/H3eZ+4mgWEJGhUo4D2DWNtGmn03nfGPyVesPhlGif2hPwVcvJaWwTN6JCuHk9Sz0BYHJBlSJJZvH8T8mN2D39ittEhCMtLMTyKnx503YK8E08eQI3/zkKI6Q==> </DIV>
+<DIV class=page-title><SPAN>账户查询</SPAN> </DIV>
+<SCRIPT type=text/JavaScript>
+    function ddlSelectChange() {
+        window.document.body.style.cursor = "";
+        P.process();
+        if (typeof (SetTimeStamp) == 'function') {
+            SetTimeStamp();
+        }
+
+    }
+</SCRIPT>
+
+<STYLE type=text/css>.CorpName {
+	MARGIN-RIGHT: 50px
+}
+.AcctAmount {
+	FONT-SIZE: 18px
+}
+</STYLE>
+
+<DIV class=page-header>
+<DIV class=page-header-inbox>
+<DIV class=page-header-inbox-account><SPAN class=page-header-inbox-account-dropdown><SELECT name=PageHeaderCreditAccList$ddlCreditAccList class=chosen-select-account id=PageHeaderCreditAccList_ddlCreditAccList style="WIDTH: 285px; DISPLAY: none" onchange="ddlSelectChange();setTimeout('__doPostBack(\'PageHeaderCreditAccList$ddlCreditAccList\',\'\')', 0)" jQuery1123013856664006434394="3"> <OPTION value=0155298473001001 selected>个人卡账户001001</OPTION></SELECT>
+<DIV title="" class="chosen-container chosen-container-single chosen-select-account" id=PageHeaderCreditAccList_ddlCreditAccList_chosen style="WIDTH: 285px" jQuery1123013856664006434394="6"><A tabIndex=-1 class=chosen-single jQuery1123013856664006434394="4"><SPAN><EM>当前账户：</EM>个人卡账户001001</SPAN>
+<DIV><B><I class="glyphicon chosen-down"></I><I class="glyphicon chosen-up"></I></B></DIV></A></DIV> </SPAN></DIV>
+<DIV class=page-header-inbox-message><SPAN id=PageHeaderCreditAccList_lPageHeaderInboxMessage></SPAN><SPAN class=AcctAmount id=PageHeaderCreditAccList_lAcctAmount></SPAN></DIV></DIV>
+<DIV class=page-header-link>
+<DIV class="page-header-link-container three"><SPAN><I title="" class="glyphicon icon-icon-48"></I><A href="javascript:CallFuncEx3('Cver2_am_QueryReckoningSurvey$$218001','C','CBANK_CREDITCARD_LOAN','Loan/Pro8/am_QueryReckoningSurveyNew.aspx','FORM',null)">已出账单查询</A><EM></EM></SPAN><SPAN><I title="" class="glyphicon icon-icon-48"></I><A href="javascript:CallFuncEx3('Cver2_am_QueryReckoningNotRMB$$218002','C','CBANK_CREDITCARD_LOAN','Loan/Pro8/am_QueryReckoningNotRMB.aspx','FORM',null)">未出账单查询</A><EM></EM></SPAN><SPAN><I title="" class="glyphicon icon-icon-48"></I><A href="javascript:CallFuncEx3('Cver2_pm_ModifyQueryPin$$217004','C','CBANK_CREDITCARD_CUSTOMER','Customer/pm_ModifyQueryPin.aspx','FORM',null)">密码管理</A><EM></EM></SPAN></DIV></DIV></DIV>
+<DIV class=page-panel>
+<DIV class=page-panel-content>
+<DIV class="page-panel page-panel-block" id=ZHXX>
+<DIV class=page-panel-header>
+<DIV class=page-panel-header-title>账户信息</DIV></DIV>
+<DIV class=page-panel-content>
+<TABLE class="page-table-common action table-fix">
+<THEAD>
+<TR id=trbz>
+<TH>币种</TH>
+<TH>人民币</TH>
+<TH>美元</TH></TR></THEAD>
+<TBODY>
+<TR id=trxyed>
+<TD>信用额度</TD>
+<TD><SPAN id=RMBXYED>￥22,000.00</SPAN></TD>
+<TD><SPAN id=USXYED>$3,244.00</SPAN></TD></TR>
+<TR class=odd id=trkyed>
+<TD>可用额度</TD>
+<TD><SPAN id=RMBKYED>￥280.00</SPAN></TD>
+<TD><SPAN id=USKYED>$41.29</SPAN></TD></TR>
+<TR id=trwczfq>
+<TD>未出账分期本金</TD>
+<TD colSpan=2><SPAN id=RMBWCZFQ>￥0.00</SPAN> <A id=Ldetail href="javascript:P.process();CallFuncEx3('CLoan_am_QueryInstallment$$CLoan_am_QueryInstallment', 'C', 'CBANK_CREDITCARD_LOAN', 'Loan/Pro8/am_QueryInstallment.aspx', 'FORM',null);">查看详细</A> </TD></TR>
+<TR class=odd id=tryjxj>
+<TD>预借现金可用额度</TD>
+<TD><SPAN id=RMBYJXJ>￥280.00</SPAN> <A id=LiterRY href="javascript:P.process();CallFuncEx3('CreditLendCash$$218003', 'C', 'CBANK_CREDITCARD_LOAN', 'Loan/Pro8/am_AdvanceHomePage.aspx', 'FORM',null);">预借现金</A> <A id=hlXJFQ href="javascript:P.process();CallFuncEx3('ApplyCashAdvanceByStages$$218005', 'C', 'CBANK_CREDITCARD_LOAN', 'Loan/Pro8/am_ApplyCashAdvanceByStages.aspx', 'FORM',null);">现金分期</A> </TD>
+<TD><SPAN id=USYJXJ>$41.29</SPAN> </TD></TR>
+<TR id=myzdr>
+<TD>每月账单日</TD>
+<TD colSpan=2><SPAN id=MYZD>21日</SPAN> </TD></TR>
+<TR class=odd>
+<TD>账单类型</TD>
+<TD colSpan=2><SPAN id=ZDLX>电邮账单</SPAN> <A id=LiterZL href="javascript:P.process();triggerFunc('./cs_SendReckoning.aspx','FORM','_self','DisplayFlag=1');">修改账单类型</A> </TD></TR>
+<TR id=trzwtxsj>
+<TD>账务提醒时间</TD>
+<TD colSpan=2><SPAN id=ZWTXSJ>账单日后三天内</SPAN> <A id=LiteralZWTX href="javascript:P.process();triggerFunc('./cs_SendReckoningNotice.aspx','FORM','_self','DisplayFlag=1');">修改账务提醒时间</A> </TD></TR></TBODY></TABLE></DIV></DIV>
+<DIV class="page-panel page-panel-block" id=HQXX>
+<DIV class=page-panel-header>
+<DIV class=page-panel-header-title>还款信息</DIV>
+<DIV class=page-panel-header-more><IMG title=快速还款 id=FastPay style="CURSOR: pointer; VERTICAL-ALIGN: middle" onclick=GoToFastPayment(); src="../doc/images/FastPayMent.gif"> </DIV></DIV>
+<DIV class=page-panel-content>
+<TABLE class="page-table-common action table-fix">
+<THEAD>
+<TR id=trCurrency>
+<TH>币种</TH>
+<TH>人民币</TH>
+<TH>美元</TH></TR></THEAD>
+<TBODY>
+<TR id=trzdhk>
+<TD>自动还款</TD>
+<TD id=tdRMBZDHK><SPAN id=RMBZDHK>************3301 全额</SPAN> <A id=LiterRZH onclick="P.process();CallFuncEx3('rm_ModifyAutoRepayA$$rm_ModifyAutoRepayA', 'C', 'CBANK_CREDITCARD_REPAYMENT', 'Repayment/rm_ModifyAutoRepayA.aspx', 'FORM',null,'ACCOUNT_NO_RMB=8%2fKpaBY2KoKnSoNpHonM6v2Q0luvM0Sk','CreditAccNo=0155298473001001','Currency=RMB','OT_PAY_FLAG_RMB=0','Operate=Modify','OT_BK_AC_RMB=************3301');" href="javascript:void(0)">修改协议</A> </TD>
+<TD id=tdUSZDHK><SPAN id=USZDHK>未开通 </SPAN><A id=LiterUZH href="javascript:P.process();CallFuncEx3('rm_ProOfAutoRepay$$rm_ProOfAutoRepay', 'C', 'CBANK_CREDITCARD_REPAYMENT', 'Repayment/rm_ProOfAutoRepay.aspx', 'FORM',null,'Currency=USD','Operate=Apply','CreditAccNo=0155298473001001');">申请开通</A> </TD></TR>
+<TR class=odd id=trDQHQ>
+<TD>本期到期还款日</TD>
+<TD colSpan=2><SPAN id=DQHQ>2019-01-09</SPAN> </TD></TR>
+<TR id=trLiterRMBZDJE>
+<TD>本期账单金额</TD>
+<TD><SPAN id=LiterRMBZDJE>￥21,880.52</SPAN> <A id=LiteraRBQ href="javascript:P.process();CallFuncEx3('Cver2_am_QueryReckoningSurvey$$218001', 'C', 'CBANK_CREDITCARD_LOAN', 'Loan/Pro8/am_QueryReckoningSurveyNew.aspx', 'FORM',null);">查看账单</A> <A id=hlSQFQ href="javascript:P.process();CallFuncEx3('CreditApplyBillDivTerm$$218007', 'C', 'CBANK_CREDITCARD_LOAN', 'Loan/Pro8/am_ApplyReckoningByStages.aspx', 'FORM',null,'Currency=156');">申请分期</A> </TD>
+<TD><SPAN id=LiterUSBZDJE>$0.00</SPAN> <A id=LiteraUSBQ href="javascript:P.process();CallFuncEx3('Cver2_am_QueryReckoningSurvey$$218001', 'C', 'CBANK_CREDITCARD_LOAN', 'Loan/Pro8/am_QueryReckoningSurveyNew.aspx', 'FORM',null);">查看账单</A> <A id=hlSQFQUSD href="javascript:P.process();CallFuncEx3('CreditApplyBillDivTerm$$218007', 'C', 'CBANK_CREDITCARD_LOAN', 'Loan/Pro8/am_ApplyReckoningByStages.aspx', 'FORM',null,'Currency=840');">申请分期</A> </TD></TR>
+<TR class=odd id=trLiterRMBBQJE>
+<TD>本期剩余应还金额</TD>
+<TD><SPAN id=LiterRMBBQJE>￥0.00</SPAN> </TD>
+<TD><SPAN id=LiterUSBQJE>$0.00</SPAN> </TD></TR>
+<TR id=trzdje>
+<TD>本期剩余最低还款金额</TD>
+<TD><SPAN id=RMBZDJE>￥0.00</SPAN></TD>
+<TD><SPAN id=USZDJE>$0.00</SPAN></TD></TR></TBODY></TABLE></DIV></DIV></DIV>
+<DIV class="page-panel-explain page-noprint"><IFRAME name=ExplainPageFrame id=ExplainPageFrame src="../doc/Htmls/pro8/am_QueryAccount.htm" frameBorder=0 scrolling=no style="HEIGHT: 239px" jQuery1123013856664006434394="23"></IFRAME></DIV></DIV><INPUT name=ClientNo id=ClientNo type=hidden value=009CCF5758B59681BD2BA154BF4F34D1502615938619621600000054> <INPUT name=HidCreditAccNo id=HidCreditAccNo type=hidden value=0155298473001001> <INPUT name=LoginVersion id=LoginVersion type=hidden value=A>
+<SCRIPT src="../../Base/doc/dist/asset/js/cmbbank-ui-min.js" type=text/javascript></SCRIPT>
+ </FORM>
+<DIV class="chosen-container-dropdown chosen-container-single chosen-select-account chosen-container-single-nosearch" id=PageHeaderCreditAccList_ddlCreditAccList_chosen_drop style="WIDTH: 285px">
+<DIV class=chosen-drop><IFRAME class=mask></IFRAME>
+<DIV class=chosen-search><INPUT type=text readOnly autocomplete="off" jQuery1123013856664006434394="18"></DIV>
+<UL class=chosen-results jQuery1123013856664006434394="10"></UL></DIV></DIV></BODY></HTML>

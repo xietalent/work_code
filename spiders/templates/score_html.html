@@ -1,0 +1,458 @@
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml"><head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=emulateie8" />
+    <title>万里通积分</title>
+    <link rel="stylesheet" href="https://www.pingan.com/app_js/paui/1.0.3/build/themes/default/pa.ui.css" />
+    <link rel="stylesheet" href="https://resources.pingan.com/app_css/newtoa/v20/bank/creditcard/public.css" />
+    <link rel="stylesheet" href="https://resources.pingan.com/app_css/newtoa/v20/bank/creditcard/jifenquanli.css" />
+    <link rel="stylesheet" href="https://resources.pingan.com/app_css/newtoa/v20/bank/creditcard/weixinzhangdan.css" />
+    <script type="text/javascript" src="../../../config/creditcard-config.js"></script><script type="text/javascript" src="https://rmb.pingan.com.cn/credit/dlds/cust/dfp/downloads/frms-fingerprint.js?custID=133&amp;serviceUrl=https://rmb.pingan.com.cn/credit/dlds/cust/dfp/generate/jsonp&amp;loadSource=script"></script>
+    <script type="text/javascript" src="../common/js/tools/pawebjs-1.3.0.js"></script>
+    <script type="text/javascript" data-main="js/main.js" src="../../js_lib/require/require.min.js"></script>
+<script type="text/javascript">
+var links = ['public.css', 'jifenquanli.css', 'weixinzhangdan.css'];
+document.getElementsByTagName('link')[0].href = base.puaiJSURL() + "build/themes/default/pa.ui.css";
+for (var i = 0; i &lt; links.length; i++) {
+	document.getElementsByTagName('link')[i + 1].href = base.puaiCSSURL() + links[i];
+}
+var oHead = document.getElementsByTagName('HEAD').item(0); 
+var oScript= document.createElement("script"); 
+oScript.type = "text/javascript"; 
+oScript.src="https://rmb.pingan.com.cn/credit/dlds/cust/dfp/downloads/frms-fingerprint.js?custID=133&amp;serviceUrl=https://rmb.pingan.com.cn/credit/dlds/cust/dfp/generate/jsonp&amp;loadSource=script"; 
+oHead.appendChild(oScript);
+</script><script type="text/javascript" src="https://rmb.pingan.com.cn/credit/dlds/cust/dfp/downloads/frms-fingerprint.js?custID=133&amp;serviceUrl=https://rmb.pingan.com.cn/credit/dlds/cust/dfp/generate/jsonp&amp;loadSource=script"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="main" src="js/main.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="logger" src="js/../../common/js/tools/logger.js?3.4.3"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="app" src="js/app.js?3.4.3"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="jiankong" src="js/../../common/js/tools/jiankong.js?3.4.3"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="router/PointsDroitRouter" src="js/router/PointsDroitRouter.js?3.4.3"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="common_router/ErrorRouter" src="js/../../common/js/router/ErrorRouter.js?3.4.3"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="view/HomeView" src="js/view/HomeView.js?3.4.3"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="common_router/CommonOptionRouter" src="js/../../common/js/router/CommonOptionRouter.js?3.4.3"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="jquery" src="js/../../../js_lib/jquery/jquery-1.9.1.min.js?3.4.3"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="json" src="js/../../../js_lib/json-js/json2.js?3.4.3"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="common_view/error/ErrorView" src="js/../../common/js/view/error/ErrorView.js?3.4.3"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="common_model/AccountDetailModel" src="js/../../common/js/model/AccountDetailModel.js?3.4.3"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="common_view/home/HeaderView" src="js/../../common/js/view/home/HeaderView.js?3.4.3"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="view/home/BodyView" src="js/view/home/BodyView.js?3.4.3"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="common_view/home/FooterView" src="js/../../common/js/view/home/FooterView.js?3.4.3"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="common_tool/base" src="js/../../common/js/tools/base.js?3.4.3"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="common_tool/accountPurview" src="js/../../common/js/tools/accountPurview.js?3.4.3"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="view/home/body/LeftNavView" src="js/view/home/body/LeftNavView.js?3.4.3"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="view/home/body/RightBoxView" src="js/view/home/body/RightBoxView.js?3.4.3"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="errorInfo" src="js/../../common/js/tools/errorInfo.js?3.4.3"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="text" src="js/../../../js_lib/require/text.js?3.4.3"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="common_tool/browserAgent" src="js/../../common/js/tools/browserAgent.js?3.4.3"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="underscore" src="js/../../../js_lib/underscore/underscore-min.js?3.4.3"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="common_view/home/HomeAccountView" src="js/../../common/js/view/home/HomeAccountView.js?3.4.3"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="common_view/commonOptionView" src="js/../../common/js/view/commonOptionView.js?3.4.3"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="paui" src="https://www.pingan.com/app_js/paui/1.0.3/build/pa.ui.min.js?3.4.3"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="common_model/SetAccountDetailModel" src="js/../../common/js/model/SetAccountDetailModel.js?3.4.3"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="backbone" src="js/../../../js_lib/backbone/backbone-min.js?3.4.3"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="view/QueryWltPointDetailsView" src="js/view/QueryWltPointDetailsView.js?3.4.3"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="model/QueryWltPointDetailsModel" src="js/model/QueryWltPointDetailsModel.js?3.4.3"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="view/QueryWltPointDetailView" src="js/view/QueryWltPointDetailView.js?3.4.3"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="view/QueryWltPointDetailFView" src="js/view/QueryWltPointDetailFView.js?3.4.3"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="view/QueryWltPointDetailLView" src="js/view/QueryWltPointDetailLView.js?3.4.3"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="view/QueryWltPointDetailZView" src="js/view/QueryWltPointDetailZView.js?3.4.3"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="model/QueryWltPointDetailFModel" src="js/model/QueryWltPointDetailFModel.js?3.4.3"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="model/QueryWltPointDetailModel" src="js/model/QueryWltPointDetailModel.js?3.4.3"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="model/QueryWltPointDetailZModel" src="js/model/QueryWltPointDetailZModel.js?3.4.3"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="model/QueryWltPointDetailLModel" src="js/model/QueryWltPointDetailLModel.js?3.4.3"></script><script type="text/javascript" charset="utf-8" src="https://www.pingan.com/app_js/paui/1.0.3/build/position/position.js" async=""></script><script type="text/javascript" charset="utf-8" src="https://www.pingan.com/app_js/paui/1.0.3/build/position/position.js" async=""></script><script type="text/javascript" charset="utf-8" src="https://www.pingan.com/app_js/paui/1.0.3/build/tabs/tabs.js" async=""></script><meta name="WT.page_name" content="万里通积分" /><meta name="WT.pn_sku" content="" /><script src="https://www.pingan.com/app_js/sdc/src/toa.js"></script><script type="text/javascript" charset="utf-8" src="https://www.pingan.com/app_js/paui/1.0.3/build/popup/popup.js" async=""></script><script type="text/javascript" charset="utf-8" src="https://www.pingan.com/app_js/paui/1.0.3/build/popup/popup.js" async=""></script><script type="text/javascript" async="" src="https://pa-ssl.pingan.com/app_js/sdc/prd/sdc9.js"></script><script type="text/javascript" charset="utf-8" src="https://www.pingan.com/app_js/paui/1.0.3/build/dropselect/dropselect.js" async=""></script><script type="text/javascript" charset="utf-8" src="https://www.pingan.com/app_js/paui/1.0.3/build/dropselect/dropselect.js" async=""></script><script type="text/javascript" charset="utf-8" src="https://www.pingan.com/app_js/paui/1.0.3/build/position/position.js" async=""></script><script type="text/javascript" charset="utf-8" src="https://www.pingan.com/app_js/paui/1.0.3/build/popup/popup.js" async=""></script><script type="text/javascript" charset="utf-8" src="https://www.pingan.com/app_js/paui/1.0.3/build/dropselect/dropselect.js" async=""></script></head>
+
+
+<body>
+
+<div id="userdata_el" style="visibility: hidden; position: absolute;"></div><div><div class="sub_nav_wrap"><div class="sub_nav_wrap">
+<div class="por">
+<ul id="sub_nav02">
+
+    <li id="homePage"><a id="_$_sub1" href="../home/index.html" otype="menu" otitle="信用卡首页">信用卡首页</a></li>
+   
+   
+		   <li><a id="_$_sub2" class="" href="../my_bill/index.html#index" otype="button" otitle="我的账单"><span class="icon icon1"></span>我的账单</a></li>
+           
+
+			<li><a id="_$_sub3" class="" href="../account_manage/index.html#index" otype="button" otitle="账户管理"><span class="icon icon2"></span>账户管理</a></li>
+           
+
+			<li><a id="_$_sub4" class="on" href="../points_droit/index.html#queryWltPointDetailsBill" otype="button" otitle="积分权利"><span class="icon icon3"></span>积分权利</a></li>
+       	  
+
+			<li><a id="_$_sub6" class="" href="../installments_financial/index.html#billInstall" otype="button" otitle="分期理财"><span class="icon icon5"></span>分期理财</a></li>
+		  
+
+			<li><a id="_$_sub7" class="" href="../apply_for_credit/index.html#index" otype="button" otitle="信用卡申请"><span class="icon icon6"></span>信用卡申请</a></li>
+  		   
+
+			<li><a id="_$_sub8" class="" href="../home/index.html#index" otype="button" otitle="增值服务"><span class="icon icon7"></span>增值服务</a></li>
+   		  
+
+			<li><a id="_$_sub9" class="" href="../recharge_payment/index.html#shortCutOne" otype="button" otitle="我要还款"><span class="icon icon8"></span>我要还款</a></li>
+   		  
+	
+		<li class="disabled"><a id="" href="javascript:void(0);" style="color: #AAA;" otype="menu" otitle="贵宾权益">贵宾权益</a>
+			<div class="ph_conwarp dsn" style="display: none;">
+                        	<div class="ph_con">
+                                <i class="ph_con_icon"></i>
+                                <div class="ph_con_text">您尚未持有本行白金／钻石卡，若有需要可前往平安银行网点申请。</div>
+                            </div>
+                        </div>
+		</li>
+		
+</ul>
+<!--<s class="new_icon_green" style="right:256px;top:1px;"></s>-->
+</div>
+<!--下拉导航-->
+	<div class="sub_down_box02">
+		<!-- 信用卡首页 -->
+		<ul class="sub_down02 Null"></ul>
+		<!-- 我的账单 -->
+		<ul class="sub_down02 101">
+			
+		
+            <li><a href="../my_bill/index.html#index" otype="menu" otitle="本期账单">本期账单</a></li>
+        
+        
+        
+            <li><a href="../my_bill/index.html#hasBill" otype="menu" otitle="已出账单">已出账单</a></li>
+        
+        
+        
+            <li><a href="../my_bill/index.html#noBill" otype="menu" otitle="未出账单">未出账单</a></li>
+        
+        
+        
+        
+            <li><a href="../my_bill/index.html#electCash" otype="menu" otitle="电子现金交易查询">电子现金交易查询</a></li>
+        
+        
+        
+            <li class="posr"><a href="../my_bill/index.html#myMessage" otype="menu" otitle="我的消息" id="message" onclick="javascript:document.getElementById('msg').innerHTML='0';">我的消息</a></li>
+        	
+        	
+		</ul>
+		<!-- 账户管理 -->
+		<ul class="sub_down02 102">
+                  
+        	<li><a href="../account_manage/index.html#index" otype="menu" otitle="账户信息">账户信息</a></li>
+        
+        
+        
+        	<li><a href="../account_manage/index.html#cardManage" otype="menu" otitle="卡片管理">卡片管理</a></li>
+        
+        
+        
+        	<li><a href="../account_manage/index.html#pwdManage" otype="menu" otitle="密码管理">密码管理</a></li>
+        
+         
+        	<li><a href="../account_manage/index.html#tempQuotaManage" otype="menu" otitle="额度管理">额度管理</a></li>
+            
+            
+         
+        
+         
+        	<li><a href="../account_manage/index.html#billSendSetting" otype="menu" otitle="账单管理">账单管理</a></li>
+             
+         
+         
+        	<li><a href="../account_manage/index.html#myInfo" otype="menu" otitle="个人信息管理">个人信息管理</a></li>
+         
+        
+         
+        	<li><a href="../account_manage/index.html#logindynamic" otype="menu" otitle="登录验证设置">登录验证设置</a></li>
+         
+         
+        	<li><a href="../account_manage/index.html#imageUpload" otype="menu" otitle="资料上传">资料上传</a></li>
+           
+		</ul>
+		<!-- 积分权利 -->
+		<ul class="sub_down02 103">
+	   
+           <li><a href="../points_droit/index.html#queryWltPointDetailsBill" otype="menu" otitle="万里通积分">万里通积分</a></li>
+         
+         
+            <li><a href="../points_droit/index.html#ctripPoint" otype="menu" otitle="携程积分">携程积分</a></li>
+          
+	      
+            <li><a href="../points_droit/index.html#backCoin" otype="menu" otitle="回馈金">回馈金</a></li>
+           
+	     
+            <li><a href="../points_droit/index.html#queryRightPointsBill" otype="menu" otitle="我的权利">我的权利</a></li>
+           	
+			
+		</ul>
+		<!-- 网银支付设置 -->
+		<!-- 分期理财 -->
+		<ul class="sub_down02 105">
+			 
+        	<li><a href="../installments_financial/index.html#billInstall" otype="menu" otitle="账单分期">账单分期</a></li>
+        
+        
+        
+        	<li><a href="../installments_financial/index.html#singleSum" otype="menu" otitle="单笔消费分期">单笔消费分期</a></li>
+        
+        
+         
+        
+        
+        	<li><a href="../installments_financial/index.html#payInstallment" otype="menu" otitle="保费分期">保费分期</a></li>
+        
+        
+        
+        	<li><a href="../installments_financial/index.html#agilityMoney" otype="menu" otitle="灵用金">灵用金</a></li>
+        
+          
+            
+            <li><a href="../installments_financial/index.html#imprest" otype="menu" otitle="消费专用备用金分期" title="消费专用备用金分期">消费专用备用金分期</a></li>
+            
+            
+            
+            
+            
+            
+               
+        	<li><a href="../installments_financial/index.html#installList" otype="menu" otitle="分期交易查询">分期交易查询</a></li>
+        
+        
+		
+
+		
+        	<li><a href="../installments_financial/index.html#autoSingleSum" otype="menu" otitle="单笔消费自动分期申请">单笔消费自动分期申请</a></li>
+        
+        
+
+		</ul>
+		<!-- 信用卡申请 -->
+		<ul class="sub_down02 106">
+			
+				   <li><a href="../apply_for_credit/index.html#index" otype="menu" otitle="信用卡申请" title="信用卡申请">信用卡申请</a></li>
+		     
+		    
+				   <li><a href="../apply_for_credit/index.html#recommendNewCard" otype="menu" otitle="推荐办卡" title="推荐办卡">推荐办卡</a></li>
+		     
+			
+			
+				   <li><a href="../apply_for_credit/index.html#selectrecommendNewCard" otype="menu" otitle="推荐查询" title="推荐查询">推荐查询</a></li>
+		     
+			
+		</ul>
+		<!-- 充值缴费 -->
+		<ul class="sub_down02 106">
+		    
+				   <li><a href="../increment_service/index.html#payPhone" otype="menu" otitle="手机充值" title="手机充值">手机充值</a></li>
+		     
+			
+				   <li><a href="../increment_service/index.html#publicPaymentWithholding" otype="menu" otitle="公共事业费代扣" title="公共事业费代扣">公共事业费代扣</a></li>
+		    
+		     	 
+           		<li><a href="../increment_service/index.html#queryPaymentRecord" otype="menu" otitle="充值缴费记录查询" title="充值缴费记录查询">充值缴费记录查询</a></li>
+            
+		    
+		   	
+			
+		  	 	<li><a href="../increment_service/index.html#pingAnShouHu1" otype="menu" otitle="平安守护I">平安守护I</a></li>
+            
+		   
+           		<li><a href="../increment_service/index.html#pingAnGuardIIManage" otype="menu" otitle="平安守护II">平安守护II</a></li>
+           
+		    
+		   
+           		<li><a href="../increment_service/index.html#smsService" otype="menu" otitle="消费短信提醒服务">消费短信提醒服务</a></li>
+            
+		   
+		</ul>
+		<!-- 还款管理  -->
+		<ul class="sub_down02 107">
+		   
+           		<li><a href="../recharge_payment/index.html#shortCutOne" otype="menu" otitle="快捷还款">快捷还款</a></li>
+            
+		   
+           		<li><a href="../recharge_payment/index.html#autoSetting" otype="menu" otitle="自动还款设置">自动还款设置</a></li>
+           
+		    
+		    
+		   
+           		<li><a href="../recharge_payment/index.html#auto" otype="menu" otitle="网上还款">网上还款</a></li>
+            
+		   
+		   
+
+		   <!--
+           	<li><a href="../recharge_payment/index.html#payPhone" otype="menu" otitle="手机充值" title="手机充值">手机充值</a></li>
+		   -->
+		</ul>
+		<!-- 贵宾权益 -->
+	  	<ul class="sub_down02 Null">
+			<!-- 
+			
+		            <li><a href="../upscale_services/index.html#platinum" otype="menu" otitle="白金权益" title="白金权益">白金权益</a></li>
+		            -->
+			
+		            <li><a href="javascript:void(0)" onclick="window.open('/financing/ccuser/cardInformation.screen','','menubar=no,toolbar=no,location=no,directories=yes,scrollbars=yes,status=yes,resizable=yes,top=175px,left=175px,width=800px,height=550px')" id="consultQuery" otype="menu" otitle="资讯查询">资讯查询</a></li>
+		             
+		</ul>
+	</div>	
+</div>	
+	<!--下拉导航 end-->
+</div><div id="main" class="c" style="min-height: 597px;"><div class="left_box posr"><div id="account_id"><div><h2 class="accountTit" id="tarrow">
+个人信用卡
+    
+</h2></div></div>
+   
+<div id="asideNav">
+    <div style="position: relative;height: 100%;">
+        <ul id="asideNavUl" style="position: relative">
+        
+           <li id="queryWltPointDetailsBill" class="on"><a href="#queryWltPointDetailsBill" otype="menu" otitle="万里通积分" title="万里通积分">万里通积分</a></li>
+            
+    
+            <li id="ctripPoint"><a href="#ctripPoint" otype="menu" otitle="携程积分" title="携程积分">携程积分</a></li>
+            
+	 
+            <li id="backCoin"><a href="#backCoin" otype="menu" otitle="回馈金" title="回馈金">回馈金</a></li>
+               
+	 
+            <li id="queryRightPointsBill"><a href="#queryRightPointsBill" otype="menu" otitle="我的权利" title="我的权利">我的权利</a></li>
+                   
+    
+    
+    
+    
+                   <li class="line"></li>
+        <div id="commonOption"><div><li><h3>常用操作</h3></li>
+<!-- 如果是花样卡帐户 logo==992 不显示未出账单查询 -->
+					
+						<li><a href="javascript:void(0)" id="noBill" otype="menu" otitle="常用操作-未出账单查询" title="未出账单查询" class="h30 lh30">未出账单查询</a></li>
+					
+<li><a href="javascript:void(0)" id="pwdManage" otype="menu" otitle="常用操作-交易密码及消费凭密管理" title="交易密码及消费凭密管理" class="h30 lh30">交易密码及消费凭密管理</a></li>
+ <li>
+        	<h5 class="weixin_h5" style="color:black"><b>平安口袋银行APP<br />扫码立即下载</b></h5>
+             <p class="weixin_img"></p>
+            <h6 class="weixin_h6"></h6>
+        </li>
+        <li>
+        	<h5 class="weixin_h5" style="color:black"><b>平安信用卡微信公众号<br />扫码立即关注并绑卡</b></h5>
+             <!-- <p class="weixin_img"></p> -->
+             <div align="center"><img alt="扫码立即关注并绑卡" src="../common/images/bangka.png" height="129px" width="129px" /></div>
+            <h6 class="weixin_h6"></h6>
+        </li></div></div>
+        </ul>
+    </div>
+
+<ul id="leftDraw" class="c">
+        <li id="up"><span></span></li>
+        <li id="down" class="focus"><span></span></li>
+    </ul>
+</div>
+
+<style type="text/css">
+    .fixed_p {
+        background: rgb(255, 254, 238);
+        border: 1px solid rgb(255, 198, 0);
+        padding: 2px 5px;
+        position: absolute;
+        top: 25px;
+        left: 180px;
+        color: rgb(51, 51, 51);
+        font-size: 12px;
+        font-weight: normal;
+        line-height: 20px;
+        height: auto;
+        font-family: "宋体";
+        width:190px;
+        z-index: 9999;
+    }
+    .tarrow_down {
+        border: 1px solid #d6d6d6;
+    }
+    .ul_acc{width:190px; font:bold 14px/20px "微软雅黑";color:#88C6B1;text-align:center;}
+    .ul_acc .li_o{background:#F9F9F9;}
+    .ul_acc li:hover{cursor:pointer; background: #88c6b1;color: #F9F9F9;}
+</style></div><div class="right_box"><div><h1>万里通积分</h1>
+<div class="accountBox m_t10">
+<div class="jfWrapper">
+<div class="jfMain">
+<form id="jfForm">
+<div class="jfInfor clearfix">
+<h3 class="jfTit">截至目前的万里通积分总数</h3>
+<div id="id_qwpdZ"><div>
+	<p class="jfText">10</p>
+</div></div>
+<div class="dhBtnBox">
+<a id="pointsExchange" href="http://creditcard.pingan.com/kazhongjieshao/jifen.shtml" class="btn_fb14_110" otitle="积分兑换" target="_blank">积分兑换</a>
+</div>
+</div>
+<h2 class="Tit">万里通积分明细</h2>
+<div class="jfmxArea">
+<dl class="clearfix p_t5">
+<dt>账单月份：</dt>
+<dd class="m_t8_l5_b8">
+<select name="queryMonth" id="businessType" class="w110 pa_ui_dropselect_dropped" otitle="账单月份" style="border: 0px; display: none;">
+
+		<option value="201812" selected="">201812</option>
+		
+</select><div class="pa_ui_dropselect" style="width: 110px;"><div class="pa_ui_dropselect_inner paui-clearfix"><span class="pa_ui_dropselect_input_Container" style="width: 110px;"><input type="text" class="pa_ui_dropselect_input" readonly="readonly" otitle="账单月份" style="width: 106px;" /></span><span class="pa_ui_dropselect_button" otitle="账单月份" style=""><b></b></span></div></div><div class="pa_ui_dropselect_popup pa_ui_dropselect_custom" style="display: none; width: 108px;"><div class="pa_ui_dropselect_box"><ul class=""><li t="201812" v="201812" class=" pa_ui_dropselect_item"><a href="javascript:void(0);" title="201812" class="pa_ui_dropselect_item_link">201812</a></li></ul></div></div>
+<input type="button" class="searchBtn" id="searchBtn" value="查 询" otitle="查询" />
+</dd>
+</dl>	
+<div id="id_qwpdL"><div>
+
+<table border="0" cellpadding="1" cellspacing="1" class="wltjfTab m_t10">
+	<tbody>
+		<tr>
+			<td class="bg_eaeaea w94">本期余额</td>
+			<td class="bg_eaeaea w94" style="text-align: left;"> 10</td>
+			<td class="bg_eaeaea w94">本期新增</td>
+			<td class="bg_eaeaea w94" style="text-align: left;"> 10</td>
+		</tr>
+		<tr>
+			<td class="bg_eaeaea fmverdana w94">本期调整</td>
+			<td class="bg_eaeaea fmverdana w94" style="text-align: left;"> 0</td>
+			<td class="bg_eaeaea fmverdana w94">即将失效</td>
+			<td class="bg_eaeaea fmverdana w94" style="text-align: left;"> 0</td>
+		 </tr>
+	</tbody>
+</table>
+
+</div></div>
+<div class="mxArea m_t5">
+<div class="mxWord clearfix p_b10"><em class="mxWordP">展开当月明细 ▼<!--<span class="arrowTag"></span>--></em>
+</div>
+<div id="id_qwpd"><div>	<div class="wltMain dsn">
+		<table border="0" cellpadding="0" cellspacing="0" class="jfmxTab" width="100%">
+			<thead>
+				<tr>
+					<th class="w107">交易日期</th>
+					<th class="bg_line w107">入账日期</th>
+					<th class="bg_line w113">积分类型</th>
+					<th class="bg_line w93">币种</th>
+					<th class="bg_line w104">交易本金</th>
+					<th class="bg_line w104">积分累积</th>
+					<th class="bg_line w132">卡号末四位</th>
+				</tr>
+			</thead>
+			<tbody>
+				
+					<tr>							
+					<td>2018-12-13</td>
+						<td>2018-12-14</td>
+						<td class="fmsongti">新增</td>
+						<td class="fmsongti"> 人民币 </td>
+						<td>10.0</td>
+						<td class="f_c_f63">10.0</td>
+						<td>4592</td>
+					</tr>
+				
+					 					 	 </tbody>
+			</table>
+			  
+
+		<div class="clearfix bg_fff">
+			<div class="page">
+			
+				<a class="pageBtn" href="javascript:void(0)">上一页</a>
+				<select id="page1" class="w67 pa_ui_dropselect_dropped" style="border: 0px; display: none;">
+				
+				
+				<option value="1" selected="selected">第1页</option>
+				
+				</select><div class="pa_ui_dropselect" style="width: 69px;"><div class="pa_ui_dropselect_inner paui-clearfix"><span class="pa_ui_dropselect_input_Container" style="width: 49px;"><input type="text" class="pa_ui_dropselect_input" style="width: 49px;" /></span><span class="pa_ui_dropselect_button" style=""><b></b></span></div></div><div class="pa_ui_dropselect_popup pa_ui_dropselect_custom" style="display: none; width: 67px;"><div class="pa_ui_dropselect_box"><ul class=""><li t="第1页" v="1" class=" pa_ui_dropselect_item"><a href="javascript:void(0);" title="第1页" class="pa_ui_dropselect_item_link">第1页</a></li></ul></div></div>
+				<a class="pageBtn" href="javascript:void(0)">下一页</a>
+			
+			</div>
+		</div>
+	</div></div></div>
+</div>
+</div>
+</form>
+</div>
+</div>
+</div>
+<div id="id_qwpdF"></div></div></div></div><div id="footer"> <!-- 
+<div class="content c">
+    <a id="logo" class="public" href="javascript:void(0);" otype="button" otitle="中国平安" title="中国平安"></a>
+    <div class="l">
+        <p>版权所有©中国平安保险（集团）股份有限公司 未经许可不得复制、转载或摘编，违者必究!</p>
+        <p>Copyright©PING AN INSURANCE(GROUP) COMPANY OF CHINA ,LTD. ALL Rights Reserved</p>
+        <p class="icp"><a href="http://www.sznet110.gov.cn/index.jsp" target="_blank" otype="button" id="wangjing"><img src="https://resources.pingan.com/app_images/newtoa/v20/wang_jing.gif" width="15" height="23" alt="网警"></a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://www.sznet110.gov.cn/webrecord/innernet/Welcome.jsp?bano=440310120110" target="_blank" otype="button" id="nsicon"><img src="https://resources.pingan.com/app_images/newtoa/v20/ns-icon.gif" width="15" height="20" alt="安网"></a>&nbsp;&nbsp;&nbsp;&nbsp;ICP许可证号 <a href="http://www.miibeian.gov.cn/" target="_blank" otype="button" otitle="粤ICP备06118290号" title="粤ICP备06118290号" id="ICP">粤ICP备06118290号</a></p>
+    </div>
+</div>
+-->
+<div class="content c">
+			<div class="l left">
+				<a id="logo" class="header" href="javascript:void(0);" otype="button" otitle="中国平安"></a>
+				<span id="tel" class="header"></span>
+			</div>	
+			<div class="l right">
+				<p>版权所有©中国平安保险（集团）股份有限公司 未经许可不得复制、转载或摘编，违者必究!</p>
+				<p class="copy">Copyright©PING AN INSURANCE(GROUP) COMPANY OF CHINA ,LTD. ALL Rights Reserved</p>
+				<p class="icp"><a href="https://www.sznet110.gov.cn/index.jsp" target="_blank" otype="button" id="wangjing">
+				<img src="https://www.pingan.com.cn/app_images/newtoa/v20/wang_jing.gif" width="15" height="23" alt="网警" /></a>    
+				<a href="https://www.sznet110.gov.cn/webrecord/innernet/Welcome.jsp?bano=440310120110" target="_blank" otype="button" id="nsicon">
+				<img src="https://www.pingan.com.cn/app_images/newtoa/v20/ns-icon.gif" width="15" height="20" alt="安网" /></a>    ICP许可证号
+			    <a href="https://www.miibeian.gov.cn/" target="_blank" otype="button" otitle="粤ICP备06118290号" id="ICP">粤ICP备06118290号</a></p>
+			</div>	
+</div></div></div></body></html>

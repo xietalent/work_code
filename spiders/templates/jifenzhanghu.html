@@ -1,0 +1,1407 @@
+<HTML><HEAD><TITLE></TITLE>
+<SCRIPT language=javascript>var GenShell_ClientNo="009CCF5758B59681BD2BA154BF4F34D1857396522491910500012114";var DefaultAuthName="CBANK_PB";var LoginType="D";var DefaultMenuType="A";var DefaultPageNo="";var ValidUserFlag="Y";var ClientWarrantFlag="N";</SCRIPT>
+
+<META name=GENERATOR content="Microsoft Visual Studio .NET 7.1">
+<META name=CODE_LANGUAGE content=C#>
+<META name=vs_defaultClientScript content=JavaScript>
+<META name=vs_targetSchema content=http://schemas.microsoft.com/intellisense/ie5><!--
+		<link href="../doc/Styles/GenShell-Netbank.css" rel="stylesheet" title="netbank">
+		<link href="../doc/Styles/Menu-Netbank.css" rel="stylesheet" title="netbank">
+		<link href="../doc/Styles/VMenu-Netbank.css" rel="stylesheet" title="netbank">
+		--><LINK title=default rel=stylesheet href="../doc/Styles/GenShell.css"><LINK title=default rel=stylesheet href="../doc/Styles/MenuOld.css"><LINK rel=stylesheet href="../doc/Styles/leftmenu.css"><LINK rel=stylesheet type=text/css href="../doc/SearchPage/css/cmbbank80_serach.css"><LINK rel=stylesheet type=text/css href="../doc/SearchPage/css/others.css"><LINK rel=stylesheet type=text/css href="../doc/SearchPage/css/inputtypehead.css"><LINK rel=stylesheet type=text/css href="../doc/SearchPage/css/select.css"><LINK rel=stylesheet type=text/css href="../doc/SearchPage/css/fundtable.css"><!--
+		<script language="javascript" src="../../Base/doc/Scripts/sdc_web.js"></script>
+		<script language="javascript" src="../../Base/doc/Scripts/sdc_cmb.js"></script>
+		-->
+<SCRIPT language=javascript src="../../Base/doc/Scripts/BaseFunc.js"></SCRIPT>
+
+<SCRIPT language=javascript src="../../Base/doc/Scripts/default.js"></SCRIPT>
+
+<SCRIPT language=javascript src="../../Base/doc/Scripts/CommUtils.js"></SCRIPT>
+
+<SCRIPT language=javascript src="../../Base/doc/Scripts/XmlUtils.js"></SCRIPT>
+
+<SCRIPT language=javascript src="../../Base/doc/Scripts/DynaForm.js"></SCRIPT>
+
+<SCRIPT language=javascript src="../../Base/doc/Scripts/DynaXmlHttp.js"></SCRIPT>
+
+<SCRIPT language=javascript src="../doc/Scripts/GenUtils.js"></SCRIPT>
+
+<SCRIPT type=text/javascript src="../doc/Scripts/Menu.js"></SCRIPT>
+
+<SCRIPT language=javascript src="../../Base/doc/Scripts/FuncTrigger.js"></SCRIPT>
+
+<SCRIPT language=javascript src="../../Base/doc/Scripts/WebSvrCom.js"></SCRIPT>
+
+<SCRIPT language=javascript src="../../Base/doc/Scripts/HostPkg.js"></SCRIPT>
+
+<SCRIPT language=javascript src="../doc/Scripts/FuncDefineGen.js"></SCRIPT>
+
+<SCRIPT language=javascript src="../doc/Scripts/leftmenu.js"></SCRIPT>
+
+<SCRIPT language=javascript src="../doc/Scripts/favorite.js"></SCRIPT>
+
+<SCRIPT language=javascript src="../doc/Scripts/CrossRealm.js"></SCRIPT>
+
+<SCRIPT type=text/javascript charset=utf-8 src="../doc/SearchPage/js/jquery-1.12.3.min.js"></SCRIPT>
+
+<SCRIPT type=text/javascript charset=utf-8 src="../doc/SearchPage/js/jquery-migrate-1.4.1.js"></SCRIPT>
+
+<SCRIPT type=text/javascript charset=utf-8 src="../doc/SearchPage/js/typeahead.js"></SCRIPT>
+
+<SCRIPT type=text/javascript charset=utf-8 src="../doc/SearchPage/js/histroyrecord.js"></SCRIPT>
+
+<SCRIPT language=JavaScript type=text/JavaScript> 
+		moveTo(0,0);
+  		resizeTo(screen.width,screen.height);
+  		
+  		dialogFeatures = "dialogHeight:530px; dialogWidth:800px;overflow:hidden;menubar:no;location:no;toolbar:no;scrollbars:no; edge:sunken; center:Yes; help:No; resizable:Yes; status:No;";
+
+		var GenServerLoginUrl = "/CmbBank_GenShell/UI/GenShellPC/Login/Login.aspx";
+		var GenServerLoginUrlF = "/CmbBank_GenShell/UI/GenShellPC/NetBankAcc/Login.aspx";
+		var GenServerLogoutUrl = "/CmbBank_GenShell/UI/GenShellPC/Login/Logout.aspx";
+		
+		var GenShellServerUrl = "/CmbBank_GenShell/UI/GenShellPC/";	
+		var GenServerTokenApplyUrl = "/CmbBank_GenShell/UI/GenShellPC/Login/ApplyToken.aspx";	
+		var SecurityServerLoginUrl = "/CmbBank_GenShell/UI/GenShellPC/Login/SecurityLogin.aspx";
+
+		var GenOnlineCustomerServiceURL = "";
+		
+		
+		function initPage()
+		{
+			MainWorkAreaIFrame = document.getElementById(Default_FormTarget);
+			
+			InitGenShellLogin(GenShell_ClientNo);
+			
+			cw_switchMenu(DefaultMenuType);
+
+			GenOnlineCustomerServiceURL = document.getElementById("OnlineCustomerServiceURL").value;
+
+			if ((DefaultMenuType == "C_A") || (DefaultMenuType == "C_B") || (DefaultMenuType == "C_C") || DefaultMenuType == "C" ) {
+//			    document.getElementById("ImgTelephone").src = "../doc/Images/400820.gif";
+			    document.getElementById("ImgTelephone").src = "../doc/Images/Online-Custom.png";
+			    document.getElementById("ImgTelephone").onclick=function(){var url=document.getElementById("CreditCardOnlineCustomerServiceURL").value; window.open(url);}
+			    document.getElementById("CreditImg").style.height=49;
+			} else {
+			    document.getElementById("ImgTelephone").src = "../doc/Images/95555.gif";
+			    document.getElementById("ImgTelephone").onclick=function(){ var nWinLeft = (screen.width-600)/2;
+                var nWinTop = (screen.height-450)/2;
+                window.open(GenOnlineCustomerServiceURL,'WindowOpen','menubar=no,toolbar=no,location=no,directories=no,status=yes,resizable=yes,scrollbars=no,width=600,height=450,top='+nWinTop+',left='+nWinLeft);}
+			    document.getElementById("CreditImg").style.height=102;
+			}
+			//EventTrack('LoginSucceed.htm?LoginType=' + LoginType, '登录成功');
+
+			if (LoginType == "C_A" || LoginType == "C_B" || LoginType == "C_C" || GetBrowserType()!="ie") {
+			//    document.getElementById("linkLanguage").style.display = "none";
+			}
+			
+			
+		}
+		
+		function setFrameEvent()
+		{
+            document.getElementById("mainWorkArea").contentWindow.addEventListener("click",doHideAllSubMenu,false);
+        }
+ 
+        function doHideAllSubMenu()
+        {
+            hideAllSubMenu();
+        }
+		
+				
+		function switchImg(menuType)
+		{
+		    try { g_currMenuType = menuType; } catch (e) { }; //for CallFuncEx2
+		    if ( menuType == "C_A" || menuType == "C_B" || menuType == "C_C" || menuType == "C" ) {
+		        document.getElementById("ImgTelephone").src = "../doc/Images/Online-Custom.png";
+		        document.getElementById("ImgTelephone").onclick=function(){var url=document.getElementById("CreditCardOnlineCustomerServiceURL").value; window.open(url);}
+		        document.getElementById("CreditImg").style.height=49;
+		    } else {
+		        document.getElementById("ImgTelephone").src = "../doc/Images/95555.gif";
+		        document.getElementById("ImgTelephone").onclick=function(){ var nWinLeft = (screen.width-600)/2;
+                var nWinTop = (screen.height-450)/2;
+                window.open(GenOnlineCustomerServiceURL,'WindowOpen','menubar=no,toolbar=no,location=no,directories=no,status=yes,resizable=no,scrollbars=no,width=600,height=450,top='+nWinTop+',left='+nWinLeft);}
+		        document.getElementById("CreditImg").style.height=102;
+		    }
+			if(menuType == "A")
+			{
+				if(TheForm.imgCommonCard!=null)
+					TheForm.imgCommonCard.src = "../doc/Images/tab_CommonCard_sel.gif";
+				if(TheForm.imgFushuCard!=null)
+					TheForm.imgFushuCard.src = "../doc/Images/tab_FushuCard_unsel_01.gif";
+				if(TheForm.imgCreditCard!=null)
+				{
+				    if(TheForm.imgFushuCard!=null)
+					  TheForm.imgCreditCard.src = "../doc/Images/tab_CreditCard_unsel_03.gif";
+					else 
+					  TheForm.imgCreditCard.src = "../doc/Images/tab_CreditCard_unsel_01.gif";
+				}
+				if(TheForm.imgBook!=null)
+					TheForm.imgBook.src = "../doc/Images/tab_Book_unsel_03.gif";
+				if(TheForm.imgUser!=null)
+					TheForm.imgUser.src = "../doc/Images/tab_User_unsel_02.gif";
+				return;
+			}
+			if(menuType == "H")
+			{
+			    if(TheForm.imgCommonCard!=null)
+					TheForm.imgCommonCard.src = "../doc/Images/tab_CommonCard_unsel_01.gif";
+				if(TheForm.imgFushuCard!=null)
+					TheForm.imgFushuCard.src = "../doc/Images/tab_FushuCard_sel.gif";
+				if(TheForm.imgCreditCard!=null)
+					TheForm.imgCreditCard.src = "../doc/Images/tab_CreditCard_unsel_01.gif";
+				if(TheForm.imgBook!=null)
+					TheForm.imgBook.src = "../doc/Images/tab_Book_unsel_03.gif";
+				if(TheForm.imgUser!=null)
+					TheForm.imgUser.src = "../doc/Images/tab_User_unsel_02.gif";
+				return;
+			}
+			if(menuType == "B")
+			{
+				if(TheForm.imgCommonCard!=null)
+					TheForm.imgCommonCard.src = "../doc/Images/tab_CommonCard_unsel_02.gif";
+				if(TheForm.imgFushuCard!=null)
+					TheForm.imgFushuCard.src = "../doc/Images/tab_FushuCard_unsel_03.gif";
+				if(TheForm.imgCreditCard!=null)
+					TheForm.imgCreditCard.src = "../doc/Images/tab_CreditCard_unsel_02.gif";
+				if(TheForm.imgBook!=null)
+					TheForm.imgBook.src = "../doc/Images/tab_Book_sel.gif";
+				if(TheForm.imgUser!=null)
+					TheForm.imgUser.src = "../doc/Images/tab_User_unsel_01.gif";
+				return;
+			}
+			if((menuType == "C_A")||(menuType == "C_B")||(menuType == "C_C") || menuType=="C" )
+			{
+				if(TheForm.imgCommonCard!=null)
+				{
+				    if(TheForm.imgFushuCard!=null)
+					  TheForm.imgCommonCard.src = "../doc/Images/tab_CommonCard_unsel_02.gif";
+					else 
+					  TheForm.imgCommonCard.src = "../doc/Images/tab_CommonCard_unsel_01.gif";
+				}
+				if(TheForm.imgFushuCard!=null)
+					TheForm.imgFushuCard.src = "../doc/Images/tab_FushuCard_unsel_02.gif";
+				if(TheForm.imgCreditCard!=null)
+					TheForm.imgCreditCard.src = "../doc/Images/tab_CreditCard_sel.gif";
+				if(TheForm.imgBook!=null)
+					TheForm.imgBook.src = "../doc/Images/tab_Book_unsel_01.gif"
+				if(TheForm.imgUser!=null)
+				{
+				    if(TheForm.imgBook!=null)
+					   TheForm.imgUser.src = "../doc/Images/tab_User_unsel_02.gif"
+					else 
+					   TheForm.imgUser.src = "../doc/Images/tab_User_unsel_01.gif"
+				}
+				return;
+			}
+			if(menuType == "D")
+			{
+				if(TheForm.imgCommonCard!=null)
+					TheForm.imgCommonCard.src = "../doc/Images/tab_CommonCard_unsel_02.gif";
+				if(TheForm.imgFushuCard!=null)
+					TheForm.imgFushuCard.src = "../doc/Images/tab_FushuCard_unsel_03.gif";
+				if(TheForm.imgCreditCard!=null)
+				{
+				    if(TheForm.imgBook!=null)
+					   TheForm.imgCreditCard.src = "../doc/Images/tab_CreditCard_unsel_03.gif";
+					else
+					   TheForm.imgCreditCard.src = "../doc/Images/tab_CreditCard_unsel_02.gif";
+				}
+				if(TheForm.imgBook!=null)
+					TheForm.imgBook.src = "../doc/Images/tab_Book_unsel_02.gif"
+				if(TheForm.imgUser!=null)
+					TheForm.imgUser.src = "../doc/Images/tab_User_sel.gif"
+				return;
+			}						
+			try{g_currMenuType = 'A';}catch(e){};//for CallFuncEx2
+			TheForm.imgCommonCard.src = "../doc/Images/tab_CommonCard_sel.gif";
+            TheForm.imgFushuCard.src = "../doc/Images/tab_FushuCard_unsel_01.gif";
+			TheForm.imgCreditCard.src = "../doc/Images/tab_CreditCard_unsel_03.gif";
+			TheForm.imgBook.src = "../doc/Images/tab_Book_unsel_03.gif";
+			TheForm.imgUser.src = "../doc/Images/tab_User_unsel_02.gif";
+			return;			
+		}
+
+		//默认打开欢迎页
+		function cw_switchMenu(menuType)
+		{
+            try { g_currMenuType = menuType; } catch (e) { };
+			initMenu(menuType);
+			initShortCutMenu(menuType);
+			cw_openHomePage(menuType);
+		}	
+		
+		//默认打开业务功能	
+		function switchMenu(menuType)
+		{
+			initMenu(menuType);
+			initShortCutMenu(menuType);
+			openFirstPage(menuType);
+		}
+		
+		
+		function switchMenuOnly(menuType)
+		{
+			initMenu(menuType);
+			initShortCutMenu(menuType);
+		}			
+		
+		function initMenu(menuType)
+		{
+			hideAllSubMenu();
+			var data2Send = new Object();
+			data2Send.ClientNo = GenShell_ClientNo;
+			data2Send.MenuType = menuType;
+			
+			var menuData = GenSendXmlRequest(data2Send,"/CmbBank_GenShell/UI/GenShellPC/Login/GetMenuData.aspx");
+			if(menuData)
+			{
+				sysMenuTD.innerHTML = menuData;
+			}
+			buildMenu("menu");
+			if(window.event!=null)
+				window.event.returnValue = false;
+			return false;
+		}		
+		
+		function logoutGenServer()
+		{
+		    if(window.event)
+			    window.event.returnValue = false;
+			var logoutInfo = new Object();
+			logoutInfo.ClientNo = GenShell_ClientNo;
+			var bRet = GenLogoutShell(logoutInfo,GenServerLogoutUrl);
+			return bRet;
+		}		
+		
+		function doRelogin()
+		{
+			var bRet = logoutGenServer();
+			if(LoginType=="F")
+				window.location = GenServerLoginUrlF;
+			else
+				window.location = GenServerLoginUrl;
+		}		
+			
+		function doExit()
+		{
+			if (confirm("您确定要退出个人银行大众版吗？"))
+			{
+				var bRet = logoutGenServer();
+				window.opener = null;
+				if(/Safari/.test(window.navigator.userAgent))
+				    window.open('','_self',''); 
+				window.close();
+			}
+		}
+
+        //i理财账户关户后自动退出大众版
+		function doExitAndClose() {
+		    doRelogin();
+		}
+		
+		function doUnload()
+		{
+			if((window.screenLeft >= 10000 && window.screenTop >= 10000) || event.altKey) 
+			{
+				var bRet = logoutGenServer();
+			}
+			else
+			{
+				GenLogoutTransServerOnly();
+			}
+		}
+		
+		function doExitSimple()
+		{
+			alert("谢谢您一直以来的支持，再见。");
+			window.opener = null;
+			window.close();
+		}		
+
+		function triggerNull()
+		{
+			alert("功能暂未提供");
+			window.event.returnValue = false;
+		}		
+		
+		function openFirstPage(menuType)
+		{
+			//空白页
+			mainWorkArea.document.write("<style TYPE='text/css'>.mycontent {font: 9pt/14pt '宋体';}</style>");
+			mainWorkArea.document.write("<body style='margin-top:0;margin-bottom:0;margin-left:0;margin-right:0;'></body>");
+			mainWorkArea.document.close();
+
+			if (menuType == "A") {
+			    //一卡通
+			    CallFunc('CBANK_DEBITCARD_ACCOUNTMANAGER', 'AccountQuery/Pro8/am_QuerySubAccount.aspx', 'FORM', null);
+			}
+			else if (menuType == "H") {
+			    //附属卡
+			    CallFunc('CBANK_SUBDEBITCARD', 'AccountManager/am_ManageFushukaAccount.aspx', 'FORM', null);
+			}
+			else if (menuType == "HH") {//一网通用户登陆，发现没有关联一卡通，只关联了附属卡，点击附属卡的时候进入附属卡的额度查询页面
+			    //附属卡
+			    CallFunc('CBANK_SUBDEBITCARD', 'AccountManager/am_QuerySubAccount.aspx', 'FORM', null);
+			}
+			else if (menuType == "B") {
+			    //存折
+			    CallFunc('CBANK_BOOK', 'Book/am_QuerySubAccount.aspx', 'FORM', null);
+			}
+			else if (menuType == "C_A") {
+			    //信用卡_个人卡
+			    CallFunc('CBANK_CREDITCARD', 'CreditCard/am_QueryReckoningNotRMB.aspx', 'FORM', null, 'MainPanel=inline', 'SIDType=A');
+			}
+			else if (menuType == "C_B") {
+			    //信用卡_商务卡个人偿债
+			    CallFunc('CBANK_CREDITCARD', 'CreditCard/am_QueryReckoningNotRMB.aspx', 'FORM', null, 'MainPanel=inline', 'SIDType=B');
+			}
+			else if (menuType == "C_C") {
+			    //信用卡_商务卡公司偿债
+			    CallFunc('CBANK_CREDITCARD', 'CreditCard/am_QueryReckoningNotRMB.aspx', 'FORM', null, 'MainPanel=inline', 'SIDType=C');
+			}
+			else if (menuType == "D") {
+			    //一网通用户
+			CallFunc('CBANK_USER', 'UniUser/AccountInfo.aspx', 'FORM', null, 'CreditCardVersion=2.0');
+			} 
+			else if (menuType == "C") {
+			    //信用卡新系统
+			    CallFunc('CBANK_CREDITCARD_ACCOUNT', 'Account/am_QueryAccount.aspx', 'FORM', null);
+			}
+            if(window.event)
+		        window.event.returnValue = false;
+			return false;
+		}		
+
+		function cw_openHomePage(menuType)
+		{
+			//空白页
+			mainWorkArea.document.write("<style TYPE='text/css'>.mycontent {font: 9pt/14pt '宋体';}</style>");
+			mainWorkArea.document.write("<body style='margin-top:0;margin-bottom:0;margin-left:0;margin-right:0;'></body>");
+			mainWorkArea.document.close();
+
+			if (ValidUserFlag !== "Y" && LoginType == "D") {
+                //未实名一网通用户
+			    CallFuncEx2('D', 'CBANK_USER', 'UniUser/CmbCardBound.aspx', 'FORM', null, 'panelcontrol=HomeSelfHelpTransfer');
+			}
+            else if (DefaultPageNo == "") {
+                 if ( menuType == "C_A" || menuType == "C_B" || menuType == "C_C" || menuType == "C" ) {
+                     CallFunc('CBANK_HOMEPAGE', 'HomePageGen/CreditHomePage.aspx', 'FORM', null, 'DefaultMenuType=' + menuType);
+		        } else {
+                    CallFunc('CBANK_HOMEPAGE', 'HomePageGen/HomePage.aspx', 'FORM', null, 'DefaultMenuType=' + menuType);
+		        }
+            }
+            //银证通快速通道
+            else if (DefaultPageNo == "105101" && (LoginType == "A" || LoginType == "B" || LoginType == "D") && (DefaultMenuType == "A" || DefaultMenuType == "B")) {
+                CallFunc('CBANK_INVEST', 'Invest/StockHome.aspx', 'FORM', null);
+            }
+            //银基通快速通道
+            else if (DefaultPageNo == "105202" && (LoginType == "A" || LoginType == "B" || LoginType == "D") && (DefaultMenuType == "A" || DefaultMenuType == "B")) {
+                CallFunc('CBANK_INVEST', 'Fund/FundHome.aspx', 'FORM', null);
+            }
+            //受托理财快速通道
+            else if (DefaultPageNo == "105402" && (LoginType == "A" || LoginType == "D") && DefaultMenuType == "A") {
+                CallFunc('CBANK_INVEST', 'Financing/QueryFundInAcc.aspx', 'FORM', null, 'AccType=A');
+            }
+            //金融超市快速通道
+            else if (DefaultPageNo == "000001" && (LoginType == "A" || LoginType == "B" || LoginType == "F")) {
+                CallFunc('CBANK_INVEST', 'Login/FinancePaymentHomepage.aspx', 'FORM', null, 'FinancePaymentXmlRequest=' + sFinancePaymentXmlRequest);
+            }
+            else {
+                CallFunc('CBANK_HOMEPAGE', 'HomePageGen/HomePage.aspx', 'FORM', null, 'DefaultMenuType=' + menuType);
+            }
+            
+            try{
+                var hasFuncJump = "";
+                if (hasFuncJump) {
+                    
+                }
+            }catch(e){
+                CallFunc('CBANK_HOMEPAGE', 'HomePageGen/HomePage.aspx', 'FORM', null, 'DefaultMenuType=' + menuType);
+            }
+            
+		    if(window.event)
+		        window.event.returnValue = false;
+			return false;
+		}		
+				
+		//初始化快捷菜单
+		function initShortCutMenu(menuType)
+		{
+			/*var menuIds = ["A","B","C_A","C_B","C_C","D"];
+			
+			for(var i=0;i<menuIds.length;i++)
+			{
+				var menuId = "vmenu" + menuIds[i];
+				if(menuType==menuIds[i])
+				{
+					document.getElementById(menuId).style.display = "";
+				}else
+					document.getElementById(menuId).style.display = "none";
+			}
+			
+			var menuId = "vmenu" + menuType;
+			if( document.getElementById(menuId).innerHTML!="" )
+				return false;*/
+			
+					
+			var menu = AccMenuManager.getMenu("vmenu");
+			var needOpenUsual = false;
+			if( null == menu )
+			{
+				menu = AccMenuManager.createNewMenu("vmenu","headerOpen","headerClose","menuItem");
+				
+				var header = menu.addHeader("我的收藏","");
+				//var favSetEl = document.createElement("a");
+				//favSetEl.id = "lkFavSet";
+				//favSetEl.onclick = new Function("try{ CallFunc('CBANK_SHELL','Service/nv_Favorite.aspx','FORM',null);window.event.cancelBubble=true;return false;window.focus();}catch(e){}");
+				//favSetEl.innerHTML = "[定制]";
+				//header.firstChild.appendChild(favSetEl);
+				FavoriteMgr.Init(header.id);
+				FavoriteMgr.Update();
+				if(header.size()>1)
+					needOpenUsual = false;
+				else
+				{
+					header.hide();
+					needOpenUsual = true;
+				}
+				
+				var header1 = menu.addHeader("快速通道","");
+				var header = menu.addHeader("最近操作","");
+				HistoryOpMenuMgr.init("vmenu",header);
+				HistoryOpMenuMgr.clear();
+			}
+			var header1 = menu.getHeaderAt(1);
+			
+			var data2Send = new Object();
+			data2Send.ClientNo = GenShell_ClientNo;
+			data2Send.Command = "query";
+			data2Send.MenuType = menuType;
+			
+			var menuData = GenSendXmlRequest(data2Send,"/CmbBank_GenShell/UI/GenShellPC/Login/MngShortCut.aspx");
+			
+			if(menuData)
+			{
+				header1.setContent(menuData);
+			}
+			if(needOpenUsual)
+				header1.showAll();
+			if(window.event!=null)
+				window.event.returnValue = false;
+			return false;
+		}		
+		
+		function adjustFrameSize()
+		{
+		    
+		    var mainWorkArea=document.getElementById("mainWorkArea");
+            if(GetBrowserType()=="ie") {
+                if(document.getElementById("mainWorkArea").contentWindow.document.documentMode > 7) {
+                    mainWorkArea.style.height = mainWorkArea.contentWindow.document.body.scrollHeight<400?400:mainWorkArea.contentWindow.document.body.scrollHeight + 35;
+                } else {
+                mainWorkArea.style.height = mainWorkArea.contentWindow.document.body.scrollHeight<400?400:mainWorkArea.contentWindow.document.body.scrollHeight;
+                }
+            }
+            else if(GetBrowserType()=="firefox")
+                mainWorkArea.style.height = mainWorkArea.contentWindow.document.documentElement.scrollHeight<400?400:mainWorkArea.contentWindow.document.documentElement.scrollHeight;
+            else
+            {
+                var contentHeight = 0;
+                var bodyChildNodes = mainWorkArea.contentWindow.document.body.childNodes;
+                for(var i=0 ; i<bodyChildNodes.length; i++)
+                {
+                    var el = bodyChildNodes[i];
+                    
+                    if(el.nodeType != 1){
+                    	continue;
+                    }
+                    
+                    var style = window.getComputedStyle ? window.getComputedStyle(el, null) : el.currentStyle;
+                    var isFlowout = (style != null && (style.position == 'absolute' || style.position == 'fixed'));
+                    
+                    
+                    if(!isFlowout)
+                    {
+                        contentHeight += bodyChildNodes[i].scrollHeight;
+                    }
+                }
+                mainWorkArea.style.height = contentHeight<300?400:contentHeight+ 100;
+            }
+		   // mainWorkArea.style.height = mainWorkArea.contentWindow.document.body.scrollHeight<400?400+0+"px":mainWorkArea.contentWindow.document.body.scrollHeight + 0 + "px";
+			mainWorkArea.contentWindow.document.body.style.overflowX='auto';
+			mainWorkArea.contentWindow.document.body.style.overflowY='auto';
+            if(GetBrowserType()!="ie")   //非IE浏览器点击mainWorkArea时隐藏菜单；onactivate="hideAllSubMenu();"非IE下不可用。
+                setFrameEvent();   
+            
+		}	
+					
+		
+		var sDisplay = "inline";
+		function swingShortCutMenu()
+		{
+			if(sDisplay == "inline")
+			{
+				sDisplay = "none";
+				document.getElementById("tdShortCutMenu").style.display = "none";
+				document.getElementById("splitter").style.backgroundImage = "url(../doc/Images/splitter_r.gif)";
+			}
+			else
+			{
+				sDisplay = "inline";
+				document.getElementById("tdShortCutMenu").style.display = "";
+				document.getElementById("splitter").style.backgroundImage = "url(../doc/Images/splitter_l.gif)";
+			}
+		}
+		
+		function onSearch()
+		{
+		    MovetoInputStart("txtSearch");
+		    var keyWordInput = document.getElementById("txtSearch");
+			if(keyWordInput.style.color=="gray")
+			{
+				CallFunc('CBANK_SHELL','Service/nv_FuncSearch.aspx','FORM',null);
+				return false;
+				alert("请输入关键字！");
+				keyWordInput.value = "";
+				keyWordInput.style.color="black";
+				keyWordInput.focus();
+				return false;
+			}
+			var keyWord = keyWordInput.value;
+			CallFunc('CBANK_SHELL','Service/nv_FuncSearch.aspx','FORM',null,'SearchKey='+keyWord);
+		}
+
+		function MovetoInputStart(obj) {
+		    var tobj = document.getElementById(obj);
+		    if (tobj.value.length > 6)
+		    {
+		        var spos = 0;
+		        if (spos < 0)
+		        {
+		            spos = tobj.value.length;
+		        }
+		       if (tobj.createTextRange) { //兼容IE
+		            var rng = tobj.createTextRange();
+		            rng.move('character', spos);
+		            rng.select();
+		        }
+		        else if (tobj.setSelectionRange) { //兼容火狐,谷歌
+		            setTimeout(function () {
+		                tobj.setSelectionRange(spos, spos);
+		                tobj.focus();
+		            }, 0);
+		        }
+		    }
+		}
+
+function changeToEnglish() {
+    if (LoginType == "C_A") {
+        alert("英文版暂不支持信用卡");
+        return;
+    }
+    if (LoginType == "C_B" || LoginType == "C_C") {
+        //CallFunc('CBANK_SHELL', '../GenShellEnPC/Login/GenIndex.aspx', 'FORM', '_self');
+        alert("英文版暂不支持信用卡");
+        return;
+    }
+    CallFunc('CBANK_SHELL', '../GenShellPC_EN/Login/GenIndex.aspx', 'FORM', '_self');
+}
+
+    
+		function HuanYing()
+		{
+			if ((g_currMenuType == "C_A") || (g_currMenuType == "C_B") || (g_currMenuType == "C_C") || g_currMenuType == "C" ) {
+			    CallFunc('CBANK_HOMEPAGE', 'HomePageGen/CreditHomePage.aspx', 'FORM', null);
+			} else {
+			    CallFunc('CBANK_HOMEPAGE', 'HomePageGen/HomePage.aspx', 'FORM', null);
+			}
+		}
+
+		function ShowHistoryRecord() {
+		    var sCookieNam = "";
+		    var sCustomerID = Trim(document.getElementById("CustomerIDforSearch").value);
+		    var sClientNo = Trim(document.getElementById("LoginIDforSearch").value);
+		    if (sCustomerID != null && sCustomerID != "") {
+		        sCookieName = "CMBSerachTextCookie_" + sCustomerID;
+		    }
+		    else if (sClientNo != null && sClientNo != "") {
+		        sCookieName = "CMBSerachTextCookie_" + sClientNo;
+		    }
+		    else
+		    {
+		        var sRecords = "";
+		        sRecords.length = 0;
+		        return sRecords;
+		    }
+		    var sRecords = GetTextCookie(sCookieName);
+		    if (sRecords == "") {
+		        sRecords.length = 0;
+		    }
+		    return sRecords;
+		}
+
+		function DoDeleteRecord() {
+		    var strConfirmMsg = "是否清空搜索历史？";
+		    if (confirm(strConfirmMsg)) {
+		        var sCookieNam = "";
+		        var sCustomerID = Trim(document.getElementById("CustomerIDforSearch").value);
+		        var sClientNo = Trim(document.getElementById("LoginIDforSearch").value);
+		        if (sCustomerID != null && sCustomerID != "") {
+		            sCookieName = "CMBSerachTextCookie_" + sCustomerID;
+		        }
+		        else if (sClientNo != null && sClientNo != "") {
+		            sCookieName = "CMBSerachTextCookie_" + sClientNo;
+		        }
+		        else {
+		            return;
+		        }
+		        DelTextCookie(sCookieName);
+		    }
+		}
+
+		function ShowHotKeyWords() {
+		    var sHotKeyWords = Trim(document.getElementById("HotSearchKeyWords").value);
+		    sHotKeyWords = sHotKeyWords.split(",");
+		    //var sRecords = GetTextCookie(sCookieName);
+		    if (sHotKeyWords == "") {
+		        sHotKeyWords.length = 0;
+		    }
+		    return sHotKeyWords;
+		}
+    </SCRIPT>
+</HEAD>
+<BODY onload=initPage(); style="MARGIN: 0px 2px" bgColor=#ffffff onunload=doUnload(); windowc_onresizez="true">
+<FORM id=TheForm onsubmit="window.event.returnValue = false;" method=post name=TheForm action=./GenIndex.aspx>
+<DIV><INPUT id=__VIEWSTATE type=hidden value=NLUK+/t+SfHyV6N09rlA9s0ZXYeMqpDJtWr1JpoPc/aW10+nBmggSPw3tMdTjHyMDoVFJbkPnt+Dfl8Ozq9aIfS6zZQpXNGZw2XcEGGnn2ourt2sbVCAGEG4wsBUQhtSGuXyYgyUm6TGRzbFiDWItBHB1m4DiXdqqmoFZbOMcfRmkZmRQUK/zq9cPlp8TWrdDdh2ERUHwPcjiFNs8iAqBhhJkZx4QGED8nGvwuXV6KaYvC0HVFSTQ35M5xOVBwwIJ29BFGX9K8Go1c2RgcRca1o9BgXS6/mTaJTUy0k1f/y09Lta3NvblI5xBuztPyAme3LTnloXonDOeIlOY/tZUUEg7yZzoeCff5NJi7aCwOoyIA9PMq5Tk8+88sPeo/gVf2SDLDs5LhnP8mjevpgq0AogUrltKjjGIKl6KTiXaB6knRf2rz+L5YA/k/OlrDAPvSUecouKh+M0Vj2tMk0kYMmIg3BII6cKHtzWNLa3P/JWpAmFXEXR+6i+qune2C1FWwGPYswZv2S9pTb9gF3PM6YqImEvm4OAmLqw5Mw9rSB0prg8seyyk/PjPcBMRFKeeWUO79JSFWOsWNjENUOkAbnXRIb4E/NJlcUkJ/VI/sbHAMrmb4FIxowPGu+i8TUoVj+iaFvqg0UufX7Wvmpd8EpHgo6nqbWBK7j39kNZGJdFjE6N156RrESgRb1yxcsN4ndVNXdtxY44OQiQCGHe3tAmpMv7ALxd3MiaXp2S1Q3m5FoNb9FLPfKNYEHN6ZkNKmsfJqzrePAeYf4zw80JYRBisbvC81hDepcX9NlZu8wSzWyib+doxS+LQYXmxQj+ name=__VIEWSTATE> </DIV>
+<DIV><INPUT id=__VIEWSTATEGENERATOR type=hidden value=1787CC14 name=__VIEWSTATEGENERATOR> <INPUT id=__EVENTVALIDATION type=hidden value=XAXB+nxbZ+H6lRIENFmcDHC+QuBH578CtpscRZsnk9ptEyH4MOG+FG2tX/mWxZvtbaTjdtkZYn8tQQL00q8GTzEDon5z2laslb1OEis48c8go1udxt9ORIq0u94oKEcdy371xMCInzmJ6WyaBYNy4iRp7W7s7uEaDjy9U6W/0IaJ9t5TZhqS2CKzcg5VH1AOj+b45Mqv6cRqFI8bii/1+/UTkHD1a0+mC9ibCNxX+U/F08PLaqOShhSV51t7tDDXd5hXAh5IRHLYT/kFvQzEIokWbhmjUatraUCMd7DNf/U= name=__EVENTVALIDATION> </DIV>
+<TABLE id=mainTable height="100%" cellSpacing=0 cellPadding=0 width="100%" border=0>
+<TBODY>
+<TR>
+<TD>
+<TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+<TBODY>
+<TR style="HEIGHT: 90px">
+<TD height=90 background=../doc/images/headBg_02.gif width="100%">
+<TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+<TBODY>
+<TR>
+<TD><IMG border=0 src="../doc/images/headBg_01.gif" width=328 height=66></TD>
+<TD background=../doc/images/headBg_02.gif width="100%"></TD></TR></TBODY></TABLE>
+<TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+<TBODY>
+<TR>
+<TD height=24 background=../doc/images/headBg_17.gif width="100%"></TD></TR></TBODY></TABLE></TD>
+<TD width=418>
+<TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+<TBODY>
+<TR height=62>
+<TD background=../doc/images/headBg_02.gif width="100%">
+<TABLE cellSpacing=0 cellPadding=0 width=400 border=0>
+<TBODY>
+<TR>
+<TD style="PADDING-TOP: 6px; PADDING-RIGHT: 20px" height=62 vAlign=top align=right><SPAN id=linkLanguage><A onclick=changeToEnglish(); title="Change to English Version" href="#null">English</A>&nbsp;|&nbsp;</SPAN><A onclick="triggerFunc('../Service/Feedback.aspx', 'MODAL_DIALOG', '_self');" href="#null">反馈建议</A>&nbsp;|&nbsp;<A onclick=HuanYing(); href="#null">欢迎页</A>&nbsp;|&nbsp;<A onclick="CallFunc('CBANK_SHELL','Service/WebSiteMap.aspx','FORM',null);" href="#null">功能地图</A>&nbsp;|&nbsp;<A onclick="CallFunc('CBANK_SHELL','Login/HP_QueryLog.aspx','FORM',null);" href="#null">日志查询</A>&nbsp;|&nbsp;<A onclick=doRelogin(); href="#null">重登录</A>&nbsp;|&nbsp;<A href="javascript:doExit();">退出</A> </TD></TR></TBODY></TABLE></TD></TR>
+<TR style="HEIGHT: 28px">
+<TD background=../doc/images/headBg_16.gif width="100%">
+<TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+<TBODY>
+<TR>
+<TD background=../doc/images/headBg_18.gif width="100%"></TD>
+<TD height=28><IMG onclick="switchImg('A');switchMenu('A');" id=imgCommonCard style="BORDER-LEFT-WIDTH: 0px; CURSOR: pointer; BORDER-RIGHT-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-TOP-WIDTH: 0px" alt=一卡通 src="../doc/Images/tab_CommonCard_unsel_01.gif"><IMG onclick="switchImg('C');switchMenu('C');" id=imgCreditCard style="BORDER-LEFT-WIDTH: 0px; CURSOR: pointer; BORDER-RIGHT-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-TOP-WIDTH: 0px" alt=信用卡 src="../doc/Images/tab_CreditCard_sel.gif"><IMG onclick="switchImg('D');switchMenu('D');" id=imgUser style="BORDER-LEFT-WIDTH: 0px; CURSOR: pointer; BORDER-RIGHT-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-TOP-WIDTH: 0px" alt=一网通用户 src="../doc/Images/tab_User_unsel_01.gif"></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></TD></TR>
+<TR>
+<TD id=sysMenuTD height=29 background=../doc/images/rootMenuBorder.gif colSpan=3>
+<UL id=menu>
+<LI id=LI_0.14939134421907546 isRoot="true" isLeaf="false" isSub="true" displayed="false"><A class=" rootmenuA" href="https://pbsz.ebank.cmbchina.com/CmbBank_GenShell/UI/GenShellPC/Login/GenIndex.aspx#">客户管理</A> 
+<UL id=ID0.3597549767312108 style="LEFT: -9999em">
+<LI id=LI_0.8250815804074032 isRoot="false" isLeaf="true"><A onclick="CallFuncEx2('C','CBANK_CREDITCARD_CUSTOMER','Customer/hp_A_CreditCard_ServiceHomePage.aspx','FORM',null);" href="https://pbsz.ebank.cmbchina.com/CmbBank_GenShell/UI/GenShellPC/Login/GenIndex.aspx#">客户管理首页</A> </LI>
+<LI id=LI_0.44417242882584973 isRoot="false" isLeaf="true"><A onclick="CallFuncEx2('C','CBANK_CREDITCARD_CUSTOMER','Customer/cm_QueryCustomInfo.aspx','FORM',null);" href="https://pbsz.ebank.cmbchina.com/CmbBank_GenShell/UI/GenShellPC/Login/GenIndex.aspx#">客户综合查询</A> </LI>
+<LI id=LI_0.8842731636021546 isRoot="false" isLeaf="false" isSub="true" displayed="false"><A class=" submenu" style="COLOR: #0783df" href="https://pbsz.ebank.cmbchina.com/CmbBank_GenShell/UI/GenShellPC/Login/GenIndex.aspx#">网上申请</A> 
+<UL id=ID0.22845497504732265 style="LEFT: -9999em">
+<LI id=LI_0.15200028460274506 isRoot="false" isLeaf="true"><A onclick="CallFuncEx2('C','CBANK_CREDITCARD_CUSTOMER','Customer/na_QuerySchedule.aspx','FORM',null);" href="https://pbsz.ebank.cmbchina.com/CmbBank_GenShell/UI/GenShellPC/Login/GenIndex.aspx#">申请进度查询</A> </LI>
+<LI id=LI_0.977029817306744 isRoot="false" isLeaf="true"><A onclick="window.open('https://ccclub.cmbchina.com/CrdCardApply/RecommentCfm.aspx?cardsel=&amp;where=pc1_pc2&amp;WT.mc_id=M17PCGW1051C217100AD','QuerySendSchedule','menubar=yes,toolbar=yes,location=yes,directories=yes,status=yes,resizable=yes,scrollbars=yes,width=800,height=600,top=0,left=0');" href="https://pbsz.ebank.cmbchina.com/CmbBank_GenShell/UI/GenShellPC/Login/GenIndex.aspx#">寄送进度查询</A> </LI>
+<LI id=LI_0.686313689179771 isRoot="false" isLeaf="true"><A onclick="window.open('http://ccclub.cmbchina.com/CCPRODUCT/cardlist.aspx','ApplyMainCard','menubar=yes,toolbar=yes,location=yes,directories=yes,status=yes,resizable=yes,scrollbars=yes,width=800,height=600,top=0,left=0');" href="https://pbsz.ebank.cmbchina.com/CmbBank_GenShell/UI/GenShellPC/Login/GenIndex.aspx#">信用卡网上申请</A> </LI>
+<LI id=LI_0.5626205212307518 isRoot="false" isLeaf="true"><A onclick="window.open('https://ccclub.cmbchina.com/CrdCardApply/RecommentCfm.aspx?cardsel=&amp;where=pc1_pc2&amp;WT.mc_id=M17PCGW1051C218100AD','RecommendApplyCard','menubar=yes,toolbar=yes,location=yes,directories=yes,status=yes,resizable=yes,scrollbars=yes,width=820,height=600,top=0,left=0');" href="https://pbsz.ebank.cmbchina.com/CmbBank_GenShell/UI/GenShellPC/Login/GenIndex.aspx#">推荐好友办卡</A> </LI></UL></LI>
+<LI id=LI_0.6303597233692111 isRoot="false" isLeaf="true"><A onclick="CallFuncEx2('C','CBANK_CREDITCARD_CUSTOMER','Customer/pm_ModifyQueryPin.aspx','FORM',null);" href="https://pbsz.ebank.cmbchina.com/CmbBank_GenShell/UI/GenShellPC/Login/GenIndex.aspx#">查询密码修改</A> </LI>
+<LI id=LI_0.6782787452590047 isRoot="false" isLeaf="true"><A onclick="CallFuncEx2('C','CBANK_CREDITCARD_ACCOUNT','Account/cs_ModifyEmail.aspx','FORM',null);" href="https://pbsz.ebank.cmbchina.com/CmbBank_GenShell/UI/GenShellPC/Login/GenIndex.aspx#">Email地址设置</A> </LI>
+<LI id=LI_0.6189519895312473 isRoot="false" isLeaf="true"><A onclick="CallFuncEx2('C','CBANK_CREDITCARD_CUSTOMER','Customer/am_QueryMemberSchemes.aspx','FORM',null);" href="https://pbsz.ebank.cmbchina.com/CmbBank_GenShell/UI/GenShellPC/Login/GenIndex.aspx#">个人企业年金</A> </LI>
+<LI id=LI_0.4793877302875136 isRoot="false" isLeaf="true"><A onclick="CallFuncEx2('C','CBANK_CREDITCARD_CUSTOMER','Customer/CustomerService_CustomizeOperation.aspx','FORM',null);" href="https://pbsz.ebank.cmbchina.com/CmbBank_GenShell/UI/GenShellPC/Login/GenIndex.aspx#">通知服务管理</A> </LI>
+<LI id=LI_0.6335059801527724 isRoot="false" isLeaf="true"><A onclick="CallFuncEx2('C','CBANK_SHELL','Login/HP_QueryLog.aspx','FORM',null);" href="https://pbsz.ebank.cmbchina.com/CmbBank_GenShell/UI/GenShellPC/Login/GenIndex.aspx#">操作日志查询</A> </LI>
+<LI id=LI_0.1315816116836156 isRoot="false" isLeaf="false" isSub="true" displayed="false"><A class=" submenu" style="COLOR: #0783df" href="https://pbsz.ebank.cmbchina.com/CmbBank_GenShell/UI/GenShellPC/Login/GenIndex.aspx#">功能导航</A> 
+<UL id=ID0.6072544065757266 style="LEFT: -9999em">
+<LI id=LI_0.8714090544946849 isRoot="false" isLeaf="true"><A onclick="CallFuncEx2('C','CBANK_SHELL','Service/nv_FuncSearch.aspx','FORM',null);" href="https://pbsz.ebank.cmbchina.com/CmbBank_GenShell/UI/GenShellPC/Login/GenIndex.aspx#null">功能搜索</A> </LI>
+<LI id=LI_0.7735611953485748 isRoot="false" isLeaf="true"><A onclick="CallFuncEx2('C','CBANK_SHELL','Service/WebSiteMap.aspx','FORM',null);" href="https://pbsz.ebank.cmbchina.com/CmbBank_GenShell/UI/GenShellPC/Login/GenIndex.aspx#null">功能地图</A> </LI>
+<LI id=LI_0.2887291100572156 isRoot="false" isLeaf="true"><A onclick="CallFuncEx2('C','CBANK_SHELL','Service/nv_Favorite.aspx','FORM',null);" href="https://pbsz.ebank.cmbchina.com/CmbBank_GenShell/UI/GenShellPC/Login/GenIndex.aspx#null">我的收藏</A> </LI></UL></LI>
+<LI id=LI_0.896364979065005 isRoot="false" isLeaf="true"><A onclick="CallFuncEx2('C','CBANK_SHELL','Login/OnlineCustomerService.aspx','FORM','_blank','Type=C');" href="https://pbsz.ebank.cmbchina.com/CmbBank_GenShell/UI/GenShellPC/Login/GenIndex.aspx#">在线客户服务</A> </LI></UL></LI>
+<LI id=LI_0.7148457111250352 isRoot="true" isLeaf="false" isSub="true" displayed="false"><A class=" rootmenuA" href="https://pbsz.ebank.cmbchina.com/CmbBank_GenShell/UI/GenShellPC/Login/GenIndex.aspx#">账户管理</A> 
+<UL id=ID0.8173870146145215 style="LEFT: -9999em">
+<LI id=LI_0.36452411777422006 isRoot="false" isLeaf="true"><A onclick="CallFuncEx2('C', 'CBANK_CREDITCARD_ACCOUNT', 'Account/hp_A_CreditCard_AccountManageHomePage.aspx', 'FORM', null);" href="https://pbsz.ebank.cmbchina.com/CmbBank_GenShell/UI/GenShellPC/Login/GenIndex.aspx#">账户管理首页</A> </LI>
+<LI id=LI_0.8068079464948709 isRoot="false" isLeaf="true"><A onclick="CallFuncEx2('C','CBANK_FINANCIAL','Financial/GeneralAccountInfoHtmlProV1.aspx','FORM',null);" href="https://pbsz.ebank.cmbchina.com/CmbBank_GenShell/UI/GenShellPC/Login/GenIndex.aspx#">账户总览</A> </LI>
+<LI id=LI_0.2777855714753379 isRoot="false" isLeaf="true"><A onclick="CallFuncEx2('C', 'CBANK_CREDITCARD_ACCOUNT', 'Account/am_QueryAccount.aspx', 'FORM', null);" href="https://pbsz.ebank.cmbchina.com/CmbBank_GenShell/UI/GenShellPC/Login/GenIndex.aspx#">账户查询</A> </LI>
+<LI id=LI_0.8362180500593777 isRoot="false" isLeaf="true"><A onclick="CallFuncEx2('C', 'CBANK_CREDITCARD_ACCOUNT', 'Account/cs_QueryCustomerInfo.aspx', 'FORM', null);" href="https://pbsz.ebank.cmbchina.com/CmbBank_GenShell/UI/GenShellPC/Login/GenIndex.aspx#">客户资料修改</A> </LI>
+<LI id=LI_0.9828544954652505 isRoot="false" isLeaf="true"><A onclick="CallFuncEx2('C','CBANK_CREDITCARD_LOAN','Loan/Pro8/am_QueryReckoningSurveyNew.aspx','FORM',null);" href="https://pbsz.ebank.cmbchina.com/CmbBank_GenShell/UI/GenShellPC/Login/GenIndex.aspx#">已出账单查询</A> </LI>
+<LI id=LI_0.49646633790632344 isRoot="false" isLeaf="true"><A onclick="CallFuncEx2('C','CBANK_CREDITCARD_LOAN','Loan/Pro8/am_QueryReckoningNotRMB.aspx','FORM',null);" href="https://pbsz.ebank.cmbchina.com/CmbBank_GenShell/UI/GenShellPC/Login/GenIndex.aspx#">未出账单查询</A> </LI>
+<LI id=LI_0.28995723721464755 isRoot="false" isLeaf="true"><A onclick="CallFuncEx2('C','CBANK_CREDITCARD_ACCOUNT','Account/cs_SendReckoningNotice.aspx','FORM',null);" href="https://pbsz.ebank.cmbchina.com/CmbBank_GenShell/UI/GenShellPC/Login/GenIndex.aspx#">账务提醒时间设置</A> </LI>
+<LI id=LI_0.27558373373713923 isRoot="false" isLeaf="true"><A onclick="CallFuncEx2('C','CBANK_CREDITCARD_ACCOUNT','Account/am_CheckBillQuery.aspx','FORM',null);" href="https://pbsz.ebank.cmbchina.com/CmbBank_GenShell/UI/GenShellPC/Login/GenIndex.aspx#">自助对账</A> </LI>
+<LI id=LI_0.5291539096272468 isRoot="false" isLeaf="false" isSub="true" displayed="false"><A class=" submenu" style="COLOR: #0783df" href="https://pbsz.ebank.cmbchina.com/CmbBank_GenShell/UI/GenShellPC/Login/GenIndex.aspx#">账户额度管理</A> 
+<UL id=ID0.2699414182777227 style="LEFT: -9999em">
+<LI id=LI_0.9803416374757312 isRoot="false" isLeaf="true"><A onclick="CallFuncEx2('C', 'CBANK_CREDITCARD_ACCOUNT', 'Account/cm_QueryPersonalCardTempLimit.aspx', 'FORM', null);" href="https://pbsz.ebank.cmbchina.com/CmbBank_GenShell/UI/GenShellPC/Login/GenIndex.aspx#">临时额度调整</A> </LI>
+<LI id=LI_0.6495552300250145 isRoot="false" isLeaf="true"><A onclick="CallFuncEx2('C', 'CBANK_CREDITCARD_ACCOUNT', 'Account/cm_QueryPersonalCardFixedLimit.aspx', 'FORM', null);" href="https://pbsz.ebank.cmbchina.com/CmbBank_GenShell/UI/GenShellPC/Login/GenIndex.aspx#">固定额度调整</A> </LI></UL></LI></UL></LI>
+<LI id=LI_0.3191473470747346 isRoot="true" isLeaf="false" isSub="true" displayed="false"><A class=" rootmenuA" href="https://pbsz.ebank.cmbchina.com/CmbBank_GenShell/UI/GenShellPC/Login/GenIndex.aspx#">分期理财</A> 
+<UL id=ID0.8828520719733188 style="LEFT: -9999em">
+<LI id=LI_0.47736791010291313 isRoot="false" isLeaf="false" isSub="true" displayed="false"><A class=" submenu" style="COLOR: #0783df" href="https://pbsz.ebank.cmbchina.com/CmbBank_GenShell/UI/GenShellPC/Login/GenIndex.aspx#">预借现金</A> 
+<UL id=ID0.2734661441108206 style="LEFT: -9999em">
+<LI id=LI_0.9815146360927105 isRoot="false" isLeaf="true"><A onclick="CallFuncEx2('C','CBANK_CREDITCARD_LOAN','Loan/Pro8/am_AdvanceHomePage.aspx','FORM',null);" href="https://pbsz.ebank.cmbchina.com/CmbBank_GenShell/UI/GenShellPC/Login/GenIndex.aspx#">预借现金申请</A> </LI>
+<LI id=LI_0.3155755771042539 isRoot="false" isLeaf="true"><A onclick="CallFuncEx2('C','CBANK_CREDITCARD_LOAN','Loan/Pro8/am_QueryAdvanceHist.aspx','FORM',null);" href="https://pbsz.ebank.cmbchina.com/CmbBank_GenShell/UI/GenShellPC/Login/GenIndex.aspx#">历史申请查询</A> </LI>
+<LI id=LI_0.895316496847863 isRoot="false" isLeaf="true"><A onclick="CallFuncEx2('C','CBANK_CREDITCARD_CARD','Card/am_QueryAdvanceAccount.aspx','FORM',null);" href="https://pbsz.ebank.cmbchina.com/CmbBank_GenShell/UI/GenShellPC/Login/GenIndex.aspx#">卡片状态总览</A> </LI></UL></LI>
+<LI id=LI_0.8017548060576114 isRoot="false" isLeaf="false" isSub="true" displayed="false"><A class=" submenu" style="COLOR: #0783df" href="https://pbsz.ebank.cmbchina.com/CmbBank_GenShell/UI/GenShellPC/Login/GenIndex.aspx#">现金分期</A> 
+<UL id=ID0.9075380420295402 style="LEFT: -9999em">
+<LI id=LI_0.6326578150084032 isRoot="false" isLeaf="true"><A onclick="CallFuncEx2('C','CBANK_CREDITCARD_LOAN','Loan/Pro8/am_ApplyCashAdvanceByStages.aspx','FORM',null);" href="https://pbsz.ebank.cmbchina.com/CmbBank_GenShell/UI/GenShellPC/Login/GenIndex.aspx#">分期申请</A> </LI>
+<LI id=LI_0.806847186418088 isRoot="false" isLeaf="true"><A onclick="CallFuncEx2('C','CBANK_CREDITCARD_LOAN','Loan/Pro8/am_QueryHisAdvanceByStages.aspx','FORM',null);" href="https://pbsz.ebank.cmbchina.com/CmbBank_GenShell/UI/GenShellPC/Login/GenIndex.aspx#">历史申请查询</A> </LI></UL></LI>
+<LI id=LI_0.6821731752823537 isRoot="false" isLeaf="false" isSub="true" displayed="false"><A class=" submenu" style="COLOR: #0783df" href="https://pbsz.ebank.cmbchina.com/CmbBank_GenShell/UI/GenShellPC/Login/GenIndex.aspx#">账单分期-已出账</A> 
+<UL id=ID0.7484119607794688 style="LEFT: -9999em">
+<LI id=LI_0.8256044125634248 isRoot="false" isLeaf="true"><A onclick="CallFuncEx2('C','CBANK_CREDITCARD_LOAN','Loan/Pro8/am_ApplyReckoningByStages.aspx','FORM',null);" href="https://pbsz.ebank.cmbchina.com/CmbBank_GenShell/UI/GenShellPC/Login/GenIndex.aspx#">分期申请</A> </LI>
+<LI id=LI_0.24911649037604805 isRoot="false" isLeaf="true"><A onclick="CallFuncEx2('C','CBANK_CREDITCARD_LOAN','Loan/Pro8/am_QueryCurReckByStages.aspx','FORM',null);" href="https://pbsz.ebank.cmbchina.com/CmbBank_GenShell/UI/GenShellPC/Login/GenIndex.aspx#">当天申请查询</A> </LI>
+<LI id=LI_0.9009652175180545 isRoot="false" isLeaf="true"><A onclick="CallFuncEx2('C','CBANK_CREDITCARD_LOAN','Loan/Pro8/am_QueryHisReckByStages.aspx','FORM',null);" href="https://pbsz.ebank.cmbchina.com/CmbBank_GenShell/UI/GenShellPC/Login/GenIndex.aspx#">历史申请查询</A> </LI></UL></LI>
+<LI id=LI_0.7021477556757625 isRoot="false" isLeaf="false" isSub="true" displayed="false"><A class=" submenu" style="COLOR: #0783df" href="https://pbsz.ebank.cmbchina.com/CmbBank_GenShell/UI/GenShellPC/Login/GenIndex.aspx#">账单分期-未出账</A> 
+<UL id=ID0.8208427183801696 style="LEFT: -9999em">
+<LI id=LI_0.4650040385473513 isRoot="false" isLeaf="true"><A onclick="CallFuncEx2('C','CBANK_CREDITCARD_LOAN','Loan/Pro8/am_QueryReckoningNotRMB.aspx','FORM',null,'ByStageFlag=TranByStage');" href="https://pbsz.ebank.cmbchina.com/CmbBank_GenShell/UI/GenShellPC/Login/GenIndex.aspx#">分期申请</A> </LI>
+<LI id=LI_0.9027456188934616 isRoot="false" isLeaf="true"><A onclick="CallFuncEx2('C','CBANK_CREDITCARD_LOAN','Loan/Pro8/am_QueryHisTranByStages.aspx','FORM',null);" href="https://pbsz.ebank.cmbchina.com/CmbBank_GenShell/UI/GenShellPC/Login/GenIndex.aspx#">已入账订单查询</A> </LI>
+<LI id=LI_0.34663390129415983 isRoot="false" isLeaf="true"><A onclick="CallFuncEx2('C','CBANK_CREDITCARD_LOAN','Loan/Pro8/am_QueryHisTranByStagesUnbilled.aspx','FORM',null);" href="https://pbsz.ebank.cmbchina.com/CmbBank_GenShell/UI/GenShellPC/Login/GenIndex.aspx#">未入账申请查询</A> </LI></UL></LI>
+<LI id=LI_0.6533158683657464 isRoot="false" isLeaf="false" isSub="true" displayed="false"><A class=" submenu" style="COLOR: #0783df" href="https://pbsz.ebank.cmbchina.com/CmbBank_GenShell/UI/GenShellPC/Login/GenIndex.aspx#">预约分期</A> 
+<UL id=ID0.9613547160305749 style="LEFT: -9999em">
+<LI id=LI_0.5723941034229869 isRoot="false" isLeaf="true"><A onclick="CallFuncEx2('C','CBANK_CREDITCARD_LOAN','Loan/am_QueryOrderNoteReckByStages.aspx','FORM',null);" href="https://pbsz.ebank.cmbchina.com/CmbBank_GenShell/UI/GenShellPC/Login/GenIndex.aspx#">未来账单</A> </LI>
+<LI id=LI_0.9350822345095948 isRoot="false" isLeaf="true"><A onclick="CallFuncEx2('C','CBANK_CREDITCARD_LOAN','Loan/am_QueryOrderNoteTranByStages.aspx','FORM',null);" href="https://pbsz.ebank.cmbchina.com/CmbBank_GenShell/UI/GenShellPC/Login/GenIndex.aspx#">未来交易</A> </LI></UL></LI>
+<LI id=LI_0.9059778886169632 isRoot="false" isLeaf="true"><A onclick="window.open('https://ccclub.cmbchina.com/fincreditweb/Apply/ApplyDetail.aspx?WT.mc_id=C71WYCD011305101','ApplyDetail','menubar=yes,toolbar=yes,location=yes,directories=yes,status=yes,resizable=yes,scrollbars=yes,width=800,height=600,top=0,left=0');" href="https://pbsz.ebank.cmbchina.com/CmbBank_GenShell/UI/GenShellPC/Login/GenIndex.aspx#">汽车分期</A> </LI>
+<LI id=LI_0.6066210085537744 isRoot="false" isLeaf="false" isSub="true" displayed="false"><A class=" submenu" style="COLOR: #0783df" href="https://pbsz.ebank.cmbchina.com/CmbBank_GenShell/UI/GenShellPC/Login/GenIndex.aspx#">e招贷</A> 
+<UL id=ID0.34803535306490585 style="LEFT: -9999em">
+<LI id=LI_0.4723510953290541 isRoot="false" isLeaf="true"><A onclick="CallFuncEx2('C','CBANK_CREDITCARD_LOAN','Loan/Pro8/am_ApplySelfHelpLoanAndRepayCheck.aspx','FORM',null);" href="https://pbsz.ebank.cmbchina.com/CmbBank_GenShell/UI/GenShellPC/Login/GenIndex.aspx#">e招贷申请</A> </LI>
+<LI id=LI_0.756442052453815 isRoot="false" isLeaf="true"><A onclick="CallFuncEx2('C','CBANK_CREDITCARD_LOAN','Loan/Pro8/am_QueryApplForSelfHelpLoanAndRepay.aspx','FORM',null);" href="https://pbsz.ebank.cmbchina.com/CmbBank_GenShell/UI/GenShellPC/Login/GenIndex.aspx#">历史申请查询</A> </LI></UL></LI>
+<LI id=LI_0.3842012122379044 isRoot="false" isLeaf="true"><A onclick="CallFuncEx2('C','CBANK_CREDITCARD_LOAN','Loan/Pro8/am_QueryInstallment.aspx','FORM',null);" href="https://pbsz.ebank.cmbchina.com/CmbBank_GenShell/UI/GenShellPC/Login/GenIndex.aspx#">分期查询</A> </LI></UL></LI>
+<LI id=LI_0.9844587015844688 isRoot="true" isLeaf="false" isSub="true" displayed="false"><A class=" rootmenuA" href="https://pbsz.ebank.cmbchina.com/CmbBank_GenShell/UI/GenShellPC/Login/GenIndex.aspx#">还款管理</A> 
+<UL id=ID0.8286127438738549 style="LEFT: -9999em">
+<LI id=LI_0.3259809171855416 isRoot="false" isLeaf="true"><A onclick="CallFuncEx2('C','CBANK_CREDITCARD_REPAYMENT','Repayment/hp_CreditCard_RepayManageHomePage.aspx','FORM',null);" href="https://pbsz.ebank.cmbchina.com/CmbBank_GenShell/UI/GenShellPC/Login/GenIndex.aspx#">还款管理首页</A> </LI>
+<LI id=LI_0.8917857508142781 isRoot="false" isLeaf="true"><A onclick="CallFuncEx2('C','CBANK_CREDITCARD_REPAYMENT','Repayment/rm_FastPayment.aspx','FORM',null,'ReckoningByStages=ReckoningByStages');" href="https://pbsz.ebank.cmbchina.com/CmbBank_GenShell/UI/GenShellPC/Login/GenIndex.aspx#">快速还款</A> </LI>
+<LI id=LI_0.3010432825144829 isRoot="false" isLeaf="true"><A onclick="CallFuncEx2('C','CBANK_CREDITCARD_REPAYMENT','Repayment/rm_QueryAutoRepay.aspx','FORM',null);" href="https://pbsz.ebank.cmbchina.com/CmbBank_GenShell/UI/GenShellPC/Login/GenIndex.aspx#">自动还款设置</A> </LI>
+<LI id=LI_0.9284409417864199 isRoot="false" isLeaf="true"><A onclick="CallFuncEx2('C','CBANK_CREDITCARD_REPAYMENT','Repayment/rm_QueryExchange.aspx','FORM',null);" href="https://pbsz.ebank.cmbchina.com/CmbBank_GenShell/UI/GenShellPC/Login/GenIndex.aspx#">人民币自动购汇</A> </LI>
+<LI id=LI_0.6605011269583355 isRoot="false" isLeaf="true"><A onclick="CallFuncEx2('C','CBANK_CREDITCARD_REPAYMENT','Repayment/rm_QueryRepayDetail.aspx','FORM',null);" href="https://pbsz.ebank.cmbchina.com/CmbBank_GenShell/UI/GenShellPC/Login/GenIndex.aspx#">还款明细查询</A> </LI>
+<LI id=LI_0.25470915194022025 isRoot="false" isLeaf="true"><A onclick="CallFuncEx2('C','CBANK_CREDITCARD_REPAYMENT','Repayment/rm_QueryRepayPath.aspx','FORM',null);" href="https://pbsz.ebank.cmbchina.com/CmbBank_GenShell/UI/GenShellPC/Login/GenIndex.aspx#">还款方式查询</A> </LI>
+<LI id=LI_0.511801759639196 isRoot="false" isLeaf="true"><A onclick="CallFuncEx2('C','CBANK_CREDITCARD_REPAYMENT','Repayment/rm_WKEQuery.aspx','FORM',null);" href="https://pbsz.ebank.cmbchina.com/CmbBank_GenShell/UI/GenShellPC/Login/GenIndex.aspx#">涉外收入申报</A> </LI></UL></LI>
+<LI id=LI_0.2627921298764266 isRoot="true" isLeaf="false" isSub="true" displayed="false"><A class=" rootmenuA" href="https://pbsz.ebank.cmbchina.com/CmbBank_GenShell/UI/GenShellPC/Login/GenIndex.aspx#">自助缴费</A> 
+<UL id=ID0.9488067579143032 style="LEFT: -9999em">
+<LI id=LI_0.2570355248461014 isRoot="false" isLeaf="true"><A onclick="CallFuncEx2('C','CBANK_CREDITCARD_PAYMENT','PayFee/hp_A_CreditCard_SelfPayFeeHomePage.aspx','FORM',null);" href="https://pbsz.ebank.cmbchina.com/CmbBank_GenShell/UI/GenShellPC/Login/GenIndex.aspx#">自助缴费首页</A> </LI>
+<LI id=LI_0.05766842959585994 isRoot="false" isLeaf="false" isSub="true" displayed="false"><A class=" submenu" style="COLOR: #0783df" href="https://pbsz.ebank.cmbchina.com/CmbBank_GenShell/UI/GenShellPC/Login/GenIndex.aspx#">生活缴费</A> 
+<UL id=ID0.618952743332029 style="LEFT: -9999em">
+<LI id=LI_0.39526229545008495 isRoot="false" isLeaf="true"><A onclick="CallFuncEx2('C','CBANK_CREDITCARD_PAYMENT','PayLife/pl_LifePayFeeGeneral.aspx','FORM',null);" href="https://pbsz.ebank.cmbchina.com/CmbBank_GenShell/UI/GenShellPC/Login/GenIndex.aspx#">我要缴费</A> </LI>
+<LI id=LI_0.26471089684651816 isRoot="false" isLeaf="true"><A onclick="CallFuncEx2('C','CBANK_CREDITCARD_PAYMENT','PayLife/pl_QueryPayFeeDesignate.aspx','FORM',null);" href="https://pbsz.ebank.cmbchina.com/CmbBank_GenShell/UI/GenShellPC/Login/GenIndex.aspx#">自动代缴</A> </LI>
+<LI id=LI_0.6023402838710128 isRoot="false" isLeaf="true"><A onclick="CallFuncEx2('C','CBANK_CREDITCARD_PAYMENT','PayLife/pl_CommonNumAndProject.aspx','FORM',null);" href="https://pbsz.ebank.cmbchina.com/CmbBank_GenShell/UI/GenShellPC/Login/GenIndex.aspx#">缴费号码管理</A> </LI>
+<LI id=LI_0.5995600946260511 isRoot="false" isLeaf="true"><A onclick="CallFuncEx2('C','CBANK_CREDITCARD_PAYMENT','PayLife/pl_TransQuery.aspx','FORM',null);" href="https://pbsz.ebank.cmbchina.com/CmbBank_GenShell/UI/GenShellPC/Login/GenIndex.aspx#">交易查询</A> </LI>
+<LI id=LI_0.19169567223740913 isRoot="false" isLeaf="true"><A onclick="CallFuncEx2('C','CBANK_CREDITCARD_PAYMENT','PayLife/pl_SetPayFeeQuota.aspx','FORM',null);" href="https://pbsz.ebank.cmbchina.com/CmbBank_GenShell/UI/GenShellPC/Login/GenIndex.aspx#">缴费额度设置</A> </LI></UL></LI>
+<LI id=LI_0.36416481964829983 isRoot="false" isLeaf="true"><A onclick="CallFuncEx2('C','CBANK_CREDITCARD_PAYMENT','PayFee/pf_ThirdPartyFeeQuery.aspx','FORM',null);" href="https://pbsz.ebank.cmbchina.com/CmbBank_GenShell/UI/GenShellPC/Login/GenIndex.aspx#">第三方代扣</A></LI></UL></LI>
+<LI id=LI_0.27912584164927034 isRoot="true" isLeaf="false" isSub="true" displayed="false"><A class=" rootmenuA" href="https://pbsz.ebank.cmbchina.com/CmbBank_GenShell/UI/GenShellPC/Login/GenIndex.aspx#">网上支付</A> 
+<UL id=ID0.5422495688016911 style="LEFT: -9999em">
+<LI id=LI_0.4110327028597027 isRoot="false" isLeaf="true"><A onclick="CallFuncEx2('C','CBANK_CREDITCARD_PAYMENT','NetPay/hp_A_CreditCard_NetPayHomePage.aspx','FORM',null);" href="https://pbsz.ebank.cmbchina.com/CmbBank_GenShell/UI/GenShellPC/Login/GenIndex.aspx#">网上支付首页</A> </LI>
+<LI id=LI_0.6961529423197653 isRoot="false" isLeaf="true"><A onclick="CallFuncEx2('C','CBANK_CREDITCARD_PAYMENT','NetPay/np_QueryNetPayV2.aspx','FORM',null);" href="https://pbsz.ebank.cmbchina.com/CmbBank_GenShell/UI/GenShellPC/Login/GenIndex.aspx#">网上支付功能申请</A> </LI>
+<LI id=LI_0.7129677391615223 isRoot="false" isLeaf="true"><A onclick="CallFuncEx2('C','CBANK_CREDITCARD_PAYMENT','NetPay/np_QueryLimit.aspx','FORM',null);" href="https://pbsz.ebank.cmbchina.com/CmbBank_GenShell/UI/GenShellPC/Login/GenIndex.aspx#">网上支付额度设置</A> </LI>
+<LI id=LI_0.994834135371242 isRoot="false" isLeaf="true"><A onclick="CallFuncEx2('C','CBANK_CREDITCARD_PAYMENT','NetPay/np_QueryDeal.aspx','FORM',null);" href="https://pbsz.ebank.cmbchina.com/CmbBank_GenShell/UI/GenShellPC/Login/GenIndex.aspx#">网上支付交易查询</A> <!--<li><a href="" onclick="CallFuncEx2('C','CBANK_CREDITCARDV2','CreditCardV2_AccountManager/am_QueryCUPCard.aspx','FORM',null,'ProtocolType=30');">银联网上支付</a>--></LI>
+<LI id=LI_0.883415442767868 isRoot="false" isLeaf="true"><A onclick="CallFuncEx2('C','CBANK_CREDITCARD_PAYMENT','NetPay/np_QuerySelfInfo.aspx','FORM',null);" href="https://pbsz.ebank.cmbchina.com/CmbBank_GenShell/UI/GenShellPC/Login/GenIndex.aspx#">个人化信息设置</A> </LI>
+<LI id=LI_0.7906096473606551 isRoot="false" isLeaf="true"><A onclick="CallFuncEx2('C','CBANK_CREDITCARD_PAYMENT','NetPay/am_QueryCUPCard.aspx','FORM',null,'ProtocolType=30');" href="https://pbsz.ebank.cmbchina.com/CmbBank_GenShell/UI/GenShellPC/Login/GenIndex.aspx#">银联网上支付</A> </LI></UL></LI>
+<LI id=LI_0.28662266072042985 isRoot="true" isLeaf="false" isSub="true" displayed="false"><A class=" rootmenuA" href="https://pbsz.ebank.cmbchina.com/CmbBank_GenShell/UI/GenShellPC/Login/GenIndex.aspx#">卡片管理</A> 
+<UL id=ID0.4615153552021952 style="LEFT: -9999em">
+<LI id=LI_0.43017623081590034 isRoot="false" isLeaf="true"><A onclick="CallFuncEx2('C','CBANK_CREDITCARD_CARD','Card/hp_A_CreditCard_CardManageHomePage.aspx','FORM',null);" href="https://pbsz.ebank.cmbchina.com/CmbBank_GenShell/UI/GenShellPC/Login/GenIndex.aspx#">卡片管理首页</A> </LI>
+<LI id=LI_0.5589063578815858 isRoot="false" isLeaf="true"><A onclick="CallFuncEx2('C','CBANK_CREDITCARD_CARD','Card/cm_QueryEnforceCard.aspx','FORM',null);" href="https://pbsz.ebank.cmbchina.com/CmbBank_GenShell/UI/GenShellPC/Login/GenIndex.aspx#">信用卡开卡</A> </LI>
+<LI id=LI_0.2330804520348964 isRoot="false" isLeaf="true"><A onclick="CallFuncEx2('C','CBANK_CREDITCARD_CARD','Card/cm_QueryCreditLimit.aspx','FORM',null);" href="https://pbsz.ebank.cmbchina.com/CmbBank_GenShell/UI/GenShellPC/Login/GenIndex.aspx#">卡片额度调整</A> </LI>
+<LI id=LI_0.8122953233377173 isRoot="false" isLeaf="true"><A onclick="CallFuncEx2('C','CBANK_CREDITCARD_CARD','Card/CustomerService_ReApplyCreditCard.aspx','FORM',null);" href="https://pbsz.ebank.cmbchina.com/CmbBank_GenShell/UI/GenShellPC/Login/GenIndex.aspx#">卡片毁损补发</A> </LI>
+<LI id=LI_0.7264304852722998 isRoot="false" isLeaf="false" isSub="true" displayed="false"><A class=" submenu" style="COLOR: #0783df" href="https://pbsz.ebank.cmbchina.com/CmbBank_GenShell/UI/GenShellPC/Login/GenIndex.aspx#">交易密码管理</A> 
+<UL id=ID0.8608372842923211 style="LEFT: -9999em">
+<LI id=LI_0.7176708565814319 isRoot="false" isLeaf="true"><A onclick="CallFuncEx2('C','CBANK_CREDITCARD_CARD','Card/pm_QueryCashPin.aspx','FORM',null);" href="https://pbsz.ebank.cmbchina.com/CmbBank_GenShell/UI/GenShellPC/Login/GenIndex.aspx#">交易密码设置</A> </LI>
+<LI id=LI_0.7126457862507871 isRoot="false" isLeaf="true"><A onclick="CallFuncEx2('C','CBANK_CREDITCARD_CARD','Card/pm_QueryCashPin.aspx','FORM',null);" href="https://pbsz.ebank.cmbchina.com/CmbBank_GenShell/UI/GenShellPC/Login/GenIndex.aspx#">预借现金功能设置</A> </LI>
+<LI id=LI_0.35241705106327636 isRoot="false" isLeaf="true"><A onclick="CallFuncEx2('C','CBANK_CREDITCARD_CARD','Card/pm_QueryCashPin.aspx','FORM',null);" href="https://pbsz.ebank.cmbchina.com/CmbBank_GenShell/UI/GenShellPC/Login/GenIndex.aspx#">刷卡验密功能设置</A> </LI></UL></LI>
+<LI id=LI_0.22444680134727612 isRoot="false" isLeaf="true"><A onclick="CallFuncEx2('C','CBANK_CREDITCARD_CARD','Card/cm_ReportLossApply.aspx','FORM',null);" href="https://pbsz.ebank.cmbchina.com/CmbBank_GenShell/UI/GenShellPC/Login/GenIndex.aspx#">信用卡挂失</A> </LI>
+<LI id=LI_0.7617589349132167 isRoot="false" isLeaf="false" isSub="true" displayed="false"><A class=" submenu" style="COLOR: #0783df" href="https://pbsz.ebank.cmbchina.com/CmbBank_GenShell/UI/GenShellPC/Login/GenIndex.aspx#">Young卡管理</A> 
+<UL id=ID0.6043750620115025 style="LEFT: -9999em">
+<LI id=LI_0.42640262190946265 isRoot="false" isLeaf="true"><A onclick="CallFuncEx2('C','CBANK_CREDITCARD_CARD','Card/CustomerService_SetCreditReport.aspx','FORM',null);" href="https://pbsz.ebank.cmbchina.com/CmbBank_GenShell/UI/GenShellPC/Login/GenIndex.aspx#">信用证明寄送</A> </LI>
+<LI id=LI_0.8157978260389739 isRoot="false" isLeaf="true"><A onclick="CallFuncEx2('C','CBANK_CREDITCARD_CARD','Card/CustomerService_VerifyStudentIdentity.aspx','FORM',null);" href="https://pbsz.ebank.cmbchina.com/CmbBank_GenShell/UI/GenShellPC/Login/GenIndex.aspx#">学生毕业转卡</A> </LI></UL></LI>
+<LI id=LI_0.018497916175504725 isRoot="false" isLeaf="true"><A onclick="CallFuncEx2('C','CBANK_CREDITCARD_CARD','Card/cm_QueryTranfserCardRegistration.aspx','FORM',null);" href="https://pbsz.ebank.cmbchina.com/CmbBank_GenShell/UI/GenShellPC/Login/GenIndex.aspx#">到期换卡登记</A> </LI>
+<LI id=LI_0.1662574547832612 isRoot="false" isLeaf="true"><A onclick="CallFuncEx2('C','CBANK_CREDITCARD_CARD','Card/cm_RedirectCreditCard.aspx','FORM',null);" href="https://pbsz.ebank.cmbchina.com/CmbBank_GenShell/UI/GenShellPC/Login/GenIndex.aspx#">卡片退卡重寄</A> </LI></UL></LI>
+<LI id=LI_0.33767139771603333 isRoot="true" isLeaf="false" isSub="true" displayed="false"><A class=" rootmenuA" href="https://pbsz.ebank.cmbchina.com/CmbBank_GenShell/UI/GenShellPC/Login/GenIndex.aspx#">积分管理</A> 
+<UL id=ID0.4637951150210211 style="LEFT: -9999em">
+<LI id=LI_0.01676354020894727 isRoot="false" isLeaf="true"><A onclick="CallFuncEx2('C','CBANK_CREDITCARD_CUSTOMER','Points/hp_A_CreditCard_PointManageHomePage.aspx','FORM',null);" href="https://pbsz.ebank.cmbchina.com/CmbBank_GenShell/UI/GenShellPC/Login/GenIndex.aspx#">积分管理首页</A> </LI>
+<LI id=LI_0.99456386460274 isRoot="false" isLeaf="true"><A onclick="CallFuncEx2('C','CBANK_CREDITCARD_CUSTOMER','Points/psm_QueryCurPoints.aspx','FORM',null);" href="https://pbsz.ebank.cmbchina.com/CmbBank_GenShell/UI/GenShellPC/Login/GenIndex.aspx#">积分查询</A> </LI>
+<LI id=LI_0.444851395954435 isRoot="false" isLeaf="true"><A onclick="CallFuncEx2('C','CBANK_CREDITCARD_CUSTOMER','Points/pm_QueryHistPoints.aspx','FORM',null);" href="https://pbsz.ebank.cmbchina.com/CmbBank_GenShell/UI/GenShellPC/Login/GenIndex.aspx#">积分历史查询</A> </LI>
+<LI id=LI_0.8343618762168633 isRoot="false" isLeaf="true"><A onclick="window.open('http://ccclub.cmbchina.com/ccclubnew/default.aspx','Jfplan03','menubar=yes,toolbar=yes,location=yes,directories=yes,status=yes,resizable=yes,scrollbars=yes,width=800,height=600,top=0,left=0');" href="https://pbsz.ebank.cmbchina.com/CmbBank_GenShell/UI/GenShellPC/Login/GenIndex.aspx#">积分兑换途径</A> </LI>
+<LI id=LI_0.15771418979707258 isRoot="false" isLeaf="true"><A onclick="window.open('http://ccclub.cmbchina.com/ccclubnew/PointCategory.aspx?categoryId=2933','Jfplan04','menubar=yes,toolbar=yes,location=yes,directories=yes,status=yes,resizable=yes,scrollbars=yes,width=800,height=600,top=0,left=0');" href="https://pbsz.ebank.cmbchina.com/CmbBank_GenShell/UI/GenShellPC/Login/GenIndex.aspx#">积分免年费</A> </LI></UL></LI>
+<LI id=LI_0.28533111311334474 isRoot="true" isLeaf="false" isSub="true" displayed="false"><A href="https://pbsz.ebank.cmbchina.com/CmbBank_GenShell/UI/GenShellPC/Login/GenIndex.aspx#">财务分析</A> 
+<UL id=ID0.920773578569585 style="LEFT: -9999em">
+<LI id=LI_0.6599761297703388 isRoot="false" isLeaf="true"><A onclick="CallFuncEx2('C','CBANK_FINANCIAL','Financial/Index.aspx','FORM',null);" href="https://pbsz.ebank.cmbchina.com/CmbBank_GenShell/UI/GenShellPC/Login/GenIndex.aspx#">财务分析首页</A> </LI>
+<LI id=LI_0.7222209107099601 isRoot="false" isLeaf="true"><A onclick="CallFuncEx2('C','CBANK_FINANCIAL','Financial/BalanceAndDebt.aspx','FORM',null);" href="https://pbsz.ebank.cmbchina.com/CmbBank_GenShell/UI/GenShellPC/Login/GenIndex.aspx#">资产负债分析</A> </LI>
+<LI id=LI_0.7716324108222645 isRoot="false" isLeaf="true"><A onclick="CallFuncEx2('C','CBANK_FINANCIAL','Financial/CreditCard.aspx','FORM',null);" href="https://pbsz.ebank.cmbchina.com/CmbBank_GenShell/UI/GenShellPC/Login/GenIndex.aspx#">信用卡支出分析</A> </LI>
+<LI id=LI_0.4931330781453107 isRoot="false" isLeaf="true"><A onclick="CallFuncEx2('C','CBANK_FINANCIAL','Financial/Invest.aspx','FORM',null);" href="https://pbsz.ebank.cmbchina.com/CmbBank_GenShell/UI/GenShellPC/Login/GenIndex.aspx#">投资状况分析</A> </LI>
+<LI id=LI_0.49700033534314336 isRoot="false" isLeaf="true"><A onclick="CallFuncEx2('C','CBANK_FINANCIAL','Financial/IncomeAndExpend.aspx','FORM',null);" href="https://pbsz.ebank.cmbchina.com/CmbBank_GenShell/UI/GenShellPC/Login/GenIndex.aspx#">收支对比分析</A> </LI></UL></LI></UL></TD></TR>
+<TR>
+<TD bgColor=#d9d9d9 height=2 colSpan=3></TD></TR>
+<TR>
+<TD bgColor=#ffffff height=4 colSpan=3></TD></TR></TBODY></TABLE></TD></TR>
+<TR>
+<TD height="100%">
+<TABLE height="100%" cellSpacing=0 cellPadding=0 width="100%" border=0>
+<TBODY>
+<TR>
+<TD id=tdShortCutMenu class=leftBg height="100%" vAlign=top width=159>
+<TABLE cellSpacing=0 cellPadding=0 width=159 border=0>
+<TBODY>
+<TR>
+<TD id=CreditImg style="HEIGHT: 49px" height=102 background=../doc/Images/onlineCS_bg.gif width=159><IMG id=ImgTelephone style="CURSOR: pointer" src="../doc/Images/Online-Custom.png"></TD></TR>
+<TR>
+<TD bgColor=white height=4></TD></TR>
+<TR>
+<TD style="VERTICAL-ALIGN: middle" height=57 background=../doc/Images/search_bg.jpg align=center>
+<TABLE height="100%" cellSpacing=0 cellPadding=0 width="100%" border=0>
+<TBODY>
+<TR height="100%" align=center>
+<TD style="VERTICAL-ALIGN: middle"><INPUT onkeypress="if(window.event.keyCode==13){onSearch();return false;}" id=txtSearch style="MARGIN-BOTTOM: 5px; BORDER-TOP: gray 1px solid; HEIGHT: 23px; BORDER-RIGHT: gray 1px solid; WIDTH: 86px; BORDER-BOTTOM: gray 1px solid; PADDING-TOP: 4px; PADDING-LEFT: 5px; BORDER-LEFT: gray 1px solid" maxLength=15 size=10 name=txtSearch autocomplete="off" placeholder="日日盈" data-provide="typeahead" jQuery112305955475904944288="4"> <INPUT onclick="onSearch(); return false;" id=BtnSearch style="FONT-SIZE: 12px; MARGIN-BOTTOM: 6px; BORDER-TOP: #3540aa 1px solid; HEIGHT: 22px; BORDER-RIGHT: #3540aa 1px solid; WIDTH: 43px; BORDER-BOTTOM: #3540aa 1px solid; COLOR: #ffffff; TEXT-ALIGN: center; BORDER-LEFT: #3540aa 1px solid; LINE-HEIGHT: 19px; BACKGROUND-COLOR: #4788f8" type=button value=搜索> </TD></TR></TBODY></TABLE></TD></TR>
+<TR>
+<TD style="HEIGHT: 27px" bgColor=#0783df>
+<UL id=vmenu m_maxId="3" speed="1" timer="20" headerOpenClass="headerOpen" headerCloseClass="headerClose" itemClass="menuItem">
+<DIV id=vmenu_0 headerOpenClass="headerOpen" headerCloseClass="headerClose" itemClass="menuItem" m_maxItemId="1"><A class=headerClose href="#">我的收藏</A>
+<UL id=vmenu_0content style="PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; DISPLAY: none; PADDING-RIGHT: 0px" height="0">
+<LI id=vmenu_0_0 class=menuItem><A href="null">定制我的收藏</A></LI></UL></DIV>
+<DIV id=vmenu_1 headerOpenClass="headerOpen" headerCloseClass="headerClose" itemClass="menuItem" m_maxItemId="0"><A class=headerOpen href="#">快速通道</A>
+<UL id=vmenu_1content style="PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px" height="0">
+<LI><A onclick='CallFuncEx2("C","CBANK_HOMEPAGE","HomePageGen/CreditHomePage.aspx","FORM",null,"DefaultMenuType=C");' href="https://pbsz.ebank.cmbchina.com/CmbBank_GenShell/UI/GenShellPC/Login/GenIndex.aspx#">欢迎页</A></LI>
+<LI><A onclick='CallFuncEx2("C","CBANK_CREDITCARD_CUSTOMER","Customer/cm_QueryCustomInfo.aspx","FORM",null);' href="https://pbsz.ebank.cmbchina.com/CmbBank_GenShell/UI/GenShellPC/Login/GenIndex.aspx#">客户管理首页</A></LI>
+<LI><A onclick='CallFuncEx2("C","CBANK_CREDITCARD_ACCOUNT","Account/am_QueryAccount.aspx","FORM",null);' href="https://pbsz.ebank.cmbchina.com/CmbBank_GenShell/UI/GenShellPC/Login/GenIndex.aspx#">账户管理首页</A></LI>
+<LI><A onclick='CallFuncEx2("C","CBANK_CREDITCARD_LOAN","Loan/Pro8/am_AdvanceHomePage.aspx","FORM",null);' href="https://pbsz.ebank.cmbchina.com/CmbBank_GenShell/UI/GenShellPC/Login/GenIndex.aspx#">分期理财首页</A></LI>
+<LI><A onclick='CallFuncEx2("C","CBANK_CREDITCARD_REPAYMENT","Repayment/rm_QueryAutoRepay.aspx","FORM",null);' href="https://pbsz.ebank.cmbchina.com/CmbBank_GenShell/UI/GenShellPC/Login/GenIndex.aspx#">还款管理首页</A></LI>
+<LI><A onclick='CallFuncEx2("C","CBANK_CREDITCARD_PAYMENT","PayFee/hp_A_CreditCard_SelfPayFeeHomePage.aspx","FORM",null);' href="https://pbsz.ebank.cmbchina.com/CmbBank_GenShell/UI/GenShellPC/Login/GenIndex.aspx#">自助缴费首页</A></LI>
+<LI><A onclick='CallFuncEx2("C","CBANK_CREDITCARD_PAYMENT","NetPay/np_QueryNetPayV2.aspx","FORM",null);' href="https://pbsz.ebank.cmbchina.com/CmbBank_GenShell/UI/GenShellPC/Login/GenIndex.aspx#">网上支付首页</A></LI>
+<LI><A onclick='CallFuncEx2("C","CBANK_CREDITCARD_CARD","Card/cm_QueryCreditLimit.aspx","FORM",null);' href="https://pbsz.ebank.cmbchina.com/CmbBank_GenShell/UI/GenShellPC/Login/GenIndex.aspx#">卡片管理首页</A></LI>
+<LI><A onclick='CallFuncEx2("C","CBANK_CREDITCARD_CUSTOMER","Points/psm_QueryCurPoints.aspx","FORM",null);' href="https://pbsz.ebank.cmbchina.com/CmbBank_GenShell/UI/GenShellPC/Login/GenIndex.aspx#">积分管理首页</A></LI>
+<LI><A onclick='CallFuncEx2("C","CBANK_FINANCIAL","Financial/IndexV2.aspx","FORM",null);' href="https://pbsz.ebank.cmbchina.com/CmbBank_GenShell/UI/GenShellPC/Login/GenIndex.aspx#">财务分析首页</A></LI></UL></DIV>
+<DIV id=vmenu_2 headerOpenClass="headerOpen" headerCloseClass="headerClose" itemClass="menuItem" m_maxItemId="0"><A class=headerClose href="#">最近操作</A>
+<UL id=vmenu_2content style="PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; DISPLAY: none; PADDING-RIGHT: 0px" height="0"></UL></DIV></UL></TD></TR>
+<TR>
+<TD bgColor=#0783df height=4><FONT face=宋体></FONT></TD></TR></TBODY></TABLE></TD>
+<TD onclick=swingShortCutMenu() style="CURSOR: pointer" height="100%" vAlign=top background=../doc/Images/splitter_bg.gif width=14>
+<TABLE cellSpacing=0 cellPadding=0 width=14 border=0>
+<TBODY>
+<TR>
+<TD height=125 colSpan=3></TD></TR>
+<TR>
+<TD width=2></TD>
+<TD id=splitter style="BACKGROUND-IMAGE: url(../doc/Images/splitter_l.gif)" height=79 width=9></TD>
+<TD width=3></TD></TR>
+<TR>
+<TD colSpan=3></TD></TR></TBODY></TABLE></TD>
+<TD vAlign=top width="100%"><IFRAME id=mainWorkArea onload=adjustFrameSize() style="HEIGHT: 1053px" onactivate=hideAllSubMenu(); height=400 marginHeight=0 src="/CmbBank_GenShell/UI/Base/Blank.htm" frameBorder=0 width="100%" allowTransparency name=mainWorkArea marginWidth=0 jQuery1123013856664006434394="21"></IFRAME></TD></TR></TBODY></TABLE></TD></TR>
+<TR>
+<TD style="HEIGHT: 1px"><INPUT id=ClientNo type=hidden value=009CCF5758B59681BD2BA154BF4F34D1857396522491910500012114 name=ClientNo> <INPUT id=OnlineCustomerServiceURL type=hidden value=https://forum.cmbchina.com/PCS2012/Service.aspx?hdVersion=20190118&amp;hdType=Normal&amp;hdToken=jKEcP0jG%2fs4EMQHlJh*OB7xSElY2LAiARTWIAl2FRfifmovvRhqJSA00o*fXZHrpvBoj6X*Dfd6N4ZrGuQyGSUwQOF4dxFyRIWzc8u5LsI1Oihkb1ZN98z1NuJDUcmGUfgJZw34j5Ry1t2*LqxG3uajTKMnv%2f8Fab4bYiWyBo8KJms%2fMvpHbGIASJvDtL0D3oM21Y5kQ2r7OdtzMliIWzBUFSj9oed231zDBDXEzVza%2fsnbLz8wHBS9KVSJfKDZGc5L9LGgJrlfmYVilkMPadzVmBj3DgEWHq%2fVdeZh9pGEjfqBwHZJvmQHmn2HJOWsk3%2fRd%2fp*aR23uKU1k0njWABPnyBXcc9xYY3orBmMBB1E8%2fUQYEH3SVd2zoRVPpbxVHj7vXik2qfwDcnHunXSZc5KBEgsz2Mj%2f name=OnlineCustomerServiceURL> <INPUT id=CreditCardFlag type=hidden name=CreditCardFlag> <INPUT id=CreditCardOnlineCustomerServiceURL type=hidden value=http://cc.cmbchina.com/Common/Default.aspx?pageid=zxkf2&amp;WT.mc_id=dzb1 name=CreditCardOnlineCustomerServiceURL> <INPUT id=LoginIDforSearch type=hidden value=020043277210 name=LoginIDforSearch> <INPUT id=CustomerIDforSearch type=hidden value=6551364215 name=CustomerIDforSearch> <INPUT id=HotSearchKeyWords type=hidden value=日日盈,理财,基金,黄金,通知存款,第三方存管 name=HotSearchKeyWords>
+<SCRIPT language=JavaScript type=text/JavaScript>
+    var DIV_MSG_AdjustDIVSize = null;
+    var DIV_MSG_SelectedObj = null;
+    var DIV_MSG_ActionPage = "/CmbBank_GenShell" + "/UI/Base/cn/Page/MessagePage4.aspx";
+
+    ////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    //层的显示、隐藏以及大小调整
+    ////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    function IsIe6() {
+        var browser = navigator.appName
+        var b_version = navigator.appVersion
+        var version = b_version.split(";");
+        var trim_Version = version[1].replace(/[ ]/g, "");
+        if (browser == "Microsoft Internet Explorer" && trim_Version == "MSIE6.0") {
+            return true;
+        }
+        return false;
+    }
+
+    function IsXhtmlDoctype() {
+        try {
+            var res = false;
+            /*********************************************
+            Just check for internet explorer.
+            **********************************************/
+            if (typeof document.namespaces != "undefined" && document.all[0].nodeType == 8) {
+                var strDocType = "" + document.all[0].nodeValue;
+
+                return strDocType.indexOf("XHTML") != -1;
+            }
+            else if (document.doctype != null) {
+                var strDocType = "" + document.doctype.toString();
+
+            }
+            return false;
+        } catch (e) {
+
+            return false;
+        }
+        return false;
+    }
+
+    var g_isXhtmlDocType = IsXhtmlDoctype();
+
+
+    var g_isIe6 = IsIe6();
+
+    function AdjustFrameWidth(id) {
+        var frameIdOBJECT = window.document.getElementById(id);
+        frameIdOBJECT.style.width = 539 + 'px';
+    }
+
+    function AdjustFrameHeight(id) {
+        var frameIdDOM = window.frames[id];
+        var frameIdOBJECT = window.document.getElementById(id);
+        if (frameIdDOM.document.body.scrollHeight > 204)
+            frameIdOBJECT.style.height = frameIdDOM.document.body.scrollHeight + 'px';
+        else
+            frameIdOBJECT.style.height = 204 + 'px';
+        var imgLefter = window.document.getElementById("imgLefter");
+        var imgRighter = window.document.getElementById("imgRighter");
+        imgLefter.height = frameIdOBJECT.offsetHeight;
+        imgRighter.height = frameIdOBJECT.offsetHeight;
+    }
+
+    function AdjustDIVSize(msgID, shieldID) {
+        var MsgDIV = window.document.getElementById(msgID);
+        var ShieldDIV = window.document.getElementById(shieldID);
+        if (MsgDIV != null) {
+            MsgDIV.style.width = 565 + 'px'; //MsgDIV.scrollWidth;
+            if (MsgDIV.scrollHeight > 263)
+                MsgDIV.style.height = MsgDIV.scrollHeight + 'px';
+            else
+                MsgDIV.style.height = 263 + 'px';
+            MsgDIV.style.left = (window.document.body.clientWidth - MsgDIV.offsetWidth) / 2 + 'px';
+            if (window.top == window && !g_isIe6 && g_isXhtmlDocType)
+                MsgDIV.style.top = 100 + 'px';
+            else {
+                MsgDIV.style.position = "absolute";
+                MsgDIV.style.top = (window.document.body.clientHeight - MsgDIV.offsetHeight) / 2 + 'px';
+            }
+        }
+
+        if (ShieldDIV != null) {
+            ShieldDIV.style.width = window.document.body.clientWidth + 'px';
+
+            if (window.document.body.scrollHeight > window.document.body.clientHeight) {
+                ShieldDIV.style.height = window.document.body.scrollHeight - 3 + 'px';
+            }
+            else {
+                ShieldDIV.style.height = window.document.body.clientHeight + 'px';
+            }
+            if (ShieldDIV.style.height < 432)
+                ShieldDIV.style.height = 432 + 'px';
+        }
+    }
+
+    function AdjustMsgDIVSize() {
+        AdjustDIVSize('MsgDIV', '');
+    }
+
+    // 兼容旧式调用方式， 也可以直接通过传函数参数调用
+    function MsgShow() {
+        if (arguments.length > 0) param1 = "MsgXml='" + arguments[0] + "'";
+        else if (typeof (DIV_MSG_MsgXml) != 'undefined') param1 = "MsgXml='" + DIV_MSG_MsgXml + "'";
+        // window.attachEvent("onload", MsgDIVShowPre);
+       	addEventHandler(window, "load", MsgDIVShowPre); 					
+
+    }
+
+    function StopTabAndEnter() {
+        if (event.keyCode == 9 || event.keyCode == 13) {
+            event.returnValue = false;
+            return false;
+        }
+    }
+
+    function directShow(DIV_MSG_MsgXml) {
+        param1 = "MsgXml='" + DIV_MSG_MsgXml + "'";
+        MsgDIVShowPre();
+    }
+    function MsgDIVShowPre() {
+        var ShieldDIV = window.document.getElementById("ShieldDIV");
+        AdjustDIVSize('', 'ShieldDIV');
+        ShieldDIV.style.visibility = "visible";
+        AdjustFrameWidth('MsgIframe');
+        triggerFuncEq(DIV_MSG_ActionPage, 'FORM', 'MsgIframe', param1);
+        var content = window.document.getElementById("MsgIframe");
+        /*content.attachEvent("onload", MsgDIVShow);
+	    document.attachEvent("onkeydown", StopTabAndEnter);*/
+        addEventHandler(content, "load", MsgDIVShow);
+        addEventHandler(document, "keydown", StopTabAndEnter); 
+    }
+
+    function MsgDIVShow() {
+        var MsgTable = window.document.getElementById("MsgTable");
+        MsgTable.style.display = "inline";
+        AdjustFrameHeight("MsgIframe");
+        AdjustDIVSize('MsgDIV', '');
+        var MsgDIV = window.document.getElementById("MsgDIV");
+        MsgDIV.style.visibility = "visible";
+        MsgDIV.onmousedown = grabObj;
+
+        ShieldDIV.onresize = AdjustMsgDIVSize;
+
+        DIV_MSG_AdjustDIVSize = window.setInterval("AdjustDIVSize('','ShieldDIV')", 100);
+    }
+
+    function MsgHide() {
+        var MsgDIV = window.document.getElementById("MsgDIV");
+        var MsgIframe = window.document.getElementById("MsgIframe");
+        var ShieldDIV = window.document.getElementById("ShieldDIV");
+
+        if (MsgDIV.style.visibility == "visible") {
+            MsgDIV.style.visibility = "hidden";
+            MsgDIV.style.width = 0;
+            MsgDIV.style.height = 0;
+            MsgDIV.onmousedown = null;
+            MsgIframe.style.width = "100%";
+            MsgIframe.style.height = "100%";
+
+            var MsgTable = window.document.getElementById("MsgTable");
+            MsgTable.style.display = "none";
+        }
+        if (ShieldDIV.style.visibility == "visible") {
+            ShieldDIV.style.visibility = "hidden";
+            ShieldDIV.style.width = 0;
+            ShieldDIV.style.height = 0;
+            ShieldDIV.onresize = null;
+        }
+
+        if (DIV_MSG_AdjustDIVSize != null) {
+            window.clearInterval(DIV_MSG_AdjustDIVSize);
+        }
+        /*MsgIframe.detachEvent("onload", MsgDIVShow);
+		document.detachEvent("onkeydown", StopTabAndEnter);*/
+		delEventHandler(MsgIframe, "load", MsgDIVShow);
+		delEventHandler(document, "keydown", StopTabAndEnter);
+    }
+
+    ////////////////////////////////////////////////////////////////////////////////////////////////////////////		
+    //层的移动
+    ////////////////////////////////////////////////////////////////////////////////////////////////////////////		
+    function grabObj() {
+        var imgObjID = window.event.srcElement.id;
+        if (imgObjID == "imgHeader") {
+            DIV_MSG_SelectedObj = window.document.getElementById("MsgDIV");
+        }
+
+        offsetX = window.event.offsetX;
+        offsetY = window.event.offsetY;
+
+        var MsgDIV = window.document.getElementById("MsgDIV");
+        MsgDIV.onmousemove = dragObj;
+        MsgDIV.onmouseup = releaseObj;
+        // prevent further processing of mouseDown event so 
+        // that the Macintosh doesn't display the contextual 
+        // menu and lets dragging work normally.
+        return false;
+    }
+
+    function dragObj() {
+        if (DIV_MSG_SelectedObj) {
+            x = window.event.clientX - offsetX;
+            y = window.event.clientY - offsetY;
+
+            if (x < 0) x = 0;
+            if ((x + DIV_MSG_SelectedObj.offsetWidth) > window.document.body.clientWidth) x = window.document.body.clientWidth - DIV_MSG_SelectedObj.offsetWidth;
+
+            DIV_MSG_SelectedObj.style.pixelLeft = x;
+
+            if (y < 0) y = 0;
+            if ((y + DIV_MSG_SelectedObj.offsetHeight) > window.document.body.clientHeight) y = window.document.body.clientHeight - DIV_MSG_SelectedObj.offsetHeight;
+
+            DIV_MSG_SelectedObj.style.pixelTop = y;
+
+            //prevent further system response to dragging
+            window.event.returnValue = false;
+            return false
+        }
+    }
+
+    function releaseObj() {
+        if (DIV_MSG_SelectedObj) {
+            DIV_MSG_SelectedObj = null;
+            var MsgDIV = window.document.getElementById("MsgDIV");
+            MsgDIV.onmousemove = null;
+            MsgDIV.onmouseup = null;
+        }
+    }
+
+    ////////////////////////////////////////////////////////////////////////////////////////////////////////////		
+    //其他事件处理
+    ////////////////////////////////////////////////////////////////////////////////////////////////////////////		
+    function ChangeSrc(flag) {
+        var imgClose = window.document.getElementById("imgClose");
+        if (flag == 2) {
+            imgClose.src = "/CmbBank_GenShell" + '/UI/Base/doc/Images/MessageNew9.gif';
+        }
+        else {
+            imgClose.src = "/CmbBank_GenShell" + '/UI/Base/doc/Images/MessageNew12.gif';
+        }
+    }
+		
+		
+</SCRIPT>
+ 
+<DIV id=ShieldDIV style="HEIGHT: 0px; WIDTH: 0px; POSITION: absolute; LEFT: 0px; FILTER: alpha(opacity=10); Z-INDEX: 10; TOP: 0px; VISIBILITY: hidden; opacity: 0.1"><IFRAME id=ShieldIftame style="OVERFLOW: hidden" height="100%" marginHeight=0 src="/CmbBank_GenShell/UI/Base/DefaultDiv.htm" frameBorder=0 width="100%" marginWidth=0 scrolling=no>
+    </IFRAME></DIV>
+<DIV id=MsgDIV style="HEIGHT: 0px; WIDTH: 0px; POSITION: fixed; LEFT: 0px; Z-INDEX: 15; TOP: 0px; VISIBILITY: hidden">
+<TABLE id=MsgTable style="DISPLAY: none" cellSpacing=0 cellPadding=0 align=center border=0>
+<TBODY>
+<TR>
+<TD colSpan=3><IMG id=imgHeader alt="" src="/CmbBank_GenShell/UI/Base/doc/Images/MessageNew7.jpg">
+<DIV style="POSITION: absolute; LEFT: 535px; TOP: 10px"><IMG onclick=MsgHide(); onmouseover=ChangeSrc(1); onmouseout=ChangeSrc(2); id=imgClose style="CURSOR: pointer" alt="" src="/CmbBank_GenShell/UI/Base/doc/Images/MessageNew9.gif"> </DIV></TD></TR>
+<TR>
+<TD><IMG id=imgLefter src="/CmbBank_GenShell/UI/Base/doc/Images/MessageNew10.gif" width=13 height=10></TD>
+<TD><IFRAME id=MsgIframe height=10 marginHeight=0 src="/CmbBank_GenShell/UI/Base/Blank.htm" frameBorder=0 width=537 name=MsgIframe marginWidth=0 scrolling=no>
+                </IFRAME></TD>
+<TD><IMG id=imgRighter src="/CmbBank_GenShell/UI/Base/doc/Images/MessageNew11.gif" width=13 height=10></TD></TR>
+<TR>
+<TD colSpan=3><IMG src="/CmbBank_GenShell/UI/Base/doc/Images/MessageNew8.jpg"> </TD></TR></TBODY></TABLE></DIV></TD></TR></TBODY></TABLE><!-- CardInfoForType 记录用户有哪些类别的账号  --><INPUT id=CardsInfoForType type=hidden value={A:true,H:false,B:false,C:true,D:true} name=CardsInfoForType>
+<SCRIPT type=text/JavaScript>
+            var defaultArrayData = [
+    	     "日日盈",
+             "理财",
+             "基金",
+             "黄金",
+             "通知存款",
+             "第三方存管"
+            ];
+            var emptyArrayData = [];
+
+            $('#txtSearch').typeahead({
+                source: function (query, process) {
+                    if (query === "") {
+                        process(defaultArrayData);
+                    }
+                    else {
+                        process(emptyArrayData);
+                    }
+                }, //数据源
+                items: "all",//最多显示个数
+                minLength: 1,
+                showEmptyMatch: false,  //没有匹配项的时候不显示下拉列表
+                //showHintOnFocus: "all", //当输入框获得焦点时立刻显示提示
+                showHintOnFocus: true, //当输入框获得焦点时立刻显示提示
+                autoSelect: false,
+                fitToElement: true,
+                delay: 100,             //延时500ms执行，防止频繁触发事件
+                theme: "cmbsearch1",
+                themes: {
+                    cmbsearch1: {
+                        menu: '<ul class="typeahead dropdown-search typeahead-scrollable" style="min-width:145px;" role="listbox"></ul>',
+                        item: '<li><a class="dropdown-search-item" style="width:145px;font-size:12px;height: 28px;line-height: 28px;*height: 28px;*line-height: 28px;padding-top:2px;padding-bottom:2px;" href="#" role="option"><div></div></a></li>',
+                        itemContentSelector: "div",
+                        title: '<li class="dropdown-search-title" style="width:120px;font-size:14px;height: 24px;line-height: 24px;*height: 24px;*line-height: 24px;padding-top:2px;padding-bottom:2px;"></li>',
+                        headerHtml: '<li class="dropdown-search-header"></li>',
+                        headerDivider: '<li class="divider" role="separator"></li>'
+                        , itemSeparater: '<li></li>'
+                    }
+                }
+
+                , listen: function () {
+                    this.$element
+                        .on('focus', $.proxy(this.focus, this))
+                        .on('blur', $.proxy(this.blur, this))
+                        .on('keypress', $.proxy(this.keypress, this))
+                        .on('propertychange input', $.proxy(this.input, this))
+                        .on('keyup', $.proxy(this.keyup, this));
+
+                    if (this.eventSupported('keydown')) {
+                        this.$element.on('keydown', $.proxy(this.keydown, this));
+                    }
+
+                    var itemTagName = $(this.options.item || this.theme.item).prop('tagName');
+                    this.$menu
+                      .on('click', 'a.dropdown-search-item', $.proxy(this.click, this))
+                      .on('mouseenter', itemTagName, $.proxy(this.mouseenter, this))
+                      .on('mouseleave', $.proxy(this.mouseleave, this));
+                }
+
+                , render: function (items) {
+                    var that = this;
+                    var self = this;
+                    var activeFound = false;
+                    var data = [];
+                    var hisRecItems = ShowHistoryRecord();
+                    var hotRecItems = ShowHotKeyWords();
+                    if (hisRecItems.length > 0) {
+                        data.push({
+                            __type: 'title',
+                            //name: '<span style="float:right;"><a href="javascript:void(0);" onclick="DoDeleteRecord();"><img src="../doc/SearchPage/Images/delete_14px.png" style="margin-top: 6px"></a></span><span style="float:left">历史搜索</span><div class="clearfix"></div>'  //最外层是<li>标签绑定mouseenter 事件，清空按钮才能有用
+                            name: '<span class="pull-right"><a href="javascript:void(0);" onclick="DoDeleteRecord();"><img src="../doc/SearchPage/Images/delete_14px.png" style="margin-top: 6px" ></a></span><span class="pull-left">历史搜索</span><div class="clearfix"></div>'  //最外层是<li>标签绑定mouseenter 事件，清空按钮才能有用
+                    });
+                        $.each(hisRecItems, function (key, value) {
+                            data.push(value);
+                        });
+
+                        if (hotRecItems.length > 0) {
+                            data.push({
+                                __type: 'itemSeparater',
+                                name: '<hr style="align:center; width:120px;">'
+                            });
+                        }
+                    }
+                    if (hotRecItems.length > 0) {
+                        data.push({
+                            __type: 'title',
+                            name: '<span class="pull-left">热门搜索</span><div class="clearfix"></div>'  //最外层是<li>标签绑定mouseenter 事件，清空按钮才能有用
+                        });
+                        $.each(hotRecItems, function (key, value) {
+                            data.push(value);
+                        });
+                    }
+                    if (data.length == 0)
+                    {
+                        this.hide();
+                        return;
+                    }
+                    items = $(data).map(function (i, item) {
+                        if ((item.__type || false) == 'title') {
+                            return $(that.options.title || that.theme.title).html(item.name)[0];
+                        }
+
+                        if ((item.__type || false) == 'itemSeparater') {
+                            return $(that.options.itemSeparater || that.theme.itemSeparater).html(item.name)[0];
+                        }
+
+                        var text = '';
+                        if (typeof item !== 'undefined') {
+                            if (item.length > 8)
+                            {
+                                text = '<div>' + item.substring(0,8) + "..." + '</div>';
+                            }
+                            else
+                            {
+                                text = '<div>' + item + '</div>';
+                            }
+                        }
+                        else {
+                            text = self.displayText(item);
+                        }
+                        i = $(that.options.item || that.theme.item).data('value', item);
+                        i.find(that.options.itemContentSelector || that.theme.itemContentSelector).html(text);
+                        return i[0];
+                    });
+
+                    if (this.autoSelect && !activeFound) {
+                        items.first().addClass('active');
+                        this.$element.data('active', items.first().data('value'));
+                    }
+                    this.$menu.html(items);
+                    return this;
+                }
+
+                , next: function (event) {
+                    var active = this.$menu.find('.active').removeClass('active');
+                    var next = active.next($(this.options.item || this.theme.item).prop('tagName'));
+
+                    if (!next.length) {
+                        next = $(this.$menu.find($(this.options.item || this.theme.item).prop('tagName'))[1]);//第一个<li>是表头（历史搜索、您是不是想搜索），从第二个li开始
+                    }
+                    if (next.length == 1 && (next[0].innerHTML.substring(0,3) == "<hr" || next[0].innerHTML.substring(0,3) == "<HR"))
+                    {
+                        next = next.next($(this.options.item || this.theme.item).prop('tagName'));
+                        next = next.next($(this.options.item || this.theme.item).prop('tagName'));
+                    }
+                    next.addClass('active');
+                    var newVal = this.updater(next.data('value'));
+                    this.$element.val(this.displayText(newVal) || newVal);
+                }
+
+                , prev: function (event) {
+                     var active = this.$menu.find('.active').removeClass('active');
+                     var prev = active.prev($(this.options.item || this.theme.item).prop('tagName'));
+
+                     if (!prev.length) {
+                         prev = this.$menu.find($(this.options.item || this.theme.item).prop('tagName')).last();
+                     }
+
+                     if (prev.length == 1 && (prev[0].innerHTML.substring(0, 5) == "<span" || prev[0].innerHTML.substring(0, 5) == "<SPAN")) {
+                         prev = prev.prev($(this.options.item || this.theme.item).prop('tagName'));
+                         if (prev.length == 0)
+                         {
+                             prev = this.$menu.find($(this.options.item || this.theme.item).prop('tagName')).last();
+                         }
+                         else if (prev.length == 1 && (prev[0].innerHTML.substring(0, 3) == "<hr"  || prev[0].innerHTML.substring(0, 3) == "<HR")) {
+                             prev = prev.prev($(this.options.item || this.theme.item).prop('tagName'));
+                         }
+                     }
+
+                     prev.addClass('active');
+                     var newVal = this.updater(prev.data('value'));
+                     this.$element.val(this.displayText(newVal) || newVal);
+                }
+
+                ,input: function (e) {
+                    var currentValue = this.$element.val() || this.$element.text();
+                        if (this.value !== currentValue) {
+                            this.value = currentValue;
+                             //this.lookup();                                        //解决IE8以下中下键选择历史搜索时直接填入的问题
+                        }
+                }
+
+                , select: function () {
+                     var val = this.$menu.find('.active').data('value');
+
+                     this.$element.data('active', val);
+                     if (this.autoSelect || val) {
+                         var newVal = this.updater(val);
+                         if (!newVal) {
+                             newVal = '';
+                         }
+                         this.value = this.displayText(newVal) || newVal;  //edited by yl for IE5/7/8 propertychange
+                         this.$element
+                           .val(this.displayText(newVal) || newVal)
+                           .change();
+                     }
+
+                     return this.hide();
+                 }
+
+                , keyup: function (e) {
+                     switch (e.keyCode) {
+                         case 40: // down arrow
+                         case 38: // up arrow
+                         case 16: // shift
+                         case 17: // ctrl
+                         case 18: // alt
+                             break
+
+                         case 9: // tab
+                             if (!this.shown) return;
+                             //added by yl for sougou enter English
+                             var current = this.$element.val() || this.$element.text();
+                             if (this.oldValue !== current) {
+                                 return;
+                             }
+                             this.select();
+                             break
+
+                         case 13: // enter
+                             if (!this.shown) return;
+                             var current = this.$element.val() || this.$element.text();
+                             if (this.oldValue !== current) {
+                                 return;
+                             }
+                             this.select();                                      //先选择
+                             document.getElementById("BtnSearch").click();       //enter键搜索操作
+                             //onSearch();
+                             break
+
+                         case 27: // escape
+                             if (!this.shown) return;
+                             this.hide();
+                             break
+
+                         default:
+                             this.lookup()
+                     }
+
+                     e.stopPropagation()
+                     e.preventDefault()
+                }
+
+            });
+        </SCRIPT>
+ </FORM>
+<FORM id=GenForm style="DISPLAY: none" method=post action=/CmbBank_CreditCard_Account/UI/CreditCard/Account/am_QueryAccount.aspx target=mainWorkArea><INPUT type=hidden value=009CCF5758B59681BD2BA154BF4F34D1502615938619621600000054></FORM></BODY></HTML>

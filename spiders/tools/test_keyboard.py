@@ -2,7 +2,7 @@ from ctypes import *
 
 import  time
 
-dd_dll = windll.LoadLibrary('ddx64.dll')
+dd_dll = windll.LoadLibrary(r'D:\installPakge\DD85590\DD85590.64.dll')
 
 # DD虚拟码，可以用DD内置函数转换。
 vk = {'5': 205, 'c': 503, 'n': 506, 'z': 501, '3': 203, '1': 201, 'd': 403, '0': 210, 'l': 409, '8': 208, 'w': 302,
@@ -25,7 +25,7 @@ def down_up(code):
 def dd(key):
     # 500是shift键码。
     if i.isupper():
-        # 如果是一个大写的玩意。
+        # 如果是一个大写的字符。
 
         # 按下抬起。
         dd_dll.DD_key(500, 1)
@@ -33,14 +33,14 @@ def dd(key):
         dd_dll.DD_key(500, 2)
 
     elif i in '~!@#$%^&*()_+{}|:"<>?':
-        # 如果是需要这样按键的玩意。
+        # 如果是需要这样按键的字符。
         dd_dll.DD_key(500, 1)
         down_up(vk2[i])
         dd_dll.DD_key(500, 2)
     else:
         down_up(i)
 
-input("按任意键继续...")
+# input("按任意键继续...")
 # 之后等待两秒。
 time.sleep(2)
 

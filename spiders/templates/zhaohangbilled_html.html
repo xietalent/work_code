@@ -1,0 +1,611 @@
+<html><head>
+    <title></title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"><script type="text/javascript"> var behaviorjson = "{}";</script>
+    <link href="../../../Base/doc/dist/asset/css/cmbbank-ui-min.css" rel="stylesheet" type="text/css">
+    <script src="../../../Base/doc/scripts/pro/jquery-1.12.3.min.js" type="text/javascript" charset="utf-8"></script>
+    <!--[if IE 8]>
+	<link href="../../../Base/doc/dist/asset/css/iconfont-ie8fix.css" rel="stylesheet" type="text/css" charset="utf-8"/>
+    <![endif]-->
+    
+    <script src="../../../Base/doc/Scripts/DynaForm.js" type="text/javascript"></script>
+    <script src="../../../Base/doc/Scripts/FuncTrigger.js" type="text/javascript"></script>
+    <script src="../../../Base/doc/Scripts/WebSvrCom.js" type="text/javascript"></script>
+    <script src="../../../Base/doc/Scripts/HostPkg.js" type="text/javascript"></script>
+    <script src="../../../Base/doc/Scripts/BaseFunc.js" type="text/javascript"></script>
+    <script src="../../../Base/doc/Scripts/default.js" type="text/javascript"></script>
+    <script type="text/JavaScript">
+        newwinFeatures = "menubar=no,location=no,toolbar=no,status=no,resizable=yes,scrollbars=yes,width=800,height=500,top=" + (screen.height - 500) / 2 + ",left=" + (screen.width - 800) / 2;
+        dialogFeatures = "dialogHeight: 420px; dialogWidth: 650px; edge: Raised; center: Yes; help: No; resizable: No; status: No;";
+        function InitPage() {
+            body.style.cursor = "";
+        }
+
+        function CheckValid() {
+            body.style.cursor = "wait";
+            return true;
+        }
+        function changeSub(idx) {
+            switch (idx) {
+                case 0:
+                    var param1 = 'index=0';
+                    CallFuncEx3('Cver2_am_QueryAccount$$215005', 'C', 'CBANK_CREDITCARD_ACCOUNT', 'Account/am_QueryAccount.aspx', 'FORM', null, param1);
+                    break;
+                case 1:
+                    var param1 = 'index=1';
+                    triggerFunc("../am_QueryReckoningSurveyNew.aspx", "FORM", "_self", param1);
+                    break;
+                case 2:
+                    var param1 = 'index=2';
+                    triggerFunc("./am_QueryReckoningNotRMB.aspx", "FORM", "_self", param1);
+                    break;
+            }
+        }
+
+        function GoToFastPayment() {
+            var CreditAccNo = 'CreditAccNo=' + "0155298473001001";
+            CallFuncEx3('rm_FastPayment$$220002', 'C', 'CBANK_CREDITCARD_REPAYMENT', 'Repayment/rm_FastPayment.aspx', 'FORM', null, param1);
+        }
+
+        function RefreshPage() {
+            document.getElementById("am_QueryReckoningSurveyNew").submit();
+        }
+
+        function SubmitProcess() {
+            if (typeof CMBPBLS !== 'undefined'
+                && typeof CMBPBLS.AddSubmitBehaviorData !== 'undefined') {
+                CMBPBLS.AddSubmitBehaviorData();
+            }
+            return true;
+        }
+
+    </script>
+
+</head>
+<body class="page" id="body" style="-ms-overflow-x: auto; -ms-overflow-y: auto;" onsubmit="SubmitProcess()" onload="InitPage()">
+    <form name="am_QueryReckoningSurveyNew" id="am_QueryReckoningSurveyNew" onsubmit="return CheckValid();" action="./am_QueryReckoningSurveyNew.aspx" method="post">
+<div>
+<input name="__EVENTTARGET" id="__EVENTTARGET" type="hidden" value="">
+<input name="__EVENTARGUMENT" id="__EVENTARGUMENT" type="hidden" value="">
+<input name="__LASTFOCUS" id="__LASTFOCUS" type="hidden" value="">
+<input name="__VIEWSTATE" id="__VIEWSTATE" type="hidden" value="3WuGS1Iovh6F6jzGm/nYnhUkQuwGbKk/mGQPV1ewDJqrBvMuUJAjXX5jgDUTVb5VphRcC3JlzVm+muK0OasscOa054yp4OCpICZkfmcwaOCYwZct+nmDAF1TFTlsFZzQ9XuIqO39JpsBA1qp3vv339Xk+0W6vfo1P0KkRVeE21WyQHVPObByzeA5d6N6zee6Fooke9kAR0Tvj0fayh0N/xPBaRvJQI0jZF+hiF+G0pstKM+1NlB93IAjv+7wp3pFOzb+OQd/z+QTX3VRHTt+NQClDR/OxJQjHfEfNNe5uXIKrKyb5tPHy4eSWxqUKCoiQsvFnPW0/CgkU9svgFu2mf1AYe9lzNidmd3IIjlzhg30BhuSrnEgUr7oycSbHhdycT97EUzJqHjKo5zlIbDu2fwUNHmwIHDS3gbtpcnU9x556g/pakZB6TAvTg9O7DXp8qgBQjarnYPbCsQewenY4THHJch8bx0+0s7V430kR4TMdTzRQ1wlDmKHcEynBiZH/WFxNtgp1KGukN5HPicLSKlgdS1TpUxPAaFrhmmDW+OLlHt/5aUOzyk3tPE+UaHQtpi730NwPTbZAGhKi3YgJAXZZMKYQWFdjPEURrqiUwS3yeuQU1xgXU8MGIgbQiHmCcqRvP5G5bYG2NEn9Bt/umxZHnfObcSshQJaDwSk1CaZw6St+6lYu1U9s4g93TtLO1HvKf/s9JFFdtpUjB6Q5OZ50E8UOEzBxsAanePauvJPZd+XV0Mi1vm4rcPjLq0/bLd+SD6ukCzOeuAoJPfIlaE8GcPfcPj0RAUEekmIvBhR8KCojZ1Z8ZKypkypvvNwM7asSYNGMTf7pErA0IONALXBHzJuVfyepLQsJTrtq2iSevwJOudWs4aAz3EUBx9MtfRO8WP7/1KlvMUY7la+NUNf96Jj39ri9bH0mJabVHqPqXlMUJY6lPhs7+96hU/H5EdZVH3br522RgWEmQOpFm96Ib+jP387F7KDrW7Ntb3VoCpzaOetjpLN8NnHP8wnYrT1c3f8lmicKF8k4LxwMLK9vKEqdZ6zQkSGNfqnN1JXn2oxct1SHFoE0Jh3yHf/MOTcAfGs6KlHfqKzZpqkRf9TPAud6YmNXdl4aea3azrPSnK3z6t+AUG7FfyQujet55+rjL24s1wZqSVApMdw5nZNtQr5z9asvlsWETgD1QQ=">
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['am_QueryReckoningSurveyNew'];
+if (!theForm) {
+    theForm = document.am_QueryReckoningSurveyNew;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<div>
+
+	<input name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" type="hidden" value="3994E162">
+	<input name="__EVENTVALIDATION" id="__EVENTVALIDATION" type="hidden" value="dNeObpEqXIP7lfs8vnr1AfyByKsGhTX4pzULILzte9XZgPsWfWhezTiqOV8BEgJn8uYa9EW45YsZMEZHLU52/Te/QN9NAnvuWhUdoQwEmlPK6kDqE+Gaxwzk3o0V5MDbf14D0bGU9mGmutlT9fliN2PWsff9si+eMB4KBa1dq13xGthauxFspgfmD7PixAW9XFIki2coh2Ru8lA+2Srjx/DuKxqWRm6/TQpbUsZBI+w=">
+</div>
+        <div class="page-title">
+            <span>
+                <span id="lFunctionName">已出账单查询</span>
+            </span>
+        </div>
+        
+
+<script type="text/JavaScript">
+    function ddlSelectChange() {
+        window.document.body.style.cursor = "";
+        P.process();
+        if (typeof (SetTimeStamp) == 'function') {
+            SetTimeStamp();
+        }
+
+    }
+</script>
+<style type="text/css">
+    .CorpName {
+        margin-right: 50px;
+    }
+    .AcctAmount{
+        font-size:18px;
+    }
+</style>
+<div class="page-header">
+    <div class="page-header-inbox">
+        <div class="page-header-inbox-account">
+            <span class="page-header-inbox-account-dropdown">
+                <select name="am_MainPanel1$ddlCreditAccList" class="chosen-select-account" id="am_MainPanel1_ddlCreditAccList" style="width: 285px; display: none;" onchange="ddlSelectChange();setTimeout('__doPostBack(\'am_MainPanel1$ddlCreditAccList\',\'\')', 0)">
+	<option selected="selected" value="0155298473001001">个人卡账户001001</option>
+
+</select><div title="" class="chosen-container chosen-container-single chosen-select-account" id="am_MainPanel1_ddlCreditAccList_chosen" style="width: 285px;"><a tabindex="-1" class="chosen-single"><span><em>当前账户：</em>个人卡账户001001</span><div><b><i class="glyphicon chosen-down"></i><i class="glyphicon chosen-up"></i></b></div></a></div>
+            </span>
+        </div>
+        <div class="page-header-inbox-message">
+            
+            <span id="am_MainPanel1_lPageHeaderInboxMessage"></span>
+             <span class="AcctAmount" id="am_MainPanel1_lAcctAmount"></span>
+        </div>
+    </div>
+    <div class="page-header-link">
+        <div class="page-header-link-container three"><span><i title="" class="glyphicon icon-icon-48"></i><a href="javascript:javascript:changeSub(2)" cmbbehavior="entryid:bsc001901">未出账单查询</a><em></em></span><span><i title="" class="glyphicon icon-icon-48"></i><a href="javascript:triggerFunc('am_AdvanceHomePage.aspx','FORM','_self');" cmbbehavior="entryid:bsc001902">预借现金</a><em></em></span><span><i title="" class="glyphicon icon-icon-48"></i><a href="javascript:triggerFunc('am_ApplyCashAdvanceByStages.aspx','FORM','_self');" cmbbehavior="entryid:bsc001903">现金分期</a><em></em></span></div>
+    </div>
+</div>
+
+
+
+        <div class="page-panel">
+            <div class="page-panel-tabs" id="tabProduct">
+                <div class="page-panel-tabs" id="tabFinProduct">
+                    <ul>
+                        <li class="active"><a href="javascript:void(0);">查询结果
+                        </a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="page-panel-content">
+                <table align="Center" class="page-table-common action table-fix" id="dgReckoningInfo1" style="border-width: 0px; width: 100%; border-collapse: collapse;" border="0" cellspacing="0">
+	<tbody><tr align="center" class="dgHeader" valign="middle" style="white-space: nowrap;">
+		<th class="dgHeader" style="width: 8%; white-space: nowrap;" scope="col">账单月份</th><th class="dgHeader" style="width: 15%; white-space: nowrap;" scope="col">人民币应还总额</th><th class="dgHeader" style="width: 15%; white-space: nowrap;" scope="col">人民币最低还款额</th><th class="dgHeader" style="width: 15%; white-space: nowrap;" scope="col">美元应还总额</th><th class="dgHeader" style="width: 15%; white-space: nowrap;" scope="col">美元最低还款额</th><th class="dgHeader" style="width: 16%; white-space: nowrap;" scope="col">账单明细</th><th class="dgHeader" style="width: 8%; white-space: nowrap;" scope="col">账单分期</th><th class="dgHeader" style="width: 8%; white-space: nowrap;" scope="col">快速还款</th>
+	</tr><tr>
+		<td align="center" style="width: 6%; white-space: nowrap;">2018-12</td><td align="right" style="width: 15%; white-space: nowrap;">￥21,880.52</td><td align="right" style="width: 15%; white-space: nowrap;">￥2,188.05</td><td align="right" style="width: 15%; white-space: nowrap;">$0.00</td><td align="right" style="white-space: nowrap;">$0.00</td><td align="center" style="width: 15%; white-space: nowrap;"><a onclick="" href="#" cmbbehavior="entryid:bsc001001"> 账单明细 </a> <a onclick="" href="#" cmbbehavior="entryid:bsc001002"> 补寄账单 </a></td><td align="center" style="width: 8%; white-space: nowrap;"><a onclick="triggerFunc('./am_ApplyReckoningByStages.aspx','FORM','_self','DisplayFlag=1');" href="#"> 立即申请 </a></td><td align="center" style="width: 8%; white-space: nowrap;"><a onclick="" href="#" cmbbehavior="entryid:bsc001003"> 快速还款 </a></td>
+	</tr><tr class="odd">
+		<td align="center" style="width: 6%; white-space: nowrap;">2018-11</td><td align="right" style="width: 15%; white-space: nowrap;">￥21,331.00</td><td align="right" style="width: 15%; white-space: nowrap;">￥2,133.10</td><td align="right" style="width: 15%; white-space: nowrap;">$0.00</td><td align="right" style="white-space: nowrap;">$0.00</td><td align="center" style="width: 15%; white-space: nowrap;"><a onclick="" href="#" cmbbehavior="entryid:bsc001001"> 账单明细 </a> <a onclick="" href="#" cmbbehavior="entryid:bsc001002"> 补寄账单 </a></td><td align="center" style="width: 8%; white-space: nowrap;">--</td><td align="center" style="width: 8%; white-space: nowrap;">--</td>
+	</tr><tr>
+		<td align="center" style="width: 6%; white-space: nowrap;">2018-10</td><td align="right" style="width: 15%; white-space: nowrap;">￥21,658.00</td><td align="right" style="width: 15%; white-space: nowrap;">￥2,165.80</td><td align="right" style="width: 15%; white-space: nowrap;">$0.00</td><td align="right" style="white-space: nowrap;">$0.00</td><td align="center" style="width: 15%; white-space: nowrap;"><a onclick="" href="#" cmbbehavior="entryid:bsc001001"> 账单明细 </a> <a onclick="" href="#" cmbbehavior="entryid:bsc001002"> 补寄账单 </a></td><td align="center" style="width: 8%; white-space: nowrap;">--</td><td align="center" style="width: 8%; white-space: nowrap;">--</td>
+	</tr><tr class="odd">
+		<td align="center" style="width: 6%; white-space: nowrap;">2018-09</td><td align="right" style="width: 15%; white-space: nowrap;">￥19,936.10</td><td align="right" style="width: 15%; white-space: nowrap;">￥1,993.61</td><td align="right" style="width: 15%; white-space: nowrap;">$0.00</td><td align="right" style="white-space: nowrap;">$0.00</td><td align="center" style="width: 15%; white-space: nowrap;"><a onclick="" href="#" cmbbehavior="entryid:bsc001001"> 账单明细 </a> <a onclick="" href="#" cmbbehavior="entryid:bsc001002"> 补寄账单 </a></td><td align="center" style="width: 8%; white-space: nowrap;">--</td><td align="center" style="width: 8%; white-space: nowrap;">--</td>
+	</tr><tr>
+		<td align="center" style="width: 6%; white-space: nowrap;">2018-08</td><td align="right" style="width: 15%; white-space: nowrap;">￥21,281.00</td><td align="right" style="width: 15%; white-space: nowrap;">￥2,128.10</td><td align="right" style="width: 15%; white-space: nowrap;">$0.00</td><td align="right" style="white-space: nowrap;">$0.00</td><td align="center" style="width: 15%; white-space: nowrap;"><a onclick="" href="#" cmbbehavior="entryid:bsc001001"> 账单明细 </a> <a onclick="" href="#" cmbbehavior="entryid:bsc001002"> 补寄账单 </a></td><td align="center" style="width: 8%; white-space: nowrap;">--</td><td align="center" style="width: 8%; white-space: nowrap;">--</td>
+	</tr><tr class="odd">
+		<td align="center" style="width: 6%; white-space: nowrap;">2018-07</td><td align="right" style="width: 15%; white-space: nowrap;">￥21,980.10</td><td align="right" style="width: 15%; white-space: nowrap;">￥2,198.01</td><td align="right" style="width: 15%; white-space: nowrap;">$0.00</td><td align="right" style="white-space: nowrap;">$0.00</td><td align="center" style="width: 15%; white-space: nowrap;"><a onclick="" href="#" cmbbehavior="entryid:bsc001001"> 账单明细 </a> <a onclick="" href="#" cmbbehavior="entryid:bsc001002"> 补寄账单 </a></td><td align="center" style="width: 8%; white-space: nowrap;">--</td><td align="center" style="width: 8%; white-space: nowrap;">--</td>
+	</tr><tr>
+		<td align="center" style="width: 6%; white-space: nowrap;">2018-06</td><td align="right" style="width: 15%; white-space: nowrap;">￥21,961.00</td><td align="right" style="width: 15%; white-space: nowrap;">￥2,196.10</td><td align="right" style="width: 15%; white-space: nowrap;">$0.00</td><td align="right" style="white-space: nowrap;">$0.00</td><td align="center" style="width: 15%; white-space: nowrap;"><a onclick="" href="#" cmbbehavior="entryid:bsc001001"> 账单明细 </a> <a onclick="" href="#" cmbbehavior="entryid:bsc001002"> 补寄账单 </a></td><td align="center" style="width: 8%; white-space: nowrap;">--</td><td align="center" style="width: 8%; white-space: nowrap;">--</td>
+	</tr><tr class="odd">
+		<td align="center" style="width: 6%; white-space: nowrap;">2018-05</td><td align="right" style="width: 15%; white-space: nowrap;">￥0.00</td><td align="right" style="width: 15%; white-space: nowrap;">￥0.00</td><td align="right" style="width: 15%; white-space: nowrap;">$0.00</td><td align="right" style="white-space: nowrap;">$0.00</td><td align="center" style="width: 15%; white-space: nowrap;"><a onclick="" href="#" cmbbehavior="entryid:bsc001001"> 账单明细 </a> <a onclick="" href="#" cmbbehavior="entryid:bsc001002"> 补寄账单 </a></td><td align="center" style="width: 8%; white-space: nowrap;">--</td><td align="center" style="width: 8%; white-space: nowrap;">--</td>
+	</tr><tr>
+		<td align="center" style="width: 6%; white-space: nowrap;">2018-04</td><td align="right" style="width: 15%; white-space: nowrap;">￥13,841.99</td><td align="right" style="width: 15%; white-space: nowrap;">￥1,384.20</td><td align="right" style="width: 15%; white-space: nowrap;">$0.00</td><td align="right" style="white-space: nowrap;">$0.00</td><td align="center" style="width: 15%; white-space: nowrap;"><a onclick="" href="#" cmbbehavior="entryid:bsc001001"> 账单明细 </a> <a onclick="" href="#" cmbbehavior="entryid:bsc001002"> 补寄账单 </a></td><td align="center" style="width: 8%; white-space: nowrap;">--</td><td align="center" style="width: 8%; white-space: nowrap;">--</td>
+	</tr><tr class="odd">
+		<td align="center" style="width: 6%; white-space: nowrap;">2018-03</td><td align="right" style="width: 15%; white-space: nowrap;">￥0.00</td><td align="right" style="width: 15%; white-space: nowrap;">￥0.00</td><td align="right" style="width: 15%; white-space: nowrap;">$0.00</td><td align="right" style="white-space: nowrap;">$0.00</td><td align="center" style="width: 15%; white-space: nowrap;"><a onclick="" href="#" cmbbehavior="entryid:bsc001001"> 账单明细 </a> <a onclick="" href="#" cmbbehavior="entryid:bsc001002"> 补寄账单 </a></td><td align="center" style="width: 8%; white-space: nowrap;">--</td><td align="center" style="width: 8%; white-space: nowrap;">--</td>
+	</tr><tr>
+		<td align="center" style="width: 6%; white-space: nowrap;">2018-02</td><td align="right" style="width: 15%; white-space: nowrap;">￥6,025.04</td><td align="right" style="width: 15%; white-space: nowrap;">￥602.50</td><td align="right" style="width: 15%; white-space: nowrap;">$0.00</td><td align="right" style="white-space: nowrap;">$0.00</td><td align="center" style="width: 15%; white-space: nowrap;"><a onclick="" href="#" cmbbehavior="entryid:bsc001001"> 账单明细 </a> <a onclick="" href="#" cmbbehavior="entryid:bsc001002"> 补寄账单 </a></td><td align="center" style="width: 8%; white-space: nowrap;">--</td><td align="center" style="width: 8%; white-space: nowrap;">--</td>
+	</tr><tr class="odd">
+		<td align="center" style="width: 6%; white-space: nowrap;">2018-01</td><td align="right" style="width: 15%; white-space: nowrap;">￥50.00</td><td align="right" style="width: 15%; white-space: nowrap;">￥5.00</td><td align="right" style="width: 15%; white-space: nowrap;">$0.00</td><td align="right" style="white-space: nowrap;">$0.00</td><td align="center" style="width: 15%; white-space: nowrap;"><a onclick="" href="#" cmbbehavior="entryid:bsc001001"> 账单明细 </a> <a onclick="" href="#" cmbbehavior="entryid:bsc001002"> 补寄账单 </a></td><td align="center" style="width: 8%; white-space: nowrap;">--</td><td align="center" style="width: 8%; white-space: nowrap;">--</td>
+	</tr>
+</tbody></table>
+                
+            </div>
+            <div class="page-panel-explain">
+                <iframe name="ExplainPageFrame" id="ExplainPageFrame" src="../../doc/Htmls/Pro8/fm301102.htm" frameborder="0" scrolling="no" style="height: 260px;"></iframe>
+            </div>
+        </div>
+        
+<script language="javascript" src="../../../Base/doc/Scripts/HostPkg.js"></script>
+<script language="javascript" src="../../../Base/doc/Scripts/WebSvrCom.js"></script>
+<script language="javascript" src="../../../Base/doc/Scripts/default.js"></script>
+<script language="javascript" src="../../../Base/doc/Scripts/BaseFunc.js"></script>
+
+<script language="javascript" type="text/javascript">
+    var sLocID = "022030";
+    var sCurAcctInfo = "001"; //信用卡请求时，为SIDType；一卡通时为AccountUID
+    var g_RefreshFlg = 0;
+    var sBusType = "CreditCard_Loan"
+    var AdvXmlRequestUrl = "";
+    
+    function showAdv() {
+        if (g_RefreshFlg != 0)
+            return;
+        g_RefreshFlg = 1;
+
+        if (sBusType == "CreditCard") {
+            AdvXmlRequestUrl = "/CmbBank_CreditCard/UI/CreditCardPC/CreditCard/AdvRequest.aspx";
+        }
+        else if (sBusType == "CreditCardV2") {
+            AdvXmlRequestUrl = "/CmbBank_CreditCardV2/UI/CreditCardPC/CreditCardV2/AdvRequest.aspx";
+        }
+        else if (sBusType == "PB") {
+            AdvXmlRequestUrl = "/CmbBank_PB/UI/PBPC/DebitCard/AdvRequest.aspx";
+        }
+        else if (sBusType == "SHELL") {
+            AdvXmlRequestUrl = "/CmbBank_GenShell/UI/GenShellPC/Login/AdvRequest.aspx";
+        }
+        else if (sBusType == "CreditCard_Loan") {
+            AdvXmlRequestUrl = "/CmbBank_CreditCard_Loan/UI/CreditCard/Loan/AdvRequest.aspx";
+        }
+        else if (sBusType == "DebitCard_Payment") {
+            AdvXmlRequestUrl = "/CmbBank_DebitCard_Payment/UI/DebitCard/Base/AdvRequest.aspx";
+        }
+        else {
+            return;
+        }
+        //adFrame.document.write("<style TYPE='text/css'>.mycontent {font: 9pt/14pt '宋体';font-weight:bold;color:#777777;background-color:#FFFFAA;text-align:center;vertical-align:middle;height:20px;width:90px}</style>"); //DDECF3
+        //adFrame.document.write("<body style='margin-top:0;margin-bottom:0;margin-left:0;margin-right:0;'><div class='mycontent'>加载中 ...</div></body>");
+        //adFrame.document.close();
+
+        
+        var hostPkg = new HostPkg("showAdvertisement");
+        hostPkg.AddParam("CurAcctInfo", sCurAcctInfo);
+        hostPkg.AddParam("LocID", sLocID);
+        var webSvrCom = new WebSvrCom(AdvXmlRequestUrl);
+
+        webSvrCom.WSCClearHostPkg();
+        webSvrCom.WSCAddHostPkg(hostPkg);
+        webSvrCom.async = true;
+        webSvrCom.WSCSendRequest(OnLdasResponse);
+    }
+
+    function OnLdasResponse(xmlHttp) {
+        var xmlResponse = xmlHttp.responseText;
+        //检查错误码
+        var errorCode = XMLGetValueByElementName(xmlResponse, "ErrorCode");
+        if (errorCode == "0") {
+            adFrame.location = XMLGetValueByElementName(xmlResponse, "Data");
+        }
+        else {
+            var advBox = document.getElementById("advBox");
+            if (advBox != null) {
+                advBox.style.display = "none";
+            }
+        }
+        return;
+    }
+
+</script>
+
+<div class="page-panel" id="advBox" style="display: none;">
+    <iframe name="adFrame" class="ifAdv" id="adFrame" src="/CmbBank_GenShell/UI/Base/Loading.htm" frameborder="0" scrolling="no" style="width: 803px; height: 98px;" onload="showAdv()"></iframe>
+</div>
+<input name="uc_Adv$AdvLocID" id="uc_Adv_AdvLocID" type="hidden">
+
+        <div>
+            <input name="ClientNo" id="ClientNo" type="hidden" value="4266F7C76935130C21C10F17D74C9E59601596886553795300003347">
+            
+<script type="text/JavaScript">
+    var DIV_MSG_AdjustDIVSize = null;
+    var DIV_MSG_SelectedObj = null;
+    var DIV_MSG_ActionPage = "/CmbBank_CreditCard_Loan/UI/Base/cn/Page/MessagePage3.aspx";
+    var param1 = "";
+    ////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    //层的显示、隐藏以及大小调整
+    ////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    function IsIe6() {
+        var browser = navigator.appName;
+        var b_version = navigator.appVersion;
+        b_version = b_version.replace(/[ ]/g, "");
+        /*var version = b_version.split(";");
+        var trim_Version = version[1].replace(/[ ]/g, "");
+        if (browser == "Microsoft Internet Explorer" && trim_Version == "MSIE6.0")*/
+        if (browser == "Microsoft Internet Explorer" && b_version.indexOf("MSIE6.0") >= 0) {
+            return true;
+        }
+        return false;
+    }
+
+    function IsXhtmlDoctype() {
+        try {
+            var res = false;
+            /*********************************************
+            Just check for internet explorer.
+            **********************************************/
+            if (typeof document.namespaces != "undefined" && document.all[0].nodeType == 8) {
+                var strDocType = "" + document.all[0].nodeValue;
+
+                return strDocType.indexOf("XHTML") != -1;
+            }
+            else if (document.doctype != null) {
+                var strDocType = "" + document.doctype.toString();
+
+            }
+            return false;
+        } catch (e) {
+
+            return false;
+        }
+        return false;
+    }
+
+    var g_isXhtmlDocType = IsXhtmlDoctype();
+
+
+    var g_isIe6 = IsIe6();
+
+    function AdjustFrameWidth(id) {
+        var frameIdOBJECT = window.document.getElementById(id);
+        /*
+        if(frameIdOBJECT.offsetWidth < 500)
+        {
+        frameIdOBJECT.style.width = 500;
+        }
+        else if(frameIdOBJECT.offsetWidth > window.document.body.clientWidth)
+        {
+        frameIdOBJECT.style.width = window.document.body.clientWidth;
+        }
+        */
+        frameIdOBJECT.width = 539;
+    }
+
+    function AdjustFrameHeight(id) {
+        var frameIdDOM = window.frames[id];
+        var frameIdOBJECT = window.document.getElementById(id);
+
+        if (GetBrowserVersion() == "IE") {
+            frameIdOBJECT.height = frameIdOBJECT.contentWindow.document.body.scrollHeight < 204 ? 204 : frameIdOBJECT.contentWindow.document.body.scrollHeight;
+        }
+        else if (/Firefox/.test(window.navigator.userAgent))
+            frameIdOBJECT.height = frameIdOBJECT.contentWindow.document.body.offsetHeight < 204 ? 204 : frameIdOBJECT.contentWindow.document.body.offsetHeight;
+        else {
+            var contentHeight = 0;
+            var bodyChildNodes = frameIdOBJECT.contentWindow.document.body.childNodes;
+            for (var i = 0; i < bodyChildNodes.length; i++) {
+                if (bodyChildNodes[i].nodeType == 1) {
+                    contentHeight += bodyChildNodes[i].scrollHeight;
+                }
+            }
+            frameIdOBJECT.height = contentHeight < 204 ? 204 : contentHeight;
+        }
+
+        //			    if (frameIdOBJECT.contentWindow.document.body.scrollHeight > 204)
+        //			        frameIdOBJECT.style.height = frameIdOBJECT.contentWindow.document.body.scrollHeight;
+        //			    else
+        //			        frameIdOBJECT.style.height = 204;
+
+        var imgLefter = window.document.getElementById("imgLefter");
+        var imgRighter = window.document.getElementById("imgRighter");
+
+        imgLefter.height = frameIdOBJECT.offsetHeight;
+        imgRighter.height = frameIdOBJECT.offsetHeight;
+    }
+
+    function AdjustDIVSize(msgID, shieldID) {
+        var MsgDIV = window.document.getElementById(msgID);
+        var ShieldDIV = window.document.getElementById(shieldID);
+        if (MsgDIV != null) {
+            MsgDIV.style.width = "565px"; //MsgDIV.scrollWidth;
+            if (MsgDIV.scrollHeight > 263)
+                MsgDIV.style.height = MsgDIV.scrollHeight + "px";
+            else
+                MsgDIV.style.height = "263px";
+            MsgDIV.style.left = (window.document.body.clientWidth - MsgDIV.offsetWidth) / 2 + "px";
+            if (window.top == window && !g_isIe6 && g_isXhtmlDocType)
+                MsgDIV.style.top = "100px";
+            else {
+            //兼容IE(标准、怪异)模式、FF、谷歌、以及专业版页面
+                MsgDIV.style.position = "absolute";
+                var smainWorkArea = parent.window.document.getElementById("mainWorkArea");
+                if (smainWorkArea) {
+                    if (parent.window.document.getElementById("mainWorkArea").contentWindow.document.compatMode == "CSS1Compat") {
+                        MsgDIV.style.top = (document.documentElement.clientHeight - MsgDIV.offsetHeight) / 2 + "px";
+                    } else {
+                        MsgDIV.style.top = (document.body.clientHeight - MsgDIV.offsetHeight) / 2 + "px";
+                    }
+
+                }
+                else {
+                    if (document.compatMode == "CSS1Compat") {
+                        MsgDIV.style.top = (document.documentElement.clientHeight - MsgDIV.offsetHeight) / 2 + "px";
+                    }
+                    else {
+                        MsgDIV.style.top = (document.body.clientHeight - MsgDIV.offsetHeight) / 2 + "px";
+                    }
+                }
+            }
+        }
+
+        if (ShieldDIV != null) {
+            ShieldDIV.style.width = window.document.body.clientWidth + "px";
+
+            if (window.document.body.scrollHeight > window.document.body.clientHeight) {
+                ShieldDIV.style.height = window.document.body.scrollHeight + "px";
+            }
+            else {
+                ShieldDIV.style.height = window.document.body.clientHeight + "px";
+            }
+            if (ShieldDIV.style.height < 432)
+                ShieldDIV.style.height = "432px";
+
+        }
+    }
+
+    function AdjustMsgDIVSize() {
+        AdjustDIVSize('MsgDIV', '');
+    }
+
+    function MsgShow(DIV_MSG_MsgXml) {
+        param1 = "MsgXml='" + DIV_MSG_MsgXml + "'";
+        //window.attachEvent("onload", MsgDIVShowPre);
+        addEventHandler(window, "load", MsgDIVShowPre);
+    }
+
+    function StopTabAndEnter() {
+        if (event.keyCode == 9 || event.keyCode == 13) {
+            event.returnValue = false;
+            return false;
+        }
+    }
+
+    function directShow(DIV_MSG_MsgXml) {
+        param1 = "MsgXml='" + DIV_MSG_MsgXml + "'";
+        MsgDIVShowPre();
+    }
+    function MsgDIVShowPre() {
+        var ShieldDIV = window.document.getElementById("ShieldDIV");
+        AdjustDIVSize('', 'ShieldDIV');
+        ShieldDIV.style.visibility = "visible";
+        AdjustFrameWidth('MsgIframe');
+        triggerFuncEq(DIV_MSG_ActionPage, 'FORM', 'MsgIframe', param1);
+        var content = window.document.getElementById("MsgIframe");
+        /*content.attachEvent("onload", MsgDIVShow);
+        document.attachEvent("onkeydown", StopTabAndEnter);*/
+        addEventHandler(content, "load", MsgDIVShow);
+        addEventHandler(document, "keydown", StopTabAndEnter);
+
+    }
+
+    function MsgDIVShow() {
+        var MsgTable = window.document.getElementById("MsgTable");
+        MsgTable.style.display = "inline";
+        AdjustFrameHeight("MsgIframe");
+        AdjustDIVSize('MsgDIV', '');
+        var MsgDIV = window.document.getElementById("MsgDIV");
+        MsgDIV.style.visibility = "visible";
+        MsgDIV.onmousedown = grabObj;
+
+        ShieldDIV.onresize = AdjustMsgDIVSize;
+
+        DIV_MSG_AdjustDIVSize = window.setInterval("AdjustDIVSize('','ShieldDIV')", 100);
+    }
+
+    function MsgHide() {
+        var MsgDIV = window.document.getElementById("MsgDIV");
+        var MsgIframe = window.document.getElementById("MsgIframe");
+        var ShieldDIV = window.document.getElementById("ShieldDIV");
+
+        if (MsgDIV.style.visibility == "visible") {
+            MsgDIV.style.visibility = "hidden";
+            MsgDIV.style.width = "0px";
+            MsgDIV.style.height = "0px";
+            MsgDIV.onmousedown = null;
+            //MsgIframe.style.width = "100%";
+            //MsgIframe.style.height = "100%";
+
+            var MsgTable = window.document.getElementById("MsgTable");
+            MsgTable.style.display = "none";
+        }
+        if (ShieldDIV.style.visibility == "visible") {
+            ShieldDIV.style.visibility = "hidden";
+            ShieldDIV.style.width = "0px";
+            ShieldDIV.style.height = "0px";
+            ShieldDIV.onresize = null;
+        }
+
+        if (DIV_MSG_AdjustDIVSize != null) {
+            window.clearInterval(DIV_MSG_AdjustDIVSize);
+        }
+        /*MsgIframe.detachEvent("onload", MsgDIVShow);
+        document.detachEvent("onkeydown", StopTabAndEnter);*/
+        delEventHandler(MsgIframe, "load", MsgDIVShow);
+        delEventHandler(document, "keydown", StopTabAndEnter);
+
+    }
+
+    ////////////////////////////////////////////////////////////////////////////////////////////////////////////		
+    //层的移动
+    ////////////////////////////////////////////////////////////////////////////////////////////////////////////		
+    function grabObj(evt) {
+        var evt = evt || event;
+        var imgObjID = getEventElement(evt);
+        if (imgObjID == "imgHeader") {
+            DIV_MSG_SelectedObj = window.document.getElementById("MsgDIV");
+        }
+
+        offsetX = window.event ? window.event.offsetX : evt.layerX;
+        offsetY = window.event ? window.event.offsetY : evt.layerY;
+
+        var MsgDIV = window.document.getElementById("MsgDIV");
+        MsgDIV.onmousemove = dragObj;
+        MsgDIV.onmouseup = releaseObj;
+        // prevent further processing of mouseDown event so 
+        // that the Macintosh doesn't display the contextual 
+        // menu and lets dragging work normally.
+        return false;
+    }
+
+    function dragObj(evt) {
+        if (DIV_MSG_SelectedObj) {
+            var evt = evt || event;
+            x = evt.clientX - offsetX;
+            y = evt.clientY - offsetY;
+
+            if (x < 0) x = 0;
+            if ((x + DIV_MSG_SelectedObj.offsetWidth) > window.document.body.clientWidth) x = window.document.body.clientWidth - DIV_MSG_SelectedObj.offsetWidth;
+
+            DIV_MSG_SelectedObj.style.left = x + "px";
+
+            if (y < 0) y = 0;
+            if ((y + DIV_MSG_SelectedObj.offsetHeight) > window.document.body.clientHeight) y = window.document.body.clientHeight - DIV_MSG_SelectedObj.offsetHeight;
+
+            DIV_MSG_SelectedObj.style.top = y + "px";
+
+            //prevent further system response to dragging
+            if (window.event)
+                window.event.returnValue = false;
+            return false
+        }
+    }
+
+    function releaseObj() {
+        if (DIV_MSG_SelectedObj) {
+            DIV_MSG_SelectedObj = null;
+            var MsgDIV = window.document.getElementById("MsgDIV");
+            MsgDIV.onmousemove = null;
+            MsgDIV.onmouseup = null;
+        }
+    }
+
+    ////////////////////////////////////////////////////////////////////////////////////////////////////////////		
+    //其他事件处理
+    ////////////////////////////////////////////////////////////////////////////////////////////////////////////		
+    function ChangeSrc(flag) {
+        var imgClose = window.document.getElementById("imgClose");
+        if (flag == 2) {
+            imgClose.src = "/CmbBank_CreditCard_Loan" + '/UI/Base/doc/Images/MessageNew9.gif';
+        }
+        else {
+            imgClose.src = "/CmbBank_CreditCard_Loan" + '/UI/Base/doc/Images/MessageNew12.gif';
+        }
+    }
+
+    function getEventElement(evt) {
+        evt = evt || event;
+        return (evt.srcElement || evt.target).id;
+    }
+		
+		
+</script>
+<div id="ShieldDIV" style="left: 0px; top: 0px; width: 0px; height: 0px; visibility: hidden; position: absolute; z-index: 10; opacity: 0.1;">
+    <iframe width="100%" height="100%" id="ShieldIftame" src="/CmbBank_CreditCard_Loan/UI/Base/DefaultDiv.htm" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="overflow: hidden;">
+    </iframe>
+</div>
+<div id="MsgDIV" style="left: 0px; top: 0px; width: 0px; height: 0px; visibility: hidden; position: fixed; z-index: 15;">
+    <table align="center" id="MsgTable" style="display: none;" border="0" cellspacing="0" cellpadding="0">
+        <tbody><tr>
+            <td colspan="3">
+                <img id="imgHeader" style="display: block;" alt="" src="/CmbBank_CreditCard_Loan/UI/Base/doc/Images/MessageNew7.jpg"><div style="left: 535px; top: 10px; position: absolute;">
+                    <img id="imgClose" onmouseover="ChangeSrc(1);" onmouseout="ChangeSrc(2);" onclick="MsgHide();" alt="" src="/CmbBank_CreditCard_Loan/UI/Base/doc/Images/MessageNew9.gif">
+                        </div>
+            </td>
+        </tr>
+        <tr>
+            <td><img width="13" height="10" id="imgLefter" style="display: block;" src="/CmbBank_CreditCard_Loan/UI/Base/doc/Images/MessageNew10.gif"></td>
+            <td>
+                <iframe name="MsgIframe" width="537" height="10" id="MsgIframe" src="/CmbBank_CreditCard_Loan/UI/Base/Blank.htm" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="display: block;">
+                </iframe>
+            </td>
+            <td>
+                <img width="13" height="10" id="imgRighter" style="display: block;" src="/CmbBank_CreditCard_Loan/UI/Base/doc/Images/MessageNew11.gif"></td>
+        </tr>
+        <tr>
+            <td colspan="3">
+                <img src="/CmbBank_CreditCard_Loan/UI/Base/doc/Images/MessageNew8.jpg">
+            </td>
+        </tr>
+    </tbody></table>
+</div>
+
+
+            <input name="LoginVersion" id="LoginVersion" type="hidden" value="A">
+            <input name="bvrAcctType" id="bvrAcctType" type="hidden" value="001">
+            <input id="bvrPageNo" type="hidden" value="bsc">
+        </div>
+        <script src="../../../Base/doc/dist/asset/js/cmbbank-ui-min.js" type="text/javascript" charset="utf-8"></script>
+    </form>
+
+    <script language="javascript" src="../../../Base/doc/Scripts/cmb_behavior.js" type="text/JavaScript"></script>
+
+<div class="chosen-container-dropdown chosen-container-single chosen-select-account chosen-container-single-nosearch" id="am_MainPanel1_ddlCreditAccList_chosen_drop" style="width: 285px;"><div class="chosen-drop"><iframe class="mask"></iframe><div class="chosen-search"><input type="text" readonly="" autocomplete="off"></div><ul class="chosen-results"></ul></div></div></body></html>

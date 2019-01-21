@@ -1,0 +1,320 @@
+<html><head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <link href="../../Base/doc/dist/asset/css/cmbbank-ui-min.css" rel="stylesheet" type="text/css">    
+    <!--[if IE 8]>
+	<link href="../../Base/doc/dist/asset/css/iconfont-ie8fix.css" rel="stylesheet" type="text/css" charset="utf-8"/>
+    <![endif]-->
+
+    <style type="text/css">
+        .page-panel-block {
+            border-left: solid 5px #5d9dd8;
+            margin-top: 24px;
+            margin-bottom: 24px;
+        }
+        .page-table-common th:first-child,
+        .page-table-common td:first-child
+         {
+            width: 30%
+        }
+        .page-table-common th:first-child ~ th,
+        .page-table-common th:first-child ~ td
+         {
+            width: 35%
+        }
+        .page-table-common th,
+        .page-table-common td {
+            text-indent: 10px;
+            text-align: left;
+            white-space: normal;
+        }
+
+        .page-table-common th a,
+        .page-table-common td a {
+            margin-left: 16px;
+        }
+
+    </style>
+    <script src="../../Base/doc/Scripts/DynaForm.js" type="text/javascript"></script>
+    <script src="../../Base/doc/Scripts/FuncTrigger.js" type="text/javascript"></script>
+    <script src="../../Base/doc/Scripts/default.js" type="text/javascript"></script>
+    <script src="../../Base/doc/scripts/pro/jquery-1.12.3.min.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#ZHXX table tbody tr:odd").addClass("odd");
+            $("#HQXX table tbody tr:odd").addClass("odd");
+        });
+
+
+        //快速还款
+        function GoToFastPayment() {
+            var CreditAccNo = 'CreditAccNo=' + document.getElementById("HidCreditAccNo").value;
+            CallFuncEx3('rm_FastPayment$$220002', 'C', 'CBANK_CREDITCARD_REPAYMENT', 'Repayment/rm_FastPayment.aspx', 'FORM', null, CreditAccNo);
+        }
+
+        //查看分期详细
+        function GoToReckoningDetail() {
+            var CreditAccNo = 'CreditAccNo=' + document.getElementById("HidCreditAccNo").value;
+            triggerFuncEx("./am_ReckoningDetailForD.aspx", "FORM", "_self", CreditAccNo);
+        }
+    </script>
+</head>
+<body class="page" style="-ms-overflow-x: auto; -ms-overflow-y: auto;">
+    <form name="am_QueryAccount" id="am_QueryAccount" action="./am_QueryAccount.aspx" method="post">
+<div>
+<input name="__EVENTTARGET" id="__EVENTTARGET" type="hidden" value="">
+<input name="__EVENTARGUMENT" id="__EVENTARGUMENT" type="hidden" value="">
+<input name="__LASTFOCUS" id="__LASTFOCUS" type="hidden" value="">
+<input name="__VIEWSTATE" id="__VIEWSTATE" type="hidden" value="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">
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['am_QueryAccount'];
+if (!theForm) {
+    theForm = document.am_QueryAccount;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<div>
+
+	<input name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" type="hidden" value="BFF49BA8">
+	<input name="__EVENTVALIDATION" id="__EVENTVALIDATION" type="hidden" value="olmNcYxqUO+03VUt7iSz1aqjXhavZPThe/jfzoHUGejP2ZAERbxXyffvE8W4bcP6DKBZUFDRuWoMWVh/nwRvJiYYwgp9eRjrUDlB94+HfKNj3HtX6vv5afxgZuUqd/b/NX3udI65Tr9XreXC/Tc9Ky2vadURUllEyT9sGy6KU1jlhoUyqBZDVg2++M8cmng11GZNfJjNe0IZxYyPw2h8UQ==">
+</div>
+        <div class="page-title">
+            <span>账户查询</span>
+        </div>
+        
+
+<script type="text/JavaScript">
+    function ddlSelectChange() {
+        window.document.body.style.cursor = "";
+        P.process();
+        if (typeof (SetTimeStamp) == 'function') {
+            SetTimeStamp();
+        }
+
+    }
+</script>
+<style type="text/css">
+    .CorpName {
+        margin-right: 50px;
+    }
+    .AcctAmount{
+        font-size:18px;
+    }
+</style>
+<div class="page-header">
+    <div class="page-header-inbox">
+        <div class="page-header-inbox-account">
+            <span class="page-header-inbox-account-dropdown">
+                <select name="PageHeaderCreditAccList$ddlCreditAccList" class="chosen-select-account" id="PageHeaderCreditAccList_ddlCreditAccList" style="width: 285px; display: none;" onchange="ddlSelectChange();setTimeout('__doPostBack(\'PageHeaderCreditAccList$ddlCreditAccList\',\'\')', 0)">
+	<option selected="selected" value="0155298473001001">个人卡账户001001</option>
+
+</select><div title="" class="chosen-container chosen-container-single chosen-select-account" id="PageHeaderCreditAccList_ddlCreditAccList_chosen" style="width: 285px;"><a tabindex="-1" class="chosen-single"><span><em>当前账户：</em>个人卡账户001001</span><div><b><i class="glyphicon chosen-down"></i><i class="glyphicon chosen-up"></i></b></div></a></div>
+            </span>
+        </div>
+        <div class="page-header-inbox-message">
+            
+            <span id="PageHeaderCreditAccList_lPageHeaderInboxMessage"></span>
+             <span class="AcctAmount" id="PageHeaderCreditAccList_lAcctAmount"></span>
+        </div>
+    </div>
+    <div class="page-header-link">
+        <div class="page-header-link-container three"><span><i title="" class="glyphicon icon-icon-48"></i><a href="javascript:CallFuncEx3('Cver2_am_QueryReckoningSurvey$$218001','C','CBANK_CREDITCARD_LOAN','Loan/Pro8/am_QueryReckoningSurveyNew.aspx','FORM',null)">已出账单查询</a><em></em></span><span><i title="" class="glyphicon icon-icon-48"></i><a href="javascript:CallFuncEx3('Cver2_am_QueryReckoningNotRMB$$218002','C','CBANK_CREDITCARD_LOAN','Loan/Pro8/am_QueryReckoningNotRMB.aspx','FORM',null)">未出账单查询</a><em></em></span><span><i title="" class="glyphicon icon-icon-48"></i><a href="javascript:CallFuncEx3('Cver2_pm_ModifyQueryPin$$217004','C','CBANK_CREDITCARD_CUSTOMER','Customer/pm_ModifyQueryPin.aspx','FORM',null)">密码管理</a><em></em></span></div>
+    </div>
+</div>
+
+        <div class="page-panel">
+            <div class="page-panel-content">
+                
+                <div class="page-panel page-panel-block" id="ZHXX">
+                    <div class="page-panel-header">
+                        <div class="page-panel-header-title">账户信息</div>
+                    </div>
+                    <div class="page-panel-content">
+                        <table class="page-table-common action table-fix">
+                            <thead>
+                                <tr id="trbz">
+	<th>币种</th>
+	<th>人民币</th>
+	<th>美元</th>
+</tr>
+
+                            </thead>
+                            <tbody>
+                                <tr id="trxyed">
+	<td>信用额度</td>
+	<td>
+                                        <span id="RMBXYED">￥22,000.00</span></td>
+	<td>
+                                        <span id="USXYED">$3,244.00</span></td>
+</tr>
+
+                                <tr class="odd" id="trkyed">
+	<td>可用额度</td>
+	<td>
+                                        <span id="RMBKYED">￥280.00</span></td>
+	<td>
+                                        <span id="USKYED">$41.29</span></td>
+</tr>
+
+                                <tr id="trwczfq">
+	<td>未出账分期本金</td>
+	<td colspan="2">
+                                        <span id="RMBWCZFQ">￥0.00</span>
+                                        <a id="Ldetail" href="javascript:P.process();CallFuncEx3('CLoan_am_QueryInstallment$$CLoan_am_QueryInstallment', 'C', 'CBANK_CREDITCARD_LOAN', 'Loan/Pro8/am_QueryInstallment.aspx', 'FORM',null);">查看详细</a>
+                                    </td>
+</tr>
+
+                                <tr class="odd" id="tryjxj">
+	<td>预借现金可用额度</td>
+	<td>
+                                        <span id="RMBYJXJ">￥280.00</span>
+                                        <a id="LiterRY" href="javascript:P.process();CallFuncEx3('CreditLendCash$$218003', 'C', 'CBANK_CREDITCARD_LOAN', 'Loan/Pro8/am_AdvanceHomePage.aspx', 'FORM',null);">预借现金</a>
+                                        <a id="hlXJFQ" href="javascript:P.process();CallFuncEx3('ApplyCashAdvanceByStages$$218005', 'C', 'CBANK_CREDITCARD_LOAN', 'Loan/Pro8/am_ApplyCashAdvanceByStages.aspx', 'FORM',null);">现金分期</a>
+                                    </td>
+	<td>
+                                        <span id="USYJXJ">$41.29</span>
+                                    </td>
+</tr>
+
+                                <tr id="myzdr">
+	<td>每月账单日</td>
+	<td colspan="2">
+                                        <span id="MYZD">21日</span>
+                                    </td>
+</tr>
+
+                                
+                                <tr class="odd">
+                                    <td>账单类型</td>
+                                    <td colspan="2">
+                                        <span id="ZDLX">电邮账单</span>
+                                        <a id="LiterZL" href="javascript:P.process();triggerFunc('./cs_SendReckoning.aspx','FORM','_self','DisplayFlag=1');">修改账单类型</a>
+                                    </td>
+                                </tr>
+                                <tr id="trzwtxsj">
+	<td>账务提醒时间</td>
+	<td colspan="2">
+                                        <span id="ZWTXSJ">账单日后三天内</span>
+                                        <a id="LiteralZWTX" href="javascript:P.process();triggerFunc('./cs_SendReckoningNotice.aspx','FORM','_self','DisplayFlag=1');">修改账务提醒时间</a>
+                                    </td>
+</tr>
+
+                                
+                                
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                
+                <div class="page-panel page-panel-block" id="HQXX">
+                    <div class="page-panel-header">
+                        <div class="page-panel-header-title">还款信息</div>
+                        <div class="page-panel-header-more">
+                            <img title="快速还款" id="FastPay" style="vertical-align: middle; cursor: pointer;" onclick="GoToFastPayment();" src="../doc/images/FastPayMent.gif">
+                            
+                        </div>
+                    </div>
+                    <div class="page-panel-content">
+                        <table class="page-table-common action table-fix">
+                            <thead>
+                                <tr id="trCurrency">
+	<th>币种</th>
+	<th>人民币</th>
+	<th>美元</th>
+</tr>
+
+                                
+                            </thead>
+                            <tbody>
+                                <tr id="trzdhk">
+	<td>自动还款</td>
+	<td id="tdRMBZDHK">
+                                        <span id="RMBZDHK">************3301    全额</span>
+                                        <a id="LiterRZH" onclick="P.process();CallFuncEx3('rm_ModifyAutoRepayA$$rm_ModifyAutoRepayA', 'C', 'CBANK_CREDITCARD_REPAYMENT', 'Repayment/rm_ModifyAutoRepayA.aspx', 'FORM',null,'ACCOUNT_NO_RMB=8%2fKpaBY2KoKnSoNpHonM6v2Q0luvM0Sk','CreditAccNo=0155298473001001','Currency=RMB','OT_PAY_FLAG_RMB=0','Operate=Modify','OT_BK_AC_RMB=************3301');" href="javascript:void(0)">修改协议</a>
+                                    </td>
+	<td id="tdUSZDHK">
+                                        <span id="USZDHK">未开通 </span>
+                                        <a id="LiterUZH" href="javascript:P.process();CallFuncEx3('rm_ProOfAutoRepay$$rm_ProOfAutoRepay', 'C', 'CBANK_CREDITCARD_REPAYMENT', 'Repayment/rm_ProOfAutoRepay.aspx', 'FORM',null,'Currency=USD','Operate=Apply','CreditAccNo=0155298473001001');">申请开通</a>
+                                    </td>
+</tr>
+
+                                
+                                <tr class="odd" id="trDQHQ">
+	<td>本期到期还款日</td>
+	<td colspan="2">
+                                        <span id="DQHQ">2019-01-09</span>
+                                    </td>
+</tr>
+
+                                <tr id="trLiterRMBZDJE">
+	<td>本期账单金额</td>
+	<td>
+                                        <span id="LiterRMBZDJE">￥21,880.52</span>
+                                        <a id="LiteraRBQ" href="javascript:P.process();CallFuncEx3('Cver2_am_QueryReckoningSurvey$$218001', 'C', 'CBANK_CREDITCARD_LOAN', 'Loan/Pro8/am_QueryReckoningSurveyNew.aspx', 'FORM',null);">查看账单</a>
+                                        <a id="hlSQFQ" href="javascript:P.process();CallFuncEx3('CreditApplyBillDivTerm$$218007', 'C', 'CBANK_CREDITCARD_LOAN', 'Loan/Pro8/am_ApplyReckoningByStages.aspx', 'FORM',null,'Currency=156');">申请分期</a>
+                                    </td>
+	<td>
+                                        <span id="LiterUSBZDJE">$0.00</span>
+                                        <a id="LiteraUSBQ" href="javascript:P.process();CallFuncEx3('Cver2_am_QueryReckoningSurvey$$218001', 'C', 'CBANK_CREDITCARD_LOAN', 'Loan/Pro8/am_QueryReckoningSurveyNew.aspx', 'FORM',null);">查看账单</a>
+                                        <a id="hlSQFQUSD" href="javascript:P.process();CallFuncEx3('CreditApplyBillDivTerm$$218007', 'C', 'CBANK_CREDITCARD_LOAN', 'Loan/Pro8/am_ApplyReckoningByStages.aspx', 'FORM',null,'Currency=840');">申请分期</a>
+                                    </td>
+</tr>
+
+                                
+                                <tr class="odd" id="trLiterRMBBQJE">
+	<td>本期剩余应还金额</td>
+	<td>
+                                        <span id="LiterRMBBQJE">￥0.00</span>
+                                        
+                                    </td>
+	<td>
+                                        <span id="LiterUSBQJE">$0.00</span>
+                                        
+                                    </td>
+</tr>
+
+                                
+                                <tr id="trzdje">
+	<td>本期剩余最低还款金额</td>
+	<td>
+                                        <span id="RMBZDJE">￥0.00</span></td>
+	<td>
+                                        <span id="USZDJE">$0.00</span></td>
+</tr>
+
+                                
+                                
+                                
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            
+
+<div class="page-panel-explain page-noprint">
+    <iframe name="ExplainPageFrame" id="ExplainPageFrame" src="../doc/Htmls/pro8/am_QueryAccount.htm" frameborder="0" scrolling="no" style="height: 239px;"></iframe>
+</div>
+
+        </div>
+        <input name="ClientNo" id="ClientNo" type="hidden" value="4266F7C76935130C21C10F17D74C9E59269367835122904400000729">
+        <input name="HidCreditAccNo" id="HidCreditAccNo" type="hidden" value="0155298473001001">
+        <input name="LoginVersion" id="LoginVersion" type="hidden" value="A">
+        <script src="../../Base/doc/dist/asset/js/cmbbank-ui-min.js" type="text/javascript"></script>
+    </form>
+
+
+<div class="chosen-container-dropdown chosen-container-single chosen-select-account chosen-container-single-nosearch" id="PageHeaderCreditAccList_ddlCreditAccList_chosen_drop" style="width: 285px;"><div class="chosen-drop"><iframe class="mask"></iframe><div class="chosen-search"><input type="text" readonly="" autocomplete="off"></div><ul class="chosen-results"></ul></div></div></body></html>

@@ -149,7 +149,6 @@ class Pingan_C():
             pass
 
         self.browser.switch_to.frame("body")
-
         try:
             WebDriverWait(self.browser, 10).until(lambda x: self.browser.find_element_by_xpath('//frame[@id="wait"]'))
         except:

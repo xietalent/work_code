@@ -1,0 +1,855 @@
+<html><head>
+		<title></title>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<meta name="GENERATOR" content="Microsoft Visual Studio .NET 7.1">
+		<meta name="CODE_LANGUAGE" content="C#">
+		<meta name="vs_defaultClientScript" content="JavaScript">
+		<meta name="vs_targetSchema" content="http://schemas.microsoft.com/intellisense/ie5">
+		<link title="default" href="../doc/Styles/GenShell.css" rel="stylesheet">
+		<link title="default" href="../doc/Styles/Menu.css" rel="stylesheet">
+		<link href="../doc/Styles/leftmenu.css" rel="stylesheet">
+        <script language="javascript">var GenShell_ClientNo="4266F7C76935130C21C10F17D74C9E59528186182914445900056963";var DefaultAuthName="CBANK_PB";var LoginType="D";var DefaultMenuType="A";var DefaultPageNo="";var ClientWarrantFlag="N";</script>
+		<script language="javascript" src="../../Base/doc/Scripts/BaseFunc.js"></script>
+		<script language="javascript" src="../../Base/doc/Scripts/default.js"></script>
+		<script language="javascript" src="../../Base/doc/Scripts/CommUtils.js"></script>
+		<script language="javascript" src="../../Base/doc/Scripts/XmlUtils.js"></script>
+		<script language="javascript" src="../../Base/doc/Scripts/DynaForm.js"></script>
+		<script language="javascript" src="../../Base/doc/Scripts/DynaXmlHttp.js"></script>
+		<script language="javascript" src="../doc/Scripts/GenUtils.js"></script>
+
+        <script src="../doc/Scripts/Menu.js" type="text/javascript"></script>
+		<script language="javascript" src="../../Base/doc/Scripts/FuncTrigger.js"></script>
+		<script language="javascript" src="../../Base/doc/Scripts/WebSvrCom.js"></script>
+		<script language="javascript" src="../../Base/doc/Scripts/HostPkg.js"></script>
+		<script language="javascript" src="../doc/Scripts/FuncDefineGen.js"></script>
+		<script language="javascript" src="../doc/Scripts/leftmenu.js"></script>
+		<script language="javascript" src="../doc/Scripts/favorite.js"></script>
+		<script language="JavaScript" type="text/JavaScript"> 
+		moveTo(0,0);
+  		resizeTo(screen.width,screen.height);
+
+		var GenServerLoginUrl = "/CmbBank_GenShell/UI/GenShellPC_En/Login/Login.aspx";
+		var GenServerLoginUrlF = "/CmbBank_GenShell/UI/GenShellPC_En/NetBankAcc/Login.aspx";
+		var GenServerLogoutUrl = "/CmbBank_GenShell/UI/GenShellPC_En/Login/Logout.aspx";
+
+		var GenShellServerUrl = "/CmbBank_GenShell/UI/GenShellPC_En/";
+		var GenServerTokenApplyUrl = "/CmbBank_GenShell/UI/GenShellPC_En/Login/ApplyToken.aspx";
+		var SecurityServerLoginUrl = "/CmbBank_GenShell/UI/GenShellPC_En/Login/SecurityLogin.aspx";
+
+		var GenOnlineCustomerServiceURL = "";
+		
+		
+		function initPage()
+		{
+			MainWorkAreaIFrame = document.getElementById(Default_FormTarget);
+			
+			InitGenShellLogin(GenShell_ClientNo);
+			
+			cw_switchMenu(DefaultMenuType);
+
+			GenOnlineCustomerServiceURL = document.all.OnlineCustomerServiceURL.value;
+
+			if ((DefaultMenuType == "C_A") || (DefaultMenuType == "C_B") || (DefaultMenuType == "C_C") || (DefaultMenuType == "C")) {
+			    document.getElementById("ImgTelephone").src = "../doc/Images/400820.gif";
+			} else {
+			    document.getElementById("ImgTelephone").src = "../doc/Images/95555.gif";
+			}
+			//EventTrack('LoginSucceed.htm?LoginType=' + LoginType, 'Login success');
+		}
+		
+				
+		function switchImg(menuType)
+		{
+		    try { g_currMenuType = menuType; } catch (e) { }; //for CallFuncEx2
+		    if ((menuType == "C_A") || (menuType == "C_B") || (menuType == "C_C") || (menuType == "C")) {
+		        document.getElementById("ImgTelephone").src = "../doc/Images/400820.gif";
+		    } else {
+		        document.getElementById("ImgTelephone").src = "../doc/Images/95555.gif";
+		    }
+			if(menuType == "A")
+			{
+				if(TheForm.imgCommonCard!=null)
+					TheForm.imgCommonCard.src = "../doc/Images/tab_CommonCard_sel.gif";
+				if(TheForm.imgCreditCard!=null)
+					TheForm.imgCreditCard.src = "../doc/Images/tab_CreditCard_unsel_01.gif";
+				if(TheForm.imgBook!=null)
+					TheForm.imgBook.src = "../doc/Images/tab_Book_unsel_03.gif";
+				if(TheForm.imgUser!=null)
+					TheForm.imgUser.src = "../doc/Images/tab_User_unsel_02.gif";
+				return;
+			}
+			if(menuType == "B")
+			{
+				if(TheForm.imgCommonCard!=null)
+					TheForm.imgCommonCard.src = "../doc/Images/tab_CommonCard_unsel_02.gif";
+				if(TheForm.imgCreditCard!=null)
+					TheForm.imgCreditCard.src = "../doc/Images/tab_CreditCard_unsel_02.gif";
+				if(TheForm.imgBook!=null)
+					TheForm.imgBook.src = "../doc/Images/tab_Book_sel.gif";
+				if(TheForm.imgUser!=null)
+					TheForm.imgUser.src = "../doc/Images/tab_User_unsel_01.gif";
+				return;
+			}
+			if ((menuType == "C_A") || (menuType == "C_B") || (menuType == "C_C") || (menuType == "C"))
+			{
+				if(TheForm.imgCommonCard!=null)
+					TheForm.imgCommonCard.src = "../doc/Images/tab_CommonCard_unsel_01.gif";
+				if(TheForm.imgCreditCard!=null)
+					TheForm.imgCreditCard.src = "../doc/Images/tab_CreditCard_sel.gif";
+				if(TheForm.imgBook!=null)
+					TheForm.imgBook.src = "../doc/Images/tab_Book_unsel_01.gif"
+				if(TheForm.imgUser!=null)
+					TheForm.imgUser.src = "../doc/Images/tab_User_unsel_02.gif"
+				return;
+			}
+			if(menuType == "D")
+			{
+				if(TheForm.imgCommonCard!=null)
+					TheForm.imgCommonCard.src = "../doc/Images/tab_CommonCard_unsel_02.gif";
+				if(TheForm.imgCreditCard!=null)
+					TheForm.imgCreditCard.src = "../doc/Images/tab_CreditCard_unsel_03.gif";
+				if(TheForm.imgBook!=null)
+					TheForm.imgBook.src = "../doc/Images/tab_Book_unsel_02.gif"
+				if(TheForm.imgUser!=null)
+					TheForm.imgUser.src = "../doc/Images/tab_User_sel.gif"
+				return;
+			}						
+			try{g_currMenuType = 'A';}catch(e){};//for CallFuncEx2
+			TheForm.imgCommonCard.src = "../doc/Images/tab_CommonCard_sel.gif";
+			TheForm.imgCreditCard.src = "../doc/Images/tab_CreditCard_unsel_01.gif";
+			TheForm.imgBook.src = "../doc/Images/tab_Book_unsel_03.gif";
+			TheForm.imgUser.src = "../doc/Images/tab_User_unsel_02.gif";
+			return;			
+		}
+
+		//open HomePage as default
+		function cw_switchMenu(menuType)
+		{
+			initMenu(menuType);
+			initShortCutMenu(menuType);
+			cw_openHomePage(menuType);
+		}	
+		
+		//open function page as default	
+		function switchMenu(menuType)
+		{
+			initMenu(menuType);
+			initShortCutMenu(menuType);
+			openFirstPage(menuType);
+		}
+		
+		
+		function switchMenuOnly(menuType)
+		{
+			initMenu(menuType);
+			initShortCutMenu(menuType);
+		}			
+		
+		function initMenu(menuType)
+		{
+			hideAllSubMenu();
+			var data2Send = new Object();
+			data2Send.ClientNo = GenShell_ClientNo;
+			data2Send.MenuType = menuType;
+			
+			var menuData = GenSendXmlRequest(data2Send,"/CmbBank_GenShell/UI/GenShellPC_En/Login/GetMenuData.aspx");
+			if(menuData)
+			{
+				sysMenuTD.innerHTML = menuData;
+			}
+			buildMenu("menu");
+			if(window.event!=null)
+				window.event.returnValue = false;
+			return false;
+		}		
+		
+		function logoutGenServer()
+		{
+			window.event.returnValue = false;
+			var logoutInfo = new Object();
+			logoutInfo.ClientNo = GenShell_ClientNo;
+			var bRet = GenLogoutShell(logoutInfo,GenServerLogoutUrl);
+			return bRet;
+		}		
+		
+		function doRelogin()
+		{
+			var bRet = logoutGenServer();
+			if(LoginType=="F")
+				window.location = GenServerLoginUrlF;
+			else
+				window.location = GenServerLoginUrl;
+		}		
+			   
+		function doExit()
+		{
+			if (confirm("Are you sure to exit?"))
+			{
+				var bRet = logoutGenServer();
+				if (GetBrowserVersion() == "IE") {
+					  window.close();
+				}
+				else {
+					var opened=window.open('about:blank','_self');
+					opened.opener=null;
+					opened.close();
+				}			
+			}
+	    }
+/*
+		function doExit()
+		{
+			if (confirm("Are you sure to exit?"))
+			{
+			    var bRet = logoutGenServer();
+			    window.opener = null;
+			    window.open('', '_self', '');
+			    window.close();
+			}
+		}
+*/
+        //for netbank acc. when close account. called
+		function doExitAndClose() {
+		    doRelogin();
+		}
+		
+		function doUnload()
+		{
+			if((window.screenLeft >= 10000 && window.screenTop >= 10000) || event.altKey) 
+			{
+				var bRet = logoutGenServer();
+			}
+			else
+			{
+				GenLogoutTransServerOnly();
+			}
+		}
+		
+		function doExitSimple()
+		{
+			alert("Thanks for using, bye!");
+			window.opener = null;
+			window.close();
+		}		
+
+		function triggerNull()
+		{
+			alert("sorry, this function is not ready.");
+			window.event.returnValue = false;
+		}		
+		
+		function openFirstPage(menuType)
+		{
+			//blank page
+		    mainWorkArea.document.write("<style TYPE='text/css'>.mycontent {font: 9pt/14pt 'sans-serif';}</style>");
+			mainWorkArea.document.write("<body style='margin-top:0;margin-bottom:0;margin-left:0;margin-right:0;'></body>");
+			mainWorkArea.document.close();
+			
+				if (menuType == "A")
+				{
+					//Debit Card
+				    CallFunc('CBANK_DEBITCARD_ACCOUNTMANAGER', 'AccountQuery/am_QuerySubAccount.aspx', 'FORM', null, 'panelcontrol=HomeAccountManager');
+				}
+				else if (menuType == "B")
+				{
+					//Book
+					CallFunc('CBANK_BOOK','Book/am_QuerySubAccount.aspx','FORM',null,'panelcontrol=HomeAccountManager');						
+				}
+				else if (menuType == "C_A")
+				{
+					//CreditCard_Person
+					CallFunc('CBANK_CREDITCARD','CreditCard/am_QueryReckoningNotRMB.aspx','FORM',null,'MainPanel=inline','SIDType=A');
+				}
+				else if (menuType == "C_B")
+				{
+					//CreditCard_Business_Persen
+					CallFunc('CBANK_CREDITCARD','CreditCard/am_QueryReckoningNotRMB.aspx','FORM',null,'MainPanel=inline','SIDType=B');
+				}			
+				else if (menuType == "C_C")
+				{
+				    //CreditCard_Business_Corpration
+					CallFunc('CBANK_CREDITCARD','CreditCard/am_QueryReckoningNotRMB.aspx','FORM',null,'MainPanel=inline','SIDType=C');
+				}
+				else if (menuType == "D")
+				{
+					//All in one net user
+				    CallFunc('CBANK_USER', 'UniUser/AccountInfo.aspx', 'FORM', null, 'CreditCardVersion=2.0');		
+				}
+				else if (menuType == "C") {
+				    //信用卡新系统
+				    CallFunc('CBANK_CREDITCARD_CUSTOMER', 'Customer/cm_QueryCustomInfo.aspx', 'FORM', null);
+				}
+
+		    window.event.returnValue = false;
+			return false;
+		}		
+
+		function cw_openHomePage(menuType)
+		{
+			//blank page
+		    mainWorkArea.document.write("<style TYPE='text/css'>.mycontent {font: 9pt/14pt 'sans-serif';}</style>");
+			mainWorkArea.document.write("<body style='margin-top:0;margin-bottom:0;margin-left:0;margin-right:0;'></body>");
+			mainWorkArea.document.close();
+
+			if (DefaultPageNo == "")
+			{
+			    CallFunc('CBANK_HOMEPAGE', 'HomePageGen/HomePage.aspx', 'FORM', null, 'DefaultMenuType=' + menuType);
+			}
+			//yin zheng tong enter
+			else if (DefaultPageNo == "105101" && (LoginType == "A" || LoginType == "B" || LoginType == "D") && (DefaultMenuType == "A" || DefaultMenuType == "B"))
+			{			
+				CallFunc('CBANK_INVEST','Invest/StockHome.aspx','FORM',null);
+			}
+			//yin ji tong enter
+			else if (DefaultPageNo == "105202" && (LoginType == "A" || LoginType == "B" || LoginType == "D") && (DefaultMenuType == "A" || DefaultMenuType == "B"))
+			{
+				CallFunc('CBANK_INVEST','Fund/FundHome.aspx','FORM',null);
+			}
+			//jin rong chao shi enter
+			else if(DefaultPageNo == "000001" && (LoginType == "A" || LoginType == "B" || LoginType == "F"))
+			{
+			    CallFunc('CBANK_INVEST','Login/FinancePaymentHomepage.aspx','FORM',null,'FinancePaymentXmlRequest='+sFinancePaymentXmlRequest);
+			}
+			else
+			{
+			    CallFunc('CBANK_HOMEPAGE', 'HomePageGen/HomePage.aspx', 'FORM', null, 'DefaultMenuType=' + menuType);
+			}
+		
+		    window.event.returnValue = false;
+			return false;
+		}		
+				
+		//init fast menu
+		function initShortCutMenu(menuType)
+		{
+			/*var menuIds = ["A","B","C_A","C_B","C_C","D"];
+			
+			for(var i=0;i<menuIds.length;i++)
+			{
+				var menuId = "vmenu" + menuIds[i];
+				if(menuType==menuIds[i])
+				{
+					document.getElementById(menuId).style.display = "";
+				}else
+					document.getElementById(menuId).style.display = "none";
+			}
+			
+			var menuId = "vmenu" + menuType;
+			if( document.getElementById(menuId).innerHTML!="" )
+				return false;*/
+			
+					
+			var menu = AccMenuManager.getMenu("vmenu");
+			var needOpenUsual = false;
+			if( null == menu )
+			{
+				menu = AccMenuManager.createNewMenu("vmenu","headerOpen","headerClose","menuItem");
+
+				var header = menu.addHeader("My Favorites", ""); //my favorites
+				//var favSetEl = document.createElement("a");
+				//favSetEl.id = "lkFavSet";
+				//favSetEl.onclick = new Function("try{ CallFunc('CBANK_SHELL','Service/nv_Favorite.aspx','FORM',null);window.event.cancelBubble=true;return false;window.focus();}catch(e){}");
+				//favSetEl.innerHTML = "[setting]";
+				//header.firstChild.appendChild(favSetEl);
+				FavoriteMgr.Init(header.id);
+				FavoriteMgr.Update();
+				if(header.size()>1)
+					needOpenUsual = false;
+				else
+				{
+					header.hide();
+					needOpenUsual = true;
+				}
+
+				var header1 = menu.addHeader("Quick Links", ""); //quick links
+				var header2 = menu.addHeader("Recently Used", ""); //history
+				HistoryOpMenuMgr.init("vmenu",header2);
+				HistoryOpMenuMgr.clear();
+			}
+			var header3 = menu.getHeaderAt(1);
+			
+			var data2Send = new Object();
+			data2Send.ClientNo = GenShell_ClientNo;
+			data2Send.Command = "query";
+			data2Send.MenuType = menuType;
+			
+			var menuData = GenSendXmlRequest(data2Send,"/CmbBank_GenShell/UI/GenShellPC_EN/Login/MngShortCut.aspx");
+			
+			if(menuData)
+			{
+			    header3.setContent(menuData);
+			}
+			if(needOpenUsual)
+			    header3.showAll();
+			if(window.event!=null)
+				window.event.returnValue = false;
+			return false;
+		}		
+		
+		function adjustFrameSize()
+		{
+		    var mainWorkArea=document.getElementById("mainWorkArea");
+            if(GetBrowserType()=="ie") {
+                if(document.getElementById("mainWorkArea").contentWindow.document.documentMode > 7) {
+                    mainWorkArea.style.height = mainWorkArea.contentWindow.document.body.scrollHeight<400?400+"px":mainWorkArea.contentWindow.document.body.scrollHeight + 35 + "px";
+                } else {
+                mainWorkArea.style.height = mainWorkArea.contentWindow.document.body.scrollHeight<400?400:mainWorkArea.contentWindow.document.body.scrollHeight + 10 + "px";
+                }
+            }
+            else if(GetBrowserType()=="firefox")
+                mainWorkArea.style.height = mainWorkArea.contentWindow.document.documentElement.scrollHeight<400?400:mainWorkArea.contentWindow.document.documentElement.scrollHeight + "px";
+            else
+            {
+                var contentHeight = 0;
+                var bodyChildNodes = mainWorkArea.contentWindow.document.body.childNodes;
+                for(var i=0 ; i<bodyChildNodes.length; i++)
+                {
+                    var el = bodyChildNodes[i];
+                    
+                    if(el.nodeType != 1){
+                    	continue;
+                    }
+                    
+                    var style = window.getComputedStyle ? window.getComputedStyle(el, null) : el.currentStyle;
+                    var isFlowout = (style != null && (style.position == 'absolute' || style.position == 'fixed'));
+                    
+                    
+                    if(!isFlowout)
+                    {
+                        contentHeight += bodyChildNodes[i].scrollHeight;
+                    }
+                }
+                mainWorkArea.style.height = contentHeight<300?400:contentHeight+ 100 + "px";
+            }
+		   // mainWorkArea.style.height = mainWorkArea.contentWindow.document.body.scrollHeight<400?400+0+"px":mainWorkArea.contentWindow.document.body.scrollHeight + 0 + "px";
+
+            if(GetBrowserType()!="ie")   //非IE浏览器点击mainWorkArea时隐藏菜单；onactivate="hideAllSubMenu();"非IE下不可用。
+                setFrameEvent();
+            
+		}		
+
+		function setFrameEvent()
+		{
+            document.getElementById("mainWorkArea").contentWindow.addEventListener("click",doHideAllSubMenu,false);
+        }
+ 
+        function doHideAllSubMenu()
+        {
+            hideAllSubMenu();
+        }
+		
+		var sDisplay = "inline";
+		function swingShortCutMenu()
+		{
+			if(sDisplay == "inline")
+			{
+				sDisplay = "none";
+				document.getElementById("tdShortCutMenu").style.display = "none";
+				document.getElementById("splitter").style.backgroundImage = "url(../doc/Images/splitter_r.gif)";
+			}
+			else
+			{
+				sDisplay = "inline";
+				document.getElementById("tdShortCutMenu").style.display = "";
+				document.getElementById("splitter").style.backgroundImage = "url(../doc/Images/splitter_l.gif)";
+			}
+		}
+		
+		function onSearch()
+		{
+			var keyWordInput = document.getElementById("txtSearch");
+			if(keyWordInput.style.color=="gray")
+			{
+				CallFunc('CBANK_SHELL','Service/nv_FuncSearch.aspx','FORM',null);
+				return false;
+				alert("Please input search key words!");
+				keyWordInput.value = "";
+				keyWordInput.style.color="black";
+				keyWordInput.focus();
+				return false;
+			}
+			var keyWord = keyWordInput.value;
+			CallFunc('CBANK_SHELL','Service/nv_FuncSearch.aspx','FORM',null,'SearchKey='+keyWord);
+
+}
+
+function changeToChinese() {
+    //logout other apps and change to chinese version.
+    CallFunc('CBANK_SHELL', '../GenShellPC/Login/GenIndex.aspx', 'FORM', "_self");
+}
+		</script>
+	</head>
+	<body style="margin: 0px 2px;" bgcolor="#ffffff" onload="initPage();" onunload="doUnload();">
+		<form name="TheForm" id="TheForm" onsubmit="window.event.returnValue = false;" action="./GenIndex.aspx" method="post">
+<div>
+<input name="__VIEWSTATE" id="__VIEWSTATE" type="hidden" value="qd3S4PqAAlFO1iGj60l3H2Thurn9wvcHwWxxEAAy/djdhZDmD3XjGOdgWC9PnUgzV6HR0K68fivP1zentK0tCZSAQD/2uqO+Jw1oeHjg6lbl8GJ64k+mrDusyU7N75T29LcT6HyWAFsSNHQlOUrdmX7hHwdTY0zDxcCC83geeROK/BRhBGLbtL8BjsYn5Mufj85Tf7kPSkotkJ/hpBD16x/bI0aE/+dI+5NAgG9tfN2rbJtGyVUsiJu9v8FnevT1ik8a0AuK23jZ4yu40fLzwGVOlF9fvxYQFLJ8E8t5cs+FwnlSkwiwTtIZPiYnk9LfDkB8Nk7tTItsd1FhWEGlqx0s1bwRBtBNIOfJaBCkM867zGgmmWUIzdOQzeWoziwTKz0x6EVe80STHigJVI0osoorxQKnbXcXaEe2XkVUET5RUws+7dAch3auCBe9OKqXrENSIJ+BDsbc2yktZemykS5OU2myToNAyIjX/18qzcj3T5P6hPn5YvJtxknTzLspcKVglDNd70gfEsEv4E5wDMImAKBVmizjJ3zayWMkxoI2RTehrZOvZ6f5URXxXgnXmErBd41QpT0mADgu6lNVBDIWtvKm8vj7UncH1HJ/eBLyNRl6J1HWd/FkgT+GB04VmZaWAqJKX+YvutS76SiQ/yBkeZRB7C3cZ6Tp1TVPtQTSCDikDoLGPt0IJTwtrINwzKRsTFMJ476D3OYt6lXZhA==">
+</div>
+
+<div>
+
+	<input name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" type="hidden" value="80FB0150">
+	<input name="__EVENTVALIDATION" id="__EVENTVALIDATION" type="hidden" value="ZRVWlOv8PYSrpIYysJdeG4OXpSIcisT1FvAozYSeDVXFJYhDox/9lH+pA8YIqG98yW8sTlatg0SQ26pSQA6FvI3XCiLFBqIQlBXGXwDnexM5y4EGaNSzNr7blboLkoHvuNnH32HMTa32TjI9JwNHKx+4YuTGzpyLMLPNAn6kijg=">
+</div>
+			<table width="100%" height="100%" id="mainTable" border="0" cellspacing="0" cellpadding="0">
+				<tbody><tr>
+					<td>
+						<table width="100%" border="0" cellspacing="0" cellpadding="0">
+							<tbody><tr style="height: 90px;">
+								<td width="100%" height="90" background="../doc/images/headBg_02.gif">
+									<table width="100%" border="0" cellspacing="0" cellpadding="0">
+										<tbody><tr>
+											<td class="clear_space"><img width="450" height="66" src="../doc/images/headBg_01.gif" border="0"></td>
+											<td width="100%" background="../doc/images/headBg_02.gif"></td>
+
+										</tr>
+									</tbody></table>
+									<table width="100%" border="0" cellspacing="0" cellpadding="0">
+										<tbody><tr>
+											<td width="100%" height="24" background="../doc/images/headBg_17.gif"></td>
+										</tr>
+									</tbody></table>
+								</td>
+								<td width="518" height="90">
+									<table width="100%" border="0" cellspacing="0" cellpadding="0">
+										<tbody><tr height="62">
+											<td width="100%" height="62" background="../doc/images/headBg_02.gif">
+												<table border="0" cellspacing="0" cellpadding="0">
+													<tbody><tr>
+														<td align="right" valign="top" style="width: 500px; height: 62px; padding-top: 6px; padding-right: 10px;"><a onclick="changeToChinese();" href="#null">中文版</a>&nbsp;|&nbsp;
+															<a onclick="CallFunc('CBANK_HOMEPAGE','HomePageGen/HomePage.aspx','FORM',null);" href="#null">
+																Home Page</a>&nbsp;|&nbsp;<a onclick="CallFunc('CBANK_SHELL','Service/WebSiteMap.aspx','FORM',null);" href="#null">Site Map</a>&nbsp;|&nbsp;<a onclick="CallFunc('CBANK_SHELL','Login/HP_QueryLog.aspx','FORM',null);" href="#null">Logs</a>
+															|&nbsp;<a onclick="doRelogin();" href="#null">Logon again</a>&nbsp;|&nbsp;<a onclick="doExit();" href="#null">Logout</a>
+														</td>
+													</tr>
+												</tbody></table>
+											</td>
+										</tr>
+										<tr style="height: 28px;">
+											<td width="100%" height="28" background="../doc/images/headBg_16.gif">
+												<table id="imgCardType" style="width: 523px;" border="0" cellspacing="0" cellpadding="0">
+	<tbody><tr>
+		<td height="28" class="clear_space"><img id="imgCommonCard" style="border-width: 0px; cursor: pointer;" onclick="switchImg('A');switchMenu('A');" alt="All-in-one Card" src="../doc/Images/tab_CommonCard_sel.gif"><img id="imgCreditCard" style="border-width: 0px; cursor: pointer;" onclick="switchImg('C');switchMenu('C');" alt="Credit Card" src="../doc/Images/tab_CreditCard_unsel_01.gif"><img id="imgBook" style="border-width: 0px; cursor: pointer;" onclick="alert('Sorry,you have not bind a bankbook,so you can not use relevant function!');" alt="Bankbook" src="../doc/Images/tab_Book_unsel_03.gif"><img id="imgUser" style="border-width: 0px; cursor: pointer;" onclick="switchImg('D');switchMenu('D');" alt="All-in-one-net Client" src="../doc/Images/tab_User_unsel_02.gif"></td>
+	</tr>
+</tbody></table>
+
+											</td>
+										</tr>
+									</tbody></table>
+								</td>
+							</tr>
+							<tr>
+								<td height="29" id="sysMenuTD" background="../doc/images/rootMenuBorder.gif" colspan="3"><ul id="menu">	<li id="LI_0.32726763635655914"><a class=" rootmenuA" href="#">Account</a>		<ul>			<li id="LI_0.3965218654990553"><a onclick="CallFuncEx2('A','CBANK_DEBITCARD_ACCOUNTMANAGER','AccountQuery/am_QuerySubAccount.aspx','FORM',null,'panelcontrol=HomeAccountManager');" href="#">Home Page</a>			<li id="LI_0.14134519548453905"><a onclick="CallFuncEx2('A','CBANK_DEBITCARD_ACCOUNTMANAGER','AccountQuery/am_QuerySubAccount.aspx','FORM',null);" href="#">Account Inquiry</a>			<li id="LI_0.34863384931934615"><a onclick="CallFuncEx2('A','CBANK_DEBITCARD_ACCOUNTMANAGER','AccountQuery/am_QueryTodayTrans.aspx','FORM',null);" href="#">Intraday Transaction</a>			<li id="LI_0.96104823834762"><a onclick="CallFuncEx2('A','CBANK_DEBITCARD_ACCOUNTMANAGER','AccountQuery/am_QueryHistoryTrans.aspx','FORM',null);" href="#">Historical Transaction</a>			<li id="LI_0.35210000636439914"><a onclick="CallFuncEx2('A','CBANK_DEBITCARD_ACCOUNTMANAGER','AccountSet/am_ModiPwd.aspx','FORM',null,'panel=ModiQueryPwd');" href="#">Password Management</a>			<li id="LI_0.04245627943926161"><a onclick="CallFuncEx2('A','CBANK_DEBITCARD_ACCOUNTMANAGER','AccountSet/am_ReportLoss.aspx','FORM',null,'panel=ReportLoss');" href="#">Loss Report</a>		</li></ul>	</li>		<li id="LI_0.472551746940574"><a class=" rootmenuA" href="#">Transfer</a>		<ul>			<li id="LI_0.8874912908288791"><a onclick="CallFuncEx2('A','CBANK_TRANSFER','ProtocolTransfer/tf_CardBookTransfer.aspx','FORM',null,'panelcontrol=HomeSelfHelpTransfer','panel=DebitCard2DebitCard');" href="#">Home Page</a>			<li id="LI_0.7127346225563393"><a class=" submenu" href="#">Intra-card Transfer</a>				<ul>					<li id="LI_0.37628539575721487"><a onclick="CallFuncEx2('A','CBANK_TRANSFER','FixedCurrentTransfer/tf_FixCurrentTransfer.aspx','FORM',null,'panel=Full');" href="#">Fixed Deposit - Current Deposit</a>					<li id="LI_0.7001864038913759"><a onclick="CallFuncEx2('A','CBANK_TRANSFER','NoticeDeposit/tf_TongZhiTransfer.aspx','FORM',null);" href="#">Call Deposit Transfer</a>				</li></ul>			<li id="LI_0.8414654470421312"><a class=" submenu" href="#">External Transfer</a>				<ul>					<li id="LI_0.9270392341737099"><a onclick="CallFuncEx2('A','CBANK_TRANSFER','ProtocolTransfer/tf_CardBookTransfer.aspx','FORM',null,'panel=DebitCard2DebitCard');" href="#">Transfer From All-in-one Card</a>				</li></ul>		</li></ul>	</li>		<li id="LI_0.6467497152078244"><a class=" rootmenuA" href="#">Online Payment</a>		<ul>						<li id="LI_0.8255115725334919"><a onclick="CallFuncEx2('A','CBANK_DEBITCARD_PAYMENT','NetPay/np_QueryNetPayTrans.aspx','FORM',null,'panelcontrol=HomeNetPayment');" href="#">Home Page</a>			<li id="LI_0.4726063050555557"><a onclick="CallFuncEx2('A','CBANK_DEBITCARD_PAYMENT','NetPay/np_QueryNetPayTrans.aspx','FORM',null);" href="#">Online Payment Transaction</a>			<li id="LI_0.5064827719087348"><a onclick="CallFuncEx2('A','CBANK_DEBITCARD_PAYMENT','NetPay/np_SetNetPayQuota.aspx','FORM',null);" href="#">Online Payment Limit Setting</a>					<li id="LI_0.8108292490668045"><a onclick="window.open('http://www.cmbchina.com/personalbank/netpay/NetPayApplyAll.htm','NetPayApply','menubar=yes,toolbar=yes,location=yes,directories=yes,status=yes,resizable=yes,scrollbars=yes,width=800,height=600,top=0,left=0');" href="#">Online Payment Application</a>			<li id="LI_0.1076264781160412"><a onclick="window.open('http://shop.cmbchina.com/','CMBShop','menubar=yes,toolbar=yes,location=yes,directories=yes,status=yes,resizable=yes,scrollbars=yes,width=800,height=600,top=0,left=0');" href="#">Online Shopping Mall</a>		</li></ul>	</li> 	<li id="LI_0.5271616197725115"><a class=" rootmenuA" href="#">Customer Service</a>		<ul>			<li id="LI_0.830395408777924"><a onclick="CallFuncEx2('A','CBANK_SHELL','Login/OnlineCustomerService.aspx','FORM','_blank');" href="#">Online Customer Service</a>			<li id="LI_0.3065733788592988"><a onclick="CallFuncEx2('A','CBANK_SHELL','Login/HP_QueryLog.aspx','FORM',null);" href="#">Operation Log</a>			<li id="LI_0.09580079511467021"><a class=" submenu" href="#">Site Navigation</a>				<ul>					<li id="LI_0.28015024777539216"><a onclick="CallFuncEx2('A','CBANK_SHELL','Service/nv_FuncSearch.aspx','FORM',null);" href="#null">Site Search</a>					<li id="LI_0.03714172494144513"><a onclick="CallFuncEx2('A','CBANK_SHELL','Service/WebSiteMap.aspx','FORM',null);" href="#null">Site Map</a>					<li id="LI_0.7170566085001861"><a onclick="CallFuncEx2('A','CBANK_SHELL','Service/nv_Favorite.aspx','FORM',null);" href="#null">My Collection</a>				</li></ul>			</li>								</ul>	</li>	</ul></td>
+							</tr>
+							<tr>
+								<td height="2" bgcolor="#d9d9d9" colspan="3"></td>
+							</tr>
+							<tr>
+								<td height="4" bgcolor="#ffffff" colspan="3"></td>
+							</tr>
+						</tbody></table>
+					</td>
+				</tr>
+				<tr>
+					<td height="100%">
+						<table width="100%" height="100%" border="0" cellspacing="0" cellpadding="0">
+							<tbody><tr>
+								<td width="159" height="100%" class="leftBg" id="tdShortCutMenu" valign="top">
+									<table width="159" border="0" cellspacing="0" cellpadding="0">
+										<tbody><tr>
+											<td width="159" height="102" background="../doc/Images/onlineCS_bg.gif"><img id="ImgTelephone" style="cursor: pointer;" onclick="var nWinLeft = (screen.width-600)/2;var nWinTop = (screen.height-450)/2;window.open(GenOnlineCustomerServiceURL,'WindowOpen','menubar=no,toolbar=no,location=no,directories=no,status=yes,resizable=yes,scrollbars=no,width=600,height=450,top='+nWinTop+',left='+nWinLeft);" src="../doc/Images/95555.gif"></td>
+										</tr>
+										<tr>
+											<td height="4" bgcolor="white"></td>
+										</tr>
+										<tr>
+											<td height="57" align="center" background="../doc/Images/search_bg.jpg">
+												<table width="100%" height="100%" border="0" cellspacing="0" cellpadding="0">
+		                                        	<tbody><tr height="100%">
+		                                        		<td style="vertical-align: middle;">
+		                                        		<input id="txtSearch" style="border: 1px solid gray; width: 87px; height: 22px; color: gray; padding-top: 4px; padding-left: 5px; font-size: 7pt; margin-bottom: 5px; margin-left: 15px;" onkeypress="if(window.event.keyCode==13){onSearch();}" onclick="if(this.style.color=='gray'){this.style.color='black';this.value='';}" onblur="if(this.value==''){this.value='Func Search';this.style.color='gray';}" size="14" maxlength="50" value="Func Search">
+		                                        		</td>
+		                                        		<td style="vertical-align: middle;">
+		                                        		<input style="margin-right: 11px; margin-bottom: 2px;" onclick="onSearch();return false;" type="image" src="../doc/Images/search_btn.jpg">
+		                                        		</td>
+		                                        	</tr>
+		                                        </tbody></table>
+											</td>
+										</tr>
+										<tr>
+											<td style="height: 27px;" bgcolor="#0783df">
+												<ul id="vmenu"><div id="vmenu_0"><a class="headerClose" href="#">My Favorites</a><ul id="vmenu_0content" style="margin: 0px; padding: 0px; display: none;"><li class="menuItem" id="vmenu_0_0"><a href="null">Set Favorites</a></li></ul></div><div id="vmenu_1"><a class="headerOpen" href="#">Quick Links</a><ul id="vmenu_1content" style="margin: 0px; padding: 0px;"><li><a onclick='CallFuncEx2("A","CBANK_HOMEPAGE","HomePageGen/HomePage.aspx","FORM",null,"DefaultMenuType=A");' href="#">HomePage</a><li><a onclick='CallFuncEx2("A","CBANK_DEBITCARD_ACCOUNTMANAGER","AccountQuery/am_QuerySubAccount.aspx","FORM",null,"panelcontrol=HomeAccountManager");' href="#">Account Management</a><li><a onclick='CallFuncEx2("A","CBANK_TRANSFER","ProtocolTransfer/tf_CardBookTransfer.aspx","FORM",null,"panelcontrol=HomeSelfHelpTransfer","panel=DebitCard2DebitCard");' href="#">Transfer Home Page</a><li><a onclick='CallFuncEx2("A","CBANK_DEBITCARD_PAYMENT","NetPay/np_QueryNetPayTrans.aspx","FORM",null,"panelcontrol=HomeNetPayment");' href="#">Online Payment Home Page</a></li></ul></div><div id="vmenu_2"><a class="headerClose" href="#">Recently Used</a><ul id="vmenu_2content" style="margin: 0px; padding: 0px; display: none;"></ul></div></ul>
+											</td>
+										</tr>
+										<tr>
+											<td height="4" bgcolor="#0783df"><font face="sans-serif"></font></td>
+										</tr>
+									</tbody></table>
+								</td>
+								<td width="14" height="100%" background="../doc/Images/splitter_bg.gif" valign="top" style="cursor: pointer;" onclick="swingShortCutMenu()">
+									<table width="100%" border="0" cellspacing="0" cellpadding="0">
+										<tbody><tr>
+											<td height="125" colspan="3"></td>
+										</tr>
+										<tr>
+											<td width="2"></td>
+											<td width="9" height="79" id="splitter" background="../doc/Images/splitter_l.gif"></td>
+											<td width="3"></td>
+										</tr>
+										<tr>
+											<td colspan="3"></td>
+										</tr>
+									</tbody></table>
+								</td>
+								<td valign="top"><iframe name="mainWorkArea" width="100%" height="400" id="mainWorkArea" src="/CmbBank_GenShell/UI/Base/Blank.htm" frameborder="0" marginwidth="0" marginheight="0" style="height: 470px;" allowtransparency="" onload="adjustFrameSize();" onactivate="hideAllSubMenu();"> </iframe>
+								</td>
+							</tr>
+						</tbody></table>
+					</td>
+				</tr>
+				<tr>
+					<td style="height: 1px;">
+						<input name="ClientNo" id="ClientNo" type="hidden" value="4266F7C76935130C21C10F17D74C9E59528186182914445900056963"> <input name="OnlineCustomerServiceURL" id="OnlineCustomerServiceURL" type="hidden" value="https://forum.cmbchina.com/PCS2012/Service.aspx?hdVersion=20190121&amp;hdType=Normal&amp;hdToken=jKEcP0jG%2fs4EMQHlJh*OB7xSElY2LAiARTWIAl2FRfifmovvRhqJSA00o*fXZHrpvBoj6X*Dfd6N4ZrGuQyGSUwQOF4dxFyRIWzc8u5LsI1Oihkb1ZN98z1NuJDUcmGUfgJZw34j5Ry1t2*LqxG3uajTKMnv%2f8Fab4bYiWyBo8KJms%2fMvpHbGIASJvDtL0D3oM21Y5kQ2r7OdtzMliIWzBUFSj9oed231zDBDXEzVza%2fsnbLz8wHBS9KVSJfKDZGmIB9V7DMtgjV7b4fC1diK1Y6x2lxz*SsdsBcLyuk1NE7OFB2D6IpcPC%2f0MNaKGqUY4xWQI%2f0qYN3EhbwJi*qyVfF2tY%2fJfuAIGoeg0STSFYc9iQVkm8JjncBAUxhrTRC*LmeNExqILkdH1eJP9igrorUqB68Y7%2f%2f">
+						
+<script language="JavaScript" type="text/JavaScript">
+		var DIV_MSG_Show = false;
+		var DIV_MSG_AdjustDIVSize = null;
+		var DIV_MSG_SelectedObj = null;
+		var DIV_MSG_ActionSrc = "/CmbBank_GenShell" + "/UI/Base/en/Page/MessagePage4.aspx";
+		
+////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//层的显示、隐藏以及大小调整
+////////////////////////////////////////////////////////////////////////////////////////////////////////////
+		function AdjustFrameWidth(id)
+		{
+			var frameIdOBJECT = window.document.getElementById(id);
+			/*
+			if(frameIdOBJECT.offsetWidth < 500)
+			{
+				frameIdOBJECT.style.width = 500;
+			}
+			else if(frameIdOBJECT.offsetWidth > window.document.body.clientWidth)
+			{
+				frameIdOBJECT.style.width = window.document.body.clientWidth;
+			}
+			*/
+			frameIdOBJECT.style.width = 454;
+		}
+
+		function AdjustFrameHeight(id)
+		{
+			var frameIdDOM = window.frames[id];
+			var frameIdOBJECT = window.document.getElementById(id);
+			frameIdOBJECT.style.height = frameIdDOM.document.body.scrollHeight;
+			
+			var imgLefter = window.document.getElementById("imgLefter");
+			var imgRighter = window.document.getElementById("imgRighter");
+			imgLefter.height = frameIdOBJECT.offsetHeight;
+			imgRighter.height = frameIdOBJECT.offsetHeight;
+		}
+		
+		function AdjustDIVSize(msgID,shieldID)
+		{
+			var MsgDIV = window.document.getElementById(msgID);
+			var ShieldDIV = window.document.getElementById(shieldID);
+			if(MsgDIV != null)
+			{
+				MsgDIV.style.width = 480;//MsgDIV.scrollWidth;
+				MsgDIV.style.height = MsgDIV.scrollHeight;
+				
+				MsgDIV.style.left = (window.document.body.clientWidth - MsgDIV.offsetWidth)/2;
+				MsgDIV.style.top = (window.document.body.clientHeight - MsgDIV.offsetHeight)/2;
+			}
+			
+			if(ShieldDIV != null)
+			{
+				ShieldDIV.style.width = window.document.body.clientWidth;
+				
+				if(window.document.body.scrollHeight > window.document.body.clientHeight)
+				{
+					ShieldDIV.style.height = window.document.body.scrollHeight;
+				}
+				else
+				{
+					ShieldDIV.style.height = window.document.body.clientHeight;
+				}
+			}			
+		}
+		
+		function AdjustMsgDIVSize()
+		{
+			AdjustDIVSize('MsgDIV','');
+		}
+		
+		function MsgShow()
+		{
+			if(DIV_MSG_Show)
+			{
+				var ShieldDIV = window.document.getElementById("ShieldDIV");
+			
+				if(ShieldDIV.style.visibility == "hidden")
+				{
+					AdjustDIVSize('','ShieldDIV');
+					ShieldDIV.style.visibility = "visible";
+					AdjustFrameWidth('MsgIframe');
+					var param1 = "MsgXml='" + DIV_MSG_MsgXml + "'";
+					triggerFuncEq(DIV_MSG_ActionSrc, 'FORM', 'MsgIframe', param1);
+				}
+				else
+				{
+	 				var MsgTable = window.document.getElementById("MsgTable");
+					MsgTable.style.display = "inline";
+				
+					AdjustFrameHeight("MsgIframe");
+					AdjustDIVSize('MsgDIV','');
+					var MsgDIV = window.document.getElementById("MsgDIV");
+					MsgDIV.style.visibility = "visible";
+	 				MsgDIV.onmousedown = grabObj;
+					
+					ShieldDIV.onresize = AdjustMsgDIVSize;
+					
+					DIV_MSG_AdjustDIVSize = window.setInterval("AdjustDIVSize('','ShieldDIV')",100);
+					DIV_MSG_Show = false;
+				}
+			}
+		}
+		
+		function MsgHide()
+		{
+			var MsgDIV = window.document.getElementById("MsgDIV");
+			var MsgIframe = window.document.getElementById("MsgIframe");
+			var ShieldDIV = window.document.getElementById("ShieldDIV");
+			
+			if(MsgDIV.style.visibility == "visible")
+			{
+				MsgDIV.style.visibility = "hidden";
+				MsgDIV.style.width = 0;
+				MsgDIV.style.height = 0;
+				MsgDIV.onmousedown = null;
+				MsgIframe.style.width = "100%";
+				MsgIframe.style.height = "100%";
+				
+	 			var MsgTable = window.document.getElementById("MsgTable");
+				MsgTable.style.display = "none";				
+			}			
+			if(ShieldDIV.style.visibility == "visible")
+			{
+				ShieldDIV.style.visibility = "hidden";
+				ShieldDIV.style.width = 0;
+				ShieldDIV.style.height = 0;
+				ShieldDIV.onresize = null;
+			}
+			
+			if(DIV_MSG_AdjustDIVSize != null)
+			{
+				window.clearInterval(DIV_MSG_AdjustDIVSize);
+			}
+		}
+		
+////////////////////////////////////////////////////////////////////////////////////////////////////////////		
+//层的移动
+////////////////////////////////////////////////////////////////////////////////////////////////////////////		
+		function grabObj()
+		{
+			var imgObjID = window.event.srcElement.id;
+			if(imgObjID == "imgHeader")
+			{
+				DIV_MSG_SelectedObj = window.document.getElementById("MsgDIV");
+			}
+
+			offsetX = window.event.offsetX;
+			offsetY = window.event.offsetY;
+
+			var MsgDIV = window.document.getElementById("MsgDIV");
+			MsgDIV.onmousemove = dragObj;
+			MsgDIV.onmouseup = releaseObj;	
+			// prevent further processing of mouseDown event so 
+  			// that the Macintosh doesn't display the contextual 
+			// menu and lets dragging work normally.
+			return false;
+		}
+			
+		function dragObj()
+		{
+			if (DIV_MSG_SelectedObj)
+			{
+				x = window.event.clientX - offsetX;
+				y = window.event.clientY - offsetY;
+
+				if(x<0) x = 0;
+				if((x+DIV_MSG_SelectedObj.offsetWidth)>window.document.body.clientWidth) x=window.document.body.clientWidth-DIV_MSG_SelectedObj.offsetWidth;
+
+				DIV_MSG_SelectedObj.style.pixelLeft = x;
+
+				if(y<0) y=0;
+				if((y+DIV_MSG_SelectedObj.offsetHeight)>window.document.body.clientHeight) y=window.document.body.clientHeight-DIV_MSG_SelectedObj.offsetHeight;
+
+				DIV_MSG_SelectedObj.style.pixelTop = y;
+
+				//prevent further system response to dragging
+				window.event.returnValue = false;
+				return false
+			}
+		}
+
+		function releaseObj()
+		{
+			if (DIV_MSG_SelectedObj)
+			{
+				DIV_MSG_SelectedObj = null;
+				var MsgDIV = window.document.getElementById("MsgDIV");
+				MsgDIV.onmousemove = null;
+				MsgDIV.onmouseup = null;				
+			}
+		}
+		
+////////////////////////////////////////////////////////////////////////////////////////////////////////////		
+//其他事件处理
+////////////////////////////////////////////////////////////////////////////////////////////////////////////		
+		function ChangeSrc(flag)
+		{
+		    var imgClose = window.document.getElementById("imgClose");
+			if(flag == 2)
+			{
+				imgClose.src = "/CmbBank_GenShell" +  '/UI/Base/doc/Images/MessageNew9.gif';
+			}
+			else
+			{
+			    imgClose.src = "/CmbBank_GenShell" + '/UI/Base/doc/Images/MessageNew12.gif';
+			}
+		}
+		
+</script>
+<div id="MsgDIV" style="left: 0px; top: 0px; width: 0px; height: 0px; visibility: hidden; position: absolute; z-index: 15;">
+	<table align="center" id="MsgTable" style="display: none;" border="0" cellspacing="0" cellpadding="0">
+		<tbody><tr>
+			<td colspan="3">
+				<img id="imgHeader" src="/CmbBank_GenShell\UI\Base\doc\Images\MessageNew14.jpg"><div style="left: 450px; top: 10px; position: absolute;"><img id="imgClose" onmouseover="ChangeSrc(1);" onmouseout="ChangeSrc(2);" onclick="MsgHide();" src="/CmbBank_GenShell\UI\Base\doc\Images\MessageNew9.gif"></div>
+			</td>
+		</tr>
+		<tr>
+			<td><img width="13" height="10" id="imgLefter" src="/CmbBank_GenShell\UI\Base\doc\Images\MessageNew10.gif"></td>
+			<td>
+				<iframe name="MsgIframe" width="452" height="10" id="MsgIframe" src="/CmbBank_GenShell/UI/Base/Blank.htm" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" onload="MsgShow()"></iframe>
+			</td>
+			<td><img width="13" height="10" id="imgRighter" src="/CmbBank_GenShell\UI\Base\doc\Images\MessageNew11.gif"></td>
+		</tr>
+		<tr>
+			<td colspan="3">
+				<img src="/CmbBank_GenShell/UI/Base/doc/Images/MessageNew15.jpg">
+			</td>
+		</tr>
+	</tbody></table>
+</div>
+<div id="ShieldDIV" style="left: 0px; top: 0px; width: 0px; height: 0px; visibility: hidden; position: absolute; z-index: 10;">
+	<iframe width="100%" height="100%" id="ShieldIftame" src="/CmbBank_GenShell/UI/Base/DefaultDiv.htm" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe>
+</div>
+
+					</td>
+				</tr>
+			</tbody></table>
+			<!-- CardInfoForType : for user's cards info  -->
+			<input name="CardsInfoForType" id="CardsInfoForType" type="hidden" value="{A:true,B:false,C:true,D:true}">
+		</form>
+	
+
+<form name="GenForm" id="GenForm" style="display: none;" action="https://pbsz.ebank.cmbchina.com/CmbBank_HomePage/UI/HomePagePC_En/HomePageGen/HomePage.aspx" method="post" target="mainWorkArea"><input name="ClientNo" type="hidden" value="4266F7C76935130C21C10F17D74C9E59348727744994503400009877"><input name="DefaultMenuType" type="hidden" value="A"></form></body></html>

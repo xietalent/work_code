@@ -1,0 +1,327 @@
+<html><head><title>
+	身份验证
+</title><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><link href="../../Base/doc/dist/asset/css/cmbbank-ui-min.css" rel="stylesheet" type="text/css" charset="utf-8">
+    <script language="javascript" src="../../Base/doc/Scripts/sdc_web.js"></script><script></script>
+    <script language="javascript" src="../../Base/doc/Scripts/sdc_cmb.js"></script>
+    <script language="javascript" src="../../Base/doc/Scripts/default.js"></script>
+    <script language="javascript" src="../../Base/doc/Scripts/XmlUtils.js"></script>
+    <script language="javascript" src="../../Base/doc/Scripts/DynaForm.js"></script>
+    <script language="javascript" src="../../Base/doc/Scripts/DynaXmlHttp.js"></script>
+    <script language="javascript" src="../doc/Scripts/GenUtils.js"></script>
+
+    <script language="javascript" src="../../Base/doc/scripts/pro/jquery-1.7.1.min.js" type="text/javascript"></script>
+    <script src="../../Base/doc/dist/asset/js/cmbbank-ui.js" type="text/javascript" charset="utf-8"></script>
+
+    <script type="text/javascript">
+        moveTo(0, 0);
+        resizeTo(screen.width, screen.height);
+
+        var g_leftTime;
+        var g_timer;
+        var GenServerIndexUrl = "/CmbBank_GenShell/UI/GenShellPC_En/Login/GenIndex.aspx";
+        var GenServerLoginUrl = "/CmbBank_GenShell/UI/GenShellPC_En/Login/Login.aspx";
+        var GenServerLogoutUrl = "/CmbBank_GenShell/UI/GenShellPC_En/Login/Logout.aspx";
+
+        function RenderMessagePage(type, title, msg) {
+            if(type == "03") {
+                $(".page-success-icon").find(".relink").show();
+                $(".page-success-icon").find(".error").hide();
+            } else {
+                $(".page-success-icon").find(".error").show();
+                $(".page-success-icon").find(".relink").hide();
+            }
+            $(".page-success-message-wrap").find("h1").html(title);
+            $(".page-success-message-wrap").find("h3").html(decodeURIComponent(msg));
+
+            $("#VerifyPage").hide();
+            $("#ErrorPage").show();
+        }
+
+        function InitPage() {
+            $("#btnSendCode").on("click", function () {
+                try {
+                    $("#txtSendCode").val("");
+                } catch (e) { }
+                $.ajax({
+                    url: "GenLoginVerifyM2.aspx",
+                    dataType: "xml",
+                    type: "POST",
+                    timeout: 30000,
+                    data: {
+                        "PRID": "SendMSGCode",
+                        "ClientNo": $("#ClientNo").attr("value")
+                    },
+                    beforeSend: function (XMLHttpRequest) {
+                        P.process("Submitting request; please wait…");
+                    },
+                    error: function (XMLHttpRequest, textStatus, errorThrown) {
+                        P.hideProces();
+                        RenderMessagePage("02", "System busy!", "Your request cannot be completed now,sorry for the inconvenience!");
+                    },
+                    success: function (data, textStatus) {
+                        P.hideProces();
+                        var xmlObject = $(data);
+                        if (xmlObject.find("code").text() == "00") {
+                            $("#txtSendCode").focus();
+                            $(".control-explain").show().removeClass("error");
+
+                            $(".control-explain").html("SMS verification has been sent to your phone:" + xmlObject.find("title").text() + ", please enter the verification code within 5 minutes.");
+
+                            g_leftTime = 120;
+                            g_timer = setInterval(UpdateMsgTimer, 1000);
+                            $("#btnSendCode").attr("disabled", "disabled");
+                            $("#btnSendCode").value = "Re acquisition(" + g_leftTime.toString() + ")";
+                            return;
+                        }
+                        else if (xmlObject.find("code").text() == "02") {
+                            $(".control-explain").show().addClass("error");
+                            var fault = xmlObject.find("fault").text();
+                            $(".control-explain").html(decodeURIComponent(fault));
+                            return;
+                        }
+                        else {
+                            var code = xmlObject.find("code").text();
+                            var title = xmlObject.find("title").text();
+                            var fault = xmlObject.find("fault").text();
+                            RenderMessagePage(code, title, fault);
+                            return;
+                        }
+                    }
+                });
+            });
+
+            $("#btnVerifyCode").on("click", function () {
+
+                if (!CheckValid())
+                    return false;
+
+                $.ajax({
+                    url: "GenLoginVerifyM2.aspx",
+                    dataType: "xml",
+                    type: "POST",
+                    timeout: 30000,
+                    data: {
+                        "PRID": "VerifyMSGCode",
+                        "ClientNo": $("#ClientNo").val(),
+                        "SendCode": $("#txtSendCode").val()
+                    },
+                    beforeSend: function (XMLHttpRequest) {
+                        P.process("Request is submitting,please wait…");
+                    },
+                    error: function (XMLHttpRequest, textStatus, errorThrown) {
+                        P.hideProces();
+                        RenderMessagePage("02", "System busy!", "Your request cannot be completed now,sorry for the inconvenience!");
+                    },
+                    success: function (data, textStatus) {
+                        P.hideProces();
+                        var xmlObject = $(data);
+                        if (xmlObject.find("code").text() == "00") {
+                            if ($("#DeviceType").val() == "M") {
+                                window.location.reload('http://cmbpbls/SetMenuEnable');
+                            } else {
+                                if (GenServerIndexUrl != null && GenServerIndexUrl != "") {
+                                    var dynaForm = new DynaForm("transLoginFrom");
+                                    dynaForm.setAction(GenServerIndexUrl);
+                                    dynaForm.addHidden("ClientNo", $("#ClientNo").val());
+                                    dynaForm.submit();
+                                }
+                            }
+                            return true;
+                        }
+                        else if (xmlObject.find("code").text() == "02") {
+                            $(".control-explain").show().addClass("error");
+                            var fault = xmlObject.find("fault").text();
+                            $(".control-explain").html(decodeURIComponent(fault));
+
+                            clearInterval(g_timer);
+                            $("#btnSendCode").attr("disabled", false);
+                            $("#btnSendCode").attr("value", "Re acquisition");
+                            return false;
+                        }
+                        else {
+                            var code = xmlObject.find("code").text();
+                            var title = xmlObject.find("title").text();
+                            var fault = xmlObject.find("fault").text();
+                            RenderMessagePage(code, title, fault);
+                            return false;
+                        }
+                    }
+                });
+            });
+        }
+
+        function CheckValid() {
+
+            var sendCode = $("#txtSendCode").val();
+            if(sendCode == "")
+            {
+                $(".control-explain").html("[verification code] cannot be empty. please re-enter.");
+                return next(false);
+            }
+            if(!IsAllDigit(sendCode) || sendCode.length != 6)
+            {
+                $(".control-explain").html("[verification code] input is incorrect, please re-enter.");
+                return next(false);
+            }
+            
+            return next(true);
+        }
+
+        function UpdateMsgTimer() {
+            g_leftTime--;
+            if (g_leftTime <= 0) {
+                clearInterval(g_timer);
+                $("#btnSendCode").attr("disabled", false);
+                $("#btnSendCode").attr("value", "Re acquisition");
+                return;
+            }
+            $("#btnSendCode").attr("value", "Re acquisition(" + g_leftTime.toString() + ")");
+        }
+
+        function logoutGenServer()
+		{
+		    if(window.event)
+			    window.event.returnValue = false;
+			var logoutInfo = new Object();
+			logoutInfo.ClientNo = $("#ClientNo").val();
+			var bRet = GenLogoutShell(logoutInfo,GenServerLogoutUrl);
+			return bRet;
+		}		
+		
+		function doRelogin(logout)
+		{
+            if($("#DeviceType").val() == "M") {
+                window.location.reload('http://cmbpbls/ReLogin');
+            } else {
+                if(logout)
+			        var bRet = logoutGenServer();
+			    window.location = GenServerLoginUrl;
+            }
+		}
+
+    </script>
+
+    <style type="text/css">
+    
+    .form-title {
+	    font-size: 20px;
+	    font-weight: bold;
+	    color: #333;
+	    line-height: 35px;
+	    margin: 0 0 10px 20px;
+    }
+    
+    .form-title span 
+    {
+        display:block;
+		font-size: 14px;
+		font-weight: normal;
+		color: #898989;
+		line-height:20px;
+	} 
+	
+	.page-success .page-success-icon i.error
+	{
+	    background-image: url("../doc/images/icon-error.png");
+	}
+	
+	.page-success .page-success-icon i.relink
+	{
+	    background-image:none;
+	    width:158px;
+	    height:158px;
+	}
+	
+	.control-explain.error 
+	{
+	    color:#D10000;
+	}
+	
+	.control-label
+	{
+	    width:143px;
+	}
+    
+    </style>
+
+</head>
+<body class="page" style="margin: 0px auto;" onload="InitPage()">
+    <form name="form1" id="form1" action="./GenLoginVerifyM2.aspx" method="post">
+<div>
+<input name="__VIEWSTATE" id="__VIEWSTATE" type="hidden" value="Odv/g5D8ETxxr0P3AMRf7mcJaioSdDbLognSzCdcWQ8a+9WX6HQYnIYr8UXQROM92emnONk/KxvfQ9D/7RU+EhrGmoqoywhUqcYCpFYZvrRb9n87g3OU9xTqDLLRGTWuNVRmTc2RDulRWgjS7g1JAg==">
+</div>
+
+<div>
+
+	<input name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" type="hidden" value="827FB1CB">
+	<input name="__EVENTVALIDATION" id="__EVENTVALIDATION" type="hidden" value="bBKMr1HDdXoi4jOmoloswv8YT/vRJxNbBSTp0rXP/1e6pUGH1eCWgLNvGW6dC1+pcF8BQsMAhh86ptE3Qz74Cxin6OhvmbsPzlQMRsWKhg3zXfRHEJ91eFg/7IDIaeSsqEeXZk439i7cICImbhi+ZkldB43DCzw752RiAdClckY=">
+</div>
+    <div id="VerifyPage">
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+			<tbody><tr>
+				<td><img style="width: 384px; height: 107px; float: left;" alt="logo" src="../doc/images/Login/logo01.jpg" border="0"></td>
+				<td width="100%" style='background-image: url("../doc/images/Login/HeadBg.jpg");'></td>
+                <td><img style="width: 200px; height: 107px; float: left;" alt="logo" src="../doc/images/Login/logo02.jpg" border="0"></td>
+			</tr>
+		</tbody></table>
+        <div class="page-panel" style="border-width: 0px; margin: 50px 50px 50px 150px; background-color: rgb(235, 236, 242);">
+		    <div class="page-form" style="margin: 25px 10px 10px;">
+		        <fieldset>
+                    <div class="form-title">Please verify your identity<!--<span>System has detected that you are trying to log in from a non-frequently used device; please enter the verification code to verify your identity.</span>--></div>
+		            <div class="page-form-item page-form-follow">
+                        <label class="control-label" for="">Mobile phone number:</label>    
+                        <div class="page-form-item-controls">
+        	                <div class="control-text"><span id="lbMobileNo">137*****735</span></div>
+                        </div>
+                    </div>
+                    <div class="page-form-item">
+                        <label class="control-label" for="">Verification code:</label>    
+                        <div class="page-form-item-controls">
+        	                <input name="txtSendCode" class="control-input" id="txtSendCode" style="width: 100px;" type="text" maxlength="6" placeholder="Enter code" onpropertychange="return false;">
+                            <input class="btn btn-default btn-lg" id="btnSendCode" style="margin-left: 10px;" type="button" value="Acquisition">
+                            <p class="control-explain" style="width: 300px; display: none;"></p>
+                        </div>
+                    </div>   
+                    <div class="page-form-item">
+                        <label class="control-label" for=""></label>    
+                        <div class="page-form-item-controls">
+                            <input class="btn btn-primary" id="btnVerifyCode" type="button" value="OK">
+                            <input class="btn btn-default" id="btnBackLogin" style="margin-left: 10px;" onclick="doRelogin(true)" type="button" value="Return">
+                        </div>
+                    </div>               
+                </fieldset>
+            </div>
+            <div class="page-panel-explain" style="padding-top: 40px;">
+	            <iframe name="ExplainPageFrame" class="explain-frame" id="Iframe1" src="../doc/Htmls/pro8/100000.htm" frameborder="0" scrolling="no" style="height: 113px;"></iframe>
+            </div>
+        </div>
+    </div>
+    <div class="page-panel" id="ErrorPage" style="border-width: 0px; margin: 50px auto; display: none; background-color: rgb(235, 236, 242);">
+    	<div class="page-panel-content" style="margin: 40px 0px;">
+			<div class="page-success">
+				<div class="page-success-icon">
+					<div>
+						<i title="Reminder" class="glyphicon error" id="iconErroe" style="float: right; display: none;"></i>
+                        <i title="Reconnect" class="glyphicon relink" id="iconRelink" style="float: right; display: none;">
+                        <img width="158" height="158" alt="Reconnect" src="../doc/images/icon-relink.png">
+                        </i>
+					</div>
+				</div>
+				<div class="page-success-message">
+					<div class="page-success-message-wrap">
+						<h1><span id="lbTitle"></span></h1>
+						<h2>Your financial security is being protected by CMB.</h2>
+						<h3><span id="lbMessage"></span></h3>
+						<div><input class="btn btn-primary btn-lg" id="Button2" onclick="doRelogin(false)" type="button" value="Reconnect"></div>
+					</div>						
+				</div>
+			</div>				
+		</div>			
+	</div>
+
+    <input name="ClientNo" id="ClientNo" type="hidden" value="4266F7C76935130C21C10F17D74C9E59588563045329952200062791">
+    <input name="DeviceType" id="DeviceType" type="hidden" value="A">
+    </form>
+
+
+</body></html>

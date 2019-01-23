@@ -141,14 +141,18 @@ def input_key(element):
         time.sleep(0.01)
         print('非大写字母{}测试成功'.format(element))
     return True
+
+
+def start_input(strs):
+    for _ in strs:
+        if _ is ' ':
+            input_key('spacebar')
+            print("空格")
+        else:
+            input_key('{}'.format(_))
+
 # datalist = input("请输入：")
 datalist = 'My problem with these and many answers is that they approach it from an abstract, theoretical perspective, rather than starting with explaining simply why closures are necessary in Javascript and the practical situations in which you use them. You end up with a tl;dr article that you have to slog through, all the time thinking, "but, why?". I would simply start with: closures are a neat way of dealing with the following two realities of JavaScript: a. scope is at the function level, not the block level and, b. much of what you do in practice in JavaScript is asynchronous/event driven. –at '
 time.sleep(2)
 # datalist = "I am trying to build a table from my firebase database. However, in the last two columns, they show [object][object]. Those data were coming from the sensor reading. I only want to show the latest value reading by the sensor through in my table. here is my database structure in firebase():"
-
-for _ in datalist:
-    if _ is ' ':
-        input_key('spacebar')
-        print("空格")
-    else:
-        input_key('{}'.format(_))
+start_input(datalist)

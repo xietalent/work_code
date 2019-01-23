@@ -72,7 +72,7 @@
 <div>
 <input name="__EVENTTARGET" id="__EVENTTARGET" type="hidden" value="">
 <input name="__EVENTARGUMENT" id="__EVENTARGUMENT" type="hidden" value="">
-<input name="__VIEWSTATE" id="__VIEWSTATE" type="hidden" value="3752WtURv/9DwfgrWhmFDZjf52P7TSh1o/jbq2AwavdDfiXMqP0iDUVqO732+BeJNhmD9ADjt9VF6NrJsDgYFLe9HaVwZ1FM3eTEUa9pDhQxGUq3oqT7Bre8orGqk42l1xSNRRbp+Xrmuh0mrVpb+HxxrCacnjiOWd3aAArJ4xGOWmzYg6Z5IxHVMgtLCHlMTYTfeHf/gAAxXcyb6FQpHA==">
+<input name="__VIEWSTATE" id="__VIEWSTATE" type="hidden" value="tBBNqFggbCbEwp94zzq6+qVvX857eehOT4LQejwefnnrGuJ8yqT7XHFsxnYav/LZZS52Xno0Lq81D14Gl20jMH/NnZ728vfRFp7cP8q/YTO0pnWfRNFD4dcBXRI3uRFUqXrzKkhq5k5o8dhhUGQH//1x2iZLcfLUbuZXTEcy9/3kAeXUVAfgTBuKduq1oepC9ShlfkvkRwgMri/Kk7NV5Q==">
 </div>
 
 <script type="text/javascript">
@@ -92,15 +92,15 @@ function __doPostBack(eventTarget, eventArgument) {
 </script>
 
 
-<script src="/CmbBank_CreditCard_Customer/WebResource.axd?d=pynGkmcFUV13He1Qd6_TZDv_PVLSth2YDB4X-S1TX74ePnatTP_ofX_CnL2NlPGlDJLV8G85PVXuVzgbZYZZjA2&amp;t=636681351620000000" type="text/javascript"></script>
+<script src="/CmbBank_CreditCard_Customer/WebResource.axd?d=pynGkmcFUV13He1Qd6_TZHz0EX6Kvr0xqylSuDg1El9NJRQRZzNjmCJSblRFRWe_DWjt6Osc4bxQoqcTqDqXxw2&amp;t=636681351620000000" type="text/javascript"></script>
 
 
-<script src="/CmbBank_CreditCard_Customer/ScriptResource.axd?d=KDcvk8zP61z0MxvzzDZlk3_mvXdPmSbEauFjp41Qe2zWFiJA5MibxW-DF6sC_zzZI9oNWEZcEWm4_eApy6_3jheI7HaDP47ePvSusxhA-oUhwC2368lcfP5McVqReBlx9PzkT4RQ04ekg_VJ0pIuelBWJiflycUGxwh4KrVQ8MY1&amp;t=545ba255" type="text/javascript"></script>
-<script src="/CmbBank_CreditCard_Customer/ScriptResource.axd?d=N6fscxOt4BWGsMuWESKnfd2PNqMmFCBTZN4zj5YxxcdDMRYrV6V6wh3udHsE23A0rkeeiowUv8D2LeuLZhxUTkZ_M7J7mNZ-Cqd-nZq-L9pOAi3s0DYhVz6gD7ypNniORyOT1LjQo6Of5NNDsQoJFA7ZkYnYDi05ggJ--gJlS_Ct19abcs8UeL-2SMgyrhC00&amp;t=545ba255" type="text/javascript"></script>
+<script src="/CmbBank_CreditCard_Customer/ScriptResource.axd?d=KDcvk8zP61z0MxvzzDZlk2ZJ5gJNsXrdSwugk2ZTVH-wpqHDBiNg7wFUTcvwOv35XYGzLnOlbWjZm6DYj9AYZ4YTI1mTnD10PnpyxNU4HOrVSXCgo0gLxfLba6gfR79C2jb7rR9WdKFkEivTI72gxghBss8jJqEqzsEvLN4oSFw1&amp;t=545ba255" type="text/javascript"></script>
+<script src="/CmbBank_CreditCard_Customer/ScriptResource.axd?d=N6fscxOt4BWGsMuWESKnfQjezUeGCZZZMGxv7gYvcrwrPZsnWNgKnoHWTyn7sJLCYoq4qscZMAT32UT90KXg6JwCC80frVDiiwDbcvo8zOTXjYLB_1fS85XbCxlPwqlO8AWfA99C6oTllJYjrJyRk6aDSvCd74SxD2XbITmuwaUZarBpRokKDzrmfzVUKTiq0&amp;t=545ba255" type="text/javascript"></script>
 <div>
 
 	<input name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" type="hidden" value="DF1B2FAF">
-	<input name="__EVENTVALIDATION" id="__EVENTVALIDATION" type="hidden" value="Z1TIomCe/BeoE7XaiJ7afiezRCGC/p00eRVC9HMrpvsduiNT1j5BRNPBKc0sGKSW1EbeUNh1N/bE9kBYpFtGWRrlKpuQc76IOioMzHfXXJcwO/DFlsDVRYDeef3sDjvh4Oe3YGWi2JdJcHLQ1+6NupthIJ+V8pAyYnmGLnFKm34=">
+	<input name="__EVENTVALIDATION" id="__EVENTVALIDATION" type="hidden" value="ehW6RNjbCltep0k/pRIoCB0ttmtgpy3nJhN3K52OACA59gjW//jblHl2mBhrXaKYuYK2cxz8bkr+og9h7QVOcsR2X6hC/1wLd3vJE1wrrTLkhSG/MI+hfqdp5MXJUUCzTxvggVnx0OctYNXT98DARVO0fkmP30fusf8pb+Iu2ls=">
 </div>
 
         <div class="page-title">
@@ -149,7 +149,7 @@ Sys.WebForms.PageRequestManager._initialize('ScriptManager1', 'psm_QueryCurPoint
 
 
             <div style="height: 1px;">
-                <input name="ClientNo" id="ClientNo" type="hidden" value="46DBA3B78844841A2CFE7B6A106DFED1088659309352639400000117">
+                <input name="ClientNo" id="ClientNo" type="hidden" value="5C25DBDF56772338330174794E1E4FD0679696447515243800000963">
                 <input name="FunctionName" id="FunctionName" type="hidden" value="积分管理 > 积分查询">
                 <input name="AvailPoint" id="AvailPoint" type="hidden">
             </div>     

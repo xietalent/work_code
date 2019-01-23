@@ -126,5 +126,12 @@ def input_key(element):
         print('非大写字母{}测试成功'.format(element))
     return True
 
-for i in "AqweGqwr`123.,za=%&^":
-    input_key('{}'.format(i))
+
+def start_input(strs):
+    for i in strs:
+        input_key('{}'.format(i))
+
+
+winio_list = 'My problem with these and many answers is that they approach it from an abstract, theoretical perspective, rather than starting with explaining simply why closures are necessary in Javascript and the practical situations in which you use them. You end up with a tl;dr article that you have to slog through, all the time thinking, "but, why?". I would simply start with: closures are a neat way of dealing with the following two realities of JavaScript: a. scope is at the function level, not the block level and, b. much of what you do in practice in JavaScript is asynchronous/event driven. –at'
+
+start_input(winio_list)

@@ -1,0 +1,1136 @@
+<html><head>
+    <title></title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"><script type="text/javascript"> var behaviorjson = "{\"entryid\":\"bsc001901\"}";</script>
+    <link href="../../../Base/doc/dist/asset/css/cmbbank-ui-min.css" rel="stylesheet" type="text/css">
+    <script src="../../../Base/doc/scripts/pro/jquery-1.12.3.min.js" type="text/javascript" charset="utf-8"></script>
+    <!--[if IE 8]>
+	<link href="../../../Base/doc/dist/asset/css/iconfont-ie8fix.css" rel="stylesheet" type="text/css" charset="utf-8"/>
+    <![endif]-->
+    
+    <script src="../../../Base/doc/Scripts/DynaForm.js" type="text/javascript"></script>
+    <script src="../../../Base/doc/Scripts/FuncTrigger.js" type="text/javascript"></script>
+    <script src="../../../Base/doc/Scripts/WebSvrCom.js" type="text/javascript"></script>
+    <script src="../../../Base/doc/Scripts/HostPkg.js" type="text/javascript"></script>
+    <script src="../../../Base/doc/Scripts/BaseFunc.js" type="text/javascript"></script>
+    <script src="../../../Base/doc/Scripts/default.js" type="text/javascript"></script>
+
+    <script type="text/JavaScript">
+        newwinFeatures = "menubar=no,location=no,toolbar=no,status=no,resizable=yes,scrollbars=yes,width=700,height=480,top=" + (screen.height - 480) / 2 + ",left=" + (screen.width - 700) / 2;
+
+        function InitPage() {
+            body.style.cursor = "";
+            if (document.getElementById("HidBackFlag").value == "BackFromAMApplyTranByStages") {
+                showAllSelectApply();
+                SetTransByStageCheckBoxAndAction();
+            }
+        }
+        var LIMIT_ERROR_MSG = "您选择的分期申请金额不能低于￥";
+
+        function GetCheckBoxInElement(parent, cbxChkAllID) {
+            if (parent == null || parent == undefined)
+            {
+                return null;
+            }
+            for (var i = 0; i < parent.childNodes.length; i++) {
+                var e = parent.childNodes[i];
+                if (e.type == 'checkbox' && e.id != cbxChkAllID) {
+                    return e;
+                }
+            }
+            return null;
+        }
+
+        function DisabledReckoningRows(dgReckoning, cbxChkAllID, iCount, isDisabled) {
+            for (var i = 1; i <= iCount; i++) {
+                var e = GetCheckBoxInElement(dgReckoning.rows[i].cells[7], cbxChkAllID);
+                if (e != null) {
+                    e.disabled = isDisabled;
+                }
+            }
+        }
+
+        //首先全部Disabel分期申请
+        function InitTransByStageAction() {
+            body.style.cursor = "";
+            DisabledReckoningRows(document.getElementById("dgReckoningNotDetail"), "cbxChkAll", document.getElementById("HidCount").value, true);
+            DisabledReckoningRows(document.getElementById("dgReckoningNotDetail_Unbilled"), "cbxChkAll_Unbilled", document.getElementById("HidCount_Unbilled").value, true);
+
+            if (document.getElementById("tbSubmit") != null) {
+                document.getElementById("BtnSet").disabled = true;
+                document.getElementById("trMsg").style.display = "none";
+            }
+
+            if (document.getElementById("tbSubmit_Unbilled") != null) {
+                document.getElementById("btnSet_Unbilled").disabled = true;
+                document.getElementById("trMsg_Unbilled").style.display = "none";
+            }
+        }
+
+
+        //最大分期金额获取后进行设置，是否可分期
+        function SetTransByStageCheckBoxAndAction() {
+            body.style.cursor = "";
+            if (document.getElementById("HidAccType").value == "personal") {
+                showAllUseApply();
+            }
+            if (document.getElementById("HidBackFlag").value == "BackFromAMApplyTranByStages") {
+                showAllSelectApply();
+            }
+
+            if (document.getElementById("tbSubmit") != null) {
+                document.getElementById("BtnSet").disabled = false;
+                document.getElementById("trMsg").style.display = "none";
+            }
+
+            if (document.getElementById("tbSubmit_Unbilled") != null && document.getElementById("tbSubmit_Unbilled").style.display != "none") {
+                document.getElementById("btnSet_Unbilled").disabled = false;
+                document.getElementById("trMsg_Unbilled").style.display = "none";
+            }
+
+        }
+        function GoToFastPayment() {
+            var CreditAccNo = 'CreditAccNo=' + document.getElementById("hdfCreditAccSelected").value;
+            CallFuncEx3('rm_FastPayment$$220002', 'C', 'CBANK_CREDITCARD_REPAYMENT', 'Repayment/rm_FastPayment.aspx', 'FORM', null, CreditAccNo);
+        }
+        function SubmitNext(type) {
+            dialogFeatures = "dialogHeight: 650px; dialogWidth: 800px; edge: Raised; center: Yes; help: No; resizable: No; status: No;";
+            if (window.event)
+                window.event.returnValue = false;
+            var j = 0;
+            var iCount;
+            var dgReckoning;
+            var cbxChkAllID;
+            document.getElementById("HidList").value = "";
+            if (type == "Unbilled") {
+                iCount = document.getElementById("HidCount_Unbilled").value;
+                dgReckoning = document.getElementById("dgReckoningNotDetail_Unbilled");
+                cbxChkAllID = "cbxChkAll_Unbilled";
+            }
+            else {
+                iCount = document.getElementById("HidCount").value;
+                dgReckoning = document.getElementById("dgReckoningNotDetail");
+                cbxChkAllID = "cbxChkAll";
+            }
+
+
+            for (var i = 1; i <= iCount; i++) {
+                var e = GetCheckBoxInElement(dgReckoning.rows[i].cells[7], cbxChkAllID);
+                if (e != null && e.checked) {
+                    document.getElementById("HidList").value += dgReckoning.rows[i].cells[9].innerHTML + "|";
+                    j++;
+                }
+            }
+            if (j == 0) {
+                alert("您还没有选择要进行分期的交易，请选择！");
+                return false;
+            }
+            if (window.event)
+                window.event.returnValue = true;
+            P.process();
+            return true;
+        }
+
+        function showAllSelectApply() {
+            var strList = document.getElementById("HidTranCodeList").value;
+            var iCount = 0;
+            var appByStagesType = document.getElementById("hidAppByStagesType").value
+            var dgReckoning;
+            var cbxChkAllID;
+            if (appByStagesType == "Unbilled") {
+                iCount = document.getElementById("HidCount_Unbilled").value;
+                dgReckoning = document.getElementById("dgReckoningNotDetail_Unbilled");
+                cbxChkAllID = "cbxChkAll_Unbilled";
+            }
+            else {
+                iCount = document.getElementById("HidCount").value;
+                dgReckoning = document.getElementById("dgReckoningNotDetail");
+                cbxChkAllID = "cbxChkAll";
+            }
+            CheckSelectReckoningRows(dgReckoning, cbxChkAllID, iCount, strList);
+
+        }
+        function CheckSelectReckoningRows(dgReckoning, cbxChkAllID, iCount, strList) {
+            for (var i = 1; i <= iCount; i++) {
+                var sTranCode = dgReckoning.rows[i].cells[9].innerHTML;
+                var e = GetCheckBoxInElement(dgReckoning.rows[i].cells[7], cbxChkAllID);
+                if (e != null) {
+                    if (strList.indexOf(sTranCode) >= 0) {
+                        e.checked = true;
+                    } else {
+                        e.checked = false;
+                    }
+                }
+            }
+        }
+
+
+        function CheckReckoningRows(dgReckoning, cbxChkAllID, iCount) {
+            for (var i = 1; i <= iCount; i++) {
+                var e = GetCheckBoxInElement(dgReckoning.rows[i].cells[7], cbxChkAllID);
+                if (e != null) {
+                    var staus = dgReckoning.rows[i].cells[8].innerHTML.toString();
+                    if (staus == "0") {
+                        e.disabled = false;
+                    } else {
+                        e.disabled = true;
+                    }
+                }
+            }
+        }
+
+        function SetDisplayReckoningRows(dgReckoning, iCount, display) {
+            for (var i = 0; i <= iCount; i++) {
+                var e = dgReckoning.rows[i].cells[7];
+                e.style.display = display;
+            }
+        }
+
+        function showAllUseApply() {
+            CheckReckoningRows(document.getElementById("dgReckoningNotDetail"), "cbxChkAll", document.getElementById("HidCount").value);
+            CheckReckoningRows(document.getElementById("dgReckoningNotDetail_Unbilled"), "cbxChkAll_Unbilled", document.getElementById("HidCount_Unbilled").value);
+        }
+
+        function hideAllUseApply() {
+            SetDisplayReckoningRows(document.getElementById("dgReckoningNotDetail"), document.getElementById("HidCount").value, "none");
+            SetDisplayReckoningRows(document.getElementById("dgReckoningNotDetail_Unbilled"), document.getElementById("HidCount_Unbilled").value, "none");
+        }
+
+        function QueryReckoningUSD() {
+            triggerFunc("am_QueryReckoningNotUSD.aspx", "FORM", "_self", 'ByStageFlag=' + document.getElementById("HidByStageFlag").value);
+        }
+
+
+        function changeSub(idx) {
+            switch (idx) {
+                case 0:
+                    var param1 = 'index=0';
+                    CallFuncEx3('Cver2_am_QueryAccount$$215005', 'C', 'CBANK_CREDITCARD_ACCOUNT', 'Account/am_QueryAccount.aspx', 'FORM', null, param1);
+                    break;
+                case 1:
+                    var param1 = 'index=1';
+                    triggerFunc("am_QueryReckoningSurveyNew.aspx", "FORM", "_self", param1);
+                    break;
+                case 2:
+                    var param1 = 'index=2';
+                    triggerFunc("am_QueryReckoningNotRMB.aspx", "FORM", "_self", param1);
+                    break;
+            }
+        }
+        function QueryNextDeLayReckoningRMB() {
+            var param1 = 'CreditAccNo=' + document.getElementById("hdfCreditAccSelected").value;
+            triggerFunc('../am_QueryNextDeLayReckoningRMB.aspx', 'FORM', 'DeLayReckoningQuery', param1);
+
+            if (window.event)
+                window.event.returnValue = false;
+        }
+
+
+
+        function CheckAll(cbxObj, type) {
+            DisCheckedAll(type);
+            var checked = cbxObj.checked;
+            var iRtnCount = 0;
+            var iRtnAmount = 0;
+            document.getElementById("HidList").value = "";
+            var iCount = 0;
+            var strLeftStageAMT;
+            var strMinStageAMT =  getUseAMT(document.getElementById("hdfMinStageAMT").value);
+            var dgReckoning;
+            var tbSubmit;
+            var BtnSet;
+            var trMsg;
+            var CheckedCount;
+            var ApplyStageAMT;
+            var LeftStageAMT;
+            var cbxChkAllID;
+            
+            if (type == "Unbilled") {
+                strLeftStageAMT = getUseAMT(document.getElementById("HidLeftStageAMT_Unbilled").value);
+                iCount = document.getElementById("HidCount_Unbilled").value;
+                dgReckoning = document.getElementById("dgReckoningNotDetail_Unbilled");
+                tbSubmit = document.getElementById("tbSubmit_Unbilled");
+                BtnSet = document.getElementById("btnSet_Unbilled");
+                trMsg = document.getElementById("trMsg_Unbilled");
+                CheckedCount = document.getElementById("CheckedCount_Unbilled");
+                ApplyStageAMT = document.getElementById("ApplyStageAMT_Unbilled");
+                LeftStageAMT = document.getElementById("LeftStageAMT_Unbilled");
+                cbxChkAllID = "cbxChkAll_Unbilled";
+            }
+            else {
+                strLeftStageAMT = getUseAMT(document.getElementById("HidLeftStageAMT").value);
+                iCount = document.getElementById("HidCount").value;
+                dgReckoning = document.getElementById("dgReckoningNotDetail");
+                tbSubmit = document.getElementById("tbSubmit");
+                BtnSet = document.getElementById("BtnSet");
+                trMsg = document.getElementById("trMsg");
+                CheckedCount = document.getElementById("CheckedCount");
+                ApplyStageAMT = document.getElementById("ApplyStageAMT");
+                LeftStageAMT = document.getElementById("LeftStageAMT");
+                cbxChkAllID = "cbxChkAll";
+            }
+
+
+            if (strLeftStageAMT < 0) {
+                strLeftStageAMT = 0;
+            }
+            for (var i = 1; i <= iCount; i++) {
+                var e = GetCheckBoxInElement(dgReckoning.rows[i].cells[7], cbxChkAllID);
+                if (e != null && e.disabled == false) {
+                    if (checked) {
+                        e.checked = true;
+                        iRtnCount++;
+                        if (iRtnCount > 20) {
+                            iRtnCount--;
+                            e.checked = false;
+                            break;
+                        }
+                        var sAmount = dgReckoning.rows[i].cells[5].innerHTML;
+                        sAmount = getUseAMT(sAmount);
+                        iRtnAmount += parseFloat(sAmount);
+                        if (iRtnAmount > parseFloat(strLeftStageAMT)) {
+                            iRtnCount--;
+                            e.checked = false;
+                            iRtnAmount = iRtnAmount - parseFloat(sAmount);
+                            strLeftStageAMT = GetStdDispalyMoney(GetDisplayAmt(strLeftStageAMT));
+                            alert("您的最大可分期金额为￥" + strLeftStageAMT + "元，您目前累计申请分期的总金额已超出，请重新申请。");
+                            break;
+                        }
+                        document.getElementById("HidList").value += dgReckoning.rows[i].cells[9].innerHTML + "|";
+                    } else {
+                        e.checked = false;
+                    }
+                }
+            }
+            if (tbSubmit != null) {
+                if (parseFloat(iRtnAmount.toFixed(2)) < parseFloat(strMinStageAMT)) {
+                    BtnSet.disabled = true;
+                    trMsg.innerHTML = LIMIT_ERROR_MSG + $("#hdfMinStageAMT").val() + "元";
+                    trMsg.style.display = "";
+                } else {
+                    BtnSet.disabled = false;
+                    trMsg.style.display = "none";
+                }
+            }
+            if (CheckedCount != null)
+                CheckedCount.innerHTML = iRtnCount;
+            if (ApplyStageAMT != null)
+                ApplyStageAMT.innerHTML = GetStdDispalyMoney(GetDisplayAmt(iRtnAmount.toFixed(2)));
+            if (LeftStageAMT != null)
+                LeftStageAMT.innerHTML = GetStdDispalyMoney(GetDisplayAmt((strLeftStageAMT - iRtnAmount).toFixed(2)));
+        }
+
+        function DisCheckedAll(type) {
+            var iCount = 0;
+            var dgReckoning;
+            var cbxChkAllID;
+            if (type == "Unbilled") {
+                iCount = document.getElementById("HidCount_Unbilled").value;
+                dgReckoning = document.getElementById("dgReckoningNotDetail_Unbilled");
+                cbxChkAllID = "cbxChkAll_Unbilled";
+            }
+            else {
+                iCount = document.getElementById("HidCount").value;
+                dgReckoning = document.getElementById("dgReckoningNotDetail");
+                cbxChkAllID = "cbxChkAll";
+            }
+            for (var i = 1; i <= iCount; i++) {
+                var e = GetCheckBoxInElement(dgReckoning.rows[i].cells[7], cbxChkAllID);
+                if (e != null && e.disabled == false) {
+                    e.checked = false;
+                }
+            }
+        }
+
+        function getUseAMT(strAMT) {
+            strAMT = strAMT.toString();
+            if (strAMT.substring(0, 1) == "￥") {
+                strAMT = Trim(strAMT.substring(1));
+            }
+            strs = strAMT.split(",");
+            var strRTAMT = "";
+            for (i = 0; i < strs.length; i++) {
+                strRTAMT += strs[i].toString();
+            }
+            return strRTAMT;
+        }
+
+        function CheckStage(cbxObj, type) {
+            var iRtnCount = 0;
+            var iRtnAmount = 0;
+            document.getElementById("HidList").value = "";
+
+            var iCount = 0;
+            var strLeftStageAMT;
+            var strMinStageAMT = getUseAMT(document.getElementById("hdfMinStageAMT").value);
+            var dgReckoning;
+            //var tbStage;
+            var tbSubmit;
+            var BtnSet;
+            var trMsg;
+            var CheckedCount;
+            var ApplyStageAMT;
+            var LeftStageAMT;
+            var cbxChkAllID;
+
+            if (type == "Unbilled") {
+                strLeftStageAMT = getUseAMT(document.getElementById("HidLeftStageAMT_Unbilled").value);
+                iCount = document.getElementById("HidCount_Unbilled").value;
+                dgReckoning = document.getElementById("dgReckoningNotDetail_Unbilled");
+                tbSubmit = document.getElementById("tbSubmit_Unbilled");
+                BtnSet = document.getElementById("btnSet_Unbilled");
+                trMsg = document.getElementById("trMsg_Unbilled");
+                CheckedCount = document.getElementById("CheckedCount_Unbilled");
+                ApplyStageAMT = document.getElementById("ApplyStageAMT_Unbilled");
+                LeftStageAMT = document.getElementById("LeftStageAMT_Unbilled");
+                document.getElementById("cbxChkAll_Unbilled").checked = false;
+                cbxChkAllID = "cbxChkAll_Unbilled";
+            }
+            else {
+                strLeftStageAMT = getUseAMT(document.getElementById("HidLeftStageAMT").value);
+                iCount = document.getElementById("HidCount").value;
+                dgReckoning = document.getElementById("dgReckoningNotDetail");
+                tbSubmit = document.getElementById("tbSubmit");
+                BtnSet = document.getElementById("BtnSet");
+                trMsg = document.getElementById("trMsg");
+                CheckedCount = document.getElementById("CheckedCount");
+                ApplyStageAMT = document.getElementById("ApplyStageAMT");
+                LeftStageAMT = document.getElementById("LeftStageAMT");
+                document.getElementById("cbxChkAll").checked = false;
+                cbxChkAllID = "cbxChkAll";
+            }
+
+            if (strLeftStageAMT < 0) {
+                strLeftStageAMT = 0;
+            }
+            for (var i = 1; i <= iCount; i++) {
+                var e = GetCheckBoxInElement(dgReckoning.rows[i].cells[7], cbxChkAllID);
+                if (e != null && e.checked) {
+                    var sAmount = dgReckoning.rows[i].cells[5].innerHTML;
+                    sAmount = getUseAMT(sAmount);
+                    iRtnAmount += parseFloat(sAmount);
+                    iRtnCount++;
+                    if (iRtnAmount > parseFloat(strLeftStageAMT)) {
+                        try {
+                            var j = GetDelCheckBoxId(cbxObj.id, type);
+                            GetCheckBoxInElement(dgReckoning.rows[j].cells[7], cbxChkAllID).checked = false;                            
+                        }
+                        catch (e) { }
+                        strLeftStageAMT = GetStdDispalyMoney(GetDisplayAmt(strLeftStageAMT));
+                        alert("您的累计申请交易分期的总金额已经超过了最大可分期金额￥" + strLeftStageAMT + "元，请重新选择。");
+                        break;
+                    }
+                    if (iRtnCount > 20) {
+                        try {
+                            var j = GetDelCheckBoxId(cbxObj.id, type);
+                            GetCheckBoxInElement(dgReckoning.rows[j].cells[7], cbxChkAllID).checked = false;                          
+                        }
+                        catch (e) { }
+                        alert("交易分期一次最多只能申请20笔！");
+                        break;
+                    }
+                    document.getElementById("HidList").value += dgReckoning.rows[i].cells[9].innerHTML + "|";
+                }
+            }
+            if ((iRtnCount > 20) || (iRtnAmount > parseFloat(strLeftStageAMT))) {
+                return;
+            }
+            if (tbSubmit != null) {
+                if (parseFloat(iRtnAmount.toFixed(2)) < parseFloat(strMinStageAMT)) {
+                    BtnSet.disabled = true;
+                    trMsg.innerHTML = LIMIT_ERROR_MSG + strMinStageAMT + "元";
+                    trMsg.style.display = "";
+                    
+                } else {
+                    BtnSet.disabled = false;
+                    trMsg.style.display = "none";
+                }
+            }
+            if (CheckedCount != null)
+                CheckedCount.innerHTML = iRtnCount;
+            if (ApplyStageAMT != null)
+                ApplyStageAMT.innerHTML = GetStdDispalyMoney(GetDisplayAmt(iRtnAmount.toFixed(2)));
+            if (LeftStageAMT != null)
+                LeftStageAMT.innerHTML = GetStdDispalyMoney(GetDisplayAmt((strLeftStageAMT - iRtnAmount).toFixed(2)));
+        }
+
+        function GetDelCheckBoxId(str, type) {
+            var iCount = 0;
+            var dgReckoning;
+            var cbxChkAllID;
+            if (type == "Unbilled") {
+                iCount = document.getElementById("HidCount_Unbilled").value;
+                dgReckoning = document.getElementById("dgReckoningNotDetail_Unbilled");
+                cbxChkAllID = "cbxChkAll_Unbilled";
+            }
+            else {
+                iCount = document.getElementById("HidCount").value;
+                dgReckoning = document.getElementById("dgReckoningNotDetail");
+                cbxChkAllID = "cbxChkAll";
+            }
+
+            for (var i = 1; i <= iCount; i++) {
+                var e = GetCheckBoxInElement(dgReckoning.rows[i].cells[7], cbxChkAllID);
+                if (e != null && e.checked) {
+                    if (e.id != str) {
+                        continue;
+                    } else {
+                        return i;
+                    }
+                }
+            }
+        }
+
+        function GetStdDispalyMoney(money)//金额转换成标准展示金额
+        {
+            money = money.toString();
+            var index = money.indexOf(".");
+            if (index == -1) {
+                money = money + ".00";
+            }
+            else {
+                if (index == money.length - 2)
+                    money = money + "0";
+            }
+            return money;
+        }
+
+
+        //人行征信延迟倒计时
+        //计时器检查
+        function CheckTime(tim) {
+            var leftTime = tim;
+            leftTime--;
+            if (leftTime <= 0) {
+                //修改进度条计时时间
+                try { document.getElementById("spanTimerMsg").innerHTML = "" } catch (e) { }
+                try { document.getElementById("spanTimerMsg_Unbilled").innerHTML = "" } catch (e) { }
+                SetStageQuota();
+                body.style.cursor = "";
+                return;
+            }
+            //修改进度条计时时间
+            var timerTip = "可分期交易查询中，剩余" + leftTime + "秒，请耐心等待。";
+            try { document.getElementById("spanTimerMsg").innerHTML = timerTip; } catch (e) { }
+            try { document.getElementById("spanTimerMsg_Unbilled").innerHTML = timerTip; } catch (e) { }
+            setTimeout("CheckTime(" + leftTime + ")", 1000);
+        }
+
+        //异步调用QueryBankCreditReckoningByStages
+        function QueryBankCreditReckoningByStages() {
+            var creditAccNo = document.getElementById("hdfCreditAccSelected").value;
+            var functionName = document.getElementById("FunctionName").value;
+            var hostPkg = new HostPkg("QueryBankCreditReckoningByStages");
+            hostPkg.AddParam("ClientNo", "46DBA3B78844841A2CFE7B6A106DFED1670774231956052200003776");
+            hostPkg.AddParam("FunctionName", functionName);
+            hostPkg.AddParam("CreditAccNo", creditAccNo);
+            hostPkg.AddParam("I_LOAN_TYPE", "002");
+
+            var webSvrCom = new WebSvrCom("../am_AjaxHandler.aspx");
+            webSvrCom.WSCSetAsync(true);
+            webSvrCom.WSCClearHostPkg();
+            webSvrCom.WSCAddHostPkg(hostPkg);
+            webSvrCom.WSCSendRequest(QueryBankCreditReckoningByStages_CallBack);
+            P.process();
+        }
+
+        //回调函数
+        function QueryBankCreditReckoningByStages_CallBack(xmlHttp) {
+            try {
+                var xmlResponse = xmlHttp.responseText;
+                var errCode = XMLGetValueByElementName(xmlResponse, "ErrorCode");
+                if (errCode == "000") {
+                    var O_ZX_FLGA = XMLGetValueByElementName(xmlResponse, "O_ZX_FLGA"); //渠道等待标志 	Y 马上发起资格查询（IN03接口返回）N 等待N秒再发起资格查询（IN03接口返回）1 马上发起资格查询（如经判定分期金额小于等于固额，无需调用资信平台）
+                    var O_ZX_CODE = XMLGetValueByElementName(xmlResponse, "O_ZX_CODE"); //资信平台返回码
+                    var O_CASE_NO = XMLGetValueByElementName(xmlResponse, "O_CASE_NO"); //调额案件号
+                    var O_WAIT_TIME = XMLGetValueByElementName(xmlResponse, "O_WAIT_TIME"); //O_WAIT_TIME
+                    document.getElementById("O_ZX_CODE").value = O_ZX_CODE;
+                    document.getElementById("O_CASE_NO").value = O_CASE_NO;
+                    document.getElementById("O_WAIT_TIME").value = O_WAIT_TIME;
+                    if (O_ZX_FLGA == "Y") {
+                        SetStageQuota();
+                    }
+                    else {
+                        var tim = parseInt(O_WAIT_TIME);
+                        var timerTip = "可分期交易查询中，剩余" + tim + "秒，请耐心等待。";
+                        try { document.getElementById("spanTimerMsg").innerHTML = timerTip; } catch (e) { }
+                        try { document.getElementById("spanTimerMsg_Unbilled").innerHTML = timerTip; } catch (e) { }
+                        body.style.cursor = "wait";
+                        CheckTime(tim)
+                    }
+                }
+            }
+            catch (e) {
+
+            }
+            P.hideProces();
+        }
+
+        //异步调用SetStageQuota
+        function SetStageQuota() {
+
+            var creditAccNo = document.getElementById("hdfCreditAccSelected").value;
+            var functionName = document.getElementById("FunctionName").value;
+            var O_ZX_CODE = document.getElementById("O_ZX_CODE").value;
+            var O_CASE_NO = document.getElementById("O_CASE_NO").value;
+            var O_WAIT_TIME = document.getElementById("O_WAIT_TIME").value;
+
+            var hostPkg = new HostPkg("QueryStageQuota");
+
+            hostPkg.AddParam("ClientNo", "46DBA3B78844841A2CFE7B6A106DFED1670774231956052200003776");
+            hostPkg.AddParam("FunctionName", functionName);
+            hostPkg.AddParam("CreditAccNo", creditAccNo);
+            hostPkg.AddParam("Currency", "156");
+
+            hostPkg.AddParam("O_ZX_CODE", O_ZX_CODE);
+            hostPkg.AddParam("O_CASE_NO", O_CASE_NO);
+            hostPkg.AddParam("O_WAIT_TIME", O_WAIT_TIME);
+
+            var webSvrCom = new WebSvrCom("../am_AjaxHandler.aspx");
+            webSvrCom.WSCSetAsync(true);
+            webSvrCom.WSCClearHostPkg();
+            webSvrCom.WSCAddHostPkg(hostPkg);
+            webSvrCom.WSCSendRequest(QueryStageQuota_CallBack);
+            P.process();
+        }
+
+        //回调函数
+        function QueryStageQuota_CallBack(xmlHttp)
+        {
+            try 
+            {
+                var xmlResponse = xmlHttp.responseText;
+                var errCode = XMLGetValueByElementName(xmlResponse, "ErrorCode");
+                if (errCode == "000") 
+                {
+                    var sBLACK_FLAG = Trim(XMLGetValueByElementName(xmlResponse, "BLACK_FLAG", ""));       //Y/N是否在2日内出账单的黑名单内。如果是则不允许交易
+                    var sLOAN_AMT_MAA = Trim(XMLGetValueByElementName(xmlResponse, "LOAN_AMT_MAA", ""));       //客户允许的已入账分期金额上限
+                    var sLOAN_AMT_AVAIL = Trim(XMLGetValueByElementName(xmlResponse, "LOAN_AMT_AVAIL", ""));   //客户允许的剩余可分期额度
+                    var sLOAN_RATE = Trim(XMLGetValueByElementName(xmlResponse, "LOAN_RATE", ""));                  //汇率
+                    var sLOAN_RATE_DATE = Trim(XMLGetValueByElementName(xmlResponse, "LOAN_RATE_DATE", ""));        //汇率日期
+                    var sLOAN_INQ_DATETIME = Trim(XMLGetValueByElementName(xmlResponse, "LOAN_INQ_DATETIME", ""));  //日期时间
+                    var sLOAN_AMT_MIN = Trim(XMLGetValueByElementName(xmlResponse, "LOAN_AMT_MIN", ""));  //分期最小金额限制
+                    var sLOAN_AMT_AVAILCA = Trim(XMLGetValueByElementName(xmlResponse, "LOAN_AMT_AVAILCA", ""));   //客户允许的未入账剩余可分期额
+
+
+                        try { $("#hdfMinStageAMT").val(sLOAN_AMT_MIN); } catch (e) { }
+                        try { $("#hRate").val(sLOAN_RATE); } catch (e) { }
+                        try { $("#hRateDate").val(sLOAN_RATE_DATE); } catch (e) { }
+                        try { $("#hINQDateTime").val(sLOAN_INQ_DATETIME); } catch (e) { }
+                        try { $("#lRate").html((parseFloat(sLOAN_RATE)).toFixed(4)); } catch (e) { }
+                   
+                        try { $("#hdfLOAN_AMT_MAA").val(sLOAN_AMT_MAA); } catch (e) { }
+                        try { $("#HidLeftStageAMT").val(sLOAN_AMT_AVAIL); } catch (e) { }
+                        try { $("#HidLeftStageAMT_Unbilled").val(sLOAN_AMT_AVAILCA); } catch (e) { }
+                        try { $("#LeftStageAMT").html(sLOAN_AMT_AVAIL); } catch (e) { }
+                        try { $("#LeftStageAMT_Unbilled").html(sLOAN_AMT_AVAILCA); } catch (e) { }
+
+                        try { $("#ApplyStageAMT").html("0.00"); } catch (e) { }
+                        try { $("#ApplyStageAMT_Unbilled").html("0.00"); } catch (e) { }
+
+                        try { $("#lApplyToRMB").html("0.00"); } catch (e) { }
+                        try { $("#CheckedCount").html("0"); } catch (e) { }
+                        try { $("#CheckedCount_Unbilled").html("0"); } catch (e) { }
+
+
+                    if (sBLACK_FLAG == "Y") {
+                        try { $("#tbQueryFail").show(); } catch (e) { }
+                        try { $("#tbSubmit").hide(); } catch (e) { }
+                        try { $("#tbSubmit_Unbilled").hide(); } catch (e) { }
+                        try { $("#spanByStage").html("温馨提示：账单日当天不可以进行交易分期申请"); } catch (e) { }
+                        try { hideAllUseApply(); } catch (e) { }
+                    }
+                    else {
+                        try { $("#tbQueryFail").hide(); } catch (e) { }
+                        try { if ($("#HidCount").val() != "0") { $("#tbSubmit").show(); } else { $("#tbSubmit").hide(); } } catch (e) { }
+                        try { if ($("#HidCount_Unbilled").val() != "0") { $("#tbSubmit_Unbilled").show(); } else { $("#tbSubmit_Unbilled").hide(); } } catch (e) { }
+
+                    }
+                    }
+                    else {
+                        try { $("#tbSubmit").hide(); } catch (e) { }
+                        try { $("#tbSubmit_Unbilled").hide(); } catch (e) { }
+                        try { $("#tbQueryFail").show(); } catch (e) { }
+                        try { $("#spanByStage").html("查询交易分期额度信息失败，如想申请交易分期，请您重新进行查询"); } catch (e) { }
+                        try { hideAllUseApply(); } catch (e) { }
+                    }
+                SetTransByStageCheckBoxAndAction();
+            }
+            catch (e) {
+            }
+            P.hideProces();
+        }
+        function SubmitProcess() {
+            if (typeof CMBPBLS !== 'undefined'
+                && typeof CMBPBLS.AddSubmitBehaviorData !== 'undefined') {
+                CMBPBLS.AddSubmitBehaviorData();
+            }
+            return true;
+        }
+    </script>
+
+    <style type="text/css">
+        Table.message {
+            border: 0px;
+            border-style: solid;
+            border-color: #FAE2B9;
+            background-color: #FFFFE3;
+            width: 100%;
+            background: transparent url(../doc/Images/notice.png) no-repeat scroll 0 -1;
+        }
+
+            Table.message tr {
+                padding-left: 32px;
+                padding-top: 2px;
+                padding-bottom: 2px;
+                color: Gray;
+            }
+
+        .hidden {
+            display: none;
+        }
+
+        .checkItem {
+        }
+
+        #spanTimerMsg {
+            color: Red;
+            position: absolute;
+            left: 200px;
+            top: 15px;
+        }
+
+        .tableContainer {
+            border: 1px;
+            border-style: solid;
+            border-color: #DEDEDE; /*#FAE2B9;*/
+            background-color: #FFFFFF; /* #FFFFE3;*/
+            margin-bottom: 20px;
+        }
+
+        .page-panel .page-panel-nohistdeal .page-panel-nohistdeal-fund1 {
+            font-size: 14px;
+            font-family: '微软雅黑 Regular', '微软雅黑';
+            color: #888888;
+        }
+
+
+        .page-panel .page-panel-nohistdeal {
+            margin-top: 20px;
+            margin-left: 23px;
+            font-size: 12px;
+            height: 30px;
+            line-height: 26px;
+            *line-height: 30px;
+            border-radius: 6px;
+        }
+
+        .nowrapSubmitTD 
+        {
+            width: 33%;
+            word-break: keep-all;
+            white-space:nowrap;
+        }
+    </style>
+</head>
+<body class="page" id="body" style="-ms-overflow-x: auto; -ms-overflow-y: auto; min-height: 500px; _height: 500px;" onload="InitPage()">
+    <form name="am_QueryReckoningNotRMB" id="am_QueryReckoningNotRMB" onsubmit="SubmitProcess()" action="./am_QueryReckoningNotRMB.aspx" method="post">
+<div>
+<input name="__EVENTTARGET" id="__EVENTTARGET" type="hidden" value="">
+<input name="__EVENTARGUMENT" id="__EVENTARGUMENT" type="hidden" value="">
+<input name="__LASTFOCUS" id="__LASTFOCUS" type="hidden" value="">
+<input name="__VIEWSTATE" id="__VIEWSTATE" type="hidden" value="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">
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['am_QueryReckoningNotRMB'];
+if (!theForm) {
+    theForm = document.am_QueryReckoningNotRMB;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<div>
+
+	<input name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" type="hidden" value="BDE5F7DA">
+	<input name="__EVENTVALIDATION" id="__EVENTVALIDATION" type="hidden" value="Zbo6qdUe2+c0+R5swCndz4XViMBaXm1EwGKLJBPftEf4vdQokwlb5mI8fAX9m7VYJbTjonyL7skJWqddCMIfSxEcZ4pw+KRoBe6ZIjPwVN8ke9YnGMhSg+/x4mHEtx6i6O1iryZzvJ1Zh0c5EJKENNGkShIEMY1ygO7zFqfVL1Way4OJxmAgv77RAjB/LUQXgohOqsPVJkaQUa/yD9rk5reNO00Pgo9UTp1R04abrf4/WT5oJl8hvY/qS7FGns0ASgT253VSBeiXCxbZob0LPojSCU7O3MNKkhG+3c1hqMBfICtRKKzy7K6XctspICI56us9xlMhhO924xVa667GIK/84xV8+Te6uO26CRFmbWZHqRVptttJrWj6D7jX0ZHA85Hf1GPFnKoeO6f2NZqAHUP/jvpkQUlCrSaU3Nak1hpH91NZ9/ggSjdXRGI4UCfcXHOtKhIkjWgcjowwbuMO3O6eXygFdKgD7hl5jlOhIsf8Rriwt7wzap7R3454KgIldnLxlEOXR3NUQdx6s1ihBqRFTV4PPjrgfx5SXUWNQA1eMK/HQn4sdukEd09vutybPovw7pzy0BeBdEk9NRHjg1DDxAucVwAy9S4riSXlbbp5/vSdMq0OLRk49yVsQFddhWq67vD/zuzYNujZtNSsDt9vhg0r1zAAsAAZvXRJ0X2xLgVsV4YUmrayg4CMYwfI1QrP4XPqfdDHIvO6a/RyO97zxLKq16FNTdC4zEZwacwSjFhtgUVNGZl8jGdSkCmI5DuHmuY6vtPlCYgQ9t71kXN5vVnMJDIQSjqrM8M9izk=">
+</div>
+        <div class="page-title page-noprint">
+            <span id="lFunctionName">账户管理 &gt; 未出账单查询</span>
+        </div>
+        
+        <div class="page-noprint">
+            
+
+<script type="text/JavaScript">
+    function ddlSelectChange() {
+        window.document.body.style.cursor = "";
+        P.process();
+        if (typeof (SetTimeStamp) == 'function') {
+            SetTimeStamp();
+        }
+
+    }
+</script>
+<style type="text/css">
+    .CorpName {
+        margin-right: 50px;
+    }
+    .AcctAmount{
+        font-size:18px;
+    }
+</style>
+<div class="page-header">
+    <div class="page-header-inbox">
+        <div class="page-header-inbox-account">
+            <span class="page-header-inbox-account-dropdown">
+                <select name="PageHeaderCreditAccList$ddlCreditAccList" class="chosen-select-account" id="PageHeaderCreditAccList_ddlCreditAccList" style="width: 285px; display: none;" onchange="ddlSelectChange();setTimeout('__doPostBack(\'PageHeaderCreditAccList$ddlCreditAccList\',\'\')', 0)">
+	<option selected="selected" value="0155298473001001">个人卡账户001001</option>
+
+</select><div title="" class="chosen-container chosen-container-single chosen-select-account" id="PageHeaderCreditAccList_ddlCreditAccList_chosen" style="width: 285px;"><a tabindex="-1" class="chosen-single"><span><em>当前账户：</em>个人卡账户001001</span><div><b><i class="glyphicon chosen-down"></i><i class="glyphicon chosen-up"></i></b></div></a></div>
+            </span>
+        </div>
+        <div class="page-header-inbox-message">
+            
+            <span id="PageHeaderCreditAccList_lPageHeaderInboxMessage"></span>
+             <span class="AcctAmount" id="PageHeaderCreditAccList_lAcctAmount"></span>
+        </div>
+    </div>
+    <div class="page-header-link">
+        <div class="page-header-link-container three"><span><i title="" class="glyphicon icon-bill-search"></i><a href="javascript:javascript:changeSub(0);" cmbbehavior="entryid:bsi001903">账户查询</a><em></em></span><span><i title="" class="glyphicon icon-bill-search"></i><a href="javascript:javascript:changeSub(1);" cmbbehavior="entryid:bsi001904">已出账单查询</a><em></em></span><span><i title="" class="glyphicon icon-repay"></i><a href="javascript:javascript:GoToFastPayment();">快速还款</a><em></em></span></div>
+    </div>
+</div>
+
+         </div>
+        <div class="page-panel page-noprint">
+            <div class="page-panel-tabs">
+                <ul>
+                    <li class="active"><a href="#" cmbbehavior="entryid:bsi001801">人民币</a></li>
+                    <li id="spanUSDLink"><a href="javascript:QueryReckoningUSD();" cmbbehavior="entryid:bsi001802">美元</a></li>
+                </ul>
+                <span id="spanTimerMsg"></span>
+                <div class="right" id="TabBQ">
+                    
+                    
+<script language="javascript" type="text/javascript">
+    function ResetTimeStamp() {
+        try {
+            parent.CMBPBLS.RecordClickUnloadLog(document.getElementById("uc_ExportToCVS1_hidCmbBehavior").value);
+        } catch (e) { }
+        try {   
+            if (typeof (SetTimeStamp) != 'undefined') {
+                SetTimeStamp();
+            }
+        }
+        catch(e){ };
+        document.getElementById("uc_ExportToCVS1_btnExportCVS").click();
+}
+</script>
+
+
+<a id="btnExport" onclick="ResetTimeStamp();" href="#"><i title="下载" class="glyphicon icon-download" style="top: 0px; font-size: 16px;"></i> 下载</a>
+<input name="uc_ExportToCVS1$btnExportCVS" id="uc_ExportToCVS1_btnExportCVS" style="display: none;" type="submit" value="">
+<input name="uc_ExportToCVS1$hidCmbBehavior" id="uc_ExportToCVS1_hidCmbBehavior" type="hidden" value="bsi001803">
+                    <span style="margin: 0px 10px;">|</span>
+                    <a id="btnPrintButton" onclick="" cmbbehavior="entryid:bsi001804"><i title="打印" class="glyphicon icon-print" style="top: 0px; font-size: 16px;"></i>打印</a>
+                </div>
+            </div>
+            <div class="page-panel-content">
+                <fieldset>
+                    <div class="tableContainer" id="divStage_Unbilled" style="display: none;">
+                        <table align="Center" class="page-table-common  action" id="dgReckoningNotDetail_Unbilled" style="border-width: 0px; width: 100%; border-collapse: collapse;" border="0" cellspacing="0">
+	<tbody><tr align="center" class="dgHeader" valign="middle" style="white-space: nowrap;">
+		<th class="dgHeader" style="width: 100px; white-space: nowrap;" scope="col">交易日期</th><th class="dgHeader" style="width: 100px; white-space: nowrap;" scope="col">记账日期</th><th class="dgHeader" style="white-space: nowrap;" scope="col">交易摘要</th><th class="dgHeader" style="width: 80px; white-space: nowrap;" scope="col">交易地点</th><th class="dgHeader" style="width: 80px; white-space: nowrap;" scope="col">卡号末四位</th><th class="dgHeader" style="white-space: nowrap;" scope="col">人民币金额</th><th class="dgHeader" scope="col">交易地金额</th><th align="center" class="dgHeader" style="white-space: nowrap;" scope="col">
+                                        <input title="全选/取消全选" id="cbxChkAll_Unbilled" onclick="CheckAll(this, 'Unbilled');" type="checkbox">申请分期
+                                    </th><th class="hidden" scope="col">状态</th><th class="hidden" scope="col">交易号</th>
+	</tr>
+</tbody></table>
+                        <table width="100%">
+                            <tbody><tr style="display: none;">
+                                <td style="width: 33%;">&nbsp; 交易分期上限：
+                                        ￥<span id="LOAN_AMT_MAA_Unbilled"></span>
+                                </td>
+                                <td style="width: 33%;">剩余可分期金额：￥<span id="LeftStageAMT_Unbilled"></span>
+                                </td>
+                                <td>&nbsp;</td>
+                            </tr>
+                            <tr id="tbSubmit_Unbilled" style="height: 40px;">
+	<td class="nowrapSubmitTD"></td>
+	<td class="nowrapSubmitTD" style="text-align: center;">已选择<span id="CheckedCount_Unbilled" style="font-weight: bold;">0</span>笔，&nbsp;共计￥<span class="lblAmout" id="ApplyStageAMT_Unbilled" style="font-weight: bold;">0.00</span>元
+                                </td>
+	<td class="nowrapSubmitTD" style="text-align: right;">
+                                    <span id="trMsg_Unbilled" style="color: red; padding-left: 6px; margin-right: 10px; display: none;"></span>
+                                    <input name="btnSet_Unbilled" disabled="" class="btn btn-primary" id="btnSet_Unbilled" onclick="" type="submit" value="下一步" cmbbehavior="entryid:bsi001101">&nbsp;&nbsp;&nbsp;&nbsp;
+                                </td>
+</tr>
+
+                        </tbody></table>
+                    </div>
+                    <!-- 已入账-->
+                    <div class="tableContainer" id="divStage" style="display: none;">
+                        <table align="Center" class="page-table-common action" id="dgReckoningNotDetail" style="border-width: 0px; width: 100%; border-collapse: collapse;" border="0" cellspacing="0">
+	<tbody><tr align="center" class="dgHeader" valign="middle" style="white-space: nowrap;">
+		<th class="dgHeader" style="width: 100px; white-space: nowrap;" scope="col">交易日期</th><th class="dgHeader" style="width: 100px; white-space: nowrap;" scope="col">记账日期</th><th class="dgHeader" style="white-space: nowrap;" scope="col">交易摘要</th><th class="dgHeader" style="width: 80px; white-space: nowrap;" scope="col">交易地点</th><th class="dgHeader" style="width: 80px; white-space: nowrap;" scope="col">卡号末四位</th><th class="dgHeader" style="white-space: nowrap;" scope="col">人民币金额</th><th class="dgHeader" scope="col">交易地金额</th><th align="center" class="dgHeader" style="white-space: nowrap;" scope="col">
+                                        <input title="全选/取消全选" class="control-checkbox" id="cbxChkAll" onclick="CheckAll(this, 'Billed');" type="checkbox">申请分期
+                                    </th><th class="hidden" scope="col">状态</th><th class="hidden" scope="col">交易号</th>
+	</tr>
+</tbody></table>
+                        <table width="100%" border="0" cellspacing="1">
+                            <tbody><tr style="display: none;">
+                                <td style="width: 33%;">&nbsp; 交易分期上限：￥<span class="lblAmout" id="LOAN_AMT_MAA"></span>
+                                </td>
+                                <td style="width: 33%;">&nbsp; 剩余可分期金额：￥<span class="lblAmout" id="LeftStageAMT"></span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="nowrapSubmitTD" rowspan="2">
+                                    <span id="tbNotRMB">
+                                       &nbsp; 已入账交易<span id="spanRecCount">共<span id="RecCount" style="font-weight: bold;">0</span>笔,&nbsp;</span>
+                                        未出账单共计<span id="OT_CURR_BAL" style="font-weight: bold;">￥0.00</span>元
+                                        <span id="spanO_CASH_BALANCE" style="display: none;">,&nbsp;其中“按日计息”本金<span id="O_CASH_BALANCE" style="font-weight: bold;">￥0.00</span>元</span>
+                                    </span>
+                                </td>
+                            </tr>
+                            <tr id="tbSubmit" style="height: 40px;">
+	<td class="nowrapSubmitTD" style="text-align: center;">已选择<span id="CheckedCount" style="font-weight: bold;">0</span>笔，&nbsp;共计￥
+								<span id="ApplyStageAMT" style="font-weight: bold;">0.00</span>元
+                                </td>
+	<td class="nowrapSubmitTD" style="text-align: right;">
+                                    <span id="trMsg" style="color: red; padding-left: 6px; margin-right: 10px; display: none;"></span>&nbsp;&nbsp;
+                                <input name="BtnSet" disabled="" class="btn btn-primary" id="BtnSet" onclick="" type="submit" value="下一步" cmbbehavior="entryid:bsi001101">&nbsp;&nbsp;&nbsp;&nbsp;
+                                </td>
+</tr>
+
+                        </tbody></table>
+                    </div>
+                </fieldset>
+            </div>
+            
+            <div class="page-panel-nohistdeal" id="divNoRecords">
+                <span class="page-panel-nohistdeal-fund1">
+                    <img style="top: 4px; margin-right: 10px; position: relative;" alt="温馨提示" src="../../doc/Images/pro8/fund_mark.png">未查询到您当前未出账单交易记录。<br>
+                </span>
+            </div>
+            
+            
+            
+            
+
+<div class="page-panel-explain page-noprint">
+    <iframe name="ExplainPageFrame" id="ExplainPageFrame" src="../../doc/Htmls/Pro8/fm301110_TranByStages.htm" frameborder="0" scrolling="no" style="height: 278px;"></iframe>
+</div>
+
+            
+        </div>
+        
+<!-- 
+    使用说明：
+    1、页面引用该空间
+    2、下载链接或者按钮添加 javascript事件 showPrintPage();即可显示下载页面
+    3、页面不需要在下载页面中显示的控件需要加上 page-noprint css;
+    4、在设置Print页面的数据源，即PrintDataSource属性，将要打印的DataTable数据赋值给即PrintDataSource属性。
+    使用例子：
+    在使用页面注册控件.
+    在使用页面添加打印链接或者按钮：<a id="btnPrintButton" onclick="showPrintPage()"><i class="glyphicon icon-print" title="打印" style="top: 0; font-size: 16px;"></i>打印</a>
+    在使用页面添加打印Panel： 
+  -->
+<style type="text/css">
+    .title {
+        font-family: Microsoft YaHei;
+        font-weight: bold;
+        font-size: 20px;
+        color: #ff0000;
+    }
+
+    .yingzhang {
+        position: absolute;
+        right: 60px;
+        top: 0px;
+        z-index: 1;
+    }
+
+    .logo {
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    .acountTxt {
+        color: #0033cc;
+        /*display: block; 
+        margin-left: 71px;*/
+    }
+    .printTitle {
+        margin-left: 10px;
+        margin-right: 10px;
+        z-index: 1;
+        overflow: hidden;
+    }
+
+    .printTable {
+        color: #333333;
+        font-size: 14px;
+        font-family: Microsoft Yahei;
+        border: 1px solid #999999;
+        margin-left: 10px;
+        margin-right: 10px;
+        z-index: 1;
+        overflow: hidden;
+    }
+
+    .clearfix:after {
+        content: "\200B";
+        display: block;
+        height: 0;
+        clear: both;
+    }
+
+    .clearfix {
+        *zoom: 1;
+    }
+    #printTable th{
+    color: #ffffff; 
+    height: 30px;
+     font-size: 14px; 
+     font-weight: bold; 
+     background-color: #1766cb; 
+     border-top: 2px solid #1766cb; 
+     border-bottom: 2px solid #1766cb;
+      _text-indent: 10px; 
+      _text-align: center;
+      text-align: center;
+      word-wrap:normal;
+      word-break:keep-all;
+    }   
+     #printTable td{
+     font-size: 12px; 
+     text-align:center;    
+    }
+</style>
+<script type="text/javascript">
+
+    function showPrintPage() {
+        if ("N" == "Y") {
+            $(".page-noprint").hide();
+            $(".page-print").show();
+            if (parent.adjustFrameSize) parent.adjustFrameSize();
+        }
+        else {
+            alert("无交易记录，打印无效！");
+        }
+    }
+
+    function hiddenPrintPage() {
+        $("#select").trigger("chosen:updated.chosen");
+        $(".page-noprint").show();
+        $(".page-print").hide();
+        try{
+            $(".page-print1").hide();
+        }
+        catch(e){}
+        if (parent.adjustFrameSize) parent.adjustFrameSize();
+    }
+
+    function DoPrint() {
+        document.getElementById("BtnPrint").setAttribute("style", "display:none;");
+        document.getElementById("BtnPrint").style.display = "none";
+        try {
+            
+            window.print();
+        }
+        catch (e) { }
+        document.getElementById("BtnPrint").setAttribute("style", "display:block;");
+        document.getElementById("BtnPrint").style.display = "block";
+    }
+
+</script>
+<div class="page-panel page-print noborder" style="display: none;">
+    <div class="printTitle">
+        <div class="page-panel-content" style="margin: 10px 0px; height: 50px; text-align: center; line-height: 50px;">
+            <img class="logo" id="PrintPanel1_Image2" style="border-width: 0px;" alt="logo" src="../../../Base/cn/doc/Images/cmb_logo.png">
+            <span class="title" id="PrintPanel1_lblTitle">人民币未出账单明细</span>
+        </div>
+    </div>
+    <div class="printTable">
+        <div class="page-panel-content clearfix" style="margin: 0px; padding: 10px; min-width: 601px;">
+            <div style="float: left;">
+                <div><span id="PrintPanel1_lblAccountNo">账户：<span class="acountTxt">个人卡账户001001</span></span></div>
+                <div><span id="PrintPanel1_lblUserName">姓名：<span class="acountTxt">陈慧聪</span></span></div>
+            </div>
+            <img class="yingzhang" id="PrintPanel1_Image1" style="border-width: 0px; width: 167px; height: 90px;" alt="印章" src="../../../Base/cn/doc/Images/yinzhang_reckoning.png">
+        </div>
+        <div class="page-panel-content" id="PrintPanel1_divPringBody" style="margin: 0px;"></div>
+        <div class="page-panel-footer clearfix" style="margin: 0px; padding: 10px; text-align: left; min-width: 601px;">
+            <div class="clearfix">
+                &nbsp;&nbsp; <span id="PrintPanel1_spanTotalMsg" style="width: 300px; float: left;"></span><span style="width: 60px; text-align: right; float: right;">共<span id="PrintPanel1_lblRecordsCount" style="font-weight: bold;">0</span>笔</span>
+            </div>
+        </div>
+    </div>
+    <div id="BtnPrint">
+        <div class="page-form-footer" style="margin: 10px 0px; font-size: 0px; border-top-color: currentColor; border-top-width: 0px; border-top-style: none;">
+            <input class="btn btn-default btn-lg" style="margin: 0px 10px; display: inline-block;" onclick="hiddenPrintPage();" type="button" value="取 消">
+            <input class="btn btn-primary btn-lg" style="margin: 0px 10px; display: inline-block;" onclick="DoPrint();" type="button" value="打 印">
+        </div>
+    </div>
+    <br>
+    <br>
+</div>
+
+        
+
+        <div style="display: none;">
+            <input name="ClientNo" id="ClientNo" type="hidden" value="46DBA3B78844841A2CFE7B6A106DFED1670774231956052200003776">
+            <input name="HidLeftStageAMT" id="HidLeftStageAMT" type="hidden">
+            <input name="HidLeftStageAMT_Unbilled" id="HidLeftStageAMT_Unbilled" type="hidden">
+            <input name="HidByStageFlag" id="HidByStageFlag" type="hidden">
+            <input name="HidCount" id="HidCount" type="hidden" value="0">
+            <input name="HidCount_Unbilled" id="HidCount_Unbilled" type="hidden" value="0">
+            <input name="HidAccType" id="HidAccType" type="hidden" value="personal">
+            <input name="FunctionName" id="FunctionName" type="hidden" value="账户管理 > 未出账单查询">
+            <input name="HidList" id="HidList" type="hidden">
+            <input name="HidTranCodeList" id="HidTranCodeList" type="hidden">
+            <input name="HidBackFlag" id="HidBackFlag" type="hidden">
+            <input name="hidAppByStagesType" id="hidAppByStagesType" type="hidden">
+            <input name="hRate" id="hRate" type="hidden">
+            <input name="hRateDate" id="hRateDate" type="hidden">
+            <input name="hINQDateTime" id="hINQDateTime" type="hidden">
+            <input name="O_ZX_CODE" id="O_ZX_CODE" type="hidden">
+            <input name="O_CASE_NO" id="O_CASE_NO" type="hidden">
+            <input name="O_WAIT_TIME" id="O_WAIT_TIME" type="hidden">
+            <input name="hdfCanApplyTransByStage" id="hdfCanApplyTransByStage" type="hidden" value="N">
+            <input name="LoginVersion" id="LoginVersion" type="hidden" value="A">
+            <input name="hdfCreditAccSelected" id="hdfCreditAccSelected" type="hidden" value="0155298473001001">
+            <input name="hdfMinStageAMT" id="hdfMinStageAMT" type="hidden">
+            <input name="hdfLOAN_AMT_MAA" id="hdfLOAN_AMT_MAA" type="hidden">
+			<input name="bvrAcctType" id="bvrAcctType" type="hidden" value="001">
+            <input id="bvrPageNo" type="hidden" value="bsi">  
+            <input name="hidLinkA" id="hidLinkA" type="hidden" value="[{'IconClassName':'icon-bill-search','LinkJS':'javascript:changeSub(0);','TriggerFuncText':'账户查询','EmText':'','CmbBehavior':'entryid:bsi001903'},&#13;                                  {'IconClassName':'icon-bill-search','LinkJS':'javascript:changeSub(1);','TriggerFuncText':'已出账单查询','EmText':'','CmbBehavior':'entryid:bsi001904'},&#13;                                  {'IconClassName':'icon-repay','LinkJS':'javascript:GoToFastPayment();','TriggerFuncText':'快速还款','EmText':''}]">
+            <input name="hidLinkOther" id="hidLinkOther" type="hidden" value="[{'IconClassName':'icon-bill-search','LinkJS':'javascript:changeSub(0);','TriggerFuncText':'账户查询','EmText':'','CmbBehavior':'entryid:bsi001903'},&#13;                                  {'IconClassName':'icon-bill-search','LinkJS':'javascript:changeSub(1);','TriggerFuncText':'已出账单查询','EmText':'','CmbBehavior':'entryid:bsi001904'}]">            
+            <input name="uc_RequestControl$TimeStamp" id="uc_RequestControl_TimeStamp" type="hidden" value="1548148478321">
+
+<script language="javascript" type="text/javascript">
+    function SetTimeStamp() {
+        var TimeStampClientID = "uc_RequestControl_TimeStamp";
+        var DateObj = new Date();
+        document.getElementById(TimeStampClientID).value = DateObj.getTime();
+    }
+    SetTimeStamp();
+</script>
+        </div>
+        <script src="../../../Base/doc/dist/asset/js/cmbbank-ui-min.js" type="text/javascript" charset="utf-8"></script>
+        <script type="text/javascript">
+            InitTransByStageAction();
+        </script>
+    </form>
+
+    <script language="javascript" src="../../../Base/doc/Scripts/cmb_behavior.js" type="text/JavaScript"></script>
+
+<div class="chosen-container-dropdown chosen-container-single chosen-select-account chosen-container-single-nosearch" id="PageHeaderCreditAccList_ddlCreditAccList_chosen_drop" style="width: 285px;"><div class="chosen-drop"><iframe class="mask"></iframe><div class="chosen-search"><input type="text" readonly="" autocomplete="off"></div><ul class="chosen-results"></ul></div></div></body></html>

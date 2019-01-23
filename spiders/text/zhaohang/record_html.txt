@@ -1,0 +1,903 @@
+<html style="overflow: auto;"><head>
+    <title></title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"><script type="text/javascript"> var behaviorjson = "{}";</script>
+    <link href="../../../Base/doc/dist/asset/css/cmbbank-ui-min.css" rel="stylesheet" type="text/css">
+    <!--[if IE 8]>
+        <link rel="stylesheet" type="text/css" href="../../../Base/doc/dist/asset/css/iconfont-ie8fix.css" charset="utf-8" />
+    <![endif]-->
+    <script src="../../../Base/doc/Scripts/default.js" type="text/javascript"></script>
+    <script src="../../../Base/doc/Scripts/DynaForm.js" type="text/javascript"></script>
+    <script src="../../../Base/doc/Scripts/FuncTrigger.js" type="text/javascript"></script>
+    <script src="../../../Base/doc/Scripts/MessageFunc.js" type="text/javascript"></script>
+    <script src="../../../Base/doc/scripts/pro/jquery-1.7.1.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../../../Base/doc/scripts/pro/widgets.js" type="text/javascript"></script>
+    <style type="text/css">
+        #pagination {
+            margin-top: 30px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        #pagination a {
+            width: 73px;
+            height: 30px;
+            display: inline-block;
+            vertical-align: middle;
+            outline: none;
+        }
+        #pagination .begin {
+            background: url(../../doc/Images/pagination/normal-1.png) no-repeat -3px -3px;
+        }
+        #pagination .prev {
+            margin: 0 30px;
+            background: url(../../doc/Images/pagination/normal-3.png) no-repeat -3px -3px;
+        }
+        #pagination .next {
+            margin: 0 30px;
+            background: url(../../doc/Images/pagination/normal-4.png) no-repeat -3px -3px;
+        }
+        #pagination .end {
+            background: url(../../doc/Images/pagination/normal-2.png) no-repeat -3px -3px;
+        }
+        #pagination .begin:hover {
+            background: url(../../doc/Images/pagination/hover-1.png) no-repeat -3px -3px;
+        }
+        #pagination .prev:hover {
+            margin: 0 30px;
+            background: url(../../doc/Images/pagination/hover-3.png) no-repeat -3px -3px;
+        }
+        #pagination .next:hover {
+            margin: 0 30px;
+            background: url(../../doc/Images/pagination/hover-4.png) no-repeat -3px -3px;
+        }
+        #pagination .end:hover {
+            background: url(../../doc/Images/pagination/hover-2.png) no-repeat -3px -3px;
+        }
+        #pagination .begin:active {
+            background: url(../../doc/Images/pagination/pressed-1.png) no-repeat -3px -3px;
+        }
+        #pagination .prev:active {
+            margin: 0 30px;
+            background: url(../../doc/Images/pagination/pressed-3.png) no-repeat -3px -3px;
+        }
+        #pagination .next:active {
+            margin: 0 30px;
+            background: url(../../doc/Images/pagination/pressed-4.png) no-repeat -3px -3px;
+        }
+        #pagination .end:active {
+            background: url(../../doc/Images/pagination/pressed-2.png) no-repeat -3px -3px;
+        }
+        #pagination .begin-disabled {
+            background: url(../../doc/Images/pagination/disabled-1.png) no-repeat -3px -3px;
+        }
+        #pagination .prev-disabled {
+            margin: 0 30px;
+            background: url(../../doc/Images/pagination/disabled-3.png) no-repeat -3px -3px;
+        }
+        #pagination .next-disabled {
+            margin: 0 30px;
+            background: url(../../doc/Images/pagination/disabled-4.png) no-repeat -3px -3px;
+        }
+        #pagination .end-disabled {
+            background: url(../../doc/Images/pagination/disabled-2.png) no-repeat -3px -3px;
+        }
+        .printTitle {
+            margin-left: 10px;
+            margin-right: 10px;
+            z-index: 1;
+            overflow: hidden;
+        }
+        .printTable {
+            color: #333333;
+            font-size: 14px;
+            font-family: Microsoft Yahei;
+            border: 1px solid #999999;
+            margin-left: 10px;
+            margin-right: 10px;
+            z-index: 1;
+            overflow: hidden;
+        }
+        .clearfix:after {
+            content: "\200B";
+            display: block;
+            height: 0;
+            clear: both;
+        }
+        .clearfix {
+            *zoom:1;
+        }
+    
+    .page-table-common td.ellipsis {
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        word-wrap: normal;
+        width: 100%;
+        overflow: hidden;
+        display: block;
+    }
+    .page-header .page-header-inbox .page-header-inbox-message span {
+        color: #333333;
+        line-height: 29px;
+        *line-height:58px;
+    }
+    </style>
+    <style type="text/css" media="print">
+        .noprint { display : none }
+        .ml-10 { margin-left: -10px; }
+        .noborder { border-color: #fff; }
+    </style>
+</head>
+<body class="page" id="body" style="-ms-overflow-x: auto; -ms-overflow-y: auto;">
+    <form name="am_QueryTrans" id="am_QueryTrans" onsubmit="SubmitProcess()" action="./am_QueryTrans.aspx" method="post">
+<div>
+<input name="__EVENTTARGET" id="__EVENTTARGET" type="hidden" value="">
+<input name="__EVENTARGUMENT" id="__EVENTARGUMENT" type="hidden" value="">
+<input name="__LASTFOCUS" id="__LASTFOCUS" type="hidden" value="">
+<input name="__VIEWSTATE" id="__VIEWSTATE" type="hidden" value="jY9WKJTwE96yBjQCRze3ih/mIY+EQ+yFoptKoWAKOXLJ4dB1OWGAV//u021bw0ln8QcrQm9m6MYiHDZXwPvc7tu2v5zFU3jiNoiJBnHaeNCEUsQUC+YU/OFgIwzGiLWi8pxTf1G6GIC5BM7Y0/uFMkdDQCO00xj7kmXlN1Tu+K4Erw8UmTvRaztPxh9AxzdWziKmzUhDt5ja8EFGqihQvM/m3TvRGPHMXVJuUJ6S1KnyXXqv8f7L1NmLuP7ypIGh60x8YO3oloQI2bItdAPVnL3aYlXv6JQc2a2rP7x5vPYqAJM20A1t7CrZWo4ktwZbbPSgOCogRTMzG0nTfzWybg==">
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['am_QueryTrans'];
+if (!theForm) {
+    theForm = document.am_QueryTrans;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<div>
+
+	<input name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" type="hidden" value="86CDD0F7">
+	<input name="__EVENTVALIDATION" id="__EVENTVALIDATION" type="hidden" value="BE1AG5VwwtV/t8tpZBm0+qnv1Xj99yghX59JQnNyAyzVFj3WgjBFg9XrbIJkGxSzo7deA5W2cxeSrxBPDzs1ZmQw7jpHHSnm4p6xCEX6igIi97t9IWi9y/xfcNxj4iehlCvh17t27AZWdh3a4x/jry3q0gKgjfHzhEP25kWDpqyXuAwnPAYIpNxx6tZDAWSfsTKmAtdcoZ02zuyCfRqQRzaV4pPyNIuDlodK9vq2s8SMHgXQCQJxthgSXDZ+Avwi0sDW6yW7nyC8wGOvguQLqvXgGxs6uemM1GP5hhxCWaQUQVXAm0V0+vEcbdwklIqhW8k2j5Yai/PUGIgNes+KIzRx+WNunbgTsprPnHXkF802orrK8KqQKX4FXlirxZcaJ//ovP571tlNu8kc9qjYxe4IDnp9xY3y7CXsjGhTANa6EDtoW12Dy24n8D9nc1BipYRPgRrmMIGzSe8DpdTKm2SaqfqqB6BLTDKHQF6yHKGmlKbx3LCs/4hYPFPARVMboqTrpvFjthAFE8bv2btqRDs8c6wHqvd5mi7NixBDDFrYunNy2XJDj4V2ZDix/Lmcu4A7ELldTnsOdt6QR0IH2I7isvpSDx80C2TRxYcMew6z0U0kM6sI6prZrWa6cOoCLtYJ62k6L5/5iiUntApdRO7w2olghb0dBLSwtuQMvWYXgoqxho9d1coIgVmJgU2cscegF4GVvaseuC0mI4zn7Ke6za5blBf6aTJwj1i6O9GHa+4J/JR1hAgHDVTcRWkezhKcy+CwsKage293Guj5K22KM+jDlN+pGMbd5PIutAg=">
+</div>
+    <div class="page-title noprint">
+        <span style="_display: inline; _margin-left: 17px; _font-size: 16px; _zoom: 1; _font-weight: bold;">交易查询</span>
+        <div class="page-title-refresh">
+            <a class="page-noprint" href="javascript:refresh();" cmbbehavior="entryid:acr001001,svr:false"><i title="刷新" class="glyphicon icon-refresh"></i>刷新</a></div>
+    </div>
+    <div class="page-header page-noprint" style="margin-right: 12px;">
+        <div class="page-header-inbox">
+            <div class="page-header-inbox-account">
+                <span class="page-header-inbox-account-dropdown">
+                    <select name="ddlDebitCardList" class="chosen-select-account" id="ddlDebitCardList" style="display: none;" onchange="javascript:setTimeout('__doPostBack(\'ddlDebitCardList\',\'\')', 0)">
+	<option selected="selected" value="c9MyZmIfwNU8jZPQx5A*6KL3*3z0ViwX">一卡通:6214********3301</option>
+
+</select><div title="" class="chosen-container chosen-container-single chosen-select-account" id="ddlDebitCardList_chosen" style="width: 277px;"><a tabindex="-1" class="chosen-single"><span><em>当前账户：</em>6214********3301</span><div><b><i class="glyphicon chosen-down"></i><i class="glyphicon chosen-up"></i></b></div></a></div>
+                </span>
+            </div>
+            <div class="page-header-inbox-message" style="width: 300px;">
+                <span>子账户：<select name="ddlSubAccountList" class="chosen-select" id="ddlSubAccountList" style="width: 230px; display: none;" onchange="javascript:setTimeout('__doPostBack(\'ddlSubAccountList\',\'\')', 0)">
+	<option selected="selected" value="655136421520000">活期结算户 人民币 20000</option>
+
+</select><div title="" class="chosen-container chosen-container-single chosen-select" id="ddlSubAccountList_chosen" style="width: 230px;"><a tabindex="-1" class="chosen-single"><span>活期结算户 人民币 20000</span><div><b><i class="glyphicon chosen-down"></i><i class="glyphicon chosen-up"></i></b></div></a></div>
+                </span>
+            </div>
+            <div class="page-header-inbox-message">
+                <span class="noprint" style="color: rgb(137, 137, 137);">可查询13个月内的交易记录，若要查询13个月以前的记录，请前往我行营业网点。</span>
+            </div>
+        </div>
+    </div>
+    <div class="page-panel page-noprint">
+        <div class="page-panel-header condition" id="TransDate" style="border-bottom-color: currentColor; border-bottom-width: 0px; border-bottom-style: none;">
+            <div class="page-panel-condition">
+                <div class="page-panel-condition-container" style="width: 100%; position: relative; z-index: 1001;">
+                    <div class="noprint" id="DateSpan" style="width: 435px; display: inline-block; _margin-left: -20px; _width: 455px;">
+                        <a id="DateSpan_0" href="javascript:void(0);">今天</a><a id="DateSpan_7d" href="javascript:void(0);">最近一周</a>
+                        <a id="DateSpan_1" href="javascript:void(0);">最近一个月</a><a id="DateSpan_3" href="javascript:void(0);">最近三个月</a><a class="active" id="DateSpan_12" href="javascript:void(0);">最近一年</a>
+                    </div>
+                    <div class="date-group ml-10" style="width: 280px; display: inline-block; _width: 300px;">
+                        <input name="DateBegin" class="control-input date-group-start" id="DateBegin" style="margin-left: 10px;" type="text" value="20190117" autocomplete="off" data-date-group="group"><label class="date-group-gap" style="display: inline-block; _display: inline; _zoom: 1;">到</label><input name="DateEnd" class="control-input date-group-end" id="DateEnd" type="text" value="20190123" autocomplete="off"><input class="btn btn-primary btn-sm date-group-btn" id="DateQuery" type="button" value="确定">
+                    </div>
+                    <div class="noprint" id="MoreQuery" style="top: 0px; right: 0px; position: absolute; _margin-top: 8px;">
+                        <a style="_margin-top: 8px;" href="javascript:void(0);" cmbbehavior="entryid:acr002001,svr:false"><i title="高级查询" class="glyphicon icon-search" style="top: 0px; font-size: 16px;"></i>高级查询</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="page-panel-content arrow clearfix" id="TransSpan" style="margin-bottom: 0px; display: none;">
+            <div class="row" style="padding-top: 5px;">
+                <div class="col-6" style="width: 450px; _float: left;">
+                    <div class="page-form" style="margin: 0px;">
+                        <fieldset>
+                            <legend>column1</legend>
+                            <div class="page-form-item page-form-inquire">
+                                <label class="control-label" style="width: 60px; margin-left: 6px;" for="">
+                                    收入范围：</label>
+                                <div class="page-form-item-controls">
+                                    <div class="control-input-shortcut">
+                                        <input name="incomeFrom" class="control-input" id="incomeFrom" style="width: 135px;" type="text"><label class="control-shortcut">元</label>
+                                    </div><span style="padding: 0px 5px; margin-top: 3px;">-</span><div class="control-input-shortcut">
+                                        <input name="incomeTo" class="control-input" id="incomeTo" style="width: 135px;" type="text"><label class="control-shortcut">元</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="page-form-item page-form-inquire">
+                                <label class="control-label" style="width: 60px; margin-left: 6px;" for="">
+                                    支出范围：</label>
+                                <div class="page-form-item-controls">
+                                    <div class="control-input-shortcut">
+                                        <input name="payFrom" class="control-input" id="payFrom" style="width: 135px;" type="text"><label class="control-shortcut">元</label>
+                                    </div><span style="padding: 0px 5px; margin-top: 3px;">-</span><div class="control-input-shortcut">
+                                        <input name="payTo" class="control-input" id="payTo" style="width: 135px;" type="text"><label class="control-shortcut">元</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </fieldset>
+                    </div>
+                </div>
+                <div class="col-6" style="width: 263px; margin-left: 0px; _float: left;">
+                    <div class="page-form" style="margin: 0px;">
+                        <fieldset>
+                            <legend>column2</legend>
+                            <div class="page-form-item page-form-inquire">
+                                <label class="control-label" style="width: 60px; margin-left: 6px;" for="">
+                                    交易类型：</label>
+                                <div class="page-form-item-controls">
+                                    <select name="ddlTransTypeList" class="chosen-select" id="ddlTransTypeList" style="width: 171px; display: none;"><option value="-">[ 全部 ]</option>
+<option value="AGPY">代发工资</option>
+<option value="CDT2">信用卡存款</option>
+<option value="CUCR">银联代付</option>
+<option value="CUNP">银联在线支付</option>
+<option value="CWD1">本行ATM取款</option>
+<option value="CWD2">银联ATM取款</option>
+<option value="CWD4">本行ATM无卡取款</option>
+<option value="FEEG">定制短信服务费</option>
+<option value="HZBR">HZBR</option>
+<option value="ICRR">客户转账</option>
+<option value="ICSP">客户转账</option>
+<option value="IINT">账户结息</option>
+<option value="N5CP">N5CP</option>
+<option value="N5CR">N5CR</option>
+<option value="N5PR">N5PR</option>
+<option value="ONNK">直付通交易</option>
+<option value="PCH2">银联POS消费</option>
+<option value="RXTF">转账汇款</option>
+<option value="RXTY">行内汇入</option>
+<option value="RYTB">汇入汇款</option>
+<option value="XYPY">信用卡还款</option>
+<option value="Y3ZF">支付宝转账提现</option>
+</select><div title="" class="chosen-container chosen-container-single chosen-select" id="ddlTransTypeList_chosen" style="width: 171px;"><a tabindex="-1" class="chosen-single"><span>[ 全部 ]</span><div><b><i class="glyphicon chosen-down"></i><i class="glyphicon chosen-up"></i></b></div></a></div>
+                                </div>
+                            </div>
+                            <div class="page-form-item page-form-inquire">
+                                <label class="control-label" style="width: 60px; margin-left: 6px;" for="">
+                                    交易备注：</label>
+                                <div class="page-form-item-controls">
+                                    <input name="memo" class="control-input" id="memo" style="width: 171px;" type="text" maxlength="100" placeholder="输入关键字，如收付方姓名">
+                                </div>
+                            </div>
+                        </fieldset>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="page-panel-footer noprint" id="QueryBtn" style="display: none;">
+            <input class="btn btn-primary btn-lg" id="BtnOK" type="submit" value="查询" cmbbehavior="entryid:acr001002,svr:false">
+        </div>
+    </div>
+    <div class="page-panel page-noprint">
+        <div class="page-panel-tabs">
+            <ul>
+                <li class="active" style="_background-color: #f4f6fc;" data-toggle="tooltip" data-original-title=""><a href="javascript:void(0);">查询结果</a></li>
+            </ul>
+            <div class="right noprint" id="downAndprint">
+                <a href="javascript:download();" cmbbehavior="entryid:acr001003"><i title="下载" class="glyphicon icon-download" style="top: 0px; font-size: 16px;"></i> 下载</a>
+                <span style="margin: 0px 10px;">|</span>
+                <a href="javascript:showPrintPage();" cmbbehavior="entryid:acr001004"><i title="打印" class="glyphicon icon-print" style="top: 0px; font-size: 16px;"></i> 打印</a>
+            </div>
+        </div>
+        <div class="page-panel-content">
+            <table align="Center" class="page-table-common table-fix action" id="dgHistoryTransRecSet" style="_width: 95%;" border="0" cellspacing="0"><tbody><tr align="center" class="dgHeader" valign="middle"><th class="dgHeader" style="width: 155px; _text-indent: 10px; _text-align: left;" scope="col"><a onclick="tableTitleSort('DateTime', 'asc')" herf="javascript:void(0);">交易时间<i title="降序" class="glyphicon icon-sort-down" style="width: 14px; height: 14px; margin-right: 0px;"></i></a></th><th class="dgHeader" scope="col"><a onclick="tableTitleSort('Money', 'desc')" herf="javascript:void(0);">交易金额</a></th><th class="dgHeader" scope="col"><a onclick="tableTitleSort('Balance', 'desc')" herf="javascript:void(0);">余额</a></th><th class="dgHeader" scope="col"><a onclick="tableTitleSort('Type', 'desc')" herf="javascript:void(0);">交易类型</a></th><th class="dgHeader" scope="col">交易备注</th></tr><tr><td align="center" style="_text-indent: 10px; _text-align: left;">2019-01-20  02:21:54</td><td align="right"><span>-3.00</span></td><td align="right" style="color: rgb(88, 88, 88);">73.12</td><td align="left">定制短信服务费</td><td title="" align="left" class="ellipsis" data-toggle="tooltip" data-original-title="201812 短信收费  扣费卡尾号 :3301">201812 短信收费  扣费卡尾号 :3301</td></tr><tr class="odd"><td align="center" style="_text-indent: 10px; _text-align: left;">2019-01-18  21:49:20</td><td align="right"><span>-12,840.00</span></td><td align="right" style="color: rgb(88, 88, 88);">76.12</td><td align="left">N5CP</td><td title="" align="left" class="ellipsis" data-toggle="tooltip" data-original-title="支付宝 - 何镇飞">支付宝 - 何镇飞</td></tr><tr><td align="center" style="_text-indent: 10px; _text-align: left;">2019-01-18  21:34:30</td><td align="right"><span>+150.00</span></td><td align="right" style="color: rgb(88, 88, 88);">12,916.12</td><td align="left">客户转账</td><td title="" align="left" class="ellipsis" data-toggle="tooltip" data-original-title="转账汇款   陈慧聪">转账汇款   陈慧聪</td></tr><tr class="odd"><td align="center" style="_text-indent: 10px; _text-align: left;">2019-01-18  21:32:28</td><td align="right"><span>+12,709.96</span></td><td align="right" style="color: rgb(88, 88, 88);">12,766.12</td><td align="left">银联代付</td><td title="" align="left" class="ellipsis" data-toggle="tooltip" data-original-title="上海点佰趣信息科技有限公司">上海点佰趣信息科技有限公司</td></tr><tr><td align="center" style="_text-indent: 10px; _text-align: left;">2019-01-17  20:28:37</td><td align="right"><span>-14,000.00</span></td><td align="right" style="color: rgb(88, 88, 88);">56.16</td><td align="left">转账汇款</td><td title="" align="left" class="ellipsis" data-toggle="tooltip" data-original-title="转账   陈楚云">转账   陈楚云</td></tr><tr class="odd"><td align="center" style="_text-indent: 10px; _text-align: left;">2019-01-17  20:24:43</td><td align="right"><span>-4,880.00</span></td><td align="right" style="color: rgb(88, 88, 88);">14,056.16</td><td align="left">N5CP</td><td title="" align="left" class="ellipsis" data-toggle="tooltip" data-original-title="支付宝 - 何镇飞">支付宝 - 何镇飞</td></tr><tr><td align="center" style="_text-indent: 10px; _text-align: left;">2019-01-17  20:20:41</td><td align="right"><span>+18,669.16</span></td><td align="right" style="color: rgb(88, 88, 88);">18,936.16</td><td align="left">银联代付</td><td title="" align="left" class="ellipsis" data-toggle="tooltip" data-original-title="上海点佰趣信息科技有限公司">上海点佰趣信息科技有限公司</td></tr><tr class="odd"><td align="center" style="_text-indent: 10px; _text-align: left;">2019-01-17  14:58:26</td><td align="right"><span>-18,979.70</span></td><td align="right" style="color: rgb(88, 88, 88);">267.00</td><td align="left">N5CP</td><td title="" align="left" class="ellipsis" data-toggle="tooltip" data-original-title="支付宝 - 陈慧梅">支付宝 - 陈慧梅</td></tr><tr><td align="center" style="_text-indent: 10px; _text-align: left;">2019-01-16  21:28:09</td><td align="right"><span>-30,000.00</span></td><td align="right" style="color: rgb(88, 88, 88);">19,246.70</td><td align="left">客户转账</td><td title="" align="left" class="ellipsis" data-toggle="tooltip" data-original-title="转账   庞立臣">转账   庞立臣</td></tr><tr class="odd"><td align="center" style="_text-indent: 10px; _text-align: left;">2019-01-16  21:22:24</td><td align="right"><span>+4,764.36</span></td><td align="right" style="color: rgb(88, 88, 88);">49,246.70</td><td align="left">银联代付</td><td title="" align="left" class="ellipsis" data-toggle="tooltip" data-original-title="上海点佰趣信息科技有限公司">上海点佰趣信息科技有限公司</td></tr><tr><td align="center" style="_text-indent: 10px; _text-align: left;">2019-01-16  21:16:57</td><td align="right"><span>+24,628.36</span></td><td align="right" style="color: rgb(88, 88, 88);">44,482.34</td><td align="left">银联代付</td><td title="" align="left" class="ellipsis" data-toggle="tooltip" data-original-title="上海点佰趣信息科技有限公司">上海点佰趣信息科技有限公司</td></tr><tr class="odd"><td align="center" style="_text-indent: 10px; _text-align: left;">2019-01-16  21:14:26</td><td align="right"><span>+14,179.89</span></td><td align="right" style="color: rgb(88, 88, 88);">19,853.98</td><td align="left">银联代付</td><td title="" align="left" class="ellipsis" data-toggle="tooltip" data-original-title="上海点佰趣信息科技有限公司">上海点佰趣信息科技有限公司</td></tr><tr><td align="center" style="_text-indent: 10px; _text-align: left;">2019-01-16  21:06:57</td><td align="right"><span>-1,970.47</span></td><td align="right" style="color: rgb(88, 88, 88);">5,674.09</td><td align="left">N5CP</td><td title="" align="left" class="ellipsis" data-toggle="tooltip" data-original-title="支付宝 - 陈慧聪">支付宝 - 陈慧聪</td></tr><tr class="odd"><td align="center" style="_text-indent: 10px; _text-align: left;">2019-01-16  21:02:42</td><td align="right"><span>+7,525.45</span></td><td align="right" style="color: rgb(88, 88, 88);">7,644.56</td><td align="left">银联代付</td><td title="" align="left" class="ellipsis" data-toggle="tooltip" data-original-title="上海点佰趣信息科技有限公司">上海点佰趣信息科技有限公司</td></tr><tr><td align="center" style="_text-indent: 10px; _text-align: left;">2019-01-15  22:11:18</td><td align="right"><span>-23,000.00</span></td><td align="right" style="color: rgb(88, 88, 88);">119.11</td><td align="left">N5CP</td><td title="" align="left" class="ellipsis" data-toggle="tooltip" data-original-title="支付宝 - 陈慧聪">支付宝 - 陈慧聪</td></tr><tr class="odd"><td align="center" style="_text-indent: 10px; _text-align: left;">2019-01-15  19:25:18</td><td align="right"><span>-14,182.00</span></td><td align="right" style="color: rgb(88, 88, 88);">23,119.11</td><td align="left">N5CP</td><td title="" align="left" class="ellipsis" data-toggle="tooltip" data-original-title="支付宝 - 陈慧聪">支付宝 - 陈慧聪</td></tr><tr><td align="center" style="_text-indent: 10px; _text-align: left;">2019-01-15  19:15:23</td><td align="right"><span>-4,898.00</span></td><td align="right" style="color: rgb(88, 88, 88);">37,301.11</td><td align="left">N5CP</td><td title="" align="left" class="ellipsis" data-toggle="tooltip" data-original-title="支付宝 - 陈慧聪">支付宝 - 陈慧聪</td></tr><tr class="odd"><td align="center" style="_text-indent: 10px; _text-align: left;">2019-01-15  18:10:55</td><td align="right"><span>+11,413.03</span></td><td align="right" style="color: rgb(88, 88, 88);">42,199.11</td><td align="left">代发工资</td><td title="" align="left" class="ellipsis" data-toggle="tooltip" data-original-title="网上代发代扣">网上代发代扣</td></tr><tr><td align="center" style="_text-indent: 10px; _text-align: left;">2019-01-15  16:32:58</td><td align="right"><span>+30,000.00</span></td><td align="right" style="color: rgb(88, 88, 88);">30,786.08</td><td align="left">客户转账</td><td title="" align="left" class="ellipsis" data-toggle="tooltip" data-original-title="庞立臣">庞立臣</td></tr><tr class="odd"><td align="center" style="_text-indent: 10px; _text-align: left;">2019-01-14  22:44:09</td><td align="right"><span>-9,000.00</span></td><td align="right" style="color: rgb(88, 88, 88);">786.08</td><td align="left">客户转账</td><td title="" align="left" class="ellipsis" data-toggle="tooltip" data-original-title="转账   陈慧聪">转账   陈慧聪</td></tr><tr><td align="center" style="_text-indent: 10px; _text-align: left;">2019-01-14  22:41:15</td><td align="right"><span>+9,750.22</span></td><td align="right" style="color: rgb(88, 88, 88);">9,786.08</td><td align="left">银联代付</td><td title="" align="left" class="ellipsis" data-toggle="tooltip" data-original-title="上海点佰趣信息科技有限公司">上海点佰趣信息科技有限公司</td></tr><tr class="odd"><td align="center" style="_text-indent: 10px; _text-align: left;">2019-01-14  22:12:42</td><td align="right"><span>-10,200.00</span></td><td align="right" style="color: rgb(88, 88, 88);">35.86</td><td align="left">N5CP</td><td title="" align="left" class="ellipsis" data-toggle="tooltip" data-original-title="支付宝 - 陈楚云">支付宝 - 陈楚云</td></tr><tr><td align="center" style="_text-indent: 10px; _text-align: left;">2019-01-14  22:11:07</td><td align="right"><span>+10,177.30</span></td><td align="right" style="color: rgb(88, 88, 88);">10,235.86</td><td align="left">银联代付</td><td title="" align="left" class="ellipsis" data-toggle="tooltip" data-original-title="上海点佰趣信息科技有限公司">上海点佰趣信息科技有限公司</td></tr><tr class="odd"><td align="center" style="_text-indent: 10px; _text-align: left;">2019-01-14  21:57:31</td><td align="right"><span>-10,500.00</span></td><td align="right" style="color: rgb(88, 88, 88);">58.56</td><td align="left">N5CP</td><td title="" align="left" class="ellipsis" data-toggle="tooltip" data-original-title="支付宝 - 陈楚云">支付宝 - 陈楚云</td></tr><tr><td align="center" style="_text-indent: 10px; _text-align: left;">2019-01-14  21:56:11</td><td align="right"><span>+10,505.05</span></td><td align="right" style="color: rgb(88, 88, 88);">10,558.56</td><td align="left">银联代付</td><td title="" align="left" class="ellipsis" data-toggle="tooltip" data-original-title="上海点佰趣信息科技有限公司">上海点佰趣信息科技有限公司</td></tr><tr class="odd"><td align="center" style="_text-indent: 10px; _text-align: left;">2019-01-14  21:41:56</td><td align="right"><span>-8,600.00</span></td><td align="right" style="color: rgb(88, 88, 88);">53.51</td><td align="left">N5CP</td><td title="" align="left" class="ellipsis" data-toggle="tooltip" data-original-title="支付宝 - 陈楚云">支付宝 - 陈楚云</td></tr><tr><td align="center" style="_text-indent: 10px; _text-align: left;">2019-01-14  21:40:02</td><td align="right"><span>+8,538.52</span></td><td align="right" style="color: rgb(88, 88, 88);">8,653.51</td><td align="left">银联代付</td><td title="" align="left" class="ellipsis" data-toggle="tooltip" data-original-title="上海点佰趣信息科技有限公司">上海点佰趣信息科技有限公司</td></tr><tr class="odd"><td align="center" style="_text-indent: 10px; _text-align: left;">2019-01-14  20:05:41</td><td align="right"><span>-8,580.00</span></td><td align="right" style="color: rgb(88, 88, 88);">114.99</td><td align="left">N5CP</td><td title="" align="left" class="ellipsis" data-toggle="tooltip" data-original-title="支付宝 - 陈金焕">支付宝 - 陈金焕</td></tr><tr><td align="center" style="_text-indent: 10px; _text-align: left;">2019-01-14  20:03:20</td><td align="right"><span>+8,637.84</span></td><td align="right" style="color: rgb(88, 88, 88);">8,694.99</td><td align="left">银联代付</td><td title="" align="left" class="ellipsis" data-toggle="tooltip" data-original-title="上海点佰趣信息科技有限公司">上海点佰趣信息科技有限公司</td></tr><tr class="odd"><td align="center" style="_text-indent: 10px; _text-align: left;">2019-01-14  13:01:30</td><td align="right"><span>-8,700.00</span></td><td align="right" style="color: rgb(88, 88, 88);">57.15</td><td align="left">N5CP</td><td title="" align="left" class="ellipsis" data-toggle="tooltip" data-original-title="支付宝 - 陈金焕">支付宝 - 陈金焕</td></tr><tr><td align="center" style="_text-indent: 10px; _text-align: left;">2019-01-14  12:50:44</td><td align="right"><span>+8,121.37</span></td><td align="right" style="color: rgb(88, 88, 88);">8,757.15</td><td align="left">银联代付</td><td title="" align="left" class="ellipsis" data-toggle="tooltip" data-original-title="上海点佰趣信息科技有限公司">上海点佰趣信息科技有限公司</td></tr><tr class="odd"><td align="center" style="_text-indent: 10px; _text-align: left;">2019-01-13  17:10:38</td><td align="right"><span>-2,000.00</span></td><td align="right" style="color: rgb(88, 88, 88);">635.78</td><td align="left">N5CP</td><td title="" align="left" class="ellipsis" data-toggle="tooltip" data-original-title="支付宝 - 王宁">支付宝 - 王宁</td></tr><tr><td align="center" style="_text-indent: 10px; _text-align: left;">2019-01-13  17:05:19</td><td align="right"><span>+910.74</span></td><td align="right" style="color: rgb(88, 88, 88);">2,635.78</td><td align="left">银联代付</td><td title="" align="left" class="ellipsis" data-toggle="tooltip" data-original-title="上海点佰趣信息科技有限公司">上海点佰趣信息科技有限公司</td></tr><tr class="odd"><td align="center" style="_text-indent: 10px; _text-align: left;">2019-01-13  16:51:44</td><td align="right"><span>-8,325.00</span></td><td align="right" style="color: rgb(88, 88, 88);">1,725.04</td><td align="left">N5CP</td><td title="" align="left" class="ellipsis" data-toggle="tooltip" data-original-title="支付宝 - 陈慧梅">支付宝 - 陈慧梅</td></tr><tr><td align="center" style="_text-indent: 10px; _text-align: left;">2019-01-13  16:48:16</td><td align="right"><span>+10,028.32</span></td><td align="right" style="color: rgb(88, 88, 88);">10,050.04</td><td align="left">银联代付</td><td title="" align="left" class="ellipsis" data-toggle="tooltip" data-original-title="上海点佰趣信息科技有限公司">上海点佰趣信息科技有限公司</td></tr><tr class="odd"><td align="center" style="_text-indent: 10px; _text-align: left;">2019-01-13  15:30:13</td><td align="right"><span>-10,200.00</span></td><td align="right" style="color: rgb(88, 88, 88);">21.72</td><td align="left">N5CP</td><td title="" align="left" class="ellipsis" data-toggle="tooltip" data-original-title="支付宝 - 陈慧梅">支付宝 - 陈慧梅</td></tr><tr><td align="center" style="_text-indent: 10px; _text-align: left;">2019-01-13  15:29:01</td><td align="right"><span>+10,207.09</span></td><td align="right" style="color: rgb(88, 88, 88);">10,221.72</td><td align="left">银联代付</td><td title="" align="left" class="ellipsis" data-toggle="tooltip" data-original-title="上海点佰趣信息科技有限公司">上海点佰趣信息科技有限公司</td></tr><tr class="odd"><td align="center" style="_text-indent: 10px; _text-align: left;">2019-01-12  22:18:22</td><td align="right"><span>-8,300.00</span></td><td align="right" style="color: rgb(88, 88, 88);">14.63</td><td align="left">N5CP</td><td title="" align="left" class="ellipsis" data-toggle="tooltip" data-original-title="支付宝 - 陈慧梅">支付宝 - 陈慧梅</td></tr><tr><td align="center" style="_text-indent: 10px; _text-align: left;">2019-01-12  22:13:44</td><td align="right"><span>+4,880.00</span></td><td align="right" style="color: rgb(88, 88, 88);">8,314.63</td><td align="left">客户转账</td><td title="" align="left" class="ellipsis" data-toggle="tooltip" data-original-title="转账汇款   陈慧聪">转账汇款   陈慧聪</td></tr><tr class="odd"><td align="center" style="_text-indent: 10px; _text-align: left;">2019-01-12  21:38:29</td><td align="right"><span>-2,651.00</span></td><td align="right" style="color: rgb(88, 88, 88);">3,434.63</td><td align="left">N5CP</td><td title="" align="left" class="ellipsis" data-toggle="tooltip" data-original-title="支付宝 - 重庆市蚂蚁商诚小额贷款有限公司">支付宝 - 重庆市蚂蚁商诚小额贷款有限公司</td></tr><tr><td align="center" style="_text-indent: 10px; _text-align: left;">2019-01-12  21:31:26</td><td align="right"><span>+4,545.85</span></td><td align="right" style="color: rgb(88, 88, 88);">6,085.63</td><td align="left">银联代付</td><td title="" align="left" class="ellipsis" data-toggle="tooltip" data-original-title="上海点佰趣信息科技有限公司">上海点佰趣信息科技有限公司</td></tr><tr class="odd"><td align="center" style="_text-indent: 10px; _text-align: left;">2019-01-10  09:54:44</td><td align="right"><span>-3,750.00</span></td><td align="right" style="color: rgb(88, 88, 88);">1,539.78</td><td align="left">客户转账</td><td title="" align="left" class="ellipsis" data-toggle="tooltip" data-original-title="转账   陈金焕">转账   陈金焕</td></tr><tr><td align="center" style="_text-indent: 10px; _text-align: left;">2019-01-10  08:08:42</td><td align="right"><span>-100.00</span></td><td align="right" style="color: rgb(88, 88, 88);">5,289.78</td><td align="left">N5CP</td><td title="" align="left" class="ellipsis" data-toggle="tooltip" data-original-title="支付宝 - 深圳市万通顺达科技股份有限公司">支付宝 - 深圳市万通顺达科技股份有限公司</td></tr><tr class="odd"><td align="center" style="_text-indent: 10px; _text-align: left;">2019-01-09  22:07:28</td><td align="right"><span>-3,610.80</span></td><td align="right" style="color: rgb(88, 88, 88);">5,389.78</td><td align="left">信用卡还款</td><td title="" align="left" class="ellipsis" data-toggle="tooltip" data-original-title="信用卡还款">信用卡还款</td></tr><tr><td align="center" style="_text-indent: 10px; _text-align: left;">2019-01-09  22:02:38</td><td align="right"><span>-3,000.00</span></td><td align="right" style="color: rgb(88, 88, 88);">9,000.58</td><td align="left">N5CP</td><td title="" align="left" class="ellipsis" data-toggle="tooltip" data-original-title="支付宝 - 何镇飞">支付宝 - 何镇飞</td></tr><tr class="odd"><td align="center" style="_text-indent: 10px; _text-align: left;">2019-01-09  22:00:12</td><td align="right"><span>-5,000.00</span></td><td align="right" style="color: rgb(88, 88, 88);">12,000.58</td><td align="left">N5CP</td><td title="" align="left" class="ellipsis" data-toggle="tooltip" data-original-title="支付宝 - 黄磊">支付宝 - 黄磊</td></tr><tr><td align="center" style="_text-indent: 10px; _text-align: left;">2019-01-09  21:57:47</td><td align="right"><span>+17,000.58</span></td><td align="right" style="color: rgb(88, 88, 88);">17,000.58</td><td align="left">银联代付</td><td title="" align="left" class="ellipsis" data-toggle="tooltip" data-original-title="上海点佰趣信息科技有限公司">上海点佰趣信息科技有限公司</td></tr><tr class="odd"><td align="center" style="_text-indent: 10px; _text-align: left;">2019-01-09  20:11:04</td><td align="right"><span>-16,300.00</span></td><td align="right" style="color: rgb(88, 88, 88);">0.00</td><td align="left">信用卡还款</td><td title="" align="left" class="ellipsis" data-toggle="tooltip" data-original-title="信用卡还款">信用卡还款</td></tr><tr><td align="center" style="_text-indent: 10px; _text-align: left;">2019-01-09  20:09:21</td><td align="right"><span>+16,300.00</span></td><td align="right" style="color: rgb(88, 88, 88);">16,300.00</td><td align="left">客户转账</td><td title="" align="left" class="ellipsis" data-toggle="tooltip" data-original-title="转账汇款   陈慧聪">转账汇款   陈慧聪</td></tr><tr class="odd"><td align="center" style="_text-indent: 10px; _text-align: left;">2019-01-09  17:41:43</td><td align="right"><span>-1,969.72</span></td><td align="right" style="color: rgb(88, 88, 88);">0.00</td><td align="left">信用卡存款</td><td title="" align="left" class="ellipsis" data-toggle="tooltip" data-original-title="20190109A00110102963">20190109A00110102963</td></tr></tbody></table>
+            <div class="noprint" id="pagination">
+                <a class="begin-disabled" id="beginPage" hidefocus="" href="javascript:first();"></a><a class="prev-disabled" id="prevPage" hidefocus="" href="javascript:prev();"></a><span>第&nbsp;<label id="pageIndex">1</label>&nbsp;页&nbsp;/&nbsp;共&nbsp;<label id="pageCount">19</label>&nbsp;页</span><a class="next" id="nextPage" hidefocus="" href="javascript:next();"></a><a class="end" id="endPage" hidefocus="" href="javascript:last();"></a>
+            </div>
+            <div class="notice notice-info" id="inoutmoney" style="padding: 0px;">
+                <p style="text-align: center; font-size: 14px; background-color: rgb(247, 247, 247);">收入：<span id="income">3,387,011.71</span>元&nbsp;&nbsp;共<span id="nincome">292</span>笔&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;支出：<span id="payout">3,396,549.92</span>元&nbsp;&nbsp;共<span id="npayout">632</span>笔</p>
+            </div>
+        </div>
+    </div>
+    <div class="page-panel page-print noborder" style="display: none;">
+        <div class="row">
+            <div class="printTitle">
+                <div class="page-panel-content" style="margin: 10px 0px; height: 50px; text-align: center; line-height: 50px;">
+                    <img style="left: 0px; top: 0px; position: absolute;" alt="" src="../../doc/Images/cmb_logo.png"><span style="color: rgb(255, 0, 0); font-family: Microsoft YaHei; font-size: 20px; font-weight: bold;">招商银行账户历史交易明细表</span>
+                </div>
+            </div>
+            <div class="printTable">
+                <div class="page-panel-content clearfix" style="margin: 0px; padding: 10px; min-width: 601px;">
+                    <div style="width: 43%; float: left;">
+                        <div class="clearfix"><span style="width: 71px; float: left;">账&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;号：</span><span id="lblAccountNo" style="color: rgb(0, 51, 204); margin-left: 71px; display: block;"></span></div>
+                        <div class="clearfix"><span style="width: 71px; float: left;">开始日期：</span><span id="lblBeginDate" style="color: rgb(0, 51, 204); margin-left: 71px; display: block;"></span></div>
+                    </div>
+                    <div style="width: 30%; float: left;">
+                        <div class="clearfix"><span style="width: 71px; float: left;">户&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;名：</span><span id="lblAccountName" style="color: rgb(0, 51, 204); margin-left: 71px; display: block;"></span></div>
+                        <div class="clearfix"><span style="width: 71px; float: left;">结束日期：</span><span id="lblEndDate" style="color: rgb(0, 51, 204); margin-left: 71px; display: block;"></span></div>
+                    </div>
+                    <div style="width: 25%; float: left;">
+                        <div class="clearfix"><span style="width: 71px; float: left;">币&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;种：</span><span id="lblCurrency" style="color: rgb(0, 51, 204); margin-left: 71px; display: block;"></span></div>
+                    </div>
+                    <img width="167" height="90" style="right: 50px; bottom: -54px; position: absolute; z-index: 1;" alt="印章" src="../../doc/Images/yinzhang.png">
+                </div>
+                <div class="page-panel-content" style="margin: 0px;">
+                    <table align="Center" class="page-table-common table-fix" id="printPage" style="_width: 98%;" border="0" cellspacing="0">
+                        <colgroup>
+                            <col style="width: 20%;">
+                            <col style="width: 18%;">
+                            <col style="width: 17%;">
+                            <col style="width: 20%;">
+                            <col style="width: 25%;">
+                        </colgroup>
+                        <tbody>
+                            <tr align="center" class="dgHeader" valign="middle">
+                                <th class="dgHeader" style="height: 30px; color: rgb(255, 255, 255); font-size: 14px; font-weight: bold; border-top-color: rgb(23, 102, 203); border-bottom-color: rgb(23, 102, 203); border-top-width: 2px; border-bottom-width: 2px; border-top-style: solid; border-bottom-style: solid; background-color: rgb(23, 102, 203); _text-indent: 10px; _text-align: left;" scope="col" ;="">交易时间</th>
+                                <th class="dgHeader" style="height: 30px; color: rgb(255, 255, 255); font-size: 14px; font-weight: bold; border-top-color: rgb(23, 102, 203); border-bottom-color: rgb(23, 102, 203); border-top-width: 2px; border-bottom-width: 2px; border-top-style: solid; border-bottom-style: solid; background-color: rgb(23, 102, 203);" scope="col">交易金额</th>
+                                <th class="dgHeader" style="height: 30px; color: rgb(255, 255, 255); font-size: 14px; font-weight: bold; border-top-color: rgb(23, 102, 203); border-bottom-color: rgb(23, 102, 203); border-top-width: 2px; border-bottom-width: 2px; border-top-style: solid; border-bottom-style: solid; background-color: rgb(23, 102, 203);" scope="col">余额</th>
+                                <th class="dgHeader" style="height: 30px; color: rgb(255, 255, 255); font-size: 14px; font-weight: bold; border-top-color: rgb(23, 102, 203); border-bottom-color: rgb(23, 102, 203); border-top-width: 2px; border-bottom-width: 2px; border-top-style: solid; border-bottom-style: solid; background-color: rgb(23, 102, 203);" scope="col">交易类型</th>
+                                <th class="dgHeader" style="height: 30px; color: rgb(255, 255, 255); font-size: 14px; font-weight: bold; border-top-color: rgb(23, 102, 203); border-bottom-color: rgb(23, 102, 203); border-top-width: 2px; border-bottom-width: 2px; border-top-style: solid; border-bottom-style: solid; background-color: rgb(23, 102, 203);" scope="col">交易备注</th>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="page-panel-footer clearfix" style="margin: 0px; padding: 10px; text-align: left; min-width: 601px;">
+                    <div style="width: 43%; float: left;">
+                        <div class="clearfix"><span style="width: 98px; float: left;">收入交易笔数：</span><span id="lblInCount"></span></div>
+                        <div class="clearfix"><span style="width: 98px; float: left;">收入金额合计：</span><span id="lblInTotalMoney"></span></div>
+                    </div>
+                    <div style="width: 43%; float: left;">
+                        <div class="clearfix"><span style="width: 98px; float: left;">支出交易笔数：</span><span id="lblOutCount"></span></div>
+                        <div class="clearfix"><span style="width: 98px; float: left;">支出金额合计：</span><span id="lblOutTotalMoney"></span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row noprint">
+            <div class="page-form-footer" style="margin: 10px 0px; font-size: 0px; border-top-color: currentColor; border-top-width: 0px; border-top-style: none;">
+                <input class="btn btn-default btn-lg" style="margin: 0px 10px; display: inline-block;" onclick="hiddenPrintPage();" type="button" value="取 消">
+                <input class="btn btn-primary btn-lg" style="margin: 0px 10px; display: inline-block;" onclick="window.print();" type="button" value="打 印">
+            </div>
+        </div>
+    </div>
+    <input name="ClientNo" id="ClientNo" type="hidden" value="5C25DBDF56772338330174794E1E4FD0542968313197855800004736">
+    <input name="hSubAccountNo" id="hSubAccountNo" type="hidden" value="655136421520000">
+    <input name="hCurrency" id="hCurrency" type="hidden" value="人民币">
+    <input name="hTransTypeID" id="hTransTypeID" type="hidden" value="-">
+    <input name="hTransType" id="hTransType" type="hidden" value="[ 全部 ]">
+    <input name="hBeginDate" id="hBeginDate" type="hidden" value="20180123">
+    <input name="hEndDate" id="hEndDate" type="hidden" value="20190123">
+    <input name="hIncomeFrom" id="hIncomeFrom" type="hidden" value="">
+    <input name="hIncomeTo" id="hIncomeTo" type="hidden" value="">
+    <input name="hPayFrom" id="hPayFrom" type="hidden" value="">
+    <input name="hPayTo" id="hPayTo" type="hidden" value="">
+    <input name="hMemo" id="hMemo" type="hidden" value="">
+    <input name="hCount" id="hCount" type="hidden" value="924">
+    <input name="hPageSize" id="hPageSize" type="hidden" value="50">
+    <input name="hSortName" id="hSortName" type="hidden" value="DateTime">
+    <input name="hSortDirection" id="hSortDirection" type="hidden" value="desc">
+    <input name="hName" id="hName" type="hidden" value="陈慧聪">
+    <input name="hInCount" id="hInCount" type="hidden" value="292">
+    <input name="hInTotalMoney" id="hInTotalMoney" type="hidden" value="3,387,011.71">
+    <input name="hOutCount" id="hOutCount" type="hidden" value="632">
+    <input name="hOutTotalMoney" id="hOutTotalMoney" type="hidden" value="3,396,549.92">
+    <input name="hServerToday" id="hServerToday" type="hidden" value="20190123">
+    <input id="bvrPageNo" type="hidden" value="acr">
+    <script src="../../../Base/doc/dist/asset/js/cmbbank-ui-min.js" type="text/javascript" charset="utf-8"></script>
+    <script language="javascript" src="../../../Base/doc/Scripts/cmb_behavior.js" type="text/JavaScript"></script>
+    <script type="text/javascript">
+        function SubmitProcess() {
+            if (typeof CMBPBLS !== 'undefined'
+                && typeof CMBPBLS.AddSubmitBehaviorData !== 'undefined') {
+                CMBPBLS.AddSubmitBehaviorData();
+            }
+            return true;
+        }
+
+        $(function () {
+            initPage();
+            $("#DateSpan a").click(function () {
+                $(this).addClass("active").siblings().removeClass("active");
+                if ($("#DateQuery").is(":visible")) {
+                    $("#DateQuery").hide();
+                }
+                var baseDate = $("#hServerToday").val();
+                $("#DateEnd").val(baseDate);
+                var type;
+                var Span;
+                var id = $(this).attr("id");
+                if (id.charAt(id.length - 1) == 'd') {
+                    Span = parseInt(id.substring(9, id.length - 1));
+                    type = "day";
+                }
+                else {
+                    Span = parseInt($(this).attr("id").substring(9));
+                    type = "month";                   
+                }
+                $("#DateBegin").val(getBeginDate(type, baseDate, Span));
+
+                if (!$("#QueryBtn").is(":visible")) {
+                    $("#BtnOK").trigger("click", true);
+                }
+                return false;
+            });
+
+            $("#DateQuery").click(function () {
+                if ($(this).is(":visible")) {
+                    $(this).hide();
+                }
+                $("#DateSpan a").removeClass("active");
+                var result = $(".date-group").validator({
+                    group: '.date-group',
+                    feedback: 'popwin',
+                    message: 'This value is not valid',
+                    fields: {
+                        DateBegin: {
+                            validators: {
+                                notEmpty: {
+                                    message: '[开始日期]不能为空。'
+                                },
+                                IsValidDate: {
+                                    message: '[开始日期]格式不正确。'
+                                }
+                            }
+                        },
+                        DateEnd: {
+                            validators: {
+                                notEmpty: {
+                                    message: '[结束日期]不能为空。'
+                                },
+                                IsValidDate: {
+                                    message: '[结束日期]格式不正确。'
+                                }
+                            }
+                        }
+                    }
+                });
+                if (result) {
+                    $("#BtnOK").trigger("click", true);
+                }
+                return false;
+            });
+
+            $("#BtnOK").click(function () {
+                if (checkParams()) {
+                    $("#hSortName").val("DateTime");
+                    $("#hSortDirection").val("desc");
+                    initHiddenParams();
+                    ajaxRequest(getHiddenParams());
+                }
+                return false;
+            });
+        });
+
+        function initPage() {
+            var beginDate = $("#hBeginDate").val();
+            var endDate = $("#hEndDate").val();
+            $("#DateSpan a").removeClass("active");
+            if (beginDate == getBeginDate("month", endDate, 0)) {
+                $("#DateSpan_" + 0).addClass("active");
+            } else if (beginDate == getBeginDate("day", endDate, 7)) {
+                $("#DateSpan_7d").addClass("active");
+            } else if (beginDate == getBeginDate("month", endDate, 1)) {
+                $("#DateSpan_" + 1).addClass("active");
+            } else if (beginDate == getBeginDate("month", endDate, 3)) {
+                $("#DateSpan_" + 3).addClass("active");
+            } else if (beginDate == getBeginDate("month", endDate, 6)) {
+                $("#DateSpan_" + 6).addClass("active");
+            } else if (beginDate == getBeginDate("month", endDate, 12)) {
+                $("#DateSpan_" + 12).addClass("active");
+            }
+
+            getInOutMoney();
+            initPagination($("#hCount").val(), parseInt($("#hPageSize").val()));
+
+            $("#MoreQuery > a").click(function () {
+                if ($("#TransSpan").is(":visible") && $("#QueryBtn").is(":visible")) {
+                    hiddenMoreQuery()
+                } else {
+                    showMoreQuery()
+                }
+                return false;
+            });
+        }
+
+        function getBeginDate(type, endDate, Span) {
+            if (type ==  "day")
+            {
+                return getBeginDateByDay(endDate, Span);
+            }
+            else if (type == "month")
+            {
+                return getBeginDateByMonth(endDate, Span)
+            }
+        }
+
+        function getBeginDateByDay(endDate, daySpan) {
+            var date = new Date(endDate.replace(/(\d{4})(\d{2})(\d{2})/, '$1/$2/$3'));
+            var day = date.getDate() + 1 - daySpan;
+            var month = date.getMonth() + 1;
+            var year = date.getFullYear();
+                        
+            month = (day <= 0) ? month - 1 : month;
+            year = (month <= 0) ? year - 1 : year;
+            month = (month <= 0) ? month + 12 : month;
+
+            if (day <= 0)
+            {
+                var lastMonOfdayCout = 31;
+                if (month == 2) 
+                {
+                    lastMonOfdayCout =  (((year % 4 === 0) && (year % 100 !== 0)) || (year % 400 === 0)) ? 29 : 28;
+                }
+                if (month == 4 || month == 6 || month == 9 || month == 11)
+                {
+                    lastMonOfdayCout = 30;
+                }
+                day = day + lastMonOfdayCout;
+            }
+
+            day = (day < 10 ? '0' : '') + day;
+            month = (month < 10 ? '0' : '') + month;
+            return year + month + day;
+        }
+
+        function getBeginDateByMonth(endDate, monthSpan) {
+            var date = new Date(endDate.replace(/(\d{4})(\d{2})(\d{2})/, '$1/$2/$3'));
+            var day = date.getDate();
+            var month = date.getMonth() + 1 - monthSpan;
+            var year = date.getFullYear();
+
+            year = (month <= 0) ? year - 1 : year;
+            month = (month <= 0) ? month + 12 : month;
+            day = (day > 28 && month == 2) ? ((((year % 4 === 0) && (year % 100 !== 0)) || (year % 400 === 0)) ? 29 : 28) : day;
+            day = (day == 31 && (month == 4 || month == 6 || month == 9 || month == 11)) ? 30 : day;
+
+            day = (day < 10 ? '0' : '') + day;
+            month = (month < 10 ? '0' : '') + month;
+            return year + month + day;
+        }
+
+        function getInOutMoney() {
+            $("#nincome").text($("#hInCount").val());
+            $("#npayout").text($("#hOutCount").val());
+            $("#income").text($("#hInTotalMoney").val());
+            $("#payout").text($("#hOutTotalMoney").val());
+            if ($("#inoutmoney") && $("#hInCount").val() == 0 && $("#hOutCount").val() == 0) {
+                $("#inoutmoney").hide();
+            } else {
+                $("#inoutmoney").show();
+            }
+        }
+
+        function initPagination(count, pageSize) {
+            if (count > (pageSize * 2)) {
+                $("#pageIndex").text(1);
+                $("#pageCount").text(Math.ceil(count / pageSize));
+                $("#pagination").show();
+            } else {
+                $("#pageIndex").text(1);
+                $("#pageCount").text(1);
+                $("#pagination").hide();
+            }
+        }
+
+        function hiddenMoreQuery() {
+            $("#TransSpan").hide();
+            $("#QueryBtn").hide();
+            $("#TransDate").css("border-bottom", 0);
+            $("#DateQuery").attr("disabled", false);
+            $("#ddlTransTypeList").val("-");
+            $("#ddlTransTypeList").trigger("chosen:updated.chosen");
+            $("#incomeFrom").val("");
+            $("#incomeTo").val("");
+            $("#payFrom").val("");
+            $("#payTo").val("");
+            $("#memo").val("");
+        }
+
+        function showMoreQuery() {
+            $("#TransSpan").show();
+            $("#QueryBtn").show();
+            $("#TransDate").css("border-bottom", "1px solid #c2d5eb");
+            $("#ddlTransTypeList_chosen").css("width", "171px");
+            $("#ddlTransTypeList_chosen_drop").css("width", "171px");
+            $("#ddlTransTypeList").trigger("chosen:updated.chosen");
+            if (parent.adjustFrameSize) parent.adjustFrameSize();
+            $("#DateQuery").attr("disabled", true);
+            if ($("#DateQuery").is(":visible")) {
+                $("#DateQuery").hide();
+            }
+        }
+
+        function ajaxRequest(params, pageIndex) {
+            var msg = "正在加载数据，请稍候 ... ...";
+            P.process(msg);
+            var $ddlTransTypeList = $("#ddlTransTypeList");
+            $.ajax({
+                type: "POST",
+                url: "am_QueryTrans.aspx",
+                data: params,
+                success: function (data, textStatus) {
+                    if (data.option && data.content && data.count && data.incount && data.outcount && data.inmoney && data.outmoney) {
+                        var transType = $ddlTransTypeList.val();
+                        $("#ddlTransTypeList").html(decodeURIComponent(data.option).replace(/\+/g, " "));
+                        $ddlTransTypeList.val(transType);
+                        $ddlTransTypeList.trigger("chosen:updated.chosen");
+
+                        $("#dgHistoryTransRecSet").html(decodeURIComponent(data.content).replace(/\+/g, " ").replace(/\$Plus\$/g, "+"));
+                        $('[data-toggle="tooltip"]').tooltip();
+
+                        var newCount = data.count;
+                        var $count = $("#hCount");
+                        if ($count.val() != newCount) {
+                            $count.val(newCount);
+                            initPagination(newCount, parseInt($("#hPageSize").val()));
+                        }
+                        $("#hInCount").val(data.incount);
+                        $("#hOutCount").val(data.outcount);
+                        $("#hInTotalMoney").val(data.inmoney);
+                        $("#hOutTotalMoney").val(data.outmoney);
+                        getInOutMoney();
+                        if (parent.adjustFrameSize) parent.adjustFrameSize();
+                        P.hideAll();
+                    } else if (data.incount && data.outcount && data.inmoney && data.outmoney) {
+                        $("#lblInCount").text(data.incount);
+                        $("#lblOutCount").text(data.outcount);
+                        $("#lblInTotalMoney").text(data.inmoney);
+                        $("#lblOutTotalMoney").text(data.outmoney);
+                        if (data.records) {
+                            $("#printPage tr:last").after(decodeURIComponent(data.records).replace(/\+/g, " ").replace(/\$Plus\$/g, "+"));
+                        }
+                        $(".page-noprint").hide();
+                        $(".page-print").show();
+                        if (parent.adjustFrameSize) parent.adjustFrameSize();
+                        P.hideAll();
+                    } else if (data.error) {
+                        P.hideAll();
+                        MessageShow(data.error);
+                    } else {
+                        P.hideAll();
+                        alert(data);
+                    }
+                },
+                error: function (XMLHttpRequest, textStatus, errorThrown) {
+                    P.hideAll();
+                    alert(textStatus);
+                },
+                complete: function (XMLHttpRequet, textStatus) {
+                    if (pageIndex && pageIndex > 0) {
+                        var pageCount = parseInt($("#pageCount").text());
+                        $("#pageIndex").text(pageIndex);
+                        if (pageIndex == 1) {
+                            $("#beginPage").removeClass("begin").addClass("begin-disabled");
+                            $("#prevPage").removeClass("prev").addClass("prev-disabled");
+                            $("#nextPage").removeClass("next-disabled").addClass("next");
+                            $("#endPage").removeClass("end-disabled").addClass("end");
+                        }
+                        if (pageIndex == pageCount) {
+                            $("#beginPage").removeClass("begin-disabled").addClass("begin");
+                            $("#prevPage").removeClass("prev-disabled").addClass("prev");
+                            $("#nextPage").removeClass("next").addClass("next-disabled");
+                            $("#endPage").removeClass("end").addClass("end-disabled");
+                        }
+                        if (pageIndex > 1 && pageIndex < pageCount) {
+                            $("#beginPage").removeClass("begin-disabled").addClass("begin");
+                            $("#prevPage").removeClass("prev-disabled").addClass("prev");
+                            $("#nextPage").removeClass("next-disabled").addClass("next");
+                            $("#endPage").removeClass("end-disabled").addClass("end");
+                        }
+                    } else {
+                        if ($("#pagination").is(":visible")) {
+                            $("#pageIndex").text(1);
+                            $("#beginPage").removeClass("begin").addClass("begin-disabled");
+                            $("#prevPage").removeClass("prev").addClass("prev-disabled");
+                            $("#nextPage").removeClass("next-disabled").addClass("next");
+                            $("#endPage").removeClass("end-disabled").addClass("end");
+                        }
+                    }
+                }
+            });
+        }
+
+        function checkParams() {
+            if (!IsValidDate($("#DateBegin").val())) {
+                alert("[起始日期]格式有误,格式为YYYYMMDD,请重新输入!");
+                return false;
+            }
+            if (!IsValidDate($("#DateEnd").val())) {
+                alert("[终止日期]格式有误,格式为YYYYMMDD,请重新输入!");
+                return false;
+            }
+
+            var amount_pattern = /^\d+(.\d+)?$|^$/;
+            var amounts = [
+                    { id: 'incomeFrom', msg: '[收入范围]输入有误，请输入合法的金额格式，例如 100.20' },
+                    { id: 'incomeTo', msg: '[收入范围]输入有误，请输入合法的金额格式，例如 100.20' },
+                    { id: 'payFrom', msg: '[支出范围]输入有误，请输入合法的金额格式，例如 100.20' },
+                    { id: 'payTo', msg: '[支出范围]输入有误，请输入合法的金额格式，例如 100.20' }
+                ];
+            for (var i = 0; i < amounts.length; ++i) {
+                var target = document.getElementById(amounts[i].id);
+                if (!amount_pattern.test(target.value)) {
+                        alert(amounts[i].msg);
+                        return false;
+                }
+            }
+            return true;
+        }
+
+        function initHiddenParams() {
+            $("#hSubAccountNo").val($("#ddlSubAccountList").val());
+            $("#hTransTypeID").val($("#ddlTransTypeList").val());
+            $("#hTransType").val($("#ddlTransTypeList").find(":selected").text());
+            $("#hBeginDate").val($("#DateBegin").val());
+            $("#hEndDate").val($("#DateEnd").val());
+            $("#hIncomeFrom").val($("#incomeFrom").val());
+            $("#hIncomeTo").val($("#incomeTo").val());
+            $("#hPayFrom").val($("#payFrom").val());
+            $("#hPayTo").val($("#payTo").val());
+            $("#hMemo").val($("#memo").val());
+        }
+
+        function getHiddenParams() {
+            var params = {
+                "RequestType": "AjaxRequest",
+                "ClientNo": $("#ClientNo").val(),
+                "AccountUID": $("#ddlDebitCardList").val(),
+                "SubAccountNo": $("#hSubAccountNo").val(),
+                "TransTypeID": $("#hTransTypeID").val(),
+                "TransType": $("#hTransType").val(),
+                "BeginDate": $("#hBeginDate").val(),
+                "EndDate": $("#hEndDate").val(),
+                "IncomeFrom": $("#hIncomeFrom").val(),
+                "IncomeTo": $("#hIncomeTo").val(),
+                "PayFrom": $("#hPayFrom").val(),
+                "PayTo": $("#hPayTo").val(),
+                "Memo": $("#hMemo").val()
+            };
+            return params;
+        }
+
+        function tableTitleSort(sortName, sortDirection) {
+            $("#hSortName").val(sortName);
+            $("#hSortDirection").val(sortDirection);
+            var params = getHiddenParams();
+            params["SortName"] = sortName;
+            params["SortDirection"] = sortDirection;
+            ajaxRequest(params);
+            return false;
+        }
+
+        function getAll() {
+            var params = getHiddenParams();
+            params["PageIndex"] = 0;
+            params["PageSize"] = $("#hPageSize").val();
+            params["SortName"] = "DateTime";
+            params["SortDirection"] = "asc";
+            ajaxRequest(params, 0);
+        }
+
+        function first() {
+            var pageIndex = parseInt($("#pageIndex").text());
+            if (pageIndex > 1) {
+                var params = getHiddenParams();
+                params["PageIndex"] = 1;
+                params["PageSize"] = $("#hPageSize").val();
+                params["SortName"] = $("#hSortName").val();
+                params["SortDirection"] = $("#hSortDirection").val();
+                ajaxRequest(params, 1);
+            }
+        }
+
+        function prev() {
+            var pageIndex = parseInt($("#pageIndex").text());
+            if (pageIndex > 1) {
+                pageIndex--;
+                var params = getHiddenParams();
+                params["PageIndex"] = pageIndex;
+                params["PageSize"] = $("#hPageSize").val();
+                params["SortName"] = $("#hSortName").val();
+                params["SortDirection"] = $("#hSortDirection").val();
+                ajaxRequest(params, pageIndex);
+            }
+        }
+
+        function next() {
+            var pageIndex = parseInt($("#pageIndex").text());
+            var pageCount = parseInt($("#pageCount").text());
+            if (pageIndex < pageCount) {
+                pageIndex++;
+                var params = getHiddenParams();
+                params["PageIndex"] = pageIndex;
+                params["PageSize"] = $("#hPageSize").val();
+                params["SortName"] = $("#hSortName").val();
+                params["SortDirection"] = $("#hSortDirection").val();
+                ajaxRequest(params, pageIndex);
+            }
+        }
+
+        function last() {
+            var pageIndex = parseInt($("#pageIndex").text());
+            var pageCount = parseInt($("#pageCount").text());
+            if (pageIndex < pageCount) {
+                var params = getHiddenParams();
+                params["PageIndex"] = pageCount;
+                params["PageSize"] = $("#hPageSize").val();
+                params["SortName"] = $("#hSortName").val();
+                params["SortDirection"] = $("#hSortDirection").val();
+                ajaxRequest(params, pageCount);
+            }
+        }
+
+        function refresh() {
+            var params = getHiddenParams();
+            params["SortName"] = $("#hSortName").val();
+            params["SortDirection"] = $("#hSortDirection").val();
+            if ($("#pagination").is(":visible")) {
+                var pageIndex = parseInt($("#pageIndex").text());
+                params["PageIndex"] = pageIndex;
+                params["PageSize"] = $("#hPageSize").val();
+                ajaxRequest(params, pageIndex);
+            } else {
+                ajaxRequest(params);
+            }
+        }
+
+        function download() {
+            var sAccountUID = "AccountUID=" + $("#ddlDebitCardList").val();
+            var sAccountNo = "AccountNo=" + $("#ddlDebitCardList").find("option:selected").text();
+            var sSubAccountNo = "SubAccountNo=" + $("#hSubAccountNo").val();
+            var sCurrency = "Currency=" + $("#hCurrency").val();
+            var sTransTypeID = "TransTypeID=" + $("#hTransTypeID").val();
+            var sTransType = "TransType=" + $("#hTransType").val();
+            var sBeginDate = "BeginDate=" + $("#hBeginDate").val();
+            var sEndDate = "EndDate=" + $("#hEndDate").val();
+            var sIncomeFrom = "IncomeFrom=" + $("#hIncomeFrom").val();
+            var sIncomeTo = "IncomeTo=" + $("#hIncomeTo").val();
+            var sPayFrom = "PayFrom=" + $("#hPayFrom").val();
+            var sPayTo = "PayTo=" + $("#hPayTo").val();
+            var sMemo = "Memo=" + $("#hMemo").val();
+            var sSortName = "SortName=" + $("#hSortName").val();
+            var sSortDirection = "SortDirection=" + $("#hSortDirection").val();
+            var sPageSize = "PageSize=" + $("#hPageSize").val();
+            var sPageIndex = "PageIndex=0";
+            triggerFunc('../../Special/am_CurrentTransDownload.aspx', 'FORM', '_self', sAccountUID, sAccountNo, sSubAccountNo, sCurrency, sTransTypeID, sTransType, sBeginDate, sEndDate, sIncomeFrom, sIncomeTo, sPayFrom, sPayTo, sMemo, sSortName, sSortDirection, sPageIndex, sPageSize);
+        }
+
+        function showPrintPage() {
+            var account = $("#ddlDebitCardList").find("option:selected").text().split(":");
+            $("#lblAccountNo").text(account[1]);
+            $("#lblAccountName").text($("#hName").val());
+            $("#lblCurrency").text($("#hCurrency").val());
+            $("#lblBeginDate").text($("#hBeginDate").val().replace(/(\d{4})(\d{2})(\d{2})/, '$1/$2/$3'));
+            $("#lblEndDate").text($("#hEndDate").val().replace(/(\d{4})(\d{2})(\d{2})/, '$1/$2/$3'));
+            getAll();
+        }
+
+        function hiddenPrintPage() {
+            $("#ddlDebitCardList").trigger("chosen:updated.chosen");
+            $(".page-noprint").show();
+            $(".page-print").hide();
+            $("#lblAccountNo").text("");
+            $("#lblAccountName").text("");
+            $("#lblCurrency").text("");
+            $("#lblBeginDate").text("");
+            $("#lblEndDate").text("");
+            $("#lblInCount").text("");
+            $("#lblOutCount").text("");
+            $("#lblInTotalMoney").text("");
+            $("#lblOutTotalMoney").text("");
+            $("#printPage tr:gt(0)").remove();
+            if (parent.adjustFrameSize) parent.adjustFrameSize();
+        }
+    </script>
+    </form>
+
+
+<div class="chosen-container-dropdown chosen-container-single chosen-select chosen-container-single-nosearch" id="ddlSubAccountList_chosen_drop" style="width: 230px;"><div class="chosen-drop"><iframe class="mask"></iframe><div class="chosen-search"><input type="text" readonly="" autocomplete="off"></div><ul class="chosen-results"></ul></div></div><div class="chosen-container-dropdown chosen-container-single chosen-select chosen-container-single-nosearch" id="ddlTransTypeList_chosen_drop" style="width: 171px;"><div class="chosen-drop"><iframe class="mask"></iframe><div class="chosen-search"><input type="text" readonly="" autocomplete="off"></div><ul class="chosen-results"></ul></div></div><div class="chosen-container-dropdown chosen-container-single chosen-select-account chosen-container-single-nosearch" id="ddlDebitCardList_chosen_drop" style="width: 277px;"><div class="chosen-drop"><iframe class="mask"></iframe><div class="chosen-search"><input type="text" readonly="" autocomplete="off"></div><ul class="chosen-results"></ul></div></div><div class="datepicker datepicker-drop" style="display: none;"><iframe class="mask" frameborder="0" style="width: 268px; height: 287px;"></iframe><div style="display: block;"><table style="table-layout: fixed;"><tbody><tr><td id="data-start">&nbsp;</td><td id="data-span">&nbsp;</td><td id="data-end">&nbsp;</td><td id="data-btn">&nbsp;</td></tr></tbody></table></div><div class="datepicker-days" style="display: block;"><table class=" table-condensed"><thead><tr><th class="prev"><i class="icon-arrow-left"></i></th><th class="switch" colspan="5">2019 年 1 月</th><th class="next"><i class="icon-arrow-right"></i></th></tr><tr><th class="dow">日</th><th class="dow">一</th><th class="dow">二</th><th class="dow">三</th><th class="dow">四</th><th class="dow">五</th><th class="dow">六</th></tr></thead><tbody><tr><td class="day new">30</td><td class="day new">31</td><td class="day">1</td><td class="day">2</td><td class="day">3</td><td class="day">4</td><td class="day">5</td></tr><tr><td class="day">6</td><td class="day">7</td><td class="day">8</td><td class="day">9</td><td class="day">10</td><td class="day">11</td><td class="day">12</td></tr><tr><td class="day">13</td><td class="day">14</td><td class="day">15</td><td class="day">16</td><td class="day">17</td><td class="day">18</td><td class="day">19</td></tr><tr><td class="day">20</td><td class="day">21</td><td class="day">22</td><td class="day active">23</td><td class="day">24</td><td class="day">25</td><td class="day">26</td></tr><tr><td class="day">27</td><td class="day">28</td><td class="day">29</td><td class="day">30</td><td class="day">31</td><td class="day new">1</td><td class="day new">2</td></tr><tr><td class="day new">3</td><td class="day new">4</td><td class="day new">5</td><td class="day new">6</td><td class="day new">7</td><td class="day new">8</td><td class="day new">9</td></tr></tbody></table></div><div class="datepicker-months" style="display: none;"><table class="table-condensed table-fix"><thead><tr><th class="prev"><i class="icon-arrow-left"></i></th><th class="switch" colspan="5">2019</th><th class="next"><i class="icon-arrow-right"></i></th></tr></thead><tbody><tr><td colspan="7"><span class="month active">一月</span><span class="month">二月</span><span class="month">三月</span><span class="month">四月</span><span class="month">五月</span><span class="month">六月</span><span class="month">七月</span><span class="month">八月</span><span class="month">九月</span><span class="month">十月</span><span class="month">十一月</span><span class="month">十二月</span></td></tr></tbody></table></div><div class="datepicker-years" style="display: none;"><table class="table-condensed table-fix"><thead><tr><th class="prev"><i class="icon-arrow-left"></i></th><th class="switch" colspan="5">2010-2019</th><th class="next"><i class="icon-arrow-right"></i></th></tr></thead><tbody><tr><td colspan="7"><span class="year old">2009</span><span class="year">2010</span><span class="year">2011</span><span class="year">2012</span><span class="year">2013</span><span class="year">2014</span><span class="year">2015</span><span class="year">2016</span><span class="year">2017</span><span class="year">2018</span><span class="year active">2019</span><span class="year old">2020</span></td></tr></tbody></table></div></div></body></html>

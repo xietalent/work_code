@@ -67,7 +67,7 @@
 <input name="__EVENTTARGET" id="__EVENTTARGET" type="hidden" value="">
 <input name="__EVENTARGUMENT" id="__EVENTARGUMENT" type="hidden" value="">
 <input name="__LASTFOCUS" id="__LASTFOCUS" type="hidden" value="">
-<input name="__VIEWSTATE" id="__VIEWSTATE" type="hidden" value="weGwg3hC04Ix2K5Oe1Ig/SkvIEpII5WoXsmCjKoK4F4giQSi6Qfk3nCk+l36OjdMaA0UqgfAL8797WkxD3i9sx7Sdk0g1sRi1t/STFDYSKZz169y4tBQGkTU7Xf/YqYO7YHP5kzIZoq99kxAYbKASGJav9y4yldI7+AdyX6hLEsHn2Q4v8OgYBn0DpcdM2WvQZe4uQRJAxCnUdSeSqUUUVIUa434XXOMj69L8ePpoi6Zem6zg+bbiguKI8tt8cOm9HlMaJ4uz2DaRQ0jOtYIbfdU/hS8ATdnimrSDCaQmC8W2wMMJd7mSpMrFuTnLRy5ATW1oqme+HTfLANexdE801Bqib6EJvu2lPc/yObBvxnsoDUZq/uoYywJnN16IhXKKIgYYqYImaFa1jPSeQhlPJ61V6suWhOpxqXFbwN3aCHtImd95v7W1k4z1ED9l+xvoMvK9L9xOcOe8wSKdnVaSFCF/l5xLIYEkzC6a5w9b2LZh17uBAAnnUkoqslfbAmyxhRbXfmZMv2fKb79Kiwe9EMcimymBPKfd5UBDkHg6VcQPwRFE+AUKUvZemuyEG56EEB4IkAgZHgr97JBymxIFaic7QrteKFCHa647+0jeyCJpy3FAokdKnXzfkEvqBOs/63mxBC6xvliuaf37u9OXRGg7KnSLq4b1sA+pOe8k3eWr6cOokMl8yNBEejAdN6Q/kZcuXUVDaMNH6aCo75Y7W2KQ2DJYpaTM0EJHmH1CEGp7pqrsR5+HdZy1N0xKnnWe19bfmwK0MJ/hvSw8XzaVkj74rrCOydBse+/OZSjl1tpS5z/5YHdOZssZGbLNaykSOUNKuv/8tR1pP50yI2nVNU7rEbtqNXt40U+EjtssPXw7BcA5GvDV3v3noaridUJIXh5VMTYQzMxT5yiYVHCtD0tV0pf84QZXq8bATvMxvfD3CJZN35maU2UakOGx8BF+9oUCE5Z1nyOZPjlPNUfFvN/aF6la8wVAn3fPWjRROF6NTCTRw2pGlPBIILbca5PlTxUng3J7N80Eg7rAD8o9eXxLTD+GPVN64zwvlR6fcufU52Ae3qqB0x6TtLT/g+vWKoYD8X9pr7jYYknEV6oxf0pElK908SpANOnEdIo/QOqmiyPasfFVWrxuvsJlhiB+BX+Q6SHJo2CKwFGWnUupAcvPu1WrtcA9LMKaj+Xj4U=">
+<input name="__VIEWSTATE" id="__VIEWSTATE" type="hidden" value="JZ2bnPgLZR4lwNPqqnoYi2JHGZD5B7vqRC7Xyse/TxHEjWm+0BEd0Az4bL/5lb1mOi1Qs5TOYvz2i+hxQTGo9qwgDEeDEO//drRRvIz0/Wk86h4ygjyTTKlbHHOTItcDVp3C/5ChMQdOFiJubMdrrJmBZmfra4siH4HhlkyU4KiTasmSIikwS/UjwUmFn5l4aqBUN5kwtBhIlK+P1PySyOYJT5pH7940tob3ieWl3Gnv6uz002TxCrxzAtE3rGmoEUZt8tGzOWbI0ImVAM04k4tvlmdinyv5oOIs8KlfiacVWoARacojtoy5lugLN1mS1HIaYcFK9wNMmEbiJ9Vcy3C4qepDRXxN0tCC8Wy+qzZ4y+0NBMCjXmpQbVdzvuSi8/KF19BbdO9wNyeNN3DUMr9eGASPQyPogrRcy3sS78k3mlSEq444ICwEvAmLi0rB7scHIA6DvJUJspzPTR5NY84lEmkZj7WGJPUmW95Yx0hWUb47a3nnJQBRdWdPAvTMf1SEMjVxArM9k9VRn3XSi9LxQSSYU60C5eGZ5i4TIyXEVLBaZ7TVYSM50NTk8vQ/wnTHyPyTQwgicXo9SZ9jhXNp6k+3EonCBdqI6m/16z+cydCi/w/SqHaakxN+hHA6jxt6VTPEM08sbrJqTdFzPv22fYm0ywVcRXs47qVKDeZftnUjfqvaSteuJ+p8lewGKOxt5aVn3cqkHbXH0hlFPbLkqK8BwGuIcSZ4kjuYIJcB8fLbp8qDjNGyCYWzHTl4+4mO0QsAHLUFsYqq9USBHSjfN0QcLeUI57I/s6JRzKDTAJFVyH6to04BTKfA4+bT7HOn1DlGJw14ZTtMJA2+IB4ZuvulFJNPhUWvtDf3lJlnAMF8gI1qex0NFLMxUTQmjEYk0+7MBBETWAuiXB0pul9LzjcXjygsI1QOWDOuj84n6IiV+6isLzlGceL3/7gLXzMgl3GCBSrBtS+qX+4O5V7UfoIqbqbGSFJcHLyQtTME0Y/qhRmMPZNOwrmqkCg4Wa7uwggk7w3ZxP8DETbybqaKXkCH96Uwce55xMeEFzsaWk6iOLSDNjWXuUG3TL41HiRr2XIf0C7pqojWsT8e8m0fbV3ItpVgSxAx5uRo+XvIFgofaGWOuDZeeYbotvF0AQ23cCO2c5+5wY5dEKnqVGroafiqc3RFDaDdKrJ2glY=">
 </div>
 
 <script type="text/javascript">
@@ -90,11 +90,11 @@ function __doPostBack(eventTarget, eventArgument) {
 <div>
 
 	<input name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" type="hidden" value="3994E162">
-	<input name="__EVENTVALIDATION" id="__EVENTVALIDATION" type="hidden" value="fi+rb+KTqbJIDHYfwxePlER2NAQmSkxCJI7JaDRkBX3LAkwZm0vDOiAilicLwZz1bAudqLPsyu45QwygyyVtLxwnlsxwhY91oBnzQzwXQA78AvDPoTgM+MafAko2221zR2E5Z1W9FAVhp9pyfuODBsa6LKd2x4OMs/VVfLPUjJuc2H+rxNr+bmVLz6wP2NDMVbnr92SVsoj+3gqwE09lXmeqx7mkXWCLU2Smbuu+2FM=">
+	<input name="__EVENTVALIDATION" id="__EVENTVALIDATION" type="hidden" value="JmMCEtCCK1MvX5YMDAhxg+hTcVnYIM134c3NlsPlTVeFjsdC4ckhX2m8i1iPDhM3A7rtp9fQjLOHmdSskNG9LmoIf1ANvn3mt/txjhQ5DaxwdLNmK6kBM4aXA8nyf3/yOzj33oBhtujHhvOBUsxoB2A7GXGLqfqES33iMoZAqxJzgwvrMefETEN+6lXmLpGqrRFbwI96HkBsvgdgkxh2mgV3gCsSmjfd9Gpt8ut3IdI=">
 </div>
         <div class="page-title">
             <span>
-                <span id="lFunctionName">å·²å‡ºè´¦å•æŸ¥è¯¢</span>
+                <span id="lFunctionName">ÒÑ³öÕËµ¥²éÑ¯</span>
             </span>
         </div>
         
@@ -122,9 +122,9 @@ function __doPostBack(eventTarget, eventArgument) {
         <div class="page-header-inbox-account">
             <span class="page-header-inbox-account-dropdown">
                 <select name="am_MainPanel1$ddlCreditAccList" class="chosen-select-account" id="am_MainPanel1_ddlCreditAccList" style="width: 285px; display: none;" onchange="ddlSelectChange();setTimeout('__doPostBack(\'am_MainPanel1$ddlCreditAccList\',\'\')', 0)">
-	<option selected="selected" value="0155298473001001">ä¸ªäººå¡è´¦æˆ·001001</option>
+	<option selected="selected" value="0155298473001001">¸öÈË¿¨ÕË»§001001</option>
 
-</select><div title="" class="chosen-container chosen-container-single chosen-select-account" id="am_MainPanel1_ddlCreditAccList_chosen" style="width: 285px;"><a tabindex="-1" class="chosen-single"><span><em>å½“å‰è´¦æˆ·ï¼š</em>ä¸ªäººå¡è´¦æˆ·001001</span><div><b><i class="glyphicon chosen-down">îšŒ</i><i class="glyphicon chosen-up">îš</i></b></div></a></div>
+</select><div title="" class="chosen-container chosen-container-single chosen-select-account" id="am_MainPanel1_ddlCreditAccList_chosen" style="width: 285px;"><a tabindex="-1" class="chosen-single"><span><em>µ±Ç°ÕË»§£º</em>¸öÈË¿¨ÕË»§001001</span><div><b><i class="glyphicon chosen-down">¥‡</i><i class="glyphicon chosen-up">¥‰</i></b></div></a></div>
             </span>
         </div>
         <div class="page-header-inbox-message">
@@ -134,7 +134,7 @@ function __doPostBack(eventTarget, eventArgument) {
         </div>
     </div>
     <div class="page-header-link">
-        <div class="page-header-link-container three"><span><i title="" class="glyphicon icon-icon-48"></i><a href="javascript:javascript:changeSub(2)" cmbbehavior="entryid:bsc001901">æœªå‡ºè´¦å•æŸ¥è¯¢</a><em></em></span><span><i title="" class="glyphicon icon-icon-48"></i><a href="javascript:triggerFunc('am_AdvanceHomePage.aspx','FORM','_self');" cmbbehavior="entryid:bsc001902">é¢„å€Ÿç°é‡‘</a><em></em></span><span><i title="" class="glyphicon icon-icon-48"></i><a href="javascript:triggerFunc('am_ApplyCashAdvanceByStages.aspx','FORM','_self');" cmbbehavior="entryid:bsc001903">ç°é‡‘åˆ†æœŸ</a><em></em></span></div>
+        <div class="page-header-link-container three"><span><i title="" class="glyphicon icon-icon-48"></i><a href="javascript:javascript:changeSub(2)" cmbbehavior="entryid:bsc001901">Î´³öÕËµ¥²éÑ¯</a><em></em></span><span><i title="" class="glyphicon icon-icon-48"></i><a href="javascript:triggerFunc('am_AdvanceHomePage.aspx','FORM','_self');" cmbbehavior="entryid:bsc001902">Ô¤½èÏÖ½ğ</a><em></em></span><span><i title="" class="glyphicon icon-icon-48"></i><a href="javascript:triggerFunc('am_ApplyCashAdvanceByStages.aspx','FORM','_self');" cmbbehavior="entryid:bsc001903">ÏÖ½ğ·ÖÆÚ</a><em></em></span></div>
     </div>
 </div>
 
@@ -144,7 +144,7 @@ function __doPostBack(eventTarget, eventArgument) {
             <div class="page-panel-tabs" id="tabProduct">
                 <div class="page-panel-tabs" id="tabFinProduct">
                     <ul>
-                        <li class="active"><a href="javascript:void(0);">æŸ¥è¯¢ç»“æœ
+                        <li class="active"><a href="javascript:void(0);">²éÑ¯½á¹û
                         </a></li>
                     </ul>
                 </div>
@@ -152,31 +152,31 @@ function __doPostBack(eventTarget, eventArgument) {
             <div class="page-panel-content">
                 <table align="Center" class="page-table-common action table-fix" id="dgReckoningInfo1" style="border-width: 0px; width: 100%; border-collapse: collapse;" border="0" cellspacing="0">
 	<tbody><tr align="center" class="dgHeader" valign="middle" style="white-space: nowrap;">
-		<th class="dgHeader" style="width: 8%; white-space: nowrap;" scope="col">è´¦å•æœˆä»½</th><th class="dgHeader" style="width: 15%; white-space: nowrap;" scope="col">äººæ°‘å¸åº”è¿˜æ€»é¢</th><th class="dgHeader" style="width: 15%; white-space: nowrap;" scope="col">äººæ°‘å¸æœ€ä½è¿˜æ¬¾é¢</th><th class="dgHeader" style="width: 15%; white-space: nowrap;" scope="col">ç¾å…ƒåº”è¿˜æ€»é¢</th><th class="dgHeader" style="width: 15%; white-space: nowrap;" scope="col">ç¾å…ƒæœ€ä½è¿˜æ¬¾é¢</th><th class="dgHeader" style="width: 16%; white-space: nowrap;" scope="col">è´¦å•æ˜ç»†</th><th class="dgHeader" style="width: 8%; white-space: nowrap;" scope="col">è´¦å•åˆ†æœŸ</th><th class="dgHeader" style="width: 8%; white-space: nowrap;" scope="col">å¿«é€Ÿè¿˜æ¬¾</th>
+		<th class="dgHeader" style="width: 8%; white-space: nowrap;" scope="col">ÕËµ¥ÔÂ·İ</th><th class="dgHeader" style="width: 15%; white-space: nowrap;" scope="col">ÈËÃñ±ÒÓ¦»¹×Ü¶î</th><th class="dgHeader" style="width: 15%; white-space: nowrap;" scope="col">ÈËÃñ±Ò×îµÍ»¹¿î¶î</th><th class="dgHeader" style="width: 15%; white-space: nowrap;" scope="col">ÃÀÔªÓ¦»¹×Ü¶î</th><th class="dgHeader" style="width: 15%; white-space: nowrap;" scope="col">ÃÀÔª×îµÍ»¹¿î¶î</th><th class="dgHeader" style="width: 16%; white-space: nowrap;" scope="col">ÕËµ¥Ã÷Ï¸</th><th class="dgHeader" style="width: 8%; white-space: nowrap;" scope="col">ÕËµ¥·ÖÆÚ</th><th class="dgHeader" style="width: 8%; white-space: nowrap;" scope="col">¿ìËÙ»¹¿î</th>
 	</tr><tr>
-		<td align="center" style="width: 6%; white-space: nowrap;">2019-01</td><td align="right" style="width: 15%; white-space: nowrap;">ï¿¥21,720.00</td><td align="right" style="width: 15%; white-space: nowrap;">ï¿¥2,172.00</td><td align="right" style="width: 15%; white-space: nowrap;">$0.00</td><td align="right" style="white-space: nowrap;">$0.00</td><td align="center" style="width: 15%; white-space: nowrap;"><a onclick="" href="#" cmbbehavior="entryid:bsc001001"> è´¦å•æ˜ç»† </a> <a onclick="" href="#" cmbbehavior="entryid:bsc001002"> è¡¥å¯„è´¦å• </a></td><td align="center" style="width: 8%; white-space: nowrap;"><a onclick="triggerFunc('./am_ApplyReckoningByStages.aspx','FORM','_self','DisplayFlag=1');" href="#"> ç«‹å³ç”³è¯· </a></td><td align="center" style="width: 8%; white-space: nowrap;"><a onclick="" href="#" cmbbehavior="entryid:bsc001003"> å¿«é€Ÿè¿˜æ¬¾ </a></td>
+		<td align="center" style="width: 6%; white-space: nowrap;">2019-01</td><td align="right" style="width: 15%; white-space: nowrap;">£¤21,720.00</td><td align="right" style="width: 15%; white-space: nowrap;">£¤2,172.00</td><td align="right" style="width: 15%; white-space: nowrap;">$0.00</td><td align="right" style="white-space: nowrap;">$0.00</td><td align="center" style="width: 15%; white-space: nowrap;"><a onclick="" href="#" cmbbehavior="entryid:bsc001001"> ÕËµ¥Ã÷Ï¸ </a> <a onclick="" href="#" cmbbehavior="entryid:bsc001002"> ²¹¼ÄÕËµ¥ </a></td><td align="center" style="width: 8%; white-space: nowrap;"><a onclick="triggerFunc('./am_ApplyReckoningByStages.aspx','FORM','_self','DisplayFlag=1');" href="#"> Á¢¼´ÉêÇë </a></td><td align="center" style="width: 8%; white-space: nowrap;"><a onclick="" href="#" cmbbehavior="entryid:bsc001003"> ¿ìËÙ»¹¿î </a></td>
 	</tr><tr class="odd">
-		<td align="center" style="width: 6%; white-space: nowrap;">2018-12</td><td align="right" style="width: 15%; white-space: nowrap;">ï¿¥21,880.52</td><td align="right" style="width: 15%; white-space: nowrap;">ï¿¥2,188.05</td><td align="right" style="width: 15%; white-space: nowrap;">$0.00</td><td align="right" style="white-space: nowrap;">$0.00</td><td align="center" style="width: 15%; white-space: nowrap;"><a onclick="" href="#" cmbbehavior="entryid:bsc001001"> è´¦å•æ˜ç»† </a> <a onclick="" href="#" cmbbehavior="entryid:bsc001002"> è¡¥å¯„è´¦å• </a></td><td align="center" style="width: 8%; white-space: nowrap;">--</td><td align="center" style="width: 8%; white-space: nowrap;">--</td>
+		<td align="center" style="width: 6%; white-space: nowrap;">2018-12</td><td align="right" style="width: 15%; white-space: nowrap;">£¤21,880.52</td><td align="right" style="width: 15%; white-space: nowrap;">£¤2,188.05</td><td align="right" style="width: 15%; white-space: nowrap;">$0.00</td><td align="right" style="white-space: nowrap;">$0.00</td><td align="center" style="width: 15%; white-space: nowrap;"><a onclick="" href="#" cmbbehavior="entryid:bsc001001"> ÕËµ¥Ã÷Ï¸ </a> <a onclick="" href="#" cmbbehavior="entryid:bsc001002"> ²¹¼ÄÕËµ¥ </a></td><td align="center" style="width: 8%; white-space: nowrap;">--</td><td align="center" style="width: 8%; white-space: nowrap;">--</td>
 	</tr><tr>
-		<td align="center" style="width: 6%; white-space: nowrap;">2018-11</td><td align="right" style="width: 15%; white-space: nowrap;">ï¿¥21,331.00</td><td align="right" style="width: 15%; white-space: nowrap;">ï¿¥2,133.10</td><td align="right" style="width: 15%; white-space: nowrap;">$0.00</td><td align="right" style="white-space: nowrap;">$0.00</td><td align="center" style="width: 15%; white-space: nowrap;"><a onclick="" href="#" cmbbehavior="entryid:bsc001001"> è´¦å•æ˜ç»† </a> <a onclick="" href="#" cmbbehavior="entryid:bsc001002"> è¡¥å¯„è´¦å• </a></td><td align="center" style="width: 8%; white-space: nowrap;">--</td><td align="center" style="width: 8%; white-space: nowrap;">--</td>
+		<td align="center" style="width: 6%; white-space: nowrap;">2018-11</td><td align="right" style="width: 15%; white-space: nowrap;">£¤21,331.00</td><td align="right" style="width: 15%; white-space: nowrap;">£¤2,133.10</td><td align="right" style="width: 15%; white-space: nowrap;">$0.00</td><td align="right" style="white-space: nowrap;">$0.00</td><td align="center" style="width: 15%; white-space: nowrap;"><a onclick="" href="#" cmbbehavior="entryid:bsc001001"> ÕËµ¥Ã÷Ï¸ </a> <a onclick="" href="#" cmbbehavior="entryid:bsc001002"> ²¹¼ÄÕËµ¥ </a></td><td align="center" style="width: 8%; white-space: nowrap;">--</td><td align="center" style="width: 8%; white-space: nowrap;">--</td>
 	</tr><tr class="odd">
-		<td align="center" style="width: 6%; white-space: nowrap;">2018-10</td><td align="right" style="width: 15%; white-space: nowrap;">ï¿¥21,658.00</td><td align="right" style="width: 15%; white-space: nowrap;">ï¿¥2,165.80</td><td align="right" style="width: 15%; white-space: nowrap;">$0.00</td><td align="right" style="white-space: nowrap;">$0.00</td><td align="center" style="width: 15%; white-space: nowrap;"><a onclick="" href="#" cmbbehavior="entryid:bsc001001"> è´¦å•æ˜ç»† </a> <a onclick="" href="#" cmbbehavior="entryid:bsc001002"> è¡¥å¯„è´¦å• </a></td><td align="center" style="width: 8%; white-space: nowrap;">--</td><td align="center" style="width: 8%; white-space: nowrap;">--</td>
+		<td align="center" style="width: 6%; white-space: nowrap;">2018-10</td><td align="right" style="width: 15%; white-space: nowrap;">£¤21,658.00</td><td align="right" style="width: 15%; white-space: nowrap;">£¤2,165.80</td><td align="right" style="width: 15%; white-space: nowrap;">$0.00</td><td align="right" style="white-space: nowrap;">$0.00</td><td align="center" style="width: 15%; white-space: nowrap;"><a onclick="" href="#" cmbbehavior="entryid:bsc001001"> ÕËµ¥Ã÷Ï¸ </a> <a onclick="" href="#" cmbbehavior="entryid:bsc001002"> ²¹¼ÄÕËµ¥ </a></td><td align="center" style="width: 8%; white-space: nowrap;">--</td><td align="center" style="width: 8%; white-space: nowrap;">--</td>
 	</tr><tr>
-		<td align="center" style="width: 6%; white-space: nowrap;">2018-09</td><td align="right" style="width: 15%; white-space: nowrap;">ï¿¥19,936.10</td><td align="right" style="width: 15%; white-space: nowrap;">ï¿¥1,993.61</td><td align="right" style="width: 15%; white-space: nowrap;">$0.00</td><td align="right" style="white-space: nowrap;">$0.00</td><td align="center" style="width: 15%; white-space: nowrap;"><a onclick="" href="#" cmbbehavior="entryid:bsc001001"> è´¦å•æ˜ç»† </a> <a onclick="" href="#" cmbbehavior="entryid:bsc001002"> è¡¥å¯„è´¦å• </a></td><td align="center" style="width: 8%; white-space: nowrap;">--</td><td align="center" style="width: 8%; white-space: nowrap;">--</td>
+		<td align="center" style="width: 6%; white-space: nowrap;">2018-09</td><td align="right" style="width: 15%; white-space: nowrap;">£¤19,936.10</td><td align="right" style="width: 15%; white-space: nowrap;">£¤1,993.61</td><td align="right" style="width: 15%; white-space: nowrap;">$0.00</td><td align="right" style="white-space: nowrap;">$0.00</td><td align="center" style="width: 15%; white-space: nowrap;"><a onclick="" href="#" cmbbehavior="entryid:bsc001001"> ÕËµ¥Ã÷Ï¸ </a> <a onclick="" href="#" cmbbehavior="entryid:bsc001002"> ²¹¼ÄÕËµ¥ </a></td><td align="center" style="width: 8%; white-space: nowrap;">--</td><td align="center" style="width: 8%; white-space: nowrap;">--</td>
 	</tr><tr class="odd">
-		<td align="center" style="width: 6%; white-space: nowrap;">2018-08</td><td align="right" style="width: 15%; white-space: nowrap;">ï¿¥21,281.00</td><td align="right" style="width: 15%; white-space: nowrap;">ï¿¥2,128.10</td><td align="right" style="width: 15%; white-space: nowrap;">$0.00</td><td align="right" style="white-space: nowrap;">$0.00</td><td align="center" style="width: 15%; white-space: nowrap;"><a onclick="" href="#" cmbbehavior="entryid:bsc001001"> è´¦å•æ˜ç»† </a> <a onclick="" href="#" cmbbehavior="entryid:bsc001002"> è¡¥å¯„è´¦å• </a></td><td align="center" style="width: 8%; white-space: nowrap;">--</td><td align="center" style="width: 8%; white-space: nowrap;">--</td>
+		<td align="center" style="width: 6%; white-space: nowrap;">2018-08</td><td align="right" style="width: 15%; white-space: nowrap;">£¤21,281.00</td><td align="right" style="width: 15%; white-space: nowrap;">£¤2,128.10</td><td align="right" style="width: 15%; white-space: nowrap;">$0.00</td><td align="right" style="white-space: nowrap;">$0.00</td><td align="center" style="width: 15%; white-space: nowrap;"><a onclick="" href="#" cmbbehavior="entryid:bsc001001"> ÕËµ¥Ã÷Ï¸ </a> <a onclick="" href="#" cmbbehavior="entryid:bsc001002"> ²¹¼ÄÕËµ¥ </a></td><td align="center" style="width: 8%; white-space: nowrap;">--</td><td align="center" style="width: 8%; white-space: nowrap;">--</td>
 	</tr><tr>
-		<td align="center" style="width: 6%; white-space: nowrap;">2018-07</td><td align="right" style="width: 15%; white-space: nowrap;">ï¿¥21,980.10</td><td align="right" style="width: 15%; white-space: nowrap;">ï¿¥2,198.01</td><td align="right" style="width: 15%; white-space: nowrap;">$0.00</td><td align="right" style="white-space: nowrap;">$0.00</td><td align="center" style="width: 15%; white-space: nowrap;"><a onclick="" href="#" cmbbehavior="entryid:bsc001001"> è´¦å•æ˜ç»† </a> <a onclick="" href="#" cmbbehavior="entryid:bsc001002"> è¡¥å¯„è´¦å• </a></td><td align="center" style="width: 8%; white-space: nowrap;">--</td><td align="center" style="width: 8%; white-space: nowrap;">--</td>
+		<td align="center" style="width: 6%; white-space: nowrap;">2018-07</td><td align="right" style="width: 15%; white-space: nowrap;">£¤21,980.10</td><td align="right" style="width: 15%; white-space: nowrap;">£¤2,198.01</td><td align="right" style="width: 15%; white-space: nowrap;">$0.00</td><td align="right" style="white-space: nowrap;">$0.00</td><td align="center" style="width: 15%; white-space: nowrap;"><a onclick="" href="#" cmbbehavior="entryid:bsc001001"> ÕËµ¥Ã÷Ï¸ </a> <a onclick="" href="#" cmbbehavior="entryid:bsc001002"> ²¹¼ÄÕËµ¥ </a></td><td align="center" style="width: 8%; white-space: nowrap;">--</td><td align="center" style="width: 8%; white-space: nowrap;">--</td>
 	</tr><tr class="odd">
-		<td align="center" style="width: 6%; white-space: nowrap;">2018-06</td><td align="right" style="width: 15%; white-space: nowrap;">ï¿¥21,961.00</td><td align="right" style="width: 15%; white-space: nowrap;">ï¿¥2,196.10</td><td align="right" style="width: 15%; white-space: nowrap;">$0.00</td><td align="right" style="white-space: nowrap;">$0.00</td><td align="center" style="width: 15%; white-space: nowrap;"><a onclick="" href="#" cmbbehavior="entryid:bsc001001"> è´¦å•æ˜ç»† </a> <a onclick="" href="#" cmbbehavior="entryid:bsc001002"> è¡¥å¯„è´¦å• </a></td><td align="center" style="width: 8%; white-space: nowrap;">--</td><td align="center" style="width: 8%; white-space: nowrap;">--</td>
+		<td align="center" style="width: 6%; white-space: nowrap;">2018-06</td><td align="right" style="width: 15%; white-space: nowrap;">£¤21,961.00</td><td align="right" style="width: 15%; white-space: nowrap;">£¤2,196.10</td><td align="right" style="width: 15%; white-space: nowrap;">$0.00</td><td align="right" style="white-space: nowrap;">$0.00</td><td align="center" style="width: 15%; white-space: nowrap;"><a onclick="" href="#" cmbbehavior="entryid:bsc001001"> ÕËµ¥Ã÷Ï¸ </a> <a onclick="" href="#" cmbbehavior="entryid:bsc001002"> ²¹¼ÄÕËµ¥ </a></td><td align="center" style="width: 8%; white-space: nowrap;">--</td><td align="center" style="width: 8%; white-space: nowrap;">--</td>
 	</tr><tr>
-		<td align="center" style="width: 6%; white-space: nowrap;">2018-05</td><td align="right" style="width: 15%; white-space: nowrap;">ï¿¥0.00</td><td align="right" style="width: 15%; white-space: nowrap;">ï¿¥0.00</td><td align="right" style="width: 15%; white-space: nowrap;">$0.00</td><td align="right" style="white-space: nowrap;">$0.00</td><td align="center" style="width: 15%; white-space: nowrap;"><a onclick="" href="#" cmbbehavior="entryid:bsc001001"> è´¦å•æ˜ç»† </a> <a onclick="" href="#" cmbbehavior="entryid:bsc001002"> è¡¥å¯„è´¦å• </a></td><td align="center" style="width: 8%; white-space: nowrap;">--</td><td align="center" style="width: 8%; white-space: nowrap;">--</td>
+		<td align="center" style="width: 6%; white-space: nowrap;">2018-05</td><td align="right" style="width: 15%; white-space: nowrap;">£¤0.00</td><td align="right" style="width: 15%; white-space: nowrap;">£¤0.00</td><td align="right" style="width: 15%; white-space: nowrap;">$0.00</td><td align="right" style="white-space: nowrap;">$0.00</td><td align="center" style="width: 15%; white-space: nowrap;"><a onclick="" href="#" cmbbehavior="entryid:bsc001001"> ÕËµ¥Ã÷Ï¸ </a> <a onclick="" href="#" cmbbehavior="entryid:bsc001002"> ²¹¼ÄÕËµ¥ </a></td><td align="center" style="width: 8%; white-space: nowrap;">--</td><td align="center" style="width: 8%; white-space: nowrap;">--</td>
 	</tr><tr class="odd">
-		<td align="center" style="width: 6%; white-space: nowrap;">2018-04</td><td align="right" style="width: 15%; white-space: nowrap;">ï¿¥13,841.99</td><td align="right" style="width: 15%; white-space: nowrap;">ï¿¥1,384.20</td><td align="right" style="width: 15%; white-space: nowrap;">$0.00</td><td align="right" style="white-space: nowrap;">$0.00</td><td align="center" style="width: 15%; white-space: nowrap;"><a onclick="" href="#" cmbbehavior="entryid:bsc001001"> è´¦å•æ˜ç»† </a> <a onclick="" href="#" cmbbehavior="entryid:bsc001002"> è¡¥å¯„è´¦å• </a></td><td align="center" style="width: 8%; white-space: nowrap;">--</td><td align="center" style="width: 8%; white-space: nowrap;">--</td>
+		<td align="center" style="width: 6%; white-space: nowrap;">2018-04</td><td align="right" style="width: 15%; white-space: nowrap;">£¤13,841.99</td><td align="right" style="width: 15%; white-space: nowrap;">£¤1,384.20</td><td align="right" style="width: 15%; white-space: nowrap;">$0.00</td><td align="right" style="white-space: nowrap;">$0.00</td><td align="center" style="width: 15%; white-space: nowrap;"><a onclick="" href="#" cmbbehavior="entryid:bsc001001"> ÕËµ¥Ã÷Ï¸ </a> <a onclick="" href="#" cmbbehavior="entryid:bsc001002"> ²¹¼ÄÕËµ¥ </a></td><td align="center" style="width: 8%; white-space: nowrap;">--</td><td align="center" style="width: 8%; white-space: nowrap;">--</td>
 	</tr><tr>
-		<td align="center" style="width: 6%; white-space: nowrap;">2018-03</td><td align="right" style="width: 15%; white-space: nowrap;">ï¿¥0.00</td><td align="right" style="width: 15%; white-space: nowrap;">ï¿¥0.00</td><td align="right" style="width: 15%; white-space: nowrap;">$0.00</td><td align="right" style="white-space: nowrap;">$0.00</td><td align="center" style="width: 15%; white-space: nowrap;"><a onclick="" href="#" cmbbehavior="entryid:bsc001001"> è´¦å•æ˜ç»† </a> <a onclick="" href="#" cmbbehavior="entryid:bsc001002"> è¡¥å¯„è´¦å• </a></td><td align="center" style="width: 8%; white-space: nowrap;">--</td><td align="center" style="width: 8%; white-space: nowrap;">--</td>
+		<td align="center" style="width: 6%; white-space: nowrap;">2018-03</td><td align="right" style="width: 15%; white-space: nowrap;">£¤0.00</td><td align="right" style="width: 15%; white-space: nowrap;">£¤0.00</td><td align="right" style="width: 15%; white-space: nowrap;">$0.00</td><td align="right" style="white-space: nowrap;">$0.00</td><td align="center" style="width: 15%; white-space: nowrap;"><a onclick="" href="#" cmbbehavior="entryid:bsc001001"> ÕËµ¥Ã÷Ï¸ </a> <a onclick="" href="#" cmbbehavior="entryid:bsc001002"> ²¹¼ÄÕËµ¥ </a></td><td align="center" style="width: 8%; white-space: nowrap;">--</td><td align="center" style="width: 8%; white-space: nowrap;">--</td>
 	</tr><tr class="odd">
-		<td align="center" style="width: 6%; white-space: nowrap;">2018-02</td><td align="right" style="width: 15%; white-space: nowrap;">ï¿¥6,025.04</td><td align="right" style="width: 15%; white-space: nowrap;">ï¿¥602.50</td><td align="right" style="width: 15%; white-space: nowrap;">$0.00</td><td align="right" style="white-space: nowrap;">$0.00</td><td align="center" style="width: 15%; white-space: nowrap;"><a onclick="" href="#" cmbbehavior="entryid:bsc001001"> è´¦å•æ˜ç»† </a> <a onclick="" href="#" cmbbehavior="entryid:bsc001002"> è¡¥å¯„è´¦å• </a></td><td align="center" style="width: 8%; white-space: nowrap;">--</td><td align="center" style="width: 8%; white-space: nowrap;">--</td>
+		<td align="center" style="width: 6%; white-space: nowrap;">2018-02</td><td align="right" style="width: 15%; white-space: nowrap;">£¤6,025.04</td><td align="right" style="width: 15%; white-space: nowrap;">£¤602.50</td><td align="right" style="width: 15%; white-space: nowrap;">$0.00</td><td align="right" style="white-space: nowrap;">$0.00</td><td align="center" style="width: 15%; white-space: nowrap;"><a onclick="" href="#" cmbbehavior="entryid:bsc001001"> ÕËµ¥Ã÷Ï¸ </a> <a onclick="" href="#" cmbbehavior="entryid:bsc001002"> ²¹¼ÄÕËµ¥ </a></td><td align="center" style="width: 8%; white-space: nowrap;">--</td><td align="center" style="width: 8%; white-space: nowrap;">--</td>
 	</tr>
 </tbody></table>
                 
@@ -193,7 +193,7 @@ function __doPostBack(eventTarget, eventArgument) {
 
 <script language="javascript" type="text/javascript">
     var sLocID = "022030";
-    var sCurAcctInfo = "001"; //ä¿¡ç”¨å¡è¯·æ±‚æ—¶ï¼Œä¸ºSIDTypeï¼›ä¸€å¡é€šæ—¶ä¸ºAccountUID
+    var sCurAcctInfo = "001"; //ĞÅÓÃ¿¨ÇëÇóÊ±£¬ÎªSIDType£»Ò»¿¨Í¨Ê±ÎªAccountUID
     var g_RefreshFlg = 0;
     var sBusType = "CreditCard_Loan"
     var AdvXmlRequestUrl = "";
@@ -224,8 +224,8 @@ function __doPostBack(eventTarget, eventArgument) {
         else {
             return;
         }
-        //adFrame.document.write("<style TYPE='text/css'>.mycontent {font: 9pt/14pt 'å®‹ä½“';font-weight:bold;color:#777777;background-color:#FFFFAA;text-align:center;vertical-align:middle;height:20px;width:90px}</style>"); //DDECF3
-        //adFrame.document.write("<body style='margin-top:0;margin-bottom:0;margin-left:0;margin-right:0;'><div class='mycontent'>åŠ è½½ä¸­ ...</div></body>");
+        //adFrame.document.write("<style TYPE='text/css'>.mycontent {font: 9pt/14pt 'ËÎÌå';font-weight:bold;color:#777777;background-color:#FFFFAA;text-align:center;vertical-align:middle;height:20px;width:90px}</style>"); //DDECF3
+        //adFrame.document.write("<body style='margin-top:0;margin-bottom:0;margin-left:0;margin-right:0;'><div class='mycontent'>¼ÓÔØÖĞ ...</div></body>");
         //adFrame.document.close();
 
         
@@ -242,7 +242,7 @@ function __doPostBack(eventTarget, eventArgument) {
 
     function OnLdasResponse(xmlHttp) {
         var xmlResponse = xmlHttp.responseText;
-        //æ£€æŸ¥é”™è¯¯ç 
+        //¼ì²é´íÎóÂë
         var errorCode = XMLGetValueByElementName(xmlResponse, "ErrorCode");
         if (errorCode == "0") {
             adFrame.location = XMLGetValueByElementName(xmlResponse, "Data");
@@ -264,7 +264,7 @@ function __doPostBack(eventTarget, eventArgument) {
 <input name="uc_Adv$AdvLocID" id="uc_Adv_AdvLocID" type="hidden">
 
         <div>
-            <input name="ClientNo" id="ClientNo" type="hidden" value="5C25DBDF56772338330174794E1E4FD0619245584849643100003221">
+            <input name="ClientNo" id="ClientNo" type="hidden" value="46DBA3B78844841A2CFE7B6A106DFED1670774231956052200003776">
             
 <script type="text/JavaScript">
     var DIV_MSG_AdjustDIVSize = null;
@@ -272,7 +272,7 @@ function __doPostBack(eventTarget, eventArgument) {
     var DIV_MSG_ActionPage = "/CmbBank_CreditCard_Loan/UI/Base/cn/Page/MessagePage3.aspx";
     var param1 = "";
     ////////////////////////////////////////////////////////////////////////////////////////////////////////////
-    //å±‚çš„æ˜¾ç¤ºã€éšè—ä»¥åŠå¤§å°è°ƒæ•´
+    //²ãµÄÏÔÊ¾¡¢Òş²ØÒÔ¼°´óĞ¡µ÷Õû
     ////////////////////////////////////////////////////////////////////////////////////////////////////////////
     function IsIe6() {
         var browser = navigator.appName;
@@ -375,7 +375,7 @@ function __doPostBack(eventTarget, eventArgument) {
             if (window.top == window && !g_isIe6 && g_isXhtmlDocType)
                 MsgDIV.style.top = "100px";
             else {
-            //å…¼å®¹IE(æ ‡å‡†ã€æ€ªå¼‚)æ¨¡å¼ã€FFã€è°·æ­Œã€ä»¥åŠä¸“ä¸šç‰ˆé¡µé¢
+            //¼æÈİIE(±ê×¼¡¢¹ÖÒì)Ä£Ê½¡¢FF¡¢¹È¸è¡¢ÒÔ¼°×¨Òµ°æÒ³Ãæ
                 MsgDIV.style.position = "absolute";
                 var smainWorkArea = parent.window.document.getElementById("mainWorkArea");
                 if (smainWorkArea) {
@@ -495,7 +495,7 @@ function __doPostBack(eventTarget, eventArgument) {
     }
 
     ////////////////////////////////////////////////////////////////////////////////////////////////////////////		
-    //å±‚çš„ç§»åŠ¨
+    //²ãµÄÒÆ¶¯
     ////////////////////////////////////////////////////////////////////////////////////////////////////////////		
     function grabObj(evt) {
         var evt = evt || event;
@@ -549,7 +549,7 @@ function __doPostBack(eventTarget, eventArgument) {
     }
 
     ////////////////////////////////////////////////////////////////////////////////////////////////////////////		
-    //å…¶ä»–äº‹ä»¶å¤„ç†
+    //ÆäËûÊÂ¼ş´¦Àí
     ////////////////////////////////////////////////////////////////////////////////////////////////////////////		
     function ChangeSrc(flag) {
         var imgClose = window.document.getElementById("imgClose");

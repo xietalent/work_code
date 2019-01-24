@@ -56,8 +56,6 @@ class Zhongxin_I():
         self.browser.find_element_by_id('phoneNbr').send_keys(phone_num)
         sleep(3)
         t1 = time.time()
-
-
         try:
             # 截取验证码的截图
             location = self.browser.find_element_by_id("randImage").location

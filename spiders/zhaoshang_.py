@@ -21,7 +21,7 @@ import pytesseract.pytesseract
 import time
 
 
-class SeleniumMiddleware():
+class Zhanoshang_bank():
     def __init__(self, timeout=None, service_args=[]):
         self.logger = getLogger(__name__)
         self.timeout = timeout
@@ -368,6 +368,8 @@ class SeleniumMiddleware():
             print("我的交易记录为:{}".format(record_name))
             print("我的交易金额为:{}".format(record_amount))
 
+
+
     def input_user(self):
         user_name = "13728647735"
         passwd = "419078"
@@ -439,10 +441,13 @@ class SeleniumMiddleware():
 
 
 if __name__ == '__main__':
-    s = SeleniumMiddleware()
-    time.clock()
-    ts6 = s.start_spider()
-    ts = time.clock()- ts6
-    ts = round(ts, 2)
-    print("总耗时为:{}s".format(ts))
+    s = Zhanoshang_bank()
+    try:
+        time.clock()
+        ts6 = s.start_spider()
+        ts = time.clock()- ts6
+        ts = round(ts, 2)
+        print("总耗时为:{}s".format(ts))
+    except:
+        pass
     del s

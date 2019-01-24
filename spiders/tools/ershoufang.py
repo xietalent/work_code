@@ -1,6 +1,6 @@
 
 from lxml import etree
-from requests.packages import urllib3
+# from requests.packages import urllib3
 from collections import OrderedDict
 from time import sleep
 

@@ -1,0 +1,932 @@
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" lang="GBK"><head>
+		<meta http-equiv="Content-Type" content="text/html; charset=gbk" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+		<title>中国石化“油中感谢” 积分增值服务</title>
+		
+		
+<meta http-equiv="X-UA-Compatible" content="IE=8,IE=edge,chrome=1" />
+<meta http-equiv="Content-Type" content="text/html; charset=gbk" />
+<meta name="author" content="Administrator" />
+<link rel="shortcut icon" href="/favicon.ico" />
+<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+<link href="/new/css/public.css" type="text/css" rel="stylesheet" />
+<link href="/new/css/index.css" type="text/css" rel="stylesheet" />
+<link href="/new/css/user.css" type="text/css" rel="stylesheet" />
+<link href="/new/css/style_s.css" type="text/css" rel="stylesheet" />
+<link href="/new/css/style_z.css" type="text/css" rel="stylesheet" />
+<link href="/new/css/my.css" type="text/css" rel="stylesheet" />
+<link rel="icon" href="/favicon.ico" mce_href="/favicon.ico" type="image/x-icon" />
+<script src="//hm.baidu.com/hm.js?6df6f9d56598e7f5e729beb6c4558e60"></script><script type="text/javascript" src="/easyui/jquery-1.8.0.min.js"></script>
+<script type="text/javascript" src="/new/js/jquery.placeholder.js"></script>
+<script type="text/javascript" src="/new/js/index.js"></script>
+<script type="text/javascript" src="/new/js/slides.js"></script>
+<!--<script type="text/javascript" src="/new/js/erweima.js"></script>-->
+<script type="text/javascript" src="/new/js/sha1.js"></script>
+<script type="text/javascript" src="/easyui/jquery.bgiframe-2.1.2.js"></script>
+
+		<link href="/new/css/f_IntegralMall.css" type="text/css" rel="stylesheet" />
+		<!-- <link href="/css/shoppingcart/css.css" type="text/css" rel="stylesheet" /> -->
+		<link href="../../css/shoppingcart/css.css" type="text/css" rel="stylesheet" />
+		<link href="../../css/shoppingcart/shop.css" type="text/css" rel="stylesheet" />
+		<link href="../../css/shoppingcart/coupon_style.css" type="text/css" rel="stylesheet" />
+		<!-- <link href="/css/shoppingcart/css.css" type="text/css" rel="stylesheet" /> -->
+		<script type="text/javascript" src="/js/CheckData.js"></script>
+		<script type="text/javascript" src="/js/goodSearch.js"></script>
+		<script type="text/javascript" src="/js/goToScratch.js"></script>
+		
+		<script>
+				$(function(){
+					 $(window).scroll(function() {
+						   var top = $(window).scrollTop();
+							 top=(top+80);
+						   $(".duihuanche-top").css({top: top + "px" });
+		            });
+				})
+		</script>
+
+
+		<script type="text/javascript">
+			  
+			  
+			  
+			function popup(){
+				window.open("/jsp/popup/notice070918.htm","notice1","scrollbars=no,resizable=no,width=400 height=300");
+			
+			}
+			
+			function popupSpeedResp(){
+				window.open("/jsp/reward/popupSpeedResp.jsp","speed","scrollbars=no,resizable=no,width=208 height=186");
+			}
+			function pointsQuestionnaire(){
+			    var url=""+"/jsp/questionnaire/jsp/points/questionnaire.jsp";  
+				window.open(url,'windows1','resizable=no,scrollbars=yes,width=950,height=700,left=100,top=80'); 
+			}
+			$(document).ready(function() {
+				jQuery.post("/orderExecCheck.do?act=getExpiredPoints",
+			        {ranNum:Math.random()},
+			        function(data){  
+						var result = eval(data);
+				        if(result[0].error=="0"){
+							if(result[0].expiredPointsList.length==0){
+								jQuery("#expiredPoints").html("您没有即将过期的积分！");
+							}else{
+								var totalstr="";
+								for(var i=0;i&lt;result[0].expiredPointsList.length;i++){
+									if(i&lt;3){
+										var str=result[0].expiredPointsList[i];
+										totalstr+="&lt;p style='font-size:10px;' &gt;"+str+"&lt;/p&gt;";
+										
+									}
+								}
+								jQuery("#expiredPoints").html(totalstr);
+			
+							}
+						}else{
+							jQuery("#expiredPoints").html("您没有即将过期的积分！");
+						}
+			        
+			        });
+			
+			});
+			
+			function toViewCard(cartQty){
+			
+				if (cartQty&lt;=0){
+		          alert("购物车里还没有商品！");
+			      }else{
+					  window.location="/viewCart.do";
+				  }
+			
+			}
+			function zk_button2(){
+				var bool=$("input[name='zk_hidden']").val();
+				var beginPoints= $("input[name='beginPoints']").val();
+				var endPoints= $("input[name='endPoints']").val();
+				var showNum = $("input[name='hiddenNum']").val();
+				window.location.href="rewardInit.do?bool=2&amp;beginPoints="+beginPoints+"&amp;endPoints="+endPoints+"&amp;showNum="+showNum;
+			}
+			function zk_click_xia(){
+				var bool=2;
+				var beginPoints= $("input[name='beginPoints']").val();
+				var endPoints= $("input[name='endPoints']").val();
+				var showNum = $("input[name='hiddenNum']").val();
+				window.location.href="rewardInit.do?bool="+bool+"&amp;beginPoints="+beginPoints+"&amp;endPoints="+endPoints+"&amp;showNum="+showNum;
+				}
+			function zk_click_shang(){
+				var bool=1;
+				var beginPoints= $("input[name='beginPoints']").val();
+				var endPoints= $("input[name='endPoints']").val();
+				var showNum = $("input[name='hiddenNum']").val();
+				window.location.href="rewardInit.do?bool="+bool+"&amp;beginPoints="+beginPoints+"&amp;endPoints="+endPoints+"&amp;showNum="+showNum;
+				}
+			$(function(){
+				$("input[name='beginPoints']").val(null);
+				$("input[name='endPoints']").val(null);
+				$("input[name='zk_hidden']").val(2);
+				$("input[name='hiddenNum']").val(2);
+				});
+			function numberCheck(obj){
+				obj.value=obj.value.replace(/[^\d]/g,'');
+				};
+			function jumpTo(PageNo){
+				    	var bool=$("input[name='zk_hidden']").val();
+				    	var beginPoints= $("input[name='beginPoints']").val();
+						var endPoints= $("input[name='endPoints']").val();
+						var good_type= $("select[name='good_type']").val();
+						var page_no=$("select[name='page_no']").val();
+						var showNum = $("input[name='hiddenNum']").val();
+				          goodsearchForm.action="/rewardInit.do?bool="+bool+"&amp;beginPoints="+beginPoints+"&amp;endPoints="+endPoints+"&amp;showNum="+showNum;
+				          goodsearchForm.page_no.value=PageNo;
+				      	goodsearchForm.submit();
+				    }
+			function  ButtonRefreshClick(){
+				    	var bool=$("input[name='zk_hidden']").val();
+				    	var beginPoints= $("input[name='beginPoints']").val();
+						var endPoints= $("input[name='endPoints']").val();
+						var page_no=$("select[name='page_no']").val();
+						var showNum = $("input[name='hiddenNum']").val();
+				    	
+				          if(0&gt;goodsearchForm.page_no.value){
+				              alert("不能为负数");
+				          }else if(goodsearchForm.page_no.value==""){
+				              alert("不能为空");
+				          }else if(!checkNumber(goodsearchForm.page_no.value)){
+				              alert("必须为数字");
+				          }else{ 
+				              if(parseInt(goodsearchForm.page_no.value)&gt;parseInt(goodsearchForm.pageCounts.value)){
+				              		goodsearchForm.page_no.value = goodsearchForm.pageCounts.value;
+				              }
+				              
+				              if(0&gt;=goodsearchForm.page_no.value){
+				              		goodsearchForm.page_no.value = 1;
+				              }
+				              goodsearchForm.action="/rewardInit.do?bool="+bool+"&amp;beginPoints="+beginPoints+"&amp;endPoints="+endPoints+"&amp;showNum="+showNum;
+				      		goodsearchForm.submit();
+				      		}
+				    }
+		    function zk_Num(){
+		    	var bool=$("input[name='zk_hidden']").val();
+		    	var beginPoints= $("input[name='beginPoints']").val();
+				var endPoints= $("input[name='endPoints']").val();
+				var showNum = $("input[name='hiddenNum']").val();
+				window.location.href="rewardInit.do?bool=&amp;beginPoints="+beginPoints+"&amp;endPoints="+endPoints;
+		        }
+		    //页签切换
+		    function liclick(self){//这里self接收节点中定义的this
+		    	$(self).addClass('c_current').siblings().removeClass("c_current");	    		
+	    		$("input[name='hiddenNum']").val(self.id);
+	    		var bool=$("input[name='zk_hidden']").val();
+		    	var beginPoints= $("input[name='beginPoints']").val();
+				var endPoints= $("input[name='endPoints']").val();
+	    		var showNum = $("input[name='hiddenNum']").val();
+				window.location.href="rewardInit.do?bool="+bool+"&amp;beginPoints="+beginPoints+"&amp;endPoints="+endPoints+"&amp;showNum="+showNum;
+	    	}
+		   
+	  </script>
+	  <style type="text/css">
+	.list_zk .zk_span_1{
+		display: inline-block;
+		vertical-align: middle;
+		margin-left:3px;
+	}
+	.zk_t1,.zk_t2{
+		display: block;
+		width: 10px;
+		height: 6px;
+		background: url(/img/sprites.png) left top no-repeat;
+		margin-bottom:1.5px;
+		cursor: pointer; 
+	}
+	.zk_t2{
+		background-position: 0 -9px;
+	}
+	.f_con4 .f_con4Header ul li,.f_con4 .f_con4Header ul li.list4,.f_con4 .f_con4Header ul li.list5{
+	padding:0 15px !important; text-align:center;}
+	.f_con4 .f_con4Header input{
+	margin-top:2px;
+	}
+	</style>
+	<script type="text/javascript" async="async" charset="utf-8" src="https://bj-trail.ntalker.com/trail/trail/userinfo.php?action=getregion&amp;siteid=kf_9507&amp;userid=kf_9507_ISME9754_guest30A69421-A775-85&amp;callback=trail_getregion_22320D54"></script></head>
+	<body><div id="nTalk_post_hiddenElement" style="left: -10px; top: -10px; visibility: hidden; display: none; width: 1px; height: 1px;"><iframe name="POST_IFRAME_0" id="POST_IFRAME_0" src="about:blank" style="left: -10px; top: -10px; visibility: hidden; width: 1px; height: 1px; position: absolute;"></iframe><form name="POST_FORM_35173586CD74F114" accept-charset="utf-8" enctype="application/x-www-form-urlencoded" method="POST" target="POST_IFRAME_0" action="https://bj-trail.ntalker.com/trail/trail/userinfo.php?action=save&amp;url=https%3A%2F%2Fwww.saclub.com.cn%2Flogin.do%3Bjsessionid%3D897D00FA1E8D303C8A41F7125BD42DAE&amp;siteid=kf_9507&amp;uid=kf_9507_ISME9754_guest30A69421-A775-85&amp;uname=&amp;device=PC&amp;isvip=0&amp;userlevel=1&amp;cid=guest30A69421-A775-8532-D74D-82F41FF57EA7&amp;sid=1548385263604964&amp;log=0&amp;pageid=1548385276572&amp;etype=pv&amp;edata=&amp;sourceid=&amp;sourcename=&amp;keyid=&amp;keyword=&amp;country=&amp;province=&amp;city=&amp;sellerid=&amp;ttl=%E4%B8%AD%E5%9B%BD%E7%9F%B3%E5%8C%96%E2%80%9C%E6%B2%B9%E4%B8%AD%E6%84%9F%E8%B0%A2%E2%80%9D+%E7%A7%AF%E5%88%86%E5%A2%9E%E5%80%BC%E6%9C%8D%E5%8A%A1" style="display: none;"><input type="hidden" name="ref" value="https%3A%2F%2Fwww.saclub.com.cn%2Fgoodlist.do%3Fbool%3D2" /></form></div>
+		
+	<script language="javascript" type="text/javascript">
+		NTKF_PARAM = {
+				siteid:"kf_9507",		            //企业ID，为固定值，必填
+				settingid:"kf_9507_1488423657224",	//接待组ID，为固定值，必填
+				uid:"",		                //用户ID，未登录可以为空，但不能给null，uid赋予的值显示到小能客户端上
+				uname:"",		            //用户名，未登录可以为空，但不能给null，uname赋予的值显示到小能客户端上
+				isvip:"0",                          //是否为vip用户，0代表非会员，1代表会员，取值显示到小能客户端上
+				userlevel:"1",		                //网站自定义会员级别，0-N，可根据选择判断，取值显示到小能客户端上
+				erpparam:"abc"                      //erpparam为erp功能的扩展字段，可选，购买erp功能后用于erp功能集成
+			} 
+
+		</script>
+		<script type="text/javascript" src="https://dl.ntalker.com/js/xn6/ntkfstat.js?siteid=kf_9507" charset="utf-8"></script>
+<div class="header">
+	<div class="top">
+		<div class="wrap">
+			<ul>
+				<li class="bg">
+					<a href="/index.jsp">返回首页</a>
+				</li>
+				<li class="bg">
+					<a href="javascript:search()">网点查询</a>
+				</li>
+				<li class="bg">
+					
+				</li>
+
+
+
+			</ul>
+			<p class="tel">
+				95105988 / 95105888 转 7
+				<a href="javascript:NTKF.im_openInPageChat()"><img style="vertical-align:middle; margin-left:11px;" width="68" src="/new/img/images_z/zaixiankefu.gif" border="0" /></a>
+				
+				
+			</p>
+		</div>
+	</div>
+	<div class="heads_wrap">
+		<div class="heads wrap">
+			<a href="/index.jsp" class="logo fl">中国石化“油中感谢” 积分增值服务</a>
+			<div class="appewm fr">
+				<img id="erweima" src="/new/img/index/app_index.png" />
+<!--				<img id="erweima" src="/new/img/index/icon2.png" />-->
+				<div class="f_rwm"></div>
+			</div>
+		</div>
+	</div>
+</div>
+<script>
+
+function search(){
+	var url = "rightSearch.do?provinceName=&amp;cityName=&amp;stationType=&amp;cityId=";
+	window.location.href=url;
+}
+</script>
+
+		
+
+
+<div class="nav">
+	<ul class="nav_ul wrap">
+		<li>
+			<a href="/index.jsp"><i class="icon"></i><span>首页</span>
+			</a>
+		</li>
+		<li>
+			<a href="/mySAZoneIndex.do">用户中心</a>
+		</li>
+		<li>
+			<a href="/goodlist.do?bool=2">积分商城</a>
+		</li>
+
+		<li class="slider">
+			<a href="#">服务与支持</a>
+			<ol class="PullDown">
+				<li>
+					<a href="/jsp/campaign/app/index.html">下载中心</a>
+				</li>
+				<li>
+					<a href="/news/question.htm">常见问题</a>
+				</li>
+			</ol>
+		</li>
+		<li class="br">
+			<a href="/cobrandedCard.do?act=forwordToTrans">柴油专用卡</a>
+		</li>
+		
+			<li class="Landpage">
+				<a href="javascript:void(0)">欢迎您！<span style="margin-right:10px;cursor: pointer;" title="陈慧聪">陈慧聪</span>
+				<b style="cursor: pointer;" onclick="window.location.href='/logout.do'">退出</b></a></li>
+				
+		
+			
+	</ul>
+</div>
+		<div class="gouwuche1">
+			
+			<!-- 购物车-->
+		<div class="right_area" style="position: fixed; right: 0px; z-index: 99999; top: 188px;">
+			<div class="mine_cart">
+				<h2>
+					<s> </s>我的购物车
+				</h2>
+			</div>
+			<div class="total">
+				<p>共<span>0</span>件商品</p>
+				<p>积分总计：</p>
+				<p class="total-num">0</p>
+			</div>
+			<div class="shop_btn" onclick="javascript:window.location.href = '/viewCart.do'">
+				结算
+			</div>
+		</div>
+			
+			<div class="f_con1 clearfix">
+				<div class="f_con1-left">
+<!-- 					 <a href="javascript:void(0)"  onclick="new_window = window.open();goToDoing();"><img src="/new/img/IntegralMall/f_pic120160420.png" alt=""></a> -->
+					
+					<img src="/new/img/IntegralMall/f_pic1.png" alt="" />
+				</div>
+				<div class="f_con1-right">
+					<h3>
+						用户信息
+					</h3>
+					<div>
+						<p class="op1">
+							欢迎您！
+							<b>陈慧聪</b>
+						</p>
+						<p class="op2">
+							您是我们  
+							<font color="red">标准级</font>   用户
+						</p>
+						<p class="op3">
+							加油卡性质:
+							<span>  个人单用户  
+							</span>
+						</p>
+						<p class="op4">
+							上次登录时间:
+							<span>2019年01月25日</span>
+						</p>
+					</div>
+					<ul class="clearfix">
+						<li>
+							<b><a href="/goodlist.do">296</a>
+							</b>
+							<span>可用积分</span>
+						</li>
+						<li>
+							<b><a href="/searchOrder.do">0</a>
+							</b>
+							<span>已用积分</span>
+						</li>
+						<li class="last_li" style="position: relative;">
+							<div id="expiredPoints" style="overflow: hidden; height: 75px;"><p style="font-size:10px;">2020-3-1  117分</p><p style="font-size:10px;">2020-4-1  122分</p><p style="font-size:10px;">2020-7-1  57分</p></div>
+							<p class="li_lastP_z">
+								即将过期积分
+							</p>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="f_con3 clearfix">
+				礼品展示
+			</div>
+			<div class="f_con4 clearfix">
+			
+			<div class="f_con4Header">
+				<ul style="height:48px; line-height:48px;">
+					<li class="list1"><a href="/rewardInit.do?bool=2">默认</a></li>
+					<li class="list2"><a href="javascript:zk_Num();" title="人气从高到低">人气</a></li>
+					<li class="list_zk">所需积分<span class="zk_span_1"><span onclick="zk_click_shang()" class="zk_t1"></span><span onclick="zk_click_xia()" class="zk_t2"></span>
+			</span></li>   
+			<input type="hidden" name="zk_hidden" value="2" />
+			<input type="hidden" name="hiddenNum" value="2" />
+					<li class="list4"><label for="">积分区间:</label><input type="text" name="beginPoints" onkeyup="numberCheck(this);" />-<input type="text" name="endPoints" onkeyup="numberCheck(this);" /></li>
+					  <input type="button" value="搜索" onclick="zk_button2()" />
+				</ul>
+				
+			</div>
+				<!-- 查询条件 -->
+				<!-- 
+			<div class="f_con4Header">
+				<ul>
+					<li class="list1"><a href="">默认</a></li>
+					<li class="list2"><a href="">兑换量</a></li>
+					<li class="list3"><a href="">积分</a></li>
+					<li class="list4"><label for="">积分区间:</label><input type="text">-<input type="text"></li>
+					<li class="list5">
+						<label for="">可兑换用户类型</label>
+						<select>  
+							<optgroup label="Swedish Cars">  
+								<option value="1">全部</option>  
+								<option value="2">list1</option>
+								<option value="2">list2</option>
+								<option value="2">list3</option>  
+							</optgroup>  
+						</select>
+					</li>
+				</ul>
+			</div> -->
+				<div class="f_con4Center clearfix">
+					
+					<dl class="" style="text-align: center;">
+						<dt>
+							<a href="javascript:togooddetail('1445')"> <img src="/post/s2013052703.jpg" border="0" width="150px" height="150px" /> </a>
+						</dt>
+						<dd>
+							<h3>
+								<a href="javascript:togooddetail('1445')"> 洁丽雅毛巾单条袋装 </a>
+							</h3>
+							
+								
+									<p class="p1">
+										积分：
+										<span>100</span>
+										<br />										
+									
+								
+								每周限兑数量：1个								
+							</p>
+							<input style="cursor: pointer;" type="button" id="good1445" class="button" onclick="javascript:tocartadd('1445','100')" />
+						</dd>
+					</dl>
+					
+					<dl class="" style="text-align: center;">
+						<dt>
+							<a href="javascript:togooddetail('2581')"> <img src="/post/s20130328095823.jpg" border="0" width="150px" height="150px" /> </a>
+						</dt>
+						<dd>
+							<h3>
+								<a href="javascript:togooddetail('2581')"> 洁玉多臂缎档毛巾 </a>
+							</h3>
+							
+								
+									<p class="p1">
+										积分：
+										<span>300</span>
+										<br />										
+									
+								
+								每周限兑数量：1个								
+							</p>
+							<input style="cursor: pointer;" type="button" id="good2581" class="button" onclick="javascript:tocartadd('2581','300')" />
+						</dd>
+					</dl>
+					
+					<dl class="" style="text-align: center;">
+						<dt>
+							<a href="javascript:togooddetail('1463')"> <img src="/post/s20100113125322.jpg" border="0" width="150px" height="150px" /> </a>
+						</dt>
+						<dd>
+							<h3>
+								<a href="javascript:togooddetail('1463')"> 仿鹿皮擦布 </a>
+							</h3>
+							
+								
+									<p class="p1">
+										积分：
+										<span>500</span>
+										<br />										
+									
+								
+								每周限兑数量：1个								
+							</p>
+							<input style="cursor: pointer;" type="button" id="good1463" class="button" onclick="javascript:tocartadd('1463','500')" />
+						</dd>
+					</dl>
+					
+					<dl class="" style="text-align: center;">
+						<dt>
+							<a href="javascript:togooddetail('1480')"> <img src="/post/s20100113163757.jpg" border="0" width="150px" height="150px" /> </a>
+						</dt>
+						<dd>
+							<h3>
+								<a href="javascript:togooddetail('1480')"> 多功能野餐刀 </a>
+							</h3>
+							
+								
+									<p class="p1">
+										积分：
+										<span>800</span>
+										<br />										
+									
+								
+								每日限兑数量：2个								
+							</p>
+							<input style="cursor: pointer;" type="button" id="good1480" class="button" onclick="javascript:tocartadd('1480','800')" />
+						</dd>
+					</dl>
+					
+					<dl class="" style="text-align: center;">
+						<dt>
+							<a href="javascript:togooddetail('1842')"> <img src="/post/s20110325154841.jpg" border="0" width="150px" height="150px" /> </a>
+						</dt>
+						<dd>
+							<h3>
+								<a href="javascript:togooddetail('1842')"> 汽车除尘刷 </a>
+							</h3>
+							
+								
+									<p class="p1">
+										积分：
+										<span>800</span>
+										<br />										
+									
+								
+								每日限兑数量：2个								
+							</p>
+							<input style="cursor: pointer;" type="button" id="good1842" class="button" onclick="javascript:tocartadd('1842','800')" />
+						</dd>
+					</dl>
+					
+					<dl class="" style="text-align: center;">
+						<dt>
+							<a href="javascript:togooddetail('1841')"> <img src="/post/s20110325154557.jpg" border="0" width="150px" height="150px" /> </a>
+						</dt>
+						<dd>
+							<h3>
+								<a href="javascript:togooddetail('1841')"> 票据整理夹 </a>
+							</h3>
+							
+								
+									<p class="p1">
+										积分：
+										<span>800</span>
+										<br />										
+									
+								
+								每日限兑数量：2个								
+							</p>
+							<input style="cursor: pointer;" type="button" id="good1841" class="button" onclick="javascript:tocartadd('1841','800')" />
+						</dd>
+					</dl>
+					
+					<dl class="" style="text-align: center;">
+						<dt>
+							<a href="javascript:togooddetail('1464')"> <img src="/post/s20161207144411.jpg" border="0" width="150px" height="150px" /> </a>
+						</dt>
+						<dd>
+							<h3>
+								<a href="javascript:togooddetail('1464')"> 环保休闲折叠篮 </a>
+							</h3>
+							
+								
+									<p class="p1">
+										积分：
+										<span>800</span>
+										<br />										
+									
+								
+								每日限兑数量：2个								
+							</p>
+							<input style="cursor: pointer;" type="button" id="good1464" class="button" onclick="javascript:tocartadd('1464','800')" />
+						</dd>
+					</dl>
+					
+					<dl class="" style="text-align: center;">
+						<dt>
+							<a href="javascript:togooddetail('1465')"> <img src="/post/s20100113132151.jpg" border="0" width="150px" height="150px" /> </a>
+						</dt>
+						<dd>
+							<h3>
+								<a href="javascript:togooddetail('1465')"> 竹炭汽车枕头 </a>
+							</h3>
+							
+								
+									<p class="p1">
+										积分：
+										<span>1000</span>
+										<br />										
+									
+								
+								每日限兑数量：2个								
+							</p>
+							<input style="cursor: pointer;" type="button" id="good1465" class="button" onclick="javascript:tocartadd('1465','1000')" />
+						</dd>
+					</dl>
+					
+					<dl class="" style="text-align: center;">
+						<dt>
+							<a href="javascript:togooddetail('2657')"> <img src="/post/s20180312131337.jpg" border="0" width="150px" height="150px" /> </a>
+						</dt>
+						<dd>
+							<h3>
+								<a href="javascript:togooddetail('2657')"> 车用烟灰缸 </a>
+							</h3>
+							
+								
+									<p class="p1">
+										积分：
+										<span>1000</span>
+										<br />										
+									
+								
+								每日限兑数量：2个								
+							</p>
+							<input style="cursor: pointer;" type="button" id="good2657" class="button" onclick="javascript:tocartadd('2657','1000')" />
+						</dd>
+					</dl>
+					
+					<dl class="" style="text-align: center;">
+						<dt>
+							<a href="javascript:togooddetail('2656')"> <img src="/post/s20130509151950.jpg" border="0" width="150px" height="150px" /> </a>
+						</dt>
+						<dd>
+							<h3>
+								<a href="javascript:togooddetail('2656')"> 便捷小铁铲 </a>
+							</h3>
+							
+								
+									<p class="p1">
+										积分：
+										<span>1000</span>
+										<br />										
+									
+								
+								每日限兑数量：2个								
+							</p>
+							<input style="cursor: pointer;" type="button" id="good2656" class="button" onclick="javascript:tocartadd('2656','1000')" />
+						</dd>
+					</dl>
+					
+					<dl class="" style="text-align: center;">
+						<dt>
+							<a href="javascript:togooddetail('1501')"> <img src="/post/s20100113164228.jpg" border="0" width="150px" height="150px" /> </a>
+						</dt>
+						<dd>
+							<h3>
+								<a href="javascript:togooddetail('1501')"> 折叠式水桶 </a>
+							</h3>
+							
+								
+									<p class="p1">
+										积分：
+										<span>1000</span>
+										<br />										
+									
+								
+								每日限兑数量：2个								
+							</p>
+							<input style="cursor: pointer;" type="button" id="good1501" class="button" onclick="javascript:tocartadd('1501','1000')" />
+						</dd>
+					</dl>
+					
+					<dl class="" style="text-align: center;">
+						<dt>
+							<a href="javascript:togooddetail('1466')"> <img src="/post/s20100113132433.jpg" border="0" width="150px" height="150px" /> </a>
+						</dt>
+						<dd>
+							<h3>
+								<a href="javascript:togooddetail('1466')"> 茶叶汽车枕头 </a>
+							</h3>
+							
+								
+									<p class="p1">
+										积分：
+										<span>1000</span>
+										<br />										
+									
+								
+								每日限兑数量：2个								
+							</p>
+							<input style="cursor: pointer;" type="button" id="good1466" class="button" onclick="javascript:tocartadd('1466','1000')" />
+						</dd>
+					</dl>
+					
+				</div>
+			</div>
+			
+			<form name="detailForm" target="_blank" action="/goodlist.do" method="post">
+				<input type="hidden" name="goodId" value="" />
+			</form>
+		
+			<form name="goodsearchForm" method="post" action="/vouchGoodDetail.do">
+				<input type="hidden" name="flagFromList" value="1" />
+				<input type="hidden" name="goodId" value="" />
+				<input type="hidden" name="points" value="0" />
+				<input type="hidden" name="availPoints" value="296" />
+				<div class="f_con4Footer clearfix">
+					<div style="float: right; margin-top: 20px; width: 450px;">
+						<span class="oSpan2"> 
+							
+								<input type="hidden" name="pageCounts" value="5" />
+								<div align="right">
+									共
+									59
+									条记录 每页
+									12
+									条
+									<a href="javascript:jumpTo('1')" class="enter1">首页</a>
+									<a href="javascript:jumpTo('1')" class="enter1">前页</a>
+									<a href="javascript:jumpTo('2')" class="enter1">后页</a>
+									<a href="javascript:jumpTo('5')" class="enter1">尾页</a> 页次：
+									1
+									/
+									5
+									页 转到
+									<span class="tdh3"> <select name="page_no" style="width: 40px" class="input_olive_redeem" onchange="ButtonRefreshClick()">
+											
+											<option value="1">1</option>
+											
+											<option value="2">2</option>
+											
+											<option value="3">3</option>
+											
+											<option value="4">4</option>
+											
+											<option value="5">5</option>
+											
+										</select> </span>页
+								</div>
+							 </span>
+					</div>
+				</div>
+			</form>
+			<div class="f_con2 clearfix">
+				<h3>
+					用户须知:
+				</h3>
+				<ul>
+					<li>
+						1、更低积分，超值礼品，答谢加油卡记名卡用户！不记名卡转为记名卡，即可享受精彩服务。
+					</li>
+					<li>
+						2、尚未激活加油卡的记名卡用户，先进行帐户激活才能进行礼品兑换。
+					</li>
+					<li>
+						3、已经激活加油卡的记名卡用户，即刻积分兑换心仪礼品，兑换礼品途径：
+						<p>
+							A) 用加油卡号/用户名及密码登陆本网站“用户中心”，进入“积分兑奖”页面按提示兑换心仪礼品。
+						</p>
+						<p>
+							B) 致电中国石化“油中感谢”客户服务中心
+							<font color="red">95105988/95105888 转 7</font>，根据客服人员提示兑换礼品。
+						</p>
+						<p>
+							C) 下载手机客户端后，通过手机客户端自助兑换礼品。
+						</p>
+						<p>
+							D) 关注“中国石化油中感谢”微信公众号参与兑换。
+						</p>
+					</li>
+					<li>
+						4、普通用户为个人单卡用户；大客户为单位用户、个人多卡用户及半年内积分超过1万分的个人单卡用户。
+					</li>
+					<li>
+						5、礼品图片仅为示意图以供参考，礼品将不定期更新，以兑换实物为准。
+					</li>
+				</ul>
+			</div>
+		</div>
+		
+<script language="javascript" type="text/javascript">
+		NTKF_PARAM = {
+				siteid:"kf_9507",		            //企业ID，为固定值，必填
+				settingid:"kf_9507_1488423657224",	//接待组ID，为固定值，必填
+				uid:"",		                //用户ID，未登录可以为空，但不能给null，uid赋予的值显示到小能客户端上
+				uname:"",		            //用户名，未登录可以为空，但不能给null，uname赋予的值显示到小能客户端上
+				isvip:"0",                          //是否为vip用户，0代表非会员，1代表会员，取值显示到小能客户端上
+				userlevel:"1",		                //网站自定义会员级别，0-N，可根据选择判断，取值显示到小能客户端上
+				erpparam:"abc"                      //erpparam为erp功能的扩展字段，可选，购买erp功能后用于erp功能集成
+			} 
+
+		</script>
+		<style type="text/css"> 
+			.footer_info_l{width:190px;padding:32px 0 0;}
+			.footer_info_r li{margin-right:50px;}
+		</style> 
+		<script type="text/javascript" src="https://dl.ntalker.com/js/xn6/ntkfstat.js?siteid=kf_9507" charset="utf-8"></script>
+		<script type="text/javascript" src="/jsp/rule/js/rule_common.js"></script>
+<div class="footer">
+	<div class="footer_info_wrap">
+		<div class="footer_info">
+			<div class="footer_info_l">
+				<img src="/new/img/index/wx_footter.jpg" />
+				<p>
+					扫描二维码
+					<br />
+					关注“中国石化油中感谢”微信公众号
+<!--					<br />-->
+<!--					微信公众号-->
+				</p>
+			</div>
+				<div class="footer_info_l">
+				<img src="/new/img/index/chaoyang_e.jpg" />
+				<p>
+					扫描二维码
+					<br />
+					关注“朝阳e站”微信公众号
+<!--					<br />-->
+<!--					微信公众号-->
+				</p>
+			</div>
+			<ul class="footer_info_r" style="display:block;line-height:20px; color:#545454;">
+				<li>
+					<dl>
+						<dt class="list1">
+							兑换指南
+						</dt>
+						<dd>
+							<a href="/news/convert.htm" target="_parent">兑换流程</a>
+						</dd>
+						<dd>
+							<a href="/news/grade.htm" target="_parent">会员介绍</a>
+						</dd>
+						<dd>
+							<a href="/news/question.htm" target="_parent">常见问题</a>
+						</dd>
+						
+						<dd>
+							<a onclick="NTKF.im_openInPageChat()">联系客服</a>
+						</dd>
+						<dd><a href="/jsp/rule/regulations_info.jsp">服务章程</a></dd>
+					</dl>
+				</li>
+				<li>
+					<dl>
+						<dt class="list2">
+							官方链接
+						</dt>
+						<dd>
+							<a href="http://www.sinopecsales.com" target="_blank">中国石化加油卡网上营业厅</a>
+						</dd>
+						<dd>
+							<a href="http://www.ejoy365.com" target="_blank">中国石化易捷网上商城</a>
+						</dd>
+					</dl>
+				</li>
+				<li>
+						<dl>
+						<dt class="list3">
+							商务合作
+						</dt>
+						<dd>
+							<a href="/news/business.htm" target="_parent">联系我们</a>
+						</dd>
+						</dl>
+				</li>
+				</ul>
+		</div>
+	</div>
+	<div class="footer_bt">
+		<div class="footer_bt_list">
+			<a href="/jsp/copyright/contact.html" target="_blank">联系我们</a>|<a href="http://www.sinopec.com" target="_blank">中国石化网站</a>|
+			<a href="http://se.360.cn/v5/iecoretest.html" target="_blank">IE版本查询</a>
+		</div>
+		<p>
+			Copyright © 2005-2018 eChinaCash All Rights Reserved
+		</p>
+		<p>
+			京ICP备05002924号     <a target="_blank" href="https://www.beian.gov.cn/portal/registerSystemInfo?recordcode=11010502036338"><img src="/img/gwa.png" />京公网安备 11010502036338号</a>
+		</p>
+	</div>
+</div>
+<!--  <script language="javascript" src="http://saclub.zoossoft.net/JS/LsJS.aspx?siteid=LHG31671888"></script>-->
+<script language="javascript">
+/*if(typeof(LiveReceptionCode_isonline)!='undefined'  &amp;&amp; LR_GetObj('LR_User_Icon2')!=null)
+{
+	if(LiveReceptionCode_isonline)
+		LR_GetObj('LR_User_Icon2').innerHTML='&lt;a href="#" '+LiveReceptionCode_BuildChatWin('开始对话','客服人员在线,欢迎点击咨询')+'&gt;联系客服&lt;/a&gt;';
+	else
+		LR_GetObj('LR_User_Icon2').innerHTML='&lt;a href="#" '+LiveReceptionCode_BuildChatWin('开始对话','客服人员不在线,请点击留言')+'&gt;联系客服&lt;/a&gt;';
+}*/
+</script>
+<script language="javascript" src="/js/footer_baidu.js"></script>
+	
+	<script language="javascript">
+
+		var new_window=null;
+		   function goToDoing(){
+		 		var url="goToDoing.do",
+		 		datas="1=1";
+		 		jQuery.ajax({
+		 	         type: 'post',
+		 	         url:url,
+		 	         data:datas,
+		 	         timeout: 3000,
+		 	         dataType:'json',
+		 	         success: function(data) {
+		 	             if(data=="1"){
+		 	            	new_window.location.href="http://hd.saclub.com.cn/init.do";
+			 	         }else{
+			 	        	new_window.location.href="http://hd.saclub.com.cn/index.do";
+			 	         }
+		 	         },
+		 	         error: function(){
+						new_window.location.href="http://hd.saclub.com.cn/index.do";
+		 	     	 }
+		 		 });
+		     }
+		
+	
+	goodsearchForm.page_no.value=1;
+	
+</script>
+<script type="text/javascript">
+	$(function(){
+		var r_top = $('.nav').offset().top + $('.nav').height();
+		$('.right_area').css("top",r_top+'px');
+	});
+</script>
+
+<link rel="stylesheet" type="text/css" href="/jsp/rule/css/ser_char_css.css" />
+<div id="rule_div" class="integral_float_box" style="height: 170px;">
+	<h3>尊敬的客户，上午好<a href="javascript:RULE_COMMON.closeRule(RULE_COMMON.ruleCellback);"></a></h3>
+	<div class="int_content">
+		<div class="in_left_box"><img src="/jsp/rule/img/jf_left_img.png" alt="" /></div>
+		<div class="in_right_box">
+			<a href="/jsp/rule/rule_info.jsp" class="more_line">
+				<h4>积分规则小知识</h4>
+				<p>您知道油中感谢积分是怎么来的吗？</p>
+				<p>积分的有效期是多久？</p>
+				<p>积分过期怎么办？</p>
+			</a>
+		</div>
+		<a href="/jsp/rule/rule_info.jsp" class="more_btn">点击了解&gt;</a>
+	</div>
+</div></body></html>

@@ -45,12 +45,12 @@ class Vincent(object):
         # 鼠标移动到拖动按钮，显示出拖动图片
         element = self.driver.find_element_by_xpath('//div[@class="gt_slider_knob gt_show"]')
         ActionChains(self.driver).move_to_element(element).perform()
-        time.sleep(3)
+        time.sleep(0.5)
 
         # 刷新一下极验图片
         element = self.driver.find_element_by_xpath('//a[@class="gt_refresh_button"]')
         element.click()
-        time.sleep(1)
+        time.sleep(0.5)
 
         # 获取图片地址和位置坐标列表
         cut_image_url, cut_location = self.get_image_url('//div[@class="gt_cut_bg_slice"]')

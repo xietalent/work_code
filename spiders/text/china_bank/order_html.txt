@@ -1,0 +1,206 @@
+<HTML xmlns="http://www.w3.org/1999/xhtml"><HEAD><TITLE>中国银行－积分兑换商城</TITLE>
+<META content="text/html; charset=utf-8" http-equiv=Content-Type>
+<META content=IE=7 http-equiv=X-UA-Compatible><LINK rel=stylesheet type=text/css href="/BOCGIFTORDERNET/style/style.css">
+<SCRIPT type=text/javascript src="/BOCGIFTORDERNET/js/select.js"></SCRIPT>
+
+<SCRIPT type=text/javascript src="/BOCGIFTORDERNET/templates/default/check.js"></SCRIPT>
+
+<SCRIPT type=text/javascript src="/BOCGIFTORDERNET/templates/default/pagenation.js"></SCRIPT>
+
+<SCRIPT type=text/javascript src="js/jquery-1.7.2.min.js"></SCRIPT>
+</HEAD>
+<BODY onload="changeMenu('3')"><!--头部开始--><LINK rel=stylesheet type=text/css href="/BOCGIFTORDERNET/style/style.css">
+<SCRIPT type=text/javascript src="/BOCGIFTORDERNET/templates/default/pagenation.js"></SCRIPT>
+
+<SCRIPT type=text/javascript>
+	function noNumbers()   
+		{   
+			if(window.event.keyCode==13) {
+				setTimeout("searchProd('1')",1);
+			}
+		}
+		function onover(){
+			document.getElementById('layer1').style.display="block";
+		}
+		function onout(){
+			document.getElementById('layer1').style.display="none";
+		}   
+</SCRIPT>
+
+<META content=IE=7 http-equiv=X-UA-Compatible><!--头部开始-->
+<DIV id=header>
+<DIV class=top_info><SPAN class=login align="left">陈慧聪&nbsp;&nbsp;您好，欢迎来到积分兑换商城！&nbsp;&nbsp;<A href="/BOCGIFTORDERNET/logout.do">退出</A>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN> <SPAN class=link><A href="/BOCGIFTORDERNET/getCurrentScroe.do">我的积分</A><A href="/BOCGIFTORDERNET/jsp/shoppingCar/carGiftInfo.jsp">购物车</A><A href="/BOCGIFTORDERNET/getFavoRates.do?sp.currentPage=1">收藏夹</A><A href="http://www.boc.cn" target=_blank>中国银行首页</A></SPAN> </DIV>
+<DIV class=logo_search>
+<DIV class=logo><A title=中国银行－积分兑换商城 href="/BOCGIFTORDERNET/index.jsp">中国银行－积分兑换商城</A> </DIV>
+<DIV class=search>
+<DIV class=search_input>
+<DIV class=xiala>
+<FORM name=tiaojian>
+<DIV><SELECT id=tiaojian style="DISPLAY: none" name=tiaojian> <OPTION selected value="">全部礼品</OPTION> <OPTION value=ICI1000000014>运动休闲</OPTION> <OPTION value=ICI1000000022>电子礼券</OPTION> <OPTION value=ICI1000017022>医疗健康</OPTION> <OPTION value=ICI1000014022>航空里程</OPTION> <OPTION value=ICI1000006022>积分联盟</OPTION> <OPTION value=ICI1000012022>母婴专享</OPTION> <OPTION value=ICI1000000012>家居日用</OPTION> <OPTION value=ICI1000012023>时尚精品</OPTION> <OPTION value=ICI1000000013>我爱我车</OPTION></SELECT> </DIV></FORM></DIV>
+<DIV class=xiala>
+<FORM name=jifen>
+<DIV><SELECT id=jifen style="DISPLAY: none" name=jifen> <OPTION selected value="">全部积分</OPTION> <OPTION value=1>2万分以下</OPTION> <OPTION value=2>2万-5万分</OPTION> <OPTION value=3>5万-15万分</OPTION> <OPTION value=4>15万-100万分</OPTION> <OPTION value=5>100万分以上</OPTION></SELECT> </DIV></FORM></DIV>
+<DIV class=search_box>
+<FORM name=search><INPUT id=giftNameHead class=search_txt onkeydown=noNumbers() name=giftNameHead> <INPUT onclick="searchProd('1')" class=search_bt type=button> </FORM></DIV></DIV>
+<DIV class=txt_link>热门搜索：<A onclick="searchProdName('乐扣乐扣保鲜盒')" style="CURSOR: hand">乐扣乐扣保鲜盒</A><A onclick="searchProdName('瑜珈垫')" style="CURSOR: hand">瑜珈垫</A><A onclick="searchProdName('瑞士军刀')" style="CURSOR: hand">瑞士军刀</A> <A onclick="searchProdName('旅行电吹风')" style="CURSOR: hand">旅行电吹风</A> </DIV></DIV></DIV></DIV><!--导航菜单-->
+<DIV style="WIDTH: 980px; TEXT-ALIGN: center; MARGIN: 0px auto">
+<DIV id=nav>
+<DIV class=menu>
+<UL>
+<LI id=menu1 class=menu_off><A class=main_nav href="/BOCGIFTORDERNET/index.jsp">首页</A> </LI>
+<LI id=menu2 class=menu_off><A class=main_nav href="/BOCGIFTORDERNET/scoreToGift.do">积分换礼</A> </LI>
+<LI id=menu3 class=menu_off><A class=main_nav href="/BOCGIFTORDERNET/userManager.do">会员管理</A> </LI>
+<LI id=menu4 class=menu_off><A class=main_nav href="/BOCGIFTORDERNET/getSecondGiftList.do">积分秒杀</A> </LI>
+<LI id=menu8 class=menu_off><A class=main_nav href="/BOCGIFTORDERNET/getAuctionGiftListInfo.do">积分竞拍</A> </LI>
+<LI id=menu5 class=menu_off><A onclick="window.open('/BOCGIFTORDERNET/pages/help/provision.jsp')" class=main_nav href="#">活动条款</A> <!-- <li style="width:125px;" id="menu9" class="menu_off" onmouseover="onover()" onmouseout="onout()"><a class="main_nav" href="javascript:void(0)" >虚拟卡服务</a>
+				<ul id="layer1" style="left:3px; top:0px; z-index:10; width:125px; display:none; position:relative;"  > --><!--</ul>
+			</li>	--></LI>
+<LI id=menu6 class=menu_off><A class=main_nav href="/BOCGIFTORDERNET/toSCSys.do">聪明购商城</A> <!-- <li id="menu6" class="menu_off"><span>聪明购商城</span></li>--></LI>
+<LI id=menu7 class=menu_off><SPAN>尊享积分</SPAN> </LI></UL></DIV>
+<DIV></DIV></DIV></DIV>
+<FORM id=getGiftListHead method=post name=getGiftListHead action=/BOCGIFTORDERNET/getGiftListHead.do></FORM>
+<SCRIPT>
+
+
+
+
+
+
+
+</SCRIPT>
+
+<DIV class=c></DIV>
+<DIV id=page_center>
+<DIV id=user_content>
+<DIV class=title_div><SPAN class=on><A href="/BOCGIFTORDERNET/userManager.do">个人中心</A></SPAN><SPAN>|</SPAN> <SPAN class=off><A href="/BOCGIFTORDERNET/getFavoRates.do?sp.currentPage=1">收藏夹</A></SPAN><SPAN>|</SPAN> <SPAN class=off><A href="/BOCGIFTORDERNET/getMessages.do?sp.currentPage=1">消息中心</A></SPAN> </DIV>
+<DIV class=tag_div>
+<UL>
+<LI class=on><A onclick="selThreeHisOrder('/BOCGIFTORDERNET')" style="CURSOR: hand">订单管理</A> </LI>
+<LI class=off><A href="/BOCGIFTORDERNET/getCurrentScroe.do">积分管理</A> </LI>
+<LI class=off><A href="/BOCGIFTORDERNET/pages/PIM/user_content_jbxx.jsp">个人信息管理</A> </LI>
+<LI class=off><A href="/BOCGIFTORDERNET/getGiftUse.do">查询增值服务</A> </LI>
+<LI class=off><A href="/BOCGIFTORDERNET/pages/PIM/user_content_zx.jsp">注销用户</A> </LI>
+<LI class=off><A href="/BOCGIFTORDERNET/cstServiceInfo.do">可选服务包</A> </LI></UL></DIV>
+<DIV class=lishi_title><SPAN class=on><A onclick="selThreeHisOrder('/BOCGIFTORDERNET')" style="CURSOR: hand">最近三个月订单</A></SPAN>|<SPAN class=off><A href="pages/order/user_content_hisOrder.jsp">历史订单查询</A></SPAN> </DIV>
+<DIV class=table_div align=center>没有数据！ </DIV>
+<DIV class=flip>
+<UL></UL></DIV></DIV></DIV>
+<DIV id=allfooter>
+<DIV id=bottom>
+<DIV class=service>
+<UL>
+<LI><IMG src="/BOCGIFTORDERNET/images/service_01.gif" width=195 height=111> </LI></UL>
+<DL class=div_s>
+<DT><A onclick="window.open('/BOCGIFTORDERNET/pages/help/newbie.jsp')" style="CURSOR: hand"><IMG src="/BOCGIFTORDERNET/images/service_02.gif" width=176 height=48></A> <!-- <dd><a href="/BOCGIFTORDERNET/pages/help/ruleItem.jsp">免费注册</a></dd>
+				<dd><a href="/BOCGIFTORDERNET/pages/help/ruleItem.jsp">密码找回</a></dd> --></DT></DL>
+<DL class=div_s>
+<DT><A onclick="window.open('/BOCGIFTORDERNET/pages/help/problem.jsp')" style="CURSOR: hand"><IMG src="/BOCGIFTORDERNET/images/service_03.gif" width=176 height=48></A> </DT></DL>
+<DL class=div_s>
+<DT><A onclick="window.open('/BOCGIFTORDERNET/pages/help/distribution.jsp')" style="CURSOR: hand"><IMG src="/BOCGIFTORDERNET/images/service_04.gif" width=176 height=48></A> </DT></DL>
+<DL class=div_s>
+<DT><A onclick="window.open('/BOCGIFTORDERNET/pages/help/provision.jsp')" style="CURSOR: hand"><IMG src="/BOCGIFTORDERNET/images/service_05.gif" width=176 height=48></A> </DT></DL></DIV></DIV>
+<DIV id=footer>
+<DL>
+<DT><A href="/BOCGIFTORDERNET/index.jsp">积分商城首页</A><SPAN></SPAN> <A href="/BOCGIFTORDERNET/pages/map.jsp">网站地图</A><SPAN></SPAN> <A onclick="window.open('/BOCGIFTORDERNET/pages/help/website.jsp')" style="CURSOR: hand">网站声明</A><SPAN></SPAN> <A onclick="window.open('/BOCGIFTORDERNET/pages/help/privacy.jsp')" style="CURSOR: hand">隐私保密条款</A><SPAN></SPAN> </DT>
+<DD>© 2010 中国银行 版权所有 京ICP证 060399号 </DD></DL></DIV></DIV>
+<SCRIPT type=text/javascript>
+	var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+	document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F125342dc65e632c153df04f491091748' type='text/javascript'%3E%3C/script%3E"));
+	
+	function noNumbers()   
+	{   
+		if(window.event.keyCode==13) {
+			setTimeout("searchProd('1')",1);
+		}
+	}  
+</SCRIPT>
+
+<SCRIPT type=text/javascript src=" https://hm.baidu.com/h.js?125342dc65e632c153df04f491091748"></SCRIPT>
+
+<SCRIPT type=text/javascript>
+   loadSelect(document.tiaojian.tiaojian,'/BOCGIFTORDERNET');
+   	loadSelect(document.jifen.jifen,'/BOCGIFTORDERNET');
+</SCRIPT>
+
+<DIV id=selectoftiaojian style="FONT-SIZE: 12px; CURSOR: pointer; BORDER-TOP: #7f9db7 1px solid; HEIGHT: 21px; BORDER-RIGHT: #7f9db7 1px solid; WIDTH: 80px; BACKGROUND: url(/BOCGIFTORDERNET/images/icon_select_focus.gif) no-repeat right 0px; BORDER-BOTTOM: #7f9db7 1px solid; POSITION: absolute; LEFT: 613px; BORDER-LEFT: #7f9db7 1px solid; Z-INDEX: 999999; LINE-HEIGHT: 21px; TOP: 52px; TEXT-INDENT: 4px">全部礼品</DIV>
+<DIV id=selectofjifen style="FONT-SIZE: 12px; CURSOR: pointer; BORDER-TOP: #7f9db7 1px solid; HEIGHT: 21px; BORDER-RIGHT: #7f9db7 1px solid; WIDTH: 80px; BACKGROUND: url(/BOCGIFTORDERNET/images/icon_select_focus.gif) no-repeat right 0px; BORDER-BOTTOM: #7f9db7 1px solid; POSITION: absolute; LEFT: 698px; BORDER-LEFT: #7f9db7 1px solid; Z-INDEX: 999999; LINE-HEIGHT: 21px; TOP: 52px; TEXT-INDENT: 4px">全部积分</DIV>
+<FORM id=hisOrderList method=post name=hisOrderList action=/BOCGIFTORDERNET/hisOrderList.do></FORM>
+<FORM id=viewOrder method=post name=viewOrder action=/BOCGIFTORDERNET/viewOrder.do></FORM>
+<SCRIPT type=text/javascript>
+
+	function toSendMessage(changeMobile,orderNo,passKey){
+		
+		$.ajax({
+			cache : false,
+			async : false,
+			url : '/BOCGIFTORDERNET/judgeReSendMessageNo.do?orderNo=' + orderNo,
+			dataType : "json",
+			type : "post",
+			beforeSend : function() {
+			},
+			complete : function() {
+			},
+			success : function(result, textStatus, jqXHR) {
+				if (result) {
+					if(result.status == "1"){
+						window.location.href = "toSendMessage.do?orderNo=" + orderNo + '&passkey=' + passKey+'&phoneNo='+changeMobile;
+					}else if(result.status == "3"){
+						alert("您今日重发短信次数过多，请24小时后再次尝试！");
+					}else if(result.status == "4"){
+						alert("订单已无法重发短信！");
+					}else{
+						alert("系统繁忙，请稍后再试！");
+					}
+				} else {
+					alert("系统繁忙，请稍后再试！");
+				}
+	   		},
+	   		error : function(result, textStatus, errorThrown) {
+	   			alert(result + " [error] : " + textStatus + ":" + errorThrown);
+			}
+		}); 
+	}
+	
+	function cancleOrder(orderNo,element) {
+		var msg=confirm("确定要取消订单嘛？");
+		if(msg==true){
+			    $.ajax({
+				cache : false,
+				async : false,
+				  url : '/BOCGIFTORDERNET/cancleOrderAjax.do?&orderNo=' + orderNo,
+				dataType : "json",
+				type : "post",
+				success : function(result, textStatus, jqXHR) {
+					if (result.data.result == "success") {
+						alert("恭喜您，取消订单成功！");
+						$("#order"+orderNo).attr("disabled","disabled");
+						$("#order"+orderNo).removeAttr("onclick");
+						location.reload(true);
+					} else{
+						alert(result.data.result);
+					}
+				}
+			});
+		}
+	}
+	
+	
+	//增值服务预约
+	function toMakeAnAppointment(orderNO,ReservationStt){
+		$.ajax({
+			type : 'GET',
+			url : "/BOCGIFTORDERNET/pointchange/ajaxMakeAnAppointment.do",
+			dataType : 'json',
+			async: true,
+			data:{'orderNO':orderNO,'ReservationStt':ReservationStt},
+			success : function(result) {
+				var url= result.merchantURL;
+				window.location.href=url;	
+			},error:function(){
+					alert('发生未知错误,请重试！');
+					check = false;
+		 	}
+		 });
+	}
+</SCRIPT>
+</BODY></HTML>

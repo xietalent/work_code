@@ -1,0 +1,1389 @@
+
+
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=8" />
+<title>中国银行－积分兑换商城</title>
+<link href="/BOCGIFTORDERNET/style/style.css"
+	rel="stylesheet" type="text/css" />
+<link href="/BOCGIFTORDERNET/css/idangerous.swiper2.7.6.css"
+	rel="stylesheet" type="text/css" />
+<script type="text/javascript"
+	src="/BOCGIFTORDERNET/js/jquery-1.7.2.min.js"></script>
+<script type="text/javascript"
+	src="/BOCGIFTORDERNET/js/ad_show.js"></script>
+<script type="text/javascript"
+	src="/BOCGIFTORDERNET/js/tag.js"></script>
+<script type="text/javascript"
+	src="/BOCGIFTORDERNET/js/selecti.js"></script>
+<script type="text/javascript"
+	src="/BOCGIFTORDERNET/js/idangerous.swiper2.7.6.min.js"></script>
+<script type="text/javascript"
+	src="/BOCGIFTORDERNET/templates/default/check.js"></script>
+<script type="text/javascript"
+	src="/BOCGIFTORDERNET/templates/default/pagenation.js"></script>
+
+<script type="text/javascript">
+	var XMLHttpReq;
+ 	function createXMLHttpRequest() {
+	     if(window.XMLHttpRequest) { 
+	     	XMLHttpReq = new XMLHttpRequest();
+	     } else if (window.ActiveXObject) { 
+	     	try {
+	              XMLHttpReq = new ActiveXObject("Msxml2.XMLHTTP");
+	        } catch (e) {
+	            try {
+	                 XMLHttpReq = new ActiveXObject("Microsoft.XMLHTTP");
+	            } catch (e) {}
+	        }
+	    }
+  	}
+	function findHotGift(num){
+		var scoreLow = "";
+		var scoreHigh = "";
+		if(num==1){
+			scoreLow = "0";
+			scoreHigh = "20000";
+		}else if(num==2){
+			scoreLow = "20000";
+			scoreHigh = "50000";
+		}else if(num==3){
+			scoreLow = "50000";
+			scoreHigh = "150000";
+		}else if(num==4){
+			scoreLow = "150000";
+			scoreHigh = "1000000";
+		}else{
+			scoreLow = "1000000";
+		}
+		var url1 = "";
+		if(num!=5){
+			url1 = "/BOCGIFTORDERNET/getHotSaleList.do?gc.scoreLow="+scoreLow+"&gc.scoreHigh="+scoreHigh+"&gc.lastIndex=6&timestamp="+Math.random();
+		}else{
+			url1 = "/BOCGIFTORDERNET/getHotSaleList.do?.scoreLow="+scoreLow+"&gc.lastIndex=6&timestamp="+Math.random();
+		}
+  		createXMLHttpRequest();
+		XMLHttpReq.open("POST",url1,true);
+		XMLHttpReq.setRequestHeader("cache-control","no-cache");
+		XMLHttpReq.setRequestHeader("Content-Type","application/x-www-form-urlencoded");
+		XMLHttpReq.onreadystatechange= function(){
+			retHotGift();
+		}
+		XMLHttpReq.send(null);
+	}
+	function retHotGift(){
+		if (XMLHttpReq.readyState == 4) { 
+			if (XMLHttpReq.status == 200) { 
+				var tagonediv = document.all.Tagonediv;
+				tagonediv.innerHTML = XMLHttpReq.responseText;
+			} else { 
+				
+			}
+		}
+	}	
+	
+	//专区对应礼品
+	function findSpecAreaGiftList(pageAreaId,specAreaId){
+		url1 = "/BOCGIFTORDERNET/getSpecAreaGiftInfo.do?gc.specAreaId="+specAreaId+"&gc.lastIndex=6&timestamp="+Math.random();
+		
+		createXMLHttpRequest();
+		XMLHttpReq.open("POST",url1,true);
+		XMLHttpReq.setRequestHeader("cache-control","no-cache");
+		XMLHttpReq.setRequestHeader("Content-Type","application/x-www-form-urlencoded");
+		XMLHttpReq.onreadystatechange= function(){
+			retSpecAreaGiftList(pageAreaId,specAreaId);
+		}
+		XMLHttpReq.send(null);
+	}
+
+	function retSpecAreaGiftList(pageAreaId,specAreaId){
+		if (XMLHttpReq.readyState == 4) { 
+			if (XMLHttpReq.status == 200) { 
+				var specAreaTagtwodiv = document.getElementById("specAreaTagtwodiv"+pageAreaId);
+				var moreSpecArea = document.getElementById("moreSpecArea"+pageAreaId);
+				//var specAreaTagtwodiv = document.all.specAreaTagtwodiv;
+				//var moreSpecArea = document.all.moreSpecArea;
+				specAreaTagtwodiv.innerHTML = XMLHttpReq.responseText;
+				var s = "<a style=\"cursor:hand\" onclick=\"getSpecAreaListBypageAreaId('"+pageAreaId+"')\"> 其他专区>></a>&nbsp&nbsp&nbsp&nbsp";
+				 s += "<a style=\"cursor:hand\" onclick=\"getSpecAreaGiftLists('specArea','"+specAreaId+"')\"> 更多>> </a>";
+				 moreSpecArea.innerHTML = s;
+			} else { 
+				
+			}
+		}
+	}
+	
+	//自定义专区对应礼品   add by huangrui 20140725
+	function findDefineSpecAreaGiftList(pageAreaId,specAreaId,specAreaName,defineType){
+		url1 = "/BOCGIFTORDERNET/getDefineSpecAreaGiftInfo.do?gc.specAreaId="+specAreaId+"&gc.defineType="+defineType+"&gc.lastIndex=6&timestamp="+Math.random();
+		
+		createXMLHttpRequest();
+		XMLHttpReq.open("POST",url1,true);
+		XMLHttpReq.setRequestHeader("cache-control","no-cache");
+		XMLHttpReq.setRequestHeader("Content-Type","application/x-www-form-urlencoded");
+		XMLHttpReq.onreadystatechange= function(){
+			retDefineSpecAreaGiftList(pageAreaId,specAreaId,specAreaName,defineType);
+		}
+		XMLHttpReq.send(null);
+	}
+	function retDefineSpecAreaGiftList(pageAreaId,specAreaId,specAreaName,defineType){
+		if (XMLHttpReq.readyState == 4) { 
+			if (XMLHttpReq.status == 200) { 
+				var specAreaTagtwodiv = document.getElementById("specAreaTagtwodiv"+pageAreaId);
+				var moreSpecArea = document.getElementById("moreSpecArea"+pageAreaId);
+				specAreaTagtwodiv.innerHTML = XMLHttpReq.responseText;
+				var s = "<a style=\"cursor:hand\" onclick=\"getDefineSpecAreaListBypageAreaId('"+pageAreaId+"')\"> 其他专区>></a>&nbsp&nbsp&nbsp&nbsp";
+				 s += "<a style=\"cursor:hand\" onclick=\"getDefineSpecAreaGiftLists('specArea','"+specAreaId+"','"+specAreaName+"','"+defineType+"')\"> 更多>> </a>";
+				 moreSpecArea.innerHTML = s;
+			} else { 
+				
+			}
+		}
+	}
+	
+	
+		
+ function dengluStyle(){
+		var myuserName = "陈慧聪";
+		var mylastLoginDate = "2019-01-29 11:32:15";
+		var totalPoint = "13218.00";
+		var availPoint = "13218.00";
+		var denglu = document.all.denglu;
+		var s = "<dl>";
+		if(myuserName!=""){
+			s +="<dd>"+myuserName+",您好！</dd>";
+			s +="<dd> 上次登录时间：";
+			if(mylastLoginDate!=""){
+				s +=mylastLoginDate;
+			}
+			s +="</dd>";
+			s +="<dd>您的总积分为：<span>"+totalPoint+"</span></dd>";
+			s +="<dd>您的可用积分为：<span>"+availPoint+"</span></dd>";
+		s +="</dl>";
+			denglu.innerHTML=s;
+		}
+		
+	}
+	
+	function loginFun(){
+		if(window.event.keyCode==13) {
+			setTimeout("userLogin()",1);
+		}
+	}
+	
+	function getMyNotices(){
+		document.getElementById("getNotices").submit();
+	}
+	
+	//首页的用户登录
+ 	function userLogin() {
+	 	var seccode=document.all.seccode.value;
+	 	var userName = document.all.userName.value;
+	 	var loginError = document.all.loginError;
+	 	if(userName==null||trim(userName)==""||ttrim(userName)==""){
+	 		cleanAndChange();
+	 		loginError.style.display="";
+	 		loginError.innerHTML = "<dd>请输入用户名</dd>";
+	 		return;
+ 		}
+	 	if(seccode.length<4){
+	 		cleanAndChange();
+	 		loginError.style.display="";
+	 		loginError.innerHTML = "<dd>请输入4位验证码</dd>";
+	 		return;
+	 	}
+	 	obj = document.getElementById("oEdit1");
+	 	obj.RandomKey_S="UVlOQzl5NjlyakttSDFrTA==";
+		document.getElementById("randomKey_c").value = obj.RandomKey_C;
+		document.getElementById("logonPwd").value = obj.Value;
+	    var frm = document.getElementById("login");
+	    frm.submit();
+	}
+ 
+ 	function InitValue(){
+			obj = document.getElementById("oEdit1");
+			obj.MaxLength = 16;
+                        obj.OutputValueType = 1;
+	}
+	
+	function fileDownload(){
+		document.all.download.submit();
+	}
+	function getuser(){
+		var frm = document.getElementById("getuseruserList");
+    	frm.submit();
+	}
+	
+	function getSpecAreaListBypageAreaId(pageAreaId){
+		var frm = document.getElementById("getSpecAreaList");
+    	var s ="<input type='hidden' name='pageAreaId' value='"+pageAreaId+"'>";
+		frm.innerHTML = s;
+    	frm.submit();
+	}
+	
+	//其他 自定义专区  
+	function getDefineSpecAreaListBypageAreaId(pageAreaId){
+		var frm = document.getElementById("getDefineSpecAreaList");
+    	var s ="<input type='hidden' name='pageAreaId' value='"+pageAreaId+"'>";
+		frm.innerHTML = s;
+    	frm.submit();
+	}
+	
+	//自定义专区礼品 更多 
+	function getDefineSpecAreaGiftLists(selType,typeNO,specAreaName,defineType){
+		var frm = document.getElementById("getDefineSpecAreaGiftList");
+		var s = "";
+		if(selType=="specArea"){
+			s +="<input type='hidden' name='gc.specAreaId' value='"+typeNO+"'>";
+			s +="<input type='hidden' name='gc.specAreaName' value='"+specAreaName+"'>";
+			s +="<input type='hidden' name='gc.defineType' value='"+defineType+"'>";
+		}
+		s += "<input type=\"hidden\" name=\"gc.currentPage\" value=\"1\">";
+		frm.innerHTML = s;
+	 	frm.submit();
+	}
+	
+$(document).ready(function() {
+	var swiper_banner = new Swiper('.swiper-container-banner', {
+	    pagination: '.pagination',
+	    paginationClickable: true,
+	    spaceBetween: 30,
+	    centeredSlides: true,
+	    loop:true,
+	    autoplay: 2500,
+	    autoplayDisableOnInteraction: false
+	});
+});
+	
+</script>
+
+<style type="text/css">
+.pagination {
+  position: absolute;
+  z-index: 20;
+  bottom: 10px;
+  width: 100%;
+  text-align: center;
+}
+.swiper-pagination-switch {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 8px;
+  background: #555;
+  margin: 0 5px;
+  opacity: 0.8;
+  border: 1px solid #fff;
+  cursor: pointer;
+}
+.swiper-active-switch {
+  background: red;
+}
+.swiper-container-banner{
+	height:100%;
+}
+</style>
+</head>
+<!-- <body onload="dengluStyle()"> -->
+<body>
+	<!--头部开始-->
+	
+
+
+
+
+ <head>
+ <link href="/BOCGIFTORDERNET/style/style.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="/BOCGIFTORDERNET/templates/default/pagenation.js"></script>
+<script type="text/javascript">
+	function noNumbers()   
+		{   
+			if(window.event.keyCode==13) {
+				setTimeout("searchProd('1')",1);
+			}
+		}
+		function onover(){
+			document.getElementById('layer1').style.display="block";
+		}
+		function onout(){
+			document.getElementById('layer1').style.display="none";
+		}   
+</script>
+</head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=7" />
+<!--头部开始-->
+
+<div id="header">
+	<div class="top_info">
+		<span class="login" align="left">陈慧聪&nbsp;&nbsp;您好，欢迎来到积分兑换商城！&nbsp;&nbsp;<a href="/BOCGIFTORDERNET/logout.do">退出</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+		<span class="link"><a href="/BOCGIFTORDERNET/getCurrentScroe.do" >我的积分</a><a href="/BOCGIFTORDERNET/jsp/shoppingCar/carGiftInfo.jsp">购物车</a><a href="/BOCGIFTORDERNET/getFavoRates.do?sp.currentPage=1" >收藏夹</a><a href="http://www.boc.cn" target="_blank">中国银行首页</a></span>
+	</div>
+	<div class="logo_search">
+		<div class="logo">
+			<a href="/BOCGIFTORDERNET/index.jsp" title="中国银行－积分兑换商城">中国银行－积分兑换商城</a>
+		</div>
+		<div class="search" >
+			<div class="search_input">
+				<div class="xiala">
+					<form name="tiaojian" >
+						<div>
+							<select id="tiaojian" name="tiaojian">
+							<option value="">全部礼品</option>
+							
+								<option value="ICI1000000014">运动休闲</option>
+							
+								<option value="ICI1000000022">电子礼券</option>
+							
+								<option value="ICI1000017022">医疗健康</option>
+							
+								<option value="ICI1000014022">航空里程</option>
+							
+								<option value="ICI1000006022">积分联盟</option>
+							
+								<option value="ICI1000012022">母婴专享</option>
+							
+								<option value="ICI1000000012">家居日用</option>
+							
+								<option value="ICI1000012023">时尚精品</option>
+							
+								<option value="ICI1000000013">我爱我车</option>
+							
+							</select>
+						</div>
+					</form>
+				</div>
+				<div class="xiala">
+					<form name="jifen" >
+						<div>
+							<select id="jifen" name="jifen" >
+								<option value="">全部积分</option>
+								<option value="1">2万分以下</option>
+								<option value="2">2万-5万分</option>
+								<option value="3">5万-15万分</option>
+								<option value="4">15万-100万分</option>
+								<option value="5">100万分以上</option>
+							</select>
+						</div>
+						</form>
+				</div>
+				<div class="search_box">
+					<form name="search" name="search" >
+					<input name="giftNameHead" id="giftNameHead" onkeydown="noNumbers()" type="text"  class="search_txt"/>
+					<input name="" type="button" class="search_bt"  onclick="searchProd('1')" />
+					</form>
+				</div>
+				
+			</div>
+			<div class="txt_link">
+				热门搜索：<a style="cursor:hand" onclick="searchProdName('乐扣乐扣保鲜盒')">乐扣乐扣保鲜盒</a><a style="cursor:hand" onclick="searchProdName('瑜珈垫')">瑜珈垫</a><a style="cursor:hand" onclick="searchProdName('瑞士军刀')">瑞士军刀</a>
+						<a style="cursor:hand" onclick="searchProdName('旅行电吹风')">旅行电吹风</a>
+			</div>
+		</div>
+	</div>
+</div>
+<!--导航菜单-->
+<div style="text-align:center;margin:0 auto; width:980px;">
+<div id="nav">
+	<div class="menu">
+		<ul>
+			<li id="menu1" class="menu_on"><a class="main_nav" href="/BOCGIFTORDERNET/index.jsp">首页</a></li>
+			<li id="menu2" class="menu_off"><a class="main_nav" href="/BOCGIFTORDERNET/scoreToGift.do">积分换礼</a></li>
+			<li id="menu3" class="menu_off"><a class="main_nav" href="/BOCGIFTORDERNET/userManager.do">会员管理</a></li>
+			<li id="menu4" class="menu_off"><a class="main_nav" href="/BOCGIFTORDERNET/getSecondGiftList.do">积分秒杀</a></li>
+			<li id="menu8" class="menu_off"><a class="main_nav" href="/BOCGIFTORDERNET/getAuctionGiftListInfo.do">积分竞拍</a></li>
+			<li id="menu5" class="menu_off"><a class="main_nav" href="#" onclick="window.open('/BOCGIFTORDERNET/pages/help/provision.jsp')">活动条款</a></li>					
+			
+			<!-- <li style="width:125px;" id="menu9" class="menu_off" onmouseover="onover()" onmouseout="onout()"><a class="main_nav" href="javascript:void(0)" >虚拟卡服务</a>
+				<ul id="layer1" style="left:3px; top:0px; z-index:10; width:125px; display:none; position:relative;"  > -->
+				<!--[If IE 6]>-->
+					<!-- <div style="position:absolute; left:0; width:125px;">
+						<li style="background-color:#DD0000;width:120px;"><a class="sub_nav" href="/BOCGIFTORDERNET/gotoAskCardMessage.do" >虚拟卡申请</a></li>
+						<li style="background-color:#DD0000;width:120px;"><a class="sub_nav" href="/BOCGIFTORDERNET/getCardMessage.do">虚拟卡查询</a></li>	
+						<li style="background-color:#DD0000;width:120px;"><a class="sub_nav" href="/BOCGIFTORDERNET/setCardMessage.do">虚拟卡设置</a></li>	
+						<li style="background-color:#DD0000;width:120px;"><a class="sub_nav" href="#" onclick="window.open('/BOCGIFTORDERNET/pages/dummy/dummyCard_QA.jsp')">虚拟卡Q&A</a></li> 
+					</div>	-->				
+				<!-- <[endif]-->
+				<!--[If !IE 6]> 
+					<li style="background-color:#DD0000;width:120px;"><a class="sub_nav" href="/BOCGIFTORDERNET/gotoAskCardMessage.do" >虚拟卡申请</a></li>
+					<li style="background-color:#DD0000;width:120px;"><a class="sub_nav" href="/BOCGIFTORDERNET/getCardMessage.do">虚拟卡查询</a></li>	
+					<li style="background-color:#DD0000;width:120px;"><a class="sub_nav" href="/BOCGIFTORDERNET/setCardMessage.do">虚拟卡设置</a></li>	
+					<li style="background-color:#DD0000;width:120px;"><a class="sub_nav" href="#" onclick="window.open('/BOCGIFTORDERNET/pages/dummy/dummyCard_QA.jsp')">虚拟卡Q&A</a></li>
+				<![endif]-->
+				<!--</ul>
+			</li>	-->	
+
+			<li id="menu6" class="menu_off"><a class="main_nav" href="/BOCGIFTORDERNET/toSCSys.do" >聪明购商城</a></li> 
+			<!-- <li id="menu6" class="menu_off"><span>聪明购商城</span></li>-->
+			
+			<li id="menu7" class="menu_off"><span>尊享积分</span></li>
+			
+
+		</ul>
+
+	</div>
+	<div>
+
+	</div>
+</div>
+</div>
+<form id="getGiftListHead" name="getGiftListHead" action="/BOCGIFTORDERNET/getGiftListHead.do" method="post">
+</form>
+
+	<!--内容-->
+
+	<div id="w980">
+		<!--左侧开始-->
+		<div id="left">
+			<div class="fenlei_banner">
+				<!--产品分类-->
+				
+
+
+
+
+
+ 
+  
+<head>
+
+	<script type="text/javascript"
+		src="/BOCGIFTORDERNET/templates/default/jquery-1.3.2.min.js"></script>
+	<script type="text/javascript"
+		src="/BOCGIFTORDERNET/templates/default/pop.js"></script>
+</head>
+
+<div class="fenlei">
+	<div class="fenlei_titile">
+		礼品分类
+	</div>
+
+	
+	<div class="parentClasslist">
+		<span><img src="/BOCGIFTORDERNET/images/icon_01.gif" width="16" height="16"
+				align="left" />
+			<h3>
+				<a class="aaOut" style="cursor: hand" onmouseover="this.className='aaOn'" onmouseout="this.className='aaOut'"
+					 onclick="getGiftLists('classNO','ICI1000000014')">运动休闲</a>
+			</h3>
+		</span>
+		<div class="childClasslist">
+			<ul>
+				
+				<li>
+					<a class="aaOut" style="cursor: hand" onmouseover="this.className='aaOn'" onmouseout="this.className='aaOut'"
+						onclick="getGiftLists('classNO','ICI1000013027')">运动生活</a>
+				</li>
+				
+				<li>
+					<a class="aaOut" style="cursor: hand" onmouseover="this.className='aaOn'" onmouseout="this.className='aaOut'"
+						onclick="getGiftLists('classNO','ICI1000013026')">户外生活</a>
+				</li>
+				
+			</ul>
+		</div>
+	</div>
+				
+	<div class="parentClasslist">
+		<span><img src="/BOCGIFTORDERNET/images/icon_02.gif" width="16" height="16"
+				align="left" />
+			<h3>
+				<a class="aaOut" style="cursor: hand" onmouseover="this.className='aaOn'" onmouseout="this.className='aaOut'"
+					 onclick="getGiftLists('classNO','ICI1000000022')">电子礼券</a>
+			</h3>
+		</span>
+		<div class="childClasslist">
+			<ul>
+				
+				<li>
+					<a class="aaOut" style="cursor: hand" onmouseover="this.className='aaOn'" onmouseout="this.className='aaOut'"
+						onclick="getGiftLists('classNO','ICI1000009023')">美食娱乐</a>
+				</li>
+				
+				<li>
+					<a class="aaOut" style="cursor: hand" onmouseover="this.className='aaOn'" onmouseout="this.className='aaOut'"
+						onclick="getGiftLists('classNO','ICI1000009022')">时尚生活</a>
+				</li>
+				
+			</ul>
+		</div>
+	</div>
+				
+	<div class="parentClasslist">
+		<span><img src="/BOCGIFTORDERNET/images/icon_03.gif" width="16" height="16"
+				align="left" />
+			<h3>
+				<a class="aaOut" style="cursor: hand" onmouseover="this.className='aaOn'" onmouseout="this.className='aaOut'"
+					 onclick="getGiftLists('classNO','ICI1000017022')">医疗健康</a>
+			</h3>
+		</span>
+		<div class="childClasslist">
+			<ul>
+				
+				<li>
+					<a class="aaOut" style="cursor: hand" onmouseover="this.className='aaOn'" onmouseout="this.className='aaOut'"
+						onclick="getGiftLists('classNO','ICI1000018022')">健康体检</a>
+				</li>
+				
+			</ul>
+		</div>
+	</div>
+				
+	<div class="parentClasslist">
+		<span><img src="/BOCGIFTORDERNET/images/icon_04.gif" width="16" height="16"
+				align="left" />
+			<h3>
+				<a class="aaOut" style="cursor: hand" onmouseover="this.className='aaOn'" onmouseout="this.className='aaOut'"
+					 onclick="getGiftLists('classNO','ICI1000014022')">航空里程</a>
+			</h3>
+		</span>
+		<div class="childClasslist">
+			<ul>
+				
+				<li>
+					<a class="aaOut" style="cursor: hand" onmouseover="this.className='aaOn'" onmouseout="this.className='aaOut'"
+						onclick="getGiftLists('classNO','ICI1000015022')">超级里赏</a>
+				</li>
+				
+			</ul>
+		</div>
+	</div>
+				
+	<div class="parentClasslist">
+		<span><img src="/BOCGIFTORDERNET/images/icon_05.gif" width="16" height="16"
+				align="left" />
+			<h3>
+				<a class="aaOut" style="cursor: hand" onmouseover="this.className='aaOn'" onmouseout="this.className='aaOut'"
+					 onclick="getGiftLists('classNO','ICI1000006022')">积分联盟</a>
+			</h3>
+		</span>
+		<div class="childClasslist">
+			<ul>
+				
+				<li>
+					<a class="aaOut" style="cursor: hand" onmouseover="this.className='aaOn'" onmouseout="this.className='aaOut'"
+						onclick="getGiftLists('classNO','ICI1000007022')">畅由平台</a>
+				</li>
+				
+			</ul>
+		</div>
+	</div>
+				
+	<div class="parentClasslist">
+		<span><img src="/BOCGIFTORDERNET/images/icon_06.gif" width="16" height="16"
+				align="left" />
+			<h3>
+				<a class="aaOut" style="cursor: hand" onmouseover="this.className='aaOn'" onmouseout="this.className='aaOut'"
+					 onclick="getGiftLists('classNO','ICI1000012022')">母婴专享</a>
+			</h3>
+		</span>
+		<div class="childClasslist">
+			<ul>
+				
+				<li>
+					<a class="aaOut" style="cursor: hand" onmouseover="this.className='aaOn'" onmouseout="this.className='aaOut'"
+						onclick="getGiftLists('classNO','ICI1000013024')">宝贝礼遇</a>
+				</li>
+				
+			</ul>
+		</div>
+	</div>
+				
+	<div class="parentClasslist">
+		<span><img src="/BOCGIFTORDERNET/images/icon_07.gif" width="16" height="16"
+				align="left" />
+			<h3>
+				<a class="aaOut" style="cursor: hand" onmouseover="this.className='aaOn'" onmouseout="this.className='aaOut'"
+					 onclick="getGiftLists('classNO','ICI1000000012')">家居日用</a>
+			</h3>
+		</span>
+		<div class="childClasslist">
+			<ul>
+				
+				<li>
+					<a class="aaOut" style="cursor: hand" onmouseover="this.className='aaOn'" onmouseout="this.className='aaOut'"
+						onclick="getGiftLists('classNO','ICI1000013036')">生活用品</a>
+				</li>
+				
+				<li>
+					<a class="aaOut" style="cursor: hand" onmouseover="this.className='aaOn'" onmouseout="this.className='aaOut'"
+						onclick="getGiftLists('classNO','ICI1000013023')">家居家纺</a>
+				</li>
+				
+				<li>
+					<a class="aaOut" style="cursor: hand" onmouseover="this.className='aaOn'" onmouseout="this.className='aaOut'"
+						onclick="getGiftLists('classNO','ICI1000013022')">粮油食品</a>
+				</li>
+				
+				<li>
+					<a class="aaOut" style="cursor: hand" onmouseover="this.className='aaOn'" onmouseout="this.className='aaOut'"
+						onclick="getGiftLists('classNO','ICI1000012027')">家用电器</a>
+				</li>
+				
+				<li>
+					<a class="aaOut" style="cursor: hand" onmouseover="this.className='aaOn'" onmouseout="this.className='aaOut'"
+						onclick="getGiftLists('classNO','ICI1000012026')">厨房用品</a>
+				</li>
+				
+				<li>
+					<a class="aaOut" style="cursor: hand" onmouseover="this.className='aaOn'" onmouseout="this.className='aaOut'"
+						onclick="getGiftLists('classNO','ICI1000012025')">美妆个护</a>
+				</li>
+				
+			</ul>
+		</div>
+	</div>
+				
+	<div class="parentClasslist">
+		<span><img src="/BOCGIFTORDERNET/images/icon_08.gif" width="16" height="16"
+				align="left" />
+			<h3>
+				<a class="aaOut" style="cursor: hand" onmouseover="this.className='aaOn'" onmouseout="this.className='aaOut'"
+					 onclick="getGiftLists('classNO','ICI1000012023')">时尚精品</a>
+			</h3>
+		</span>
+		<div class="childClasslist">
+			<ul>
+				
+				<li>
+					<a class="aaOut" style="cursor: hand" onmouseover="this.className='aaOn'" onmouseout="this.className='aaOut'"
+						onclick="getGiftLists('classNO','ICI1000013025')">箱包配饰</a>
+				</li>
+				
+			</ul>
+		</div>
+	</div>
+				
+	<div class="parentClasslist">
+		<span><img src="/BOCGIFTORDERNET/images/icon_09.gif" width="16" height="16"
+				align="left" />
+			<h3>
+				<a class="aaOut" style="cursor: hand" onmouseover="this.className='aaOn'" onmouseout="this.className='aaOut'"
+					 onclick="getGiftLists('classNO','ICI1000000013')">我爱我车</a>
+			</h3>
+		</span>
+		<div class="childClasslist">
+			<ul>
+				
+				<li>
+					<a class="aaOut" style="cursor: hand" onmouseover="this.className='aaOn'" onmouseout="this.className='aaOut'"
+						onclick="getGiftLists('classNO','ICI1000013028')">车载系列</a>
+				</li>
+				
+			</ul>
+		</div>
+	</div>
+				
+	<ul>
+		<li>
+			<img src="/BOCGIFTORDERNET/images/icon_10.gif" width="16"
+				height="16" align="left" />
+			<a class="onChange" style="{cursor:hand;color:#333333}" href="/BOCGIFTORDERNET/scoreToGift.do">全部商品分类</a>
+		</li>
+	</ul>
+</div>
+
+
+
+				<!--切换广告-->
+				<div class="ad_banner">
+					<div class="swiper-container swiper-container-banner">
+        				<div class="swiper-wrapper">
+          			 		<a class="swiper-slide" href="#">
+                				<img src="/BOCGIFTORDERNET/images/flash_ad/20180528_1.jpg" alt="slide">
+							</a> 
+							<a class="swiper-slide" href="https://jf365.boc.cn/BOCGIFTORDERNET/getGiftDetails.do?giftNO=IGI1006911040">
+                				<img src="https://jf365.boc.cn/BOCGIFTPIC/img/1490785568824.jpg" alt="slide">
+							</a>
+							<a class="swiper-slide" href="http://www.boc.cn/bcservice/bi3/bi31/201604/t20160401_6643010.html">
+                				<img src="https://jf365.boc.cn/BOCGIFTPIC/img/1476253164090.jpg"" alt="slide">
+							</a>
+					 		<a class="swiper-slide" href="https://jf365.boc.cn/BOCGIFTORDERNET/getGiftDetails.do?giftNO=IGI1006917040">
+                				<img src="/BOCGIFTORDERNET/images/flash_ad/20180528_2.jpg" alt="slide">
+							</a>
+							<a class="swiper-slide" href="https://jf365.boc.cn/BOCGIFTORDERNET/pages/bfsh.jsp">
+                				<img src="https://jf365.boc.cn/BOCGIFTPIC/img/ad_img14.png" alt="slide">
+							</a>
+							<a class="swiper-slide" href="#">
+                				<img src="https://jf365.boc.cn/BOCGIFTPIC/img/ad_img01.jpg" alt="slide">
+							</a>
+							<a class="swiper-slide" href="#">
+                				<img src="https://jf365.boc.cn/BOCGIFTPIC/img/1439887452014.jpg" alt="slide">
+							</a>
+							<a class="swiper-slide" href="https://jf365.boc.cn/BOCGIFTORDERNET/getGiftDetails.do?giftNO=IGI1006921041">
+                				<img src="/BOCGIFTORDERNET/images/flash_ad/20180528_3.jpg" alt="slide">
+
+							</a>
+        				</div>
+        		<!-- 小圆点 -->
+        			<div class="pagination"></div>
+    				</div>
+				
+				
+				
+					<!-- <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000"
+						id=scriptmain name=scriptmain
+						codebase="https://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,29,0"
+						width="578" height="250">
+						<param name="movie"
+							value="images/flash_ad/bcastr.swf?bcastr_xml_url=images/flash_ad/bcastr.xml">
+							<param name="quality" value="high">
+								<param name=scale value=noscale>
+									<param name="LOOP" value="false">
+										<param name="menu" value="false">
+											<param name="wmode" value="transparent">
+												<embed
+													src="images/flash_ad/bcastr.swf?bcastr_xml_url=images/flash_ad/bcastr.xml"
+													width="578" height="250" loop="false" quality="high"
+													pluginspage="http://www.macromedia.com/go/getflashplayer"
+													type="application/x-shockwave-flash" salign="T"
+													name="scriptmain" menu="false" wmode="transparent"></embed>
+					</object> -->
+				</div>
+				<div class="ad_img" id="addsmallimg">
+					<a href="http://www.boc.cn/bcservice/bi3/bi31/201609/t20160930_7807757.html"><img width="187" height="80" title="" style="cursor: hand;"  src="https://jf365.boc.cn/BOCGIFTPIC/img/1476692777588.jpg"/></a>
+					<a href="#"><img width="187" height="80" title="" style="cursor: hand;"  src="/BOCGIFTORDERNET/images/flash_ad/20180528_S.jpg"/></a>
+					<a href="http://www.boc.cn/bcservice/bi3/bi31/201604/t20160401_6643010.html"><img width="187" height="80" title="" style="cursor: hand;"  src="https://jf365.boc.cn/BOCGIFTPIC/img/1476696376105.jpg"/></a>
+				</div>
+			</div>
+			<!-- 礼品热门专区 -->
+			
+			<!-- 最新礼品专区 -->			
+			
+
+				
+				<div class="product_a">				
+					
+				
+					<div class="title_div">
+						<div class="title"></div>
+						<div class="tag_div01">
+							<ul>
+								
+												<li class="tag_one_on" id="hotDefineRegionOf3651"
+													onclick="javascript:findDefineSpecAreaGiftList('0E5A2BD9228601D0E05315071B2101D0','ICR1000000012','推荐礼品专区','3');tagpageareadefine(1,2,'hotDefineRegionOf365')">
+													<span style="font-size:14px;font-weight:bold;">推荐礼品专区</span>
+												</li>
+								
+												<li class="tag_one_off" id="hotDefineRegionOf3652"
+													onclick="javascript:findDefineSpecAreaGiftList('0E5A2BD9228601D0E05315071B2101D0','ICR1000000013','热门礼品专区','1');tagpageareadefine(2,2,'hotDefineRegionOf365')">
+													<span style="font-size:14px;font-weight:bold;">热门礼品专区</span>
+												</li>
+								
+							</ul>
+						</div>
+						<div class="more" id="moreSpecArea0E5A2BD9228601D0E05315071B2101D0">
+							<a style="cursor: hand"
+								onclick="getDefineSpecAreaListBypageAreaId('0E5A2BD9228601D0E05315071B2101D0')">
+								其他专区>></a>&nbsp&nbsp&nbsp&nbsp <a style="cursor: hand"
+								onclick="getDefineSpecAreaGiftLists('specArea','ICR1000000012','推荐礼品专区','3')">
+								更多>> </a>
+						</div>
+					</div>
+					<div class="product_list" id="specAreaTagtwodiv0E5A2BD9228601D0E05315071B2101D0">
+						
+						<div class="productMod">
+							<a style="cursor: hand"
+								onclick="getGiftDetails('/BOCGIFTORDERNET','IGI1000152577')">
+								<img alt="歌然便携式旅行包（蓝）GR9615" src="https://jf365.boc.cn/BOCGIFTPIC/img/HYindex240.png">
+							</a> <br />
+							<p>
+								<a style="cursor: hand" title="歌然便携式旅行包（蓝）GR9615"
+									onclick="getGiftDetails('/BOCGIFTORDERNET','IGI1000152577')">
+									歌然便携式旅行包
+								</a>
+							</p>
+							<span>积分<b>33,000</b></span>
+							<br />
+						</div>
+						
+						<div class="productMod">
+							<a style="cursor: hand"
+								onclick="getGiftDetails('/BOCGIFTORDERNET','IGI1006929040')">
+								<img alt="汉唐颐和福禄寿喜对杯（4对一套）" src="https://jf365.boc.cn/BOCGIFTPIC/img/1529909175032.png">
+							</a> <br />
+							<p>
+								<a style="cursor: hand" title="汉唐颐和福禄寿喜对杯（4对一套）"
+									onclick="getGiftDetails('/BOCGIFTORDERNET','IGI1006929040')">
+									汉唐颐和福禄寿喜
+								</a>
+							</p>
+							<span>积分<b>82,500</b></span>
+							<br />
+						</div>
+						
+						<div class="productMod">
+							<a style="cursor: hand"
+								onclick="getGiftDetails('/BOCGIFTORDERNET','IGI1000143289')">
+								<img alt="美旅万向轮拉杆箱" src="https://jf365.boc.cn/BOCGIFTPIC/img/LCindex09.png">
+							</a> <br />
+							<p>
+								<a style="cursor: hand" title="美旅万向轮拉杆箱"
+									onclick="getGiftDetails('/BOCGIFTORDERNET','IGI1000143289')">
+									美旅万向轮拉杆箱
+								</a>
+							</p>
+							<span>积分<b>161,000</b></span>
+							<br />
+						</div>
+						
+						<div class="productMod">
+							<a style="cursor: hand"
+								onclick="getGiftDetails('/BOCGIFTORDERNET','IGI1000152409')">
+								<img alt="原初格物同心杯" src="https://jf365.boc.cn/BOCGIFTPIC/img/XXindex04.png">
+							</a> <br />
+							<p>
+								<a style="cursor: hand" title="原初格物同心杯"
+									onclick="getGiftDetails('/BOCGIFTORDERNET','IGI1000152409')">
+									原初格物同心杯
+								</a>
+							</p>
+							<span>积分<b>13,500</b></span>
+							<br />
+						</div>
+						
+						<div class="productMod">
+							<a style="cursor: hand"
+								onclick="getGiftDetails('/BOCGIFTORDERNET','IGI1000143217')">
+								<img alt="ANCHOW安巢家居水帘洞拖鞋（情侣套装）" src="https://jf365.boc.cn/BOCGIFTPIC/img/1528262949540.png">
+							</a> <br />
+							<p>
+								<a style="cursor: hand" title="ANCHOW安巢家居水帘洞拖鞋（情侣套装）"
+									onclick="getGiftDetails('/BOCGIFTORDERNET','IGI1000143217')">
+									ANCHOW安巢
+								</a>
+							</p>
+							<span>积分<b>13,000</b></span>
+							<br />
+						</div>
+						
+					</div>
+				
+				
+					<div class="title_div">
+						<div class="title"></div>
+						<div class="tag_div01">
+							<ul>
+								
+												<li class="tag_one_on" id="newDefineRegionOf3651"
+													onclick="javascript:findDefineSpecAreaGiftList('0E5A2BD9228901D0E05315071B2101D0','ICR1000000014','最新礼品专区','2');tagpageareadefine(1,1,'newDefineRegionOf365')">
+													<span style="font-size:14px;font-weight:bold;">最新礼品专区</span>
+												</li>
+								
+							</ul>
+						</div>
+						<div class="more" id="moreSpecArea0E5A2BD9228901D0E05315071B2101D0">
+							<a style="cursor: hand"
+								onclick="getDefineSpecAreaListBypageAreaId('0E5A2BD9228901D0E05315071B2101D0')">
+								其他专区>></a>&nbsp&nbsp&nbsp&nbsp <a style="cursor: hand"
+								onclick="getDefineSpecAreaGiftLists('specArea','ICR1000000014','最新礼品专区','2')">
+								更多>> </a>
+						</div>
+					</div>
+					<div class="product_list" id="specAreaTagtwodiv0E5A2BD9228901D0E05315071B2101D0">
+						
+						<div class="productMod">
+							<a style="cursor: hand"
+								onclick="getGiftDetails('/BOCGIFTORDERNET','IGI1006929040')">
+								<img alt="汉唐颐和福禄寿喜对杯（4对一套）" src="https://jf365.boc.cn/BOCGIFTPIC/img/1529909175032.png">
+							</a> <br />
+							<p>
+								<a style="cursor: hand" title="汉唐颐和福禄寿喜对杯（4对一套）"
+									onclick="getGiftDetails('/BOCGIFTORDERNET','IGI1006929040')">
+									汉唐颐和福禄寿喜
+								</a>
+							</p>
+							<span>积分<b>82,500</b></span>
+							<br />
+						</div>
+						
+						<div class="productMod">
+							<a style="cursor: hand"
+								onclick="getGiftDetails('/BOCGIFTORDERNET','IGI1000152577')">
+								<img alt="歌然便携式旅行包（蓝）GR9615" src="https://jf365.boc.cn/BOCGIFTPIC/img/HYindex240.png">
+							</a> <br />
+							<p>
+								<a style="cursor: hand" title="歌然便携式旅行包（蓝）GR9615"
+									onclick="getGiftDetails('/BOCGIFTORDERNET','IGI1000152577')">
+									歌然便携式旅行包
+								</a>
+							</p>
+							<span>积分<b>33,000</b></span>
+							<br />
+						</div>
+						
+						<div class="productMod">
+							<a style="cursor: hand"
+								onclick="getGiftDetails('/BOCGIFTORDERNET','IGI1000142665')">
+								<img alt="摩飞全自动美式咖啡机" src="https://jf365.boc.cn/BOCGIFTPIC/img/MJindex10.png">
+							</a> <br />
+							<p>
+								<a style="cursor: hand" title="摩飞全自动美式咖啡机"
+									onclick="getGiftDetails('/BOCGIFTORDERNET','IGI1000142665')">
+									摩飞全自动美式咖
+								</a>
+							</p>
+							<span>积分<b>313,500</b></span>
+							<br />
+						</div>
+						
+						<div class="productMod">
+							<a style="cursor: hand"
+								onclick="getGiftDetails('/BOCGIFTORDERNET','IGI1000145177')">
+								<img alt="苏泊尔火红点炒锅" src="https://jf365.boc.cn/BOCGIFTPIC/img/KQindex40.png">
+							</a> <br />
+							<p>
+								<a style="cursor: hand" title="苏泊尔火红点炒锅"
+									onclick="getGiftDetails('/BOCGIFTORDERNET','IGI1000145177')">
+									苏泊尔火红点炒锅
+								</a>
+							</p>
+							<span>积分<b>98,000</b></span>
+							<br />
+						</div>
+						
+						<div class="productMod">
+							<a style="cursor: hand"
+								onclick="getGiftDetails('/BOCGIFTORDERNET','IGI1000143289')">
+								<img alt="美旅万向轮拉杆箱" src="https://jf365.boc.cn/BOCGIFTPIC/img/LCindex09.png">
+							</a> <br />
+							<p>
+								<a style="cursor: hand" title="美旅万向轮拉杆箱"
+									onclick="getGiftDetails('/BOCGIFTORDERNET','IGI1000143289')">
+									美旅万向轮拉杆箱
+								</a>
+							</p>
+							<span>积分<b>161,000</b></span>
+							<br />
+						</div>
+						
+					</div>
+				
+				</div>
+			
+				
+		</div>
+		<!--右侧开始-->
+		<div id="right">
+			<!--登录样式-->
+			<div class="div_title">
+				<ul class="title_div">
+					<li class="title">会员管理</li>
+					<li class="right"></li>
+				</ul>
+			</div>
+			<form id="login" name="login" action="/BOCGIFTORDERNET/login.do" method="post">
+				<div class="login_i" id="denglu">
+				
+					<dl>
+						<dd>陈慧聪,您好！</dd>
+						<dd> 上次登录时间：2019-01-29 11:32:15</dd>
+						<dd>您的总积分为：<span>13218.00</span></dd>
+						<dd>您的可用积分为：<span>13218.00</span></dd>
+					</dl>
+				
+				</div>
+			</form>
+			<div
+				style="border-bottom: #cfcfcf 1px solid; border-left: #cfcfcf 1px solid; border-right: #cfcfcf 1px solid; border-top: #cfcfcf 1px solid;">
+				<input class="regist_bfsh" name="" type="button"
+					onclick="javascript:location.href='/BOCGIFTORDERNET/pages/bfsh.jsp'" />
+			</div>
+
+			<!--公告信息-->
+			<div class="div_title">
+				<ul class="title_div">
+					<li class="title">信息公告</li>
+					<li class="more"><a style="cursor: hand"
+						onclick="getMyNotices()">更多>></a></li>
+				</ul>
+			</div>
+			
+				<div class="notices">
+					<dl style="height: 90px; *height: 92px; margin-bottom: 2px;">
+						
+						<dt>
+							<a style="cursor: hand;" title="关于2019春节前后积分兑换实物礼品物流停运的通知"
+								onclick="viewNotice('NT1000080056')">关于2019春节前后积分兑换</a>
+						</dt>
+						
+						<dt>
+							<a style="cursor: hand;" title="关于2018“双11”期间物流延迟的公告"
+								onclick="viewNotice('NT1000078056')">关于2018“双11”期间物</a>
+						</dt>
+						
+						<dd>
+							<a style="cursor: hand;" title="关于上海地区2018进博会期间物流投递出现延迟的公告"
+								onclick="viewNotice('NT1000077056')">关于上海地区2018进博会期</a>
+						</dd>
+						
+						<dd>
+							<a style="cursor: hand;" title="关于2018年国庆节积分兑换实物礼品物流延迟发货的公告"
+								onclick="viewNotice('NT1000076056')">关于2018年国庆节积分兑换</a>
+						</dd>
+						
+					</dl>
+				</div>
+			
+			<!--热门兑换礼品排行-->
+			<div class="div_title">
+				<ul class="title_div">
+					<li class="title">热门兑换礼品排行榜</li>
+					<li class="right"></li>
+				</ul>
+			</div>
+			
+				<div class="top10_div">
+					
+					<ul class="top1_3 clearfix">
+						<li><a style="cursor: hand"
+							onclick="getGiftDetails('/BOCGIFTORDERNET','IGI1000000184')"><img
+								class="topimg" alt=""
+								src="https://jf365.boc.cn/BOCGIFTPIC/img/1536912235498_1.png"></a></li>
+						<li>
+							<p>
+								<img
+									src="/BOCGIFTORDERNET/images/top01.gif"
+									width="14" height="14" align="left" ; /><a style="cursor: hand"
+									title="中国南方航空500航空里程"
+									onclick="getGiftDetails('/BOCGIFTORDERNET','IGI1000000184')">中国南方航空50</a>
+								<p>
+									<p>
+										积分：<b>15,000分</b>
+										<p>
+						</li>
+						<div style="clear: both;"></div>
+					</ul>
+					
+					<ul class="top1_3 clearfix">
+						<li><a style="cursor: hand"
+							onclick="getGiftDetails('/BOCGIFTORDERNET','IGI1000000183')"><img
+								class="topimg" alt=""
+								src="https://jf365.boc.cn/BOCGIFTPIC/img/1528436562902_1.png"></a></li>
+						<li>
+							<p>
+								<img
+									src="/BOCGIFTORDERNET/images/top02.gif"
+									width="14" height="14" align="left" ; /><a style="cursor: hand"
+									title="中国国际航空500航空里程"
+									onclick="getGiftDetails('/BOCGIFTORDERNET','IGI1000000183')">中国国际航空50</a>
+								<p>
+									<p>
+										积分：<b>14,000分</b>
+										<p>
+						</li>
+						<div style="clear: both;"></div>
+					</ul>
+					
+					<ul class="top1_3 clearfix">
+						<li><a style="cursor: hand"
+							onclick="getGiftDetails('/BOCGIFTORDERNET','IGI1006770040')"><img
+								class="topimg" alt=""
+								src="https://jf365.boc.cn/BOCGIFTPIC/img/1527124397372_1.jpg"></a></li>
+						<li>
+							<p>
+								<img
+									src="/BOCGIFTORDERNET/images/top03.gif"
+									width="14" height="14" align="left" ; /><a style="cursor: hand"
+									title="海南航空500金鹏俱乐部积分"
+									onclick="getGiftDetails('/BOCGIFTORDERNET','IGI1006770040')">海南航空500金</a>
+								<p>
+									<p>
+										积分：<b>12,500分</b>
+										<p>
+						</li>
+						<div style="clear: both;"></div>
+					</ul>
+					
+
+					<ul class="top4_10">
+						
+						<li><img
+							src="/BOCGIFTORDERNET/images/top04.gif"
+							width="14" height="14" align="left" /><a style="cursor: hand"
+							title="中国东方航空500点东方万里行积分"
+							onclick="getGiftDetails('/BOCGIFTORDERNET','IGI1000000185')">中国东方航空50</a><span>15,000分</span></li>
+						
+						<li><img
+							src="/BOCGIFTORDERNET/images/top05.gif"
+							width="14" height="14" align="left" /><a style="cursor: hand"
+							title="歌然便携式旅行包（蓝）GR9615"
+							onclick="getGiftDetails('/BOCGIFTORDERNET','IGI1000152577')">歌然便携式旅行包</a><span>33,000分</span></li>
+						
+						<li><img
+							src="/BOCGIFTORDERNET/images/top06.gif"
+							width="14" height="14" align="left" /><a style="cursor: hand"
+							title="摩飞全自动美式咖啡机"
+							onclick="getGiftDetails('/BOCGIFTORDERNET','IGI1000142665')">摩飞全自动美式咖</a><span>313,500分</span></li>
+						
+						<li><img
+							src="/BOCGIFTORDERNET/images/top07.gif"
+							width="14" height="14" align="left" /><a style="cursor: hand"
+							title="苏泊尔火红点炒锅"
+							onclick="getGiftDetails('/BOCGIFTORDERNET','IGI1000145177')">苏泊尔火红点炒锅</a><span>98,000分</span></li>
+						
+						<li><img
+							src="/BOCGIFTORDERNET/images/top08.gif"
+							width="14" height="14" align="left" /><a style="cursor: hand"
+							title="美旅万向轮拉杆箱"
+							onclick="getGiftDetails('/BOCGIFTORDERNET','IGI1000143289')">美旅万向轮拉杆箱</a><span>161,000分</span></li>
+						
+
+					</ul>
+
+				</div>
+			
+		</div>
+		<div class="c"></div>
+		<!--下部信息开始-->
+		<div id="bottom">
+			<!--横副广告-->
+			<div class="banner">
+				<div class="ad1">
+					<a href="#"><img
+						src="/BOCGIFTORDERNET/images/adimg_01.gif"
+						width="768" height="120" /></a>
+				</div>
+				<div class="ad2">
+					<a href="/BOCGIFTORDERNET/toSCSys.do" target="_blank">
+					<img src="images/adimg_02.gif" width="205" height="120" /></a>
+
+				</div>
+			</div>
+			<!--切换标签式商品-->	
+			<div class="product_b">				
+				
+				<!-- 自定义专区 -->
+				
+
+				<!-- 普通专区 -->
+				
+					
+					<div class="title_div">
+						<div class="title"></div>
+						<div class="tag_div01">
+							<ul>
+								
+								<li class="tag_two_on" id="zhkh1"
+									onclick="javascript:findSpecAreaGiftList('FCE86A57F65F00FEE04315071B2100FE','100');tagpagearea(1,1,'zhkh')"><span>普通区</span></li>
+								
+							</ul>
+						</div>
+						<div class="more" id="moreSpecAreaFCE86A57F65F00FEE04315071B2100FE">
+							<a style="cursor: hand"
+								onclick="getSpecAreaListBypageAreaId('FCE86A57F65F00FEE04315071B2100FE')">
+								其他专区>></a>&nbsp&nbsp&nbsp&nbsp <a style="cursor: hand"
+								onclick="getSpecAreaGiftLists('specArea','100')">
+								更多>> </a>
+						</div>
+					</div>
+					<div class="product_list"
+						id="specAreaTagtwodivFCE86A57F65F00FEE04315071B2100FE">
+						
+						<div class="productMod">
+							<a style="cursor: hand"
+								onclick="getGiftDetails('/BOCGIFTORDERNET','IGI1000000183')">
+								<img width="122px" height="122px" alt="中国国际航空500航空里程"
+								src="https://jf365.boc.cn/BOCGIFTPIC/img/1528436562902.png">
+							</a> <br />
+							<p>
+								<a style="cursor: hand" title="中国国际航空500航空里程"
+									onclick="getGiftDetails('/BOCGIFTORDERNET','IGI1000000183')">
+									中国国际航空50
+								</a>
+							</p>
+							<span>积分<b>14,000</b></span>
+							<br />
+						</div>
+						
+						<div class="productMod">
+							<a style="cursor: hand"
+								onclick="getGiftDetails('/BOCGIFTORDERNET','IGI1000000184')">
+								<img width="122px" height="122px" alt="中国南方航空500航空里程"
+								src="https://jf365.boc.cn/BOCGIFTPIC/img/1536912235498.png">
+							</a> <br />
+							<p>
+								<a style="cursor: hand" title="中国南方航空500航空里程"
+									onclick="getGiftDetails('/BOCGIFTORDERNET','IGI1000000184')">
+									中国南方航空50
+								</a>
+							</p>
+							<span>积分<b>15,000</b></span>
+							<br />
+						</div>
+						
+						<div class="productMod">
+							<a style="cursor: hand"
+								onclick="getGiftDetails('/BOCGIFTORDERNET','IGI1000000185')">
+								<img width="122px" height="122px" alt="中国东方航空500点东方万里行积分"
+								src="https://jf365.boc.cn/BOCGIFTPIC/img/1526885018911.png">
+							</a> <br />
+							<p>
+								<a style="cursor: hand" title="中国东方航空500点东方万里行积分"
+									onclick="getGiftDetails('/BOCGIFTORDERNET','IGI1000000185')">
+									中国东方航空50
+								</a>
+							</p>
+							<span>积分<b>15,000</b></span>
+							<br />
+						</div>
+						
+						<div class="productMod">
+							<a style="cursor: hand"
+								onclick="getGiftDetails('/BOCGIFTORDERNET','IGI1000141857')">
+								<img width="122px" height="122px" alt="CHOOCI雅哲英伦洗漱包"
+								src="https://jf365.boc.cn/BOCGIFTPIC/img/TLindex19.png">
+							</a> <br />
+							<p>
+								<a style="cursor: hand" title="CHOOCI雅哲英伦洗漱包"
+									onclick="getGiftDetails('/BOCGIFTORDERNET','IGI1000141857')">
+									CHOOCI雅哲
+								</a>
+							</p>
+							<span>积分<b>15,000</b></span>
+							<br />
+						</div>
+						
+						<div class="productMod">
+							<a style="cursor: hand"
+								onclick="getGiftDetails('/BOCGIFTORDERNET','IGI1000141865')">
+								<img width="122px" height="122px" alt="domdom英伦巴士文具盒"
+								src="https://jf365.boc.cn/BOCGIFTPIC/img/TLindex17.png">
+							</a> <br />
+							<p>
+								<a style="cursor: hand" title="domdom英伦巴士文具盒"
+									onclick="getGiftDetails('/BOCGIFTORDERNET','IGI1000141865')">
+									domdom英伦
+								</a>
+							</p>
+							<span>积分<b>9,000</b></span>
+							<br />
+						</div>
+						
+						<div class="productMod">
+							<a style="cursor: hand"
+								onclick="getGiftDetails('/BOCGIFTORDERNET','IGI1000141881')">
+								<img width="122px" height="122px" alt="DURALEX多莱斯钢化玻璃餐具琥珀色双耳碗2件套"
+								src="https://jf365.boc.cn/BOCGIFTPIC/img/TLindex46.png">
+							</a> <br />
+							<p>
+								<a style="cursor: hand" title="DURALEX多莱斯钢化玻璃餐具琥珀色双耳碗2件套"
+									onclick="getGiftDetails('/BOCGIFTORDERNET','IGI1000141881')">
+									DURALEX多
+								</a>
+							</p>
+							<span>积分<b>15,000</b></span>
+							<br />
+						</div>
+						
+					</div>
+					
+				
+								
+			</div>
+			<!--服务信息-->
+			
+
+
+
+
+
+
+<div id="allfooter">
+	<div id="bottom">
+		<div class="service">
+			<ul>
+				<li><img src="/BOCGIFTORDERNET/images/service_01.gif" width="195" height="111" /></li>
+			</ul>
+			<dl class="div_s">
+				<dt><a style="cursor:hand" onclick="window.open('/BOCGIFTORDERNET/pages/help/newbie.jsp')"><img src="/BOCGIFTORDERNET/images/service_02.gif" width="176" height="48" /></a></dt>
+				<!-- <dd><a href="/BOCGIFTORDERNET/pages/help/ruleItem.jsp">免费注册</a></dd>
+				<dd><a href="/BOCGIFTORDERNET/pages/help/ruleItem.jsp">密码找回</a></dd> -->
+			</dl>
+			<dl class="div_s">
+				<dt><a style="cursor:hand" onclick="window.open('/BOCGIFTORDERNET/pages/help/problem.jsp')"><img src="/BOCGIFTORDERNET/images/service_03.gif" width="176" height="48" /></a></dt>
+				
+			</dl>
+			<dl class="div_s">
+				<dt><a style="cursor:hand" onclick="window.open('/BOCGIFTORDERNET/pages/help/distribution.jsp')"><img src="/BOCGIFTORDERNET/images/service_04.gif" width="176" height="48" /></a></dt>
+				
+			</dl>
+			<dl class="div_s">
+				<dt><a style="cursor:hand" onclick="window.open('/BOCGIFTORDERNET/pages/help/provision.jsp')"><img src="/BOCGIFTORDERNET/images/service_05.gif" width="176" height="48" /></a></dt>
+				
+			</dl>
+		</div>
+	</div>
+	<div id="footer">
+		<dl>
+			<dt><a href="/BOCGIFTORDERNET/index.jsp">积分商城首页</a><span></span>
+				
+				<a href="/BOCGIFTORDERNET/pages/map.jsp">网站地图</a><span></span>
+				<a style="cursor:hand" onclick="window.open('/BOCGIFTORDERNET/pages/help/website.jsp')">网站声明</a><span></span>
+				<a style="cursor:hand" onclick="window.open('/BOCGIFTORDERNET/pages/help/privacy.jsp')">隐私保密条款</a><span></span>
+			<dd> &copy; 2010 中国银行 版权所有 京ICP证 060399号</dd>
+		</dl>
+	</div>
+</div>
+
+<script type="text/javascript">
+	var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+	document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F125342dc65e632c153df04f491091748' type='text/javascript'%3E%3C/script%3E"));
+	
+	function noNumbers()   
+	{   
+		if(window.event.keyCode==13) {
+			setTimeout("searchProd('1')",1);
+		}
+	}  
+</script>
+
+		</div>
+		<!--版权开始-->
+	</div>
+	<script type="text/javascript">
+	   	/* loadSelect(document.tiaojian.tiaojian,'/BOCGIFTORDERNET'); */
+	   	/* loadSelect(document.jifen.jifen,'/BOCGIFTORDERNET'); */
+	</script>
+	<form id="getGiftList" name="getGiftList"
+		action="/BOCGIFTORDERNET/getGiftList.do"
+		method="post"></form>
+	<form id="getMessages" name="getMessages" action="getMessages.do"
+		method="post"></form>
+	<form id="getNotices" name="getNotices" action="getNotices.do"
+		method="post">
+		<input type='hidden' name='sp.currentPage' value='1'></input></form>
+	<form id="noticeView" name="noticeView" action="noticeView.do"
+		method="post"></form>
+	<form id="download" name="download"
+		action="/BOCGIFTORDERNET/download.do"  
+		method="post"></form>
+	<form id="getMarketGiftList" name="getMarketGiftList"
+		action="/BOCGIFTORDERNET/getMarketGiftList.do"
+		method="post"></form>
+	<form id="getuserGiftList" name="getuserGiftList"
+		action="/BOCGIFTORDERNET/getuserGiftList.do"
+		method="post"></form>
+	<form id="getuseruserList" name="getuseruserList"
+		action="/BOCGIFTORDERNET/getuseruserList.do"
+		method="post"></form>
+	<form id="getSpecAreaList" name="getSpecAreaList"
+		action="/BOCGIFTORDERNET/getSpecAreaList.do"
+		method="post"></form>
+	<form id="getSpecAreaGiftList" name="getSpecAreaGiftList"
+		action="/BOCGIFTORDERNET/getSpecAreaGiftList.do"
+		method="post"></form>
+	<form id="getDefineSpecAreaList" name="getDefineSpecAreaList"
+		action="/BOCGIFTORDERNET/getDefineSpecAreaList.do"
+		method="post"></form>
+	<form id="getDefineSpecAreaGiftList" name="getDefineSpecAreaGiftList"
+			action="/BOCGIFTORDERNET/getDefineSpecAreaGiftList.do"
+			method="post"></form>
+</body>
+</html>

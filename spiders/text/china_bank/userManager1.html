@@ -1,0 +1,312 @@
+﻿
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=7" />
+<title>中国银行－积分兑换商城</title>
+<link href="/BOCGIFTORDERNET/style/style.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="/BOCGIFTORDERNET/js/select.js"></script>
+<script type="text/javascript" src="/BOCGIFTORDERNET/templates/default/pagenation.js"></script>
+
+</head>
+<body onload="changeMenu('3')">
+<!--头部开始-->
+
+
+
+
+
+ <head>
+ <link href="/BOCGIFTORDERNET/style/style.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="/BOCGIFTORDERNET/templates/default/pagenation.js"></script>
+<script type="text/javascript">
+	function noNumbers()   
+		{   
+			if(window.event.keyCode==13) {
+				setTimeout("searchProd('1')",1);
+			}
+		}
+		function onover(){
+			document.getElementById('layer1').style.display="block";
+		}
+		function onout(){
+			document.getElementById('layer1').style.display="none";
+		}   
+</script>
+</head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=7" />
+<!--头部开始-->
+
+<div id="header">
+	<div class="top_info">
+		<span class="login" align="left">陈慧聪&nbsp;&nbsp;您好，欢迎来到积分兑换商城！&nbsp;&nbsp;<a href="/BOCGIFTORDERNET/logout.do">退出</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+		<span class="link"><a href="/BOCGIFTORDERNET/getCurrentScroe.do" >我的积分</a><a href="/BOCGIFTORDERNET/jsp/shoppingCar/carGiftInfo.jsp">购物车</a><a href="/BOCGIFTORDERNET/getFavoRates.do?sp.currentPage=1" >收藏夹</a><a href="http://www.boc.cn" target="_blank">中国银行首页</a></span>
+	</div>
+	<div class="logo_search">
+		<div class="logo">
+			<a href="/BOCGIFTORDERNET/index.jsp" title="中国银行－积分兑换商城">中国银行－积分兑换商城</a>
+		</div>
+		<div class="search" >
+			<div class="search_input">
+				<div class="xiala">
+					<form name="tiaojian" >
+						<div>
+							<select id="tiaojian" name="tiaojian">
+							<option value="">全部礼品</option>
+							
+								<option value="ICI1000000014">运动休闲</option>
+							
+								<option value="ICI1000000022">电子礼券</option>
+							
+								<option value="ICI1000017022">医疗健康</option>
+							
+								<option value="ICI1000014022">航空里程</option>
+							
+								<option value="ICI1000006022">积分联盟</option>
+							
+								<option value="ICI1000012022">母婴专享</option>
+							
+								<option value="ICI1000000012">家居日用</option>
+							
+								<option value="ICI1000012023">时尚精品</option>
+							
+								<option value="ICI1000000013">我爱我车</option>
+							
+							</select>
+						</div>
+					</form>
+				</div>
+				<div class="xiala">
+					<form name="jifen" >
+						<div>
+							<select id="jifen" name="jifen" >
+								<option value="">全部积分</option>
+								<option value="1">2万分以下</option>
+								<option value="2">2万-5万分</option>
+								<option value="3">5万-15万分</option>
+								<option value="4">15万-100万分</option>
+								<option value="5">100万分以上</option>
+							</select>
+						</div>
+						</form>
+				</div>
+				<div class="search_box">
+					<form name="search" name="search" >
+					<input name="giftNameHead" id="giftNameHead" onkeydown="noNumbers()" type="text"  class="search_txt"/>
+					<input name="" type="button" class="search_bt"  onclick="searchProd('1')" />
+					</form>
+				</div>
+				
+			</div>
+			<div class="txt_link">
+				热门搜索：<a style="cursor:hand" onclick="searchProdName('乐扣乐扣保鲜盒')">乐扣乐扣保鲜盒</a><a style="cursor:hand" onclick="searchProdName('瑜珈垫')">瑜珈垫</a><a style="cursor:hand" onclick="searchProdName('瑞士军刀')">瑞士军刀</a>
+						<a style="cursor:hand" onclick="searchProdName('旅行电吹风')">旅行电吹风</a>
+			</div>
+		</div>
+	</div>
+</div>
+<!--导航菜单-->
+<div style="text-align:center;margin:0 auto; width:980px;">
+<div id="nav">
+	<div class="menu">
+		<ul>
+			<li id="menu1" class="menu_on"><a class="main_nav" href="/BOCGIFTORDERNET/index.jsp">首页</a></li>
+			<li id="menu2" class="menu_off"><a class="main_nav" href="/BOCGIFTORDERNET/scoreToGift.do">积分换礼</a></li>
+			<li id="menu3" class="menu_off"><a class="main_nav" href="/BOCGIFTORDERNET/userManager.do">会员管理</a></li>
+			<li id="menu4" class="menu_off"><a class="main_nav" href="/BOCGIFTORDERNET/getSecondGiftList.do">积分秒杀</a></li>
+			<li id="menu8" class="menu_off"><a class="main_nav" href="/BOCGIFTORDERNET/getAuctionGiftListInfo.do">积分竞拍</a></li>
+			<li id="menu5" class="menu_off"><a class="main_nav" href="#" onclick="window.open('/BOCGIFTORDERNET/pages/help/provision.jsp')">活动条款</a></li>					
+			
+			<!-- <li style="width:125px;" id="menu9" class="menu_off" onmouseover="onover()" onmouseout="onout()"><a class="main_nav" href="javascript:void(0)" >虚拟卡服务</a>
+				<ul id="layer1" style="left:3px; top:0px; z-index:10; width:125px; display:none; position:relative;"  > -->
+				<!--[If IE 6]>-->
+					<!-- <div style="position:absolute; left:0; width:125px;">
+						<li style="background-color:#DD0000;width:120px;"><a class="sub_nav" href="/BOCGIFTORDERNET/gotoAskCardMessage.do" >虚拟卡申请</a></li>
+						<li style="background-color:#DD0000;width:120px;"><a class="sub_nav" href="/BOCGIFTORDERNET/getCardMessage.do">虚拟卡查询</a></li>	
+						<li style="background-color:#DD0000;width:120px;"><a class="sub_nav" href="/BOCGIFTORDERNET/setCardMessage.do">虚拟卡设置</a></li>	
+						<li style="background-color:#DD0000;width:120px;"><a class="sub_nav" href="#" onclick="window.open('/BOCGIFTORDERNET/pages/dummy/dummyCard_QA.jsp')">虚拟卡Q&A</a></li> 
+					</div>	-->				
+				<!-- <[endif]-->
+				<!--[If !IE 6]> 
+					<li style="background-color:#DD0000;width:120px;"><a class="sub_nav" href="/BOCGIFTORDERNET/gotoAskCardMessage.do" >虚拟卡申请</a></li>
+					<li style="background-color:#DD0000;width:120px;"><a class="sub_nav" href="/BOCGIFTORDERNET/getCardMessage.do">虚拟卡查询</a></li>	
+					<li style="background-color:#DD0000;width:120px;"><a class="sub_nav" href="/BOCGIFTORDERNET/setCardMessage.do">虚拟卡设置</a></li>	
+					<li style="background-color:#DD0000;width:120px;"><a class="sub_nav" href="#" onclick="window.open('/BOCGIFTORDERNET/pages/dummy/dummyCard_QA.jsp')">虚拟卡Q&A</a></li>
+				<![endif]-->
+				<!--</ul>
+			</li>	-->	
+
+			<li id="menu6" class="menu_off"><a class="main_nav" href="/BOCGIFTORDERNET/toSCSys.do" >聪明购商城</a></li> 
+			<!-- <li id="menu6" class="menu_off"><span>聪明购商城</span></li>-->
+			
+			<li id="menu7" class="menu_off"><span>尊享积分</span></li>
+			
+
+		</ul>
+
+	</div>
+	<div>
+
+	</div>
+</div>
+</div>
+<form id="getGiftListHead" name="getGiftListHead" action="/BOCGIFTORDERNET/getGiftListHead.do" method="post">
+</form>
+
+
+
+<script>
+
+
+
+
+
+
+
+</script>
+<div class="c">
+</div>
+<div id="page_center">
+	<div id="user_content">
+		<div class="title_div">
+			<span class="on"><a href="/BOCGIFTORDERNET/userManager.do" >个人中心</a></span><span>|</span>
+			<span class="off"><a href="/BOCGIFTORDERNET/getFavoRates.do?sp.currentPage=1">收藏夹</a></span><span>|</span>
+			<span class="off"><a href="/BOCGIFTORDERNET/getMessages.do?sp.currentPage=1">消息中心</a></span>
+		</div>
+		<div class="tag_div">
+			<ul>
+				<li class="off"><a style="cursor:hand" onclick="selThreeHisOrder('/BOCGIFTORDERNET')">订单管理</a></li>
+				<li class="off"><a href="/BOCGIFTORDERNET/getCurrentScroe.do">积分管理</a></li>
+				<li class="off"><a href="/BOCGIFTORDERNET/pages/PIM/user_content_jbxx.jsp">个人信息管理</a></li>
+				<li class="off"><a href="/BOCGIFTORDERNET/getGiftUse.do">查询增值服务</a></li>
+				<li class="off"><a href="/BOCGIFTORDERNET/pages/PIM/user_content_zx.jsp">注销用户</a></li>
+  				<li class="off"><a href="/BOCGIFTORDERNET/cstServiceInfo.do">可选服务包</a></li> 
+ 			</ul>
+		</div>
+		<div class="user_info">
+			<dl>
+				<dt>陈慧聪，欢迎您回来</dt>
+				<dd> 上次登录时间：2019-01-29 11:32:15</dd>
+			   <!-- <dd>您的总积分为：<span>13,218</span> -->
+			   <dd>您的总积分为：<span>13218.00</span></dd>
+				<!-- <dd>您的可用积分为：<span>13,218</span> -->
+				<dd>您的可用积分为：<span>13218.00</span>
+					<input type="button" class="user_but01"  onclick="javascript:location.href='/BOCGIFTORDERNET/getCurrentScroe.do'"  value="管理我的积分" />
+				</dd>
+			</dl>
+		</div>
+		<div class="user_gnlist">
+			<dl>
+				<dt>
+					<h1>订单管理</h1>
+					<span>
+					<input type="button" class="user_but01" onclick="selThreeHisOrder('/BOCGIFTORDERNET')"  value="最近3个月订单查询" />
+					</span>
+					<span>
+					<input type="button" class="user_but01" onclick="javascript:location.href='pages/order/user_content_hisOrder.jsp'" value="历史订单查询" />
+					</span>
+				</dt>
+			</dl>
+			<dl>
+				<dt>
+					<h1>积分管理</h1>
+					<span>
+					<input type="button" class="user_but01" onclick="javascript:location.href='/BOCGIFTORDERNET/getCurrentScroe.do'" value="积分查询" />
+					</span>
+					<span>
+					<input type="button" class="user_but01" onclick="javascript:location.href='/BOCGIFTORDERNET/goToHisScroePage.do'" value="积分历史查询" />
+					</span>
+					<span>
+					<input type="button" class="user_but01"  onclick="javascript:location.href='/BOCGIFTORDERNET/scoreSeq.do'"  value="积分兑换顺序调整" />
+					</span>
+				</dt>
+			</dl>
+			<dl>
+				<dt>
+					<h1>个人信息管理</h1>
+					<span>
+					<input type="button" class="user_but01" onclick="javascript:location.href='/BOCGIFTORDERNET/pages/PIM/user_content_jbxx.jsp'" value="基本信息修改" />
+					</span>
+					<span>
+					<input type="button" class="user_but01" onclick="javascript:location.href='/BOCGIFTORDERNET/toUpLoginPwdPage.do'" value="登录密码修改" />
+					</span>
+					<span>
+					<input type="button" class="user_but01" onclick="javascript:location.href='/BOCGIFTORDERNET/toUpMobilPage.do'" value="手机号修改" />
+					</span>
+					<span>
+					<input type="button" class="user_but01" onclick="javascript:location.href='/BOCGIFTORDERNET/findCstSendInfo.do'"  value="配送信息管理" />
+					</span>
+				</dt>
+			</dl>
+		</div>
+	</div>
+</div>
+
+
+
+
+
+
+
+<div id="allfooter">
+	<div id="bottom">
+		<div class="service">
+			<ul>
+				<li><img src="/BOCGIFTORDERNET/images/service_01.gif" width="195" height="111" /></li>
+			</ul>
+			<dl class="div_s">
+				<dt><a style="cursor:hand" onclick="window.open('/BOCGIFTORDERNET/pages/help/newbie.jsp')"><img src="/BOCGIFTORDERNET/images/service_02.gif" width="176" height="48" /></a></dt>
+				<!-- <dd><a href="/BOCGIFTORDERNET/pages/help/ruleItem.jsp">免费注册</a></dd>
+				<dd><a href="/BOCGIFTORDERNET/pages/help/ruleItem.jsp">密码找回</a></dd> -->
+			</dl>
+			<dl class="div_s">
+				<dt><a style="cursor:hand" onclick="window.open('/BOCGIFTORDERNET/pages/help/problem.jsp')"><img src="/BOCGIFTORDERNET/images/service_03.gif" width="176" height="48" /></a></dt>
+				
+			</dl>
+			<dl class="div_s">
+				<dt><a style="cursor:hand" onclick="window.open('/BOCGIFTORDERNET/pages/help/distribution.jsp')"><img src="/BOCGIFTORDERNET/images/service_04.gif" width="176" height="48" /></a></dt>
+				
+			</dl>
+			<dl class="div_s">
+				<dt><a style="cursor:hand" onclick="window.open('/BOCGIFTORDERNET/pages/help/provision.jsp')"><img src="/BOCGIFTORDERNET/images/service_05.gif" width="176" height="48" /></a></dt>
+				
+			</dl>
+		</div>
+	</div>
+	<div id="footer">
+		<dl>
+			<dt><a href="/BOCGIFTORDERNET/index.jsp">积分商城首页</a><span></span>
+				
+				<a href="/BOCGIFTORDERNET/pages/map.jsp">网站地图</a><span></span>
+				<a style="cursor:hand" onclick="window.open('/BOCGIFTORDERNET/pages/help/website.jsp')">网站声明</a><span></span>
+				<a style="cursor:hand" onclick="window.open('/BOCGIFTORDERNET/pages/help/privacy.jsp')">隐私保密条款</a><span></span>
+			<dd> &copy; 2010 中国银行 版权所有 京ICP证 060399号</dd>
+		</dl>
+	</div>
+</div>
+
+<script type="text/javascript">
+	var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+	document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F125342dc65e632c153df04f491091748' type='text/javascript'%3E%3C/script%3E"));
+	
+	function noNumbers()   
+	{   
+		if(window.event.keyCode==13) {
+			setTimeout("searchProd('1')",1);
+		}
+	}  
+</script>
+
+<script type="text/javascript">
+   loadSelect(document.tiaojian.tiaojian,'/BOCGIFTORDERNET');
+   	loadSelect(document.jifen.jifen,'/BOCGIFTORDERNET');
+</script>
+</body>
+</html>
+

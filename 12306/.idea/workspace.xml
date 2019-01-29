@@ -3,13 +3,13 @@
   <component name="ChangeListManager">
     <list default="true" id="8ece7660-0810-472c-bd19-cca4817a2356" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/huadong_imgcode.py" beforeDir="false" afterPath="$PROJECT_DIR$/huadong_imgcode.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../cf40/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../cf40/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../spiders/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../spiders/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../spiders/images/zhongshihua/imgcode.gif" beforeDir="false" afterPath="$PROJECT_DIR$/../spiders/images/zhongshihua/imgcode.gif" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../spiders/images/zhongshihua/login_imcode.png" beforeDir="false" afterPath="$PROJECT_DIR$/../spiders/images/zhongshihua/login_imcode.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../spiders/images/zhongshihua/zsh_imcode.png" beforeDir="false" afterPath="$PROJECT_DIR$/../spiders/images/zhongshihua/zsh_imcode.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../spiders/tools/test_file.py" beforeDir="false" afterPath="$PROJECT_DIR$/../spiders/tools/test_file.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../spiders/tools/zhong_shihua/requests_for.py" beforeDir="false" afterPath="$PROJECT_DIR$/../spiders/tools/zhong_shihua/requests_for.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../spiders/zhonghang_.py" beforeDir="false" afterPath="$PROJECT_DIR$/../spiders/china_bank.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../spiders/zhongshihua.py" beforeDir="false" afterPath="$PROJECT_DIR$/../spiders/zhongshihua.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -28,9 +28,11 @@
     <session id="801345529">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
+          <entry key="project.closed" value="1" />
+          <entry key="project.open.time.5" value="1" />
           <entry key="project.open.time.7" value="2" />
           <entry key="project.open.time.9" value="1" />
-          <entry key="project.opened" value="3" />
+          <entry key="project.opened" value="4" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -73,7 +75,7 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/huadong_imgcode.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="352">
+            <state relative-caret-position="524">
               <caret line="185" selection-start-line="185" selection-end-line="185" />
               <folding>
                 <element signature="e#24#37#0" expanded="true" />
@@ -86,7 +88,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/superss.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="350">
+            <state relative-caret-position="400">
               <caret line="16" column="23" selection-start-line="16" selection-start-column="23" selection-end-line="16" selection-end-column="23" />
             </state>
           </provider>
@@ -126,7 +128,7 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="1">
+  <component name="ProjectFrameBounds">
     <option name="x" value="429" />
     <option name="y" value="117" />
     <option name="width" value="1294" />
@@ -140,6 +142,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -151,7 +154,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -291,10 +293,10 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="429" y="117" width="1294" height="960" extended-state="1" />
+    <frame x="429" y="117" width="1294" height="960" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1871961" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1904376" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -363,14 +365,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/superss.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="350">
+        <state relative-caret-position="400">
           <caret line="16" column="23" selection-start-line="16" selection-start-column="23" selection-end-line="16" selection-end-column="23" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/huadong_imgcode.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="352">
+        <state relative-caret-position="524">
           <caret line="185" selection-start-line="185" selection-end-line="185" />
           <folding>
             <element signature="e#24#37#0" expanded="true" />

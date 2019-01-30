@@ -36,12 +36,10 @@ class China_bank():
         # 获取验证码
         # img_code = self.get_img()
         username,passwd = self.user_info()
-
         #输入密码
         # self.input_passwd(passwd)
+
         sleep(0.5)
-
-
         sleep(1)
         self.browser.find_element_by_id("textfield").send_keys(username)
         # self.browser.find_element_by_id("textfield").send_keys(passwd)
@@ -104,8 +102,8 @@ class China_bank():
         self.browser.find_element_by_xpath("//div[@id='user_content']/div[@class='tag_div']/ul/li[6]/a").click()
         sleep(3)
         #other
-        self.browser.find_element_by_xpath("//div[@id='user_content']/div[@class='tag_div']/ul/li[7]/a").click()
-        sleep(3)
+        # self.browser.find_element_by_xpath("//div[@id='user_content']/div[@class='tag_div']/ul/li[7]/a").click()
+        # sleep(3)
 
     def personal_info(self):
         #电子邮箱
@@ -226,15 +224,40 @@ class China_bank():
 
     def start_spider(self):
         print("开始")
-        self.login_request()
+        #尝试登陆
+        ts1 = time.time()
+        while True:
+            self.login_request()
+            sleep(3)
+            try:
+                self.browser.find_element_by_id("denglu")
+                print("登陆成功了")
+                break
+            except:
+                pass
+        ts2 = time.time()
+        tss1 = ts2-ts1
+        tss1 = round(tss1,2)
+        print("登陆阶段耗时:{}".format(tss1))
         sleep(0.1)
+        #获取我的积分信息
         self.my_score()
+        ts3 = time.time()
+        tss2 = ts3-ts2
+        print("获取积分信息耗时:{}".format(tss2))
         sleep(0.1)
+        #获取订单信息
         self.order_query()
+        ts4 = time.time()
+        tss3 = ts4-ts3
+        print("获取订单信息耗时:{}",format(tss3))
         sleep(0.1)
+        #历史积分查询
         self.score_h_query()
         sleep(0.5)
-
+        ts5= time.time()
+        tss4 = ts5-ts4
+        print("历史积分查询耗时:{}".format(tss4))
 
 
 if __name__ == '__main__':

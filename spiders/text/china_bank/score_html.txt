@@ -80,7 +80,7 @@
 <DIV class=user_info>
 <DL>
 <DT>陈慧聪，欢迎您回来 
-<DD>上次登录时间：2019-01-29 17:34:09 <!-- <dd>您的总积分为：<span>13,218</span> -->
+<DD>上次登录时间：2019-01-30 16:50:02 <!-- <dd>您的总积分为：<span>13,218</span> -->
 <DD>您的总积分为：<SPAN>13218.00</SPAN> <!-- <dd>您的可用积分为：<span>13,218</span> -->
 <DD>您的可用积分为：<SPAN>13218.00</SPAN> <INPUT onclick="javascript:location.href='/BOCGIFTORDERNET/getCurrentScroe.do'" class=user_but01 type=button value=管理我的积分> </DD></DL></DIV>
 <DIV class=user_gnlist>

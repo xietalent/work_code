@@ -17,3 +17,14 @@ for div in divs:
 
     print("全部积分:{}".format(all_score))
     print("当前可用积分:{}".format(able_score))
+
+
+for i in range(20):
+    print(i)
+    while True:
+        sleep(0.1)
+        print("获取数据")
+        # if i ==0:
+        #     print("15")
+        break
+

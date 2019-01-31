@@ -14,7 +14,7 @@ import pytesseract.pytesseract
 from urllib import request
 from PIL import Image
 from selenium.webdriver.support.wait import WebDriverWait
-from tools.zhaohang.keybord_DD import DD_input
+# from tools.zhaohang.keybord_DD import DD_input
 
 import time
 import requests
@@ -23,7 +23,8 @@ class China_bank():
     def __init__(self,timeout=None,service_args=[]):
         self.logger = getLogger(__name__)
         self.timeout = timeout
-        self.browser = webdriver.Ie()
+        self.browser = webdriver.Chrome()
+        # self.browser = webdriver.Ie()
 
     def __del__(self):
         self.browser.close()
@@ -31,7 +32,7 @@ class China_bank():
     # def process_request(self,request,spider):
     def login_request(self):
         self.logger.debug('Ie is Starting')
-        self.browser.get("https://jf365.boc.cn/BOCGIFTORDERNET/toLoginJsp.do?")
+        self.browser.get("https://ebsnew.boc.cn/boc15/login.html")
         sleep(3)
         # 获取验证码
         # img_code = self.get_img()
@@ -41,21 +42,27 @@ class China_bank():
 
         sleep(0.5)
         sleep(1)
-        self.browser.find_element_by_id("textfield").send_keys(username)
-        # self.browser.find_element_by_id("textfield").send_keys(passwd)
+        self.browser.find_element_by_id("txt_username_79443").send_keys(username)
+        self.browser.find_element_by_id("input_div_password_79445").send_keys(passwd)
         sleep(0.1)
         #输入密码
-        self.input_passwd(passwd)
+        # self.input_passwd(passwd)
         sleep(0.1)
         # 获取验证码
-        img_code = self.get_img()
+
         sleep(0.1)
-        self.browser.find_element_by_id("textfield4").send_keys(img_code)
-        sleep(0.1)
-        self.browser.find_element_by_id("button").click()
+        self.browser.find_element_by_class_name("btn-r").click()
         # page_html2 = self.browser.page_source
         # print("当前网址"+self.browser.page_source)
         # return page_html
+        sleep(1)
+
+        # img_code = self.get_img()
+        sleep(0.1)
+        # self.browser.find_element_by_id("dijit_form_ValidationTextBox_1").send_keys(img_code)
+        self.browser.find_element_by_id("txt_captcha_79449").send_keys("4512")
+        sleep(1)
+        self.browser.find_element_by_class_name("btn-r").click()
 
     def my_score(self):
         self.browser.find_element_by_xpath('//li[@id="menu3"]/a').click()
@@ -148,50 +155,13 @@ class China_bank():
     def get_img(self):
         print("get_image")
         t1 = time.time()
-        # imgpage_html = self.browser.page_source
-        # img_tree = etree.HTML(imgpage_html)
-        # pic_url ="https://www.saclub.com.cn"+img_tree.xpath(".//div[@class='fdiv3']/a/img/@src")
-
-        # pic_url = self.browser.find_element_by_xpath(".//div[@class='fdiv3']/a/img").get_attribute('src')
-        # print(pic_url1)
-        # pic_url = "https://www.saclub.com.cn/{}".format(pic_url1)
-
-        # urllib方法
-        # resp = request.urlopen(pic_url)
-        # raw = resp.read()
-        # requests方法
-        headers = {
-            "Accept": "image / webp, image / apng, image / *, * / *;q = 0.8",
-            "Accept - Encoding": "gzip, deflate, br",
-            "Accept - Language": "zh - CN, zh;",
-            "q = 0.9": "",
-            "Connection": "keep - alive",
-            "User-Agent": "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36",
-        }
-
-        cooks = {
-            "NTKF_T2D_CLIENTID": "guest316A67E3-41EB-BB51-DD84-16AD453687A3",
-            "nTalk_CACHE_DATA": "{uid:kf_9507_ISME9754_guest316A67E3-41EB-BB,tid:1548310216488735}",
-            "HttpOnly": "",
-            "Hm_lvt_6df6f9d56598e7f5e729beb6c4558e60": "1546568681,1548310223",
-            "Hm_lpvt_6df6f9d56598e7f5e729beb6c4558e60": "1548315714",
-            "JSESSIONID": "8A5A314CF09A69401AB84AA56C83781B"
-        }
-        # pic_url = "https://www.saclub.com.cn/imgmerge?amp;text=%C8%C8%B5%E3%BE%DB%BD%B914675.0&imageFile=/new/img/f_yzm.jpg&x=24&y=24&fontColor=000000&fontStyle=bold&fontName=%CB%CE%CC%E5&fontSize=24"
-        # resp = requests.get(pic_url, cookies=cooks, headers=headers)
-        # raw = resp.content()
-        # sleep(2)
-        # with open("./images/china_bank/imgcode.gif", 'wb') as fp:
-        #     for data in resp.iter_content(128):
-        #         fp.write(data)
-
         try:
             # 截取验证码的截图
-            location = self.browser.find_element_by_id("imgID").location
-            self.browser.save_screenshot("./images/china_bank/login_imcode.png")
-            page_snap_obj = Image.open("./images/china_bank/login_imcode.png")
+            location = self.browser.find_element_by_id("captcha").location
+            self.browser.save_screenshot("./images/china_bank/login_imcode2.png")
+            page_snap_obj = Image.open("./images/china_bank/login_imcode2.png")
 
-            size = self.browser.find_element_by_id("imgID").size
+            size = self.browser.find_element_by_id("captcha").size
             left = location['x']
             top = location['y']
             right = location['x'] + size['width']
@@ -199,7 +169,7 @@ class China_bank():
             imgages = page_snap_obj.crop((left, top, right, bottom))
 
             # 获取到验证码截图
-            imgages.save("./images/china_bank/cb_imcode.png")
+            imgages.save("./images/china_bank/cb_imcode2.png")
             # imgages.show()
             sleep(1)
 
@@ -228,7 +198,7 @@ class China_bank():
         ts1 = time.time()
         while True:
             self.login_request()
-            sleep(3)
+            sleep(0.1)
             try:
                 self.browser.find_element_by_id("denglu")
                 print("登陆成功了")
@@ -240,27 +210,27 @@ class China_bank():
         tss1 = round(tss1,2)
         print("登陆阶段耗时:{}".format(tss1))
         sleep(0.1)
-        #获取我的积分信息
-        self.my_score()
-        ts3 = time.time()
-        tss2 = ts3-ts2
-        tss2 = round(tss2,2)
-        print("获取积分信息耗时:{}".format(tss2))
-        sleep(0.1)
-        #获取订单信息
-        self.order_query()
-        ts4 = time.time()
-        tss3 = ts4-ts3
-        tss3 = round(tss3,2)
-        print("获取订单信息耗时:{}",format(tss3))
-        sleep(0.1)
-        #历史积分查询
-        self.score_h_query()
-        sleep(0.5)
-        ts5= time.time()
-        tss4 = ts5-ts4
-        tss4 = round(tss4,2)
-        print("历史积分查询耗时:{}".format(tss4))
+        # #获取我的积分信息
+        # self.my_score()
+        # ts3 = time.time()
+        # tss2 = ts3-ts2
+        # tss2 = round(tss2,2)
+        # print("获取积分信息耗时:{}".format(tss2))
+        # sleep(0.1)
+        # #获取订单信息
+        # self.order_query()
+        # ts4 = time.time()
+        # tss3 = ts4-ts3
+        # tss3 = round(tss3,2)
+        # print("获取订单信息耗时:{}",format(tss3))
+        # sleep(0.1)
+        # #历史积分查询
+        # self.score_h_query()
+        # sleep(0.5)
+        # ts5= time.time()
+        # tss4 = ts5-ts4
+        # tss4 = round(tss4,2)
+        # print("历史积分查询耗时:{}".format(tss4))
 
 
 if __name__ == '__main__':

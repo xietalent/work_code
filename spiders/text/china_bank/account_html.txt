@@ -1,0 +1,265 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"><!--[if IE 10]><html class="ie ie10"><![endif]--><!--[if IE 9]><html class="ie ie9"><![endif]--><!--[if IE 8]><html class="ie ie8"><![endif]--><!--[if IE 7]><html class="ie ie7"><![endif]--><!--[if IE 7]><html class="ie ie6"><![endif]--><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8" /><meta name="renderer" content="ie-stand" /><title>中国银行网上银行</title><link rel="stylesheet" type="text/css" href="css/bocue.css?v=20181228062507036" media="all" /><link rel="stylesheet" type="text/css" href="css/login.css?v=20181228062507036" media="all" /><!--[if lte IE 9]><link rel="stylesheet" type="text/css" href="css/ie.css?v=20181228062507036" /><![endif]--><!--[if lte IE 8]><script type="text/javascript" src="scripts/lib/excanvas.js"></script><![endif]--><!--[if IE 6]><script type="text/javascript" src="scripts/DD_belatedPNG_0.0.8a-min.js"></script><![endif]--><link rel="stylesheet" type="text/css" href="css/w1200.css?v=20181228062507036" media="all" /><link rel="stylesheet" type="text/css" href="css/w1600.css?v=20181228062507036" media="all" /><link rel="stylesheet" type="text/css" href="css/datepicker.css?v=20181228062507036" media="all" /><link rel="stylesheet" type="text/css" href="css/print.css?v=20181228062507036" media="print" /><script type="text/javascript" async="" src="scripts/lib/tfp-sdk.pc.v1.0.0.js"></script><script type="text/javascript">function openNewWindow(url){
+    	window.open(url, null,"toolbar=no, menubar=no,scrollbars=yes,resizable=yes, location=no, status=no,fullscreen=yes");
+    }
+    history.go(1);</script><script type="text/javascript" src="scripts/lib/lan_c.js?v=20181228062507036"></script><script id="t_tmpl" type="text/html">
+&lt;div&gt;
+	&lt;div class="login-article login-self bu-reser-i"&gt;
+	  &lt;ul class="bu-tabs clearfix"&gt;
+	      &lt;li class="tabs tabs-current" id="div_account_information_740844"&gt;
+	          &lt;span class="tabs-m" lan="l0177" v="账户详情"&gt;&lt;/span&gt;
+	          &lt;span class="tabs-r"&gt;&lt;/span&gt;
+	      &lt;/li&gt;
+	      &lt;li class="tabs" id="div_futurebill_740845"&gt;
+	          &lt;span class="tabs-m" lan="l0311" v="未出账单"&gt;&lt;/span&gt;
+	          &lt;span class="tabs-r"&gt;&lt;/span&gt;
+	      &lt;/li&gt;
+	      &lt;li class="tabs" id="div_billedtrans_740846"&gt;
+	          &lt;span class="tabs-m" lan="l0312" v="已出账单"&gt;&lt;/span&gt;
+	          &lt;span class="tabs-r"&gt;&lt;/span&gt;
+	      &lt;/li&gt;
+	  &lt;/ul&gt;
+	  &lt;div&gt;
+	  	 &lt;div class="cont-detail"&gt;
+      	&lt;h5 class="o-title" &gt;&lt;span lan="l2227" v="账户基本信息"&gt;账户基本信息&lt;/span&gt;&lt;/h5&gt;
+        &lt;div class="o-cont"&gt;
+		    &lt;div class="tb-box tb-box-credit"&gt;
+		      &lt;table class="tb"&gt;
+		        &lt;tbody&gt;
+		          &lt;tr&gt;
+		            &lt;th class="wp20 tar"&gt;&lt;label v="信用卡号" lan="l39932" &gt;&lt;/label&gt;&lt;em class="ml5"&gt;:&lt;/em&gt;&lt;/th&gt;
+		            &lt;td class="wp30"&gt;${StringUtil.maskAccount(creditCard.acctNum)}&lt;/td&gt;
+		            &lt;th class="wp20 tar"&gt;&lt;label v="户名" lan="l3901"&gt;&lt;/label&gt;&lt;em class="ml5"&gt;:&lt;/em&gt;&lt;/th&gt;
+		            &lt;td&gt;${creditCard.acctName}&lt;/td&gt;
+		          &lt;/tr&gt;
+		          &lt;tr&gt;
+		            &lt;th class="" &gt;&lt;label v="产品名称" lan="l0398"&gt;&lt;/label&gt;&lt;em class="ml5"&gt;:&lt;/em&gt;&lt;/th&gt;
+		            &lt;td &gt;${creditCard.productName}&lt;/td&gt;
+		            &lt;th &gt;&lt;label v="开户行" lan="l3903"&gt;&lt;/label&gt;&lt;em class="ml5"&gt;:&lt;/em&gt;&lt;/th&gt;
+		            &lt;td&gt;${creditCard.acctBank}&lt;/td&gt;
+		          &lt;/tr&gt;
+		          &lt;tr&gt;
+		            &lt;th class="first" &gt;&lt;label v="启用日期" lan="l91903"&gt;&lt;/label&gt;&lt;em class="ml5"&gt;:&lt;/em&gt;&lt;/th&gt;
+		            &lt;td &gt;${creditCard.startDate}&lt;/td&gt;
+		            &lt;th&gt;&lt;label v="主副卡标识" lan="l91941"&gt;&lt;/label&gt;&lt;em class="ml5"&gt;:&lt;/em&gt;&lt;/th&gt;
+		            &lt;td  lan="zfkbs_${creditCard.carFlag}"&gt;&lt;/td&gt;
+		          &lt;/tr&gt;
+		          &lt;tr&gt;
+		            &lt;th class="first"&gt;&lt;label  v="账单日" lan="l91937"&gt;&lt;/label&gt;&lt;em class="ml5"&gt;:&lt;/em&gt;&lt;/th&gt;
+		            &lt;td class="text-red"&gt;&lt;span lan="l47523" v="每月"&gt;&lt;/span&gt;${creditCard.billDate}&lt;span lan="l21332" v="日"&gt;&lt;/span&gt;&lt;/td&gt;
+		            &lt;th&gt;&lt;label v="卡状态" lan="l2621"&gt;&lt;/label&gt;&lt;em class="ml5"&gt;:&lt;/em&gt;&lt;/th&gt;
+		            &lt;td&gt;
+		            	&lt;span lan="XYKZT_${creditCard.carStatus}"&gt;&lt;/span&gt;
+		            &lt;/td&gt;
+		          &lt;/tr&gt;
+		          &lt;tr&gt;
+		            &lt;th class="first"&gt;&lt;label v="信用卡审批额度" lan="l91946"&gt;&lt;/label&gt;&lt;em class="ml5"&gt;:&lt;/em&gt;&lt;/th&gt;
+		            &lt;td &gt;
+		             {{each creditCard.actList}}
+			            	&lt;div&gt;${$value.totalLimt.formatNum($value.currency)} &lt;span lan="currency_type_${$value.currency}"&gt;&lt;/span&gt;&lt;/div&gt;
+		             {{/each}}
+		            &lt;/td&gt;
+		            &lt;th&gt;&lt;label v="取现额度" lan="l0857"&gt;&lt;/label&gt;&lt;em class="ml5"&gt;:&lt;/em&gt;&lt;/th&gt;
+		            &lt;td&gt;
+		            	{{each creditCard.actList}}
+			            	&lt;div&gt;${$value.cashLimit.formatNum($value.currency)}&lt;span lan="currency_type_${$value.currency}"&gt;&lt;/span&gt;&lt;/div&gt;
+			            {{/each}}
+		            &lt;/td&gt;
+		          &lt;/tr&gt;
+		          &lt;tr&gt;
+		            &lt;th class="first" &gt;&lt;label v="年费减免情况" lan="l91924"&gt;&lt;/label&gt;&lt;em class="ml5"&gt;:&lt;/em&gt;&lt;/th&gt;
+		            &lt;td &gt;
+		            	{{if creditCard.annualFee=="0"}}&lt;span lan="nf_${annualFee}"&gt;&lt;/span&gt;{{/if}}
+		            	{{if creditCard.annualFee=="1"}}
+		            		{{if DateUtil.getYearByDate(creditCard.waiveMemFeeEndDate)=="2500"}}
+		            			&lt;span lan="l95812" v="永久免年费"&gt;&lt;/span&gt;
+		            		{{else}}
+		            			&lt;span lan="l94827"&gt;&lt;/span&gt;${creditCard.waiveMemFeeEndDate}
+		            		{{/if}}
+		            	{{/if}}
+		            &lt;/td&gt;
+		            &lt;th&gt;&lt;label v="积分" lan="l0859"&gt;&lt;/label&gt;&lt;em class="ml5"&gt;:&lt;/em&gt;&lt;/th&gt;
+		            &lt;td&gt;
+		              &lt;span id="span_open_send_crcd_point_0926"&gt;&lt;a href="javascript:void(0);"&gt;显示&lt;/a&gt;&lt;/span&gt;
+		              &lt;a class="td-a ml10" href="javascript:void(0);" title="" v="积分商城" lan="l91951"&gt;积分商城&lt;/a&gt;
+		            &lt;/td&gt;
+		          &lt;/tr&gt;
+		        &lt;/tbody&gt;
+		      &lt;/table&gt;
+		    &lt;/div&gt;
+    	&lt;/div&gt;
+    &lt;/div&gt;
+     
+    &lt;div class="cont-detail"&gt;
+      	&lt;h5 class="o-title" &gt;&lt;span lan="l91923" v="账户账面信息"&gt;账户账面信息&lt;/span&gt;&lt;/h5&gt;
+        &lt;div class="o-cont"&gt;
+		    &lt;div class="tb-box tb-box-credit"&gt;
+		      &lt;table class="tb"&gt;
+		        &lt;tbody&gt;
+		          &lt;tr&gt;
+		            &lt;th class="wp30 tar" &gt;&lt;label v="币种" lan="l0093" &gt;&lt;/label&gt;&lt;em class="ml5"&gt;:&lt;/em&gt;&lt;/th&gt;
+		            {{each creditCard.actList}}
+			            &lt;th {{if creditCard.actList.length!=2}} colspan="2" {{/if}}  class="tal wp30"   lan="currency_type_${$value.currency}"&gt;&lt;/th&gt;
+		            {{/each}}
+		          &lt;/tr&gt;
+		          &lt;tr&gt;
+		            &lt;th class="tar "&gt; &lt;label  v="实时余额" lan="l91925" &gt;&lt;/label&gt;&lt;em class="ml5"&gt;:&lt;/em&gt;&lt;/th&gt;
+		            {{each creditCard.actList}}
+			            &lt;td {{if  creditCard.actList.length!=2}} colspan="2" {{/if}}  class="tal wp30" lan="num" currCode="${$value.currency}"&gt;${$value.realTimeBalance}&lt;/td&gt;
+		            {{/each}}
+		          &lt;/tr&gt;
+		          &lt;tr&gt;
+		            &lt;th class="tar" &gt;&lt;label v="总可用额" lan="l0862" &gt;&lt;/label&gt;&lt;em class="ml5"&gt;:&lt;/em&gt;&lt;/th&gt;
+		            {{each creditCard.actList}}
+			            &lt;td {{if  creditCard.actList.length!=2}} colspan="2" {{/if}}  class="tal wp30" lan="num" currCode="${$value.currency}"&gt;${$value.toltalBalance}&lt;/td&gt;
+		            {{/each}}
+		          &lt;/tr&gt;
+		           &lt;tr&gt;
+		            &lt;th class="tar" &gt;&lt;label v="取现可用额" lan="l0863"&gt;&lt;/label&gt;&lt;em class="ml5"&gt;:&lt;/em&gt;&lt;/th&gt;
+		            {{each creditCard.actList}}
+		            &lt;td {{if  creditCard.actList.length!=2}} colspan="2" {{/if}} class="tal wp30"&gt;
+		            	${$value.cashBalance.formatNum($value.currency)}&lt;span lan="currency_type_${$value.currency}"&gt;&lt;/span&gt;
+		            &lt;/td&gt;
+		            {{/each}}
+		          &lt;/tr&gt;
+		           &lt;tr&gt;
+		            &lt;th class="tar" &gt;&lt;label v="分期可用额" lan="l0864"&gt;&lt;/label&gt;&lt;em class="ml5"&gt;:&lt;/em&gt;&lt;/th&gt;
+		            {{each creditCard.actList}}
+		            &lt;td {{if  creditCard.actList.length!=2}} colspan="2" {{/if}} class="tal wp30"&gt;
+		            	${$value.dividedPayAvaiBalance.formatNum($value.currency)}&lt;span lan="currency_type_${$value.currency}"&gt;&lt;/span&gt;
+		            &lt;/td&gt;
+		            {{/each}}
+		          &lt;/tr&gt;
+		          
+		          &lt;tr&gt;
+		            &lt;th class="tar" &gt;&lt;label v="本期到期还款日" lan="l91910" &gt;&lt;/label&gt;&lt;em class="ml5"&gt;:&lt;/em&gt;&lt;/th&gt;
+		            {{each creditCard.actList}}
+			            &lt;td {{if  creditCard.actList.length!=2}} colspan="2" {{/if}}  class="tal wp30"&gt;{{if dueDate}}${dueDate}{{else}}-{{/if}} &lt;/td&gt;
+		            {{/each}}
+		          &lt;/tr&gt;
+		          
+		          &lt;tr&gt;
+		            &lt;th class="tar" &gt;&lt;label v="本期应还金额" lan="l4097" &gt;&lt;/label&gt;&lt;em class="ml5"&gt;:&lt;/em&gt;&lt;/th&gt;
+		            {{each creditCard.actList}}
+			            &lt;td {{if  creditCard.actList.length!=2}} colspan="2" {{/if}} class="tal wp30"&gt;
+			            	${$value.billAmout.formatNum($value.currency)}
+			            &lt;/td&gt;
+		            {{/each}}
+		          &lt;/tr&gt;
+		          &lt;tr&gt;
+		            &lt;th class="tar" &gt;&lt;label v="本期最低还款额" lan="l91916"&gt;&lt;/label&gt;&lt;em class="ml5"&gt;:&lt;/em&gt;&lt;/th&gt;
+		            {{each creditCard.actList}}
+		            &lt;td {{if  creditCard.actList.length!=2}} colspan="2" {{/if}} class="tal wp30"&gt;
+		            	${$value.billLimitAmout.formatNum($value.currency)}
+		            &lt;/td&gt;
+		            {{/each}}
+		          &lt;/tr&gt;
+		         &lt;tr&gt;
+		            &lt;th class="tar"  &gt;&lt;label v="本期未还款金额" lan="l91953"&gt;&lt;/label&gt;&lt;em class="ml5"&gt;:&lt;/em&gt;&lt;/th&gt;
+		           	{{each creditCard.actList}}
+		            &lt;td {{if  creditCard.actList.length!=2}} colspan="2" {{/if}} class="tal wp30"&gt;
+		            	${$value.haveNotRepayAmout.formatNum($value.currency)}
+		            &lt;/td&gt;
+		            {{/each}}
+		          &lt;/tr&gt;
+		        &lt;/tbody&gt;
+		      &lt;/table&gt;
+		    &lt;/div&gt;
+   		&lt;/div&gt;
+    &lt;/div&gt;
+	  	
+	  
+	  &lt;/div&gt;
+	  &lt;div class="layout-title {{if creditCard.isHaveEleCashAcct == '0'}}hide{{/if}}"&gt;
+	    &lt;ul class="layout-lr mt15"&gt;
+		    &lt;li class="clearfix strong"&gt;
+		      &lt;span class="item-title"&gt;
+		     	&lt;label v="电子现金账户" lan="l0179"&gt;&lt;/label&gt;&lt;em lan="l35346"&gt;&lt;/em&gt;
+		      &lt;/span&gt;
+		      &lt;div class="item-con" &gt;
+		      	&lt;span id="div_accountnumber_740994"&gt;
+			      	&lt;span lan="payeraccount_300"&gt;&lt;/span&gt;
+			      	&lt;span&gt;${StringUtil.maskAccount(creditCard.accountNumber)}&lt;/span&gt;
+			  		&lt;span lan="payeraccount_${creditCard.accountIbkNum}"&gt;&lt;/span&gt;
+		      	&lt;/span&gt;
+		      &lt;/div&gt;
+		    &lt;/li&gt;
+	        &lt;li class="clearfix strong"&gt;
+	            &lt;span class="item-title"&gt;
+	              &lt;label v="账户状态" lan="l50519"&gt;&lt;/label&gt;&lt;em lan="l35346"&gt;&lt;/em&gt;
+	            &lt;/span&gt;
+	            &lt;div class="item-con"  id="div_50519_740956" lan="electron_cash_account_status_${eleCashCard.accountStatus}"&gt;&lt;/div&gt;
+	        &lt;/li&gt;
+	    &lt;/ul&gt;
+	  &lt;/div&gt;
+	  &lt;div class="tb-box {{if creditCard.isHaveEleCashAcct == '0'}}hide{{/if}}"&gt;
+	    &lt;table class="tb"&gt;
+	      &lt;thead&gt;
+	        &lt;tr&gt;
+	          &lt;th class="fi wp26 tar" v="电子现金卡片余额上限" lan="l1888"&gt;&lt;/th&gt;
+	          &lt;th class="wp35 tar" lan="l1889" v="电子现金脱机消费单笔交易限额"&gt;&lt;/th&gt;
+	          &lt;th class="wp10" lan="l0093" v="币种"&gt;&lt;/th&gt;
+	          &lt;th class="" lan="l0494" v="钞/汇"&gt;&lt;/th&gt;
+	          &lt;th class="tar" lan="l1848" v="补登余额"&gt;&lt;/th&gt;
+	          &lt;th lan="l3002" v="操作"&gt;&lt;/th&gt;
+	        &lt;/tr&gt;
+	      &lt;/thead&gt;
+	      &lt;tbody&gt;
+	        &lt;tr class="odd"&gt;
+	          &lt;td class="fi tar" lan="num"&gt;{{if eleCashCard.eCashUpperLimit}}${eleCashCard.eCashUpperLimit.formatNum()}{{/if}}&lt;/td&gt;
+	          &lt;td class="tar" lan="num"&gt;{{if eleCashCard.singleLimit}}${eleCashCard.singleLimit.formatNum()}{{/if}}&lt;/td&gt;
+	          &lt;td class="" lan="currency_code_${eleCashCard.currency}"&gt;&lt;/td&gt;
+	          &lt;td class="" lan="moneyremit_${eleCashCard.cashRemit}"&gt;&lt;/td&gt;
+	          &lt;td class="tar" lan="num"&gt;{{if eleCashCard.supplyBalance}}${eleCashCard.supplyBalance.formatNum()}{{/if}}&lt;/td&gt;
+	          &lt;td&gt;&lt;a class="td-a detail" href="javascript:void(0);" id="a_transaction_details_740868" v="交易明细" lan="l0176"&gt;&lt;/a&gt;&lt;/td&gt;
+	        &lt;/tr&gt;
+	      &lt;/tbody&gt;
+	    &lt;/table&gt;
+	  &lt;/div&gt;
+	  &lt;div class="tips-box"&gt;
+	    &lt;div class="tips-title" lan="l6720" v="温馨提示"&gt;&lt;/div&gt;
+	    &lt;ol class="sn-box"&gt;
+	        &lt;li class="clearfix" id="div_50533_740870"&gt;
+              &lt;label class="num"&gt;1.&lt;/label&gt;
+              &lt;span class="con" v="存款利息（存款利息税）：上一结息日后至今的账户结余金额产生的利息（利息税）。（仅对长城信用卡）" lan="l50533"&gt;&lt;/span&gt;
+	        &lt;/li&gt;
+	        &lt;li class="clearfix" id="div_8053_740871"&gt;
+              &lt;label class="num"&gt;2.&lt;/label&gt;
+              &lt;span class="con" v="电子现金卡片余额上限是指记载在客户芯片上，客户可自行修改的可充值金额上限。" lan="l8053"&gt;&lt;/span&gt;
+	        &lt;/li&gt;
+	        &lt;li class="clearfix" id="div_8054_740872"&gt;
+              &lt;label class="num"&gt;3.&lt;/label&gt;
+              &lt;span class="con" v="电子现金卡片单笔交易限额是指记载在客户芯片上，客户可自行修改的脱机消费单笔金额上限。" lan="l8054"&gt;&lt;/span&gt;
+	        &lt;/li&gt;
+	        &lt;li class="clearfix" id="div_8055_740873"&gt;
+              &lt;label class="num"&gt;4.&lt;/label&gt;
+              &lt;span class="con" v="补登账户余额为以网银等渠道在卡片未出现情况下进行充值的金额，您需在我行自助终端或柜台将资金写入芯片进行使用。" lan="l8055"&gt;&lt;/span&gt;
+	        &lt;/li&gt;
+	    &lt;/ol&gt;
+	  &lt;/div&gt;
+	&lt;/div&gt;
+		&lt;p class="page-num text-darkengray tac"&gt;&lt;span lan="l7935" v="页面号"&gt;&lt;/span&gt;&lt;em&gt;A0010003&lt;/em&gt;&lt;/p&gt;
+&lt;/div&gt;
+</script><script type="text/javascript" src="scripts/lib/lan_c.js?v=20181228062507036"></script><script type="text/javascript" src="scripts/lib/lan_c.js?v=20181228062507036"></script></head><body><div id="wrapper" class="bu-wrapper"><div id="header" class="bu-header clearfix"><h1 class="logo"><span>中国银行网上银行</span></h1><div class="lan-box hide-for-init"><span class="register"><span v="您好，" lan="l7525">您好，</span> <span class="ml5 mr5" id="welcome-customerGender_EN"></span> <span id="welcome-customerName">陈慧聪</span> <span id="welcome-customerGender_CN"></span></span> <a href="https://95566.boc.cn/ZIM/index.htm" id="a_60_1169" urllan="url.onlineServiceUrl" class="service-r" lan="l22359" v="在线客服">在线客服</a> <a href="javascript:void(0);" id="a_55_1164" class="lan-en" lan="l0055" v="English">English</a> <a href="javascript:void(0);" id="a_56_1165" class="lan-zh hide" lan="l0056" v="中文" visible="false" style="display: none;">中文</a> <a href="javascript:void(0);" id="a_58_1167" class="help" lan="l0058" v="帮助">帮助</a> <a href="javascript:void(0);" id="a_59_1168" class="out" lan="l0059" v="安全退出">安全退出</a></div></div><div id="main" class="bu-main clearfix"><div class="bu-login-box clearfix"><div id="cardMain" class="oa-gift fl">   <div class="login-article login-self bu-reser-i">     <ul class="bu-tabs clearfix">         <li class="tabs tabs-current" id="div_account_information_740844">             <span class="tabs-m" lan="l0177" v="账户详情">账户详情</span>             <span class="tabs-r"></span>         </li>         <li class="tabs" id="div_futurebill_740845">             <span class="tabs-m" lan="l0311" v="未出账单">未出账单</span>             <span class="tabs-r"></span>         </li>         <li class="tabs" id="div_billedtrans_740846">             <span class="tabs-m" lan="l0312" v="已出账单">已出账单</span>             <span class="tabs-r"></span>         </li>     </ul>     <div>       <div class="cont-detail">         <h5 class="o-title"><span lan="l2227" v="账户基本信息">账户基本信息</span></h5>          <div class="o-cont">        <div class="tb-box tb-box-credit">          <table class="tb">            <tbody>              <tr>                <th class="wp20 tar"><label v="信用卡号" lan="l39932">信用卡号</label><em class="ml5">:</em></th>                <td class="wp30">6259******9489</td>                <th class="wp20 tar"><label v="户名" lan="l3901">户名</label><em class="ml5">:</em></th>                <td>陈慧聪</td>              </tr>              <tr>                <th class=""><label v="产品名称" lan="l0398">产品名称</label><em class="ml5">:</em></th>                <td>长城环球通爱驾汽车卡</td>                <th><label v="开户行" lan="l3903">开户行</label><em class="ml5">:</em></th>                <td>中国银行深圳市分行</td>              </tr>              <tr>                <th class="first"><label v="启用日期" lan="l91903">启用日期</label><em class="ml5">:</em></th>                <td>2018-05-29</td>                <th><label v="主副卡标识" lan="l91941">主附卡标识</label><em class="ml5">:</em></th>                <td lan="zfkbs_1">主卡</td>              </tr>              <tr>                <th class="first"><label v="账单日" lan="l91937">账单日</label><em class="ml5">:</em></th>                <td class="text-red"><span lan="l47523" v="每月">每月</span>26<span lan="l21332" v="日">日</span></td>                <th><label v="卡状态" lan="l2621">卡状态</label><em class="ml5">:</em></th>                <td>                 <span lan="XYKZT_">正常</span>                </td>              </tr>              <tr>                <th class="first"><label v="信用卡审批额度" lan="l91946">信用额度</label><em class="ml5">:</em></th>                <td>                                   <div>6,000.00 <span lan="currency_type_001">人民币元</span></div>                                 </td>                <th><label v="取现额度" lan="l0857">取现额度</label><em class="ml5">:</em></th>                <td>                                   <div>2,400.00<span lan="currency_type_001">人民币元</span></div>                                 </td>              </tr>              <tr>                <th class="first"><label v="年费减免情况" lan="l91924">年费减免情况</label><em class="ml5">:</em></th>                <td>                                                                       <span lan="l94827">免费至</span>2019-05-28                                                   </td>                <th><label v="积分" lan="l0859">积分</label><em class="ml5">:</em></th>                <td>                  <span id="span_open_send_crcd_point_0926"><a href="javascript:void(0);">显示</a></span>                  <a class="td-a ml10" href="javascript:void(0);" title="积分商城" v="积分商城" lan="l91951">积分商城</a>                </td>              </tr>            </tbody>          </table>        </div>       </div>      </div>             <div class="cont-detail">         <h5 class="o-title"><span lan="l91923" v="账户账面信息">账户账面信息</span></h5>          <div class="o-cont">        <div class="tb-box tb-box-credit">          <table class="tb">            <tbody>              <tr>                <th class="wp30 tar"><label v="币种" lan="l0093">币种</label><em class="ml5">:</em></th>                                 <th colspan="2" class="tal wp30" lan="currency_type_001">人民币元</th>                              </tr>              <tr>                <th class="tar "> <label v="实时余额" lan="l91925">实时余额</label><em class="ml5">:</em></th>                                 <td colspan="2" class="tal wp30" lan="num" currcode="001">5,719.59</td>                              </tr>              <tr>                <th class="tar"><label v="总可用额" lan="l0862">总可用额</label><em class="ml5">:</em></th>                                 <td colspan="2" class="tal wp30" lan="num" currcode="001">280.41</td>                              </tr>               <tr>                <th class="tar"><label v="取现可用额" lan="l0863">取现可用额</label><em class="ml5">:</em></th>                                <td colspan="2" class="tal wp30">                 280.41<span lan="currency_type_001">人民币元</span>                </td>                              </tr>               <tr>                <th class="tar"><label v="分期可用额" lan="l0864">分期可用额</label><em class="ml5">:</em></th>                                <td colspan="2" class="tal wp30">                 280.41<span lan="currency_type_001">人民币元</span>                </td>                              </tr>                            <tr>                <th class="tar"><label v="本期到期还款日" lan="l91910">本期到期还款日</label><em class="ml5">:</em></th>                                 <td colspan="2" class="tal wp30">- </td>                              </tr>                            <tr>                <th class="tar"><label v="本期应还金额" lan="l4097">本期账单应还金额</label><em class="ml5">:</em></th>                                 <td colspan="2" class="tal wp30">                  5,719.59                 </td>                              </tr>              <tr>                <th class="tar"><label v="本期最低还款额" lan="l91916">本期账单最低还款额</label><em class="ml5">:</em></th>                                <td colspan="2" class="tal wp30">                 572.00                </td>                              </tr>             <tr>                <th class="tar"><label v="本期未还款金额" lan="l91953">本期账单剩余未还金额</label><em class="ml5">:</em></th>                                <td colspan="2" class="tal wp30">                 5,719.59                </td>                              </tr>            </tbody>          </table>        </div>       </div>      </div>                </div>     <div class="layout-title ">       <ul class="layout-lr mt15">        <li class="clearfix strong">          <span class="item-title">          <label v="电子现金账户" lan="l0179">电子现金账户</label><em lan="l35346">：</em>          </span>          <div class="item-con">           <span id="div_accountnumber_740994">            <span lan="payeraccount_300">电子现金账户</span>            <span>6259******9489</span>         <span lan="payeraccount_"> </span>           </span>          </div>        </li>           <li class="clearfix strong">               <span class="item-title">                 <label v="账户状态" lan="l50519">账户状态</label><em lan="l35346">：</em>               </span>               <div class="item-con" id="div_50519_740956" lan="electron_cash_account_status_A">正常</div>           </li>       </ul>     </div>     <div class="tb-box ">       <table class="tb">         <thead>           <tr>             <th class="fi wp26 tar" v="电子现金卡片余额上限" lan="l1888">电子现金卡片余额上限</th>             <th class="wp35 tar" lan="l1889" v="电子现金脱机消费单笔交易限额">电子现金脱机消费单笔交易限额</th>             <th class="wp10" lan="l0093" v="币种">币种</th>             <th class="" lan="l0494" v="钞/汇">钞/汇</th>             <th class="tar" lan="l1848" v="补登余额">补登余额</th>             <th lan="l3002" v="操作">操作</th>           </tr>         </thead>         <tbody>           <tr class="odd">             <td class="fi tar" lan="num">1,000.00</td>             <td class="tar" lan="num">1,000.00</td>             <td class="" lan="currency_code_CNY">人民币元</td>             <td class="" lan="moneyremit_00">-</td>             <td class="tar" lan="num"></td>             <td><a class="td-a detail" href="javascript:void(0);" id="a_transaction_details_740868" v="交易明细" lan="l0176">交易明细</a></td>           </tr>         </tbody>       </table>     </div>     <div class="tips-box">       <div class="tips-title" lan="l6720" v="温馨提示">温馨提示</div>       <ol class="sn-box">           <li class="clearfix" id="div_50533_740870">                <label class="num">1.</label>                <span class="con" v="存款利息（存款利息税）：上一结息日后至今的账户结余金额产生的利息（利息税）。（仅对长城信用卡）" lan="l50533">存款利息（存款利息税）：上一结息日后至今的账户结余金额产生的利息（利息税）。（仅对长城信用卡）</span>           </li>           <li class="clearfix" id="div_8053_740871">                <label class="num">2.</label>                <span class="con" v="电子现金卡片余额上限是指记载在客户芯片上，客户可自行修改的可充值金额上限。" lan="l8053">电子现金卡片余额上限是指记载在客户芯片上，客户可自行修改的可充值金额上限。</span>           </li>           <li class="clearfix" id="div_8054_740872">                <label class="num">3.</label>                <span class="con" v="电子现金卡片单笔交易限额是指记载在客户芯片上，客户可自行修改的脱机消费单笔金额上限。" lan="l8054">电子现金卡片单笔交易限额是指记载在客户芯片上，客户可自行修改的脱机消费单笔金额上限。</span>           </li>           <li class="clearfix" id="div_8055_740873">                <label class="num">4.</label>                <span class="con" v="补登账户余额为以网银等渠道在卡片未出现情况下进行充值的金额，您需在我行自助终端或柜台将资金写入芯片进行使用。" lan="l8055">补登账户余额为以网银等渠道在卡片未出现情况下进行充值的金额，您需在我行自助终端或柜台将资金写入芯片进行使用。</span>           </li>       </ol>     </div>   </div>    <p class="page-num text-darkengray tac"><span lan="l7935" v="页面号">页面号</span><em>A0010003</em></p>  </div><div class="login-aside non-bro hide" visible="false" style="display: none;"><ul class="login-info"><li><div id="p_50524_740996" lan="l50524" v="尚未开通网上银行服务。">尚未开通网上银行服务。</div></li></ul><div class="pay-ats" style="margin:10px"><div class="link-icon"><span class="text-darkenred" lan="l92826">关注我们</span> <span class="text-darkenred" lan="l8776">：</span> <a href="http://www.boc.cn/custserv/cs1/201209/t20120921_1989080.html" target="_blank" class="sina-w"></a> <a href="http://www.boc.cn/custserv/cs1/201301/t20130115_2126343.html" target="_blank" class="weixin-w"></a> <a href="http://www.boc.cn/ebanking/service/cs1/201009/t20100921_1151946.html" target="_blank" class="phone-w"></a></div><div class="text-gray" lan="l92827">中国银行微银行</div><img src="images/erweima.jpg" alt="中国银行微银行" class="erweima" /></div><div class="login-ad-i" style="padding-left:0;text-align:center"><a class="ad" href="javascript:void(0)" title=""><img src="images/banner-2.png" /></a></div></div><div class="login-aside login-net"><div class="bro">
+	<div lan="l50521" v="您已开通网上银行服务，">您已开通网上银行服务，</div>
+	<div lan="l50516" v="请登录网银，享受更多服务！">请登录网银，享受更多服务！</div>
+</div>
+
+<p class="tac" style="padding-bottom:75px;padding-top:40px;">
+            <a href="javascript:void;" class="btn" id="btn_login_740822">
+              <span class="btn-r w150" lan="l6439" v="登录网上银行">登录网上银行</span>
+            </a>
+</p>
+<div class="pay-ats" style="margin:10px ">
+    <div class="link-icon">
+        <span class="text-darkenred" lan="l92826">关注我们</span>
+        <span class="text-darkenred" lan="l8776">：</span>
+        <a href="http://www.boc.cn/custserv/cs1/201209/t20120921_1989080.html" target="_blank" class="sina-w"></a>
+        <a href="http://www.boc.cn/custserv/cs1/201301/t20130115_2126343.html" target="_blank" class="weixin-w"></a>
+        <a href="http://www.boc.cn/ebanking/service/cs1/201009/t20100921_1151946.html" target="_blank" class="phone-w"></a>
+    </div>
+    <div class="text-gray" lan="l92827">中国银行微银行</div>
+    <img src="images/erweima.jpg" alt="中国银行微银行" class="erweima" />
+</div>
+<div class="login-ad-i" style="padding-left:0;text-align:center;">
+    <a class="ad" href="http://bocchongzhi.yeepay.com/" target="_blank" urllan="url.ad2"><img src="images/banner-2.png" /></a>
+</div></div></div><div style="width: 100%; clear:both; color: #999; line-height: 20px; padding-top:8px; text-align: center" id="pageNo"><span _tmplitem="2" lan="l7935" v="页面号">页面号</span><em _tmplitem="2">A0010003</em></div></div><div id="footer" class="bu-footer"><p><a href="https://95566.boc.cn/ZIM/index.htm" id="a_60_1170" urllan="url.onlineServiceUrl" lan="l22359" v="在线客服">在线客服</a><em class="ml5 mr5">|</em><a v="服务热线" lan="l9881" name="servicHotline" urllan="url.servicHotlineUrl" href="https://ea.ebs.bankofchina.com/contactUs_cn.html?locale=zh_CN" onclick="openNewWindow(this.href);return false">服务热线</a><em class="ml5 mr5">|</em><a title="安全须知" lan="l0022" v="安全须知" urllan="url.saftNote" name="saftNote" href="http://www.boc.cn/ebanking/security/bocnet/200810/t20081022_990714.html" onclick="openNewWindow(this.href);return false">安全须知</a><em class="ml5 mr5">|</em><a href="javascript:void(0);" title="打印本页" id="welcome_print" lan="l10036" v="打印本页">打印本页</a></p><p><span v="中国银行股份有限公司" lan="l0069">中国银行股份有限公司</span><span v="版权所有" lan="l0070" class="ml10">版权所有</span></p></div></div><iframe id="iframe" class="hide" marginwidth="0" marginheight="0" framespacing="0" frameborder="0" width="100%" height="800px"></iframe><div class="hide editfail" id="msgBox" style="position:absolute;z-index:999;width:630px"><div class="bu-pop" style="position:absolute;z-index:999;left:0;top:0"><h4 class="pop-title"><span class="txt" lan="l7282">操作提示</span> <a class="close" href="javascript:void(0);" id="closeMsgBox"></a></h4><div class="pop-con"><p class="unset"><span id="msgContent">操作失败!</span></p><p class="btn-box tac" style="margin-bottom:0"><a id="hideMsgBox" class="btn" href="javascript:void(0);"><span class="btn-r" lan="l0315" v="确认"></span></a></p></div></div><iframe src="" marginwidth="0" framespacing="0" marginheight="0" frameborder="0" width="100%" height="100%" style="left:0; background:rgb(255,255,255); top:0; width:100%; filter:alpha(opacity=0); -moz-opacity: 0; opacity: 0;zoom:1; position:absolute; z-index: 998"></iframe></div><div id="ajaxLoading" style="position: absolute; left: 0px; top: 0px; width: 100%; height: 1019px; zoom: 1; z-index: 999; display: none;" class="hide" visible="false"><img style="width:32px;height:32px;margin-left:-16px;margin-top:-16px;top:50%;left:50%;position:relative" src="images/ajaxloading-new.gif" /></div><script type="text/javascript" src="scripts/dojo/dojo.js.1.6.1.uncompressed.js"></script><script type="text/javascript" src="scripts/application.js"></script><script type="text/javascript" src="scripts/dojo/NodeList-manipulate.js?v=20181228062507036"></script><script type="text/javascript" src="scripts/dojo/dojo2.js?v=20181228062507036"></script><script type="text/javascript" src="scripts/common.js?v=20181228062507036"></script><script type="text/javascript" src="scripts/dojo.common.js?v=20181228062507036"></script><script type="text/javascript" src="scripts/lib/spine.js?v=20181228062507036"></script><script type="text/javascript" src="scripts/lib/dojo.tmpl.js?v=20181228062507036"></script><script type="text/javascript" src="scripts/lib/errorCode.js?v=20181228062507036"></script><script type="text/javascript" src="scripts/lib/tooltip.js?v=20181228062507036"></script><script type="text/javascript" src="scripts/lib/formValid.js?v=20181228062507036"></script><script type="text/javascript" src="scripts/lib/itselect.js?v=20181228062507036"></script><script type="text/javascript" src="scripts/lib/json2.js?v=20181228062507036"></script><script type="text/javascript" src="scripts/lib/localize.js?v=20181228062507036"></script><script type="text/javascript" src="scripts/lib/printer.js?v=20181228062507036"></script><script type="text/javascript" src="scripts/lib/devicePrint.js?v=20181228062507036"></script><script type="text/javascript" src="scripts/lib/common.propertiesConfig.js?v=20181228062507036"></script><script type="text/javascript" src="scripts/lib/datepicker.js?v=20181228062507036"></script><script type="text/javascript" src="scripts/lib/datepicker2.js?v=20181228062507036"></script><script type="text/javascript" src="scripts/util/dateUtil.js?v=20181228062507036"></script><script type="text/javascript" src="scripts/lib/ajaxfileupload.js?v=20181228062507036"></script><script type="text/javascript" src="scripts/lib/disabled.js?v=20181228062507036"></script><script type="text/javascript" src="scripts/lib/detachSigner.js?v=20181228062507036"></script><script type="text/javascript" src="scripts/lib/securityFactor.js?v=20181228062507036"></script><script type="text/javascript" src="scripts/lib/CFCASIPInput.min.js?v=20181228062507036"></script><script type="text/javascript" src="scripts/lib/secEditCtrl.js?v=20181228062507036"></script><script type="text/javascript" src="scripts/lib/antiCheat.js?v=20181228062507036"></script><script type="text/javascript" src="scripts/lib/liquidmetal.js?v=20181228062507036"></script><script type="text/javascript" src="scripts/lib/raphael.js?v=20181228062507036"></script><script type="text/javascript" src="scripts/util/currencyUtil.js?v=20181228062507036"></script><script type="text/javascript" src="scripts/util/loadBankName.js?v=20181228062507036"></script><script type="text/javascript" src="scripts/util/stringUtil.js?v=20181228062507036"></script><script type="text/javascript" src="scripts/util/validationUtil.js?v=20181228062507036"></script><script type="text/javascript" src="scripts/util/qswhGB2312.js?v=20181228062507036"></script><script type="text/javascript" src="scripts/lib/tchart.min.js?v=20181228062507036"></script><script type="text/javascript" src="scripts/lib/RoutineDate.js?v=20181228062507036"></script><script type="text/javascript" src="scripts/lib/tripledes.js?v=20181228062507036"></script><script type="text/javascript" src="scripts/util/constant.js?v=20181228062507036"></script><script type="text/javascript" src="scripts/util/fessUtil.js?v=20181228062507036"></script><script type="text/javascript" src="scripts/lib/pinyin.js?v=20181228062507036"></script><script type="text/javascript" src="scripts/util/abroadRemitUtil.js?v=20181228062507036"></script><script type="text/javascript" src="scripts/minsheng.js?v=20181228062507036"></script><script type="text/javascript" src="scripts/minshengParser.js?v=20181228062507036"></script><script type="text/javascript" src="scripts/controllers/menu/cMenuLoad.js?v=20181228062507036"></script><script type="text/javascript" src="scripts/controllers/menu/cMenu.js?v=20181228062507036"></script><script type="text/javascript" src="scripts/controllers/menu/cSubMenu.js?v=20181228062507036"></script><script type="text/javascript" src="scripts/controllers/menu/cHeader.js?v=20181228062507036"></script><script type="text/javascript" src="scripts/controllers/welcome/cWelcome.js?v=20181228062507036"></script><script type="text/javascript" src="scripts/controllers/welcome/cardWelcome.js?v=20181228062507036"></script><script type="text/javascript" src="scripts/controllers/welcome/cRelevanceForQuery.js?v=20181228062507036"></script><script type="text/javascript" src="scripts/controllers/welcome/crossFinace.js?v=20181228062507036"></script><script type="text/javascript" src="scripts/models.min.js?v=20181228062507036"></script><div class="hide" style="position: absolute; z-index: 3940; display: none;" id="info-ps" visible="false"><div class="info-tip"><p class="arrow"></p><div id="info-con" class="text"></div></div></div><div id="lightbox" style="left: 0px; background: rgb(150, 150, 150); top: 0px; width: 100%; height: 100%; opacity: 0.3; zoom: 1; position: fixed; z-index: 7; display: none;" class="hide" visible="false"></div></body></html>

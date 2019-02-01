@@ -16,6 +16,7 @@ from PIL import Image
 from threading import Thread
 
 import pymysql
+import PIL
 
 class SeleniumMiddleware():
     def __init__(self,timeout=None,service_args=[]):
@@ -86,22 +87,22 @@ class SeleniumMiddleware():
 
 
         #t验证码处理
-        # image = PIL.Image.open(r"E:\code\test\imcode.png")
-        # # image=PIL.Image.open(r"C:\Users\Administrator\Desktop\5107.jfif")
-        # # pytesseract.pytesseract.tesseract_cmd = r"C:\Program Files (x86)\Tesseract-OCR\tesseract.exe"
-        # # 灰度化
-        # image = image.convert('L')
-        # # 杂点清除掉。只保留黑的和白的。返回像素对象
-        # data = image.load()
-        # w, h = image.size
-        #         # for i in range(w):
-        #         #     for j in range(h):
-        #         #         if data[i, j] > 125:
-        #         #             data[i, j] = 255  # 纯白
-        #         #         else:
-        #         #             data[i, j] = 0  # 纯黑
-        #         # image.save('clean_captcha.png')
-        #         # image.show()
+        image = PIL.Image.open(r"E:\code\test\imcode.png")
+        # image=PIL.Image.open(r"C:\Users\Administrator\Desktop\5107.jfif")
+        # pytesseract.pytesseract.tesseract_cmd = r"C:\Program Files (x86)\Tesseract-OCR\tesseract.exe"
+        # 灰度化
+        image = image.convert('L')
+        # 杂点清除掉。只保留黑的和白的。返回像素对象
+        data = image.load()
+        w, h = image.size
+        for i in range(w):
+            for j in range(h):
+                if data[i, j] > 125:
+                    data[i, j] = 255  # 纯白
+                else:
+                    data[i, j] = 0  # 纯黑
+        image.save('clean_captcha.png')
+        image.show()
 
         # ""
         # 你的

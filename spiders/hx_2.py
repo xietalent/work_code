@@ -49,9 +49,6 @@ class SeleniumMiddleware():
         bottom = location['y'] + size['height']
 
         images = page_snap_obj.crop((left, top, right, bottom))
-        # sleep(1)
-        # images.save("imcode.png")
-        # image1 = images.save("./static/img/imgcode.png")
         images.save("./static/img/imgcode.png")
         # images.show()
         brows = self.browser

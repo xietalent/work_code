@@ -368,8 +368,6 @@ class Zhanoshang_bank():
             print("我的交易记录为:{}".format(record_name))
             print("我的交易金额为:{}".format(record_amount))
 
-
-
     def input_user(self):
         user_name = "13728647735"
         passwd = "419078"

@@ -185,6 +185,8 @@ class Zhongshihua(object):
             sleep(1)
         print(refuel_items)
 
+
+#产品信息
     def product_info(self):
         self.browser.find_element_by_xpath("//div[@class='nav']/ul[@class='nav_ul wrap']/li[3]/a").click()
         # WebDriverWait(self.browser, 10, 0.5).until(EC.element_to_be_clickable((By.CLASS_NAME, "f_con4Center clearfix")))
@@ -289,7 +291,6 @@ class Zhongshihua(object):
         # imgpage_html = self.browser.page_source
         # img_tree = etree.HTML(imgpage_html)
         # pic_url ="https://www.saclub.com.cn"+img_tree.xpath(".//div[@class='fdiv3']/a/img/@src")
-
         pic_url = self.browser.find_element_by_xpath(".//div[@class='fdiv3']/a/img").get_attribute('src')
         # print(pic_url1)
         # pic_url = "https://www.saclub.com.cn/{}".format(pic_url1)
@@ -306,7 +307,6 @@ class Zhongshihua(object):
             "Connection": "keep - alive",
             "User-Agent": "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36",
         }
-
         cooks = {
             "NTKF_T2D_CLIENTID": "guest316A67E3-41EB-BB51-DD84-16AD453687A3",
             "nTalk_CACHE_DATA": "{uid:kf_9507_ISME9754_guest316A67E3-41EB-BB,tid:1548310216488735}",
@@ -322,7 +322,6 @@ class Zhongshihua(object):
         with open("./images/zhongshihua/imgcode.gif", 'wb') as fp:
             for data in resp.iter_content(128):
                 fp.write(data)
-
         try:
             # 截取验证码的截图
             location = self.browser.find_element_by_id("checkimg").location

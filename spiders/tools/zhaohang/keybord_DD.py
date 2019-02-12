@@ -1,4 +1,5 @@
 from ctypes import *
+from time import sleep
 
 import  time
 
@@ -18,6 +19,7 @@ class DD_input(object):
     def down_up(self,code):
         # 进行一组按键。
         dd_dll.DD_key(self.vk[code], 1)
+        sleep(0.2)
         dd_dll.DD_key(self.vk[code], 2)
 
     def dd(self,key):
@@ -66,7 +68,7 @@ class DD_mouse(object):
 
 if __name__ == '__main__':
     # dd_list = input("输入字符串:")
-    dd_list = r"efaeffaf5465465"
+    dd_list = r"zc006699"
     ddin = DD_input()
     ddin.dd(dd_list)
 

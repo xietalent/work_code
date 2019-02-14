@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 
 from threading import Thread
 from selenium import webdriver
@@ -27,7 +28,6 @@ class abc_bank(object):
 
     def __del__(self):
         self.browser.close()
-        # self.browser.quit()
 
     def login_request(self):
         self.browser.get("https://perbank.abchina.com/EbankSite/startup.do?r=ED7A0F56C69E1DB5")
@@ -77,10 +77,6 @@ class abc_bank(object):
     def query_bill(self):
         self.browser.find_element_by_xpath("//div[@class='zhanghu_a']/a[1]").click()
         sleep(2)
-
-
-        # sleep(5)
-
 
     #卡积分查询
     def card_score(self):
@@ -143,26 +139,62 @@ class abc_bank(object):
             pass
 
 
-    #信用卡
+    #信用卡  #未完成
         self.browser.find_element_by_xpath(".//ul[@class='tabs-head']/li[2]/a").click()
         sleep(1)
         credit_account_type_html = self.browser.page_source
         credit_account_type_tree = etree.HTML(credit_account_type_html)
         divs = credit_account_type_tree.xpath(".//div[@class='zhanghu']")
         credit_account_type_items = []
+        # try:
+        for div in divs:
+            credit_account_type_item = {}
+            # 卡号
+            # card_nums = div.xpath("./ul/li/span[1]/em/child::node()[1]")
+            card_nums = div.xpath("./ul/li[contains(@class,'li_2') and contains(@class,'evenRowColor')]/span[contains(@class,'m-acc-credit') and contains(@class,'card_wid')]/text()")
+            # 本期未还余额
+            # unpaid = div.xpath("./ul/li/span[3]/child::node()[1]")
+            unpaid = div.xpath("./ul/li/span[3]/text()")
+            # 还款日为:
+            # repay_date = div.xpath("./ul//li/span[4]/i/text()")[0].strip()
+            repay_date = div.xpath("./ul/li/span[4]/text()")
+
+            if len(card_nums) != 0:
+                print("卡号为:{}".format(card_nums[0]))
+                print("本期未还余额为:{}".format(unpaid[1]))
+                print("还款日为:{}".format(repay_date[0]))
+        # except:
+        #     pass
+        self.browser.find_element_by_xpath("//div[@class='zhanghu']/ul[2]/li[1]/a").click()
+        sleep(1)
+
+        credit_account_html = self.browser.page_source
+        credit_account_tree = etree.HTML(credit_account_html)
+        divs = credit_account_tree.xpath(".//div[@class='tanshuju']")
+        credit_accountitems = []
         try:
             for div in divs:
-                credit_account_type_item = {}
-                # 卡号
-                card_nums = div.xpath("./ul/li/span[1]/em/child::node()[1]")[0].strip()
-                # 本期未还余额
-                unpaid = div.xpath("./ul/li/span[3]/child::node()[1]")[0].strip()
-                # 还款日为:
-                # repay_date = div.xpath("./ul//li/span[4]/i/text()")[0].strip()
-                repay_date = div.xpath("./ul/li/span[4]/i/child::node()[1]")[0].strip()
-                print("卡号为:{}".format(card_nums))
-                print("本期未还余额为:{}".format(unpaid))
-                print("还款日为:{}".format(repay_date))
+                credit_accountitem = {}
+                # 币种
+                currency = div.xpath("./ul[2]/li[@class='shujutwo']/span[1]/text()")
+                # 额度
+                amount = div.xpath("./ul[2]/li[@class='shujutwo']/span[2]/text()")
+                # 账户余额
+                balance =div.xpath("./ul[2]/li[@class='shujutwo']/span[3]/text()")
+                #可用余额
+                use_balance =div.xpath("./ul[2]/li[@class='shujutwo']/span[4]/text()")
+                #可用取现余额
+                cashable =div.xpath("./ul[2]/li[@class='shujutwo']/span[5]/text()")
+                #本期未还款额
+                unpaid =div.xpath("./ul[2]/li[@class='shujutwo']/span[6]/text()")
+
+                if len(currency) != 0:
+                    print("币种为:{}".format(currency[0]))
+                    print("额度为:{}".format(amount[0]))
+                    print("账户余额为:{}".format(balance[0]))
+                    print("可用余额为:{}".format(use_balance[0]))
+                    print("可用取现余额为:{}".format(cashable[0]))
+                    print("本期未还款额为:{}".format(unpaid[0]))
         except:
             pass
 
@@ -170,7 +202,7 @@ class abc_bank(object):
     def detail(self):
         sleep(0.1)
         self.browser.find_element_by_xpath(".//ul[@class='tabs-head']/li[1]/a").click()
-        sleep(1.5)
+        sleep(1)
         self.browser.find_element_by_class_name("minxi").click()
         sleep(2)
         self.browser.find_element_by_id("startDate").click()
@@ -239,27 +271,26 @@ class abc_bank(object):
                         th2.start()
                 except:
                     pass
-                sleep(0.5)
+                # sleep(0.5)
         nums = 1
         res = all_info(nums)
-        while True:
-            try:
-                self.browser.find_element_by_id("nextPage").click()
-                sleep(1)
-                res = all_info(nums)
-                nums += 1
-                # sleep(1)
-            except:
-                print("已经获取一年内所有消费明细")
-                break
-                # pass
+
+        # while True:
+        #     try:
+        #         self.browser.find_element_by_id("nextPage").click()
+        #         sleep(1)
+        #         res = all_info(nums)
+        #         nums += 1
+        #         # sleep(1)
+        #     except:
+        #         print("已经获取一年内所有消费明细")
+        #         break
+        #         # pass
 
     #获取存款信息
     def deposit_info(self):
         #序号,存期,币种,金额,执行利率,开户日期,到期日,操作
-
         pass
-
 
     def user_info(self):
         username = "15071469916"
@@ -414,7 +445,6 @@ class abc_bank(object):
         print("查询存款信息耗时:{}s".format(tres6))
 
 
-
 class Mysql_input(object):
     def __init__(self, host="47.97.217.36", user="root", password="root", database="user", port=3306, charset="utf8"):
         self.host = host
@@ -427,7 +457,6 @@ class Mysql_input(object):
     def connect(self):
         self.conn = pymysql.connect(host=self.host, user=self.user, password=self.password, database=self.database,port=self.port, charset=self.charset)
         self.cursor = self.conn.cursor()
-
 
     def get_data(self):
         self.connect()
@@ -451,10 +480,10 @@ class Mysql_input(object):
         except:
             self.conn.rollback()
 
-
     def close(self):
         self.cursor.close()
         self.conn.close()
+        
 
 if __name__ == '__main__':
     res = abc_bank()

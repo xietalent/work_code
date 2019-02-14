@@ -306,10 +306,10 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="1062" />
-    <option name="y" value="96" />
+    <option name="x" value="338" />
+    <option name="y" value="64" />
     <option name="width" value="1163" />
-    <option name="height" value="1047" />
+    <option name="height" value="949" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="1" id="Add" />

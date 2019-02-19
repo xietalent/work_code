@@ -483,7 +483,7 @@ class Mysql_input(object):
     def close(self):
         self.cursor.close()
         self.conn.close()
-        
+
 
 if __name__ == '__main__':
     res = abc_bank()

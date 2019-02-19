@@ -38,7 +38,7 @@ class Zhongshihua(object):
 
     # 发起请求
     def process_request(self):
-        self.logger.debug('Ie is Starting')
+        self.logger.debug('Chrome is Starting')
         username = "chenhuicong2019"
         passwd = "123456abc"
         # im_code = 1234

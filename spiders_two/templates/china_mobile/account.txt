@@ -1,0 +1,3008 @@
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml"><head lang="en">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>我的账户_中国移动积分商城</title>
+    <link href="/styles/default/user.css" type="text/css" rel="stylesheet" />
+    
+
+
+
+	<link href="/styles/default/public.css" type="text/css" rel="stylesheet" />
+	<link href="/styles/default/layout.css" type="text/css" rel="stylesheet" />
+
+<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+<link rel="icon" href="/favicon.ico" type="image/x-icon" />	
+<script async="" src="/scripts/webtrends.min.js"></script><script type="text/javascript">var onloadStartTime = new Date();</script>
+<link href="/styles/default/media1024.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="/scripts/respond.src-min.js"></script>
+
+<link href="/styles/default/jquery.autocomplete.css" type="text/css" rel="stylesheet" />
+
+<script type="text/javascript" src="/scripts/jquery.min.js"></script>
+<script type="text/javascript" src="/scripts/jquery-migrate-min.js"></script>
+<script type="text/javascript" src="/scripts/jquery.pagination-min.js"></script>
+<script type="text/javascript" src="/scripts/dialog/ligerBase-min.js"></script>
+<script type="text/javascript" src="/scripts/dialog/ligerDialog-min.js"></script>
+<link href="/styles/default/dialog.css" type="text/css" rel="stylesheet" />
+    
+
+</head>
+<body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<meta name="WT.plat" content="PC" />
+<link href="/styles/default/campusActivity.css" rel="stylesheet" type="text/css" />
+
+<!-- 2018上半年 客户问卷调研  弹出层 start-->
+<!-- 流量 -->
+
+<!-- 
+
+
+ -->
+<script src="/scripts/dialog/ligerBase.js" type="text/javascript"></script>
+<script src="/scripts/dialog/ligerDialog.js" type="text/javascript"></script>
+
+<style type="text/css">
+/* 2017.12 客户问卷调研 */
+/* 覆盖 公共弹框 z-index start */
+.l-window-mask{z-index: 10002 !important;}
+/* 覆盖 公共弹框 z-index end */
+.ques-dialog-mask{position: absolute;width: 100%;height: 100%;z-index:10001;top:0;left:0;overflow:auto;}
+.ques-dialog{width:990px;top:0;left:50%;margin-left:-495px;margin-top:120px;margin-bottom:50px;background:#fffde9;position:relative;}
+.ques-dialog img.ques-close{position:absolute;top:25px;right:25px;}
+.ques-dialog .head{width:990px;height:105px;background: url(/styles/default/images/question-head.jpg) no-repeat 0 0;}
+.ques-dialog .footer{width:990px;height:123px;background: url(/styles/default/images/question-footer.jpg) no-repeat 0 0;}
+.ques-dialog .content{width:830px;margin-left:80px;}
+.ques-dialog h2{line-height:60px;font-size:30px;text-align:center;color:#1398ec;font-weight:bold;margin-bottom: 10px;}
+.ques-dialog p{line-height:38px;font-size:22px;text-indent:44px;color:#1398ec;}
+.ques-dialog p span{color:#ec136f;}
+.ques-dialog .ques-wrap{height:1000px;background: #ffffff;margin-top:30px;padding:0 36px;}
+.ques-dialog .question{padding:18px 0;}
+.ques-dialog .question p{font-size: 22px;line-height: 38px;color:#666666;text-indent:0;}
+.ques-dialog .question p input[type="text"]{width:200px;height:28px;font-size:20px;border:1px solid #ec136f;vertical-align: middle;padding:0 5px;}
+.ques-dialog .question p.tip{font-size: 18px;line-height: 32px;color:#ec136f;}
+.ques-dialog .question p span{font-size:20px;color:#666666;padding-left: 24px;}
+.ques-dialog .question .choose{text-align: center;}
+.ques-dialog .question .choose i{display:inline-block;margin:0 6px;padding-left:25px;font-size:20px;background: url(/styles/default/images/ques-uncheck.jpg) no-repeat left center;}
+.ques-dialog .question .choose i.check{background: url(/styles/default/images/ques-check.jpg) no-repeat left center;}
+.ques-dialog .question .choose cite{font-size:20px;color:#ec136f;margin:0 6px;}
+.ques-dialog .question textarea{width:684px;height:216px;padding:5px;font-size:16px;line-height:18px;border: 1px solid #b5b5b5;margin:10px 0 15px 31px;overflow:hidden;border-radius:14px;}
+.ques-dialog .question a{display:inline-block;text-align:center;width: 86px;height: 36px;line-height:36px;background: #1398ec;color:#ffffff;font-size: 22px;border-radius: 3px;}
+.ques-dialog .question .end{font-size: 18px;text-align: center;margin-top:14px;}
+</style>
+<div class="ques-dialog-mask" id="questionn-dialog" style="display:none;">
+ <div class="ques-dialog">
+   <div class="head"><img class="ques-close" alt="" src="/styles/default/images/close.jpg" /></div>
+   <div class="content">
+     <h2>诚邀您参与积分商城客户满意度调研</h2>
+     <p>尊敬的中国移动客户，为能给您提供更优质的积分服务，诚邀您参与本次客户满意度调研，我们会对涉及的个人信息绝对保密！</p>
+     <p>为感谢您的参与，我们将为成功提交有效问卷的前3万位客户每人赠送<span>300M全国流量</span>（不含港澳台）。所赠流量预计在<span>2018年7月20日前</span>充至<span>您的本手机账户</span>中。因赠送名额有限，还请您尽早参与。</p>
+     <p><span>特别说明：本次调研仅限收到邀请短信的客户参与，邀请短信转发无效。</span></p>
+     <div class="ques-wrap">
+<!--        <div class="question">
+         <p>1、请输入您想获赠10元话费的中国移动手机号码：<input type="text" /></p>
+         <p class="tip">（请务必提供准确的中国移动手机号；如您未填写，积分商城默认将把赠送话费充入您的本登录手机账户）。</p>
+       </div> -->
+       <div class="question">
+         <p>1、回想一下您在中国移动积分商城的兑换经历，您给中国移动积分商城整体满意度打几分？<span>（10分表示非常满意，1分表示非常不满意。）</span></p>
+         <p class="choose"><cite>非常满意</cite><i>10</i><i>9</i><i>8</i><i>7</i><i>6</i><i>5</i><i>4</i><i>3</i><i>2</i><i>1</i><cite>非常不满意</cite></p>      
+       </div>
+       <div class="question">
+         <p>2、您对2018年在中国移动积分商城兑换过的礼品的整体满意度打几分？<br /><span>（10分表示非常满意，1分表示非常不满意。）</span></p>
+         <p class="choose"><cite>非常满意</cite><i>10</i><i>9</i><i>8</i><i>7</i><i>6</i><i>5</i><i>4</i><i>3</i><i>2</i><i>1</i><cite>非常不满意</cite></p>      
+       </div>
+       <div class="question">
+         <p>3、您对积分商城兑换流程、售后等各项服务的整体满意度打几分？<br /><span>（10分表示非常满意，1分表示非常不满意。）</span></p>
+         <p class="choose"><cite>非常满意</cite><i>10</i><i>9</i><i>8</i><i>7</i><i>6</i><i>5</i><i>4</i><i>3</i><i>2</i><i>1</i><cite>非常不满意</cite></p>      
+       </div>
+       <div class="question">
+         <p>4、您对积分商城有哪些意见和建议：</p>   
+         <textarea onkeyup="keyUpTextArea(this)"></textarea>
+         <div style="text-align:center;"><a id="ques-submit" href="javascript:void(0);">提交</a></div>
+         <p class="end">调研到此结束，感谢您的参与！</p>  
+       </div>
+     </div>
+   </div>
+   <div class="footer"></div>
+ </div>
+</div>
+<script type="text/javascript">
+var quesPath = '';
+var dialogMsg = {
+	"01":'对不起，您已非法请求，请重新参与！',
+	"02":'尊敬的客户，参与客户满意度调研问卷，请先登录噢！',
+	"03":'尊敬的客户，您已成功提交，感谢您的参与！300M全国流量（不含港澳台）预计将在2018年7月20日前充至您的本手机账户中，请您注意查收。',
+	"04":'尊敬的客户，本次调研活动参与人数已达上限，遗憾您未获得抢先资格，下次趁早噢！',
+	"05":'尊敬的客户，您已参与过本次调研活动，感谢您的再次关注！',
+	"06":'尊敬的客户，本次调研仅限收到邀请短信的客户参与，感谢您的关注！',
+	"07":'尊敬的客户，本次客户满意度调研活动已结束，感谢您的关注！',
+	"08":'不允许重复提交!',
+	"09":'系统繁忙，请稍后重试！'	
+};
+var inThisPageForQues = 'flow';//在“流量”弹框页面
+</script>
+<!-- 
+<script src="/scripts/questionnaire.js" type="text/javascript"/></script>
+ -->
+<script type="text/javascript" src="/scripts/questionnaire-min.js"></script>
+
+
+<!-- 话费 -->
+
+<!-- 2018上半年  客户问卷调研  弹出层 end --> 
+<a id="returnTop"></a>
+<!-- 用户信息栏begin -->
+<script type="text/javascript" src="/scripts/jquery.cookie-min.js"></script>
+
+
+
+
+
+
+<script type="text/javaScript">
+	var user_login_status_login = "USER_LOGIN_STATUS_LOGIN";
+	var user_login_status_not_login = "USER_LOGIN_STATUS_NOT_LOGIN";
+    var ssoCheckUrl = "/portal/user/web/UserLoginAction?action=checkRedisUserInfo";
+    var toSsoCheckUrl = "/portal/user/web/UserLoginAction?action=toSsoCheckUrl";
+	if(typeof basePath =="undefined"){
+		window.basePath="";
+	}
+	function headTopNavFuc(navInfoUrl,navName){
+		var navUrl=window.basePath+navInfoUrl;
+		if('TC'==navName){//如果是退出就把这个cookie里的内容删除了
+			$.cookie("UASC",'',{path:'/'})
+		}else{
+			//插码
+			addEventCode('JF_DBDH_'+navName);
+			//运营监控平台插码
+			eventVesopera('JFPC_TOP_'+navName);
+		}
+		window.location.href=navUrl;
+	}
+	function netFunction(navInfoUrl){
+		//插码
+		addEventCode('JF_DBDH_WZDH');
+		window.open(navInfoUrl);
+	}
+	function userHelpFuc(navInfoUrl){
+		var targetNavUrl=window.basePath+navInfoUrl;
+		//插码
+		addEventCode('JF_DBDH_KHFW');
+		window.open(targetNavUrl);
+	}
+	function phoneFuc(navInfoUrl){
+		//插码
+		addEventCode('JF_DBDH_SJB');
+		window.open(navInfoUrl);
+	}
+    var is_login = $.cookie('is_login');
+    if (!!is_login){
+        $.post(ssoCheckUrl, function (data) {
+            data = eval('(' + data + ')');            
+            if (data.isLogin == "N") {
+            	var url = window.location.href;
+                url = url.replace(location.protocol + "//" + location.host,"");
+                window.location.href = toSsoCheckUrl + "&amp;targetUrl=" + url
+            }
+        });
+    }
+
+</script>
+
+<meta name="WT.plat" content="PC" />
+
+<!-- 用户信息栏begin -->
+<div class="site-nav">
+    <div class="site-nav-bd clearfix">
+        <ul class="site-nav-bd-l fl">
+            <li id="noLogin" style="display: none;">您好，欢迎访问中国移动积分商城，请<i><a href="javascript:headTopNavFuc('/portal/user/web/UserLoginAction?action=goAuthLoginPage&amp;targetUrl=','DL');">登录</a></i></li>
+            <li id="loginIng" style="" class="clearfix">
+                <span class="fl">您好!</span>
+                <cite id="starIcon" class="icon-bg fl star09"></cite>
+                <span class="fl"><a href="/portal/user/web/UserBaseAction?action=getUserBaseInfo" id="spanMobile">150****9916</a></span>
+                <span class="fl">积分余额:<i id="totalPoint">1999</i></span>
+                <span class="fl">可用积分:<i id="availablePoint">1999</i></span>
+                <span class="fl"><a href="/login/logout.jsp?isLogOut=true"><cite>退出</cite></a></span>
+            </li> 
+        </ul>
+        <script type="text/javascript" src="/scripts/currentUser-min.js"></script>
+        <ul class="site-nav-bd-r fr" style="width:425px;">
+        	<li class="listHover">
+                <div class="plr sj-icon" id="sj-fw">
+                    <a href="javascript:headTopNavFuc('/portal/user/web/UserOrderQueryAction?action=myDefaultAccount','WDZH');">我的账户</a>
+                    <i class="sj-right fr"><s>◇</s></i>
+                </div>
+                <div class="threCode" style="display:none;">
+                    <ul>
+                        <li><a href="/asynorder/user/web/UserOrderQueryAction?action=initTuanOrderQuery&amp;timePrior=90">我的团购</a></li>
+                        <li><a href="/portal/user/web/UserAccountAction?action=showUserFavoriteWare">我的收藏</a></li>
+                        
+                        <li><a href="/user/userLotteryInfoQuery.jsp">我的抽奖</a></li>
+                        
+                        <li id="showIntegralQuery" style=""><a href="/portal/user/web/UserBaseAction?action=queryUserJF">积分查询</a></li>
+						<li id="showDonateArea" style=""><a href="/portal/user/web/UserAccountAction?action=toTransferPoints">积分转赠</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li class="line"></li>
+            <li><div class="plr"><a href="javascript:headTopNavFuc('/asynorder/user/web/UserOrderQueryAction?action=initOrderQuery&amp;timePrior=30','WDDD');">我的订单</a></div></li>
+            <li class="line"></li>
+            <li class="sja">
+                <div class="plr sj-icon clearfix" id="sj-ip">
+                    <i class="sj-left fl"></i>
+                    <a href="javascript:;">手机版</a>
+                    <i class="sj-right fr"><s>◇</s></i>
+                </div>
+                <div class="twoCode" style="display:none;">
+                    <img src="/styles/default/images/ewm.png" />
+                    <div class="txt"><a href="javascript:phoneFuc('http://www.10086.cn/cmccclient/');">中国移动<br />手机营业厅</a></div>
+                </div>
+            </li>
+            <li class="line"></li>
+            <li class="listHover">
+                <div class="plr sj-icon" id="sj-fw">
+                    <a href="javascript:;">客户服务</a>
+                    <i class="sj-right fr"><s>◇</s></i>
+                </div>
+                <div class="threCode" style="display:none;">
+                    <ul>
+                        <li><a href="javascript:userHelpFuc('/help/100000000000016.html');">帮助中心</a></li><!--/help/100000000000016.html  -->
+                    </ul>
+                </div>
+            </li>
+            <li class="line"></li>
+            <li class="listHover">
+                <div class="plr sj-icon" id="sj-lr">
+                    <a href="javascript:;">网站导航</a>
+                    <i class="sj-right fr"><s>◇</s></i>
+                </div>
+                <div class="threCode" style="display:none;">
+                    <ul>
+                        <li><a href="javascript:netFunction('http://www.10086.cn');">中国移动首页</a></li>
+                        <li><a href="javascript:netFunction('http://shop.10086.cn');">移动商城</a></li>
+                        <li><a href="javascript:netFunction('http://mail.10086.cn?clientId=10717');">139邮箱</a></li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
+ 
+
+<!-- 用户信息栏end -->
+
+
+<!-- 广告栏1end -->
+<!-- 自动补全的文件 begin-->
+<script type="text/javascript" src="/scripts/yahoo-dom-event-min.js"></script>
+<script type="text/javascript" src="/scripts/suggest-min.js"></script>
+<script type="text/javascript" src="/scripts/jquery.autocomplete-min.js"></script>
+<!-- 自动补全的文件 end-->
+<!-- 搜索begin -->
+
+<div class="w1200 clearfix" style="position: relative; height:96px;margin-top:1px \0; border:1px solid #fff;">
+    
+
+ 
+<div class="logo fl">
+        <a class="fl" href="javascript:sendAndImgSign('MOB');"><img src="/styles/default/images/10086.jpg" alt="中国移动" /></a>
+        <div class="line fl"></div>
+        <a class="fl" href="javascript:sendAndImgSign('HJF');"><img src="/styles/default/images/andJF.jpg" alt="和积分" /></a>
+</div>
+<script type="text/javaScript">
+function sendAndImgSign(type){
+	var url = '';
+	switch(type){
+	 case 'MOB'://运营监控平台插码
+	        url="http://www.10086.cn/";
+			eventVesopera('JFPC_TOP_MOB');
+	 		break;
+	 case 'HJF'://和积分按钮
+	 		url=""+"/index.html";
+			addEventCode('JF_HJF');
+			//运营监控平台插码
+	 		eventVesopera('JFPC_TOP_HJF');
+	 		break;
+	}
+	window.location.href=url;
+}
+</script>
+    
+    
+      
+    
+    	
+    	
+    	<div class="search-in fl">
+    		<div class="fl">
+	        <i class="icon-bg"></i>
+	        <input type="text" id="wareName" name="wareName" maxlength="20" value="" autocomplete="off" class="ac_input" />
+        	</div>
+        	<a class="search fr" id="btn_search" onclick="doSearch(); return false;" href="javascript:void(0);">搜索</a>
+   		</div>
+    	
+    
+        
+    
+    <div class="cart-all fl">
+        <a href="javascript:goCart()">
+        <div class="shop-cart">
+            <i class="cj-left icon-bg"></i>
+            <i class="cj-right">&gt;</i>
+        	购物车
+        	<cite id="shop_count">0</cite>
+        </div> </a>
+        <div class="cart-hover">
+            <h2>最近加入的礼品</h2>
+            <div class="cart-dedailMains" id="dedailMains">
+            </div>
+            <div class="cart-bot">
+                <span class="price clearfix"><cite class="fl">共计 <i id="allPrice">¥0.00+0积分</i></cite>
+                <a class="white btn-radius3 fr marTR" href="javascript:goCart()">去购物车</a></span>
+            </div>
+        </div>
+    </div>
+    
+    
+    
+    	<div class="hot-search fl">热门搜索：
+        
+        
+        	<a class="purple" href="javascript:sendHotSearchSignForAnd('商城优选','http://jf.10086.cn/topics/100000000004902.html');">商城优选</a>
+        	
+        
+        
+        	<a href="http://jf.10086.cn/category/100000000004201_100000000010349_100000000010029.html">保温杯</a>
+        
+        
+        	<a href="http://jf.10086.cn/category/100000000005201_100000000006401_100000000006611.html">耳机</a>
+        
+        
+        	<a href="http://jf.10086.cn/category/100000000002801_100000000003001_100000000003212.html">电饭煲</a>
+        
+        
+        	<a href="http://jf.10086.cn/portal/ware/web/SearchWareAction?action=searchWareInfo&amp;wareName=%25E9%2594%2585">锅</a>
+        
+        
+        	<a href="http://jf.10086.cn/category/100000000014812_100000000014813_100000000014815.html">加湿器</a>
+        
+    	</div>
+        
+</div>
+<!-- 搜索end -->
+<!-- 页签begin -->
+
+	
+		
+			<div class="search_result_menu_box clearfix">
+			<div class="w1200">
+				<div class="search_result_menu_all fl">
+			   		<a class="dispalyblock clearfix" href="/ware/allClass.jsp"><span class="fl">全部礼品分类</span><i class="fr dispalyinlineblock menu_icon_up"></i></a>
+				    <!-- 全部商品分类begin -->   
+					<div class="p_focus-left">
+					
+						   		<div class="item">
+								
+									<h3>
+																							
+									<a href="javascript:void(0)" onclick="searchNaviWare('100000000000020','1','100000000000001','基础通信'); return false;">
+									基础通信</a>
+										
+										
+											<i>&gt;</i>
+										
+									
+									</h3>
+									<div class="p_item-list">
+									 <div class="subitem">
+									 
+											 <dl class="fore0 clearfix">
+										 		<dt><a href="javascript:void(0)" onclick="searchNaviWare('100000000000020','1','100000000000001','基础通信','100000000000020','1','100000000000002','基础通信'); return false;">基础通信</a></dt>
+												<dd class="clearfix">
+																						 
+				                            			 								 
+                            			 					<em><a href="javascript:void(0)" onclick="searchNaviWare('100000000000020','1','100000000000001','基础通信','100000000000020','1','100000000000002','基础通信','100000000000065','2','100000000000201','话费直充'); return false;">话费直充</a></em>
+                       					 									 
+																							 
+				                            			 								 
+                            			 					<em><a href="javascript:void(0)" onclick="searchNaviWare('100000000000020','1','100000000000001','基础通信','100000000000020','1','100000000000002','基础通信','100000000020065','2','100000000000202','流量包'); return false;">流量包</a></em>
+                       					 									 
+																							 
+				                            			 								 
+                            			 					<em><a href="javascript:void(0)" onclick="searchNaviWare('100000000000020','1','100000000000001','基础通信','100000000000020','1','100000000000002','基础通信','100000000820066','2','100000000000203','流量加油包'); return false;">流量加油包</a></em>
+                       					 									 
+																							 
+				                            			 								 
+                            			 					<em><a href="javascript:void(0)" onclick="searchNaviWare('100000000000020','1','100000000000001','基础通信','100000000000020','1','100000000000002','基础通信','100000001520068','2','100000000000204','短信包'); return false;">短信包</a></em>
+                       					 									 
+																							 
+				                            			 								 
+                            			 					<em><a href="javascript:void(0)" onclick="searchNaviWare('100000000000020','1','100000000000001','基础通信','100000000000020','1','100000000000002','基础通信','100000001520069','2','100000000000205','彩信包'); return false;">彩信包</a></em>
+                       					 									 
+																							 
+				                            			 								 
+                            			 					<em><a href="javascript:void(0)" onclick="searchNaviWare('100000000000020','1','100000000000001','基础通信','100000000000020','1','100000000000002','基础通信','100000003060066','2','100000000025612','任我看流量包'); return false;">任我看流量包</a></em>
+                       					 									 
+														
+												</dd>							
+											 </dl>
+											 
+										
+									 </div>
+									</div>
+								</div>
+								
+						   		<div class="item">
+								
+									<h3>
+																							
+									<a href="javascript:void(0)" onclick="searchNaviWare('100000000100032','1','100000000000401','咪咕娱乐'); return false;">
+									咪咕娱乐</a>
+										
+											、
+										
+										
+																							
+									<a href="javascript:void(0)" onclick="searchNaviWare('100000000020032','1','100000000010612','权益服务'); return false;">
+									权益服务</a>
+										
+										
+											<i>&gt;</i>
+										
+									
+									</h3>
+									<div class="p_item-list">
+									 <div class="subitem">
+									 
+											 <dl class="fore0 clearfix">
+										 		<dt><a href="javascript:void(0)" onclick="searchNaviWare('100000000100032','1','100000000000401','咪咕娱乐','100000000100032','1','100000000000402','咪咕娱乐'); return false;">咪咕娱乐</a></dt>
+												<dd class="clearfix">
+																						 
+				                            			 								 
+                            			 					<em><a href="javascript:void(0)" onclick="searchNaviWare('100000000100032','1','100000000000401','咪咕娱乐','100000000100032','1','100000000000402','咪咕娱乐','100000001940066','2','100000000000601','咪咕动漫'); return false;">咪咕动漫</a></em>
+                       					 									 
+																							 
+				                            			 								 
+                            			 					<em><a href="javascript:void(0)" onclick="searchNaviWare('100000000100032','1','100000000000401','咪咕娱乐','100000000100032','1','100000000000402','咪咕娱乐','100000001940067','2','100000000010814','咪咕阅读'); return false;">咪咕阅读</a></em>
+                       					 									 
+																							 
+				                            			 								 
+                            			 					<em><a href="javascript:void(0)" onclick="searchNaviWare('100000000100032','1','100000000000401','咪咕娱乐','100000000100032','1','100000000000402','咪咕娱乐','100000001940068','2','100000000010815','咪咕游戏'); return false;">咪咕游戏</a></em>
+                       					 									 
+																							 
+				                            			 								 
+                            			 					<em><a href="javascript:void(0)" onclick="searchNaviWare('100000000100032','1','100000000000401','咪咕娱乐','100000000100032','1','100000000000402','咪咕娱乐','100000001940070','2','100000000010816','咪咕视频'); return false;">咪咕视频</a></em>
+                       					 									 
+																							 
+				                            			 								 
+                            			 					<em><a href="javascript:void(0)" onclick="searchNaviWare('100000000100032','1','100000000000401','咪咕娱乐','100000000100032','1','100000000000402','咪咕娱乐','100000001940069','2','100000000011012','咪咕音乐'); return false;">咪咕音乐</a></em>
+                       					 									 
+																							 
+				                            			 								 
+                            			 					<em><a href="javascript:void(0)" onclick="searchNaviWare('100000000100032','1','100000000000401','咪咕娱乐','100000000100032','1','100000000000402','咪咕娱乐','100000000960066','2','100000000010613','飞信会员'); return false;">飞信会员</a></em>
+                       					 									 
+																							 
+				                            			 								 
+                            			 					<em><a href="javascript:void(0)" onclick="searchNaviWare('100000000100032','1','100000000000401','咪咕娱乐','100000000100032','1','100000000000402','咪咕娱乐','100000000960067','2','100000000010614','手机导航'); return false;">手机导航</a></em>
+                       					 									 
+																							 
+				                            			 								 
+                            			 					<em><a href="javascript:void(0)" onclick="searchNaviWare('100000000100032','1','100000000000401','咪咕娱乐','100000000100032','1','100000000000402','咪咕娱乐','100000000220065','2','100000000014212','手机报'); return false;">手机报</a></em>
+                       					 									 
+														
+												</dd>							
+											 </dl>
+											 
+										
+											 <dl class="fore0 clearfix">
+										 		<dt><a href="javascript:void(0)" onclick="searchNaviWare('100000000020032','1','100000000010612','权益服务','100000000020032','1','100000000010812','权益服务'); return false;">权益服务</a></dt>
+												<dd class="clearfix">
+																						 
+				                            			 								 
+                            			 					<em><a href="javascript:void(0)" onclick="searchNaviWare('100000000020032','1','100000000010612','权益服务','100000000020032','1','100000000010812','权益服务','100000000200065','2','100000000010615','俱乐部大讲堂'); return false;">俱乐部大讲堂</a></em>
+                       					 									 
+																							 
+				                            			 								 
+                            			 					<em><a href="javascript:void(0)" onclick="searchNaviWare('100000000020032','1','100000000010612','权益服务','100000000020032','1','100000000010812','权益服务','100000003180066','2','100000000026612','中国移动权益券'); return false;">中国移动权益券</a></em>
+                       					 									 
+														
+												</dd>							
+											 </dl>
+											 
+										
+									 </div>
+									</div>
+								</div>
+								
+						   		<div class="item">
+								
+									<h3>
+																							
+									<a href="javascript:void(0)" onclick="searchNaviWare('100000000800032','1','100000000000801','智能语音'); return false;">
+									智能语音</a>
+										
+											、
+										
+										
+																							
+									<a href="javascript:void(0)" onclick="searchNaviWare('http://jf.10086.cn/category/100000000010616_100000000010813_0.html','3','100000000010616','智能生活'); return false;">
+									智能生活</a>
+										
+										
+											<i>&gt;</i>
+										
+									
+									</h3>
+									<div class="p_item-list">
+									 <div class="subitem">
+									 
+											 <dl class="fore0 clearfix">
+										 		<dt><a href="javascript:void(0)" onclick="searchNaviWare('100000000800032','1','100000000000801','智能语音','100000000800032','1','100000000000802','智能语音'); return false;">智能语音</a></dt>
+												<dd class="clearfix">
+																						 
+				                            			 								 
+                            			 					<em><a href="javascript:void(0)" onclick="searchNaviWare('100000000800032','1','100000000000801','智能语音','100000000800032','1','100000000000802','智能语音','100000001960066','2','100000000002001','智能语音益智早教'); return false;">智能语音益智早教</a></em>
+                       					 									 
+																							 
+				                            			 								 
+                            			 					<em><a href="javascript:void(0)" onclick="searchNaviWare('100000000800032','1','100000000000801','智能语音','100000000800032','1','100000000000802','智能语音','100000001960068','2','100000000010617','智能语音数码电子'); return false;">智能语音数码电子</a></em>
+                       					 									 
+																							 
+				                            			 								 
+                            			 					<em><a href="javascript:void(0)" onclick="searchNaviWare('100000000800032','1','100000000000801','智能语音','100000000800032','1','100000000000802','智能语音','100000001960067','2','100000000011212','智能语音家居'); return false;">智能语音家居</a></em>
+                       					 									 
+														
+												</dd>							
+											 </dl>
+											 
+										
+											 <dl class="fore0 clearfix">
+										 		<dt><a href="javascript:void(0)" onclick="searchNaviWare('http://jf.10086.cn/category/100000000010616_100000000010813_0.html','3','100000000010616','智能生活','100000001640112','2','100000000010813','智能生活'); return false;">智能生活</a></dt>
+												<dd class="clearfix">
+																						 
+				                            			 								 
+                            			 					<em><a href="javascript:void(0)" onclick="searchNaviWare('http://jf.10086.cn/category/100000000010616_100000000010813_0.html','3','100000000010616','智能生活','100000001640112','2','100000000010813','智能生活','100000001640112','2','100000000010618','智能设备'); return false;">智能设备</a></em>
+                       					 									 
+														
+												</dd>							
+											 </dl>
+											 
+										
+									 </div>
+									</div>
+								</div>
+								
+						   		<div class="item">
+								
+									<h3>
+																							
+									<a href="javascript:void(0)" onclick="searchNaviWare('100000000000014,100000000880033','1','100000000002201','数字生活'); return false;">
+									数字生活</a>
+										
+											、
+										
+										
+																							
+									<a href="javascript:void(0)" onclick="searchNaviWare('100000000960032','1','100000000014612','票务'); return false;">
+									票务</a>
+										
+											、
+										
+										
+																							
+									<a href="javascript:void(0)" onclick="searchNaviWare('100000000900032','1','100000000016812','出行'); return false;">
+									出行</a>
+										
+										
+											<i>&gt;</i>
+										
+									
+									</h3>
+									<div class="p_item-list">
+									 <div class="subitem">
+									 
+											 <dl class="fore0 clearfix">
+										 		<dt><a href="javascript:void(0)" onclick="searchNaviWare('100000000000014,100000000880033','1','100000000002201','数字生活','100000000000014','1','100000000002401','数字礼品'); return false;">数字礼品</a></dt>
+												<dd class="clearfix">
+																						 
+				                            			 								 
+                            			 					<em><a href="javascript:void(0)" onclick="searchNaviWare('100000000000014,100000000880033','1','100000000002201','数字生活','100000000000014','1','100000000002401','数字礼品','100000000540065','2','100000000017814','视听'); return false;">视听</a></em>
+                       					 									 
+																							 
+				                            			 								 
+                            			 					<em><a href="javascript:void(0)" onclick="searchNaviWare('100000000000014,100000000880033','1','100000000002201','数字生活','100000000000014','1','100000000002401','数字礼品','100000000000047','2','100000000002602','游戏'); return false;">游戏</a></em>
+                       					 									 
+																							 
+				                            			 								 
+                            			 					<em><a href="javascript:void(0)" onclick="searchNaviWare('100000000000014,100000000880033','1','100000000002201','数字生活','100000000000014','1','100000000002401','数字礼品','100000000000046','2','100000000002601','软件'); return false;">软件</a></em>
+                       					 									 
+																							 
+				                            			 								 
+                            			 					<em><a href="javascript:void(0)" onclick="searchNaviWare('100000000000014,100000000880033','1','100000000002201','数字生活','100000000000014','1','100000000002401','数字礼品','100000002100066','2','100000000018213','电子书'); return false;">电子书</a></em>
+                       					 									 
+														
+												</dd>							
+											 </dl>
+											 
+											 <dl class="fore1 clearfix">
+										 		<dt><a href="javascript:void(0)" onclick="searchNaviWare('100000000000014,100000000880033','1','100000000002201','数字生活','100000000880033','1','100000000016012','移动社交'); return false;">移动社交</a></dt>
+												<dd class="clearfix">
+																						 
+				                            			 								 
+                            			 					<em><a href="javascript:void(0)" onclick="searchNaviWare('100000000000014,100000000880033','1','100000000002201','数字生活','100000000880033','1','100000000016012','移动社交','100000002200066','2','100000000016013','会员权益'); return false;">会员权益</a></em>
+                       					 									 
+														
+												</dd>							
+											 </dl>
+											 
+										
+											 <dl class="fore0 clearfix">
+										 		<dt><a href="javascript:void(0)" onclick="searchNaviWare('100000000960032','1','100000000014612','票务','100000000960032','1','100000000014613','票务'); return false;">票务</a></dt>
+												<dd class="clearfix">
+																						 
+				                            			 								 
+                            			 					<em><a href="javascript:void(0)" onclick="searchNaviWare('100000000960032','1','100000000014612','票务','100000000960032','1','100000000014613','票务','100000002840066','2','100000000014616','电影票'); return false;">电影票</a></em>
+                       					 									 
+																							 
+				                            			 								 
+                            			 					<em><a href="javascript:void(0)" onclick="searchNaviWare('100000000960032','1','100000000014612','票务','100000000960032','1','100000000014613','票务','100000002320066','2','100000000019012','票务平台'); return false;">票务平台</a></em>
+                       					 									 
+														
+												</dd>							
+											 </dl>
+											 
+										
+											 <dl class="fore0 clearfix">
+										 		<dt><a href="javascript:void(0)" onclick="searchNaviWare('100000000900032','1','100000000016812','出行','100000000900032','1','100000000016813','出行'); return false;">出行</a></dt>
+												<dd class="clearfix">
+																						 
+				                            			 								 
+                            			 					<em><a href="javascript:void(0)" onclick="searchNaviWare('100000000900032','1','100000000016812','出行','100000000900032','1','100000000016813','出行','100000002260066','2','100000000017012','在线约车'); return false;">在线约车</a></em>
+                       					 									 
+																							 
+				                            			 								 
+                            			 					<em><a href="javascript:void(0)" onclick="searchNaviWare('100000000900032','1','100000000016812','出行','100000000900032','1','100000000016813','出行','100000002740066','2','100000000020412','代驾服务'); return false;">代驾服务</a></em>
+                       					 									 
+																							 
+				                            			 								 
+                            			 					<em><a href="javascript:void(0)" onclick="searchNaviWare('100000000900032','1','100000000016812','出行','100000000900032','1','100000000016813','出行','100000002560066','2','100000000020012','共享单车'); return false;">共享单车</a></em>
+                       					 									 
+																							 
+				                            			 								 
+                            			 					<em><a href="javascript:void(0)" onclick="searchNaviWare('100000000900032','1','100000000016812','出行','100000000900032','1','100000000016813','出行','100000002660066','2','100000000021412','贵宾厅服务'); return false;">贵宾厅服务</a></em>
+                       					 									 
+																							 
+				                            			 								 
+                            			 					<em><a href="javascript:void(0)" onclick="searchNaviWare('100000000900032','1','100000000016812','出行','100000000900032','1','100000000016813','出行','100000002860066','2','100000000023412','酒店服务'); return false;">酒店服务</a></em>
+                       					 									 
+																							 
+				                            			 								 
+                            			 					<em><a href="javascript:void(0)" onclick="searchNaviWare('100000000900032','1','100000000016812','出行','100000000900032','1','100000000016813','出行','100000003160066','2','100000000027412','旅游平台'); return false;">旅游平台</a></em>
+                       					 									 
+														
+												</dd>							
+											 </dl>
+											 
+										
+									 </div>
+									</div>
+								</div>
+								
+						   		<div class="item">
+								
+									<h3>
+																							
+									<a href="javascript:void(0)" onclick="searchNaviWare('100000000000018','1','100000000001801','餐饮'); return false;">
+									餐饮</a>
+										
+											、
+										
+										
+																							
+									<a href="javascript:void(0)" onclick="searchNaviWare('100000000740032','1','100000000010085','商超'); return false;">
+									商超</a>
+										
+											、
+										
+										
+																							
+									<a href="javascript:void(0)" onclick="searchNaviWare('100000000720032','1','100000000021212','自助终端'); return false;">
+									自助终端</a>
+										
+										
+											<i>&gt;</i>
+										
+									
+									</h3>
+									<div class="p_item-list">
+									 <div class="subitem">
+									 
+											 <dl class="fore0 clearfix">
+										 		<dt><a href="javascript:void(0)" onclick="searchNaviWare('100000000000018','1','100000000001801','餐饮','100000000000018','1','100000000008401','餐饮'); return false;">餐饮</a></dt>
+												<dd class="clearfix">
+																						 
+				                            			 								 
+                            			 					<em><a href="javascript:void(0)" onclick="searchNaviWare('100000000000018','1','100000000001801','餐饮','100000000000018','1','100000000008401','餐饮','100000000000060','2','100000000008601','咖啡饮品'); return false;">咖啡饮品</a></em>
+                       					 									 
+																							 
+				                            			 								 
+                            			 					<em><a href="javascript:void(0)" onclick="searchNaviWare('100000000000018','1','100000000001801','餐饮','100000000000018','1','100000000008401','餐饮','100000000360065','2','100000000008602','休闲食品'); return false;">休闲食品</a></em>
+                       					 									 
+																							 
+				                            			 								 
+                            			 					<em><a href="javascript:void(0)" onclick="searchNaviWare('100000000000018','1','100000000001801','餐饮','100000000000018','1','100000000008401','餐饮','100000001120066','2','100000000008603','面包甜点'); return false;">面包甜点</a></em>
+                       					 									 
+																							 
+				                            			 								 
+                            			 					<em><a href="javascript:void(0)" onclick="searchNaviWare('100000000000018','1','100000000001801','餐饮','100000000000018','1','100000000008401','餐饮','100000001120067','2','100000000008604','快餐'); return false;">快餐</a></em>
+                       					 									 
+																							 
+				                            			 								 
+                            			 					<em><a href="javascript:void(0)" onclick="searchNaviWare('100000000000018','1','100000000001801','餐饮','100000000000018','1','100000000008401','餐饮','100000002520066','2','100000000019412','生鲜'); return false;">生鲜</a></em>
+                       					 									 
+																							 
+				                            			 								 
+                            			 					<em><a href="javascript:void(0)" onclick="searchNaviWare('100000000000018','1','100000000001801','餐饮','100000000000018','1','100000000008401','餐饮','100000000000059','2','100000000027212','外卖'); return false;">外卖</a></em>
+                       					 									 
+														
+												</dd>							
+											 </dl>
+											 
+										
+											 <dl class="fore0 clearfix">
+										 		<dt><a href="javascript:void(0)" onclick="searchNaviWare('100000000740032','1','100000000010085','商超','100000000740032','1','100000000010089','商超卖场'); return false;">商超卖场</a></dt>
+												<dd class="clearfix">
+																						 
+				                            			 								 
+                            			 					<em><a href="javascript:void(0)" onclick="searchNaviWare('100000000740032','1','100000000010085','商超','100000000740032','1','100000000010089','商超卖场','100000001760066','2','100000000010094','商超'); return false;">商超</a></em>
+                       					 									 
+																							 
+				                            			 								 
+                            			 					<em><a href="javascript:void(0)" onclick="searchNaviWare('100000000740032','1','100000000010085','商超','100000000740032','1','100000000010089','商超卖场','100000001920066','2','100000000012212','便利店'); return false;">便利店</a></em>
+                       					 									 
+																							 
+				                            			 								 
+                            			 					<em><a href="javascript:void(0)" onclick="searchNaviWare('100000000740032','1','100000000010085','商超','100000000740032','1','100000000010089','商超卖场','100000002700066','2','100000000021012','行业卖场'); return false;">行业卖场</a></em>
+                       					 									 
+														
+												</dd>							
+											 </dl>
+											 
+										
+											 <dl class="fore0 clearfix">
+										 		<dt><a href="javascript:void(0)" onclick="searchNaviWare('100000000720032','1','100000000021212','自助终端','100000000720032','1','100000000021213','自助终端'); return false;">自助终端</a></dt>
+												<dd class="clearfix">
+																						 
+				                            			 								 
+                            			 					<em><a href="javascript:void(0)" onclick="searchNaviWare('100000000720032','1','100000000021212','自助终端','100000000720032','1','100000000021213','自助终端','100000001700066','2','100000000021214','自助售货终端'); return false;">自助售货终端</a></em>
+                       					 									 
+														
+												</dd>							
+											 </dl>
+											 
+										
+									 </div>
+									</div>
+								</div>
+								
+						   		<div class="item">
+								
+									<h3>
+																							
+									<a href="javascript:void(0)" onclick="searchNaviWare('100000000300032','1','100000000014412','汽车服务'); return false;">
+									汽车服务</a>
+										
+											、
+										
+										
+																							
+									<a href="javascript:void(0)" onclick="searchNaviWare('100000000180032,100000000000015,100000000680032,100000001040032,100000001100032,100000001200032','1','100000000021013','生活服务'); return false;">
+									生活服务</a>
+										
+										
+											<i>&gt;</i>
+										
+									
+									</h3>
+									<div class="p_item-list">
+									 <div class="subitem">
+									 
+											 <dl class="fore0 clearfix">
+										 		<dt><a href="javascript:void(0)" onclick="searchNaviWare('100000000300032','1','100000000014412','汽车服务','100000000300032','1','100000000014414','汽车服务'); return false;">汽车服务</a></dt>
+												<dd class="clearfix">
+																						 
+				                            			 								 
+                            			 					<em><a href="javascript:void(0)" onclick="searchNaviWare('100000000300032','1','100000000014412','汽车服务','100000000300032','1','100000000014414','汽车服务','100000002120066','2','100000000014614','洗车保养'); return false;">洗车保养</a></em>
+                       					 									 
+																							 
+				                            			 								 
+                            			 					<em><a href="javascript:void(0)" onclick="searchNaviWare('100000000300032','1','100000000014412','汽车服务','100000000300032','1','100000000014414','汽车服务','100000002380067','2','100000000018012','违章代缴'); return false;">违章代缴</a></em>
+                       					 									 
+																							 
+				                            			 								 
+                            			 					<em><a href="javascript:void(0)" onclick="searchNaviWare('100000000300032','1','100000000014412','汽车服务','100000000300032','1','100000000014414','汽车服务','100000000760066','2','100000000023812','车主服务'); return false;">车主服务</a></em>
+                       					 									 
+														
+												</dd>							
+											 </dl>
+											 
+										
+											 <dl class="fore0 clearfix">
+										 		<dt><a href="javascript:void(0)" onclick="searchNaviWare('100000000180032,100000000000015,100000000680032,100000001040032,100000001100032,100000001200032','1','100000000021013','生活服务','100000001040032','1','100000000021816','便民服务'); return false;">便民服务</a></dt>
+												<dd class="clearfix">
+																						 
+				                            			 								 
+                            			 					<em><a href="javascript:void(0)" onclick="searchNaviWare('100000000180032,100000000000015,100000000680032,100000001040032,100000001100032,100000001200032','1','100000000021013','生活服务','100000001040032','1','100000000021816','便民服务','100000002760066','2','100000000022213','社区便民'); return false;">社区便民</a></em>
+                       					 									 
+														
+												</dd>							
+											 </dl>
+											 
+											 <dl class="fore1 clearfix">
+										 		<dt><a href="javascript:void(0)" onclick="searchNaviWare('100000000180032,100000000000015,100000000680032,100000001040032,100000001100032,100000001200032','1','100000000021013','生活服务','100000001100032','1','100000000021812','洗护服务'); return false;">洗护服务</a></dt>
+												<dd class="clearfix">
+																						 
+				                            			 								 
+                            			 					<em><a href="javascript:void(0)" onclick="searchNaviWare('100000000180032,100000000000015,100000000680032,100000001040032,100000001100032,100000001200032','1','100000000021013','生活服务','100000001100032','1','100000000021812','洗护服务','100000002740067','2','100000000022012','洗护服务'); return false;">洗护服务</a></em>
+                       					 									 
+														
+												</dd>							
+											 </dl>
+											 
+											 <dl class="fore2 clearfix">
+										 		<dt><a href="javascript:void(0)" onclick="searchNaviWare('100000000180032,100000000000015,100000000680032,100000001040032,100000001100032,100000001200032','1','100000000021013','生活服务','100000000180032','1','100000000021813','教育培训'); return false;">教育培训</a></dt>
+												<dd class="clearfix">
+																						 
+				                            			 								 
+                            			 					<em><a href="javascript:void(0)" onclick="searchNaviWare('100000000180032,100000000000015,100000000680032,100000001040032,100000001100032,100000001200032','1','100000000021013','生活服务','100000000180032','1','100000000021813','教育培训','100000002620066','2','100000000022014','语言培训'); return false;">语言培训</a></em>
+                       					 									 
+																							 
+				                            			 								 
+                            			 					<em><a href="javascript:void(0)" onclick="searchNaviWare('100000000180032,100000000000015,100000000680032,100000001040032,100000001100032,100000001200032','1','100000000021013','生活服务','100000000180032','1','100000000021813','教育培训','100000000460065','2','100000000022013','兴趣爱好'); return false;">兴趣爱好</a></em>
+                       					 									 
+																							 
+				                            			 								 
+                            			 					<em><a href="javascript:void(0)" onclick="searchNaviWare('100000000180032,100000000000015,100000000680032,100000001040032,100000001100032,100000001200032','1','100000000021013','生活服务','100000000180032','1','100000000021813','教育培训','100000002900070','2','100000000022015','综合培训'); return false;">综合培训</a></em>
+                       					 									 
+																							 
+				                            			 								 
+                            			 					<em><a href="javascript:void(0)" onclick="searchNaviWare('100000000180032,100000000000015,100000000680032,100000001040032,100000001100032,100000001200032','1','100000000021013','生活服务','100000000180032','1','100000000021813','教育培训','100000002900071','2','100000000022016','学校教育'); return false;">学校教育</a></em>
+                       					 									 
+																							 
+				                            			 								 
+                            			 					<em><a href="javascript:void(0)" onclick="searchNaviWare('100000000180032,100000000000015,100000000680032,100000001040032,100000001100032,100000001200032','1','100000000021013','生活服务','100000000180032','1','100000000021813','教育培训','100000002980066','2','100000000024012','教育资讯'); return false;">教育资讯</a></em>
+                       					 									 
+																							 
+				                            			 								 
+                            			 					<em><a href="javascript:void(0)" onclick="searchNaviWare('100000000180032,100000000000015,100000000680032,100000001040032,100000001100032,100000001200032','1','100000000021013','生活服务','100000000180032','1','100000000021813','教育培训','100000002900068','2','100000000026012','早教幼教'); return false;">早教幼教</a></em>
+                       					 									 
+														
+												</dd>							
+											 </dl>
+											 
+											 <dl class="fore3 clearfix">
+										 		<dt><a href="javascript:void(0)" onclick="searchNaviWare('100000000180032,100000000000015,100000000680032,100000001040032,100000001100032,100000001200032','1','100000000021013','生活服务','100000000000015','1','100000000021815','运动健康'); return false;">运动健康</a></dt>
+												<dd class="clearfix">
+																						 
+				                            			 								 
+                            			 					<em><a href="javascript:void(0)" onclick="searchNaviWare('100000000180032,100000000000015,100000000680032,100000001040032,100000001100032,100000001200032','1','100000000021013','生活服务','100000000000015','1','100000000021815','运动健康','100000000000048','2','100000000022019','体检服务'); return false;">体检服务</a></em>
+                       					 									 
+																							 
+				                            			 								 
+                            			 					<em><a href="javascript:void(0)" onclick="searchNaviWare('100000000180032,100000000000015,100000000680032,100000001040032,100000001100032,100000001200032','1','100000000021013','生活服务','100000000000015','1','100000000021815','运动健康','100000001880066','2','100000000024013','口腔护理'); return false;">口腔护理</a></em>
+                       					 									 
+																							 
+				                            			 								 
+                            			 					<em><a href="javascript:void(0)" onclick="searchNaviWare('100000000180032,100000000000015,100000000680032,100000001040032,100000001100032,100000001200032','1','100000000021013','生活服务','100000000000015','1','100000000021815','运动健康','100000003200066','2','100000000026812','户外健身'); return false;">户外健身</a></em>
+                       					 									 
+														
+												</dd>							
+											 </dl>
+											 
+											 <dl class="fore4 clearfix">
+										 		<dt><a href="javascript:void(0)" onclick="searchNaviWare('100000000180032,100000000000015,100000000680032,100000001040032,100000001100032,100000001200032','1','100000000021013','生活服务','100000000680032','1','100000000021814','休闲娱乐'); return false;">休闲娱乐</a></dt>
+												<dd class="clearfix">
+																						 
+				                            			 								 
+                            			 					<em><a href="javascript:void(0)" onclick="searchNaviWare('100000000180032,100000000000015,100000000680032,100000001040032,100000001100032,100000001200032','1','100000000021013','生活服务','100000000680032','1','100000000021814','休闲娱乐','100000002500066','2','100000000022017','亲子服务'); return false;">亲子服务</a></em>
+                       					 									 
+																							 
+				                            			 								 
+                            			 					<em><a href="javascript:void(0)" onclick="searchNaviWare('100000000180032,100000000000015,100000000680032,100000001040032,100000001100032,100000001200032','1','100000000021013','生活服务','100000000680032','1','100000000021814','休闲娱乐','100000002900072','2','100000000022018','花卉服务'); return false;">花卉服务</a></em>
+                       					 									 
+																							 
+				                            			 								 
+                            			 					<em><a href="javascript:void(0)" onclick="searchNaviWare('100000000180032,100000000000015,100000000680032,100000001040032,100000001100032,100000001200032','1','100000000021013','生活服务','100000000680032','1','100000000021814','休闲娱乐','100000001600066','2','100000000026412','照片冲印'); return false;">照片冲印</a></em>
+                       					 									 
+																							 
+				                            			 								 
+                            			 					<em><a href="javascript:void(0)" onclick="searchNaviWare('100000000180032,100000000000015,100000000680032,100000001040032,100000001100032,100000001200032','1','100000000021013','生活服务','100000000680032','1','100000000021814','休闲娱乐','100000003220066','2','100000000028012','美容保健'); return false;">美容保健</a></em>
+                       					 									 
+														
+												</dd>							
+											 </dl>
+											 
+											 <dl class="fore5 clearfix">
+										 		<dt><a href="javascript:void(0)" onclick="searchNaviWare('100000000180032,100000000000015,100000000680032,100000001040032,100000001100032,100000001200032','1','100000000021013','生活服务','100000001200032','1','100000000021014','快递配送'); return false;">快递配送</a></dt>
+												<dd class="clearfix">
+																						 
+				                            			 								 
+                            			 					<em><a href="javascript:void(0)" onclick="searchNaviWare('100000000180032,100000000000015,100000000680032,100000001040032,100000001100032,100000001200032','1','100000000021013','生活服务','100000001200032','1','100000000021014','快递配送','100000002940066','2','100000000021015','快递配送'); return false;">快递配送</a></em>
+                       					 									 
+														
+												</dd>							
+											 </dl>
+											 
+											 <dl class="fore6 clearfix">
+										 		<dt><a href="javascript:void(0)" onclick="searchNaviWare('100000000180032,100000000000015,100000000680032,100000001040032,100000001100032,100000001200032','1','100000000021013','生活服务','100000001000032','1','100000000024412','手机保障'); return false;">手机保障</a></dt>
+												<dd class="clearfix">
+																						 
+				                            			 								 
+                            			 					<em><a href="javascript:void(0)" onclick="searchNaviWare('100000000180032,100000000000015,100000000680032,100000001040032,100000001100032,100000001200032','1','100000000021013','生活服务','100000001000032','1','100000000024412','手机保障','100000002360066','2','100000000024612','手机保障'); return false;">手机保障</a></em>
+                       					 									 
+														
+												</dd>							
+											 </dl>
+											 
+										
+									 </div>
+									</div>
+								</div>
+								
+						   		<div class="item">
+								
+									<h3>
+																							
+									<a href="javascript:void(0)" onclick="searchNaviWare('100000000940032','1','100000000025212','电商'); return false;">
+									电商</a>
+										
+											、
+										
+										
+																							
+									<a href="javascript:void(0)" onclick="searchNaviWare('100000000520032','1','100000000025213','彩票'); return false;">
+									彩票</a>
+										
+										
+											<i>&gt;</i>
+										
+									
+									</h3>
+									<div class="p_item-list">
+									 <div class="subitem">
+									 
+											 <dl class="fore0 clearfix">
+										 		<dt><a href="javascript:void(0)" onclick="searchNaviWare('100000000940032','1','100000000025212','电商','100000000940032','1','100000000025412','电商'); return false;">电商</a></dt>
+												<dd class="clearfix">
+																						 
+				                            			 								 
+                            			 					<em><a href="javascript:void(0)" onclick="searchNaviWare('100000000940032','1','100000000025212','电商','100000000940032','1','100000000025412','电商','100000002920066','2','100000000025214','综合'); return false;">综合</a></em>
+                       					 									 
+																							 
+				                            			 								 
+                            			 					<em><a href="javascript:void(0)" onclick="searchNaviWare('100000000940032','1','100000000025212','电商','100000000940032','1','100000000025412','电商','100000002280067','2','100000000025414','生鲜果蔬'); return false;">生鲜果蔬</a></em>
+                       					 									 
+																							 
+				                            			 								 
+                            			 					<em><a href="javascript:void(0)" onclick="searchNaviWare('100000000940032','1','100000000025212','电商','100000000940032','1','100000000025412','电商','100000003080066','2','100000000025812','珠宝饰品'); return false;">珠宝饰品</a></em>
+                       					 									 
+																							 
+				                            			 								 
+                            			 					<em><a href="javascript:void(0)" onclick="searchNaviWare('100000000940032','1','100000000025212','电商','100000000940032','1','100000000025412','电商','100000002580066','2','100000000026212','家居清洁'); return false;">家居清洁</a></em>
+                       					 									 
+																							 
+				                            			 								 
+                            			 					<em><a href="javascript:void(0)" onclick="searchNaviWare('100000000940032','1','100000000025212','电商','100000000940032','1','100000000025412','电商','100000002900067','2','100000000027012','茶酒'); return false;">茶酒</a></em>
+                       					 									 
+																							 
+				                            			 								 
+                            			 					<em><a href="javascript:void(0)" onclick="searchNaviWare('100000000940032','1','100000000025212','电商','100000000940032','1','100000000025412','电商','100000003240066','2','100000000027613','服装鞋帽'); return false;">服装鞋帽</a></em>
+                       					 									 
+																							 
+				                            			 								 
+                            			 					<em><a href="javascript:void(0)" onclick="searchNaviWare('100000000940032','1','100000000025212','电商','100000000940032','1','100000000025412','电商','100000002900066','2','100000000027812','母婴'); return false;">母婴</a></em>
+                       					 									 
+																							 
+				                            			 								 
+                            			 					<em><a href="javascript:void(0)" onclick="searchNaviWare('100000000940032','1','100000000025212','电商','100000000940032','1','100000000025412','电商','100000003300066','2','100000000028212','短租'); return false;">短租</a></em>
+                       					 									 
+																							 
+				                            			 								 
+                            			 					<em><a href="javascript:void(0)" onclick="searchNaviWare('100000000940032','1','100000000025212','电商','100000000940032','1','100000000025412','电商','100000002920068','2','100000000028612','旅游'); return false;">旅游</a></em>
+                       					 									 
+														
+												</dd>							
+											 </dl>
+											 
+										
+											 <dl class="fore0 clearfix">
+										 		<dt><a href="javascript:void(0)" onclick="searchNaviWare('100000000520032','1','100000000025213','彩票','100000000520032','1','100000000025413','彩票'); return false;">彩票</a></dt>
+												<dd class="clearfix">
+																						 
+				                            			 								 
+                            			 					<em><a href="javascript:void(0)" onclick="searchNaviWare('100000000520032','1','100000000025213','彩票','100000000520032','1','100000000025413','彩票','100000001360066','2','100000000025215','福利彩票'); return false;">福利彩票</a></em>
+                       					 									 
+														
+												</dd>							
+											 </dl>
+											 
+										
+									 </div>
+									</div>
+								</div>
+								
+						   		<div class="item">
+								
+									<h3>
+																							
+									<a href="javascript:void(0)" onclick="searchNaviWare('100000000700034','1','100000000002801','厨房电器'); return false;">
+									厨房电器</a>
+										
+											、
+										
+										
+																							
+									<a href="javascript:void(0)" onclick="searchNaviWare('100000000700032','1','100000000014812','生活电器'); return false;">
+									生活电器</a>
+										
+										
+											<i>&gt;</i>
+										
+									
+									</h3>
+									<div class="p_item-list">
+									 <div class="subitem">
+									 
+											 <dl class="fore0 clearfix">
+										 		<dt><a href="javascript:void(0)" onclick="searchNaviWare('100000000700034','1','100000000002801','厨房电器','100000000700034','1','100000000003001','厨房电器'); return false;">厨房电器</a></dt>
+												<dd class="clearfix">
+																						 
+				                            			 								 
+                            			 					<em><a href="javascript:void(0)" onclick="searchNaviWare('100000000700034','1','100000000002801','厨房电器','100000000700034','1','100000000003001','厨房电器','100000001640085','2','100000000003201','压力锅'); return false;">压力锅</a></em>
+                       					 									 
+																							 
+				                            			 								 
+                            			 					<em><a href="javascript:void(0)" onclick="searchNaviWare('100000000700034','1','100000000002801','厨房电器','100000000700034','1','100000000003001','厨房电器','100000001640087','2','100000000003202','面包机'); return false;">面包机</a></em>
+                       					 									 
+																							 
+				                            			 								 
+                            			 					<em><a href="javascript:void(0)" onclick="searchNaviWare('100000000700034','1','100000000002801','厨房电器','100000000700034','1','100000000003001','厨房电器','100000001640088','2','100000000003203','电饼铛/煎烤机'); return false;">电饼铛/煎烤机</a></em>
+                       					 									 
+																							 
+				                            			 								 
+                            			 					<em><a href="javascript:void(0)" onclick="searchNaviWare('100000000700034','1','100000000002801','厨房电器','100000000700034','1','100000000003001','厨房电器','100000001640090','2','100000000003204','电烤箱'); return false;">电烤箱</a></em>
+                       					 									 
+																							 
+				                            			 								 
+                            			 					<em><a href="javascript:void(0)" onclick="searchNaviWare('100000000700034','1','100000000002801','厨房电器','100000000700034','1','100000000003001','厨房电器','100000001640093','2','100000000003205','多用途锅'); return false;">多用途锅</a></em>
+                       					 									 
+																							 
+				                            			 								 
+                            			 					<em><a href="javascript:void(0)" onclick="searchNaviWare('100000000700034','1','100000000002801','厨房电器','100000000700034','1','100000000003001','厨房电器','100000001640091','2','100000000003217','电炖锅/电火锅'); return false;">电炖锅/电火锅</a></em>
+                       					 									 
+																							 
+				                            			 								 
+                            			 					<em><a href="javascript:void(0)" onclick="searchNaviWare('100000000700034','1','100000000002801','厨房电器','100000000700034','1','100000000003001','厨房电器','100000001640096','2','100000000003207','豆浆机'); return false;">豆浆机</a></em>
+                       					 									 
+																							 
+				                            			 								 
+                            			 					<em><a href="javascript:void(0)" onclick="searchNaviWare('100000000700034','1','100000000002801','厨房电器','100000000700034','1','100000000003001','厨房电器','100000001640099','2','100000000003208','咖啡机'); return false;">咖啡机</a></em>
+                       					 									 
+																							 
+				                            			 								 
+                            			 					<em><a href="javascript:void(0)" onclick="searchNaviWare('100000000700034','1','100000000002801','厨房电器','100000000700034','1','100000000003001','厨房电器','100000001640089','2','100000000003210','微波炉'); return false;">微波炉</a></em>
+                       					 									 
+																							 
+				                            			 								 
+                            			 					<em><a href="javascript:void(0)" onclick="searchNaviWare('100000000700034','1','100000000002801','厨房电器','100000000700034','1','100000000003001','厨房电器','100000001640092','2','100000000003211','煮蛋器'); return false;">煮蛋器</a></em>
+                       					 									 
+																							 
+				                            			 								 
+                            			 					<em><a href="javascript:void(0)" onclick="searchNaviWare('100000000700034','1','100000000002801','厨房电器','100000000700034','1','100000000003001','厨房电器','100000001640084','2','100000000003212','电饭煲'); return false;">电饭煲</a></em>
+                       					 									 
+																							 
+				                            			 								 
+                            			 					<em><a href="javascript:void(0)" onclick="searchNaviWare('100000000700034','1','100000000002801','厨房电器','100000000700034','1','100000000003001','厨房电器','100000001640086','2','100000000003213','电磁炉'); return false;">电磁炉</a></em>
+                       					 									 
+																							 
+				                            			 								 
+                            			 					<em><a href="javascript:void(0)" onclick="searchNaviWare('100000000700034','1','100000000002801','厨房电器','100000000700034','1','100000000003001','厨房电器','100000001640094','2','100000000003214','电热饭盒'); return false;">电热饭盒</a></em>
+                       					 									 
+																							 
+				                            			 								 
+                            			 					<em><a href="javascript:void(0)" onclick="searchNaviWare('100000000700034','1','100000000002801','厨房电器','100000000700034','1','100000000003001','厨房电器','100000001640098','2','100000000003215','酸奶机'); return false;">酸奶机</a></em>
+                       					 									 
+																							 
+				                            			 								 
+                            			 					<em><a href="javascript:void(0)" onclick="searchNaviWare('100000000700034','1','100000000002801','厨房电器','100000000700034','1','100000000003001','厨房电器','100000001640101','2','100000000003216','研磨机'); return false;">研磨机</a></em>
+                       					 									 
+																							 
+				                            			 								 
+                            			 					<em><a href="javascript:void(0)" onclick="searchNaviWare('100000000700034','1','100000000002801','厨房电器','100000000700034','1','100000000003001','厨房电器','100000001640097','2','100000000003218','榨汁机/料理机'); return false;">榨汁机/料理机</a></em>
+                       					 									 
+																							 
+				                            			 								 
+                            			 					<em><a href="javascript:void(0)" onclick="searchNaviWare('100000000700034','1','100000000002801','厨房电器','100000000700034','1','100000000003001','厨房电器','100000001640095','2','100000000003206','厨房电器其他'); return false;">厨房电器其他</a></em>
+                       					 									 
+														
+												</dd>							
+											 </dl>
+											 
+											 <dl class="fore1 clearfix">
+										 		<dt><a href="javascript:void(0)" onclick="searchNaviWare('100000000700034','1','100000000002801','厨房电器','100000000700033','1','100000000010383','个人护理'); return false;">个人护理</a></dt>
+												<dd class="clearfix">
+																						 
+				                            			 								 
+                            			 					<em><a href="javascript:void(0)" onclick="searchNaviWare('100000000700034','1','100000000002801','厨房电器','100000000700033','1','100000000010383','个人护理','100000001640081','2','100000000010071','剃须刀'); return false;">剃须刀</a></em>
+                       					 									 
+																							 
+				                            			 								 
+                            			 					<em><a href="javascript:void(0)" onclick="searchNaviWare('100000000700034','1','100000000002801','厨房电器','100000000700033','1','100000000010383','个人护理','100000001640082','2','100000000010072','理发器'); return false;">理发器</a></em>
+                       					 									 
+																							 
+				                            			 								 
+                            			 					<em><a href="javascript:void(0)" onclick="searchNaviWare('100000000700034','1','100000000002801','厨房电器','100000000700033','1','100000000010383','个人护理','100000001640077','2','100000000010073','口腔护理'); return false;">口腔护理</a></em>
+                       					 									 
+																							 
+				                            			 								 
+                            			 					<em><a href="javascript:void(0)" onclick="searchNaviWare('100000000700034','1','100000000002801','厨房电器','100000000700033','1','100000000010383','个人护理','100000001640079','2','100000000010076','电吹风'); return false;">电吹风</a></em>
+                       					 									 
+																							 
+				                            			 								 
+                            			 					<em><a href="javascript:void(0)" onclick="searchNaviWare('100000000700034','1','100000000002801','厨房电器','100000000700033','1','100000000010383','个人护理','100000001640078','2','100000000010075','美容美发'); return false;">美容美发</a></em>
+                       					 									 
+																							 
+				                            			 								 
+                            			 					<em><a href="javascript:void(0)" onclick="searchNaviWare('100000000700034','1','100000000002801','厨房电器','100000000700033','1','100000000010383','个人护理','100000001640080','2','100000000010077','剃/脱毛器'); return false;">剃/脱毛器</a></em>
+                       					 									 
+																							 
+				                            			 								 
+                            			 					<em><a href="javascript:void(0)" onclick="searchNaviWare('100000000700034','1','100000000002801','厨房电器','100000000700033','1','100000000010383','个人护理','100000001640083','2','100000000010074','个人护理其他'); return false;">个人护理其他</a></em>
+                       					 									 
+														
+												</dd>							
+											 </dl>
+											 
+										
+											 <dl class="fore0 clearfix">
+										 		<dt><a href="javascript:void(0)" onclick="searchNaviWare('100000000700032','1','100000000014812','生活电器','100000000700032','1','100000000014813','生活电器'); return false;">生活电器</a></dt>
+												<dd class="clearfix">
+																						 
+				                            			 								 
+                            			 					<em><a href="javascript:void(0)" onclick="searchNaviWare('100000000700032','1','100000000014812','生活电器','100000000700032','1','100000000014813','生活电器','100000001640071','2','100000000014814','挂烫机/熨斗'); return false;">挂烫机/熨斗</a></em>
+                       					 									 
+																							 
+				                            			 								 
+                            			 					<em><a href="javascript:void(0)" onclick="searchNaviWare('100000000700032','1','100000000014812','生活电器','100000000700032','1','100000000014813','生活电器','100000001640067','2','100000000014815','加湿器'); return false;">加湿器</a></em>
+                       					 									 
+																							 
+				                            			 								 
+                            			 					<em><a href="javascript:void(0)" onclick="searchNaviWare('100000000700032','1','100000000014812','生活电器','100000000700032','1','100000000014813','生活电器','100000001640069','2','100000000014816','除湿/干衣机'); return false;">除湿/干衣机</a></em>
+                       					 									 
+																							 
+				                            			 								 
+                            			 					<em><a href="javascript:void(0)" onclick="searchNaviWare('100000000700032','1','100000000014812','生活电器','100000000700032','1','100000000014813','生活电器','100000001640070','2','100000000014817','电话机'); return false;">电话机</a></em>
+                       					 									 
+																							 
+				                            			 								 
+                            			 					<em><a href="javascript:void(0)" onclick="searchNaviWare('100000000700032','1','100000000014812','生活电器','100000000700032','1','100000000014813','生活电器','100000001640066','2','100000000014818','取暖制冷'); return false;">取暖制冷</a></em>
+                       					 									 
+																							 
+				                            			 								 
+                            			 					<em><a href="javascript:void(0)" onclick="searchNaviWare('100000000700032','1','100000000014812','生活电器','100000000700032','1','100000000014813','生活电器','100000001640068','2','100000000014819','清洁净化'); return false;">清洁净化</a></em>
+                       					 									 
+																							 
+				                            			 								 
+                            			 					<em><a href="javascript:void(0)" onclick="searchNaviWare('100000000700032','1','100000000014812','生活电器','100000000700032','1','100000000014813','生活电器','100000001640072','2','100000000014820','收音/录音机'); return false;">收音/录音机</a></em>
+                       					 									 
+																							 
+				                            			 								 
+                            			 					<em><a href="javascript:void(0)" onclick="searchNaviWare('100000000700032','1','100000000014812','生活电器','100000000700032','1','100000000014813','生活电器','100000001640075','2','100000000014821','大家电'); return false;">大家电</a></em>
+                       					 									 
+																							 
+				                            			 								 
+                            			 					<em><a href="javascript:void(0)" onclick="searchNaviWare('100000000700032','1','100000000014812','生活电器','100000000700032','1','100000000014813','生活电器','100000001640073','2','100000000014822','毛球修剪器'); return false;">毛球修剪器</a></em>
+                       					 									 
+																							 
+				                            			 								 
+                            			 					<em><a href="javascript:void(0)" onclick="searchNaviWare('100000000700032','1','100000000014812','生活电器','100000000700032','1','100000000014813','生活电器','100000001640074','2','100000000014823','饮水净水'); return false;">饮水净水</a></em>
+                       					 									 
+																							 
+				                            			 								 
+                            			 					<em><a href="javascript:void(0)" onclick="searchNaviWare('100000000700032','1','100000000014812','生活电器','100000000700032','1','100000000014813','生活电器','100000001640076','2','100000000014824','电水壶'); return false;">电水壶</a></em>
+                       					 									 
+																							 
+				                            			 								 
+                            			 					<em><a href="javascript:void(0)" onclick="searchNaviWare('100000000700032','1','100000000014812','生活电器','100000000700032','1','100000000014813','生活电器','100000001660066','2','100000000014825','生活电器其他'); return false;">生活电器其他</a></em>
+                       					 									 
+														
+												</dd>							
+											 </dl>
+											 
+										
+									 </div>
+									</div>
+								</div>
+								
+						   		<div class="item">
+								
+									<h3>
+																							
+									<a href="javascript:void(0)" onclick="searchNaviWare('100000000700037','1','100000000004201','家居'); return false;">
+									家居</a>
+										
+											、
+										
+										
+																							
+									<a href="javascript:void(0)" onclick="searchNaviWare('100000000700040','1','100000000004202','家纺'); return false;">
+									家纺</a>
+										
+											、
+										
+										
+																							
+									<a href="javascript:void(0)" onclick="searchNaviWare('100000000700043','1','100000000004203','家装'); return false;">
+									家装</a>
+										
+											、
+										
+										
+																							
+									<a href="javascript:void(0)" onclick="searchNaviWare('100000000700038','1','100000000004204','厨具'); return false;">
+									厨具</a>
+										
+										
+											<i>&gt;</i>
+										
+									
+									</h3>
+									<div class="p_item-list">
+									 <div class="subitem">
+									 
+											 <dl class="fore0 clearfix">
+										 		<dt><a href="javascript:void(0)" onclick="searchNaviWare('100000000700037','1','100000000004201','家居','100000000700037','1','100000000004401','家居日用'); return false;">家居日用</a></dt>
+												<dd class="clearfix">
+																						 
+				                            			 								 
+                            			 					<em><a href="javascript:void(0)" onclick="searchNaviWare('100000000700037','1','100000000004201','家居','100000000700037','1','100000000004401','家居日用','100000001640129','2','100000000004602','口罩/耳塞/眼罩'); return false;">口罩/耳塞/眼罩</a></em>
+                       					 									 
+																							 
+				                            			 								 
+                            			 					<em><a href="javascript:void(0)" onclick="searchNaviWare('100000000700037','1','100000000004201','家居','100000000700037','1','100000000004401','家居日用','100000001640130','2','100000000004603','劳保防护'); return false;">劳保防护</a></em>
+                       					 									 
+																							 
+				                            			 								 
+                            			 					<em><a href="javascript:void(0)" onclick="searchNaviWare('100000000700037','1','100000000004201','家居','100000000700037','1','100000000004401','家居日用','100000001640125','2','100000000004605','整理收纳'); return false;">整理收纳</a></em>
+                       					 									 
+																							 
+				                            			 								 
+                            			 					<em><a href="javascript:void(0)" onclick="searchNaviWare('100000000700037','1','100000000004201','家居','100000000700037','1','100000000004401','家居日用','100000001640126','2','100000000004606','清洁护理'); return false;">清洁护理</a></em>
+                       					 									 
+																							 
+				                            			 								 
+                            			 					<em><a href="javascript:void(0)" onclick="searchNaviWare('100000000700037','1','100000000004201','家居','100000000700037','1','100000000004401','家居日用','100000001640133','2','100000000004607','雨伞雨衣'); return false;">雨伞雨衣</a></em>
+                       					 									 
+																							 
+				                            			 								 
+                            			 					<em><a href="javascript:void(0)" onclick="searchNaviWare('100000000700037','1','100000000004201','家居','100000000700037','1','100000000004401','家居日用','100000001640128','2','100000000004608','婚庆/节庆用品'); return false;">婚庆/节庆用品</a></em>
+                       					 									 
+																							 
+				                            			 								 
+                            			 					<em><a href="javascript:void(0)" onclick="searchNaviWare('100000000700037','1','100000000004201','家居','100000000700037','1','100000000004401','家居日用','100000001640131','2','100000000004609','取暖/降温'); return false;">取暖/降温</a></em>
+                       					 									 
+																							 
+				                            			 								 
+                            			 					<em><a href="javascript:void(0)" onclick="searchNaviWare('100000000700037','1','100000000004201','家居','100000000700037','1','100000000004401','家居日用','100000001640132','2','100000000004610','洗晒/熨烫'); return false;">洗晒/熨烫</a></em>
+                       					 									 
+																							 
+				                            			 								 
+                            			 					<em><a href="javascript:void(0)" onclick="searchNaviWare('100000000700037','1','100000000004201','家居','100000000700037','1','100000000004401','家居日用','100000001640134','2','100000000004604','家居日用其他'); return false;">家居日用其他</a></em>
+                       					 									 
+														
+												</dd>							
+											 </dl>
+											 
+											 <dl class="fore1 clearfix">
+										 		<dt><a href="javascript:void(0)" onclick="searchNaviWare('100000000700037','1','100000000004201','家居','100000000700039','1','100000000010349','水杯/茶具/酒具'); return false;">水杯/茶具/酒具</a></dt>
+												<dd class="clearfix">
+																						 
+				                            			 								 
+                            			 					<em><a href="javascript:void(0)" onclick="searchNaviWare('100000000700037','1','100000000004201','家居','100000000700039','1','100000000010349','水杯/茶具/酒具','100000001640138','2','100000000010029','保温杯'); return false;">保温杯</a></em>
+                       					 									 
+																							 
+				                            			 								 
+                            			 					<em><a href="javascript:void(0)" onclick="searchNaviWare('100000000700037','1','100000000004201','家居','100000000700039','1','100000000010349','水杯/茶具/酒具','100000001640139','2','100000000010030','保温壶/保温桶'); return false;">保温壶/保温桶</a></em>
+                       					 									 
+																							 
+				                            			 								 
+                            			 					<em><a href="javascript:void(0)" onclick="searchNaviWare('100000000700037','1','100000000004201','家居','100000000700039','1','100000000010349','水杯/茶具/酒具','100000001640142','2','100000000010031','咖啡具'); return false;">咖啡具</a></em>
+                       					 									 
+																							 
+				                            			 								 
+                            			 					<em><a href="javascript:void(0)" onclick="searchNaviWare('100000000700037','1','100000000004201','家居','100000000700039','1','100000000010349','水杯/茶具/酒具','100000001640143','2','100000000010032','水杯'); return false;">水杯</a></em>
+                       					 									 
+																							 
+				                            			 								 
+                            			 					<em><a href="javascript:void(0)" onclick="searchNaviWare('100000000700037','1','100000000004201','家居','100000000700039','1','100000000010349','水杯/茶具/酒具','100000001640140','2','100000000010033','茶具'); return false;">茶具</a></em>
+                       					 									 
+																							 
+				                            			 								 
+                            			 					<em><a href="javascript:void(0)" onclick="searchNaviWare('100000000700037','1','100000000004201','家居','100000000700039','1','100000000010349','水杯/茶具/酒具','100000001640144','2','100000000010035','水杯茶具酒具其他'); return false;">水杯茶具酒具其他</a></em>
+                       					 									 
+														
+												</dd>							
+											 </dl>
+											 
+											 <dl class="fore2 clearfix">
+										 		<dt><a href="javascript:void(0)" onclick="searchNaviWare('100000000700037','1','100000000004201','家居','100000000700041','1','100000000004402','家居软饰'); return false;">家居软饰</a></dt>
+												<dd class="clearfix">
+																						 
+				                            			 								 
+                            			 					<em><a href="javascript:void(0)" onclick="searchNaviWare('100000000700037','1','100000000004201','家居','100000000700041','1','100000000004402','家居软饰','100000001640154','2','100000000004611','凉席/蚊帐'); return false;">凉席/蚊帐</a></em>
+                       					 									 
+																							 
+				                            			 								 
+                            			 					<em><a href="javascript:void(0)" onclick="searchNaviWare('100000000700037','1','100000000004201','家居','100000000700041','1','100000000004402','家居软饰','100000001640153','2','100000000009603','浴帘'); return false;">浴帘</a></em>
+                       					 									 
+																							 
+				                            			 								 
+                            			 					<em><a href="javascript:void(0)" onclick="searchNaviWare('100000000700037','1','100000000004201','家居','100000000700041','1','100000000004402','家居软饰','100000001720066','2','100000000009604','地毯地垫'); return false;">地毯地垫</a></em>
+                       					 									 
+																							 
+				                            			 								 
+                            			 					<em><a href="javascript:void(0)" onclick="searchNaviWare('100000000700037','1','100000000004201','家居','100000000700041','1','100000000004402','家居软饰','100000001640151','2','100000000009606','居家布艺'); return false;">居家布艺</a></em>
+                       					 									 
+																							 
+				                            			 								 
+                            			 					<em><a href="javascript:void(0)" onclick="searchNaviWare('100000000700037','1','100000000004201','家居','100000000700041','1','100000000004402','家居软饰','100000001640155','2','100000000009607','家居软饰其他'); return false;">家居软饰其他</a></em>
+                       					 									 
+																							 
+				                            			 								 
+                            			 					<em><a href="javascript:void(0)" onclick="searchNaviWare('100000000700037','1','100000000004201','家居','100000000700041','1','100000000004402','家居软饰','100000001640148','2','100000000023012','挂件/装饰'); return false;">挂件/装饰</a></em>
+                       					 									 
+																							 
+				                            			 								 
+                            			 					<em><a href="javascript:void(0)" onclick="searchNaviWare('100000000700037','1','100000000004201','家居','100000000700041','1','100000000004402','家居软饰','100000001640149','2','100000000023013','挂钟/闹钟'); return false;">挂钟/闹钟</a></em>
+                       					 									 
+														
+												</dd>							
+											 </dl>
+											 
+										
+											 <dl class="fore0 clearfix">
+										 		<dt><a href="javascript:void(0)" onclick="searchNaviWare('100000000700040','1','100000000004202','家纺','100000000700040','1','100000000004403','家纺'); return false;">家纺</a></dt>
+												<dd class="clearfix">
+																						 
+				                            			 								 
+                            			 					<em><a href="javascript:void(0)" onclick="searchNaviWare('100000000700040','1','100000000004202','家纺','100000000700040','1','100000000004403','家纺','100000001640145','2','100000000009609','床上用品'); return false;">床上用品</a></em>
+                       					 									 
+																							 
+				                            			 								 
+                            			 					<em><a href="javascript:void(0)" onclick="searchNaviWare('100000000700040','1','100000000004202','家纺','100000000700040','1','100000000004403','家纺','100000001640146','2','100000000009610','毛巾浴巾'); return false;">毛巾浴巾</a></em>
+                       					 									 
+																							 
+				                            			 								 
+                            			 					<em><a href="javascript:void(0)" onclick="searchNaviWare('100000000700040','1','100000000004202','家纺','100000000700040','1','100000000004403','家纺','100000001640147','2','100000000004612','家纺其他'); return false;">家纺其他</a></em>
+                       					 									 
+														
+												</dd>							
+											 </dl>
+											 
+										
+											 <dl class="fore0 clearfix">
+										 		<dt><a href="javascript:void(0)" onclick="searchNaviWare('100000000700043','1','100000000004203','家装','100000000700042','1','100000000004404','家具灯具'); return false;">家具灯具</a></dt>
+												<dd class="clearfix">
+																						 
+				                            			 								 
+                            			 					<em><a href="javascript:void(0)" onclick="searchNaviWare('100000000700043','1','100000000004203','家装','100000000700042','1','100000000004404','家具灯具','100000001640157','2','100000000004613','灯饰照明'); return false;">灯饰照明</a></em>
+                       					 									 
+																							 
+				                            			 								 
+                            			 					<em><a href="javascript:void(0)" onclick="searchNaviWare('100000000700043','1','100000000004203','家装','100000000700042','1','100000000004404','家具灯具','100000001640156','2','100000000009801','生活小家具'); return false;">生活小家具</a></em>
+                       					 									 
+														
+												</dd>							
+											 </dl>
+											 
+											 <dl class="fore1 clearfix">
+										 		<dt><a href="javascript:void(0)" onclick="searchNaviWare('100000000700043','1','100000000004203','家装','100000000700043','1','100000000004405','五金家装'); return false;">五金家装</a></dt>
+												<dd class="clearfix">
+																						 
+				                            			 								 
+                            			 					<em><a href="javascript:void(0)" onclick="searchNaviWare('100000000700043','1','100000000004203','家装','100000000700043','1','100000000004405','五金家装','100000001640158','2','100000000004614','厨卫装饰'); return false;">厨卫装饰</a></em>
+                       					 									 
+																							 
+				                            			 								 
+                            			 					<em><a href="javascript:void(0)" onclick="searchNaviWare('100000000700043','1','100000000004203','家装','100000000700043','1','100000000004405','五金家装','100000001640159','2','100000000009802','五金电工'); return false;">五金电工</a></em>
+                       					 									 
+														
+												</dd>							
+											 </dl>
+											 
+										
+											 <dl class="fore0 clearfix">
+										 		<dt><a href="javascript:void(0)" onclick="searchNaviWare('100000000700038','1','100000000004204','厨具','100000000700038','1','100000000004406','厨房用品'); return false;">厨房用品</a></dt>
+												<dd class="clearfix">
+																						 
+				                            			 								 
+                            			 					<em><a href="javascript:void(0)" onclick="searchNaviWare('100000000700038','1','100000000004204','厨具','100000000700038','1','100000000004406','厨房用品','100000001640135','2','100000000004615','烹饪锅具'); return false;">烹饪锅具</a></em>
+                       					 									 
+																							 
+				                            			 								 
+                            			 					<em><a href="javascript:void(0)" onclick="searchNaviWare('100000000700038','1','100000000004204','厨具','100000000700038','1','100000000004406','厨房用品','100000001640137','2','100000000009803','烹饪厨具'); return false;">烹饪厨具</a></em>
+                       					 									 
+																							 
+				                            			 								 
+                            			 					<em><a href="javascript:void(0)" onclick="searchNaviWare('100000000700038','1','100000000004204','厨具','100000000700038','1','100000000004406','厨房用品','100000001640136','2','100000000009804','保鲜/收纳'); return false;">保鲜/收纳</a></em>
+                       					 									 
+														
+												</dd>							
+											 </dl>
+											 
+										
+									 </div>
+									</div>
+								</div>
+								
+						   		<div class="item">
+								
+									<h3>
+																							
+									<a href="javascript:void(0)" onclick="searchNaviWare('100000000700035','1','100000000005201','手机数码'); return false;">
+									手机数码</a>
+										
+											、
+										
+										
+																							
+									<a href="javascript:void(0)" onclick="searchNaviWare('100000000700036','1','100000000005202','电脑办公'); return false;">
+									电脑办公</a>
+										
+										
+											<i>&gt;</i>
+										
+									
+									</h3>
+									<div class="p_item-list">
+									 <div class="subitem">
+									 
+											 <dl class="fore0 clearfix">
+										 		<dt><a href="javascript:void(0)" onclick="searchNaviWare('100000000700035','1','100000000005201','手机数码','100000000700035','1','100000000006401','数码电子'); return false;">数码电子</a></dt>
+												<dd class="clearfix">
+																						 
+				                            			 								 
+                            			 					<em><a href="javascript:void(0)" onclick="searchNaviWare('100000000700035','1','100000000005201','手机数码','100000000700035','1','100000000006401','数码电子','100000001640106','2','100000000006601','充电器/数据线'); return false;">充电器/数据线</a></em>
+                       					 									 
+																							 
+				                            			 								 
+                            			 					<em><a href="javascript:void(0)" onclick="searchNaviWare('100000000700035','1','100000000005201','手机数码','100000000700035','1','100000000006401','数码电子','100000001640107','2','100000000006602','手机配件'); return false;">手机配件</a></em>
+                       					 									 
+																							 
+				                            			 								 
+                            			 					<em><a href="javascript:void(0)" onclick="searchNaviWare('100000000700035','1','100000000005201','手机数码','100000000700035','1','100000000006401','数码电子','100000001640108','2','100000000006603','数码配件'); return false;">数码配件</a></em>
+                       					 									 
+																							 
+				                            			 								 
+                            			 					<em><a href="javascript:void(0)" onclick="searchNaviWare('100000000700035','1','100000000005201','手机数码','100000000700035','1','100000000006401','数码电子','100000001640111','2','100000000006604','摄影摄像'); return false;">摄影摄像</a></em>
+                       					 									 
+																							 
+				                            			 								 
+                            			 					<em><a href="javascript:void(0)" onclick="searchNaviWare('100000000700035','1','100000000005201','手机数码','100000000700035','1','100000000006401','数码电子','100000001640103','2','100000000006611','耳机/耳麦'); return false;">耳机/耳麦</a></em>
+                       					 									 
+																							 
+				                            			 								 
+                            			 					<em><a href="javascript:void(0)" onclick="searchNaviWare('100000000700035','1','100000000005201','手机数码','100000000700035','1','100000000006401','数码电子','100000001640109','2','100000000006608','移动电源'); return false;">移动电源</a></em>
+                       					 									 
+																							 
+				                            			 								 
+                            			 					<em><a href="javascript:void(0)" onclick="searchNaviWare('100000000700035','1','100000000005201','手机数码','100000000700035','1','100000000006401','数码电子','100000001640104','2','100000000006609','时尚影音'); return false;">时尚影音</a></em>
+                       					 									 
+																							 
+				                            			 								 
+                            			 					<em><a href="javascript:void(0)" onclick="searchNaviWare('100000000700035','1','100000000005201','手机数码','100000000700035','1','100000000006401','数码电子','100000001640102','2','100000000006610','电子教育'); return false;">电子教育</a></em>
+                       					 									 
+																							 
+				                            			 								 
+                            			 					<em><a href="javascript:void(0)" onclick="searchNaviWare('100000000700035','1','100000000005201','手机数码','100000000700035','1','100000000006401','数码电子','100000001640105','2','100000000006606','数码电子其他'); return false;">数码电子其他</a></em>
+                       					 									 
+														
+												</dd>							
+											 </dl>
+											 
+										
+											 <dl class="fore0 clearfix">
+										 		<dt><a href="javascript:void(0)" onclick="searchNaviWare('100000000700036','1','100000000005202','电脑办公','100000000700036','1','100000000006402','电脑/办公'); return false;">电脑/办公</a></dt>
+												<dd class="clearfix">
+																						 
+				                            			 								 
+                            			 					<em><a href="javascript:void(0)" onclick="searchNaviWare('100000000700036','1','100000000005202','电脑办公','100000000700036','1','100000000006402','电脑/办公','100000001640114','2','100000000006612','平板电脑'); return false;">平板电脑</a></em>
+                       					 									 
+																							 
+				                            			 								 
+                            			 					<em><a href="javascript:void(0)" onclick="searchNaviWare('100000000700036','1','100000000005202','电脑办公','100000000700036','1','100000000006402','电脑/办公','100000001640120','2','100000000006801','电脑配件'); return false;">电脑配件</a></em>
+                       					 									 
+																							 
+				                            			 								 
+                            			 					<em><a href="javascript:void(0)" onclick="searchNaviWare('100000000700036','1','100000000005202','电脑办公','100000000700036','1','100000000006402','电脑/办公','100000001640118','2','100000000006804','移动硬盘'); return false;">移动硬盘</a></em>
+                       					 									 
+																							 
+				                            			 								 
+                            			 					<em><a href="javascript:void(0)" onclick="searchNaviWare('100000000700036','1','100000000005202','电脑办公','100000000700036','1','100000000006402','电脑/办公','100000001640123','2','100000000006805','文具/耗材'); return false;">文具/耗材</a></em>
+                       					 									 
+																							 
+				                            			 								 
+                            			 					<em><a href="javascript:void(0)" onclick="searchNaviWare('100000000700036','1','100000000005202','电脑办公','100000000700036','1','100000000006402','电脑/办公','100000001640121','2','100000000006806','外设产品'); return false;">外设产品</a></em>
+                       					 									 
+																							 
+				                            			 								 
+                            			 					<em><a href="javascript:void(0)" onclick="searchNaviWare('100000000700036','1','100000000005202','电脑办公','100000000700036','1','100000000006402','电脑/办公','100000001640115','2','100000000006809','U盘'); return false;">U盘</a></em>
+                       					 									 
+																							 
+				                            			 								 
+                            			 					<em><a href="javascript:void(0)" onclick="searchNaviWare('100000000700036','1','100000000005202','电脑办公','100000000700036','1','100000000006402','电脑/办公','100000001640113','2','100000000006810','网络设备'); return false;">网络设备</a></em>
+                       					 									 
+																							 
+				                            			 								 
+                            			 					<em><a href="javascript:void(0)" onclick="searchNaviWare('100000000700036','1','100000000005202','电脑办公','100000000700036','1','100000000006402','电脑/办公','100000001640122','2','100000000006802','电脑办公其他'); return false;">电脑办公其他</a></em>
+                       					 									 
+																							 
+				                            			 								 
+                            			 					<em><a href="javascript:void(0)" onclick="searchNaviWare('100000000700036','1','100000000005202','电脑办公','100000000700036','1','100000000006402','电脑/办公','100000001640124','2','100000000023612','办公设备'); return false;">办公设备</a></em>
+                       					 									 
+														
+												</dd>							
+											 </dl>
+											 
+											 <dl class="fore1 clearfix">
+										 		<dt><a href="javascript:void(0)" onclick="searchNaviWare('100000000700036','1','100000000005202','电脑办公','100000001640112','2','100000000011814','智能设备'); return false;">智能设备</a></dt>
+												<dd class="clearfix">
+																						 
+				                            			 								 
+                            			 					<em><a href="javascript:void(0)" onclick="searchNaviWare('100000000700036','1','100000000005202','电脑办公','100000001640112','2','100000000011814','智能设备','100000000800032','1','100000000012012','智能语音'); return false;">智能语音</a></em>
+                       					 									 
+																							 
+				                            			 								 
+                            			 					<em><a href="javascript:void(0)" onclick="searchNaviWare('100000000700036','1','100000000005202','电脑办公','100000001640112','2','100000000011814','智能设备','100000001640112','2','100000000012013','智能设备'); return false;">智能设备</a></em>
+                       					 									 
+														
+												</dd>							
+											 </dl>
+											 
+										
+									 </div>
+									</div>
+								</div>
+								
+						   		<div class="item">
+								
+									<h3>
+																							
+									<a href="javascript:void(0)" onclick="searchNaviWare('100000000700048','1','100000000005403','户外运动'); return false;">
+									户外运动</a>
+										
+											、
+										
+										
+																							
+									<a href="javascript:void(0)" onclick="searchNaviWare('100000000700050','1','100000000005404','汽车用品'); return false;">
+									汽车用品</a>
+										
+										
+											<i>&gt;</i>
+										
+									
+									</h3>
+									<div class="p_item-list">
+									 <div class="subitem">
+									 
+											 <dl class="fore0 clearfix">
+										 		<dt><a href="javascript:void(0)" onclick="searchNaviWare('100000000700048','1','100000000005403','户外运动','100000000700048','1','100000000007601','户外运动'); return false;">户外运动</a></dt>
+												<dd class="clearfix">
+																						 
+				                            			 								 
+                            			 					<em><a href="javascript:void(0)" onclick="searchNaviWare('100000000700048','1','100000000005403','户外运动','100000000700048','1','100000000007601','户外运动','100000001640186','2','100000000007802','户外装备'); return false;">户外装备</a></em>
+                       					 									 
+																							 
+				                            			 								 
+                            			 					<em><a href="javascript:void(0)" onclick="searchNaviWare('100000000700048','1','100000000005403','户外运动','100000000700048','1','100000000007601','户外运动','100000001640185','2','100000000007804','垂钓用品'); return false;">垂钓用品</a></em>
+                       					 									 
+																							 
+				                            			 								 
+                            			 					<em><a href="javascript:void(0)" onclick="searchNaviWare('100000000700048','1','100000000005403','户外运动','100000000700048','1','100000000007601','户外运动','100000001640187','2','100000000007807','骑行运动'); return false;">骑行运动</a></em>
+                       					 									 
+														
+												</dd>							
+											 </dl>
+											 
+											 <dl class="fore1 clearfix">
+										 		<dt><a href="javascript:void(0)" onclick="searchNaviWare('100000000700048','1','100000000005403','户外运动','100000000700049','1','100000000010040','体育健身'); return false;">体育健身</a></dt>
+												<dd class="clearfix">
+																						 
+				                            			 								 
+                            			 					<em><a href="javascript:void(0)" onclick="searchNaviWare('100000000700048','1','100000000005403','户外运动','100000000700049','1','100000000010040','体育健身','100000001640193','2','100000000010056','健身训练'); return false;">健身训练</a></em>
+                       					 									 
+																							 
+				                            			 								 
+                            			 					<em><a href="javascript:void(0)" onclick="searchNaviWare('100000000700048','1','100000000005403','户外运动','100000000700049','1','100000000010040','体育健身','100000001640192','2','100000000010057','体育用品'); return false;">体育用品</a></em>
+                       					 									 
+														
+												</dd>							
+											 </dl>
+											 
+										
+											 <dl class="fore0 clearfix">
+										 		<dt><a href="javascript:void(0)" onclick="searchNaviWare('100000000700050','1','100000000005404','汽车用品','100000000700050','1','100000000007602','汽车用品'); return false;">汽车用品</a></dt>
+												<dd class="clearfix">
+																						 
+				                            			 								 
+                            			 					<em><a href="javascript:void(0)" onclick="searchNaviWare('100000000700050','1','100000000005404','汽车用品','100000000700050','1','100000000007602','汽车用品','100000001640194','2','100000000007808','汽车装饰'); return false;">汽车装饰</a></em>
+                       					 									 
+																							 
+				                            			 								 
+                            			 					<em><a href="javascript:void(0)" onclick="searchNaviWare('100000000700050','1','100000000005404','汽车用品','100000000700050','1','100000000007602','汽车用品','100000001640197','2','100000000007809','汽车安全'); return false;">汽车安全</a></em>
+                       					 									 
+																							 
+				                            			 								 
+                            			 					<em><a href="javascript:void(0)" onclick="searchNaviWare('100000000700050','1','100000000005404','汽车用品','100000000700050','1','100000000007602','汽车用品','100000001640195','2','100000000007810','汽车养护'); return false;">汽车养护</a></em>
+                       					 									 
+																							 
+				                            			 								 
+                            			 					<em><a href="javascript:void(0)" onclick="searchNaviWare('100000000700050','1','100000000005404','汽车用品','100000000700050','1','100000000007602','汽车用品','100000001640196','2','100000000007811','汽车电子'); return false;">汽车电子</a></em>
+                       					 									 
+														
+												</dd>							
+											 </dl>
+											 
+										
+									 </div>
+									</div>
+								</div>
+								
+						   		<div class="item">
+								
+									<h3>
+																							
+									<a href="javascript:void(0)" onclick="searchNaviWare('100000000700053','1','100000000003601','服装配饰'); return false;">
+									服装配饰</a>
+										
+											、
+										
+										
+																							
+									<a href="javascript:void(0)" onclick="searchNaviWare('100000000700054','1','100000000003602','鞋靴箱包'); return false;">
+									鞋靴箱包</a>
+										
+										
+											<i>&gt;</i>
+										
+									
+									</h3>
+									<div class="p_item-list">
+									 <div class="subitem">
+									 
+											 <dl class="fore0 clearfix">
+										 		<dt><a href="javascript:void(0)" onclick="searchNaviWare('100000000700053','1','100000000003601','服装配饰','100000000700053','1','100000000003801','服装配饰'); return false;">服装配饰</a></dt>
+												<dd class="clearfix">
+																						 
+				                            			 								 
+                            			 					<em><a href="javascript:void(0)" onclick="searchNaviWare('100000000700053','1','100000000003601','服装配饰','100000000700053','1','100000000003801','服装配饰','100000001640207','2','100000000004002','皮带/腰带'); return false;">皮带/腰带</a></em>
+                       					 									 
+																							 
+				                            			 								 
+                            			 					<em><a href="javascript:void(0)" onclick="searchNaviWare('100000000700053','1','100000000003601','服装配饰','100000000700053','1','100000000003801','服装配饰','100000001640210','2','100000000004004','眼镜'); return false;">眼镜</a></em>
+                       					 									 
+																							 
+				                            			 								 
+                            			 					<em><a href="javascript:void(0)" onclick="searchNaviWare('100000000700053','1','100000000003601','服装配饰','100000000700053','1','100000000003801','服装配饰','100000001640208','2','100000000004006','围巾/帽子/手套'); return false;">围巾/帽子/手套</a></em>
+                       					 									 
+														
+												</dd>							
+											 </dl>
+											 
+											 <dl class="fore1 clearfix">
+										 		<dt><a href="javascript:void(0)" onclick="searchNaviWare('100000000700053','1','100000000003601','服装配饰','100000000700052','1','100000000003802','精品内衣'); return false;">精品内衣</a></dt>
+												<dd class="clearfix">
+																						 
+				                            			 								 
+                            			 					<em><a href="javascript:void(0)" onclick="searchNaviWare('100000000700053','1','100000000003601','服装配饰','100000000700052','1','100000000003802','精品内衣','100000001640200','2','100000000004007','女士内衣'); return false;">女士内衣</a></em>
+                       					 									 
+																							 
+				                            			 								 
+                            			 					<em><a href="javascript:void(0)" onclick="searchNaviWare('100000000700053','1','100000000003601','服装配饰','100000000700052','1','100000000003802','精品内衣','100000001640202','2','100000000009201','睡衣/家居服'); return false;">睡衣/家居服</a></em>
+                       					 									 
+																							 
+				                            			 								 
+                            			 					<em><a href="javascript:void(0)" onclick="searchNaviWare('100000000700053','1','100000000003601','服装配饰','100000000700052','1','100000000003802','精品内衣','100000001640201','2','100000000009202','男士内衣'); return false;">男士内衣</a></em>
+                       					 									 
+														
+												</dd>							
+											 </dl>
+											 
+											 <dl class="fore2 clearfix">
+										 		<dt><a href="javascript:void(0)" onclick="searchNaviWare('100000000700053','1','100000000003601','服装配饰','100000000700051','1','100000000003803','男装/女装'); return false;">男装/女装</a></dt>
+												<dd class="clearfix">
+																						 
+				                            			 								 
+                            			 					<em><a href="javascript:void(0)" onclick="searchNaviWare('100000000700053','1','100000000003601','服装配饰','100000000700051','1','100000000003803','男装/女装','100000001640198','2','100000000004008','时尚女装'); return false;">时尚女装</a></em>
+                       					 									 
+																							 
+				                            			 								 
+                            			 					<em><a href="javascript:void(0)" onclick="searchNaviWare('100000000700053','1','100000000003601','服装配饰','100000000700051','1','100000000003803','男装/女装','100000001640199','2','100000000009205','潮流男装'); return false;">潮流男装</a></em>
+                       					 									 
+														
+												</dd>							
+											 </dl>
+											 
+										
+											 <dl class="fore0 clearfix">
+										 		<dt><a href="javascript:void(0)" onclick="searchNaviWare('100000000700054','1','100000000003602','鞋靴箱包','100000000700054','1','100000000003805','鞋靴箱包'); return false;">鞋靴箱包</a></dt>
+												<dd class="clearfix">
+																						 
+				                            			 								 
+                            			 					<em><a href="javascript:void(0)" onclick="searchNaviWare('100000000700054','1','100000000003602','鞋靴箱包','100000000700054','1','100000000003805','鞋靴箱包','100000001640211','2','100000000004010','时尚女鞋'); return false;">时尚女鞋</a></em>
+                       					 									 
+																							 
+				                            			 								 
+                            			 					<em><a href="javascript:void(0)" onclick="searchNaviWare('100000000700054','1','100000000003602','鞋靴箱包','100000000700054','1','100000000003805','鞋靴箱包','100000001640212','2','100000000009002','潮流女包'); return false;">潮流女包</a></em>
+                       					 									 
+																							 
+				                            			 								 
+                            			 					<em><a href="javascript:void(0)" onclick="searchNaviWare('100000000700054','1','100000000003602','鞋靴箱包','100000000700054','1','100000000003805','鞋靴箱包','100000001640215','2','100000000009004','功能箱包'); return false;">功能箱包</a></em>
+                       					 									 
+																							 
+				                            			 								 
+                            			 					<em><a href="javascript:void(0)" onclick="searchNaviWare('100000000700054','1','100000000003602','鞋靴箱包','100000000700054','1','100000000003805','鞋靴箱包','100000001640214','2','100000000010380','精品男包'); return false;">精品男包</a></em>
+                       					 									 
+														
+												</dd>							
+											 </dl>
+											 
+										
+									 </div>
+									</div>
+								</div>
+								
+						   		<div class="item">
+								
+									<h3>
+																							
+									<a href="javascript:void(0)" onclick="searchNaviWare('100000000700055','1','100000000004617','母婴'); return false;">
+									母婴</a>
+										
+											、
+										
+										
+																							
+									<a href="javascript:void(0)" onclick="searchNaviWare('100000000700057','1','100000000004618','玩具'); return false;">
+									玩具</a>
+										
+											、
+										
+										
+																							
+									<a href="javascript:void(0)" onclick="searchNaviWare('100000000700058','1','100000000015012','洗护'); return false;">
+									洗护</a>
+										
+											、
+										
+										
+																							
+									<a href="javascript:void(0)" onclick="searchNaviWare('100000000700059','1','100000000015013','保健'); return false;">
+									保健</a>
+										
+										
+											<i>&gt;</i>
+										
+									
+									</h3>
+									<div class="p_item-list">
+									 <div class="subitem">
+									 
+											 <dl class="fore0 clearfix">
+										 		<dt><a href="javascript:void(0)" onclick="searchNaviWare('100000000700055','1','100000000004617','母婴','100000000700055','1','100000000004801','孕婴用品'); return false;">孕婴用品</a></dt>
+												<dd class="clearfix">
+																						 
+				                            			 								 
+                            			 					<em><a href="javascript:void(0)" onclick="searchNaviWare('100000000700055','1','100000000004617','母婴','100000000700055','1','100000000004801','孕婴用品','100000001640220','2','100000000010001','日常护理'); return false;">日常护理</a></em>
+                       					 									 
+																							 
+				                            			 								 
+                            			 					<em><a href="javascript:void(0)" onclick="searchNaviWare('100000000700055','1','100000000004617','母婴','100000000700055','1','100000000004801','孕婴用品','100000001640223','2','100000000010005','宝宝洗护'); return false;">宝宝洗护</a></em>
+                       					 									 
+																							 
+				                            			 								 
+                            			 					<em><a href="javascript:void(0)" onclick="searchNaviWare('100000000700055','1','100000000004617','母婴','100000000700055','1','100000000004801','孕婴用品','100000001640219','2','100000000010007','喂养用品'); return false;">喂养用品</a></em>
+                       					 									 
+																							 
+				                            			 								 
+                            			 					<em><a href="javascript:void(0)" onclick="searchNaviWare('100000000700055','1','100000000004617','母婴','100000000700055','1','100000000004801','孕婴用品','100000001640218','2','100000000010008','孕产用品'); return false;">孕产用品</a></em>
+                       					 									 
+														
+												</dd>							
+											 </dl>
+											 
+										
+											 <dl class="fore0 clearfix">
+										 		<dt><a href="javascript:void(0)" onclick="searchNaviWare('100000000700057','1','100000000004618','玩具','100000000700057','1','100000000004802','户外运动车床玩具'); return false;">户外运动车床玩具</a></dt>
+												<dd class="clearfix">
+																						 
+				                            			 								 
+                            			 					<em><a href="javascript:void(0)" onclick="searchNaviWare('100000000700057','1','100000000004618','玩具','100000000700057','1','100000000004802','户外运动车床玩具','100000001640230','2','100000000010010','车床出行'); return false;">车床出行</a></em>
+                       					 									 
+																							 
+				                            			 								 
+                            			 					<em><a href="javascript:void(0)" onclick="searchNaviWare('100000000700057','1','100000000004618','玩具','100000000700057','1','100000000004802','户外运动车床玩具','100000001640229','2','100000000010011','儿童户外'); return false;">儿童户外</a></em>
+                       					 									 
+																							 
+				                            			 								 
+                            			 					<em><a href="javascript:void(0)" onclick="searchNaviWare('100000000700057','1','100000000004618','玩具','100000000700057','1','100000000004802','户外运动车床玩具','100000001640231','2','100000000010012','婴幼玩具'); return false;">婴幼玩具</a></em>
+                       					 									 
+																							 
+				                            			 								 
+                            			 					<em><a href="javascript:void(0)" onclick="searchNaviWare('100000000700057','1','100000000004618','玩具','100000000700057','1','100000000004802','户外运动车床玩具','100000001960066','2','100000000011812','益智早教'); return false;">益智早教</a></em>
+                       					 									 
+														
+												</dd>							
+											 </dl>
+											 
+										
+											 <dl class="fore0 clearfix">
+										 		<dt><a href="javascript:void(0)" onclick="searchNaviWare('100000000700058','1','100000000015012','洗护','100000000700058','1','100000000015014','个护化妆'); return false;">个护化妆</a></dt>
+												<dd class="clearfix">
+																						 
+				                            			 								 
+                            			 					<em><a href="javascript:void(0)" onclick="searchNaviWare('100000000700058','1','100000000015012','洗护','100000000700058','1','100000000015014','个护化妆','100000001640232','2','100000000015212','洗发护发'); return false;">洗发护发</a></em>
+                       					 									 
+																							 
+				                            			 								 
+                            			 					<em><a href="javascript:void(0)" onclick="searchNaviWare('100000000700058','1','100000000015012','洗护','100000000700058','1','100000000015014','个护化妆','100000001640235','2','100000000015213','男士护肤'); return false;">男士护肤</a></em>
+                       					 									 
+																							 
+				                            			 								 
+                            			 					<em><a href="javascript:void(0)" onclick="searchNaviWare('100000000700058','1','100000000015012','洗护','100000000700058','1','100000000015014','个护化妆','100000001640236','2','100000000015214','面部护肤'); return false;">面部护肤</a></em>
+                       					 									 
+																							 
+				                            			 								 
+                            			 					<em><a href="javascript:void(0)" onclick="searchNaviWare('100000000700058','1','100000000015012','洗护','100000000700058','1','100000000015014','个护化妆','100000001640237','2','100000000015215','口腔清洁'); return false;">口腔清洁</a></em>
+                       					 									 
+																							 
+				                            			 								 
+                            			 					<em><a href="javascript:void(0)" onclick="searchNaviWare('100000000700058','1','100000000015012','洗护','100000000700058','1','100000000015014','个护化妆','100000001640238','2','100000000015216','彩妆香水'); return false;">彩妆香水</a></em>
+                       					 									 
+																							 
+				                            			 								 
+                            			 					<em><a href="javascript:void(0)" onclick="searchNaviWare('100000000700058','1','100000000015012','洗护','100000000700058','1','100000000015014','个护化妆','100000001640234','2','100000000015217','身体护肤'); return false;">身体护肤</a></em>
+                       					 									 
+																							 
+				                            			 								 
+                            			 					<em><a href="javascript:void(0)" onclick="searchNaviWare('100000000700058','1','100000000015012','洗护','100000000700058','1','100000000015014','个护化妆','100000001640233','2','100000000015218','卫生护理'); return false;">卫生护理</a></em>
+                       					 									 
+														
+												</dd>							
+											 </dl>
+											 
+										
+											 <dl class="fore0 clearfix">
+										 		<dt><a href="javascript:void(0)" onclick="searchNaviWare('100000000700059','1','100000000015013','保健','100000000700059','1','100000000015015','健康保健'); return false;">健康保健</a></dt>
+												<dd class="clearfix">
+																						 
+				                            			 								 
+                            			 					<em><a href="javascript:void(0)" onclick="searchNaviWare('100000000700059','1','100000000015013','保健','100000000700059','1','100000000015015','健康保健','100000001640240','2','100000000015219','护理护具'); return false;">护理护具</a></em>
+                       					 									 
+																							 
+				                            			 								 
+                            			 					<em><a href="javascript:void(0)" onclick="searchNaviWare('100000000700059','1','100000000015013','保健','100000000700059','1','100000000015015','健康保健','100000001640241','2','100000000015220','成人用品'); return false;">成人用品</a></em>
+                       					 									 
+																							 
+				                            			 								 
+                            			 					<em><a href="javascript:void(0)" onclick="searchNaviWare('100000000700059','1','100000000015013','保健','100000000700059','1','100000000015015','健康保健','100000001640239','2','100000000015221','生活保健'); return false;">生活保健</a></em>
+                       					 									 
+														
+												</dd>							
+											 </dl>
+											 
+										
+									 </div>
+									</div>
+								</div>
+								
+						   		<div class="item">
+								
+									<h3>
+																							
+									<a href="javascript:void(0)" onclick="searchNaviWare('100000000700045','1','100000000005601','珠宝首饰'); return false;">
+									珠宝首饰</a>
+										
+											、
+										
+										
+																							
+									<a href="javascript:void(0)" onclick="searchNaviWare('100000000700047','1','100000000010350','手表'); return false;">
+									手表</a>
+										
+											、
+										
+										
+																							
+									<a href="javascript:void(0)" onclick="searchNaviWare('100000000820032','1','100000000011612','藏品'); return false;">
+									藏品</a>
+										
+										
+											<i>&gt;</i>
+										
+									
+									</h3>
+									<div class="p_item-list">
+									 <div class="subitem">
+									 
+											 <dl class="fore0 clearfix">
+										 		<dt><a href="javascript:void(0)" onclick="searchNaviWare('100000000700045','1','100000000005601','珠宝首饰','100000000700044','1','100000000010356','珠宝钻石'); return false;">珠宝钻石</a></dt>
+												<dd class="clearfix">
+																						 
+				                            			 								 
+                            			 					<em><a href="javascript:void(0)" onclick="searchNaviWare('100000000700045','1','100000000005601','珠宝首饰','100000000700044','1','100000000010356','珠宝钻石','100000001640164','2','100000000010367','天然玉石'); return false;">天然玉石</a></em>
+                       					 									 
+																							 
+				                            			 								 
+                            			 					<em><a href="javascript:void(0)" onclick="searchNaviWare('100000000700045','1','100000000005601','珠宝首饰','100000000700044','1','100000000010356','珠宝钻石','100000001640161','2','100000000010368','宝石首饰'); return false;">宝石首饰</a></em>
+                       					 									 
+																							 
+				                            			 								 
+                            			 					<em><a href="javascript:void(0)" onclick="searchNaviWare('100000000700045','1','100000000005601','珠宝首饰','100000000700044','1','100000000010356','珠宝钻石','100000001640165','2','100000000010370','玉器饰品'); return false;">玉器饰品</a></em>
+                       					 									 
+																							 
+				                            			 								 
+                            			 					<em><a href="javascript:void(0)" onclick="searchNaviWare('100000000700045','1','100000000005601','珠宝首饰','100000000700044','1','100000000010356','珠宝钻石','100000001640167','2','100000000010371','翡翠饰品'); return false;">翡翠饰品</a></em>
+                       					 									 
+																							 
+				                            			 								 
+                            			 					<em><a href="javascript:void(0)" onclick="searchNaviWare('100000000700045','1','100000000005601','珠宝首饰','100000000700044','1','100000000010356','珠宝钻石','100000001640166','2','100000000010372','黄金饰品'); return false;">黄金饰品</a></em>
+                       					 									 
+																							 
+				                            			 								 
+                            			 					<em><a href="javascript:void(0)" onclick="searchNaviWare('100000000700045','1','100000000005601','珠宝首饰','100000000700044','1','100000000010356','珠宝钻石','100000001640163','2','100000000010373','珍珠饰品'); return false;">珍珠饰品</a></em>
+                       					 									 
+														
+												</dd>							
+											 </dl>
+											 
+											 <dl class="fore1 clearfix">
+										 		<dt><a href="javascript:void(0)" onclick="searchNaviWare('100000000700045','1','100000000005601','珠宝首饰','100000000700045','1','100000000010355','银饰品'); return false;">银饰品</a></dt>
+												<dd class="clearfix">
+																						 
+				                            			 								 
+                            			 					<em><a href="javascript:void(0)" onclick="searchNaviWare('100000000700045','1','100000000005601','珠宝首饰','100000000700045','1','100000000010355','银饰品','100000001640170','2','100000000010360','戒指'); return false;">戒指</a></em>
+                       					 									 
+																							 
+				                            			 								 
+                            			 					<em><a href="javascript:void(0)" onclick="searchNaviWare('100000000700045','1','100000000005601','珠宝首饰','100000000700045','1','100000000010355','银饰品','100000001640169','2','100000000010361','耳饰'); return false;">耳饰</a></em>
+                       					 									 
+																							 
+				                            			 								 
+                            			 					<em><a href="javascript:void(0)" onclick="searchNaviWare('100000000700045','1','100000000005601','珠宝首饰','100000000700045','1','100000000010355','银饰品','100000001640172','2','100000000010362','手链/手镯/脚链'); return false;">手链/手镯/脚链</a></em>
+                       					 									 
+																							 
+				                            			 								 
+                            			 					<em><a href="javascript:void(0)" onclick="searchNaviWare('100000000700045','1','100000000005601','珠宝首饰','100000000700045','1','100000000010355','银饰品','100000001640168','2','100000000010363','儿童饰品'); return false;">儿童饰品</a></em>
+                       					 									 
+																							 
+				                            			 								 
+                            			 					<em><a href="javascript:void(0)" onclick="searchNaviWare('100000000700045','1','100000000005601','珠宝首饰','100000000700045','1','100000000010355','银饰品','100000001640173','2','100000000010364','套装'); return false;">套装</a></em>
+                       					 									 
+																							 
+				                            			 								 
+                            			 					<em><a href="javascript:void(0)" onclick="searchNaviWare('100000000700045','1','100000000005601','珠宝首饰','100000000700045','1','100000000010355','银饰品','100000001640174','2','100000000010365','项链/吊坠'); return false;">项链/吊坠</a></em>
+                       					 									 
+																							 
+				                            			 								 
+                            			 					<em><a href="javascript:void(0)" onclick="searchNaviWare('100000000700045','1','100000000005601','珠宝首饰','100000000700045','1','100000000010355','银饰品','100000001640171','2','100000000010366','银饰品其他'); return false;">银饰品其他</a></em>
+                       					 									 
+														
+												</dd>							
+											 </dl>
+											 
+											 <dl class="fore2 clearfix">
+										 		<dt><a href="javascript:void(0)" onclick="searchNaviWare('100000000700045','1','100000000005601','珠宝首饰','100000000700046','1','100000000008001','流行饰品'); return false;">流行饰品</a></dt>
+												<dd class="clearfix">
+																						 
+				                            			 								 
+                            			 					<em><a href="javascript:void(0)" onclick="searchNaviWare('100000000700045','1','100000000005601','珠宝首饰','100000000700046','1','100000000008001','流行饰品','100000001640175','2','100000000008201','天然木饰'); return false;">天然木饰</a></em>
+                       					 									 
+																							 
+				                            			 								 
+                            			 					<em><a href="javascript:void(0)" onclick="searchNaviWare('100000000700045','1','100000000005601','珠宝首饰','100000000700046','1','100000000008001','流行饰品','100000001680066','2','100000000008202','头饰发饰'); return false;">头饰发饰</a></em>
+                       					 									 
+																							 
+				                            			 								 
+                            			 					<em><a href="javascript:void(0)" onclick="searchNaviWare('100000000700045','1','100000000005601','珠宝首饰','100000000700046','1','100000000008001','流行饰品','100000001640176','2','100000000008203','水晶玛瑙'); return false;">水晶玛瑙</a></em>
+                       					 									 
+																							 
+				                            			 								 
+                            			 					<em><a href="javascript:void(0)" onclick="searchNaviWare('100000000700045','1','100000000005601','珠宝首饰','100000000700046','1','100000000008001','流行饰品','100000001640178','2','100000000008205','合金饰品'); return false;">合金饰品</a></em>
+                       					 									 
+																							 
+				                            			 								 
+                            			 					<em><a href="javascript:void(0)" onclick="searchNaviWare('100000000700045','1','100000000005601','珠宝首饰','100000000700046','1','100000000008001','流行饰品','100000001640179','2','100000000008207','其它材质'); return false;">其它材质</a></em>
+                       					 									 
+														
+												</dd>							
+											 </dl>
+											 
+										
+											 <dl class="fore0 clearfix">
+										 		<dt><a href="javascript:void(0)" onclick="searchNaviWare('100000000700047','1','100000000010350','手表','100000000700047','1','100000000010357','手表'); return false;">手表</a></dt>
+												<dd class="clearfix">
+																						 
+				                            			 								 
+                            			 					<em><a href="javascript:void(0)" onclick="searchNaviWare('100000000700047','1','100000000010350','手表','100000000700047','1','100000000010357','手表','100000001640183','2','100000000010375','男士手表'); return false;">男士手表</a></em>
+                       					 									 
+																							 
+				                            			 								 
+                            			 					<em><a href="javascript:void(0)" onclick="searchNaviWare('100000000700047','1','100000000010350','手表','100000000700047','1','100000000010357','手表','100000001640182','2','100000000010376','女士手表'); return false;">女士手表</a></em>
+                       					 									 
+																							 
+				                            			 								 
+                            			 					<em><a href="javascript:void(0)" onclick="searchNaviWare('100000000700047','1','100000000010350','手表','100000000700047','1','100000000010357','手表','100000001640184','2','100000000010377','儿童手表'); return false;">儿童手表</a></em>
+                       					 									 
+																							 
+				                            			 								 
+                            			 					<em><a href="javascript:void(0)" onclick="searchNaviWare('100000000700047','1','100000000010350','手表','100000000700047','1','100000000010357','手表','100000001640181','2','100000000010378','情侣表'); return false;">情侣表</a></em>
+                       					 									 
+														
+												</dd>							
+											 </dl>
+											 
+										
+											 <dl class="fore0 clearfix">
+										 		<dt><a href="javascript:void(0)" onclick="searchNaviWare('100000000820032','1','100000000011612','藏品','100000000820032','1','100000000011613','集邮藏品'); return false;">集邮藏品</a></dt>
+												<dd class="clearfix">
+																						 
+				                            			 								 
+                            			 					<em><a href="javascript:void(0)" onclick="searchNaviWare('100000000820032','1','100000000011612','藏品','100000000820032','1','100000000011613','集邮藏品','100000002020066','2','100000000011614','集邮品'); return false;">集邮品</a></em>
+                       					 									 
+																							 
+				                            			 								 
+                            			 					<em><a href="javascript:void(0)" onclick="searchNaviWare('100000000820032','1','100000000011612','藏品','100000000820032','1','100000000011613','集邮藏品','100000002020067','2','100000000011615','集邮商品'); return false;">集邮商品</a></em>
+                       					 									 
+														
+												</dd>							
+											 </dl>
+											 
+										
+									 </div>
+									</div>
+								</div>
+								
+						   		<div class="item">
+								
+									<h3>
+																							
+									<a href="javascript:void(0)" onclick="searchNaviWare('100000001120033','1','100000000005001','食品'); return false;">
+									食品</a>
+										
+											、
+										
+										
+																							
+									<a href="javascript:void(0)" onclick="searchNaviWare('100000000460034,100000000700062','1','100000000005002','茶酒'); return false;">
+									茶酒</a>
+										
+											、
+										
+										
+																							
+									<a href="javascript:void(0)" onclick="searchNaviWare('100000001140032','1','100000000015412','图书/期刊'); return false;">
+									图书/期刊</a>
+										
+										
+											<i>&gt;</i>
+										
+									
+									</h3>
+									<div class="p_item-list">
+									 <div class="subitem">
+									 
+											 <dl class="fore0 clearfix">
+										 		<dt><a href="javascript:void(0)" onclick="searchNaviWare('100000001120033','1','100000000005001','食品','100000001120033','1','100000000006001','休闲零食'); return false;">休闲零食</a></dt>
+												<dd class="clearfix">
+																						 
+				                            			 								 
+                            			 					<em><a href="javascript:void(0)" onclick="searchNaviWare('100000001120033','1','100000000005001','食品','100000001120033','1','100000000006001','休闲零食','100000002780075','2','100000000006201','坚果'); return false;">坚果</a></em>
+                       					 									 
+																							 
+				                            			 								 
+                            			 					<em><a href="javascript:void(0)" onclick="searchNaviWare('100000001120033','1','100000000005001','食品','100000001120033','1','100000000006001','休闲零食','100000002780076','2','100000000006202','枣'); return false;">枣</a></em>
+                       					 									 
+																							 
+				                            			 								 
+                            			 					<em><a href="javascript:void(0)" onclick="searchNaviWare('100000001120033','1','100000000005001','食品','100000001120033','1','100000000006001','休闲零食','100000002780077','2','100000000006203','巧克力'); return false;">巧克力</a></em>
+                       					 									 
+																							 
+				                            			 								 
+                            			 					<em><a href="javascript:void(0)" onclick="searchNaviWare('100000001120033','1','100000000005001','食品','100000001120033','1','100000000006001','休闲零食','100000002780078','2','100000000006204','糖果'); return false;">糖果</a></em>
+                       					 									 
+																							 
+				                            			 								 
+                            			 					<em><a href="javascript:void(0)" onclick="searchNaviWare('100000001120033','1','100000000005001','食品','100000001120033','1','100000000006001','休闲零食','100000002780079','2','100000000006205','蜜饯果铺'); return false;">蜜饯果铺</a></em>
+                       					 									 
+																							 
+				                            			 								 
+                            			 					<em><a href="javascript:void(0)" onclick="searchNaviWare('100000001120033','1','100000000005001','食品','100000001120033','1','100000000006001','休闲零食','100000002780080','2','100000000006206','肉松'); return false;">肉松</a></em>
+                       					 									 
+																							 
+				                            			 								 
+                            			 					<em><a href="javascript:void(0)" onclick="searchNaviWare('100000001120033','1','100000000005001','食品','100000001120033','1','100000000006001','休闲零食','100000002800068','2','100000000006207','肉干'); return false;">肉干</a></em>
+                       					 									 
+																							 
+				                            			 								 
+                            			 					<em><a href="javascript:void(0)" onclick="searchNaviWare('100000001120033','1','100000000005001','食品','100000001120033','1','100000000006001','休闲零食','100000002800066','2','100000000023212','饼干'); return false;">饼干</a></em>
+                       					 									 
+																							 
+				                            			 								 
+                            			 					<em><a href="javascript:void(0)" onclick="searchNaviWare('100000001120033','1','100000000005001','食品','100000001120033','1','100000000006001','休闲零食','100000002800067','2','100000000024812','糕点'); return false;">糕点</a></em>
+                       					 									 
+														
+												</dd>							
+											 </dl>
+											 
+											 <dl class="fore1 clearfix">
+										 		<dt><a href="javascript:void(0)" onclick="searchNaviWare('100000001120033','1','100000000005001','食品','100000001140032','1','100000000010351','粮油干货'); return false;">粮油干货</a></dt>
+												<dd class="clearfix">
+																						 
+				                            			 								 
+                            			 					<em><a href="javascript:void(0)" onclick="searchNaviWare('100000001120033','1','100000000005001','食品','100000001140032','1','100000000010351','粮油干货','100000002780081','2','100000000010016','干货'); return false;">干货</a></em>
+                       					 									 
+																							 
+				                            			 								 
+                            			 					<em><a href="javascript:void(0)" onclick="searchNaviWare('100000001120033','1','100000000005001','食品','100000001140032','1','100000000010351','粮油干货','100000002780082','2','100000000010018','食用油'); return false;">食用油</a></em>
+                       					 									 
+																							 
+				                            			 								 
+                            			 					<em><a href="javascript:void(0)" onclick="searchNaviWare('100000001120033','1','100000000005001','食品','100000001140032','1','100000000010351','粮油干货','100000002780083','2','100000000010017','米面杂粮'); return false;">米面杂粮</a></em>
+                       					 									 
+																							 
+				                            			 								 
+                            			 					<em><a href="javascript:void(0)" onclick="searchNaviWare('100000001120033','1','100000000005001','食品','100000001140032','1','100000000010351','粮油干货','100000002780084','2','100000000010019','烘焙原料'); return false;">烘焙原料</a></em>
+                       					 									 
+																							 
+				                            			 								 
+                            			 					<em><a href="javascript:void(0)" onclick="searchNaviWare('100000001120033','1','100000000005001','食品','100000001140032','1','100000000010351','粮油干货','100000002800069','2','100000000024814','调味品'); return false;">调味品</a></em>
+                       					 									 
+																							 
+				                            			 								 
+                            			 					<em><a href="javascript:void(0)" onclick="searchNaviWare('100000001120033','1','100000000005001','食品','100000001140032','1','100000000010351','粮油干货','100000002800070','2','100000000024813','方便食品'); return false;">方便食品</a></em>
+                       					 									 
+														
+												</dd>							
+											 </dl>
+											 
+										
+											 <dl class="fore0 clearfix">
+										 		<dt><a href="javascript:void(0)" onclick="searchNaviWare('100000000460034,100000000700062','1','100000000005002','茶酒','100000001180032','1','100000000006002','酒品茶饮'); return false;">酒品茶饮</a></dt>
+												<dd class="clearfix">
+																						 
+				                            			 								 
+                            			 					<em><a href="javascript:void(0)" onclick="searchNaviWare('100000000460034,100000000700062','1','100000000005002','茶酒','100000001180032','1','100000000006002','酒品茶饮','100000002780090','2','100000000006208','白酒'); return false;">白酒</a></em>
+                       					 									 
+																							 
+				                            			 								 
+                            			 					<em><a href="javascript:void(0)" onclick="searchNaviWare('100000000460034,100000000700062','1','100000000005002','茶酒','100000001180032','1','100000000006002','酒品茶饮','100000002820066','2','100000000006209','葡萄酒'); return false;">葡萄酒</a></em>
+                       					 									 
+																							 
+				                            			 								 
+                            			 					<em><a href="javascript:void(0)" onclick="searchNaviWare('100000000460034,100000000700062','1','100000000005002','茶酒','100000001180032','1','100000000006002','酒品茶饮','100000002780095','2','100000000024815','红茶'); return false;">红茶</a></em>
+                       					 									 
+																							 
+				                            			 								 
+                            			 					<em><a href="javascript:void(0)" onclick="searchNaviWare('100000000460034,100000000700062','1','100000000005002','茶酒','100000001180032','1','100000000006002','酒品茶饮','100000002780099','2','100000000025013','蔬果汁'); return false;">蔬果汁</a></em>
+                       					 									 
+																							 
+				                            			 								 
+                            			 					<em><a href="javascript:void(0)" onclick="searchNaviWare('100000000460034,100000000700062','1','100000000005002','茶酒','100000001180032','1','100000000006002','酒品茶饮','100000002820068','2','100000000024816','绿茶'); return false;">绿茶</a></em>
+                       					 									 
+																							 
+				                            			 								 
+                            			 					<em><a href="javascript:void(0)" onclick="searchNaviWare('100000000460034,100000000700062','1','100000000005002','茶酒','100000001180032','1','100000000006002','酒品茶饮','100000002780096','2','100000000025012','花果茶'); return false;">花果茶</a></em>
+                       					 									 
+														
+												</dd>							
+											 </dl>
+											 
+										
+											 <dl class="fore0 clearfix">
+										 		<dt><a href="javascript:void(0)" onclick="searchNaviWare('100000001140032','1','100000000015412','图书/期刊','100000001120032','1','100000000015612','图书/期刊'); return false;">图书/期刊</a></dt>
+												<dd class="clearfix">
+																						 
+				                            			 								 
+                            			 					<em><a href="javascript:void(0)" onclick="searchNaviWare('100000001140032','1','100000000015412','图书/期刊','100000001120032','1','100000000015612','图书/期刊','100000002040066','2','100000000015413','时尚生活'); return false;">时尚生活</a></em>
+                       					 									 
+																							 
+				                            			 								 
+                            			 					<em><a href="javascript:void(0)" onclick="searchNaviWare('100000001140032','1','100000000015412','图书/期刊','100000001120032','1','100000000015612','图书/期刊','100000002780068','2','100000000015414','童书'); return false;">童书</a></em>
+                       					 									 
+														
+												</dd>							
+											 </dl>
+											 
+										
+									 </div>
+									</div>
+								</div>
+								
+						   		<div class="item">
+								
+									<h3>
+																							
+									<a href="javascript:void(0)" onclick="searchNaviWare('100000000260033','1','100000000028812','积分互换'); return false;">
+									积分互换</a>
+										
+										
+											<i>&gt;</i>
+										
+									
+									</h3>
+									<div class="p_item-list">
+									 <div class="subitem">
+									 
+											 <dl class="fore0 clearfix">
+										 		<dt><a href="javascript:void(0)" onclick="searchNaviWare('100000000260033','1','100000000028812','积分互换','100000000260033','1','100000000028813','积分互换'); return false;">积分互换</a></dt>
+												<dd class="clearfix">
+																						 
+				                            			 								 
+                            			 					<em><a href="javascript:void(0)" onclick="searchNaviWare('100000000260033','1','100000000028812','积分互换','100000000260033','1','100000000028813','积分互换','100000003260066','2','100000000028814','电商积分'); return false;">电商积分</a></em>
+                       					 									 
+														
+												</dd>							
+											 </dl>
+											 
+										
+									 </div>
+									</div>
+								</div>
+								
+						
+					</div> 
+				<!-- 全部商品分类end -->
+			    </div>
+			<ul class="search_result_menu fl">
+			    <li><a href="javascript:navInfoFuc('/index.html','首页');">首页</a></li>
+			    <li><a href="javascript:navInfoFuc('/portal/ware/web/SearchWareAction?action=searchWareInfo&amp;smewi=smewi&amp;rfet=sortWayChange','我能兑换');">我能兑换</a></li>
+			    <li id="localTab" style="display:none"><a href="javascript:navInfoFuc('/portal/ware/web/SearchWareAction?action=searchWareInfo&amp;l=local','本地礼品');">本地礼品</a></li>
+			   		      
+		      		
+		      				
+		      				<li><a href="javascript:navInfoFuc('/rank/2_0_0_0.html','排行榜');">排行榜</a>
+		      				
+		      				</li>
+		      			
+		      		
+		      		      
+		      		
+		      				
+		      				<li><a href="javascript:navInfoFuc('/topics/100000000001162.html','现金+');">现金+</a>
+		      				
+		      				</li>
+		      			
+		      		
+		      		      
+		      		
+		      				
+		      				<li><a href="javascript:navInfoFuc('/topics/100000000004902.html','商城优选');">商城优选</a>
+		      				
+		              	   	<i class="hot icon-bg"></i>
+				            
+		      				</li>
+		      			
+		      		
+		      		      
+		      		
+		      				
+		      				<li><a href="javascript:navInfoFuc('/topics/100000000005563.html','积分互兑');">积分互兑</a>
+		      				
+		      				</li>
+		      			
+		      		
+		      		      
+		      		
+		      			
+		                      <li><a href="javascript:navInfoFuc('/topics/brandZone/brandList.jsp','品牌专区');">品牌专区</a>
+		                                    
+		                      </li>
+		      			
+		      		
+		      		      
+		      		
+		      				
+		      				<li><a href="javascript:navInfoFuc('/topics/100000000005282.html','乐享生活');">乐享生活</a>
+		      				
+		      				</li>
+		      			
+		      		
+		      	
+			</ul>
+			</div>	
+		</div>	
+		
+	
+
+<!-- 页签end -->     
+	<div class=" dialog campus_tips" id="campus_tips" style="display: none;">
+		<p class="tips_text" id="tips_text">亲爱的动感地带俱乐部会员，欢迎来到积分商城！迎新好礼10元100M流量加油包即刻免费奉上，机会只有一次，错过不再来，赶快领取吧！</p>
+		<div class="tipsAll ">
+		<div class="tipsBtn"><a id="insertCode" href="/topics/campus_act.html">马上领取</a></div>
+		</div>
+		<div class="closeTips" id="closeTips"><img src="/styles/default/images/campusOrientActivity/close.jpg" onclick="DialogClose('.campus_tips')" /></div>
+	</div>
+<script type="text/javaScript">
+    $('#campus_tips').hide();
+    $('#insertCode').click(function(){
+    	addEventCode('XYYX_PC_LOGON_new_Y');//点击领取 的插码 
+    })
+    $('#closeTips').click(function(){
+    	addEventCode('XYYX_PC_LOGON_new_N');//点击关闭  的插码 
+    })
+	var contextPath = "";
+	var basePath="";
+	var imgPath="/pic/ware/";
+	var isShow = "Y";
+	
+	var brand_gotone = "0";
+	var brand_mzone = "2";
+	var ware_show_img_px_110 = "_110.";
+	var brand_easyown = "1";
+	var MOBILE_LEVEL_DIAMOND="301";
+	var MOBILE_LEVEL_GOLD="302";
+	var MOBILE_LEVEL_SILVER="303";
+	var PAY_TYPE_INTEGRAL="01";
+	
+	var user_login_status_login = "USER_LOGIN_STATUS_LOGIN";
+	var user_login_status_not_login = "USER_LOGIN_STATUS_NOT_LOGIN";
+	var searchAction = contextPath + "/portal/ware/web/SearchWareAction?action=searchWareInfo";
+	var checkUserLogin = basePath + "/portal/order/web/UserOrderAction?action=checkUserLogin";
+
+	$(function(){
+		if("Y" == isShow){
+	        
+	        $("#wareName").autocomplete(contextPath + "/portal/ware/web/SearchWareAction?action=getSuggest", {
+	    		scroll: false,
+	    		selectFirst: false,
+	    		parse: function(data) {
+	    			var parsed = [];
+	    			var docs = eval('(' + data + ')');
+	    			for (var i=0; i&lt;docs.length; i++) {
+	    				var row = docs[i].word.split("|");
+	    				parsed[parsed.length] = {
+	    					data: row,
+	    					value: row[0],
+	    					result: row[0],
+	    					oriData: docs[i]
+	    				};
+	    			}
+	    			return parsed;
+	    		}
+	    	});
+	        
+	        //用于统计提示关键字点击率
+	        $("#wareName").result(function(event, data, formatted) {
+	        	if (data) {
+	        		var termId = data.id;
+	        		if (termId) {
+	        			$.ajax({
+	        				url: contextPath + "/portal/ware/web/SearchWareAction?action=incrHitCount",
+	        				type: 'POST',
+	        				data: '&amp;tid='+termId,
+	        				dataType: 'json',
+	        				async: false
+	   	       			});
+	        		}
+	        		doSearch();
+	        	}
+	        });
+	        
+	        $(window).resize(function() {
+	        	var width = $("input.ac_input").width();
+	        	if (width &lt; 300) {
+	        		//提示框有1px的边框
+	        		width = $("div.search-in").width() -2;
+	        	} else {
+	        		//宽度+34，是因为输入框左侧有个34px的padding
+	        		width = $("#wareName").width() + 34;
+	        	}
+	        	
+	        	$("div.ac_results").width(width);
+	        	
+	        	var offset = $("div.search-in").offset();
+	        	var top = offset.top;
+	        	var left = offset.left;
+	        	$("div.ac_results").css("left", left);
+	        	$("div.ac_results").css("top", top + $("div.search-in").height());
+	        });
+		}
+	});
+
+	/*为此function增加一级二级三级目录名称，作为入参用于插码按钮值区分记录*
+	 *此方法在一级目录，传入一级目录对应的4个参数；二级目录时候传入一级二级对应参数，三级目录时候传入一二三级目录对应参数。
+	 */
+	function searchNaviWare(onecontent,onetype,oneid,oneName,twocontent,twotype,twoid,twoName,thrcontent,thrtype,thrid,threeName){
+		var type = "";
+		var hreftmp = "";
+		if(typeof(thrid) != 'undefined'){
+			//hreftmp = "&amp;onli="+oneid+"&amp;twli="+twoid+"&amp;thli="+thrid;
+			hreftmp = oneid+"_"+twoid+"_"+thrid;
+			if(thrtype==3){
+				hreftmp = thrcontent;
+				type = 3;
+			}
+			//增加插码功能
+			if(typeof(threeName)!="undefined"){				
+				addEventCode('JF_LPFL_'+threeName);
+				//运营监控平台插码  三级类目点击事件
+		 		eventVesopera('JFPC_TOP_CATA03_'+threeName);
+			}
+			
+		}else if(typeof(twoid) != 'undefined'){
+			//hreftmp = "&amp;onli="+oneid+"&amp;twli="+twoid;
+			hreftmp = oneid+"_"+twoid+"_0";
+			if(twotype==3){
+				hreftmp = twocontent;
+				type = 3;
+			}
+			//增加插码功能
+			if(typeof(twoName)!="undefined"){				
+				addEventCode('JF_LPFL_'+twoName);
+				//运营监控平台插码   二级类目点击事件
+		 		eventVesopera('JFPC_TOP_CATA02_'+twoName);
+			}
+		}else{
+			//hreftmp = "&amp;onli="+oneid;
+			hreftmp = oneid+"_0_0";
+			if(onetype==3){
+				hreftmp = onecontent;
+				type = 3;
+			}
+			//增加插码功能
+			if(typeof(oneName)!="undefined"){				
+				addEventCode('JF_LPFL_'+oneName);
+				//运营监控平台插码   一级类目点击事件 
+		 		eventVesopera('JFPC_TOP_CATA01_'+oneName);
+			}
+		}
+		
+		var url = "";
+		if(type==3){
+			url = hreftmp;
+		}else {
+			//url = ""+"/portal/ware/web/SearchWareAction?action=searchWareInfo"+hreftmp;
+			url = "/category/"+hreftmp+".html";
+		}
+		windowLocationHref(url);
+	} 
+	 
+	function sendHotSearchSignForAnd(name,url){
+		//运营监控平台插码
+		eventVesopera('JFPC_TOP_HJF_'+name);
+		if(name=='和·优选'){
+			addEventCode('JF_HOT_SS_和·优选');
+		}
+		window.location.href=url;
+	}
+
+	  //为了增加插码，对首页 头部页签部分 重新抽象出的function navInfoFuc(navInfoUrl,navName)
+	function navInfoFuc(navInfoUrl,navName){
+		var targetNavUrl=contextPath+navInfoUrl;
+		//插码
+		addEventCode('JF_NAV_'+navName);
+		//运营监控系统插码
+		eventVesopera('JFPC_TOP_NAVI_'+navName);
+		window.location.href=targetNavUrl;
+	}
+	function goCart(){
+		//运营监控系统插码
+		eventVesopera('JF_CARS');
+		window.location.href="/portal/order/web/ShoppingCartAction?action=showUserShopInfo";
+	}
+	
+</script>   
+<script type="text/javascript" src="/scripts/CommUtil-head_search-min.js"></script>
+<script type="text/javascript" src="/scripts/webtrends.load-min.js"></script>
+<script type="text/javascript" src="/scripts/public-min.js"></script>
+
+
+
+<div class="w1200 clearfix">
+    <p class="adress-title ">
+      <b class="dispalyinlineblock vertical-align-m">
+          <a href="/portal/user/web/UserOrderQueryAction?action=myDefaultAccount">我的账户</a> 
+      </b>
+      <span class="dispalyinlineblock vertical-align-m"></span>
+    </p>
+    <div class="fl adress-left">
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript" src="/scripts/adress.js"></script>
+        
+        <a id="a0" class="dispalyblock adress-left-title  adress-left-list-clecked" href="/portal/user/web/UserOrderQueryAction?action=myDefaultAccount">
+             <i class="dispalyinlineblock user-icon vertical-align-m"></i>
+             <span class="vertical-align-m">我的账户</span>
+        </a>
+        <dl class="adress-left-list">
+            <dt class="adress-left-list-title"><i class="dispalyinlineblock vertical-align-m"></i><span class="dispalyinlineblock vertical-align-m">账户信息</span></dt>
+             
+            <dd id="dd1"><a class="dispalyblock" href="/portal/user/web/UserBaseAction?action=queryUserJF"><span>积分查询</span></a></dd>
+          
+          
+            <dd id="dd2"><a class="dispalyblock" href="/portal/user/web/UserAccountAction?action=toTransferPoints"><span>积分转赠</span></a></dd>
+            <dd id="dd3"><a class="dispalyblock" href="/portal/user/web/UserAccountAction?action=toTransferPointsQuery"><span>积分转赠查询</span></a></dd>
+          
+          
+            <dd id="dd15"><a class="dispalyblock" href="/portal/jfTicket/web/MyJFTicketsAction?action=getNoUsedJFTicket"><span>我的积分优惠券</span></a></dd>
+            <dd id="dd16"><a class="dispalyblock" href="/portal/jfTicket/web/JFTicketsRechargeAction?action=goJFTicketRecharge"><span>积分自助充值</span></a></dd>
+          
+          	<dd id="dd17"><a class="dispalyblock" href="/portal/user/web/UserLegeonRltAction?action=queryUserLegeonRltInfo"><span>平台解绑</span></a></dd>           
+        </dl>
+        <dl class="adress-left-list">
+            <dt class="adress-left-list-title">
+                <i class="dispalyinlineblock vertical-align-m"></i>
+                <span class="dispalyinlineblock vertical-align-m">订单中心</span>
+            </dt>
+            <dd id="dd4"><a class="dispalyblock" href="/asynorder/user/web/UserOrderQueryAction?action=initOrderQuery&amp;timePrior=30"><span>我的订单</span></a></dd>
+            <dd id="dd5"><a class="dispalyblock" href="/asynorder/user/web/UserOrderQueryAction?action=initTuanOrderQuery&amp;timePrior=90"><span>我的团购</span></a></dd>
+             
+             <dd id="dd6"><a class="dispalyblock" href="/user/userLotteryInfoQuery.jsp"><span>我的抽奖</span></a></dd>
+          
+            
+                <dd id="dd7"><a class="dispalyblock" href="/portal/user/web/UserCommentAction?action=getUserExchangeWareRe"><span>礼品评价</span></a></dd>
+            
+        </dl>
+        <dl class="adress-left-list">
+            <dt class="adress-left-list-title"><i class="dispalyinlineblock vertical-align-m"></i><span class="dispalyinlineblock vertical-align-m">我的关注</span></dt>
+            <dd id="dd11"><a class="dispalyblock" href="/portal/user/web/UserAccountAction?action=showUserFavoriteWare"><span>我的收藏</span></a></dd>
+            <dd id="dd12"><a class="dispalyblock" href="/portal/information/web/UserBookAction?action=getUserBookRemind"><span>到货提醒</span></a></dd>
+            <dd id="dd13"><a class="dispalyblock" href="/portal/information/web/UserBookAction?action=veiwUserBookInfo"><span>信息订阅</span></a></dd>
+            <dd id="dd14"><a class="dispalyblock" href="/user/businessOffice.jsp"><span>营业厅查询</span></a></dd>
+           
+        </dl>
+        <dl class="adress-left-list">
+            <dt class="adress-left-list-title"><i class="dispalyinlineblock user-icon vertical-align-m"></i><span class="dispalyinlineblock vertical-align-m">个人资料</span></dt>
+            <dd id="dd8"><a class="dispalyblock" href="/portal/user/web/UserBaseAction?action=getUserBaseInfo"><span>个人信息</span></a></dd>
+            <dd id="dd9"><a class="dispalyblock" href="/portal/user/web/UserAccountAction?action=getAssigneeInfo"><span>受让人管理</span></a></dd>
+            <dd id="dd10"><a class="dispalyblock" href="/portal/user/web/UserAccountAction?action=getAddressList"><span>收货地址管理</span></a></dd>
+        </dl>
+<script type="text/javascript">
+var ddId="0";
+$(document).ready(function(){
+	if(ddId=="0"){
+		$("a[id='a"+ddId+"']").addClass("adress-left-list-clecked");
+	}
+	$("dd[id='dd"+ddId+"']").addClass("adress-left-list-clecked");
+});
+$("#dd6").click(function(){//我的抽奖功能键插码
+	addEventCode('XYYX_PC_MY_draw');
+})
+</script>
+    </div>
+    <div class="fr adress-right">
+        <!--header-->
+       <ul class="my-account-index-header clearfix">
+            <li class="fl border-right-white clearfix user-header-box">
+                <div class="fl user-header-box-img"><img src="/styles/default/images/person-icon.jpg" /></div>
+                <div class="fl user-header-box-msg">
+                    <p class="user-name beyond_ellipsis1">150****9916</p>
+                    <p class="user-score"><i class="icon-bg star09"></i></p>
+                </div>
+            </li>
+            <li class="fl border-right-white integral-show">
+                <p>积分余额：<span>1999</span></p>
+                <p>可用积分：<span>1999</span></p>
+            </li>
+            <li class="fl details-box">
+                <ul class="clearfix details-box-ul">
+                    <li class="fl wait-pay">
+                        <a class="dispalyblock" href="/asynorder/user/web/UserOrderQueryAction?action=initOrderQuery&amp;timePrior=30&amp;queryType=1&amp;queryOrderType=1&amp;pageN=5">
+                            <i class="dispalyblock wait-pay-icon"></i>
+                            <p>待付款</p>
+                        </a>
+                    </li>
+                    <li class="fl wait-receivables">
+                        <a class="dispalyblock" href="/asynorder/user/web/UserOrderQueryAction?action=initOrderQuery&amp;timePrior=30&amp;pageN=2">
+                            <i class="dispalyblock wait-receivables-icon"></i>
+                            <p>待收货</p>
+                        </a>
+
+                    </li>
+                    <li class="fl completed">
+                        <a class="dispalyblock" href="/asynorder/user/web/UserOrderQueryAction?action=initOrderQuery&amp;timePrior=30&amp;pageN=3">
+                            <i class="dispalyblock completed-icon"></i>
+                            <p>已完成</p>
+                        </a>
+
+                    </li>
+                    <li class="fl wait-delivery">
+                        <a class="dispalyblock" href="/asynorder/user/web/UserOrderQueryAction?action=initOrderQuery&amp;timePrior=30&amp;pageN=1">
+                            <i class="dispalyblock wait-delivery-icon"></i>
+                            <p>待发货</p>
+                        </a>
+
+                    </li>
+                </ul>
+            </li>
+       </ul>
+        <!--header-end-->
+		<!--广告位start  -->
+		
+				<div class="bannerMain1">
+					<a class="bannerImgLink" href="javascript:void(0);" onclick="javascript:sendADSign('http://jf.10086.cn/topics/100000000005563.html');return false;" target="_blank">
+					<img id="bannerImg" src="http://jf-asset2.10086.cn/pic/market/1546570316519.jpg" />
+
+					</a>
+				</div>
+		
+        
+		<!--广告位end   -->
+        <!--我可兑换-->
+        <div class="my-collection">
+            <p class="my-collection-box-title clearfix">
+                <span class="fl">我可兑换</span>
+               
+                <a class="dispalyinlineblock fr more-link" href="javascript:sendWareExchSign('/portal/ware/web/SearchWareAction?action=searchWareInfo&amp;smewi=smewi');">更多</a>
+               
+            </p>
+            <div class="text_m no-my-collection clearfix">
+                <!--您现在还没有可兑换的商品-->
+             
+                <!--您现在还没有可兑换的商品end-->
+                <div style="display:block">
+                 <!--浏览兑换商品列表 begin  -->
+   
+                    <div class="fl my-collection-content-list text_m">
+                        <a class="dispalyblock" href="javascript:sendWareExchSign('/ware/100000000503701.html');">
+                        <!-- 缺少样式 class="my-collection-content-img" -->
+                        <img id="346033" class="my-collection-content-img" src="http://jf-asset2.10086.cn/pic/ware/1/1/346033_1307503619313_240.jpg" />
+
+                            <p class="price text_l clearfix">
+							 <span class="dispalyinlineblock fl">积分：
+							   <span class="dispalyinlineblock vertical-align-m">8340</span>
+							 </span>
+							 
+							 
+							 
+							  
+                                <i class="vertical-align-m dispalyinlineblock price-icon fr"></i>
+                             
+							</p>
+                        </a>
+                        
+                    </div>
+   
+                    <div class="fl my-collection-content-list text_m">
+                        <a class="dispalyblock" href="javascript:sendWareExchSign('/ware/100000000503700.html');">
+                        <!-- 缺少样式 class="my-collection-content-img" -->
+                        <img id="346032" class="my-collection-content-img" src="http://jf-asset2.10086.cn/pic/ware/0/0/346032_1307503291261_240.jpg" />
+
+                            <p class="price text_l clearfix">
+							 <span class="dispalyinlineblock fl">积分：
+							   <span class="dispalyinlineblock vertical-align-m">4170</span>
+							 </span>
+							 
+							 
+							 
+							  
+                                <i class="vertical-align-m dispalyinlineblock price-icon fr"></i>
+                             
+							</p>
+                        </a>
+                        
+                    </div>
+   
+                    <div class="fl my-collection-content-list text_m">
+                        <a class="dispalyblock" href="javascript:sendWareExchSign('/ware/100000000503699.html');">
+                        <!-- 缺少样式 class="my-collection-content-img" -->
+                        <img id="346031" class="my-collection-content-img" src="http://jf-asset1.10086.cn/pic/ware/99/99/346031_1307503976361_240.jpg" />
+
+                            <p class="price text_l clearfix">
+							 <span class="dispalyinlineblock fl">积分：
+							   <span class="dispalyinlineblock vertical-align-m">2500</span>
+							 </span>
+							 
+							 
+							 
+							  
+                                <i class="vertical-align-m dispalyinlineblock price-icon fr"></i>
+                             
+							</p>
+                        </a>
+                        
+                    </div>
+   
+                    <div class="fl my-collection-content-list text_m">
+                        <a class="dispalyblock" href="javascript:sendWareExchSign('/ware/100000130685909.html');">
+                        <!-- 缺少样式 class="my-collection-content-img" -->
+                        <img id="388922" class="my-collection-content-img" src="http://jf-asset1.10086.cn/pic/ware/9/9/388922_1512119839943_240.jpg" />
+
+                            <p class="price text_l clearfix">
+							 <span class="dispalyinlineblock fl">积分：
+							   <span class="dispalyinlineblock vertical-align-m">1970</span>
+							 </span>
+							 
+							 
+							 
+							 
+							</p>
+                        </a>
+                        
+                    </div>
+   
+                 <!--浏览兑换商品列表 end  -->
+                </div>
+            </div>
+        </div>
+        <!--我可兑换end-->
+
+         <!--我的浏览-->
+       <div class="my-collection">
+            <p class="my-collection-box-title clearfix"><span class="fl">浏览历史</span></p>
+            <div class="text_m no-my-collection clearfix">
+            
+            
+                <!--您还没有浏览过我们的商品-->
+                <div style="display:block">
+                    <i class="dispalyinlineblock brows-history-icon"></i>
+                    <p>您还没有浏览过我们的礼品~</p>
+                </div>
+            
+            
+                <!--您还没有浏览过我们的商品end-->
+                <div style="display:block">
+                   
+                </div>
+            </div>
+        </div>
+        <!--我的浏览end-->
+        <!--我的收藏begin -->
+         <div class="my-collection"> 
+            <p class="my-collection-box-title clearfix">
+               <span class="fl">我的收藏</span>
+                 
+            </p>
+            <div class="text_m no-my-collection clearfix">
+                <!--您目前还没有收藏任何商品哦-->
+      
+                <div style="display: block">
+                    <i class="dispalyinlineblock no-my-collection-icon"></i>
+                    <p>您目前还没有收藏任何礼品哦~</p>
+                </div>
+      
+                <!--您目前还没有收藏任何商品哦end-->
+                <div style="display:block">
+                 
+                </div>
+            </div>
+        </div>
+      <!--我的收藏end -->   
+    </div>
+</div>
+<!--尾部begin-->
+ 
+ 
+ 
+ 
+
+
+
+
+
+<!--尾部begin-->
+<div class="footer">
+    <div class="helpfoot clearfix">
+        <ul>
+            
+            <li>
+            	<h2><a href="javascript:;">新手上路</a></h2>
+            	
+	    		     
+				      <span><a href="javascript:commonHelpUrl('100000000000002','客服密码','新手上路');">
+				       客服密码 </a>
+				      </span>
+				      
+    		    
+	    		     
+				      <span><a href="javascript:commonHelpUrl('100000000000003','兑换流程','新手上路');">
+				       兑换流程 </a>
+				      </span>
+				      
+    		    
+	    		     
+				      <span><a href="javascript:commonHelpUrl('100000000000217','中国移动手机营业厅','新手上路');">
+				       中国移动手机营业厅 </a>
+				      </span>
+				      
+    		    
+    		 <cite class="icon01 icon-bg"></cite>
+            </li>
+            
+             
+            <li>
+            	<h2><a href="javascript:;">配送方式</a></h2>
+            	
+	    		     
+				      <span><a href="javascript:commonHelpUrl('100000000000006','送货上门','配送方式');">
+				       送货上门 </a>
+				      </span>
+				      
+    		    
+    		 <cite class="icon02 icon-bg"></cite>
+            </li>
+            
+             
+            <li>
+            	<h2><a href="javascript:;">售后服务</a></h2>
+            	
+	    		     
+				      <span><a href="javascript:commonHelpUrl('100000000000010','退换货政策','售后服务');">
+				       退换货政策 </a>
+				      </span>
+				      
+    		    
+	    		     
+				      <span><a href="javascript:commonHelpUrl('100000000000011','礼品三包','售后服务');">
+				       礼品三包 </a>
+				      </span>
+				      
+    		    
+	    		     
+				      <span><a href="javascript:commonHelpUrl('100000000000012','查看订单','售后服务');">
+				       查看订单 </a>
+				      </span>
+				      
+    		    
+    		 <cite class="icon03 icon-bg"></cite>
+            </li>
+            
+             
+            <li>
+            	<h2><a href="javascript:;">积分计划</a></h2>
+            	
+	    		     
+				      <span><a href="javascript:commonHelpUrl('100000000000014','中国移动积分计划','积分计划');">
+				       中国移动积分计划 </a>
+				      </span>
+				      
+    		    
+	    		     
+				      <span><a href="javascript:commonHelpUrl('100000000000016','常见问题','积分计划');">
+				       常见问题 </a>
+				      </span>
+				      
+    		    
+    		 <cite class="icon04 icon-bg"></cite>
+            </li>
+            
+             
+            <li class="bor-right">
+            	<h2><a style="color:#5e5e5e;">客服电话</a></h2>
+            	<span><a style="color:#5e5e5e;">7x24小时热线</a></span>
+            	<span><i><a style="color:#5e5e5e;">10086</a></i></span>
+            	<span class="phone icon-bg"></span>
+            </li>
+        </ul>
+    </div>
+       
+<div class="footer">
+    <div class="copyright clearfix">
+    	<ul>
+    	    <li><i class="icon-bg"></i><a href="http://www.10086.cn/web_notice/contact/" target="_blank">联系我们</a></li>
+    	    <li><a href="http://www.10086.cn/support/" target="_blank">帮助信息</a></li>
+    	    <li><a href="http://www.miibeian.gov.cn/" target="_blank">京ICP备05002571号</a></li>
+    	    <li class="bor-right"><a style="color:#5e5e5e;">中国移动通信版权所有</a></li>
+        </ul>
+    </div>
+  </div>
+
+</div>
+<!-- 尾部end -->
+ <script type="text/javascript" src="/scripts/ntes-min.js"></script>
+ 
+ <script type="text/javascript">
+	
+	//新需求为了追加插码,新定义的function
+	function commonHelpUrl(helpCenterUrlId,helpCenterMenuName,firstMenuName){
+		//运营监控系统插码  首页的页尾内容插码
+		eventVesopera('JFPC_TOP_YWDH_'+helpCenterMenuName);
+		if("新手上路"==firstMenuName){
+			//JF_FOOT_XS_N
+			addEventCode('JF_FOOT_XS_'+helpCenterMenuName);
+			}
+		else if("配送方式"==firstMenuName){
+			//JF_FOOT_PS_N
+			addEventCode('JF_FOOT_PS_'+helpCenterMenuName);
+			}
+		else if("售后服务"==firstMenuName){
+			//JF_FOOT_SH_N
+			addEventCode('JF_FOOT_SH_'+helpCenterMenuName);
+			}
+		else if("积分计划"==firstMenuName){
+			//JF_FOOT_JH_N
+			addEventCode('JF_FOOT_JH_'+helpCenterMenuName);
+		}
+
+		var helpCenterUrlStr="";
+		if("积分网站地图"==helpCenterMenuName||"100000000000004l"==helpCenterUrlId){
+			helpCenterUrlStr='http://jf.10086.cn/help/sitemap.html';
+		}
+		else{
+			helpCenterUrlStr='http://jf.10086.cn/help/'+helpCenterUrlId+'.html';
+		}
+		windowLocationHref(helpCenterUrlStr);
+	}
+ </script>
+ <!-- 下面这个是生成静态页用到的关键字，勿删 -->
+  <!-- xxx_check_page_state_flag_xxx -->
+<!-- 尾部end -->
+<script type="text/javascript" src="/scripts/isShowTips-min.js"></script>
+
+<script type="text/javascript" src="/scripts/user-min.js"></script>
+<script type="text/javascript">
+function sendWareExchSign(url){
+	//我可兑换按钮插码	JF_MYSY_DH
+	addEventCode('JF_MYSY_DH');
+	window.location.href=url;
+	
+}
+function sendCollectWareSign(url){
+	//我的收藏按钮插码	JF_MYSY_SC
+	addEventCode('JF_MYSY_SC');
+	window.location.href=url;
+}
+function sendScanWareSign(url){
+	//浏览历史按钮插码	JF_MYSY_LL
+	addEventCode('JF_MYSY_LL');
+	window.location.href=url;
+}
+function sendADSign(intentUrl){
+	if(intentUrl!=null&amp;&amp;$.trim(intentUrl)!= ""){//将页面以新窗口打开
+		window.open(intentUrl,"_blank");
+	}
+}
+</script>
+
+</body></html>

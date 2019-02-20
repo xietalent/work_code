@@ -2,12 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e4e065ad-27a2-4502-a094-f64318782304" name="Default Changelist" comment="pybook! my pybook! my pybook! my pybook! my pybook! my pybook! my pybook! my pybook! my pybook! my pybook! my pybook! my pybook! my pybook! my pybook! my pybook! my pybook! my pybook! my pybook! my pybook! my pybook! my pybook! my pybook! my pybook! my pybook! my pybook! my pybook! my pybook! my pybook! my pybook! my pybook! my pybook! my pybook! my pybook! my pybook! my pybook! my pybook! my pybook! my pybook! my pybook! my pybook! my pybook! my pybook! my pybook! my pybook! my pybook! my pybook! my pybook! my pybook! my pybook! my pybook! my pybook! my pybook!">
-      <change afterPath="$PROJECT_DIR$/../spiders_two/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml___jb_tmp___" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/abc_bank.py" beforeDir="false" afterPath="$PROJECT_DIR$/abc_bank.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my_spider/zhongshihua.py" beforeDir="false" afterPath="$PROJECT_DIR$/my_spider/zhongshihua.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tools/abc_bank/abc_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/tools/abc_bank/abc_test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../spiders_two/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../spiders_two/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -82,7 +78,7 @@
     <session id="539074722">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="16" />
+          <entry key="project.closed" value="17" />
           <entry key="project.open.time.1" value="1" />
           <entry key="project.open.time.2" value="1" />
           <entry key="project.open.time.20" value="1" />
@@ -290,7 +286,7 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="1">
+  <component name="ProjectFrameBounds">
     <option name="x" value="6" />
     <option name="y" value="128" />
     <option name="width" value="1163" />
@@ -508,7 +504,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="6" y="128" width="1163" height="913" extended-state="1" />
+    <frame x="6" y="128" width="1163" height="913" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2330009" />

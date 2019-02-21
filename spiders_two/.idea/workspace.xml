@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="50c9e39f-b95b-437d-b105-e54caa569b46" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../spiders/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../spiders/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/china_mobile.py" beforeDir="false" afterPath="$PROJECT_DIR$/china_mobile.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/china_telecom.py" beforeDir="false" afterPath="$PROJECT_DIR$/china_telecom.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/china_unicom.py" beforeDir="false" afterPath="$PROJECT_DIR$/china_unicom.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/china_mobile/account.txt" beforeDir="false" afterPath="$PROJECT_DIR$/templates/china_mobile/account.txt" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -15,6 +15,7 @@
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/spiders_two$zhongshiyou.coverage" NAME="zhongshiyou Coverage Results" MODIFIED="1550542961568" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/spiders_two$china_mobile.coverage" NAME="china_mobile Coverage Results" MODIFIED="1550651070449" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/spiders_two$china_telecom.coverage" NAME="china_telecom Coverage Results" MODIFIED="1550743791401" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="FUSProjectUsageTrigger">
     <session id="-1538221139">
@@ -22,30 +23,35 @@
         <counts>
           <entry key="project.closed" value="2" />
           <entry key="project.open.time.1" value="1" />
+          <entry key="project.open.time.20" value="1" />
           <entry key="project.open.time.29" value="1" />
           <entry key="project.open.time.34" value="1" />
           <entry key="project.open.time.4" value="1" />
-          <entry key="project.opened" value="4" />
+          <entry key="project.opened" value="5" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="py" value="8" />
+          <entry key="png" value="2" />
+          <entry key="py" value="13" />
+          <entry key="txt" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="Python" value="8" />
+          <entry key="Image" value="2" />
+          <entry key="PLAIN_TEXT" value="1" />
+          <entry key="Python" value="13" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="py" value="3233" />
+          <entry key="py" value="3687" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Python" value="3233" />
+          <entry key="Python" value="3687" />
         </counts>
       </usages-collector>
     </session>
@@ -53,37 +59,18 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/zhongshiyou.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="275">
-              <caret line="11" column="21" selection-start-line="11" selection-start-column="21" selection-end-line="11" selection-end-column="21" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/china_mobile.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="511">
-              <caret line="306" lean-forward="true" selection-start-line="306" selection-end-line="306" />
+            <state relative-caret-position="236">
+              <caret line="28" selection-start-line="28" selection-end-line="303" selection-end-column="33" />
               <folding>
                 <element signature="e#88#110#0" expanded="true" />
+                <element signature="e#757#11518#0" />
                 <element signature="e#799#903#0" />
                 <element signature="e#936#956#0" />
-                <element signature="e#1005#1316#0" />
                 <element signature="e#1355#1752#0" />
                 <element signature="e#1812#2353#0" />
                 <element signature="e#2411#2836#0" />
-                <element signature="e#2897#3359#0" />
-                <element signature="e#3407#4174#0" />
-                <element signature="e#4209#5261#0" />
-                <element signature="e#4927#5964#0" />
-                <element signature="e#4948#5891#0" />
-                <element signature="e#6052#8101#0" />
-                <element signature="e#6847#8101#0" />
-                <element signature="e#7633#9752#0" />
-                <element signature="e#8869#9752#0" />
-                <element signature="e#8676#10267#0" />
                 <marker date="1550659453647" expanded="true" signature="4180:7560" ph="..." />
               </folding>
             </state>
@@ -94,19 +81,28 @@
         <entry file="file://$PROJECT_DIR$/text/tests.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="25">
-              <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
+              <caret line="1" selection-start-line="1" selection-end-line="1" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/china_unicom.py">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/china_telecom.py">
-          <provider selected="true" editor-type-id="text-editor" />
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="121">
+              <caret line="287" lean-forward="true" selection-start-line="287" selection-end-line="287" />
+              <folding>
+                <element signature="e#88#110#0" expanded="true" />
+                <element signature="e#1712#2198#0" />
+                <element signature="e#2259#2646#0" />
+                <element signature="e#2704#3041#0" />
+                <element signature="e#5483#6005#0" />
+                <element signature="e#6738#8030#0" />
+                <element signature="e#8598#10121#0" />
+                <element signature="e#10263#12394#0" />
+              </folding>
+            </state>
+          </provider>
         </entry>
       </file>
     </leaf>
@@ -118,6 +114,14 @@
       </list>
     </option>
   </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>kehuhao</find>
+    </findStrings>
+    <replaceStrings>
+      <replace>passwd</replace>
+    </replaceStrings>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
@@ -125,10 +129,10 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/zhongshiyou.py" />
-        <option value="$PROJECT_DIR$/china_unicom.py" />
-        <option value="$PROJECT_DIR$/china_telecom.py" />
         <option value="$PROJECT_DIR$/text/tests.py" />
         <option value="$PROJECT_DIR$/china_mobile.py" />
+        <option value="$PROJECT_DIR$/china_unicom.py" />
+        <option value="$PROJECT_DIR$/china_telecom.py" />
       </list>
     </option>
   </component>
@@ -139,10 +143,10 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="135" />
-    <option name="y" value="109" />
-    <option name="width" value="1158" />
-    <option name="height" value="848" />
+    <option name="x" value="851" />
+    <option name="y" value="93" />
+    <option name="width" value="1405" />
+    <option name="height" value="931" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="1" id="Add" />
@@ -152,7 +156,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -160,10 +163,22 @@
               <item name="spiders_two" type="b2602c69:ProjectViewProjectNode" />
               <item name="spiders_two" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="spiders_two" type="b2602c69:ProjectViewProjectNode" />
+              <item name="spiders_two" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="spiders_two" type="b2602c69:ProjectViewProjectNode" />
+              <item name="spiders_two" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="china_mobile" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -190,7 +205,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.china_mobile">
+  <component name="RunManager" selected="Python.china_telecom">
     <configuration name="china_mobile" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="spiders_two" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -205,6 +220,28 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/china_mobile.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="china_telecom" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="spiders_two" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/china_telecom.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -238,9 +275,11 @@
     <list>
       <item itemvalue="Python.china_mobile" />
       <item itemvalue="Python.zhongshiyou" />
+      <item itemvalue="Python.china_telecom" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.china_telecom" />
         <item itemvalue="Python.china_mobile" />
         <item itemvalue="Python.zhongshiyou" />
       </list>
@@ -260,14 +299,14 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="135" y="109" width="1158" height="848" extended-state="0" />
+    <frame x="851" y="93" width="1405" height="931" extended-state="0" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.21857923" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17026022" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.46078432" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.40526977" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -295,10 +334,10 @@
     <entry file="file://$PROJECT_DIR$/tools/keybord_DD.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://D:/virtu/spiderenv/Lib/site-packages/selenium/webdriver/remote/errorhandler.py">
+    <entry file="file://$PROJECT_DIR$/zhongshiyou.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="222">
-          <caret line="241" selection-start-line="241" selection-end-line="241" />
+        <state relative-caret-position="275">
+          <caret line="11" column="21" selection-start-line="11" selection-start-column="21" selection-end-line="11" selection-end-column="21" />
         </state>
       </provider>
     </entry>
@@ -309,49 +348,77 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/zhongshiyou.py">
+    <entry file="file://$PROJECT_DIR$/images/china_telecom/login_imcode.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/images/china_telecom/cb_imcode.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://D:/virtu/spiderenv/Lib/site-packages/selenium/webdriver/remote/errorhandler.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="275">
-          <caret line="11" column="21" selection-start-line="11" selection-start-column="21" selection-end-line="11" selection-end-column="21" />
+        <state relative-caret-position="222">
+          <caret line="240" selection-start-line="240" selection-end-line="240" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/china_unicom.py">
-      <provider selected="true" editor-type-id="text-editor" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="7" column="47" selection-start-line="7" selection-start-column="47" selection-end-line="7" selection-end-column="47" />
+        </state>
+      </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/china_telecom.py">
-      <provider selected="true" editor-type-id="text-editor" />
+    <entry file="file://D:/virtu/spiderenv/Lib/site-packages/selenium/webdriver/remote/webdriver.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="155">
+          <caret line="320" selection-start-line="320" selection-end-line="320" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/china_mobile/account.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-725">
+          <caret line="6" column="44" lean-forward="true" selection-start-line="4" selection-start-column="39" selection-end-line="6" selection-end-column="44" />
+        </state>
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/text/tests.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="25">
-          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
+          <caret line="1" selection-start-line="1" selection-end-line="1" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/china_mobile.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="511">
-          <caret line="306" lean-forward="true" selection-start-line="306" selection-end-line="306" />
+        <state relative-caret-position="236">
+          <caret line="28" selection-start-line="28" selection-end-line="303" selection-end-column="33" />
           <folding>
             <element signature="e#88#110#0" expanded="true" />
+            <element signature="e#757#11518#0" />
             <element signature="e#799#903#0" />
             <element signature="e#936#956#0" />
-            <element signature="e#1005#1316#0" />
             <element signature="e#1355#1752#0" />
             <element signature="e#1812#2353#0" />
             <element signature="e#2411#2836#0" />
-            <element signature="e#2897#3359#0" />
-            <element signature="e#3407#4174#0" />
-            <element signature="e#4209#5261#0" />
-            <element signature="e#4927#5964#0" />
-            <element signature="e#4948#5891#0" />
-            <element signature="e#6052#8101#0" />
-            <element signature="e#6847#8101#0" />
-            <element signature="e#7633#9752#0" />
-            <element signature="e#8869#9752#0" />
-            <element signature="e#8676#10267#0" />
             <marker date="1550659453647" expanded="true" signature="4180:7560" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/china_telecom.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="121">
+          <caret line="287" lean-forward="true" selection-start-line="287" selection-end-line="287" />
+          <folding>
+            <element signature="e#88#110#0" expanded="true" />
+            <element signature="e#1712#2198#0" />
+            <element signature="e#2259#2646#0" />
+            <element signature="e#2704#3041#0" />
+            <element signature="e#5483#6005#0" />
+            <element signature="e#6738#8030#0" />
+            <element signature="e#8598#10121#0" />
+            <element signature="e#10263#12394#0" />
           </folding>
         </state>
       </provider>

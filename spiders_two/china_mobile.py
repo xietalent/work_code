@@ -26,7 +26,7 @@ import pytesseract
 import pytesseract.pytesseract
 
 
-class china_mobile(object):
+class China_mobile(object):
     def __init__(self,timeout= None):
         self.timeout=timeout
         self.logger = getLogger(__name__)
@@ -297,7 +297,7 @@ class china_mobile(object):
 
 if __name__ == '__main__':
     time1 = time.clock()
-    runs = china_mobile()
+    runs = China_mobile()
     tres1 = runs.start_spider()
     time2 = time.clock()
     time3 = round(time2-tres1,2)

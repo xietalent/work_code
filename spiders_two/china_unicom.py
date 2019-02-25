@@ -24,3 +24,28 @@ import urllib
 import urllib3
 import pytesseract
 import pytesseract.pytesseract
+
+class China_unicom(object,timeout = None):
+    def __init__(self):
+        self.timeout = timeout
+        self.logger = getLogger(__name__)
+        self.browser = webdriver.Chrome()
+
+    def __del__(self):
+        self.browser.close()
+
+    def process_request(self):
+        pass
+
+    def start_spider(self):
+        pass
+    pass
+
+
+if __name__ == '__main__':
+    time1 = time.clock()
+    runs = China_unicom()
+    tres1 = runs.start_spider()
+    time2 = time.clock()
+    time3 = round(time2 - tres1, 2)
+    print("总耗时:{}".format(time3))

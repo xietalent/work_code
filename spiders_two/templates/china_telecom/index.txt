@@ -1,4 +1,4 @@
-<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml"><head><script type="text/javascript" src="//gd.189.cn/insight/js/gd/live/insight_wangt.js?v=332"></script><script type="text/javascript" src="//gd.189.cn/insight/js/b/w.js?v=2019221"></script>
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml"><head><script type="text/javascript" src="//gd.189.cn/insight/js/b/w.js?v=2019225"></script>
 <meta charset="gb2312" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <title>我的189-中国电信欢go网站（原网上营业厅）·广东</title>
@@ -1018,16 +1018,16 @@ window.setTimeout("PubShowLatnName()", 350, "JAVASCRIPT" );
    <div class="menuBox">
 
  <!--用户信息-->   
- <div class="userInfoNew clearfix none" style="display: block;">
+ <div class="userInfoNew clearfix none">
    <div class="heaPor fl">
      <a href="/service/myhome/info.html">
-     <img src="/images/headportrait/defaultHeadportrait.jpg" class="userPic" /></a>
+     <img src="/service/myhome/images/touxiang.png" class="userPic" /></a>
      </div>
       
     <div class="userRight">  
-     <p class="name" id="custName" title="*雄">*雄</p>
-     <p class="star clearfix"></p>
-     <a class="kh" href="http://xjfw.189.cn/tykf-itr-services/modules/starService/medalWall/indexPC.html?in_cmpid=gdsb-zzfw-xjfw2018" target="_blank" id="isxing">普通会员</a>
+     <p class="name" id="custName">——</p>
+     <p class="star clearfix">——</p>
+     <a class="kh" href="http://xjfw.189.cn/tykf-itr-services/modules/starService/medalWall/indexPC.html?in_cmpid=gdsb-zzfw-xjfw2018" target="_blank" id="isxing">——</a>
      </div>
      </div> <!--用户信息end-->
  <!--切换号码--> 
@@ -1036,10 +1036,10 @@ window.setTimeout("PubShowLatnName()", 350, "JAVASCRIPT" );
                     <input type="hidden" id="busiType" name="busiType" value="" />
                     <input type="hidden" id="payType" name="payType" value="" />
             <div class="currSel2 pr fl"> 
-            <input type="hidden" id="currNumInfoStr" value="0755-19128324901-CDMA" />
-	         <input type="hidden" id="currNumBusiType" value="CDMA" />
-            <em class="currItem2 fl" id="currNum" title="19128324901">19128324901</em>
-                <ul class="selList2" id="numList"><li id="setNumSelect_0"><span id="0755-19128322849-CDMA">19128322849</span><span class="lx">(手机号码)</span></li><li id="setNumSelect_1"><span id="0755-19128324901-CDMA">19128324901</span><span class="lx">(手机号码)</span></li><li id="setNumSelect_2"><span id="0755-19128320932-CDMA">19128320932</span><span class="lx">(手机号码)</span></li><li id="setNumSelect_3"><span id="0755-19128322849@163.gd-AD">19128322849</span><span class="lx">(宽 　带 )</span></li><li id="setNumSelect_4"><span id="0755-075541749544@iptv.gd-AD-IPTV">075541749544</span><span class="lx">(宽 　带 )</span></li></ul>
+            <input type="hidden" id="currNumInfoStr" />
+	         <input type="hidden" id="currNumBusiType" />
+            <em class="currItem2 fl" id="currNum">——</em>
+                <ul class="selList2" id="numList"></ul>
             </div>
         </div>
     </div>
@@ -1097,7 +1097,7 @@ window.setTimeout("PubShowLatnName()", 350, "JAVASCRIPT" );
 						<span class="rh fl"></span>
 						<div class="vm fl">
 							登录号码：
-							<em id="loginNumberN" title="19128324901">19128324901</em>
+							<em id="loginNumberN">-</em>
 						</div>
 					</div>
 					<div class="myOrderplus" id="msg_Myhomenews"></div>
@@ -1130,7 +1130,7 @@ window.setTimeout("PubShowLatnName()", 350, "JAVASCRIPT" );
 							<em class="two RealchargeNum"><img src="/service/myhome/images/Loading.gif" /></em>
 							<a href="/service/home/query/xf_sshf.html?in_cmpid=gdds-zzfw-fycx-wdxf-hfcx2018" class="btnStyle1" target="_blank">查看</a>
 							</li>
-                            <li class="none clearfix" style="display: none;">
+                            <li class="none clearfix">
 							<span>我的欠费：</span>
 							<em class="two ArrearsNum"><img src="/service/myhome/images/Loading.gif" /></em>
 							<a href="/service/pay/index.jsp?in_cmpid=khzy-yhxx-mscz2018" class="btnStyle1" target="_blank">立即充值</a>
@@ -1368,14 +1368,14 @@ window.setTimeout("PubShowLatnName()", 350, "JAVASCRIPT" );
 <div class="numBox">
 <dl class="clearfix" id="morePhone">
 <dt><span></span>移动电话</dt>
-<dd><span><input type="radio" class="radio" name="radioNum" value="0755-19128322849-CDMA" /><label>19128322849</label></span></dd><dd><span><input type="radio" class="radio" name="radioNum" value="0755-19128324901-CDMA" /><label>19128324901</label></span></dd><dd><span><input type="radio" class="radio" name="radioNum" value="0755-19128320932-CDMA" /><label>19128320932</label></span></dd></dl>
+</dl>
 <dl class="clearfix" id="moreGH">
 <dt><span></span>固定电话</dt>
 </dl>
 
 <dl class="clearfix" id="moreAD">
 <dt><span></span>宽带</dt>
-<dd><span><input type="radio" class="radio" name="radioNum" value="0755-19128322849@163.gd-AD" /><label>19128322849</label></span></dd><dd><span><input type="radio" class="radio" name="radioNum" value="0755-075541749544@iptv.gd-AD-IPTV" /><label>075541749544</label></span></dd></dl>
+</dl>
 </div>
 <div class="btnBar">
   <a href="javascript:void(0);" class="btnStyle2 btnClose qd" onclick="selNum()">确定</a>

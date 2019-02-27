@@ -1,4 +1,4 @@
-<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml"><head><script type="text/javascript" src="//gd.189.cn/insight/js/b/w.js?v=2019225"></script>
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml"><head><script type="text/javascript" src="//gd.189.cn/insight/js/gd/live/insight_wangt.js?v=332"></script><script type="text/javascript" src="//gd.189.cn/insight/js/b/w.js?v=2019226"></script>
 <meta charset="gb2312" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <title>我的189-中国电信欢go网站（原网上营业厅）·广东</title>
@@ -439,7 +439,7 @@ if (PUB_LATNID == '020'|| PUB_LATNID == '0758' || PUB_LATNID =='0752'|| PUB_LATN
 			  if (PUB_LATNID == '0755'){//深圳	  
 			   document.write('&lt;a href="http://sz189.cn/huodong/ipdsjs.html?ssid=gdds-sydhl-kd-kdbl-gqzq-iptv" target="_blank"&gt;天翼高清互联网电视服务&lt;/a&gt; |    ');
 			  }else {//如其他地市为共同链接
-               document.write('&lt;a href="/hd/iptvser/info.html?ssid=gdds-syleft-kd-kdbl-cj-iptv" target="_blank"&gt;天翼高清互联网电视服务&lt;/a&gt; |   ');
+               document.write('&lt;a href="/hd/iptvser/info.html?ssid=gdds-syleft-kd-kdbl-yh3y-iptv" target="_blank"&gt;天翼高清互联网电视服务&lt;/a&gt; |   ');
 			  }
 			  </script><a href="http://sz189.cn/huodong/ipdsjs.html?ssid=gdds-sydhl-kd-kdbl-gqzq-iptv" target="_blank">天翼高清互联网电视服务</a> |       
               <a href="/kd/gx/index.html?ssid=gdds-sydhl-kd-kdbl-gxkd" target="_blank">光纤宽带体验</a>    
@@ -508,14 +508,14 @@ if (PUB_LATNID == '020'|| PUB_LATNID == '0758' || PUB_LATNID =='0752'|| PUB_LATN
 							<div class="picAd clearfix">
 		  <a href="/kd/bxll/zone/index.html?ssid=gdds-syleft-kd-bxll-kdxz&amp;From=gdsb-syleft-kd-bxll-kdxz" class="fl" target="_blank"><img src="/include/bxll0807.jpg" alt=" " /></a> 
           <a href="/old/?gdds-sydhl-kd-cdxt" class="fl" target="_blank"><img src="/include/ly0627.jpg" alt=" " /></a>   
-             <a href="/hd/2017s11/iptv/order.html?ssid=gdds-syleft-kd-kdbl-cj-iptv" class="fl" target="_blank"><img src="/include/iptv0125.jpg" alt=" " /></a>         
+             <a href="/hd/2017s11/iptv/order.html?ssid=gdds-syleft-kd-kdbl-yh3y-iptv" class="fl" target="_blank"><img src="/include/iptv0225.jpg" alt=" " /></a>         
 							</div>   
 						</div>                  
 					</li>        
 					<li class="tli">        
 						<a class="topA a4" href="###">智能</a>    
 						<div class="sonMenu s4">    
-							<ul class="textList">
+							<ul class="textList"> 
 								<li class="clearfix"> 
 									<em class="fl"><a href="javascript:;">智能业务</a></em>
 									<p class="fl"> 
@@ -1018,16 +1018,16 @@ window.setTimeout("PubShowLatnName()", 350, "JAVASCRIPT" );
    <div class="menuBox">
 
  <!--用户信息-->   
- <div class="userInfoNew clearfix none">
+ <div class="userInfoNew clearfix none" style="display: block;">
    <div class="heaPor fl">
      <a href="/service/myhome/info.html">
-     <img src="/service/myhome/images/touxiang.png" class="userPic" /></a>
+     <img src="/images/headportrait/defaultHeadportrait.jpg" class="userPic" /></a>
      </div>
       
     <div class="userRight">  
-     <p class="name" id="custName">——</p>
-     <p class="star clearfix">——</p>
-     <a class="kh" href="http://xjfw.189.cn/tykf-itr-services/modules/starService/medalWall/indexPC.html?in_cmpid=gdsb-zzfw-xjfw2018" target="_blank" id="isxing">——</a>
+     <p class="name" id="custName" title="*雄">*雄</p>
+     <p class="star clearfix"></p>
+     <a class="kh" href="http://xjfw.189.cn/tykf-itr-services/modules/starService/medalWall/indexPC.html?in_cmpid=gdsb-zzfw-xjfw2018" target="_blank" id="isxing">普通会员</a>
      </div>
      </div> <!--用户信息end-->
  <!--切换号码--> 
@@ -1036,10 +1036,10 @@ window.setTimeout("PubShowLatnName()", 350, "JAVASCRIPT" );
                     <input type="hidden" id="busiType" name="busiType" value="" />
                     <input type="hidden" id="payType" name="payType" value="" />
             <div class="currSel2 pr fl"> 
-            <input type="hidden" id="currNumInfoStr" />
-	         <input type="hidden" id="currNumBusiType" />
-            <em class="currItem2 fl" id="currNum">——</em>
-                <ul class="selList2" id="numList"></ul>
+            <input type="hidden" id="currNumInfoStr" value="0755-19128324901-CDMA" />
+	         <input type="hidden" id="currNumBusiType" value="CDMA" />
+            <em class="currItem2 fl" id="currNum" title="19128324901">19128324901</em>
+                <ul class="selList2" id="numList"><li id="setNumSelect_0"><span id="0755-19128322849-CDMA">19128322849</span><span class="lx">(手机号码)</span></li><li id="setNumSelect_1"><span id="0755-19128324901-CDMA">19128324901</span><span class="lx">(手机号码)</span></li><li id="setNumSelect_2"><span id="0755-19128320932-CDMA">19128320932</span><span class="lx">(手机号码)</span></li><li id="setNumSelect_3"><span id="0755-19128322849@163.gd-AD">19128322849</span><span class="lx">(宽 　带 )</span></li><li id="setNumSelect_4"><span id="0755-075541749544@iptv.gd-AD-IPTV">075541749544</span><span class="lx">(宽 　带 )</span></li></ul>
             </div>
         </div>
     </div>
@@ -1097,48 +1097,48 @@ window.setTimeout("PubShowLatnName()", 350, "JAVASCRIPT" );
 						<span class="rh fl"></span>
 						<div class="vm fl">
 							登录号码：
-							<em id="loginNumberN">-</em>
+							<em id="loginNumberN" title="19128324901">19128324901</em>
 						</div>
 					</div>
-					<div class="myOrderplus" id="msg_Myhomenews"></div>
+					<div class="myOrderplus" id="msg_Myhomenews">您有<a class="num" href="/oncePayCrmOrderQuery.do?in_cmpid=khzy-yhxx-xxts-dzfyw" target="_blank" id="numifo">0</a>个未处理订单</div>
 					<div class="infoListplus clearfix">
 						<ul>
 							<li class=" clearfix">
 							<span>我的副卡：</span>
-							<em id="ViceCardNum">-</em>
+							<em id="ViceCardNum">2</em><a href="/service/home/account/account_2015.html?in_cmpid=khzy-yhxx-syhm2018" target="_blank" class="btnStyle1">查看号码</a>
 							</li>
 <li class=" clearfix none">
 							<span>我的号码：</span>
-							<em id="PhoneNum">-</em>
+							<em id="PhoneNum">3</em>
 							</li>
 							<li class=" clearfix">
 							<span>我的宽带：</span>
-							<em id="ADNum">-</em>
+							<em id="ADNum">1</em><a href="/service/kdserv/index.html?ssid=gdds-syleft-kd-kdfw-kdfwzq2018" target="_blank" class="btnStyle1">宽带专区</a>
 							</li>
 							<li class="last clearfix">
 							<span>我的 ITV：</span>
-							<em id="IPTVNum">-</em>
+							<em id="IPTVNum">1</em><a href="http://event.eshare.189.cn:8082/prom/event/subaccount/pc/main?eid=8&amp;cid=14&amp;lzcode=" target="_blank" class="btnStyle1">加装子账号</a>
 							</li>
 						</ul>
 						<ul class="ulTwo">
 							<li class="clearfix">
 							<span>我的余额：</span>
-							<em class="two BalanceNum"><img src="/service/myhome/images/Loading.gif" /></em>
+							<em class="two BalanceNum">10.00</em><a href="https://gd.189.cn/service/home/query/xf_ye.html?in_cmpid=khzy-zcdh-fycx-wdxf-yecx2018" target="_blank" class="btnStyle1">详情</a>
 							</li>
 							<li class="clearfix">
 							<span>我的话费：</span>
-							<em class="two RealchargeNum"><img src="/service/myhome/images/Loading.gif" /></em>
+							<em class="two RealchargeNum">50.78</em>
 							<a href="/service/home/query/xf_sshf.html?in_cmpid=gdds-zzfw-fycx-wdxf-hfcx2018" class="btnStyle1" target="_blank">查看</a>
 							</li>
-                            <li class="none clearfix">
+                            <li class="none clearfix" style="display: none;">
 							<span>我的欠费：</span>
-							<em class="two ArrearsNum"><img src="/service/myhome/images/Loading.gif" /></em>
+							<em class="two ArrearsNum">0.0</em>
 							<a href="/service/pay/index.jsp?in_cmpid=khzy-yhxx-mscz2018" class="btnStyle1" target="_blank">立即充值</a>
 							</li>
 							<li class="last clearfix">
 							<span>我的积分：</span>
-							<em class="two" id="usableIntegral">-</em>
-							<a href="/store/?in_cmpid=gdds-zzfw-wdxx-jffw-jfdh2018" class="btnStyle1" target="_blank">兑换</a>
+							<em class="two" id="usableIntegral">0</em>
+							<a href="/store/?in_cmpid=gdds-zzfw-wdxx-jffw-jfdh2018" class="btnStyle1" target="_blank" style="display: none;">兑换</a>
 							</li>
 						</ul>
 						<div class="proBoxplus">
@@ -1154,8 +1154,8 @@ window.setTimeout("PubShowLatnName()", 350, "JAVASCRIPT" );
 				<span>我的套餐</span>
 			</div>
 			<p class="tcName clearfix">
-				<span>-</span>
-				<a href="javascript:void(0);" class="btnStyle1 none" target="_blank">套餐优化</a>
+				<span>畅享流量15G（129元）套餐2017Q3（共享版）</span>
+				<a href="javascript:void(0);" class="btnStyle1 none" target="_blank" style="display: none;">套餐优化</a>
 			</p>
 			<div class="mainCon clearfix">
 				<div class="myPackage" id="Showll">
@@ -1165,17 +1165,13 @@ window.setTimeout("PubShowLatnName()", 350, "JAVASCRIPT" );
 						<span class="ll fl"></span>流量
 						</h3>
 						<div class="llAnn pr">
-							<div id="myCanvas1">
+							<div id="myCanvas1"><svg height="186" version="1.1" width="186" xmlns="http://www.w3.org/2000/svg" style="overflow: hidden; position: relative; left: -0.5px;"><desc style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">Created with Rapha?l 2.1.2</desc><defs style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"><linearGradient id="190-_ff8202" x1="0" y1="1" x2="6.123233995736766e-17" y2="0" gradientTransform="matrix(1,0,0,1,0,0)" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"><stop offset="0%" stop-color="#ff8202" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"/></linearGradient></defs><image x="0" y="0" width="186" height="186" preserveAspectRatio="none" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/service/home/images/progress_bg2.png" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"/><path fill="url(#190-_ff8202)" stroke="#2a70a6" d="M93,0A93,93,0,0,1,93.05843361951199,0.00001835746358835877L93.05403539008636,7.000016975719021A86,86,0,0,0,93,7Z" stroke-width="0" opacity="1" fill-opacity="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 1; fill-opacity: 1;"/></svg>
 								<!--流量圆环使用量-->
-							</div>
-							<div class="annTb none">
-								<span class="annImg">流量畅享</span>
-								<p class="annTxt">
-									已用流量
-								</p>
-								<p class="annTxt2" id="bxlUsedFlow2">
-									——
-								</p>
+							</div><div class="annTb" style="display: none;"><p class="annTxt3"><br /><br />未使用</p></div>
+							<div class="annTb none" style="display: block;">
+								<span class="annImg">国内流量畅享</span>
+								<p class="annTxt">已用流量</p>
+								<p class="annTxt2" id="bxlUsedFlow2">1.57G</p>
 							</div>
 						</div>
                         <p class="tr llurl">
@@ -1190,9 +1186,9 @@ window.setTimeout("PubShowLatnName()", 350, "JAVASCRIPT" );
 						<span class="yy fl"></span>语音
 						</h3>
 						<div class="yyAnn pr">
-							<div id="myCanvas2">
+							<div id="myCanvas2"><svg height="186" version="1.1" width="186" xmlns="http://www.w3.org/2000/svg" style="overflow: hidden; position: relative; left: -0.5px;"><desc style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">Created with Rapha?l 2.1.2</desc><defs style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"><linearGradient id="390-_ff8202" x1="0" y1="1" x2="6.123233995736766e-17" y2="0" gradientTransform="matrix(1,0,0,1,0,0)" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"><stop offset="0%" stop-color="#ff8202" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"/></linearGradient></defs><image x="0" y="0" width="186" height="186" preserveAspectRatio="none" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/service/home/images/progress_bg2.png" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"/><path fill="url(#390-_ff8202)" stroke="#2a70a6" d="M93,0A93,93,0,0,1,93,0L93,7A86,86,0,0,0,93,7Z" stroke-width="0" opacity="1" fill-opacity="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 1; fill-opacity: 1;"/></svg>
 								<!--流量圆环使用量-->
-							</div>
+							</div><div class="annTb"><p class="annTxt3">已用</p><p class="annTxt2">4分钟</p><p class="annTxt3">剩余</p><p class="annTxt2">946分钟</p></div>
 						</div>
                         <p class="tr llurl">
 								<a href="javascript:void(0);" class="txtLink none">语音包</a>
@@ -1205,9 +1201,9 @@ window.setTimeout("PubShowLatnName()", 350, "JAVASCRIPT" );
 						<a class="txtLink2 fr" href="/service/home/query/xd_index.html?in_cmpid=gdsb-zzfw-dxxq2018">详情&gt;</a>
 						<span class="dx fl"></span>短信</h3>
 						<div class="dxAnn pr">
-							<div id="myCanvas3">
+							<div id="myCanvas3"><svg height="186" version="1.1" width="186" xmlns="http://www.w3.org/2000/svg" style="overflow: hidden; position: relative; left: -0.5px;"><desc style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">Created with Rapha?l 2.1.2</desc><defs style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"><linearGradient id="590-_ff8202" x1="0" y1="1" x2="6.123233995736766e-17" y2="0" gradientTransform="matrix(1,0,0,1,0,0)" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"><stop offset="0%" stop-color="#ff8202" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"/></linearGradient></defs><image x="0" y="0" width="186" height="186" preserveAspectRatio="none" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/service/home/images/progress_bg2.png" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"/><path fill="url(#590-_ff8202)" stroke="#2a70a6" d="M93,0A93,93,0,0,1,93.05843361951199,0.00001835746358835877L93.05403539008636,7.000016975719021A86,86,0,0,0,93,7Z" stroke-width="0" opacity="1" fill-opacity="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 1; fill-opacity: 1;"/></svg>
 								<!--流量圆环使用量-->
-							</div>
+							</div><div class="annTb"><p class="annTxt3"><br /><br />未使用</p></div>
 						</div>
                         <p class="tr llurl">
 								<a href="#" class="txtLink none">短信加餐包</a>
@@ -1232,7 +1228,7 @@ window.setTimeout("PubShowLatnName()", 350, "JAVASCRIPT" );
 								<span class="dq fl"></span>可用余额
 								</h3>
 								<p class="tc billNum">
-									余<span class="BalanceNum"><img src="/service/myhome/images/Loading.gif" /></span>元
+									余<span class="BalanceNum">10.00</span>元
 								</p>
 						</div>
 						<div id="sshf">
@@ -1240,7 +1236,7 @@ window.setTimeout("PubShowLatnName()", 350, "JAVASCRIPT" );
 							<a class="txtLink2 fr" href="/service/home/query/xf_sshf.html?in_cmpid=khzy-zcdh-fycx-wdxf-sshfcx2018">详情&gt;</a>
 							<span class="ss fl"></span>实时话费</h3>
 							<p class="tc billNum">
-								<span class="RealchargeNum"><img src="/service/myhome/images/Loading.gif" /></span>元
+								<span class="RealchargeNum">50.78</span>元
 							</p>
 					</div>
 					<div id="qfcx" class="none">
@@ -1248,7 +1244,7 @@ window.setTimeout("PubShowLatnName()", 350, "JAVASCRIPT" );
 						<a class="txtLink2 fr" href="/service/home/query/xf_qf.html?in_cmpid=khzy-zcdh-fycx-wdxf-sshfcx2018">详情&gt;</a>
 						<span class="ss fl"></span>当前欠费</h3>
 						<p class="tc billNum">
-							<span class="ArrearsNum">0</span>元
+							<span class="ArrearsNum">0.0</span>元
 						</p>
 						<p class="tc"><a href="/service/pay/index.jsp?in_cmpid=khzy-yhxx-mscz2018" class="txtLink mt10" target="_blank">9.95折充值优惠</a>
 					</p>
@@ -1280,7 +1276,7 @@ window.setTimeout("PubShowLatnName()", 350, "JAVASCRIPT" );
 				<span class="dq fl"></span>可用余额</h3>
 				<p class="tc billNum">
 					余
-					<span class="BalanceNum"><img src="/service/myhome/images/Loading.gif" /></span>元
+					<span class="BalanceNum">10.00</span>元
 				</p>
 			</div>
 			<div class="consBox2 n1 none" id="CDMApqf">
@@ -1288,7 +1284,7 @@ window.setTimeout("PubShowLatnName()", 350, "JAVASCRIPT" );
 				<a class="txtLink2 fr" href="/service/home/query/xf_qf.html?in_cmpid=khzy-zcdh-fycx-wdxf-sshfcx2018">详情&gt;</a>
 				<span class="ss fl"></span>当前欠费</h3>
 				<p class="tc billNum">
-					<span class="ArrearsNum">0</span>元
+					<span class="ArrearsNum">0.0</span>元
 				</p>
                <p class="tc">
 					<a href="/service/pay/index.jsp?in_cmpid=khzy-yhxx-mscz2018" target="_blank" class="txtLink mt10">9.95折充值优惠</a>
@@ -1299,7 +1295,7 @@ window.setTimeout("PubShowLatnName()", 350, "JAVASCRIPT" );
 				<a class="txtLink2 fr" href="/service/home/query/xf_sshf.html?in_cmpid=khzy-zcdh-fycx-wdxf-sshfcx2018">详情&gt;</a>
 				<span class="ss fl"></span>实时话费</h3>
 				<p class="tc billNum">
-					<span class="RealchargeNum">0</span>元
+					<span class="RealchargeNum">50.78</span>元
 				</p>
                <p class="tc">
 					<a href="/service/pay/index.jsp?in_cmpid=khzy-yhxx-mscz2018" target="_blank" class="txtLink mt10">9.95折充值优惠</a>
@@ -1314,8 +1310,7 @@ window.setTimeout("PubShowLatnName()", 350, "JAVASCRIPT" );
 <div class="titleplus">
 	<span>我的宽带</span>
 </div>
-<p class="expire fr" id="adslData">
-</p>
+<p class="expire fr" id="adslData">您还可以修改<a href="/transaction/taocanapply1.jsp?operCode=PasswordModifyADSLI&amp;in_cmpid=khzy-kd-kdmmxg" class="yjxy txtLink"><em>宽带密码</em></a></p>
 <div class="mainCon clearfix">
 	<ol class="myInt">
 		<li class="kdInfo mb10">
@@ -1324,7 +1319,7 @@ window.setTimeout("PubShowLatnName()", 350, "JAVASCRIPT" );
 			<div class="currSel3 pr fl">
 				<em class="currItem3 fl" id="adslNum">——</em>
 				<ul class="selList3" id="moreadslnum">
-				</ul>
+				<li><span adsl="19128322849@163.gd" adsltype="AD">19128322849@163.gd</span></li></ul>
                 </div>
                 <a href="/service/home/query/fs_jrfs_2015.html" class="txtLink ml10 linkSpa">光纤接入方式查询</a>
 			
@@ -1332,7 +1327,7 @@ window.setTimeout("PubShowLatnName()", 350, "JAVASCRIPT" );
 		</li>
 		<li class="kdInfo">
 		<span class="fl">IPTV账号：</span>
-		<span class="rTxt" id="iptvNum">——</span></li>
+		<span class="rTxt" id="iptvNum">075541749544@iptv.gd</span></li>
 		<!--<li class="kdInfo"><span class="fl">上行速率：</span><span class="rTxt">20.24Mb/s</span></li>-->
         <li class="kdInfo">
 		<span class="fl">下行速率：</span>
@@ -1368,14 +1363,14 @@ window.setTimeout("PubShowLatnName()", 350, "JAVASCRIPT" );
 <div class="numBox">
 <dl class="clearfix" id="morePhone">
 <dt><span></span>移动电话</dt>
-</dl>
+<dd><span><input type="radio" class="radio" name="radioNum" value="0755-19128322849-CDMA" /><label>19128322849</label></span></dd><dd><span><input type="radio" class="radio" name="radioNum" value="0755-19128324901-CDMA" /><label>19128324901</label></span></dd><dd><span><input type="radio" class="radio" name="radioNum" value="0755-19128320932-CDMA" /><label>19128320932</label></span></dd></dl>
 <dl class="clearfix" id="moreGH">
 <dt><span></span>固定电话</dt>
 </dl>
 
 <dl class="clearfix" id="moreAD">
 <dt><span></span>宽带</dt>
-</dl>
+<dd><span><input type="radio" class="radio" name="radioNum" value="0755-19128322849@163.gd-AD" /><label>19128322849</label></span></dd><dd><span><input type="radio" class="radio" name="radioNum" value="0755-075541749544@iptv.gd-AD-IPTV" /><label>075541749544</label></span></dd></dl>
 </div>
 <div class="btnBar">
   <a href="javascript:void(0);" class="btnStyle2 btnClose qd" onclick="selNum()">确定</a>

@@ -254,15 +254,15 @@ class China_telecom(object):
     def order_info(self):
         self.browser.find_element_by_xpath("//div[@class='menuMod']/ul/li[@class='clearfix'][5]/a").click()
         try:
-            WebDriverWait(self.browser,15, 0.5).until(EC.element_to_be_clickable((By.ID,'myorder_orderList_head')))
+            WebDriverWait(self.browser,18, 0.5).until(EC.element_to_be_clickable((By.ID,'myorder_orderList_head')))
         except:
             pass
 
         #三个月内订单
         order_info_source = self.browser.page_source
         order_info_tree = etree.HTML(order_info_source)
-        divs = order_info_tree.xpath("//table[@class='my-orders-table']")
-        for nums in range(2, 100):
+        divs = order_info_tree.xpath("//div[@class='tabCon']")
+        for nums in range(2, 50):
             try:
                 for div in divs:
                     # 产品信息
@@ -275,7 +275,7 @@ class China_telecom(object):
                     # 受理渠道
                     order_channel = div.xpath(".//table[@class='tbl']/tbody/tr[{}]/td[3]/text()".format(nums))[0].strip()
                     # 订单状态
-                    order_status = div.xpath(".///table[@class='tbl']/tbody/tr[2]/td[4]/text()".format(nums))[0].strip()
+                    order_status = div.xpath(".//table[@class='tbl']/tbody/tr[{}]/td[4]/text()".format(nums))[0].strip()
                     #业务操作
                     # handle = div.xpath("./tbody/tr[{}]/td[4]/text()".format(nums))[0].strip()
 
@@ -289,8 +289,8 @@ class China_telecom(object):
                 break
 
             #三个月前订单
-            self.browser.find_element_by_xpath("//li[@id='myorder_qryTime_l2']/a").click()
-            sleep(5)
+            # self.browser.find_element_by_xpath("//li[@id='myorder_qryTime_l2']/a").click()
+            # sleep(5)
 
 
     def start_spider(self):

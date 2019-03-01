@@ -35,18 +35,24 @@ def anagramSolution(s1,s2):
 
 str = "python"
 
-print(str.center(200,"-"))
+print(str.center(10,"-"))
 
-res = "订单号：   8333711542175490048"
-res2 = res.split("：")[1]
-print(res2)
-res3 = res.split("：")[1].split(" ")[3]
-res3 = res.split("：")[1].strip(" ")
-print(res3)
+# res = "订单号：   8333711542175490048"
+# res2 = res.split("：")[1]
+# print(res2)
+# res3 = res.split("：")[1].split(" ")[3]
+# res3 = res.split("：")[1].strip(" ")
+# print(res3)
 
 
-str1 = "×1"
-
-str2 = str1.split("×")
-print(str2)
+# str1 = "×1"
+#
+# str2 = str1.split("×")[1]
+# print(str2)
 # res = ""
+
+str3 = "ABCDEF"
+print(str3.lower())
+
+str4 = str3.replace('A','这是小白的！',1)
+print(str4)

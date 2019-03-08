@@ -1,0 +1,1639 @@
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml"><head><script type="text/javascript" src="//gd.189.cn/insight/js/gd/live/insight_wangt.js?v=332"></script><script type="text/javascript" src="//gd.189.cn/insight/js/b/w.js?v=2019226"></script>
+<meta charset="gb2312" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<title>我的189-中国电信欢go网站（原网上营业厅）·广东</title>
+<meta name="description" content="中国电信欢go网站（原网上营业厅）·广东,为您提供中国电信广东地区业务办理、费用查询、充值交费、账单查询、清单查询、积分服务、在线客服、189选号、3G手机购买、故障申告、及品牌专区等全方位的电子自助服务；中国电信——世界触手可及。" />
+<meta name="keywords" content="中国电信广东电信,中国电信集团公司,天翼,话费查询,充值交费,宽带缴费,固话缴费,咨询投诉,故障申告,自助查询,业务办理,积分,在线客服,套餐,电信投诉处理,投诉电信,网上营业厅,网厅,10000" />
+<link rel="stylesheet" href="/css/common.css" />
+<link rel="stylesheet" href="/service/myhome/css/service2018.css" />
+<script src="/js/jquery.js"></script>
+<script src="/service/home/js/html5.js"></script>
+<script src="/service/home/js/raphael-min.js"></script><!--圆环进度插件-->
+<script src="/service/myhome/js/echarts.min.js"></script><!--消费走势图插件-->
+<script src="/service/myhome/js/json2.js"></script>
+<script src="/service/myhome/js/common.js"></script><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+<script src="/service/myhome/js/MyService.js?v4"></script>
+</head>
+<body>
+<!--header-->
+<script>
+//获取从URL中传来的参数的值。
+        function getParam_Value(param) {
+            if (param == null || param == "")
+                return "";
+            var query = location.search;
+            if (query == null || query == "")
+                return "";
+
+            var target = param + "=";
+            var startDot = query.indexOf(target);
+            if (startDot &gt;= 0) {
+                startDot = startDot + target.length;
+                var endDot = query.substring(startDot).indexOf("&amp;");//从 startDot 点开始找它后面的分隔符"&amp;"
+                if (endDot &lt; 0)
+                    endDot = query.length;//没有多个参数，即无"&amp;"
+                else
+                    endDot = startDot + endDot;//补上截去 startDot 的长度
+
+                return query.substring(startDot, endDot);
+            }
+
+            return "";
+        }
+		//旧版登录页/common/login.jsp跳新版登录页/common/login.htm
+		if(location.href.indexOf('login.jsp')&gt;-1){
+			window.top.location.href = '/common/login.htm?UATicket=-1&amp;loginOldUri='+getParam_Value("loginOldUri")+'&amp;SSOProTypePre='+getParam_Value("SSOProTypePre")+'&amp;SSOError='+getParam_Value("SSOError")+'&amp;SSOProType='+getParam_Value("SSOProType")+'&amp;SSOAccount='+getParam_Value("SSOAccount")+'&amp;SSOArea='+getParam_Value("SSOArea")+'&amp;SSOOldAccount='+getParam_Value("SSOOldAccount")+'&amp;SSORetryTimes='+getParam_Value("SSORetryTimes")+'&amp;ssl='+getParam_Value("ssl")+'&amp;uamError='+getParam_Value("uamError");
+		}
+</script>
+<link rel="stylesheet" href="/js/jquery/thickbox/thickbox.css" />
+<script src="/js/common/util.js"></script>
+<script src="/js/common/setCookies.js"></script>
+<script src="/js/common/latnUtil.js"></script><script type="text/javascript" src="/js/common/ajax.js"></script><script type="text/javascript" src="/js/account/getIpAsdl.js"></script>
+<script src="/js/jquery/thickbox/thickbox.js"></script>
+<script src="/js/jquery_cookie.js"></script>
+<script type="text/javascript" src="/dwr/engine.js"></script>
+<script type="text/javascript" src="/dwr/util.js"></script>
+<script type="text/javascript" src="/dwr/interface/prodInfoActionNew.js"></script>
+<script>
+var cityIDS,csCode;
+switch(PUB_LATNID){
+	case '0000': csCode = '4400';cityIDS = 10151;break;
+	case '020' : csCode = '4401';cityIDS = 10151;break;
+	case '0751': csCode = '4402';cityIDS = 10166;break;
+	case '0755': csCode = '4403';cityIDS = 10152;break;
+	case '0756': csCode = '4404';cityIDS = 10170;break;
+	case '0754': csCode = '4405';cityIDS = 10155;break;
+	case '0757': csCode = '4406';cityIDS = 10169;break;
+	case '0750': csCode = '4407';cityIDS = 10154;break;
+	case '0759': csCode = '4408';cityIDS = 10159;break;
+	case '0668': csCode = '4409';cityIDS = 10160;break;
+	case '0758': csCode = '4412';cityIDS = 10161;break;
+	case '0752': csCode = '4413';cityIDS = 10158;break;
+	case '0753': csCode = '4414';cityIDS = 10158;break;
+	case '0660': csCode = '4415';cityIDS = 10156;break;
+	case '0762': csCode = '4416';cityIDS = 10167;break;
+	case '0662': csCode = '4417';cityIDS = 10163;break;
+	case '0763': csCode = '4418';cityIDS = 10168;break;
+	case '0769': csCode = '4419';cityIDS = 10171;break;
+	case '0760': csCode = '4420';cityIDS = 10153;break;
+	case '0768': csCode = '4451';cityIDS = 10157;break;
+	case '0663': csCode = '4452';cityIDS = 10164;break;
+	case '0766': csCode = '4453';cityIDS = 10162;break;
+	default: csCode = ' ';
+}
+</script>
+
+<header>
+<!--/top-->
+	<!--/top-->
+	<div class="toper"> 
+		<div class="wrapper clearfix">
+			<a class="collect fl" href="javascript:AddFav();">收藏欢go网</a>
+			<span class="welc fl">
+				<script>
+				var isJtLogin = "N";//是否集团注册帐号登录
+				var loginUserNameJt = getLoginUserNameJt();//获取登录的集团注册帐号
+				if(loginUserNameJt!=""){
+					isJtLogin = "Y";
+				}
+				if(isJtLogin &amp;&amp; isJtLogin=="Y"){//集团注册帐号登录
+					var showStr = loginUserNameJt + hint_hour();
+					document.write("&lt;marquee scrollAmount=3 onmouseout=this.start() onmouseover=this.stop() width=\"150px\"  style=\"float:left\"&gt;"+showStr+"&lt;/marquee&gt;");
+				}else{
+					document.write(hint_hour());
+				}
+
+				function  getLoginUserNameJt(){
+					var loginUserNameJt="";
+					 try{
+						ajax.setUrl("/common/getLoginUserNameJt.jsp");
+						ajax.setSubmitMethod("GET");
+						var userNameJt = ajax.getRequest();
+						
+						if(userNameJt.indexOf("userNameJt")!=-1){
+
+							var i = userNameJt.indexOf("=");
+							var l = userNameJt.length;
+							if(l&gt;i){
+								loginUserNameJt = userNameJt.substring(i+1,l);
+							}
+
+						}
+					  }catch(e){}
+					  return loginUserNameJt;
+				}
+				function  hint_hour(){
+					var now = new Date();
+					var hour = now.getHours();
+					var hint = "";
+					//if(hour &lt;6){hint="凌晨好";}
+					//else if(hour &lt;9){hint="早上好";}
+					//else if(hour &lt;12){hint="上午好";}
+					//else if(hour &lt;14){hint="中午好";}
+					//else if(hour &lt;17){hint="下午好";}
+					//else if(hour &lt;19){hint="傍晚好";}
+					//else if(hour &lt;22){hint="晚上好";}
+					//else {hint="夜间好";}
+					 hint = hint + "欢迎来到欢go网站";
+					  return hint;
+				}
+						
+				var login_info = getIsLogin();  //判断是否登录，如果已经登录，则返回登录的"1_"+latnid，如果没有登录，则返回"0"
+				var isLogin = false;
+				var userLatnId = "";
+					if(login_info!="" &amp;&amp; login_info.indexOf("_")!=-1 &amp;&amp; login_info.substring(0,1)=="1"){
+						userLatnId = login_info.substring(2);
+						isLogin = true;
+					}
+				if(isLogin ==true || isJtLogin == "Y"){
+					document.write(" &lt;a href='javascript:headExSys();' class='yu_01a'&gt;[退出]&lt;/a&gt;");
+				}
+				if(isLogin ==false &amp;&amp; isJtLogin != "Y"){
+					//document.write(" &lt;a href='https://gd.189.cn/common/login.jsp?UATicket=-1&amp;loginOldUri=' class='yu_01a'&gt;[请登录]&lt;/a&gt;");
+					document.write(" &lt;a href='https://gd.189.cn/common/login.htm?UATicket=-1&amp;loginOldUri=' class='yu_01a'&gt;[请登录]&lt;/a&gt;");
+				}
+
+				function headExSys(){
+					$.cookie('loginOldUri_cookie',"null",{path:'/'});
+					if(confirm("您确定要退出登录吗？")){
+						window.location.href="/common/exitSystem.jsp";
+						return false;
+					}
+				}
+				//判断是否是广州
+				var GZ_YESORNO;
+				if(PUB_LATNID == '020'){
+				   GZ_YESORNO = '/gz';
+				}
+				else{
+				   GZ_YESORNO = '';	
+				}
+				</script>欢迎来到欢go网站 <a href="javascript:headExSys();" class="yu_01a">[退出]</a>
+				<a href="/newpassword/reset_new_cdma.jsp" id="get_pw" target="_blank" style="display: none;">[获取密码]</a>
+				<a href="###" class="none">[免费注册]</a>
+				<script>$(function() {if(isLogin ==true || isJtLogin == "Y"){$('#get_pw').hide();}});</script>
+			</span>  
+			<ul class="tool fr">
+				<li class="my189 pr">
+					<a href="/service/myhome/">我的欢go</a>
+					<div class="up my189Up">
+                        <a href="/service/myhome/" class="my189_a">我的欢go</a>
+						<a href="/service/home/query/xf_tcsy.html?in_cmpid=gdds-top-wdtc">我的套餐</a>
+						<a href="/myorder/myorder_index.html?in_cmpid=gdds-top-wddd">我的订单</a>
+						<a href="/service/home/query/xd_index.html?in_cmpid=gdds-top-wdxd">我的详单</a>
+						<a href="/service/home/query/jifen.html?in_cmpid=gdds-top-wdcx">我的积分</a>
+					</div> 
+				</li>
+                <li class="ico_li">|</li>
+				<li class="wap pr">
+					<a href="/gd/zsyyt/index.html" target="_blank">欢go客户端</a>
+					
+					<div class="up wapUp">
+						<div class="fl"> 
+							<h4>欢go客户端</h4>
+							<img class="tdCode" src="/include/s_kehuduan.png" alt="二维码" />
+						</div> 
+						<div class="fl">
+							<h4>广东天翼</h4>
+							<img class="tdCode" src="/images/201507/gdty_wt.jpg" alt="二维码" />
+						</div>
+						<div class="fr">
+							<h4>天翼惠生活</h4>
+							<img class="tdCode" src="/include/tyhsh_0516.jpg" alt="二维码" />
+						</div>
+						<dl class="fl none">
+							<dt>电信手机客户端</dt>
+							<dd><a href="http://www.189.cn/client/"><img src="/images/2015/btn_down_ios.jpg" alt="IOS版" /></a></dd>
+							<dd><a href="http://www.189.cn/client/"><img src="/images/2015/btn_down_android.jpg" alt="安卓版" /></a></dd>
+						</dl>
+						<style>
+							.toper .tool .wapUp {width: 320px;}
+							.wapUp .fl{margin-right:12px}
+						</style>
+					</div>
+				</li>
+                <li class="ico_li">|</li>
+				<li class="mail"><a href="http://mail.189.cn" target="_blank">189邮箱</a></li>
+                <li class="ico_li">|</li>
+				<li class="gov"><a href="/biz/">政企客户</a></li>
+                <li class="ico_li">|</li>
+				<li class="suppo"><a href="http://gd.189.cn/support/">消费者帮助中心</a></li>
+			</ul>
+		</div>
+	</div>
+	<!--top/--> 
+<!--banner ad-->
+	<!--div class="tc">
+		<a href="/store/hd/hengda/index.html?source=gdsb-ytdt-hdbgdzcdlk" target="_blank">
+			<img src="/include/images/hdbgd0422.jpg" alt="恒大不孤单，中超陪你看" />
+		</a>
+	</div--> 
+	<!--banner ad-->
+	<!--/head-->
+	<div class="head wrapper clearfix">
+		<a href="/" class="logo189 fl"><img src="/20150629/images/201506/logo.png" alt="中国电信" /></a>
+		<dl class="changeIt">
+			<dt class="provice">
+				<b>广东</b>
+				<ul class="up">
+					<li><span>A-G</span><a target="_blank" href="http://bj.189.cn/">北京</a><a target="_blank" href="http://ah.189.cn/">安徽</a><a target="_blank" href="http://www.189.cn/cq">重庆</a><a target="_blank" href="http://fj.189.cn">福建</a><a target="_blank" href="/">广东</a><a target="_blank" href="http://gs.189.cn/">甘肃</a><a target="_blank" href="http://gx.189.cn/">广西</a><a target="_blank" href="http://gz.189.cn/">贵州</a></li>
+					<li><span>H-J</span><a target="_blank" href="http://hb.189.cn/">湖北</a><a target="_blank" href="http://hn.189.cn">湖南</a><a target="_blank" href="http://he.189.cn">河北</a><a target="_blank" href="http://ha.189.cn/">河南</a><a target="_blank" href="http://hi.189.cn/">海南</a><a target="_blank" href="http://www.189.cn/hl/">黑龙江</a><a href="http://js.189.cn/">江苏</a><a target="_blank" href="http://jl.189.cn/">吉林</a><a target="_blank" href="http://jx.189.cn/">江西</a></li>
+					<li><span>L-S</span><a target="_blank" href="http://ln.189.cn/">辽宁</a><a target="_blank" href="http://nm.189.cn/">内蒙古</a><a target="_blank" href="http://nx.189.cn/">宁夏</a><a target="_blank" href="http://qh.189.cn/">青海</a><a target="_blank" href="http://sd.189.cn/">山东</a><a target="_blank" href="http://sh.189.cn/">上海</a><a target="_blank" href="http://sx.189.cn/">山西</a><a target="_blank" href="http://sn.189.cn/">陕西</a><a target="_blank" href="http://sc.189.cn/">四川</a></li>
+					<li><span>T-Z</span><a target="_blank" href="http://tj.189.cn/">天津</a><a target="_blank" href="http://xj.189.cn/">新疆</a><a target="_blank" href="http://xz.189.cn/">西藏</a><a target="_blank" href="http://yn.189.cn/">云南</a><a target="_blank" href="http://zj.189.cn/">浙江</a></li>
+				</ul>
+			</dt>
+			<dt class="city">
+				<b id="PubIdShowLatnName">深圳</b>
+				<p class="up">
+					<a href="/common/jump.jsp?goto=0000&amp;TB_showTitle=false&amp;height=200&amp;width=300" class="thickbox">广东</a><a href="/common/jump.jsp?goto=020&amp;TB_showTitle=false&amp;height=200&amp;width=300" class="thickbox">广州</a><a href="/common/jump.jsp?goto=0755&amp;TB_showTitle=false&amp;height=200&amp;width=300" class="thickbox">深圳</a><a href="/common/jump.jsp?goto=0769&amp;TB_showTitle=false&amp;height=200&amp;width=300" class="thickbox">东莞</a><a href="/common/jump.jsp?goto=0757&amp;TB_showTitle=false&amp;height=200&amp;width=300" class="thickbox">佛山</a><a href="/common/jump.jsp?goto=0760&amp;TB_showTitle=false&amp;height=200&amp;width=300" class="thickbox">中山</a><a href="/common/jump.jsp?goto=0752&amp;TB_showTitle=false&amp;height=200&amp;width=300" class="thickbox">惠州</a><a href="/common/jump.jsp?goto=0750&amp;TB_showTitle=false&amp;height=200&amp;width=300" class="thickbox">江门</a><a href="/common/jump.jsp?goto=0756&amp;TB_showTitle=false&amp;height=200&amp;width=300" class="thickbox">珠海</a><a href="/common/jump.jsp?goto=0754&amp;TB_showTitle=false&amp;height=200&amp;width=300" class="thickbox">汕头</a><a href="/common/jump.jsp?goto=0663&amp;TB_showTitle=false&amp;height=200&amp;width=300" class="thickbox">揭阳</a><a href="/common/jump.jsp?goto=0768&amp;TB_showTitle=false&amp;height=200&amp;width=300" class="thickbox">潮州</a><a href="/common/jump.jsp?goto=0660&amp;TB_showTitle=false&amp;height=200&amp;width=300" class="thickbox">汕尾</a><a href="/common/jump.jsp?goto=0759&amp;TB_showTitle=false&amp;height=200&amp;width=300" class="thickbox">湛江</a><a href="/common/jump.jsp?goto=0668&amp;TB_showTitle=false&amp;height=200&amp;width=300" class="thickbox">茂名</a><a href="/common/jump.jsp?goto=0662&amp;TB_showTitle=false&amp;height=200&amp;width=300" class="thickbox">阳江</a><a href="/common/jump.jsp?goto=0766&amp;TB_showTitle=false&amp;height=200&amp;width=300" class="thickbox">云浮</a><a href="/common/jump.jsp?goto=0758&amp;TB_showTitle=false&amp;height=200&amp;width=300" class="thickbox">肇庆</a><a href="/common/jump.jsp?goto=0753&amp;TB_showTitle=false&amp;height=200&amp;width=300" class="thickbox">梅州</a><a href="/common/jump.jsp?goto=0763&amp;TB_showTitle=false&amp;height=200&amp;width=300" class="thickbox">清远</a><a href="/common/jump.jsp?goto=0762&amp;TB_showTitle=false&amp;height=200&amp;width=300" class="thickbox">河源</a><a href="/common/jump.jsp?goto=0751&amp;TB_showTitle=false&amp;height=200&amp;width=300" class="thickbox">韶关</a> 
+				</p>
+			</dt>
+		</dl>
+		
+		<div class="searchBar fl"> 
+			<div class="searchTab">
+				<!--<span class="on" name="in_click" data-cname="top-scp">搜产品</span>-->
+				<span class="on" name="in_click" data-cname="top-10000zd">10000知道</span>
+			</div>
+
+			<div class="srhForm clearfix none">
+				<input type="text" id="kw_1" placeholder="" autocomplete="off" class="keyword fl" value="" />
+				<div class="pr" id="srh_tip"></div>
+				<input type="button" class="submit fl" name="in_click" data-cname="top-scp-ssearch" value="搜索" id="srh1" onclick="btnSearch()" /> 
+				
+			</div>
+			<div class="srhForm clearfix "> 
+				<input type="text" id="kw_2" placeholder="" name="keyword" class="keyword fl" value="" /> 
+				<input type="button" class="submit fl" value="搜索" name="in_click" data-cname="top-10000zd-ssearch" id="srh2" onclick="open100000();" />
+			</div>
+			<p class="tag">
+				<!--a target="_blank" href="/dis/portal/0-0-0-0.html?sw=%E6%B5%81%E9%87%8F%E5%8C%85">流量包<img class="hot" src="/images/2015/ico_hot.png" alt="热"></a>
+				<a target="_blank" href="/dis/portal/0-0-0-0.html?sw=%E8%A3%85%E5%AE%BD%E5%B8%A6">装宽带<img class="hot" src="/images/2015/ico_hot.png" alt="热"></a>
+				<a target="_blank" href="/dis/portal/0-0-0-0.html?sw=%E6%8F%90%E9%80%9F">提速</a>
+				<a target="_blank" href="/dis/portal/0-0-0-0.html?sw=%E5%85%85%E5%80%BC%E4%BA%A4%E8%B4%B9">充值交费</a>
+				<a target="_blank" href="/dis/portal/0-0-0-0.html?sw=%E5%AE%A2%E6%88%B7%E7%AB%AF%E6%8F%90%E9%80%9F">客户端提速</a>
+				<a target="_blank" href="/dis/portal/0-0-0-0.html?sw=%E8%81%94%E6%83%B3A360e">联想A360e</a-->
+			</p>
+		</div>
+		
+		<!--节日图-->
+ <a class="festival fr" id="festival" target="_blank" href="/hd/welfare/index.html?gdds-syysj-lyh" title="周五福利日"><img src="/include/fly0130.jpg" style="width:250px; height:80px;" /></a>    
+         
+	</div>
+	<!--head/--> 
+		   
+	<!--/nav--> 
+	<div class="navBar">  
+		<div class="wrapper clearfix">  
+			<menu class="fl" id="menu_all"> 
+				<span>全部产品及服务  <img class="vm" src="/images/2015/ico_arrow2.gif" /></span>
+<ul class="menuTop">
+<li class="tli">
+						<a class="topA a1" href="###">手机/配件</a>
+						<div class="sonMenu s1"> 
+							<ul class="textList">
+							  <li class="clearfix">
+									<em class="fl"><a href="javascript:;">本月热销</a></em>
+									<p class="fl">    
+            <a href="http://www.189.cn/products/01944214826.html?in_cmpid=gdds-sydhl-sjpj-byrx-sj" target="_blank">华为麦芒7</a>| 
+            <a href="http://189.cn/products/01944219233.html?in_cmpid=gdds-sydhl-sjpj-byrx-mate20" target="_blank">华为 Mate20</a>|  
+            <a href="http://m.gd.189.cn/resource/activity/tc/ykq/index1.html?in_cmpid=gdds-sydhl-sjpj-byrx-xfykq&amp;dis=sjscsjpj" target="_blank">ITV智能遥控器</a>  
+            
+            
+                 
+                                         
+									</p> 
+									<!--a href="http://m.gd.189.cn/MobileSearch_.html" target="_blank" class="morem">更多&gt;&gt;</a--> 
+								</li> 
+								<!--li class="clearfix">
+									<em class="fl"><a href="javascript:;">新机上市</a></em>
+									<p class="fl">　
+		    <a href="http://www.189.cn/products/01944177956.html?in_cmpid=gdds-sydhl-sjpj-xjss-hwP20" target="_blank" style="color:#f00" >华为 P20</a> 
+            
+           
+                     
+									</p>     
+									<a href="http://m.gd.189.cn/MobileSearch_.html" target="_blank" class="morem">更多&gt;&gt;</a> 
+								</li-->
+								  
+								<!--li class="clearfix">
+									<em class="fl"><a href="javascript:;">促销</a></em>     
+									<p class="fl">
+			 <a href="http://www.189.cn/products/01944159756.html?in_cmpid=gdds-sydhl-sjpj-cx-ryV10" target="_blank" style="color:#f00" >荣耀 V10</a>|  
+              <a href="http://www.189.cn/products/01944156882.html?in_cmpid=gdds-sydhl-sjpj-cx-iPhone7" target="_blank" >iPhone 7 Plus</a> 
+         
+               
+									</p>     
+									<a href="http://m.gd.189.cn/MobileSearch_.html" target="_blank" class="morem">更多&gt;&gt;</a>
+								</li-->
+								<li class="clearfix">    
+									<em class="fl"><a href="javascript:;">活动</a></em>
+									<p class="fl">
+				<a href="http://m.gd.189.cn/SaleShow__10151_10001_10506.html?in_cmpid=gdds-sydhl-sjpj-hd-huodong&amp;dis=sjscsjpj" target="_blank">元宵团圆 畅享优惠</a>     
+										<!--a href="http://m.gd.189.cn/#newDistrict?ssid=ds-syleft-msj-hd-zxjj" target="_blank">最新讲价</a--> 
+									</p>
+									<!--a href="http://m.gd.189.cn/MobileSearch_.html" target="_blank" class="morem">更多&gt;&gt;</a-->
+								</li>
+								   
+							</ul>   
+							<div class="picAd clearfix">    
+        <a href="http://m.gd.189.cn/resource/activity/tc/dwk/index.html?in_cmpid=gdds-sydhl-sjpj-dwk&amp;dis=sjscsjpj" class="fl" target="_blank"><img src="/include/zcdwk1129.jpg" alt="" /></a>   
+            
+            <a href="http://m.gd.189.cn/resource/activity/tc/bxlltc/index.html?in_cmpid=gdds-sydhl-sjpj-bxlltc&amp;dis=sjscsjpj" class="fl" target="_blank"><img src="/include/cxll0221.jpg" alt="" /></a>
+             <a href="http://m.gd.189.cn/resource/activity/tc/rzk/index.html?in_cmpid=gdds-sydhl-sjpj-rzk&amp;dis=sjscsjpj" class="fl" target="_blank"><img src="/include/rzk0914.jpg" alt="" /></a>
+
+							</div> 
+							　  
+  </div>      
+					</li>
+					<li class="tli">  
+						<a class="topA a2" href="###">套餐/靓号</a>        
+						<div class="sonMenu s2">
+							<ul class="textList"> 
+								<li class="clearfix">
+									<em class="fl"><a href="javascript:;">上网多</a></em>
+									<p class="fl">
+             <a href="http://m.gd.189.cn/resource/activity/tc/bxlltc/index.html?in_cmpid=gdds-sydhl-tclh-swd-bxlltc&amp;dis=sjsctclh" target="_blank">畅享199元套餐</a>|
+              <a href="http://m.gd.189.cn/resource/activity/tc/bxlltc/index.html?in_cmpid=gdds-sydhl-tclh-swd-bxlltc&amp;dis=sjsctclh" target="_blank">畅享99元套餐</a>
+              </p> 
+								</li>   
+								<li class="clearfix">  
+									<em class="fl"><a href="javascript:;">月租低</a></em>  
+									<p class="fl">
+			 <a href="http://m.gd.189.cn/resource/activity/tc/rzk/index.html?in_cmpid=gdds-sydhl-tclh-yzd-bxlrzk&amp;dis=sjsctclh" target="_blank">畅享日租卡</a>|
+            <a href="/4g/installcard/index.html?in_cmpid=gdds-sydhl-tclh-yzd-lyhfkjz2018" target="_blank">手机副卡</a> 
+							
+									</p>       
+								</li>  
+								<li class="clearfix">   
+									<em class="fl"><a href="javascript:;">其他</a></em> 
+									<p class="fl">  
+            <a href="http://m.gd.189.cn/resource/activity/tc/dwk/index.html?in_cmpid=gdds-sydhl-tclh-qt-dwk&amp;dis=sjsctclh" target="_blank">存50元得130元话费</a>|  
+           <a href="http://m.gd.189.cn/resource/activity/tc/rzk/index.html?in_cmpid=gdds-sydhl-tclh-qt-spwk&amp;dis=sjsctclh" target="_blank">视频王卡</a> 
+									</p>  
+								</li>     
+								<li class="clearfix"> 
+									<em class="fl"><a href="javascript:;">活动</a></em>  
+									<p class="fl">   
+ 
+              <a href="http://m.gd.189.cn/SaleShow__10151_10001_10506.html?in_cmpid=gdds-sydhl-tclh-hd-huodong&amp;dis=sjsctclh" target="_blank">元宵团圆 畅享优惠</a> 
+									</p>  
+								</li>      
+								     
+							</ul>       
+							<div class="picAd clearfix">
+		     <a href="http://m.gd.189.cn/resource/activity/tc/dwk/index.html?in_cmpid=gdds-sydhl-tclh-dwk&amp;dis=sjsctclh" class="fl" target="_blank"><img src="/include/dwk0221.jpg" alt="" /></a>
+             
+            <a href="http://m.gd.189.cn/resource/activity/tc/bxlltc/index.html?in_cmpid=gdds-sydhl-tclh-bxlltc&amp;dis=sjsctclh" class="fl" target="_blank"><img src="/include/cxll0221.jpg" alt="" /></a> 
+
+             <!--script type="text/javascript">
+if (PUB_LATNID == '020'|| PUB_LATNID == '0758' || PUB_LATNID =='0752'|| PUB_LATNID =='0757'|| PUB_LATNID =='0668'|| PUB_LATNID =='0760'|| PUB_LATNID =='0663'|| PUB_LATNID =='0768'|| PUB_LATNID =='0763' || PUB_LATNID =='0766' || PUB_LATNID =='0753' || PUB_LATNID =='0759' || PUB_LATNID =='0755'){//广州 || 肇庆 ||惠州 ||佛山 ||茂名 ||中山 ||揭阳 ||潮州 ||清远 ||云浮 ||梅州 ||湛江 ||深圳
+	document.write('<a href="/hd/20180301/QGUnlimited/index.html?incmpid=wt-2018gnbxl-cjmb2 " class="fl" target="_blank"><img src="/include/bxll0925.jpg" alt="" /></a>'); 
+}  
+</script-->      
+<a href="http://m.gd.189.cn/resource/activity/tc/rzk/index.html?in_cmpid=gdds-sydhl-tclh-rzk&amp;dis=sjsctclh" class="fl" target="_blank"><img src="/include/rzk0914.jpg" alt="" /></a>
+							</div>       
+					  </div>         
+					</li>         
+					<li class="tli">                
+						<a class="topA a3" href="###">宽带</a>     
+						<div class="sonMenu s3">    
+							<ul class="textList">  
+								<!--li class="clearfix">
+									<em class="fl"><a href="javascript:;">热门办理</a></em>
+									<p class="fl">
+		     <a href="http://mini189.cn/mini189/4grh/?ssid=ds-syleft-kdgh-rmbl-4ge9-gz" target="_blank">双百兆融合套餐</a> | 
+			 <a href="/kd/gz/gq/gzdk20m.html?ssid=ds-syleft-kdgh-rmbl-dkd" target="_blank">单宽带套餐</a> | 
+			 <a href="/product/biz/kd/kdpd/new/index_gz2.html?ssid=gz-syleft-kdgh-qykd" target="_blank">特惠急速宽带</a> | 
+			 <a href="/ecssact/biz/201405/400/?ssid=ds-syleft-kdgh-rmbl-400" target="_blank">400超级靓号</a> | 
+			 <a href="/product/biz/qyzq/index.html?ssid=ds-syleft-kdgh-rmbl-qyzq-5" target="_blank">热销行业应用</a>
+									</p>
+								</li-->
+								
+								<!--li class="tLink">
+			 <a href="/kd/?ssid=gdds-syleft-kdxzhd-pc-dxhgj" target="_blank">本期活动</a>
+			 <a href="/myorder/myorder_index.html?ssid=gdds-syleft-kd-kdfw-kdddcx" target="_blank">订单查询</a> 
+             <a href="/service/kdserv/index.html?ssid=gdds-syleft-kd-kdfw-kdfwzq" target="_blank">宽带服务专区</a> 
+								</li-->
+								
+								<li class="clearfix">
+									<em class="fl"><a href="javascript:;">宽带办理</a></em>
+									<p class="fl">
+                                        <a href="/kd/index.html?ssid=gdds-sydhl-kd-kdbl-kdpdzq&amp;From=gdds-syleft-xzkd" target="_blank">新装宽带</a> |
+
+                                         
+                                  <script type="text/javascript">
+			  if (PUB_LATNID == '020'){//广州	 
+
+
+			   document.write('&lt;a href="/kd/index.html?ssid=gdds-sydhl-kd-kdbl-4Grh-sbz&amp;From=gdds-syleft-sbzjh" target="_blank"&gt;双百兆分享计划&lt;/a&gt; |'); 
+			  }else {//如其他地市为共同链接
+               document.write('&lt;a href="/kd/bxll/zone/index.html?ssid=gdds-sydhl-kd-kdyw-4Grh-sbz" target="_blank"&gt;4G融合&lt;/a&gt; |');
+			  }
+			  </script><a href="/kd/bxll/zone/index.html?ssid=gdds-sydhl-kd-kdyw-4Grh-sbz" target="_blank">4G融合</a> |   
+                                         
+                                        <a href="/kdxy/11order/index.html?cmpid=gdds-sydhl-kd-kdbl-kdxy&amp;d_source=0" target="_blank">宽带包年续约</a> | 
+                                       
+                                           
+                                        <script type="text/javascript"> 
+			  if (PUB_LATNID == '0755'){//深圳	  
+			   document.write('&lt;a href="http://sz189.cn/huodong/ipdsjs.html?ssid=gdds-sydhl-kd-kdbl-gqzq-iptv" target="_blank"&gt;天翼高清互联网电视服务&lt;/a&gt; |    ');
+			  }else {//如其他地市为共同链接
+               document.write('&lt;a href="/hd/iptvser/info.html?ssid=gdds-syleft-kd-kdbl-yh3y-iptv" target="_blank"&gt;天翼高清互联网电视服务&lt;/a&gt; |   ');
+			  }
+			  </script><a href="http://sz189.cn/huodong/ipdsjs.html?ssid=gdds-sydhl-kd-kdbl-gqzq-iptv" target="_blank">天翼高清互联网电视服务</a> |       
+              <a href="/kd/gx/index.html?ssid=gdds-sydhl-kd-kdbl-gxkd" target="_blank">光纤宽带体验</a>    
+               
+           <!--a href="/kd/gx/index.html?ssid=gdds-syleft-kd-kdyw-gxsj-kdgxzq">光纤升级</a-->  
+
+           <!-- |   
+           <a href="/internet/kdxy/index.html?ssid=gdds-syleft-kd-kdyw-kdxy" target="_blank">宽带续约</a> | 
+           <a href="/ts/?ssid=gdds-syleft-kd-kdyw-kdts-znts" target="_blank">宽带提速</a> | 
+		   <a href="/internet/wlyy.html?ssid=gdds-syleft-kd-kdyw-kdzzyw" target="_blank">宽带增值业务 
+
+           </a>-->   
+									</p>   
+								</li>  
+                                 
+								<li class="clearfix">
+									<em class="fl"><a href="javascript:;">宽带套餐</a></em> 
+									<p class="fl">
+            <a href="/kd/index.html?ssid=gdds-sydhl-kd-kdtc-4Grh&amp;From=gdds-syleft-sbz " target="_blank">双百兆</a> | 
+            <a href="/kd/index.html?ssid=gdds-sydhl-kd-kdtc-e9&amp;From=gdds-syleft-e9" target="_blank">宽带+手机</a> | 
+            <a href="/kd/?ssid=gdds-sydhl-kd-kdtc-iptv&amp;From=gdds-syleft-iptv" target="_blank">宽带+4K高清电视服务</a>  |
+            <a href="/kd/?ssid=gdds-sydhl-kd-kdtc-kdpdzq&amp;From=gdds-syleft-dk" target="_blank">单宽带</a>  
+										
+									</p>    
+								</li>  
+                                
+                                <li class="clearfix">
+									<em class="fl"><a href="javascript:;">宽带业务</a></em>
+									<p class="fl">
+            <!--a href="/hd/ggys/index.html?in_cmpid=gdds-syleft-kd-kdyw-tsg" target="_blank">铜线升光纤</a--> 
+ <!--script type="text/javascript"> 
+			  if (PUB_LATNID == '0760'){//中山	
+			   document.write('<a href="/hd/dts/zs_msg.html?in_cmpid=gdds-syleft-kd-kdyw-kdts-zsycts" target="_blank" style="color:#f00">预存提速</a> | ');
+			  }else {//如其他地市为共同链接
+               document.write('<a href="/hd/xcgkts/?in_cmpid=gdds-syjdt-xcgkts-3" target="_blank" style="color:#f00">宽带提速</a> |  ');
+			  }
+			  </script-->      
+             
+           <a href="/ts/?in_cmpid=gdds-sydhl-kd-kdyw-znts" target="_blank">宽带提速</a>  |
+           <a href="/znzw/ssindex.html?ssid=gdds-sydhl-kd-kdyw-znzw" target="_blank">智能组网 </a> | 
+           <a href="/internet/wlyy.html?ssid=gdds-sydhl-kd-kdyw-kdzzyw " target="_blank">宽带增值业务</a>      
+           <!--a href="/internet/WIFI_intro.html?ssid=gdds-sydhl-kd-kdyw-wfkd-wxkd " target="_blank" >WIFI</a-->  
+										
+									</p>   
+								</li>
+                                <li class="clearfix">
+									<em class="fl"><a href="javascript:;">宽带服务</a></em>
+									<p class="fl">
+           <a href="/myorder/myorder_index.html?ssid=gdds-sydhl-kd-kdfw-kdddcx " target="_blank">订单查询</a> | 
+           <a href="/kd/gx/index.html?ssid=gdds-sydhl-kd-kdfw-gxcx-kdgxzq" target="_blank"> 光纤资源查询</a>  |
+		   <a href="/myorder/myorder_index.html?ssid=gdds-sydhl-kd-kdfw-zyjjdcx" target="_blank">装移机进度查询</a> | 
+           <a href="/kdcs/index.html?ssid=gdds-sydhl-kd-kdfw-kdcs" target="_blank">宽带测速</a>  |  
+           <a href="/malfunction/malFunction_index.html?ssid=gdds-sydhl-kd-kdfw-xzjdcx " target="_blank">修障进度查询</a>   |  
+           <a href="/service/kdserv/index.html?ssid=gdds-sydhl-kd-kdfw-kdfwzq " target="_blank">宽带服务专区</a>| 
+           <a href="/internet/ad_serv/index.htm?ssid=gdds-sydhl-kd-kdfw%20-FAQ " target="_blank">宽带FAQ</a>   | 
+           <a href="/item/20100026.html?ssid=gdds-sydhl-kd-kdfw-kdtj" target="_blank">宽带停机</a>   | 
+           <a href="/item/20100026.html?ssid=gdds-sydhl-kd-kdfw-kdfj" target="_blank">宽带复机</a>   | 
+           <a href="/kd/kdbank/zhkdzh01.html?ssid=gdds-sydhl-kd-kdfw-kdzhzh " target="_blank">宽带账号查询</a>   |    
+           <a href="/service/kdmmfw?ssid=gdds-sydhl-kd-kdfw-itvmm" target="_blank">IPTV密码服务</a>   | 
+           <a href="/service/kdmmfw?ssid=gdds-sydhl-kd-kdfw-kdmm" target="_blank">宽带上网密码服务</a> 
+          
+										
+									</p>  
+								</li>  
+							</ul>
+							<div class="picAd clearfix">
+		  <a href="/kd/bxll/zone/index.html?ssid=gdds-syleft-kd-bxll-kdxz&amp;From=gdsb-syleft-kd-bxll-kdxz" class="fl" target="_blank"><img src="/include/bxll0807.jpg" alt=" " /></a> 
+          <a href="/old/?gdds-sydhl-kd-cdxt" class="fl" target="_blank"><img src="/include/ly0627.jpg" alt=" " /></a>   
+             <a href="/hd/2017s11/iptv/order.html?ssid=gdds-syleft-kd-kdbl-yh3y-iptv" class="fl" target="_blank"><img src="/include/iptv0225.jpg" alt=" " /></a>         
+							</div>   
+						</div>                  
+					</li>        
+					<li class="tli">        
+						<a class="topA a4" href="###">智能</a>    
+						<div class="sonMenu s4">    
+							<ul class="textList"> 
+								<li class="clearfix"> 
+									<em class="fl"><a href="javascript:;">智能业务</a></em>
+									<p class="fl"> 
+			<a href="/ts/?in_cmpid=gdds-sydhl-zn-znyw-znts" target="_blank">智能提速</a> | 
+			<a href="/znzw/ssindex.html?ssid=gdds-sydhl-zn-znyw-znzw" target="_blank">智能组网</a> | 
+			<a href="/kd/zhjtArea/pc.html?in_cmpid=gdds-sydhl-zn-znyw-zhjt&amp;From=gdds-sydhl-zn-znyw-zhjt" target="_blank">智慧家庭</a> |     
+            <a href="/hd/kdcheck/index.html?gdds-sydhl-zn-znyw-tykj" target="_blank">天翼看家</a>         
+									</p> 
+			<!--a href="/service/home/?ssid=gdds-syleft-wdxx-grxx-tdsz" target="_blank" class="morem">更多&gt;&gt;</a-->
+								</li>
+								<li class="clearfix">
+									<em class="fl"><a href="javascript:;">智能设备</a></em>
+									<p class="fl"> 
+			<a href="/resource/activity/tc/ykq/index1.html?in_cmpid=gdds-sydhl-zn-znsb-xfykq&amp;dis=sjscsjpj" target="_blank">iTV智能遥控器</a> 
+									</p>
+			<!--a href="/service/home/?ssid=gdds-syleft-wdxx-wddd" target="_blank" class="morem">更多&gt;&gt;</a--> 
+								</li> 
+								<!--li class="clearfix">  
+									<em class="fl"><a href="javascript:;">密码管理</a></em>
+									<p class="fl">
+			<a href="/transaction/taocanapply1.jsp?operCode=passwordChange&ssid=gdds-sylefy-wdxx-mmgl-kh" target="_blank">客户密码修改</a> | 
+			<a href="/item/20100005.html?ssid=gdds-syleft-wdxx-mmgl-wipi" target="_blank">WiFi密码修改</a> | 
+			<a href="/transaction/operApply1.jsp?operCode=PasswordModifyIPTV&ssid=gdds-sylefy-wdxx-mmgl-iptv" target="_blank">IPTV密码修改</a> | 
+			<a href="/item/20100017.html?ssid=gdds-syleft-wdxx-mmgl-kdsw" target="_blank">宽带上网密码修改</a> | 
+			<a href="/newpassword/reset_new_cdma.jsp?ssid=gdds-syleft-wdxx-mmgl-khmm" target="_blank">客户密码重置</a> | 
+			<a href="/newpassword/new_wifi_pwdreset.jsp?ssid=gdds-syleft-wdxx-mmgl-wifimm" target="_blank">重置WiFi密码</a> | 
+			<a href="/newpassword/new_itv_pwdreset.jsp?ssid=gdds-syleft-wdxx-mmgl-iptvmm" target="_blank">重置IPTV密码</a> | 
+			<a href="/newpassword/new_ad_pwdreset.jsp?ssid=gdds-syleft-wdxx-mmgl-kdmm" target="_blank">重置宽带上网密码</a> | 
+			<a href="https://uam.gd.ct10000.com/portal/FLASignOnInit.do?SSOCustType=0&ssid=gdds-sylefy-wdxx-mmgl-mdl" target="_blank">免账号密码登录申请</a>
+									</p>
+								</li-->
+								<!--li class="clearfix">
+									<em class="fl"><a href="javascript:;">积分服务</a></em>
+									<p class="fl">
+			<a href="/service/home/query/jifen.html?ssid=gdds-syleft-wdxx-jffw-jfcx" target="_blank">积分查询</a> | 
+			 <script type="text/javascript"> 
+			  if (PUB_LATNID == '0755'){//中山	
+			   document.write('<a href="https://jf.sz189.cn/tc/jfsc.shtml?action=index" target="_blank">积分兑换</a> | ');
+			  }else {//如其他地市为共同链接
+               document.write('<a href="/store/?ssid=gdds-syleft-wdxx-jffw-jfdh" target="_blank">积分兑换</a> |  ');
+			  }
+			  </script>
+			<a href="/store/mystore/myStoreOrder.jsp?sysFrom=ECSS_QT" target="_blank">积分订单查询</a>
+									</p>
+			<a href="/store/?ssid=gdds-syleft-jffw" target="_blank" class="morem">更多&gt;&gt;</a>
+								</li-->
+                                
+							</ul>
+							<div class="picAd clearfix">
+            <!--a href="/UnlimitedArea/index.html?ssid=gdds-syjdt-dz0ybxllzq2018" class="fl" target="_blank"><img src="/include/cxll1126.jpg" alt="" /></a-->                
+            <a href="/4g/flowllb/index.html?in_cmpid=gdds-syleft-rzkyyb" class="fl" target="_blank"><img src="/include/rzk0719.jpg" alt="" /></a>
+			<!--a href="/item/20100022.html?ssid=gdds-syleft-tdsz" class="fl" target="_blank"><img src="/images/2015/zn_ad_1.jpg" alt="" /></a-->
+			<a href="/store/?ssid=gdds-syleft-jfdh" class="fl" target="_blank"><img src="/images/2015/zn_ad_3.jpg" alt="" /></a>
+							</div>
+						</div>
+					</li>  
+					<li class="tli"> 
+						<a class="topA a5" href="###">话费</a> 
+						<div class="sonMenu s5"> 
+							<ul class="textList">
+								<li class="clearfix">
+					 				<em class="fl"><a href="javascript:;">手机</a></em>
+									<p class="fl">
+			<a href="/service/pay/?busi_type=CDMA&amp;ssid=gdds-sydhl-hf-sj-wyjf" target="_blank">网银交费</a> | 
+			<a href="/webpay/newVC/vcindex.jsp?ssid=gdds-sydhl-hf-sj-czkcz" target="_blank">充值卡充值</a> | 
+			<a href="/consumeInfo/payRecharge/payRecharge.html?ssid=gdds-sydhl-hf-sj-czcx" target="_blank">充值缴费记录查询</a> 
+
+									</p>
+								</li>
+								<li class="clearfix">
+									<em class="fl"><a href="javascript:;">宽带/固话</a></em>
+									<p class="fl">
+			<a href="/service/pay/?busi_type=DH&amp;ssid=gdds-sydhl-hf-kdgh-wyjf" target="_blank">网银交费</a> | 
+			<a href="/webpay/newVC/vcindex.jsp?ssid=gdds-sydhl-hf-kdgh-czkcz" target="_blank">充值卡充值</a> | 
+            <a href="/service/pay/oncePay.jsp?ssid=gdds-sydhl-hf-kdgh-kdjf" target="_blank">宽带续约交费</a> | 
+			<a href="/consumeInfo/payRecharge/payRecharge.html?ssid=gdds-sydhl-hf-kdgh-czcx" target="_blank">充值缴费记录查询</a>
+            
+									</p>
+								</li>
+                                
+                                <li class="clearfix">
+									<em class="fl"><a href="javascript:;">欠费补缴</a></em>
+									<p class="fl">
+                                        <a href="/webpay/blackcustpay/bcpay_index.html?ssid=gdds-sydhl-hf-qfbj-lmdqfbj" target="_blank">历史欠费查询及缴交</a> 
+										 
+									</p>    
+								</li>
+                                
+                                   
+								<li class="clearfix">
+									<em class="fl"><a href="javascript:;">流量卡</a></em>
+									<p class="fl">
+             <a href="/webpay/newVC/3Gcarddirect.jsp?ssid=gdds-sydhl-hf-llk-llzc" target="_blank">流量直充</a> |
+			 <a href="/webpay/newVC/3Gcard.jsp?ssid=gdds-sydhl-hf-llk-llkcz" target="_blank">流量卡充值</a> |  
+			 <a href="/service/flowFillRecord.jsp?ssid=gdds-sydhl-hf-llk-llczcx" target="_blank">流量卡充值记录查询</a> 
+																	
+									</p>
+                                        </li>
+                                        <!--script type="text/javascript">                       
+			  if (PUB_LATNID == '00755'){//深圳,暂时屏蔽
+				document.write('<li class="clearfix">');
+				document.write('<em class="fl"><a href="javascript:;">充值卡</a></em>');
+				document.write('<p class="fl">');
+				document.write('<a href="/webpay/market/sz/index.jsp?ssid=gdds-syleft-czjf-szczk-ggllk" target="_blank">购买充值卡</a> |');
+			    document.write('<a href="/webpay/market/check_order.jsp?ssid=gdds-syleft-czjf-szczk-ggczkcx" target="_blank">购买充值卡记录查询</a>');
+				document.write('</p>');
+				document.write('</li>');
+			  } 
+			</script--> 
+
+                                       
+                                    <!--li class="clearfix">
+									<em class="fl"><a href="javascript:;">购买充值卡</a></em>   
+									<p class="fl">
+		      <a href="/service/home/newVC/index.html?ssid=gdds-syleft-czjf-gmczk-gmhfk" target="_blank">购买话费卡</a>
+
+
+									</p>
+								</li-->
+                                    <li class="clearfix">
+									<em class="fl"><a href="javascript:;">翼支付</a></em>
+									<p class="fl">
+			  <a href="/service/jfzscz/all_yzfczjf.htm?ssid=gdds-sydhl-hf-yzf-jfzscz" target="_blank">使用交费助手充值</a> |
+              <a href="/service/jfzscz/all_yzfczjf.htm?ssid=gdds-sydhl-hf-yzf-yzfcz" target="_blank">为翼支付账户充值</a> 
+									</p>
+ 
+
+							  </li> 
+                              
+                              
+                                
+							</ul>
+							<div class="picAd clearfix"> 
+               <!--a href="/ty10/yd.html?source=gdds-syleft-hf-hd-10years" class="fl" target="_blank"><img src="/include/zc_tyszl_1221.jpg" alt="" /></a--> 
+                <!--a href="/service/pay/?ssid=gdds-syleft-yhkzxcz" class="fl" target="_blank"><img src="/include/cz0115.jpg" alt="" /></a-->
+                <a href="/ty10/yd2.html?source=gdds-syleft-hf-llhd-10years" class="fl" target="_blank"><img src="/include/tyszl_0121.jpg" alt="" /></a> 
+			   <a href="/item/10200188.html?in_cmpid=gdsb-syleft-4gbyllb" class="fl" target="_blank"><img src="/include/ly0115.jpg" alt="" /></a> 
+               <a href="/4g/installcard/index.html?in_cmpid=gdds-sycd-hf-lyhfkjz2018" class="fl" target="_blank"><img src="/include/fkbl1129.jpg" alt="" /></a>
+                                
+							</div>
+						</div>    
+					</li>  
+					<li class="tli">   
+						<a class="topA a6" href="###">费用</a> 
+						<div class="sonMenu s6"> 
+							<ul class="textList">
+								<li class="clearfix"> 
+									<em class="fl"><a href="javascript:;">我的消费</a></em>
+									<p class="fl">
+		     	<a href="/service/home/query/xf_sshf.html?ssid=gdds-sydhl-fy-wdxf-hfcx" target="_blank">实时话费</a> |
+				<a href="/service/home/query/xf_ye.html?ssid=gdds-sydhl-fy-wdxf-yecx" target="_blank">余额查询</a> |  
+				<a href="/service/home/query/xf_qf.html?ssid=gdds-sydhl-fy-wdxf-qfcx" target="_blank">欠费查询</a> |  
+                <a href="/service/home/query/xf_zd.html?ssid=gdds-sydhl-fy-wdxf-zdcx" target="_blank">后付费账单查询</a> | 
+                <a href="https://gd.189.cn/service/home/query/xf_yffzd.html?ssid=gdds-sydhl-fy-wdxf-zdcx" target="_blank">预付费账单查询</a> | 
+				<a href="/service/Bill/App/CreditQuery.do?ssid=gdds-sydhl-fy-wdxf-xyd" target="_blank">信用度查询</a> | 
+				<a href="/service/eInvoice/qry/eInvoiceList.html?ssid=gdds-sydhl-fy-wdxf-dzfpcx" target="_blank">电子发票查询</a> |
+                <a href="/service/home/query/xf_llkzh.html?ssid=gdds-sydhl-fy-wdxf-llkcx" target="_blank">流量卡账户查询</a> |
+                <a href="/transaction/operApply1.jsp?operCode=GN_DianZiFaPiao_PrP_WEB&amp;in_cmpid=ssid=gdds-sydhl-fy-wdxf-yffdzfp" target="_blank">预付费电子发票开具</a> 
+									</p>
+								</li>
+								<li class="clearfix">
+									<em class="fl"><a href="javascript:;">我的详单</a></em> 
+									<p class="fl">
+				 <a href="/service/home/query/xd_index.html?ssid=gdds-sydhl-fy-wdxd-thxd" target="_blank">通话详单</a> | 
+				 <a href="/service/home/query/xd_index.html?ssid=gdds-sydhl-fy-wdxd-llxd" target="_blank">上网流量详单</a> | 
+				 <a href="/service/home/query/xd_index.html?ssid=gdds-sydhl-fy-wdxd-zzxd" target="_blank">短信详单</a> | 
+				 <a href="/service/home/query/xd_index.html?ssid=gdds-sydhl-fy-wdxd-zzxd" target="_blank">增值详单</a>
+									</p>
+								</li>
+								<li class="clearfix">
+									<em class="fl"><a href="javascript:;">我的套餐</a></em>
+									<p class="fl">
+				 <a href="/consumeInfo/myHisConsume/myHisConsume.html?ssid=gdds-sydhl-fy-wdtc-tcsycx" target="_blank">套餐使用情况查询</a> | 
+                 <a href="/service/home/query/flow_check.html?ssid=gdds-sydhl-fy-wdtc-llcx" target="_blank">流量使用查询</a> | 
+                 <a href="/service/home/query/tc_gn.html?ssid=gdds-sydhl-fy-wdtc-yktgn" target="_blank">已开通的功能</a> | 
+                 <a href="/service/home/query/tc_zzyw.html?ssid=gdds-sydhl-fy-wdtc-ydgzzyw" target="_blank">已订购的增值业务</a> | 
+                 <a href="/service/home/query/tc_wdtc.html?ssid=gdds-sydhl-fy-wdtc-ydgyh" target="_blank">已订购的优惠</a> 
+	
+									</p>
+								</li> 
+                                
+                                <li class="clearfix">
+									<em class="fl"><a href="javascript:;">我的积分</a></em>
+									<p class="fl">
+				 <a href="/service/home/query/jifen.html?ssid=gdds-sydhl-fy-wdjf-jfcx" target="_blank">积分查询</a> | 
+                 <a href="/store/?ssid=gdds-sydhl-fy-wdjf-jfdh" target="_blank">积分兑换</a> | 
+                 <a href="/store/mystore/myStoreOrder.jsp?sysFrom=ECSS_QT&amp;ssid=gdds-sydhl-fy-wdjf-jfddcx" target="_blank">积分订单查询</a>
+	
+									</p>
+								</li>
+                                
+							</ul>
+							<div class="picAd clearfix">
+				  <a href="/service/home/query/xf_tcsy.html?ssid=gdds-syleft-tcsycx" class="fl" target="_blank"><img src="/include/fy_ad_01.jpg" alt="" /></a>
+				  <a href="/service/home/query/xf_ye.html?ssid=gdds-syleft-yecx" class="fl" target="_blank"><img src="/include/fy_ad_02.jpg" alt="" /></a>
+				  <a href="/service/home/query/xf_zd.html?ssid=gdds-syleft-zdcx" class="fl" target="_blank"><img src="/include/fy_ad_3.jpg" alt="" /></a>
+							</div>
+						</div>
+					</li> 
+					<li class="tli">
+						<a class="topA a7" href="###">业务</a>
+
+         <!--em style="position: absolute; top: 22px; right: 25px;"><a href="/4g/sj/?in_cmpid=gdds-syzcdhl-yw-yjsj" target="_blank" style="color: rgb(255, 173, 0);">一键升4G</a></em-->
+ <em style="position: absolute; top: 22px; right: 25px;"><a href="/kdxy/11order/index.html?in_cmpid=gdds-sydhl-xysts-kdxy&amp;d_source=0" target="_blank" style="color: rgb(255, 173, 0);">续约送提速</a></em>
+						<div class="sonMenu s7">
+							<ul class="textList tlNoAd"> 
+								<li class="clearfix">  
+									<em class="fl"><a href="javascript:;">订单服务</a></em>
+									<p class="fl">
+					<a href="http://m.gd.189.cn/uniteWeb/order/orderSearch.html?ssid=gdds-sydhl-yw-ddfw-scddcx " target="_blank">天翼商城订单查询</a> |  
+					<a href="/myorder/myorder_index.html?ssid=gdds-sydhl-yw-ddfw-zyjjdcx" target="_blank">装移机进度查询</a> |  
+					<a href="/malfunction/malFunction_index.html?ssid=gdds-sydhl-yw-ddfw-xzjdcx" target="_blank">修障进度查询</a> | 
+                    <a href="/support/complain/ts/tsCheck.html?ssid=gdds-sydhl-yw-ddfw-tscx" target="_blank">投诉处理进度查询</a> |  
+                     <a href="/service/manage/jindu.jsp?a=0&amp;ssid=gdds-sydhl-yw-ddfw-ywbljlcx" target="_blank">业务办理记录查询</a> 
+ 
+									</p>
+									<!--a href="/flow.html?ssid=gdds-syleft-ywbl-flow" target="_blank" class="morem">更多&gt;&gt;</a-->
+								</li>
+								<li class="clearfix"> 
+									<em class="fl"><a href="javascript:;">包子铺</a></em>
+									<p class="fl">  
+					<!--a href="/item/10200198.html###?in_cmpid=wangting-baozipu&ssid=gdds-sydhl-yw-bzp-bxltxb" target="_blank">畅享流量提速包</a-->  
+					<a href="/item/10200190.html?in_cmpid=wangting-baozipu&amp;ssid=gdds-sydhl-yw-bzp-jcb" target="_blank">手机上网加餐包</a> | 
+					<a href="/item/10200188.html?in_cmpid=wangting-baozipu&amp;ssid=gdds-sydhl-yw-bzp-llb" target="_blank">手机上网流量包</a> | 
+					<a href="/item/10200191.html?in_cmpid=wangting-baozipu&amp;ssid=gdds-sydhl-yw-bzp-xsb" target="_blank">4G流量闲时包</a> |   
+					<a href="/item/10200189.html?in_cmpid=wangting-baozipu&amp;ssid=gdds-sydhl-yw-bzp-jrllb" target="_blank">4G假日流量包</a> |  
+                    <a href="/item/10200199.html?in_cmpid=wangting-baozipu&amp;ssid=gdds-sydhl-yw-bzp-lltsb" target="_blank">4G流量提速包</a>
+									</p>
+									<a href="/flow.html?ssid=gdds-sydhl-yw-bzp-gd" target="_blank" class="morem">更多&gt;&gt;</a>
+								</li>
+								<li class="clearfix">
+									<em class="fl"><a href="javascript:;">续约升级</a></em>   
+									<p class="fl"> 
+                     <a href="/UnlimitedArea/index.html?ssid=gdds-sydhl-yw-xysj-dz0ybxllzq2018" target="_blank">升级畅享流量套餐</a> |
+                     
+					 <a href="/4g/installcard/index.html?in_cmpid=gdds-sydhl-yw-xysj-lyhfkjz2018" target="_blank">副卡加装</a> | 
+					 <a href="/kdxy/11order/index.html?cmpid=gdds-sydhl-yw-xysj-kdxy&amp;d_source=0" target="_blank">宽带包年续约</a> | 
+										<!--script> 
+											if (PUB_LATNID == '0755') {
+												document.write('<a href="http://sz189.cn/huodong/hyhd.html?ssid=zzywz1-kdyy-gdiptv" target="_blank">天翼高清互联网电视服务新装</a> |');
+											}else{
+												document.write('<a href="/hd/iptvser/info.html?ssid=gdds-syleft-kdgh-kdyw-gqzq-iptv" target="_blank">天翼高清互联网电视服务新装</a> |'); 
+											}   
+										</script--> 
+					  <a href="/4g/sj/?in_cmpid=gdds-sydhl-yw-xysj-yjsj" target="_blank">3G升4G</a> | 
+                      <a href="/item/10200187.html?ssid=gdds-sydhl-yw-xysj-volte" target="_blank">升级高清通话（VoLTE）</a> 
+									</p>
+								</li>
+								<li class="clearfix"> 
+
+ 
+									<em class="fl"><a href="javascript:;">增值业务</a></em>  
+									<p class="fl">  
+					  <a href="/gd/vas/index.html?ssid=gdds-sydhl-yw-zzyw-ywdg" target="_blank">增值业务订购</a> | 
+					  <a href="/transaction/operApply1.jsp?operCode=VSOPTD&amp;ssid=gdds-sydhl-yw-zzyw-ywcxtd" target="_blank">已订增值业务查询与退订</a> | 
+					  <a href="https://www.bestpay.com.cn/regist/telecomstep1?ssid=gdds-sydhl-yw-zzyw-yzf" target="_blank">翼支付账户开通</a> | 
+					  <a href="/service/jfzscz/all_yzfczjf.htm?ssid=gdds-sydhl-yw-zzyw-jfzs" target="_blank">交费助手</a> 
+    
+                                        
+									</p>
+									<!--a href="/gd/vas/index.html?ssid=gdds-syleft-ywbl-zzyw-ywdg" target="_blank" class="morem">更多&gt;&gt;</a-->
+								</li>
+								<li class="clearfix">
+
+									<em class="fl"><a href="javascript:;">基础服务</a></em>
+									<p class="fl">
+					 <a href="/manyou/check.html?ssid=gdds-sydhl-yw-jcfw-ktgjmy" target="_blank">开通国际及港澳台漫游</a> | 
+					 <a href="/item/20100026.html?ssid=gdds-sydhl-yw-jcfw-tfj" target="_blank">手机停复机</a> | 
+					 <a href="/item/20100024.html?ssid=gdds-sydhl-yw-jcfw-sjgs" target="_blank">手机挂失</a> | 
+					 <a href="/item/20100025.html?ssid=gdds-sydhl-yw-jcfw-sjjg" target="_blank">手机解挂</a> | 
+                      <a href="/service/Get/Custom/New/Remind.do?ssid=gdds-sydhl-yw-jcfw-dztx" target="_blank">服务提醒定制</a> | 
+                       <a href="/transaction/operApply1.jsp?operCode=GN_DianZiFaPiao_SMS&amp;ssid=gdds-sydhl-yw-jcfw-dzfptdsz" target="_blank">电子发票投递设置</a> | 
+                        <a href="/transaction/changeCustInfo/check.html?in_cmpid=gdds-sydhl-yw-jcfw-wdzl" target="_blank">个人资料修改</a> 
+									</p>
+					 <a href="/item/service_index.htm#sj_fwbl?ssid=gdds-sydhl-yw-jcfw-gd" target="_blank" class="morem">更多&gt;&gt;</a>
+								</li>
+                                <li class="clearfix">
+									<em class="fl"><a href="javascript:;">密码服务</a></em>
+									<p class="fl">
+
+					 <a href="/transaction/taocanapply1.jsp?operCode=passwordChange&amp;ssid=gdds-sydhl-yw-mmfw-khmmxg" target="_blank">客户密码修改</a> | 
+					 <a href="/item/20100005.html?ssid=gdds-sydhl-yw-mmfw-wfmmxg" target="_blank">WiFi密码修改</a> | 
+
+					 <a href="/newpassword/reset_new_cdma.jsp?ssid=gdds-sydhl-yw-mmfw-khmmcz" target="_blank">客户密码重置</a> | 
+					 <a href="/newpassword/new_wifi_pwdreset.jsp?ssid=gdds-sydhl-yw-mmfw-wfmmcz" target="_blank">重置WiFi密码</a> |
+                     <a href="https://uam.gd.ct10000.com/portal/FLASignOnInit.do?SSOCustType=0&amp;ssid=gdds-sydhl-yw-mmfw-mmdl" target="_blank">免账号密码登录申请</a> 
+										
+                                         
+									</p>
+								</li> 
+                                <li class="clearfix">
+									<em class="fl"><a href="javascript:;">行业应用</a></em>
+									<p class="fl">
+					 <a href="/item/10300015.html?ssid=gdds-sydhl-yw-hyyy-yzl" target="_blank">翼之旅</a> |    
+                      <a href="/item/10300002.html?ssid=gdds-sydhl-yw-hyyy-abet" target="_blank">安保e通</a> |   
+                       <a href="/item/10300007.html?ssid=gdds-sydhl-yw-hyyy-jst" target="_blank">金视通</a> |   
+                        <a href="/item/10300011.html?ssid=gdds-sydhl-yw-hyyy-wqet" target="_blank">外勤e通（精定位）</a> 
+									</p>
+                          <a href="/biz/product/?ssid=gdds-sydhl-yw-hyyy-gd" target="_blank" class="morem">更多&gt;&gt;</a>
+								</li> 
+                                <li class="clearfix">
+									<em class="fl"><a href="javascript:;">游子E族</a></em> 
+
+
+									<p class="fl">
+					<a href="/e200card/register.jsp?ssid=gdds-sydhl-yw-yzez-zc" target="_blank">游子E族注册</a> | 
+					<a href="/e200card/qrypoint.jsp?ssid=gdds-sydhl-yw-yzez-cxjf" target="_blank">查询游子E族积分</a> |  
+					<a href="/e200card/excpoint.jsp?ssid=gdds-sydhl-yw-yzez-dhjf" target="_blank">兑换游子E族积分</a> | 
+					<a href="/e200card/opermember.jsp?ssid=gdds-sydhl-yw-yzez-qqhm" target="_blank">游子亲情号码操作</a> |  
+					<a href="/e200card/change.jsp?ssid=gdds-sydhl-yw-yzez-gqkdh" target="_blank">过期200卡兑换201卡</a>   
+									    
+									</p>
+					
+								</li>　
+                                <!--li class="clearfix">  
+									<p class="fl">
+										<a href="/ecssact/zjl/?ssid=gdds-syleft-zjl" target="_blank" style="color:#F00">与总经理零距离沟通，快来报名吧！</a> 
+									</p>
+								</li-->
+							</ul>
+							<!--div class="picAd clearfix">
+								<a href="/4g/?ssid=gdds-syleft-4gzq" class="fl" target="_blank"><img src="/images/2015/yw_ad_1.jpg" alt="" /></a>
+								<a href="/ts/?ssid=gdds-syleft-tszq&sp_code=22300021" class="fl" target="_blank"><img src="/images/2015/yw_ad_2.jpg" alt="" /></a>
+								<a href="/internet/kdxy/index.html?ssid=gdds-syleft-kdxy" class="fl" target="_blank"><img src="/images/2015/yw_ad_3.jpg" alt="" /></a>
+							</div-->
+						</div>  
+					</li>　				</ul>			</menu> 
+			<nav class="fl">
+				<a id="home" href="/">首页</a>
+				<a id="phone" href="/mall/?ssid=gdds-sydh-sj" target="_blank">号卡</a>
+				<!--script>document.write('<a id="adsl" href="/kd'+PUB_LATNCODE2+'/index.html">宽带光纤</a>')</script-->
+				<a id="adsl" href="/kd/?ssid=gdds-sydh-kdgx&amp;From=gdds-sydh-kdgx">宽带光纤</a> 
+				<a id="old" href="/old/?ssid=gdds-sydh-lyh">老用户</a>
+				<a id="cut" href="/sq/?ssid=gdds-sydh-sq" target="_blank">省钱</a>
+				<a id="service" href="/service.html?ssid=gdds-sydh-zzfw">自助服务</a>
+				<a id="cityone" href="/city.html?ssid=gdds-sydh-tch">同城惠</a>
+			</nav>
+		</div>
+	</div>
+	<!--nav/--> 
+</header> 
+
+<script>
+function enterSearch(){   
+      var event=arguments.callee.caller.arguments[0]||window.event;//消除浏览器差异   
+     if (event.keyCode == 13){   
+        open100000();   
+     }   
+ } 
+ function enterSearch2(v){   
+      var event=arguments.callee.caller.arguments[0]||window.event;//消除浏览器差异   
+     if (event.keyCode == 13){   
+        pre_search(v);   
+     }   
+ } 
+ 
+var trkKwType='default';
+function pre_search(value) {
+      var $form1 = $('#form_srh');
+      if($form1[0]==null) { //创建form
+      	$form1 = $('&lt;form id="form_srh" target="_blank" method="post" action="/search/index.jsp"&gt;&lt;/form&gt;'); 
+       	$form1.append('&lt;input  type="hidden" id="query_srh" name="query"  value=""/&gt;');
+		$form1.append('&lt;input type="hidden" id="trkKwType" name="trkKwType" value="default"/&gt;');
+      	 $('body').append($form1);
+      }
+      if(value) $('#kw_1').val(value);
+      $('#query_srh').val($('#kw_1').val());
+	  $('#trkKwType').val(trkKwType);	  
+      if(chkKW()) {$('#query_srh').focus();$form1.submit();}
+     }
+$(function(){
+	$('.search_tab span').click(function(){
+		try{
+			lazyloadForPart($('.srh_form'));
+		}
+		catch(err){}
+		var _index=$('.search_tab span').index(this);
+		$(this).addClass('on').siblings('span').removeClass('on');
+		$('.srh_form').eq(_index).show().siblings('.srh_form').hide();
+	});
+})
+function getUrl(url_zhidao){
+    var f=url_zhidao;
+    //alert(f);
+    window.open(f);;
+}
+
+function open100000(){
+	if($('#kw_2').val() == '')
+	{
+	   alert('请输入您要搜索的关键字！');
+	}
+	else{
+	    DWREngine.setAsync(false);
+		prodInfoActionNew.createURL2Zhidao('2',$('#kw_2').val(),getUrl);
+	}
+}
+function chkKW(){
+	if($('#kw_1').val() == '')
+	{
+		  alert('请输入您要搜索的关键字！');   
+		  return false;
+	}
+	else{
+		  return true;
+	}
+}
+function onsearcch(keyword){
+    trkKwType='hotwords';
+	pre_search(keyword);
+	trkKwType='default';
+}
+
+$(function(){
+	var url = "/dis/portal/getSearchHtml.json";
+	$.ajax({
+		type: "GET", 
+		url: url, 
+		data: {},
+		dataType: "json",
+		success : function(json) {
+			var hotwords = json.hotwords;
+                                defaultSearch = json.defaultSearch;
+                                jQuery("#kw_1").val(defaultSearch);
+			jQuery("#kw_1").bind("focus",function(){
+				if(jQuery("#kw_1").val() == defaultSearch){
+					jQuery("#kw_1").val("");
+				}
+
+			}).bind("blur",function(){
+				if(jQuery("#kw_1").val() == ""){
+					jQuery("#kw_1").val(defaultSearch);
+				}
+			});
+			var html = "";
+			for(var i = 0; i &lt; hotwords.length; i++){
+				var hotword = hotwords[i];
+				//console.log(hotword.keyword+"的URL："+hotword.url);
+				var s_url = hotword.url == undefined ? "/dis/portal/0-0-0-0.html?sw="+encodeURI(hotword.keyword) : hotword.url;
+				if(i==0 || i==1){
+					html = html + "&lt;a target='_blank' href='"+s_url+"'&gt;" + hotword.keyword + "&lt;img class='hot' src='/images/2015/ico_hot.png' alt='热' /&gt;&lt;/a&gt; ";
+					
+				}else{
+					html = html + "&lt;a target='_blank' href='"+s_url+"'&gt;" + hotword.keyword + "&lt;/a&gt; ";
+				}
+			}
+			//html = html + '&lt;a href="/notice/notice_20160223.html" target="_blank"&gt;防电信诈骗&lt;/a&gt;';
+			$('.tag').html(html);
+		},
+		error : function() {
+
+		}
+	});
+
+});
+
+function btnSearch(){
+	var obj = $('#kw_1');
+	var url = "/dis/portal/0-0-0-0.html";
+	if(obj.val()!=''){
+		url = url+"?sw=" + encodeURI($.trim(obj.val()));
+	}
+	window.open(url, "_blank");
+}
+
+function enterSearchTRS(){   
+	var event=arguments.callee.caller.arguments[0]||window.event;//消除浏览器差异   
+	if (event.keyCode == 13){   
+		btnSearch();   
+	}   
+}
+
+function onSearchDIS(obj){
+	var url = "/dis/portal/0-0-0-0.html";
+	if(obj){
+		url = url+"?sw=" + encodeURI($.trim(obj.innerText));
+	}
+	window.open(url, "_blank");
+}
+function PubShowLatnName(){
+	if(PUB_LATNID==undefined ||PUB_LATNID=="" || PUB_LATNID=="0000" ){
+		document.getElementById("PubIdShowLatnName").innerHTML="广东";
+	}else{
+		document.getElementById("PubIdShowLatnName").innerHTML=PUB_LATNNAME;
+	}
+}
+window.setTimeout("PubShowLatnName()", 350, "JAVASCRIPT" );
+</script><!--content-->
+<div class="wrap clearfix">
+    <!--面包宵-->
+    <div class="crumbplus clearfix">
+    <div class="listplus homeplus">
+    <a href="index.html"><i></i>个人主页</a>
+    </div>
+    <a class="out" href="/service/home/?in_cmpid=gdsb-zzfw-jbsy-khzy">返回旧版</a>
+   
+    </div>
+<!--左导航-->
+<div class="contLeft">
+   <div class="menuBox">
+
+ <!--用户信息-->   
+ <div class="userInfoNew clearfix none" style="display: block;">
+   <div class="heaPor fl">
+     <a href="/service/myhome/info.html">
+     <img src="/images/headportrait/defaultHeadportrait.jpg" class="userPic" /></a>
+     </div>
+      
+    <div class="userRight">  
+     <p class="name" id="custName" title="*雄">*雄</p>
+     <p class="star clearfix"></p>
+     <a class="kh" href="http://xjfw.189.cn/tykf-itr-services/modules/starService/medalWall/indexPC.html?in_cmpid=gdsb-zzfw-xjfw2018" target="_blank" id="isxing">普通会员</a>
+     </div>
+     </div> <!--用户信息end-->
+ <!--切换号码--> 
+<div class="switchBox">
+    <div class="userNum2 clearfix" title="切换帐号"> 
+                    <input type="hidden" id="busiType" name="busiType" value="" />
+                    <input type="hidden" id="payType" name="payType" value="" />
+            <div class="currSel2 pr fl"> 
+            <input type="hidden" id="currNumInfoStr" value="0755-19128324901-CDMA" />
+	         <input type="hidden" id="currNumBusiType" value="CDMA" />
+            <em class="currItem2 fl" id="currNum" title="19128324901">19128324901</em>
+                <ul class="selList2" id="numList"><li id="setNumSelect_0"><span id="0755-19128322849-CDMA">19128322849</span><span class="lx">(手机号码)</span></li><li id="setNumSelect_1"><span id="0755-19128324901-CDMA">19128324901</span><span class="lx">(手机号码)</span></li><li id="setNumSelect_2"><span id="0755-19128320932-CDMA">19128320932</span><span class="lx">(手机号码)</span></li><li id="setNumSelect_3"><span id="0755-19128322849@163.gd-AD">19128322849</span><span class="lx">(宽 　带 )</span></li><li id="setNumSelect_4"><span id="0755-075541749544@iptv.gd-AD-IPTV">075541749544</span><span class="lx">(宽 　带 )</span></li></ul>
+            </div>
+        </div>
+    </div>
+<script src="/service/myhome/js/selectNumberJson_2018.js"></script> <!--切换号码end-->
+ <!--菜单-->
+<link rel="stylesheet" href="/service/myhome/css/serviceLeft.css" />
+    <div class="menuMod">
+    <ul>
+    <li class="clearfix">
+    <a href="/service/myhome/ywbl.html">
+    <span class="blNew"></span>业务办理
+    </a>
+    </li>
+      <li class="clearfix">
+    <a href="/service/myhome/wycx.html">
+    <span class="cxNew"></span>我要查询
+    </a>
+    </li>
+     <li class="clearfix">
+    <a href="/service/myhome/wyjf.html">
+    <span class="jfNew"></span>我要交费
+    </a>
+    </li>
+     <li class="clearfix">
+    <a href="/service/myhome/wdjf.html">
+    <span class="jifNew"></span>我的积分
+    </a>
+    </li>
+      <li class="clearfix">
+    <a href="/myorder/myorder_index.html?in_cmpid=khzy-zcdh-wdfw-wddd">
+    <span class="ddNew"></span>我的订单
+    </a>
+    </li>
+     <li class="clearfix">
+    <a href="/service/myhome/yhzx.html">
+    <span class="zxNew"></span>用户中心
+    </a>
+    </li>
+    </ul>
+    
+    
+    </div> <!--菜单end--> 
+   </div>
+</div>
+<!--左导航结束-->	<!--右侧内容-->
+	<div class="contright">
+    <!--我的信息-->
+<div class="modBoxplus mb12">
+			<div class="titleplus">
+				<span>我的信息</span>
+			</div>
+			<div class="mainConplus">
+				<div class="myInfoplus clearfix">
+					<div class="loginNumplus">
+						<span class="rh fl"></span>
+						<div class="vm fl">
+							登录号码：
+							<em id="loginNumberN" title="19128324901">19128324901</em>
+						</div>
+					</div>
+					<div class="myOrderplus" id="msg_Myhomenews">您有<a class="num" href="/oncePayCrmOrderQuery.do?in_cmpid=khzy-yhxx-xxts-dzfyw" target="_blank" id="numifo">0</a>个未处理订单</div>
+					<div class="infoListplus clearfix">
+						<ul>
+							<li class=" clearfix">
+							<span>我的副卡：</span>
+							<em id="ViceCardNum">2</em><a href="/service/home/account/account_2015.html?in_cmpid=khzy-yhxx-syhm2018" target="_blank" class="btnStyle1">查看号码</a>
+							</li>
+<li class=" clearfix none">
+							<span>我的号码：</span>
+							<em id="PhoneNum">3</em>
+							</li>
+							<li class=" clearfix">
+							<span>我的宽带：</span>
+							<em id="ADNum">1</em><a href="/service/kdserv/index.html?ssid=gdds-syleft-kd-kdfw-kdfwzq2018" target="_blank" class="btnStyle1">宽带专区</a>
+							</li>
+							<li class="last clearfix">
+							<span>我的 ITV：</span>
+							<em id="IPTVNum">1</em><a href="http://event.eshare.189.cn:8082/prom/event/subaccount/pc/main?eid=8&amp;cid=14&amp;lzcode=" target="_blank" class="btnStyle1">加装子账号</a>
+							</li>
+						</ul>
+						<ul class="ulTwo">
+							<li class="clearfix">
+							<span>我的余额：</span>
+							<em class="two BalanceNum">10.00</em><a href="https://gd.189.cn/service/home/query/xf_ye.html?in_cmpid=khzy-zcdh-fycx-wdxf-yecx2018" target="_blank" class="btnStyle1">详情</a>
+							</li>
+							<li class="clearfix">
+							<span>我的话费：</span>
+							<em class="two RealchargeNum">50.78</em>
+							<a href="/service/home/query/xf_sshf.html?in_cmpid=gdds-zzfw-fycx-wdxf-hfcx2018" class="btnStyle1" target="_blank">查看</a>
+							</li>
+                            <li class="none clearfix" style="display: none;">
+							<span>我的欠费：</span>
+							<em class="two ArrearsNum">0.0</em>
+							<a href="/service/pay/index.jsp?in_cmpid=khzy-yhxx-mscz2018" class="btnStyle1" target="_blank">立即充值</a>
+							</li>
+							<li class="last clearfix">
+							<span>我的积分：</span>
+							<em class="two" id="usableIntegral">0</em>
+							<a href="/store/?in_cmpid=gdds-zzfw-wdxx-jffw-jfdh2018" class="btnStyle1" target="_blank" style="display: none;">兑换</a>
+							</li>
+						</ul>
+						<div class="proBoxplus">
+							<a class="proBtnplus" href="/service/home/account/account_2015.html?in_cmpid=khzy-yhxx-syhm2018">我的电信产品 &gt;</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>    <!--我的信息end-->
+		<!--我的套餐-->
+		<div class="modBoxplus mb12 clearfix" id="myTc">
+			<div class="titleplus">
+				<span>我的套餐</span>
+			</div>
+			<p class="tcName clearfix">
+				<span>畅享流量15G（129元）套餐2017Q3（共享版）</span>
+				<a href="javascript:void(0);" class="btnStyle1 none" target="_blank" style="display: none;">套餐优化</a>
+			</p>
+			<div class="mainCon clearfix">
+				<div class="myPackage" id="Showll">
+					<div class="pacBox n1">
+						<h3>
+						<a class="txtLink2 fr" href="/service/home/query/flow_check.html?in_cmpid=gdsb-zzfw-llxq2018">详情&gt;</a>
+						<span class="ll fl"></span>流量
+						</h3>
+						<div class="llAnn pr">
+							<div id="myCanvas1"><svg height="186" version="1.1" width="186" xmlns="http://www.w3.org/2000/svg" style="overflow: hidden; position: relative; left: -0.5px;"><desc style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">Created with Rapha?l 2.1.2</desc><defs style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"><linearGradient id="190-_ff8202" x1="0" y1="1" x2="6.123233995736766e-17" y2="0" gradientTransform="matrix(1,0,0,1,0,0)" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"><stop offset="0%" stop-color="#ff8202" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"/></linearGradient></defs><image x="0" y="0" width="186" height="186" preserveAspectRatio="none" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/service/home/images/progress_bg2.png" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"/><path fill="url(#190-_ff8202)" stroke="#2a70a6" d="M93,0A93,93,0,0,1,93.05843361951199,0.00001835746358835877L93.05403539008636,7.000016975719021A86,86,0,0,0,93,7Z" stroke-width="0" opacity="1" fill-opacity="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 1; fill-opacity: 1;"/></svg>
+								<!--流量圆环使用量-->
+							</div><div class="annTb" style="display: none;"><p class="annTxt3"><br /><br />未使用</p></div>
+							<div class="annTb none" style="display: block;">
+								<span class="annImg">国内流量畅享</span>
+								<p class="annTxt">已用流量</p>
+								<p class="annTxt2" id="bxlUsedFlow2">1.57G</p>
+							</div>
+						</div>
+                        <p class="tr llurl">
+								<a href="javascript:void(0);" class="txtLink none">流量畅享服务</a>
+							</p>
+					</div>
+				</div>
+				<div class="myPackage" id="Showyy">
+					<div class="pacBox n2">
+						<h3>
+						<a class="txtLink2 fr" href="/service/home/query/xd_index.html?in_cmpid=gdsb-zzfw-yyxq2018">详情&gt;</a>
+						<span class="yy fl"></span>语音
+						</h3>
+						<div class="yyAnn pr">
+							<div id="myCanvas2"><svg height="186" version="1.1" width="186" xmlns="http://www.w3.org/2000/svg" style="overflow: hidden; position: relative; left: -0.5px;"><desc style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">Created with Rapha?l 2.1.2</desc><defs style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"><linearGradient id="390-_ff8202" x1="0" y1="1" x2="6.123233995736766e-17" y2="0" gradientTransform="matrix(1,0,0,1,0,0)" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"><stop offset="0%" stop-color="#ff8202" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"/></linearGradient></defs><image x="0" y="0" width="186" height="186" preserveAspectRatio="none" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/service/home/images/progress_bg2.png" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"/><path fill="url(#390-_ff8202)" stroke="#2a70a6" d="M93,0A93,93,0,0,1,93,0L93,7A86,86,0,0,0,93,7Z" stroke-width="0" opacity="1" fill-opacity="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 1; fill-opacity: 1;"/></svg>
+								<!--流量圆环使用量-->
+							</div><div class="annTb"><p class="annTxt3">已用</p><p class="annTxt2">4分钟</p><p class="annTxt3">剩余</p><p class="annTxt2">946分钟</p></div>
+						</div>
+                        <p class="tr llurl">
+								<a href="javascript:void(0);" class="txtLink none">语音包</a>
+							</p>
+					</div>
+				</div>
+				<div class="myPackage last" id="Showdx">
+					<div class="pacBox n3">
+						<h3>
+						<a class="txtLink2 fr" href="/service/home/query/xd_index.html?in_cmpid=gdsb-zzfw-dxxq2018">详情&gt;</a>
+						<span class="dx fl"></span>短信</h3>
+						<div class="dxAnn pr">
+							<div id="myCanvas3"><svg height="186" version="1.1" width="186" xmlns="http://www.w3.org/2000/svg" style="overflow: hidden; position: relative; left: -0.5px;"><desc style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">Created with Rapha?l 2.1.2</desc><defs style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"><linearGradient id="590-_ff8202" x1="0" y1="1" x2="6.123233995736766e-17" y2="0" gradientTransform="matrix(1,0,0,1,0,0)" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"><stop offset="0%" stop-color="#ff8202" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"/></linearGradient></defs><image x="0" y="0" width="186" height="186" preserveAspectRatio="none" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/service/home/images/progress_bg2.png" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"/><path fill="url(#590-_ff8202)" stroke="#2a70a6" d="M93,0A93,93,0,0,1,93.05843361951199,0.00001835746358835877L93.05403539008636,7.000016975719021A86,86,0,0,0,93,7Z" stroke-width="0" opacity="1" fill-opacity="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 1; fill-opacity: 1;"/></svg>
+								<!--流量圆环使用量-->
+							</div><div class="annTb"><p class="annTxt3"><br /><br />未使用</p></div>
+						</div>
+                        <p class="tr llurl">
+								<a href="#" class="txtLink none">短信加餐包</a>
+							</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--我的套餐end-->
+		<!--我的消费-->
+		<div class="modBoxplus mb12">
+			<div class="titleplus">
+				<span>我的消费</span>
+			</div>
+			<div class="mainCon clearfix" id="CDMAPay">
+				<div class="myCons">
+					<div class="bill">
+						<div class="consBox">
+							<div id="yycx">
+								<h3>
+								<a class="txtLink2 fr" href="/service/home/query/xf_ye.html?in_cmpid=khzy-zcdh-fycx-wdxf-yecx2018">详情&gt;</a>
+								<span class="dq fl"></span>可用余额
+								</h3>
+								<p class="tc billNum">
+									余<span class="BalanceNum">10.00</span>元
+								</p>
+						</div>
+						<div id="sshf">
+							<h3 class="mt40">
+							<a class="txtLink2 fr" href="/service/home/query/xf_sshf.html?in_cmpid=khzy-zcdh-fycx-wdxf-sshfcx2018">详情&gt;</a>
+							<span class="ss fl"></span>实时话费</h3>
+							<p class="tc billNum">
+								<span class="RealchargeNum">50.78</span>元
+							</p>
+					</div>
+					<div id="qfcx" class="none">
+						<h3 class="mt40">
+						<a class="txtLink2 fr" href="/service/home/query/xf_qf.html?in_cmpid=khzy-zcdh-fycx-wdxf-sshfcx2018">详情&gt;</a>
+						<span class="ss fl"></span>当前欠费</h3>
+						<p class="tc billNum">
+							<span class="ArrearsNum">0.0</span>元
+						</p>
+						<p class="tc"><a href="/service/pay/index.jsp?in_cmpid=khzy-yhxx-mscz2018" class="txtLink mt10" target="_blank">9.95折充值优惠</a>
+					</p>
+				</div>
+			</div>
+		</div>
+		<div class="sixMonths " id="xfData">
+			<h3 class="clearfix">
+			<a class="txtLink2 fr" href="/consumeInfo/myHisConsume/myHisConsume.html?in_cmpid=khzy-zcdh-fycx-wdxf-tcsycx2018">详情&gt;</a>
+			<span class="xf fl"></span>最近六个月消费趋势</h3>
+			<!--消费走势图-->
+			<div class="chart fl" id="zstDiv">
+				<img src="/service/home/images/build_bg.png" alt="建设中..." />
+			</div>
+			<div class="aveCons fr">
+				<span>平均每月消费<br />￥
+				<em id="averageCost"><img src="/service/myhome/images/Loading.gif" /></em>元</span>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="mainConplus clearfix none" id="CDMApPay">
+	<div class="myCons">
+
+		<div class="bill ">
+			<div class="consBox2 n1" id="CDMApYe">
+				<h3>
+				<a class="txtLink2 fr" href="/service/home/query/xf_ye.html?in_cmpid=khzy-zcdh-fycx-wdxf-yecx2018">详情&gt;</a>
+				<span class="dq fl"></span>可用余额</h3>
+				<p class="tc billNum">
+					余
+					<span class="BalanceNum">10.00</span>元
+				</p>
+			</div>
+			<div class="consBox2 n1 none" id="CDMApqf">
+				<h3>
+				<a class="txtLink2 fr" href="/service/home/query/xf_qf.html?in_cmpid=khzy-zcdh-fycx-wdxf-sshfcx2018">详情&gt;</a>
+				<span class="ss fl"></span>当前欠费</h3>
+				<p class="tc billNum">
+					<span class="ArrearsNum">0.0</span>元
+				</p>
+               <p class="tc">
+					<a href="/service/pay/index.jsp?in_cmpid=khzy-yhxx-mscz2018" target="_blank" class="txtLink mt10">9.95折充值优惠</a>
+				</p>
+			</div>
+            <div class="consBox2 last n2">
+				<h3>
+				<a class="txtLink2 fr" href="/service/home/query/xf_sshf.html?in_cmpid=khzy-zcdh-fycx-wdxf-sshfcx2018">详情&gt;</a>
+				<span class="ss fl"></span>实时话费</h3>
+				<p class="tc billNum">
+					<span class="RealchargeNum">50.78</span>元
+				</p>
+               <p class="tc">
+					<a href="/service/pay/index.jsp?in_cmpid=khzy-yhxx-mscz2018" target="_blank" class="txtLink mt10">9.95折充值优惠</a>
+				</p>
+			</div>
+		</div>
+	</div>
+</div>
+</div>
+<!--我的消费end--><!--我的宽带-->
+<div class="modBoxplus mb12 none" id="myAsdlDiv">
+<div class="titleplus">
+	<span>我的宽带</span>
+</div>
+<p class="expire fr" id="adslData">您还可以修改<a href="/transaction/taocanapply1.jsp?operCode=PasswordModifyADSLI&amp;in_cmpid=khzy-kd-kdmmxg" class="yjxy txtLink"><em>宽带密码</em></a></p>
+<div class="mainCon clearfix">
+	<ol class="myInt">
+		<li class="kdInfo mb10">
+		<span class="fl">宽带账号：</span>
+		<div class="userNum3 fl clearfix" title="切换帐号">
+			<div class="currSel3 pr fl">
+				<em class="currItem3 fl" id="adslNum">——</em>
+				<ul class="selList3" id="moreadslnum">
+				<li><span adsl="19128322849@163.gd" adsltype="AD">19128322849@163.gd</span></li></ul>
+                </div>
+                <a href="/service/home/query/fs_jrfs_2015.html" class="txtLink ml10 linkSpa">光纤接入方式查询</a>
+			
+		</div>
+		</li>
+		<li class="kdInfo">
+		<span class="fl">IPTV账号：</span>
+		<span class="rTxt" id="iptvNum">075541749544@iptv.gd</span></li>
+		<!--<li class="kdInfo"><span class="fl">上行速率：</span><span class="rTxt">20.24Mb/s</span></li>-->
+        <li class="kdInfo">
+		<span class="fl">下行速率：</span>
+		<span class="rTxt" id="speed">——</span><a href="/ts/?in_cmpid=gdds-syleft-kd-kdyw-znts" id="MynetB" class="txtLink linkSpa none l20">免费提速</a></li>
+	</ol>
+<!--	<div class="kdSpeed clearfix">
+		<span class="xxsl fl">下行速率：</span>
+		<div class="csBar">
+			<div class="proBar pr">
+				<div class="scale" id="speed">——</div>
+				<img src="/service/myhome/images/cspic.png">
+			</div>
+			<em class="spa">0</em>
+			<em class="spa">200</em>
+			<em class="spa2">500</em>
+			<em>1000</em>
+		</div>
+</div>-->
+<!--<div class="tc mt10" style="width:618px; padding-left:80px">
+<a href="/ts/?in_cmpid=gdds-syleft-kd-kdyw-znts" id="MynetB" class="txtLink linkSpa none">免费提速</a>
+</div>-->
+
+</div>
+</div>
+<!--我的宽带end-->
+</div>
+<!--右侧内容结束-->
+</div>
+<!---切换号码弹窗--->
+<div class="selNum" id="selNum">
+
+<h3><span>号码选择</span></h3>
+<div class="numBox">
+<dl class="clearfix" id="morePhone">
+<dt><span></span>移动电话</dt>
+<dd><span><input type="radio" class="radio" name="radioNum" value="0755-19128322849-CDMA" /><label>19128322849</label></span></dd><dd><span><input type="radio" class="radio" name="radioNum" value="0755-19128324901-CDMA" /><label>19128324901</label></span></dd><dd><span><input type="radio" class="radio" name="radioNum" value="0755-19128320932-CDMA" /><label>19128320932</label></span></dd></dl>
+<dl class="clearfix" id="moreGH">
+<dt><span></span>固定电话</dt>
+</dl>
+
+<dl class="clearfix" id="moreAD">
+<dt><span></span>宽带</dt>
+<dd><span><input type="radio" class="radio" name="radioNum" value="0755-19128322849@163.gd-AD" /><label>19128322849</label></span></dd><dd><span><input type="radio" class="radio" name="radioNum" value="0755-075541749544@iptv.gd-AD-IPTV" /><label>075541749544</label></span></dd></dl>
+</div>
+<div class="btnBar">
+  <a href="javascript:void(0);" class="btnStyle2 btnClose qd" onclick="selNum()">确定</a>
+  <a href="javascript:void(0);" class="btnStyle3 btnClose qx b_close">取消</a>   
+</div>
+
+
+</div>
+<!---切换号码弹窗end---><!--footer-->
+<!--客服小二代码-->
+<script src="http://im.189.cn/webclient/js/ccms_main_v2.js?t=20121220"></script>
+<script>
+console.log(PUB_LATNID);
+//获取当前地市
+var cityName,csCode,manId;
+switch(PUB_LATNID){
+    case '0000': cityName = '广东';csCode = '4400';manId = '1048';break;
+    case '020' : cityName = '广州';csCode = '4401';manId = '1048';break;
+    case '0751': cityName = '韶关';csCode = '4402';manId = '1062';break;
+    case '0755': cityName = '深圳';csCode = '4403';manId = '1051';break;
+    case '0756': cityName = '珠海';csCode = '4404';manId = '1053';break;
+    case '0754': cityName = '汕头';csCode = '4405';manId = '1058';break;
+    case '0757': cityName = '佛山';csCode = '4406';manId = '1050';break;
+    case '0750': cityName = '江门';csCode = '4407';manId = '1056';break;
+    case '0759': cityName = '湛江';csCode = '4408';manId = '1064';break;
+    case '0668': cityName = '茂名';csCode = '4409';manId = '1065';break;
+    case '0758': cityName = '肇庆';csCode = '4412';manId = '1066';break;
+    case '0752': cityName = '惠州';csCode = '4413';manId = '1055';break;
+    case '0753': cityName = '梅州';csCode = '4414';manId = '1054';break;
+    case '0660': cityName = '汕尾';csCode = '4415';manId = '1059';break;
+    case '0762': cityName = '河源';csCode = '4416';manId = '1057';break;
+    case '0662': cityName = '阳江';csCode = '4417';manId = '1067';break;
+    case '0763': cityName = '清远';csCode = '4418';manId = '1063';break;
+    case '0769': cityName = '东莞';csCode = '4419';manId = '1052';break;
+    case '0760': cityName = '中山';csCode = '4420';manId = '1049';break;
+    case '0768': cityName = '潮州';csCode = '4451';manId = '1061';break;
+    case '0663': cityName = '揭阳';csCode = '4452';manId = '1060';break;
+    case '0766': cityName = '云浮';csCode = '4453';manId = '1068';break;
+    default: cityName = '广东';csCode = '4400';manId = '1048';
+}
+
+console.log(cityName);
+im_model.display=false;//是否开启浮动“电小二”形象"
+im_model.monitor=false;//是否开启监视(即是否启用主动模式)
+im_model.type=2; //"电小二"服务方式(1-QQ方式；2-Web方式；3-QQ+Web方式)
+
+im_model.cityId= csCode;//地区编号（深圳）
+
+im_model.manId= manId;//接入人工服务类型编号（后续测试再提供）
+
+im_model.statrTime="0";//开始运行时间(如果没有时间控制就设置为0)
+
+im_model.endTime="0";//结束运行时间(如果没有时间控制就设置为0)
+
+im_model.waitTime=5000;//设置自动显示的等待时间(是毫秒)
+
+im_model.message="Hi，您好，欢迎使用移机半自助功能，有什么可以帮到您的？点我吧~~~";//提示信息框内显示的信息内容(默认或为空时不提示)
+
+im_model.sound="1";//提示声音文件路径url(默认无声音,声音文件格式为mp3格式)
+im_model.status="1";    //左右联动控制（默认不开启）：
+                    //1-不开启左右联动；
+                    //2-开启Web左右联动；
+//3-开启QQ左右联动；
+                    //4-开启QQ方式和Web方式左右联动。
+
+im_model.wurl="";   //Web方式左右联动拉起的url地址：(暂未开启)
+               //默认或为空时联动当前客户访问页面
+
+im_model.qurl="";   //QQ方式左右联动拉起的url地址：(暂未开启)
+//默认或为空时不联动
+
+im_model.kfurl="";  //客服端显示的url地址：
+                //默认或为空时显示当前客户访问页面
+
+im_model.open_status_w=1;   //web方式“电小二”显示效果（默认为1）：
+                           //（仅当im_model.type=2或3时有效）
+                          //1-弹出窗口效果；
+                         //2-刷新本窗体效果；
+
+im_model.city_w= cityName;  //Web方式用户接入提示信息中的地区:
+                       //（当im_model.type=2或3时必填）
+
+im_model.address_w= cityName + "电信网厅";  //Web方式用户接入提示信息中的页面内容：
+                                //（当im_model.type=2或3时必填）
+
+im_model.image=0;// Image形象配置说明
+im_model.alpha=80;//设置透明度(0-100)
+im_success(im_model);
+
+</script>
+
+<div class="map cl wrapper">
+<div class="map_guarantee wrapper">
+        <ul class="clearfix">
+            <li>
+                <span class="fl dpl"><a rel="nofollow" href="javascript:;"><img width="55" src="/20150629/images/201506/ft_01.png" /></a></span>
+                <span class="dpl ml15 mt4">
+                    <p class=" f20 "><a rel="nofollow" href="javascript:;">中国电信</a></p>
+                    <p class="f16"><a rel="nofollow" href="javascript:;">官方认证渠道</a></p>
+                </span>
+            </li>
+            <li>
+                <span class="fl"><a rel="nofollow" href="javascript:;"><img width="55" src="/20150629/images/201506/ft_02.png" /></a></span>
+                <span class="dpl ml15 mt4">
+                    <p class=" f20 "><a rel="nofollow" href="javascript:;">正品保障</a></p>
+                    <p class="f16"><a rel="nofollow" href="javascript:;">正规发票</a></p>
+                </span>
+            </li>
+             <li>
+                <span class="fl"><a rel="nofollow" href="javascript:;"><img width="55" src="/20150629/images/201506/ft_03.png" /></a></span>
+                <span class="dpl ml15 mt4">
+                    <p class=" f20"><a rel="nofollow" href="javascript:;">品牌厂家</a></p>
+                    <p class="f16"><a rel="nofollow" href="javascript:;">品牌资深</a></p>
+                </span>
+            </li>
+            <li>
+                <span class="fl"><a rel="nofollow" href="javascript:;"><img width="55" src="/20150629/images/201506/ft_04.png" /></a></span>
+                <span class="dpl ml15 mt4">
+                    <p class=" f20"><a rel="nofollow" href="javascript:;">新品上市</a></p>
+                    <p class="f16"><a rel="nofollow" href="javascript:;">同步首发</a></p>
+                </span>
+            </li>
+           
+             <li>
+                <span class="fl"><a rel="nofollow" href="javascript:;"><img width="55" src="/20150629/images/201506/ft_05.png" /></a></span>
+                <span class="dpl ml15 mt4">
+                    <p class=" f20"><a rel="nofollow" href="javascript:;">全场商品</a></p>
+                    <p class="f16"><a rel="nofollow" href="javascript:;">无忧退换货</a></p>
+                </span>
+            </li>
+        </ul>
+    </div>
+        <div class="wrapper clearfix mt15">
+            <div class="mapLogo fl">
+                <a href="/"><img src="/images/2015/logo189.png" alt="中国电信" /></a>
+            </div>
+            <div class="mapList fl">
+                <dl>
+                  <dt><a href="javascript:;"><strong>购物指南</strong></a></dt>
+                  <dd><a target="_blank" href="http://m.gd.189.cn/wcsstore/gdtel/resource/common/helper/index.html?filePath=danjidinggou/step1.html">购物流程</a></dd>
+                  <dd><a target="_blank" href="http://m.gd.189.cn/wcsstore/gdtel/resource/common/helper/changjianwenti/step1_index.html#shouqianwenti">常见问题</a></dd>
+                </dl>
+                <dl>
+                  <dt><a href="javascript:;"><strong>物流配送</strong></a></dt>
+                  <dd><a target="_blank" href="http://m.gd.189.cn/wcsstore/gdtel/resource/common/helper/index.html?filePath=peisongshuoming/step1.html#peisongshuoming">配送说明</a></dd>
+                  <dd><a target="_blank" href="http://m.gd.189.cn/wcsstore/gdtel/resource/common/helper/index.html?filePath=peisongshuoming/step1.html#peisongshuoming">收货须知</a></dd>
+                </dl>
+                <dl>
+                  <dt><a href="javascript:;"><strong>支付方式</strong></a></dt>
+                  <dd><a target="_blank" href="http://m.gd.189.cn/wcsstore/gdtel/resource/common/helper/index.html?filePath=zaixianzhifu/step1.html#zaixianzhifu">在线支付</a></dd>
+                  <dd><a target="_blank" href="http://m.gd.189.cn/wcsstore/gdtel/resource/common/helper/index.html?filePath=lipinhuanyue/step1.html">礼品兑换</a></dd>
+                  <dd><a target="_blank" href="http://m.gd.189.cn/wcsstore/gdtel/resource/common/helper/index.html?filePath=shouhoufuwu/step1.html#qitianbaotui">关于发票</a></dd>
+                </dl>
+                <dl>
+                  <dt><a href="javascript:;"><strong>售后服务</strong></a></dt>
+                  <dd><a target="_blank" href="http://m.gd.189.cn/wcsstore/gdtel/resource/common/helper/index.html?filePath=shouhoufuwu/step1.html#qitianbaotui">退换流程</a></dd>
+                  <dd><a target="_blank" href="http://m.gd.189.cn/wcsstore/gdtel/resource/common/helper/index.html?filePath=shouhoufuwu/step1.html#qitianbaotui">退款说明</a></dd>
+                  <dd><a target="_blank" href="/gd/activity/wuyifuwu/index.html">服务承诺</a></dd>
+                  <dd><a target="_blank" href="/support/support_wangdianNew.html">售后维修网点</a></dd>
+                  <!--dd><a target="_blank" href="/quickfix/">翼修机</a></dd-->
+                </dl>
+                        <dl>
+                  <dt><a href="javascript:;"><strong>便民服务</strong></a></dt>
+                  <dd><a target="_blank" href="/support/support_cjwt.html">常见问题</a></dd>
+                  <dd><a target="_blank" href="/support/complain/support_kdkjpz.html?cmpid=bmfw-tsybz">投诉与报障</a></dd>
+                  <dd><a target="_blank" href="/support/servguide/guide/fwcn.html">服务指南</a></dd>
+                  <dd><a target="_blank" href="/support/support_download.html">常用下载</a></dd>
+                  <dd><a href="javascript:ccms_ok(2);">通信诈骗举报</a></dd>
+                </dl>
+            </div>
+            <div class="mapTdcode fl">
+                <img src="/include/20180516.jpg" alt="二维码" />
+            </div>
+            <div class="mapOnline fr">
+            <script>
+            document.write('&lt;a href="http://im.189.cn/WebIM/index?cityId='+csCode +'&amp;info=" target="_blank"&gt;')
+            </script><a href="http://im.189.cn/WebIM/index?cityId=4403&amp;info=" target="_blank">
+                <p style="padding-bottom:4px;"><img src="/20150629/images/201506/ico_online_1.png" alt="在线客服" style="transform: rotate(0deg); transform-origin: 50% 50% 0px;" class="rotate_360" /></p><p>在线客服</p>
+            </a>
+            <a href="http://weibo.com/gdtelkf" target="_blank"><p style="padding-bottom:4px;"><img src="/20150629/images/201506/ico_online_2.png" alt="客服微博" style="transform: rotate(0deg); transform-origin: 50% 50% 0px;" class="rotate_360" /></p><p>客服微博</p></a>
+            <a href="http://gd.zhidao.189.cn/ckb/news.html" name="in_click" data-cname="map-10000zd" target="_blank" style="margin-top:9px;"><p><img src="/20150629/images/201506/ico_online_3.png" alt="10000知道" style="transform: rotate(0deg); transform-origin: 50% 50% 0px;" class="rotate_360" /></p><p>10000知道</p></a>
+            <!--<a href="http://crm2.qq.com/page/portalpage/wpa.php?uin=800010000&amp;f=1&amp;ty=1&amp;ap=000010|1000|4401||RM&amp;as=3" name="in_click" target="_blank" style="margin-top:9px;"><p><img src="/20150629/images/201506/ico_online_5.png" alt="QQ客服"  style="transform: rotate(0deg); transform-origin: 50% 50% 0px;" class="rotate_360" /></p><p>QQ客服</p></a>-->
+            <script type="text/javascript"> 
+              if(PUB_LATNCODE=="gd"){
+                PUB_LATNCODE='gz';
+              }
+            document.write('&lt;a href="/'+PUB_LATNCODE+'/support/fee/index.htm"  target="_blank" style="margin-top:9px;"&gt;&lt;p&gt;&lt;img src="/20150629/images/201506/ico_online_4.png" alt="资费专区" style="transform: rotate(0deg); transform-origin: 50% 50% 0px;" class="rotate_360"  /&gt;&lt;/p&gt;&lt;p&gt;资费专区&lt;/p&gt;&lt;/a&gt;');
+            </script><a href="/sz/support/fee/index.htm" target="_blank" style="margin-top:9px;"><p><img src="/20150629/images/201506/ico_online_4.png" alt="资费专区" style="transform: rotate(0deg); transform-origin: 50% 50% 0px;" class="rotate_360" /></p><p>资费专区</p></a>
+            </div>
+        </div>
+    </div><div class="bellows wrap none">
+		<div class="bellows__header">
+			<ul id="lx_nav2">
+				<li class="on">电信欢go网<span>|</span></li>
+				<li>合作伙伴</li>
+			</ul> 		
+		</div>
+		<div style="display: block;" class="lx-con">
+            <div style="overflow: hidden; height: 65px; width: 1180px;" class="bellows__contenta fl">
+               <ul>
+                    <li><a href="#">北京欢go网</a><span>|</span></li>
+          </ul>
+            </div>
+
+				<a href="javascript:void(0)" class="footall_a"></a>
+
+		</div>
+		<div style="display: none;" class="lx-con">
+            <div style=" overflow:hidden; height:65px; width:1180px;" class="bellows__content fl">
+               <ul>
+                    <li><a href="#">中国电信</a><span>|</span></li>
+               </ul>
+            </div>
+				<a href="javascript:void(0)" class="footall_b"></a>
+		</div>
+		
+	</div>
+
+<div class="partner wrapper cl none">
+		<h3>合作伙伴</h3>
+		<div class="parLink">
+			<a href="###" target="_blank">友情网站一</a> |
+			<a href="###" target="_blank">友情网站一</a> |
+		</div>
+		<a href="###" id="see_all">显示全部</a>
+	</div>
+	<div class="bottom cl tc">
+		<div class="about">
+			<!--a href="/aboutus/index.html">关于我们</a> <span>|</span> 
+			   <script>
+			   if('gd'==PUB_LATNCODE){
+					document.write('<a href="/notice/index.htm">电信公告</a> <span>|</span>');	
+			   }else{
+					document.write('<a href="/'+PUB_LATNCODE+'/notice/index.htm">电信公告</a> <span>|</span>');	
+			   }
+            
+            </script-->
+			<a href="/map.html">网站导航</a> <span>|</span> 
+			<a target="_blank" href="/TS/">掌上营业厅</a> 
+<!--<span>|</span> 
+			 <a href="http://d.gd.189.cn/">代理商专区</a> -->
+		</div>
+		
+<p class="copyright" style="line-height:24px">版权所有 © 2015 中国电信集团公司 [ 增值电信业务经营许可证 A2.B1.B2-20090001 ] ICP 证号:京ICP备12007914号-2</p>
+		<div class="cert">
+			<a href="/activity/common/postusinfo.jsp" target="_blank"><img src="/images/2015/cert_1.gif" alt="10000知道客服" /></a>
+			<a href="https://ss.knet.cn/verifyseal.dll?sn=e12050811010020422307708&amp;ct=df&amp;a=1&amp;pa=365057" target="_blank"><img src="/images/2015/cert_2.gif" alt="可信网站" /></a>
+			<a href="https://credit.cecdc.com/CX20111018000638000682.html" target="_blank"><img src="/images/2015/cert_3.gif" alt="诚信网站" /></a>
+		</div>
+	</div><!--20150812增加-->
+<script language="JavaScript" type="text/javascript">
+	if((typeof trk)!='object'){var trk={}}
+		trk.y_js=function(h,n,v){
+		var t=new Date,d=document,ist=d.createElement("SCRIPT");l=d.getElementsByTagName('HEAD'),p=l&amp;&amp;l[0]?l[0]:'';
+		(typeof trk['js_'+n])=="number"?(trk['js_'+n]++):(trk['js_'+n]=1);
+		if(p&amp;&amp;trk['js_'+n]&lt;2){
+		ist.type = "text/javascript";
+		ist.src='//'+h+'?v='+(v?v:('20'+(t.getYear()-100)+(t.getMonth()+1)+t.getDate()));
+		if (p.firstChild){p.insertBefore(ist, p.firstChild)}else{p.appendChild(ist)}
+		};
+		if(trk['js_'+n]&gt;1){console.log('eship_jz:'+n+trk['js_'+n])};
+	}
+	trk.y_js('gd.189.cn/insight/js/b/w.js','w_js')
+</script>
+
+</body></html>

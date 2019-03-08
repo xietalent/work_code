@@ -27,6 +27,7 @@ class DD_input(object):
         for i in key:
             if i.isupper():
                 # 如果是一个大写的字符。
+
                 # 按下抬起。
                 dd_dll.DD_key(500, 1)
                 time.sleep(0.1)
@@ -67,7 +68,7 @@ class DD_mouse(object):
 
 if __name__ == '__main__':
     # dd_list = input("输入字符串:")
-    dd_list = "ZXCvbn99"
+    dd_list = r"zc006699"
     ddin = DD_input()
     ddin.dd(dd_list)
 

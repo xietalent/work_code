@@ -3,7 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="e4e065ad-27a2-4502-a094-f64318782304" name="Default Changelist" comment="pybook! my pybook! my pybook! my pybook! my pybook! my pybook! my pybook! my pybook! my pybook! my pybook! my pybook! my pybook! my pybook! my pybook! my pybook! my pybook! my pybook! my pybook! my pybook! my pybook! my pybook! my pybook! my pybook! my pybook! my pybook! my pybook! my pybook! my pybook! my pybook! my pybook! my pybook! my pybook! my pybook! my pybook! my pybook! my pybook! my pybook! my pybook! my pybook! my pybook! my pybook! my pybook! my pybook! my pybook! my pybook! my pybook! my pybook! my pybook! my pybook! my pybook! my pybook! my pybook!">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tools/zhaohang/keybord_DD.py" beforeDir="false" afterPath="$PROJECT_DIR$/tools/zhaohang/keybord_DD.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../spiders_two/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../spiders_two/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../spiders_two/aiqiyi.py" beforeDir="false" afterPath="$PROJECT_DIR$/../spiders_two/aiqiyi.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../spiders_two/templates/china_mobile/account.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../spiders_two/templates/china_mobile/account.txt" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -20,7 +23,7 @@
     <SUITE FILE_PATH="coverage/spiders$ip_proxys.coverage" NAME="ip_proxys Coverage Results" MODIFIED="1547018627370" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tools" />
     <SUITE FILE_PATH="coverage/spiders$hx_zidongyanzheng.coverage" NAME="hx_zidongyanzheng Coverage Results" MODIFIED="1549003297669" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/spiders$test_keyboard.coverage" NAME="test_keyboard Coverage Results" MODIFIED="1548041384348" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tools" />
-    <SUITE FILE_PATH="coverage/spiders$keybord_DD.coverage" NAME="keybord_DD Coverage Results" MODIFIED="1549940090642" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tools/zhaohang" />
+    <SUITE FILE_PATH="coverage/spiders$keybord_DD.coverage" NAME="keybord_DD Coverage Results" MODIFIED="1551948129925" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tools/zhaohang" />
     <SUITE FILE_PATH="coverage/spiders$keybord_python.coverage" NAME="keybord_python Coverage Results" MODIFIED="1548122065917" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tools/zhaohang" />
     <SUITE FILE_PATH="coverage/spiders$test_input.coverage" NAME="test_input Coverage Results" MODIFIED="1547620838045" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tools" />
     <SUITE FILE_PATH="coverage/spiders$test_keybord_ctypes.coverage" NAME="test_keybord_ctypes Coverage Results" MODIFIED="1548123366398" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tools/zhaohang" />
@@ -78,8 +81,8 @@
     <session id="539074722">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="17" />
-          <entry key="project.open.time.1" value="1" />
+          <entry key="project.closed" value="21" />
+          <entry key="project.open.time.1" value="2" />
           <entry key="project.open.time.2" value="1" />
           <entry key="project.open.time.20" value="1" />
           <entry key="project.open.time.21" value="2" />
@@ -89,15 +92,16 @@
           <entry key="project.open.time.25" value="3" />
           <entry key="project.open.time.26" value="5" />
           <entry key="project.open.time.27" value="3" />
-          <entry key="project.open.time.28" value="1" />
+          <entry key="project.open.time.28" value="2" />
+          <entry key="project.open.time.29" value="1" />
           <entry key="project.open.time.30" value="1" />
           <entry key="project.open.time.36" value="1" />
           <entry key="project.open.time.38" value="1" />
           <entry key="project.open.time.4" value="1" />
           <entry key="project.open.time.44" value="1" />
-          <entry key="project.open.time.5" value="2" />
+          <entry key="project.open.time.5" value="3" />
           <entry key="project.open.time.6" value="6" />
-          <entry key="project.opened" value="36" />
+          <entry key="project.opened" value="40" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -105,7 +109,7 @@
           <entry key="gif" value="10" />
           <entry key="html" value="7" />
           <entry key="png" value="49" />
-          <entry key="py" value="260" />
+          <entry key="py" value="262" />
           <entry key="txt" value="17" />
           <entry key="url" value="1" />
         </counts>
@@ -115,20 +119,20 @@
           <entry key="HTML" value="7" />
           <entry key="Image" value="59" />
           <entry key="PLAIN_TEXT" value="18" />
-          <entry key="Python" value="260" />
+          <entry key="Python" value="262" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="41" />
-          <entry key="py" value="52039" />
+          <entry key="py" value="52054" />
           <entry key="txt" value="569" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="PLAIN_TEXT" value="610" />
-          <entry key="Python" value="52039" />
+          <entry key="Python" value="52054" />
         </counts>
       </usages-collector>
     </session>
@@ -138,7 +142,7 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/abc_bank.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="86">
+            <state relative-caret-position="25">
               <caret line="381" column="27" selection-start-line="381" selection-start-column="27" selection-end-line="381" selection-end-column="27" />
               <folding>
                 <element signature="e#3769#7957#0" />
@@ -158,18 +162,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="450">
               <caret line="18" column="4" selection-start-line="18" selection-start-column="4" selection-end-line="18" selection-end-column="4" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/my_spider/zhongshihua.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="675">
-              <caret line="49" column="24" selection-start-line="49" selection-start-column="24" selection-end-line="49" selection-end-column="24" />
-              <folding>
-                <element signature="e#88#118#0" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -272,11 +264,11 @@
         <option value="$PROJECT_DIR$/hx_2.py" />
         <option value="$PROJECT_DIR$/hx_zidongyanzheng.py" />
         <option value="$PROJECT_DIR$/tools/china_bank/china_bank_wangyin.py" />
-        <option value="$PROJECT_DIR$/tools/zhaohang/keybord_DD.py" />
         <option value="$PROJECT_DIR$/zhaoshang_.py" />
         <option value="$PROJECT_DIR$/abc_bank.py" />
         <option value="$PROJECT_DIR$/tools/abc_bank/abc_test.py" />
         <option value="$PROJECT_DIR$/my_spider/zhongshihua.py" />
+        <option value="$PROJECT_DIR$/tools/zhaohang/keybord_DD.py" />
       </list>
     </option>
   </component>
@@ -287,10 +279,10 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="6" />
-    <option name="y" value="128" />
+    <option name="x" value="654" />
+    <option name="y" value="75" />
     <option name="width" value="1163" />
-    <option name="height" value="913" />
+    <option name="height" value="917" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="1" id="Add" />
@@ -300,17 +292,13 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
               <item name="spiders" type="b2602c69:ProjectViewProjectNode" />
               <item name="spiders" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="spiders" type="b2602c69:ProjectViewProjectNode" />
-              <item name="spiders" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="spiders" type="b2602c69:ProjectViewProjectNode" />
@@ -327,14 +315,13 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file://E:/code/spiders/my_spider/zhaoshang_.py&#10;.fo&#9;null&#9;null" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../spiders_two" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../spiders_three" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
@@ -362,7 +349,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.abc_test">
+  <component name="RunManager" selected="Python.keybord_DD">
     <configuration name="abc_bank" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="spiders" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -482,9 +469,9 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.keybord_DD" />
         <item itemvalue="Python.abc_test" />
         <item itemvalue="Python.abc_bank" />
-        <item itemvalue="Python.keybord_DD" />
         <item itemvalue="Python.zhongxin_IE" />
         <item itemvalue="Python.hx_2" />
       </list>
@@ -504,15 +491,15 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="6" y="128" width="1163" height="913" extended-state="0" />
+    <frame x="654" y="75" width="1163" height="917" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2330009" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25113326" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32980132" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49864006" weight="0.41206676" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49864006" weight="0.07317073" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.5992415" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -833,24 +820,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Temp/njump.html-id=n190214144432120&amp;qid=03123.url">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="125">
-          <caret line="5" selection-start-line="5" selection-end-line="5" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/njump.html-id=n190214144432120&amp;qid=03123.url" />
     <entry file="file://$PROJECT_DIR$/zhongxin_chrome.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="50">
           <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tools/zhaohang/keybord_DD.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="25">
-          <caret line="1" column="22" selection-start-line="1" selection-start-column="22" selection-end-line="1" selection-end-column="22" />
         </state>
       </provider>
     </entry>
@@ -861,9 +835,26 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/tools/zhaohang/keybord_DD.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="131">
+          <caret line="58" lean-forward="true" selection-start-line="58" selection-end-line="58" />
+          <folding>
+            <element signature="e#0#20#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/my_spider/zhongshihua.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="675">
+          <caret line="49" column="24" selection-start-line="49" selection-start-column="24" selection-end-line="49" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/abc_bank.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="86">
+        <state relative-caret-position="25">
           <caret line="381" column="27" selection-start-line="381" selection-start-column="27" selection-end-line="381" selection-end-column="27" />
           <folding>
             <element signature="e#3769#7957#0" />
@@ -881,16 +872,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="450">
           <caret line="18" column="4" selection-start-line="18" selection-start-column="4" selection-end-line="18" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/my_spider/zhongshihua.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="675">
-          <caret line="49" column="24" selection-start-line="49" selection-start-column="24" selection-end-line="49" selection-end-column="24" />
-          <folding>
-            <element signature="e#88#118#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>

@@ -24,7 +24,7 @@ class Trans(object):
         self.browser.get("https://translate.google.cn/")
         words = self.input_words()
         self.browser.find_element_by_id("source").send_keys(words)
-        sleep(0.5)
+        sleep(1)
         self.working(words)
 
     def working(self,words):
@@ -37,17 +37,25 @@ class Trans(object):
         res_items.append(res_item)
         # print(res_items)
         print("{} 翻译结果是:{}".format(words, my_result))
-
         #写入文件:
         save_it = input("回车保存至本地,任意字符不保存:")
         if save_it =="":
-            res_ = "{}-----------{}".format(my_result, words)
+            nums_len = len(my_result)
+            lines_len = 30 - nums_len
+            my_line = "-" * lines_len
+            res_ = "{}{}{}".format(my_result, my_line, words)
             with open(r"E:\word_book.txt", 'a', encoding='utf8') as fp:
                 fp.write(res_)
                 fp.write("\n")
                 fp.close()
         else:
             pass
+        # continues = input("回车继续,任意字符结束:")
+        # if continues == "":
+        #     self.get_trans()
+        # else:
+        #     pass
+
 
     def input_words(self):
         words = input("请输入要翻译的文字:")
@@ -67,6 +75,7 @@ class Trans(object):
         return words
 
 if __name__ == '__main__':
-    process = Trans()
-    process.get_trans()
+    while True :
+        process = Trans()
+        process.get_trans()
 

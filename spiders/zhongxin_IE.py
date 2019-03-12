@@ -45,7 +45,6 @@ class Zhongxin_I():
             print("陈")
 
 
-
         # self.logger.debug('Ie is Starting')
         self.logger.debug('Chromee is Starting')
 
@@ -67,16 +66,12 @@ class Zhongxin_I():
             top = location['y']
             right = location['x'] + size['width']
             bottom = location['y'] + size['height']
-
             imgages = page_snap_obj.crop((left, top, right, bottom))
-
             #获取到验证码截图
             imgages.save("./images/zx_imcode.png")
             # imgages.show()
             sleep(1)
-
             #添加机器识别
-
             img_code = input("请输入验证码:")
             self.browser.find_element_by_id('img_code_text')
             self.browser.find_element_by_id('imgvalicode').send_keys(img_code)
@@ -105,16 +100,12 @@ class Zhongxin_I():
         tres2 = round(tres2,2)
         print("手机验证码耗时:{}".format(tres2))
 
-
         # login
         self.browser.find_element_by_id('mm').send_keys(passwd)
         t5 = time.time()
         self.browser.find_element_by_id('login').click()
         sleep(1)
-
-
         self.browser.save_screenshot("./images/index.png")
-
 
         # self.browser.find_element_by_xpath("//div[@class='wrap']/div[@class='head']/div[@class='menu']/ul/li[@class='yahei'][6]/a[@class='jffw']").click()
         t6 = time.time()

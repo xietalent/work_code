@@ -5,7 +5,10 @@ from scrapy.http import HtmlResponse
 from logging import getLogger
 from aip import AipOcr
 from time import sleep
-from selenium.webdriver.chrome.options import Options
+
+# from selenium.webdriver.chrome.options import Options
+from selenium.webdriver.ie.options import Options
+
 from selenium.webdriver.common.keys import Keys
 from lxml import etree
 from urllib import request
@@ -35,6 +38,10 @@ class Zhanoshang_bank():
         # self.chrome_options.binary_location = self.browser_url
         # self.browser = webdriver.Chrome(chrome_options=self.chrome_options)
         # self.browser = webdriver.Chrome360(chrome_options=self.options)
+        # ie_options = Options()
+        # ie_options.add_argument('--headless')
+        # self.browser = webdriver.Chrome(chrome_options=self.ie_options)
+        # self.browser = webdriver.Ie(ie_options=ie_options)
         self.browser = webdriver.Ie()
 
     def __del__(self):
@@ -73,6 +80,12 @@ class Zhanoshang_bank():
         # 登录成功
 
         sleep(5)
+        # cookieDict = {}
+        # cookie = [item["name"] + "=" + item["value"] for item in self.browser.get_cookies()]
+        # for i in cookie:
+        #     cookieDict[i.split('=')[0]] = i.split('=')[-1]
+        # print(cookieDict)
+
         self.browser.find_element_by_xpath(
             '//table[@id="mainTable"]/tbody/tr[1]/td/table/tbody/tr[1]/td[2]/table/tbody/tr[1]/td/table/tbody/tr/td/a[1]').click()
         sleep(2)

@@ -70,7 +70,7 @@
 <div>
 <input name="__EVENTTARGET" id="__EVENTTARGET" type="hidden" value="">
 <input name="__EVENTARGUMENT" id="__EVENTARGUMENT" type="hidden" value="">
-<input name="__VIEWSTATE" id="__VIEWSTATE" type="hidden" value="ZHe80lMfnSAYogBn0I+RfVzedKvc9fuVkKLxTCea+P5YwYcphgIXey3ybz2b0b/aNg9xB1NvTUPaOftp2XFyV+7g7E/MqaeDWl/9y023p0Dn9ufolxa+/nRUoAl31USrMNaeh4t6IVuZpALC5nWVAwVf+GVuUPbhB1gJZxed0bf90BEn1atX/80PeyLLXhg78RVW0z0p9yxZOW813/Ct+Z49nm+KNv+n7+x7pVFZYpFnYDb7A1OgPy8esrTiqTxrZH4wUZRTJZ9blOCqdz7KGer4gE9Ce+5ri87fWV6LF7TsvnYvgpRNwG5TbS1zMtognr4ZFE6lGdbfH1Vgh/V7Xm0HWCJQ+LOYC9Rw+LqqESET1Y1qIprAV9i+UlzE0naH1lvSgAVkTf3rNd+Dx0ciaGiZJfJALc6eqKboq6zXhN1EunYWz1+i6UUHutvgLLr4/8E00jYM2gHIqg+8Gxg2IB7JuDvUfK2c6LB2gb2Es9AAH0AsEd1QY2K3DxoUQY2xZAQZhgiyCBUsbDLz0bya+qO+V7dq729S9evqWKr1KoQoxK0+An7wnb/adJcIWGYSYoRBPoBtlF6YItGB/dVU9w==">
+<input name="__VIEWSTATE" id="__VIEWSTATE" type="hidden" value="yHhhIsUCX1KVIpuHt6G9jgBTdhK8kPBxw3w1zfEsxkgvGiaRqM13kqKHAaT9Kjaaj3nwC9WhaP1GpOrhqukEppNWFRqegnQnlyBmfBonYBBuxammfQgISEvFXjoHrEqroKiiY3Dcw73Me7kn+gJBeF0Q0uMMAeziN4ELz5Sj8YnHCI69OWDuP+NTxgPRDFv5VoMRCS2+hdGR69igNhuAVpeiSr174qDxnA2ILWMkQQZOnZ472LHzqbXFFqNTaebgLrWnMKqEtfcASiXu4Lia8R6R/Spkeqjek0Cax96zKf4g14ZUgeJ+HEfJO0kM4KnuWOvopUQORD9m9q5dPW6071ZFoty4hqTcROFE0Kb9P3J9nCS5kgmtSg+G1uqZUs/gXUBo8a3jXzWP8pqh3PIfqKQRiQzkz7lnR/MM40pIyXj+ys9DvF4X0yj9355MyBYqeCeXnpTPzlDw6E9765YNsZpPOCMZZXM+aMGzpKvlvcIyQjlkozniINX1dW53LcRI4oK0JP0WdH7BzIzauTmI4l8Ltnu+Kd7mwFc8CdnbWODsvHrJOKOhdFTrNOfcyNyyF38x8uN3WGG9zK5uRC8uiw==">
 </div>
 
 <script type="text/javascript">
@@ -98,7 +98,7 @@ function __doPostBack(eventTarget, eventArgument) {
 <div>
 
 	<input name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" type="hidden" value="F46FED87">
-	<input name="__EVENTVALIDATION" id="__EVENTVALIDATION" type="hidden" value="Zp4hZlJ6L/sUfJnSzDG2+Mamvp0gckjhp5gVvM1oP07A2gY1/x6y7MkIL0RTVYCf6AfUPBGq2aoOrSHFYXzhjAKV0LoQTW4uTG8Y8GKIxGtU/t/KUIFhrzYrRwJEwUgPSrK+JOF2n7Jjfrkcay3KWATelHgWob+nVJcpsMebUx+7GyWT7+ZXdrHJA23iOaUZO21dDJe/BJkjGZo8SjN5qVZwfeeuzQqbxBRK7cXGXwl1FsRd3UkQbjjCrrNl0eeaxuh/r+bApuQ0cTPspvgdatKno2oiUxdWH4Lb1MFor/hDvEKuMlOTV+e0QyoGwZYRgwFHjv6pxl/QS5oMvuESARJRc6kDv3Q5uYj8OsEiFNci//ec7heX+6rIsQMfJHHmNQxDpvKc6yGHZaEGdHDsVVaOEorv2MVkEjGcmIiNb9k=">
+	<input name="__EVENTVALIDATION" id="__EVENTVALIDATION" type="hidden" value="pdsIiKAFFaK58hEHO8eFG7p3v/Kre+Q0mW6DVcHRsdHxNbKucg6KuFe9EWNUs9DcNpzeXtcKG6M2R2Kobs2JEbdF88/ioua4WD4BeKWwNU6KdIKS8FIJaZoU+hqJBIa0eC4FGYLkis8FOad/dmNG/RllXHbmByPcBHuIGLhaUpthTBfMJwcMJZLBgiXr+2h/i6iatICcmyTg91RJIj6F8Cs4Ikyq5cNiehlCc1Vk0SjdZ+Z9UuPgvtwiauTu2aGrii2VHEixA/zYfcIFmz0sqAF013lBHkAF3jjFEeOCx+imD7ArjtKybzKLAPcxryYr5p31Ildf5cv6rOMYwNo6S6XLfwjpNZTu5vFlePzf5pIomhFUuvIW1XDzCOvS4pDX9wMBr9OYT0LZODgcxZQnJG+ghkPwXsPMnvp2sEaEHM8=">
 </div>
         <div class="page-title">
             <span>
@@ -116,20 +116,20 @@ function __doPostBack(eventTarget, eventArgument) {
             <div class="page-panel-content" id="QueryResult1" style="margin-top: 20px; margin-bottom: 20px; margin-left: 35px;">
                  查询时间：        
                   <select name="ddlYearMonthList" class="chosen-select" id="ddlYearMonthList" style="display: none;">
+	<option value="201903">2019年03月</option>
+	<option value="201902">2019年02月</option>
 	<option value="201901">2019年01月</option>
 	<option value="201812">2018年12月</option>
 	<option value="201811">2018年11月</option>
 	<option value="201810">2018年10月</option>
-	<option value="201809">2018年09月</option>
+	<option selected="selected" value="201809">2018年09月</option>
 	<option value="201808">2018年08月</option>
-	<option selected="selected" value="201807">2018年07月</option>
+	<option value="201807">2018年07月</option>
 	<option value="201806">2018年06月</option>
 	<option value="201805">2018年05月</option>
 	<option value="201804">2018年04月</option>
-	<option value="201803">2018年03月</option>
-	<option value="201802">2018年02月</option>
 
-</select><div title="" class="chosen-container chosen-container-single chosen-select" id="ddlYearMonthList_chosen" style="width: 140px;"><a tabindex="-1" class="chosen-single"><span>2018年07月</span><div><b><i class="glyphicon chosen-down"></i><i class="glyphicon chosen-up"></i></b></div></a></div>
+</select><div title="" class="chosen-container chosen-container-single chosen-select" id="ddlYearMonthList_chosen" style="width: 140px;"><a tabindex="-1" class="chosen-single"><span>2018年09月</span><div><b><i class="glyphicon chosen-down"></i><i class="glyphicon chosen-up"></i></b></div></a></div>
                 &nbsp;&nbsp;
                   <input name="BtnQuery" class="btn btn-primary" id="BtnQuery" onclick="return CheckValid();" type="submit" value="查 询">
             </div>
@@ -147,7 +147,7 @@ Sys.WebForms.PageRequestManager._initialize('ScriptManager1', 'psm_QueryHistPoin
 		<tbody><tr align="center" class="dgHeader" valign="middle">
 			<th scope="col">积分名称</th><th scope="col">积分管理模式</th><th scope="col">当期刷卡积分</th><th scope="col">当期调整积分</th><th scope="col">当期奖励积分</th><th scope="col">当期新增积分</th><th scope="col">当期兑换积分</th><th scope="col">当前可用积分</th><th scope="col">最近即将失效积分</th><th scope="col">失效日期</th>
 		</tr><tr>
-			<td align="center" style="white-space: nowrap;">积分</td><td align="center" style="white-space: nowrap;">我行管理</td><td align="center" style="white-space: nowrap;">1,099</td><td align="center" style="white-space: nowrap;">0</td><td align="center" style="white-space: nowrap;">0</td><td align="center" style="white-space: nowrap;">1,099</td><td align="center" style="white-space: nowrap;">0</td><td align="center" style="white-space: nowrap;">2,674</td><td align="center" style="white-space: nowrap;">0</td><td align="center" style="white-space: nowrap;">0000-00-00</td>
+			<td align="center" style="white-space: nowrap;">积分</td><td align="center" style="white-space: nowrap;">我行管理</td><td align="center" style="white-space: nowrap;">965</td><td align="center" style="white-space: nowrap;">0</td><td align="center" style="white-space: nowrap;">0</td><td align="center" style="white-space: nowrap;">965</td><td align="center" style="white-space: nowrap;">0</td><td align="center" style="white-space: nowrap;">3,639</td><td align="center" style="white-space: nowrap;">0</td><td align="center" style="white-space: nowrap;">0000-00-00</td>
 		</tr>
 	</tbody></table>
                         
@@ -161,7 +161,7 @@ Sys.WebForms.PageRequestManager._initialize('ScriptManager1', 'psm_QueryHistPoin
 </div>
 
         </div>
-        <input name="ClientNo" id="ClientNo" type="hidden" value="5C25DBDF56772338330174794E1E4FD0679696447515243800000963">
+        <input name="ClientNo" id="ClientNo" type="hidden" value="5C25DBDF56772338330174794E1E4FD0811102358706732000000564">
         <input name="FunctionName" id="FunctionName" type="hidden" value="积分管理 > 积分历史查询">  
         <script src="../../Base/doc/dist/asset/js/cmbbank-ui-min.js" type="text/javascript"></script>        
     </form>

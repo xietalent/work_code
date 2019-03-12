@@ -26,10 +26,11 @@ class Pingan_C():
         # self.browser = webdriver.PhantomJS()
 
         # 设置chrome浏览器无界面模式
-        # chrome_options = Options()
-        # chrome_options.add_argument('--headless')
-        # self.browser = webdriver.Chrome(chrome_options=chrome_options)
-        self.browser = webdriver.Chrome()
+        chrome_options = Options()
+        chrome_options.add_argument('--headless')
+        self.browser = webdriver.Chrome(chrome_options=chrome_options)
+
+        # self.browser = webdriver.Chrome()
         # self.browser = webdriver.Ie()
         # self.phone_num = phone_num
         # self.passwd = passwd
@@ -38,7 +39,6 @@ class Pingan_C():
         self.browser.close()
 
     def process_request(self):
-
         ta = time.time()
         # username = input("请输入用户名:")
         # username = "15071469916"
@@ -49,16 +49,10 @@ class Pingan_C():
         passwd = "419078CHU"
         # passwd = "zc006688"
         self.logger.debug('Chrome is Starting')
-
         self.browser.get("https://creditcard.pingan.com.cn/financing/login.screen?sid_source=CreditcardCP")
-
         sleep(3)
-
-
-
         #切换至iframe
         self.browser.switch_to.frame("toalogin")
-
 
         # #获取验证码
         # location = self.browser.find_element_by_id("validateImg").location
@@ -103,10 +97,10 @@ class Pingan_C():
         page_snap_obj = Image.open("./images/pingan/pingan_login.png")
 
         size = self.browser.find_element_by_id("validateImg").size
-        left = location['x']
-        top = location['y']
-        right = location['x'] + size['width']
-        bottom = location['y'] + size['height']
+        left = location['x']+50
+        top = location['y']+170
+        right = location['x'] + size['width']+55
+        bottom = location['y'] + size['height']+200
 
         images = page_snap_obj.crop((left, top, right, bottom))
         # sleep(1)
@@ -114,21 +108,14 @@ class Pingan_C():
         # image1 = images.save("./static/img/imgcode.png")
         images.save("./images/pingan/pingan_imgcode.png")
         # sleep(0.2)
-        # images.show()
-
+        images.show()
         sleep(1)
-
-
-
 
 
         #验证码
         ver_code = input("请输入验证码:")
-
         self.browser.find_element_by_id('check_code').send_keys(ver_code)
-
         self.browser.find_element_by_id('loginlink').click()
-
         tb = time.time()
 
         tc = tb-ta
@@ -138,10 +125,8 @@ class Pingan_C():
         #登录时间
         t1 = time.time()
         try:
-
             WebDriverWait(self.browser, 25).until(lambda x: self.browser.find_element_by_xpath('//frame[@id="body"]'))
             # WebDriverWait(self.browser, 25).until(lambda x: self.browser.find_element_by_xpath('//frame[@id="body"]'))
-
         except:
             print("超时,获取积分失败")
             # self.browser.close()
@@ -158,8 +143,6 @@ class Pingan_C():
         finally:
             pass
         # self.browser.switch_to.frame("body")
-
-
 
         #next
         # sleep(15)
@@ -223,12 +206,7 @@ class Pingan_C():
             print("本期剩余应还:{}".format(remainder))
             print("本期剩余最低应还额:{}".format(remainder_minimum_return))
 
-
         #获取积分信息:
-
-
-
-
         print("获取积分信息")
         sleep(1)
         event2 =self.browser.find_element_by_xpath("//ul[@id='nav_child']/li[4]/a")
@@ -253,7 +231,6 @@ class Pingan_C():
         print('获取万里通积分页面耗时:{}'.format(t6))
         t6 = round(t6,2)
         # sleep(6)
-
         # 下载html
         page_html2 = self.browser.page_source
 
@@ -317,10 +294,6 @@ class Pingan_C():
         # with open(r"E:\code\spiders\text\pingan_bank\score_html.txt", "w+", encoding="utf8") as fp:
         #     fp.write(page_html3)
         #     fp.close()
-
-
-
-
         divs = xiecheng_tree.xpath("//div[@class='right_box']")
 
         for div in divs:
@@ -354,9 +327,6 @@ class Pingan_C():
         t11 = t10-t9
         t11 = round(t11,2)
         print("携程积分页耗时:{}".format(t11))
-
-        # sleep(10)
-
 
 
 

@@ -36,7 +36,7 @@
 <DIV class=search_input>
 <DIV class=xiala>
 <FORM name=tiaojian>
-<DIV><SELECT id=tiaojian style="DISPLAY: none" name=tiaojian> <OPTION selected value="">全部礼品</OPTION> <OPTION value=ICI1000000014>运动休闲</OPTION> <OPTION value=ICI1000000022>电子礼券</OPTION> <OPTION value=ICI1000017022>医疗健康</OPTION> <OPTION value=ICI1000014022>航空里程</OPTION> <OPTION value=ICI1000006022>积分联盟</OPTION> <OPTION value=ICI1000012022>母婴专享</OPTION> <OPTION value=ICI1000000012>家居日用</OPTION> <OPTION value=ICI1000012023>时尚精品</OPTION> <OPTION value=ICI1000000013>我爱我车</OPTION></SELECT> </DIV></FORM></DIV>
+<DIV><SELECT id=tiaojian style="DISPLAY: none" name=tiaojian> <OPTION selected value="">全部礼品</OPTION> <OPTION value=ICI1000000014>运动休闲</OPTION> <OPTION value=ICI1000000022>电子礼券</OPTION> <OPTION value=ICI1000014022>航空里程</OPTION> <OPTION value=ICI1000006022>积分联盟</OPTION> <OPTION value=ICI1000012022>母婴专享</OPTION> <OPTION value=ICI1000000012>家居日用</OPTION> <OPTION value=ICI1000012023>时尚精品</OPTION> <OPTION value=ICI1000000013>我爱我车</OPTION> <OPTION value=ICI1000000020>数码生活</OPTION></SELECT> </DIV></FORM></DIV>
 <DIV class=xiala>
 <FORM name=jifen>
 <DIV><SELECT id=jifen style="DISPLAY: none" name=jifen> <OPTION selected value="">全部积分</OPTION> <OPTION value=1>2万分以下</OPTION> <OPTION value=2>2万-5万分</OPTION> <OPTION value=3>5万-15万分</OPTION> <OPTION value=4>15万-100万分</OPTION> <OPTION value=5>100万分以上</OPTION></SELECT> </DIV></FORM></DIV>
@@ -122,8 +122,8 @@
    	loadSelect(document.jifen.jifen,'/BOCGIFTORDERNET');
 </SCRIPT>
 
-<DIV id=selectoftiaojian style="FONT-SIZE: 12px; CURSOR: pointer; BORDER-TOP: #7f9db7 1px solid; HEIGHT: 21px; BORDER-RIGHT: #7f9db7 1px solid; WIDTH: 80px; BACKGROUND: url(/BOCGIFTORDERNET/images/icon_select_focus.gif) no-repeat right 0px; BORDER-BOTTOM: #7f9db7 1px solid; POSITION: absolute; LEFT: 613px; BORDER-LEFT: #7f9db7 1px solid; Z-INDEX: 999999; LINE-HEIGHT: 21px; TOP: 52px; TEXT-INDENT: 4px">全部礼品</DIV>
-<DIV id=selectofjifen style="FONT-SIZE: 12px; CURSOR: pointer; BORDER-TOP: #7f9db7 1px solid; HEIGHT: 21px; BORDER-RIGHT: #7f9db7 1px solid; WIDTH: 80px; BACKGROUND: url(/BOCGIFTORDERNET/images/icon_select_focus.gif) no-repeat right 0px; BORDER-BOTTOM: #7f9db7 1px solid; POSITION: absolute; LEFT: 698px; BORDER-LEFT: #7f9db7 1px solid; Z-INDEX: 999999; LINE-HEIGHT: 21px; TOP: 52px; TEXT-INDENT: 4px">全部积分</DIV>
+<DIV id=selectoftiaojian style="FONT-SIZE: 12px; CURSOR: pointer; BORDER-TOP: #7f9db7 1px solid; HEIGHT: 21px; BORDER-RIGHT: #7f9db7 1px solid; WIDTH: 80px; BACKGROUND: url(/BOCGIFTORDERNET/images/icon_select_focus.gif) no-repeat right 0px; BORDER-BOTTOM: #7f9db7 1px solid; POSITION: absolute; LEFT: 640px; BORDER-LEFT: #7f9db7 1px solid; Z-INDEX: 999999; LINE-HEIGHT: 21px; TOP: 52px; TEXT-INDENT: 4px">全部礼品</DIV>
+<DIV id=selectofjifen style="FONT-SIZE: 12px; CURSOR: pointer; BORDER-TOP: #7f9db7 1px solid; HEIGHT: 21px; BORDER-RIGHT: #7f9db7 1px solid; WIDTH: 80px; BACKGROUND: url(/BOCGIFTORDERNET/images/icon_select_focus.gif) no-repeat right 0px; BORDER-BOTTOM: #7f9db7 1px solid; POSITION: absolute; LEFT: 725px; BORDER-LEFT: #7f9db7 1px solid; Z-INDEX: 999999; LINE-HEIGHT: 21px; TOP: 52px; TEXT-INDENT: 4px">全部积分</DIV>
 <FORM id=hisOrderList method=post name=hisOrderList action=/BOCGIFTORDERNET/hisOrderList.do></FORM>
 <FORM id=viewOrder method=post name=viewOrder action=/BOCGIFTORDERNET/viewOrder.do></FORM>
 <SCRIPT type=text/javascript>

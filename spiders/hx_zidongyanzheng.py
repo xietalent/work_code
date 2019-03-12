@@ -23,6 +23,10 @@ class SeleniumMiddleware():
         self.logger = getLogger(__name__)
         self.timeout = timeout
         # self.browser = webdriver.PhantomJS()
+        # self.chrome_options = Options()
+        # self.chrome_options.add_argument('--headless')
+        # self.logger = getLogger(__name__)
+        # self.browser = webdriver.Chrome(chrome_options = self.chrome_options)
         self.browser = webdriver.Chrome()
         # self.browser.set_window_rect(1400,700)
         # self.browser.set_page_load_timeout(self.timeout)
@@ -334,15 +338,6 @@ class Mysql_input(object):
     def close(self):
         self.cursor.close()
         self.conn.close()
-
-
-# class  Runs():
-#     def __init__(self,page_html):
-#         self.page_html = page_html
-#
-#     def page_htm(self):
-#
-#         print(self.page_html)
 
 
 if __name__ == '__main__':

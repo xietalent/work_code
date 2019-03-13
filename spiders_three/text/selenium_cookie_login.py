@@ -46,6 +46,7 @@ class Cookie_login():
     def __del__(self):
         self.browser.close()
 
+    #获取cookie
     def get_cookie(self):
         self.browser.get("https://i.qq.com/")
         sleep(0.2)
@@ -71,6 +72,7 @@ class Cookie_login():
             fp.close()
         sleep(5)
 
+    #使用cookie模拟登录状态
     def use_cookie(self):
         with open('cook.txt','r') as fp:
             cookie = fp.read()

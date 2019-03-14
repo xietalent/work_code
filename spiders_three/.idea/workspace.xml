@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="50c9e39f-b95b-437d-b105-e54caa569b46" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/text/tuniu_info.txt" beforeDir="false" afterPath="$PROJECT_DIR$/text/tuniu_info.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tuniu.py" beforeDir="false" afterPath="$PROJECT_DIR$/tuniu.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -159,7 +157,7 @@
         <entry file="file://$PROJECT_DIR$/shiguangwang.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="81">
-              <caret line="43" column="28" lean-forward="true" selection-start-line="43" selection-start-column="28" selection-end-line="43" selection-end-column="28" />
+              <caret line="43" column="28" selection-start-line="43" selection-start-column="28" selection-end-line="43" selection-end-column="28" />
               <folding>
                 <element signature="e#88#110#0" expanded="true" />
                 <element signature="e#1256#1954#0" />
@@ -177,8 +175,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/super8.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="249">
-              <caret line="50" column="43" lean-forward="true" selection-start-line="50" selection-start-column="43" selection-end-line="50" selection-end-column="43" />
+            <state relative-caret-position="174">
+              <caret line="98" column="27" selection-start-line="98" selection-start-column="27" selection-end-line="98" selection-end-column="137" />
               <folding>
                 <element signature="e#88#110#0" expanded="true" />
               </folding>
@@ -311,7 +309,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="E:/work_note/my_code" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../supere" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
@@ -788,7 +786,7 @@
     <entry file="file://$PROJECT_DIR$/shiguangwang.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="81">
-          <caret line="43" column="28" lean-forward="true" selection-start-line="43" selection-start-column="28" selection-end-line="43" selection-end-column="28" />
+          <caret line="43" column="28" selection-start-line="43" selection-start-column="28" selection-end-line="43" selection-end-column="28" />
           <folding>
             <element signature="e#88#110#0" expanded="true" />
             <element signature="e#1256#1954#0" />
@@ -804,8 +802,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/super8.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="249">
-          <caret line="50" column="43" lean-forward="true" selection-start-line="50" selection-start-column="43" selection-end-line="50" selection-end-column="43" />
+        <state relative-caret-position="174">
+          <caret line="98" column="27" selection-start-line="98" selection-start-column="27" selection-end-line="98" selection-end-column="137" />
           <folding>
             <element signature="e#88#110#0" expanded="true" />
           </folding>

@@ -38,8 +38,8 @@ class Tuniu(object):
         # self.chrome_options = Options()
         # self.chrome_options.add_argument("--headless")
         # self.browser = webdriver.Chrome(chrome_options=self.chrome_options)
-        # self.browser = webdriver.Chrome()
-        pass
+        self.browser = webdriver.Chrome()
+
     #
     # def __del__(self):
     #     self.browser.close()
@@ -101,15 +101,15 @@ class Tuniu(object):
         with open(r"E:\code\spiders_three\text\tuniu_info.txt",'w',encoding="utf-8")  as fp:
             fp.write(tuniu_html.text)
             fp.close()
-        # print(tuniu_html.text)
+        print(tuniu_html.text)
         my_info = tuniu_html.text
         with open(r"E:\code\spiders_three\text\tuniu_info.txt", 'r', encoding="utf-8") as f:
             html = f.read()
 
         html_tree = etree.HTML(html)
-        my_info_tree = etree.HTML(tuniu_html)
+        # my_info_tree = etree.HTML(tuniu_html)
 
-        divs = my_info_tree.xpath("//div[@class='main-content']")
+        divs = html_tree.xpath("//div[@class='main-content']")
         print(divs)
         for div in divs:
             # 昵称
@@ -187,8 +187,14 @@ class Tuniu(object):
         tres2 = t3 - t2
         tres2 = round(tres2, 2)
         print("获取积分信息耗时为:{}s".format(tres2))
+        return tres1
 
 
 if __name__ == '__main__':
-    running = Tuniu()
-    running.start()
+    time1 = time.clock()
+    run = Tuniu()
+    tres1 = run.start()
+    time2 = time.clock()
+    time3 = round(time2 - tres1, 2)
+    print("总耗时:{}s".format(time2))
+    print("总耗时(去除登录时间后):{}s".format(time3))

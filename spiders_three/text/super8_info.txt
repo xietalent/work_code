@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta http-equiv="pragma" content="no-cache">
+    <title>会员专区-速8会员专属福利</title>
+    <meta name="keywords" content="会员折扣,最低82折,酒店预订,酒店预定,会员专享,会员卡,会员特惠" />
+    <meta name="description" content="注册速8会员，尊享会员折扣。95折免费会员，38元88折贵宾会员，188元85折金卡会员。每级会员更有超值权益。" />
+    <link href="/Statics/css/base.css" rel="stylesheet" type="text/css" media="all" />
+    <link rel="stylesheet" href="/Statics/css/popAd.css?ver=20190131001" />
+    <script src="/Statics/scripts/baseJS?v=dd8vgEhomVt8h8OQjrONi-CdI2eCgA6xgx98HCCi6pI1"></script>
+
+    <script src="/statics/scripts/analytics/baidust.js"></script>
+    <!-- 360收录 -->
+    <script>
+        (function () {
+            try {
+                var src = (document.location.protocol == "http:") ? "http://js.passport.qihucdn.com/11.0.1.js?cfb171d85ee75f5d4b586910458605ce" : "https://jspassport.ssl.qhimg.com/11.0.1.js?cfb171d85ee75f5d4b586910458605ce";
+                document.write('<script src="' + src + '" id="sozz"><\/script>');
+            } catch (e) { }
+        })();
+    </script>
+    <!-- 360收录 -->
+    <!-- 百度收录 -->
+    <script>
+        (function () {
+            try {
+                var bp = document.createElement('script');
+                var curProtocol = window.location.protocol.split(':')[0];
+                if (curProtocol === 'https') {
+                    bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+                }
+                else {
+                    bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+                }
+                var s = document.getElementsByTagName("script")[0];
+                s.parentNode.insertBefore(bp, s);
+            } catch (e) { }
+        })();
+    </script>
+    <!-- 百度收录 -->
+</head>
+<body class="page-user">
+    
+<link href="/Statics/css/login.css" rel="stylesheet" />
+
+
+<script type="text/javascript">
+    try {
+        var _oztime = (new Date()).getTime();
+        var _ozuid;
+        var _user = "19526362";
+        var _domain = document.domain.match(/\.[a-zA-Z0-9.-]+/);
+        if ($.cookie("ozuid")) {
+            if ($.cookie("ozuid") == _user) {
+                _ozuid = $.cookie("ozuid");
+            } else {
+                $.cookie("ozuid", _user, { path: "/", expires: 365, domain: _domain });
+                _ozuid = $.cookie("ozuid");
+            }
+        } else {
+            $.cookie("ozuid", _user, { path: "/", expires: 365, domain: _domain });
+            _ozuid = $.cookie("ozuid");
+        }
+    } catch (e) { }
+</script>
+<div id="mask"></div>
+<div class="top_head">
+    <div class=" top_head_left">
+        <img src="/Statics/images/slogan.png" width="382" height="26" />
+    </div>
+    <div class=" top_head_right">
+        <img src="/Statics/images/app_ad.png" width="200" height="58" />
+    </div>
+    <div class="top-head-400">预订热线 40018-40018</div>
+    <div class="top-head-pop">
+        <div class="pop-img"></div>
+        <a href="/activity/iSuper8" class="pop-bottom" target="_blank">速8酒店手机版 &gt;</a>
+    </div>
+    <div class="top_logo">
+        <img src="/Statics/images/top_logo.png" width="52" height="80" />
+    </div>
+</div>
+<div class="top_menu">
+    <div class="top_menu_text">
+        <a href="/" class="">首页</a>
+        <a href="/Hotel/List" class="">酒店预订</a>
+        <a href="/product/su8New.html" target="_blank" id="menuProduct" class="newProductMenu">速8新品</a>
+        <a href="/TeamBuy/Index" class="">客房团购</a>
+            <a href="/MemInfo/MemLogin" class="hover">会员专区</a>
+        <a href="/Gift/Index" target="_blank" class="">兑换商城</a>
+        <a href="/Article/Investment" class="">加盟速8</a>
+            <a href="/Company/ComPreferential" class="">企业客户</a>
+    </div>
+    <div class="top_menu_mys8">
+            <i><a href="/MemInfo/MemLogin">张雄  先生</a></i>
+        <span>
+                <a href="/MemInfo/MemLogin" onclick="return false;" class="mys8-menu alert-pay">我的速8</a>
+            <!--有待付款订单时class中添加alert-pay-->
+
+                <ul class="dropmenu-content">
+                    <li><a href="/MemInfo/MemCusOrder"><em class="">0</em>我的订单</a></li>
+                    
+                    
+                    <li><a href="/MemInfo/MemCusAmount"><em>0</em>现金券账户</a></li>
+                    <li><a href="/MemInfo/MemPointAmount"><em>0</em>间夜点数</a></li>
+                    <li><a href="/MemInfo/MemVoucherAmount"><em>0</em>抵扣券</a></li>
+                    <li><a href="/MemInfo/MemFavorite"><em>0</em>我的收藏</a></li>
+                    <li><a href="/Home/LogOut" class="exit logout">退出登录</a></li>
+                </ul>             
+
+        </span>
+    </div>
+</div>
+<!--登录框弹出层-->
+<div style="z-index: 19999; position: fixed; top: 45px; left: 50.5px;">
+    <div class="box-login" id="pop-login" style="display: none;">
+        <div class="close">
+            <a href="javascript:void(0)" id="closelogin" onclick="closeWindow('pop-login')">
+                <img src="/Statics/images/close-icon.gif" />
+            </a>
+        </div>
+        <div class="title-barlogin title-bar-pop">
+            <h2 class="tab-person current" id="checkchengeindexlogin"><em>个人</em>登录</h2>
+            <h2 class="tab-company" id="checkchengeindexlogincompany"><em>企业</em>登录</h2>
+        </div>
+
+        <div class="login-tab-content login-tab-content-pop">
+            <div class="tab-person">
+<form action="/MemInfo/IndexLogin" id="IndexLogin" method="post">                    <div id="Indexloginerror">
+                        
+                    </div>
+                    <div class="form-group form-group-name">
+                        <label class="ui-placeholder" for="input-name" node_type="key">
+                            <span class="placeholder-text">手机号码</span>
+                            <input name="LoginName" type="text" value="" />
+                        </label>
+                        <input id="RefUrl" name="RefUrl" type="hidden" value="" />
+                    </div>
+                    <div class="form-group form-group-password">
+                        <label class="ui-placeholder" for="input-pw" node_type="key">
+                            <span class="placeholder-text">密码</span>
+                            <input name="PassWd" type="password" />
+                        </label>
+                    </div>                    
+                    <div class="form-imgcode form-group-imgcode">
+                        <input node_type="input" name="ImgCode" type="text" autocomplete="off" placeholder="验证码" />
+                        <img id ="sp_imag_HM" src ="/Register/NewValidateCodeImageType?imct=s8LGHeaderMem" onclick="IndexNewValidateCode('s8LGHeaderMem','sp_imag_HM')" style="width:70px"   />
+                        <a class="a-vertif" href="javascript:void(0)" style="color: blue;" onclick="IndexNewValidateCode('s8LGHeaderMem','sp_imag_HM')">看不清?</a>
+                    </div>
+                    <div class="item item-remember">
+                        <a class="link-forgot fr" href="/Forgotpwd/Forgotpwd1">忘记密码</a>
+                        <label for="input-remember">
+                            <input name="RememberMe" type="checkbox" value="true" /><input name="RememberMe" type="hidden" value="false" />
+                            30天内自动登录</label>
+                    </div>
+                    <div class="item">
+                        <a href="javascript:void(0)" id="btn3" class="btn"></a>
+                    </div>
+                    <a class="btn btn-nMem" href="#" onclick="closeWindow('pop-login');"><em>非会员直接预订</em></a>
+                    <dl class="item item-third">
+                        <dt><a id="tandregister" href="javascript:void(0)">立即注册</a></dt>
+                    </dl> 
+</form>            </div>
+            <div class="tab-company" style="display: none">
+<form action="/Company/IndexCompanyLogin" id="IndexCompanyLogin" method="post">                    <div id="Indexcompanyloginerror">
+                        
+                    </div>
+                    <div class="form-group form-group-name">
+                        <label class="ui-placeholder" for="input-name" node_type="key">
+                            <span class="placeholder-text">企业用户名</span>
+                            <input name="LoginName" type="text" value="" />
+                        </label>
+                    </div>
+                    <div class="form-group form-group-password">
+                        <label class="ui-placeholder" for="input-pw" node_type="key">
+                            <span class="placeholder-text">密码</span>
+                            <input name="PassWd" type="password" />
+                        </label>
+                    </div>
+                    <div class="form-imgcode form-group-imgcode">
+                        <input node_type="input" name="ImgCode" type="text" autocomplete="off" placeholder="验证码" />
+                        <img id ="sp_imag_com_HM" src ="/Register/NewValidateCodeImageType?imct=s8LGHeaderCom" onclick="IndexNewValidateCode('s8LGHeaderCom','sp_imag_com_HM')" style="width:70px"   />
+                        <a class="a-vertif" href="javascript:void(0)" style="color: blue;" onclick="IndexNewValidateCode('s8LGHeaderCom','sp_imag_com_HM')">看不清?</a>
+                    </div>
+                    <div class="item item-remember">
+                        <a class="link-forgot fr" href="/Forgotpwd/Forgotpwd1">忘记密码</a>
+                        <label for="input-remember">
+                            <input name="RememberMe" type="checkbox" value="true" /><input name="RememberMe" type="hidden" value="false" />
+                            30天内自动登录</label>
+                    </div>
+                    <div class="item">
+                        <a href="javascript:void(0)" id="btn4" class="btn"></a>
+                    </div>
+                    <a class="btn btn-nMem" href="/Hotel/List"><em>非会员直接预订</em></a>
+                    <dl class="item item-third">
+                        <dt><a href="/Register/RegisterCompany">立即注册企业会员</a></dt>
+                    </dl> 
+</form>            </div>
+        </div>
+
+    </div>
+</div>
+<script src="/Statics/scripts/business/UC/HeardInfo.js?ver=20190131001"></script>
+
+
+
+    <div class="grid wrapper clearfix">
+        
+<div class="crumbs">
+    您当前的位置：<a href="/">速8首页</a><em class="sep">&gt;</em><span class="last">我的速8</span>
+</div>
+
+<div class="g1">
+    <div class="sidenav">
+        <h2 class="title-bar"><a href="/MemInfo/MemLogin">我的速8</a></h2>
+        <ul>
+            <li class="item-parent">
+
+                <a href="/MemInfo/MemCusOrder">我的订单
+                </a>
+            </li>
+
+            <li class="item-parent"><span class="name">账户管理</span>
+            </li>
+            <li class="item-child">
+                <ul>
+                    <li>
+                        <a href="/MemInfo/MemPointAmount">间夜点数</a>
+                    </li>
+                    <li><a href="/MemInfo/MemVoucherAmount">抵扣券</a></li>
+                    <li><a href="/MemInfo/MemCusAmount">现金券</a></li>
+                    <li><a href="/MemInfo/MemCusInsurance">保险</a></li>
+                    
+                </ul>
+            </li>
+            <li class="item-parent"><span class="name">个人信息</span></li>
+            <li class="item-child">
+                <ul>
+                    <li><a href="/MemInfo/MemPersonalDetail">个人资料</a></li>
+                    <li><a href="/MemInfo/MemPwdEdit">密码修改</a></li>
+                    
+                    <li><a href="/MemInfo/MemUseInforMent">常用信息管理</a></li>
+                </ul>
+            </li>
+            <li class="item-parent last"><a href="/MemInfo/MemFavorite">我的收藏</a></li>
+        </ul>
+    </div>
+    <div class="side-ad"><a target="_blank" href="https://s.growingio.com/lzZDBm">
+        <img src="/Statics/images/advert/user-side-ad.gif?id=1" alt="" /></a>
+    </div>
+</div>
+
+        
+<link href="/Statics/css/user.css" rel="stylesheet" type="text/css" media="all" />
+<script>
+    $(document).ready(function () {
+        var cardtype = '1';
+        $("#level" + cardtype + "").addClass("item-current")
+    });
+</script>
+<div class="g2 border-wrapper">
+    <div class="box-user">
+        <div class="title-bar">
+            <h2>会员: 张雄</h2>
+            <span class="tip">卡号 310881237</span>
+        </div>
+
+        <div class="user-level">
+            <ul class="card">
+                <li class="item level-1" id="level1"><span>
+                    <img src="/Statics/images/card/card-1.png" alt="" />95折 网络会员</span></li>
+                <li class="item level-2" id="level2"><span>
+                    <img src="/Statics/images/card/card-2.png" alt="" />88折 贵宾会员</span></li>
+                <li class="item level-3" id="level3"><span>
+                    <img src="/Statics/images/card/card-3.png" alt="" />85折 金卡会员</span></li>
+                <li class="item level-4" id="level4"><span>
+                    <img src="/Statics/images/card/card-4.png" alt="" />82折 超级会员</span></li>
+            </ul>
+            <div class="bar-pack">
+                <div class="bar">
+                    <div class="bar-handle" style="width: 0.00%;"></div>
+                </div>
+            </div>
+            <ul class="num">
+                <li class="item level-1"><span>0点</span></li>
+                <li class="item level-2"><span>3点</span></li>
+                <li class="item level-3"><span>10点</span></li>
+                <li class="item level-4"><span>30点</span></li>
+            </ul>
+        </div>
+
+        <div class="user-credits">
+            <ul>
+                <li>
+                    <div class="text icon-credits-night">间夜点数<em>0 点</em></div>
+                    <a class="" target="_blank" href="/News/42010.html">什么是间夜点数</a>
+                </li>
+                <li>
+                    <div class="text icon-credits-cash">抵扣券<em>0 元</em></div>
+                    <a class="" target="_blank" href="/News/42007.html">抵扣使用规则</a>
+                </li>
+                <li class="last">
+                    <div class="text icon-credits-balance"><a href="/MemInfo/MemCusAmount" class="btn-recharge-s">充值码充值</a>现金券<em>0 元</em></div>
+                    <a class="" target="_blank" href="/News/42009.html">现金券使用规则</a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="user-order-tip">
+            <ul>
+                <li><a href="#">预订订单 （0）</a></li>
+                <li class="sep"></li>
+                <li><a href="#">取消订单 （0）</a></li>
+                <li class="sep"></li>
+                <li><a href="#">待点评订单 （0）</a></li>
+            </ul>
+        </div>
+
+        <div class="user-up-tip">
+            <ul>
+                <li class="item-1">
+                    
+                    <div class="tip"><em>3</em>晚就升级，绝对没问题</div>
+                    <div class="icon"></div>
+                    <div class="text">官网/手机网/App/微信</div>
+                </li>
+                <li class="item-2">
+                    <div class="tip">睡过<em>3</em>晚立马高大上了哇</div>
+                    <div class="icon"></div>
+                    <div class="text">40018-40018预订电话</div>
+                </li>
+                <li class="item-3">
+                   
+                    <div class="tip">再住<em>3</em>晚，才能升级哦</div>
+                    <div class="icon"></div>
+                    <div class="text">酒店前台</div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+    </div>
+    <div class="footer">
+    <div class="k_link">
+        <div>
+            <h3>
+                <img src="/Statics/images/f_icon_zn.png" width="32" height="32" />订房指南</h3>
+            <ul>
+                <li><a href="/News/42004.html">预订酒店</a></li>
+                <li><a href="/News/42005.html">修改取消订单</a></li>
+                <li><a href="/News/42502.html">入住和离店</a></li>
+                <li><a href="/News/42503.html">团购和钟点房</a></li>
+                <li><a href="/News/42009.html">现金券规则</a></li>
+                <li><a href="/News/42007.html">抵扣券规则</a></li>
+            </ul>
+        </div>
+        <div>
+            <h3>
+                <img src="/Statics/images/f_icon_hy.png" width="32" height="32" />会员服务</h3>
+            <ul>
+                <li><a href="/News/42001.html">成为速8会员</a></li>
+                <li><a href="/News/42017.html">会员等级和权益</a></li>
+                <li><a href="/News/42010.html">间夜点数获取与使用</a></li>
+                <li><a href="/Article/MemberAnnouncement">会员公告</a></li>
+            </ul>
+        </div>
+        <div>
+            <h3>
+                <img src="/Statics/images/f_icon_zf.png" width="32" height="32" />支付方式</h3>
+            <ul>
+                <li><a href="/News/42019.html">前台付款</a></li>
+                <li><a href="/News/42021.html">网上预付房费</a></li>
+                <li><a href="/News/42022.html">信用卡担保</a></li>
+                <li><a href="/News/42020.html">发票说明</a></li>
+            </ul>
+        </div>
+        <div class="nofl">
+            <h3>
+                <img src="/Statics/images/f_icon_jm.png" width="32" height="32" />酒店加盟</h3>
+            <ul>
+                <li><a href="/News/40282.html">合作方式</a></li>
+                <li><a href="/Article/Investment">招商会信息</a></li>
+                <li><a href="/News/40281.html">速8中国样板间</a></li>
+                <li><a href="/News/40283.html">在线加盟申请表</a></li>
+                <li><a href="/News/40430.html">投资方向</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="b_link"><a href="/News/41119.html">关于速8</a>|<a href="/Article/Contact">联系我们</a>|<a href="/Article/News">速8动态</a>|<a href="/Hotel/List">酒店列表</a>|<a href="http://mys8.super8.com.cn/" target="_blank">业主门户</a>|<a href="/News/41005.html">使用条款</a>|<a href="/News/41120.html">温德姆集团</a>|<a href="http://job.super8.com.cn/" target="_blank">招贤纳士</a>|<a href="/News/41006.html">友情链接</a>|<a href="/News/41007.html">隐私声明</a></div>
+    <div class="b_logobox">
+        <img src="/Statics/images/blogo-01.png" width="168" height="37" />
+        <div class="b-logos-wrap">
+            <ul class="firstUl">
+                <li><a target="_blank" id="fb_dolce" href="http://www.dolce.com">Dolce Hotels and Resorts</a></li>
+                <li><a target="_blank" id="fb_wyndham_grand_collection" href="http://www.wyndham.com/">Wyndham Grand &reg; Collection</a></li>
+                <li><a target="_blank" id="fb_wyndham_hotels_resorts" href="http://www.wyndham.com/">Wyndham &reg; Hotels and Resorts</a></li>
+                <li><a target="_blank" id="fb_wyndham_garden" href="http://www.wyndham.com/">Wyndham Garden &reg;</a></li>
+                <li><a target="_blank" id="fb_tryp" href="http://www.tryphotels.com/">Tryp</a></li>
+                <li><a target="_blank" id="fb_wingate" href="http://www.wingatehotels.com/">Wingate &reg; by Wyndham</a></li>
+                <li><a target="_blank" id="fb_hawthorn" href="http://www.hawthorn.com/">Hawthorn &reg; Suites by Wyndham</a></li>
+                <li><a target="_blank" id="fb_microtel" href="http://www.microtelinn.com/">Microtel &reg; Inn &amp; Suites</a></li>
+            </ul>
+            <ul>
+                <li><a target="_blank" id="fb_ramada" href="http://www.ramada.com/">Ramada &reg;</a></li>
+                <li><a target="_blank" id="fb_baymont" href="http://www.baymontinns.com/">Baymont &reg; Inn &amp; Suites</a></li>
+                <li><a target="_blank" id="fb_days_inn" href="http://www.daysinn.com">Days Inn &reg;</a></li>
+                <li><a target="_blank" id="fb_super8" href="http://www.super8.com/">Super 8 &reg;</a></li>
+                <li><a target="_blank" id="fb_howard_johnson" href="http://www.hojo.com/">Howard Johnson &reg;</a></li>
+                <li><a target="_blank" id="fb_travelodge" href="http://www.travelodge.com/">Travelodge &reg;</a></li>
+                <li><a target="_blank" id="fb_knights_inn" href="http://www.knightsinn.com/">Knights Inn &reg;</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="copyright">Copyright &copy; 2004-2019 速8酒店 Super 8 Hotel (China) Co., Ltd, All Rights Reserved. &nbsp; 京ICP备13008407号-1 &nbsp; 京公网安备110105005616.</div>
+</div>
+<script type='text/javascript'>
+    var qimoClientId = { userId: 'OZJTg2dNjp3l5mmSWNLZpg==_2c618122ff10347c_2019/3/14 16:51:42', nickName: "张**先生" };// 自定义用户的唯一id,由英文字母,数字,下划线组成
+</script>
+<script type='text/javascript' src='https://webchat.7moor.com/javascripts/7moorInit.js?accessId=5750c0d0-06fe-11e8-ba00-9d369738dfe4&autoShow=true&language=ZHCN' async='async'>
+</script>
+<script src="/Statics/scripts/analytics/o_code.js"></script>
+<!--弹出层广告-->
+    <div class="pop-ad" id="pop-ad">
+        <div class="inner">
+            <div class="close" style="z-index: 1000"><a href="javascript:void(0)">
+                <img src="/statics/images/home-pop-icon-close.png" /></a></div>
+            <a href="https://s.growingio.com/lzZDBm" target="_blank" class="pop-ad-a">
+                <img src="/statics/images/temp/home-pop-180131.png" class="pop-img-1" />
+                <img src="/statics/images/temp/home-pop-btn-170815.png" class="pop-img-4" />
+            </a>
+        </div>
+    </div>
+    <script>
+        $(function () {
+            $('.pop-ad .close a').click(function () {
+                $('#pop-ad').slideToggle(1000, function () {
+                    DClearHomeAdPopup();
+                })
+            });
+        });
+        function DClearHomeAdPopup() {
+            $.ajax({
+                type: "post",
+                url: "/Direct/CloseHomeAd",
+                data: {
+                    curtime: new Date()
+                },
+                dataType: "json"
+            });
+            $('#pop-ad').hide();
+        }
+    </script>
+
+
+    <script src="/Statics/scripts/base/popup.js"></script>
+    <script src="/Statics/scripts/control/global.js"></script>
+</body>
+</html>
+<script>
+    var _hmt = _hmt || [];
+    (function () {
+        var hm = document.createElement("script");
+        hm.src = "//hm.baidu.com/hm.js?5ea893975c140fb2300e807a3da2b058";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
+</script>

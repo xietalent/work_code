@@ -3,6 +3,14 @@
   <component name="ChangeListManager">
     <list default="true" id="50c9e39f-b95b-437d-b105-e54caa569b46" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cookie_bag/Mtime_cook.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cookie_bag/Mtime_cook.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/imcode.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ria.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shiguangwang.py" beforeDir="false" afterPath="$PROJECT_DIR$/shiguangwang.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/super8.py" beforeDir="false" afterPath="$PROJECT_DIR$/super8.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../spiders_two/qunar.py" beforeDir="false" afterPath="$PROJECT_DIR$/../spiders_two/qunar.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../supere/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../supere/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../supere/supere/spiders/super8.py" beforeDir="false" afterPath="$PROJECT_DIR$/../supere/supere/spiders/super8.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -13,13 +21,14 @@
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/spiders_three$tuniu.coverage" NAME="tuniu Coverage Results" MODIFIED="1552551318989" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/spiders_two$china_telecom.coverage" NAME="china_telecom Coverage Results" MODIFIED="1551149366281" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/spiders_three$IHG.coverage" NAME="IHG Coverage Results" MODIFIED="1552635706996" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/spiders_two$tests.coverage" NAME="tests Coverage Results" MODIFIED="1551323529290" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/text" />
     <SUITE FILE_PATH="coverage/spiders_two$china_unicom.coverage" NAME="china_unicom Coverage Results" MODIFIED="1551317175105" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/spiders_two$qunar.coverage" NAME="qunar Coverage Results" MODIFIED="1551746040611" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/spiders_two$tenxun.coverage" NAME="tenxun Coverage Results" MODIFIED="1551939988689" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/spiders_two$youku.coverage" NAME="youku Coverage Results" MODIFIED="1551432773028" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/spiders_two$ver_codes.coverage" NAME="ver_codes Coverage Results" MODIFIED="1551348487800" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/text" />
-    <SUITE FILE_PATH="coverage/spiders_three$shiguangwang.coverage" NAME="shiguangwang Coverage Results" MODIFIED="1552557757475" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/spiders_three$shiguangwang.coverage" NAME="shiguangwang Coverage Results" MODIFIED="1552643707279" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/spiders_three$youku.coverage" NAME="youku Coverage Results" MODIFIED="1552007525366" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/spiders_three$huarun_wanjia.coverage" NAME="huarun_wanjia Coverage Results" MODIFIED="1552038660840" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/spiders_three$jieba_t.coverage" NAME="jieba_t Coverage Results" MODIFIED="1552360839785" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/text" />
@@ -32,15 +41,18 @@
     <SUITE FILE_PATH="coverage/spiders_two$aiqiyi.coverage" NAME="aiqiyi Coverage Results" MODIFIED="1551834162965" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/spiders_three$my_translation__1_.coverage" NAME="my_translation (1) Coverage Results" MODIFIED="1552026743634" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="E:/trans_for" />
     <SUITE FILE_PATH="coverage/spiders_three$shangrila.coverage" NAME="shangrila Coverage Results" MODIFIED="1552473757897" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/spiders_three$proxy_document.coverage" NAME="proxy_document Coverage Results" MODIFIED="1552641855117" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/text" />
     <SUITE FILE_PATH="coverage/spiders_two$zhongshiyou.coverage" NAME="zhongshiyou Coverage Results" MODIFIED="1550542961568" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/spiders_three$selenium_cookie_login.coverage" NAME="selenium_cookie_login Coverage Results" MODIFIED="1552392286683" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/text" />
+    <SUITE FILE_PATH="coverage/spiders_three$async_code.coverage" NAME="async_code Coverage Results" MODIFIED="1552646549077" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/text" />
     <SUITE FILE_PATH="coverage/spiders_two$china_mobile.coverage" NAME="china_mobile Coverage Results" MODIFIED="1550651070449" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/spiders_three$super8.coverage" NAME="super8 Coverage Results" MODIFIED="1552558579972" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/spiders_three$super8.coverage" NAME="super8 Coverage Results" MODIFIED="1552632824848" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/spiders_three$dou_t.coverage" NAME="dou_t Coverage Results" MODIFIED="1552536215219" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tools" />
     <SUITE FILE_PATH="coverage/spiders_two$tianhong.coverage" NAME="tianhong Coverage Results" MODIFIED="1551922721259" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/spiders_three$tencent.coverage" NAME="tencent Coverage Results" MODIFIED="1552392192432" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/spiders_three$sort.coverage" NAME="sort Coverage Results" MODIFIED="1552289217013" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/text" />
     <SUITE FILE_PATH="coverage/spiders_three$sasa.coverage" NAME="sasa Coverage Results" MODIFIED="1552375595811" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/spiders_three$jinyiyingshi.coverage" NAME="jinyiyingshi Coverage Results" MODIFIED="1552642581890" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/spiders_two$quchenshi.coverage" NAME="quchenshi Coverage Results" MODIFIED="1551924106248" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/spiders_three$opencv_vercode.coverage" NAME="opencv_vercode Coverage Results" MODIFIED="1552470703874" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tools" />
   </component>
@@ -104,34 +116,35 @@
           <entry key="project.open.time.33" value="1" />
           <entry key="project.open.time.41" value="1" />
           <entry key="project.open.time.42" value="1" />
+          <entry key="project.open.time.58" value="1" />
           <entry key="project.open.time.59" value="1" />
           <entry key="project.open.time.6" value="1" />
-          <entry key="project.opened" value="8" />
+          <entry key="project.opened" value="9" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="py" value="6073" />
+          <entry key="py" value="7565" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Python" value="6073" />
+          <entry key="Python" value="7565" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="jpg" value="4" />
           <entry key="png" value="15" />
-          <entry key="py" value="39" />
-          <entry key="txt" value="1" />
+          <entry key="py" value="47" />
+          <entry key="txt" value="6" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="Image" value="19" />
-          <entry key="PLAIN_TEXT" value="1" />
-          <entry key="Python" value="39" />
+          <entry key="PLAIN_TEXT" value="6" />
+          <entry key="Python" value="47" />
         </counts>
       </usages-collector>
     </session>
@@ -141,7 +154,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tuniu.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="134">
+            <state relative-caret-position="1725">
               <caret line="99" selection-start-line="99" selection-end-line="99" />
               <folding>
                 <marker date="1552551318958" expanded="true" signature="1020:1025" ph="..." />
@@ -156,42 +169,91 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/shiguangwang.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="81">
-              <caret line="43" column="28" selection-start-line="43" selection-start-column="28" selection-end-line="43" selection-end-column="28" />
+            <state relative-caret-position="280">
+              <caret line="155" lean-forward="true" selection-start-line="155" selection-end-line="155" />
               <folding>
                 <element signature="e#88#110#0" expanded="true" />
                 <element signature="e#1256#1954#0" />
                 <element signature="e#1989#2109#0" />
-                <element signature="e#2149#2399#0" />
                 <element signature="e#2401#2423#0" />
-                <element signature="e#2433#3092#0" />
-                <marker date="1552551416108" expanded="true" signature="1050:1055" ph="..." />
-                <marker date="1552551416108" expanded="true" signature="4622:5294" ph="..." />
+                <marker date="1552643707247" expanded="true" signature="1050:1055" ph="..." />
+                <marker date="1552643707247" expanded="true" signature="4622:5316" ph="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/super8.py">
+        <entry file="file://$PROJECT_DIR$/IHG.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="174">
-              <caret line="98" column="27" selection-start-line="98" selection-start-column="27" selection-end-line="98" selection-end-column="137" />
+            <state relative-caret-position="228">
+              <caret line="47" column="26" selection-start-line="47" selection-start-column="26" selection-end-line="47" selection-end-column="70" />
               <folding>
-                <element signature="e#88#110#0" expanded="true" />
+                <element signature="e#88#101#0" expanded="true" />
+                <marker date="1552620633064" expanded="true" signature="1049:4950" ph="..." />
+                <marker date="1552620633064" expanded="true" signature="3893:3898" ph="..." />
+                <marker date="1552620633064" expanded="true" signature="3922:3941" ph="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tools/dou_t.py">
+        <entry file="file://$PROJECT_DIR$/jinyiyingshi.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1521">
-              <caret line="31" column="19" selection-start-line="31" selection-start-column="19" selection-end-line="31" selection-end-column="19" />
+            <state relative-caret-position="180">
+              <caret line="168" column="24" lean-forward="true" selection-start-line="168" selection-start-column="24" selection-end-line="168" selection-end-column="24" />
               <folding>
-                <element signature="e#23#36#0" expanded="true" />
+                <element signature="e#88#101#0" expanded="true" />
+                <element signature="e#2614#3892#0" />
+                <marker date="1552642938450" expanded="true" signature="2697:2765" ph="..." />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/text/async_code.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1925">
+              <caret line="82" column="53" lean-forward="true" selection-start-line="82" selection-start-column="53" selection-end-line="82" selection-end-column="53" />
+              <folding>
+                <element signature="e#40#64#0" expanded="true" />
+                <marker date="1552640063858" expanded="true" signature="26:35" ph="..." />
+                <marker date="1552640063858" expanded="true" signature="571:613" ph="..." />
+                <marker date="1552640063858" expanded="true" signature="735:740" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/text/proxy_document.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="16">
+              <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
+              <folding>
+                <element signature="e#1#12#0" expanded="true" />
+                <marker date="1552641846310" expanded="true" signature="214:707" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://D:/virtu/spiderenv/Lib/site-packages/requests/api.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="452">
+              <caret line="76" lean-forward="true" selection-start-line="76" selection-end-line="76" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://D:/virtu/spiderenv/Lib/site-packages/retrying.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="303">
+              <caret line="82" lean-forward="true" selection-start-line="82" selection-end-line="82" />
             </state>
           </provider>
         </entry>
@@ -258,8 +320,12 @@
         <option value="$PROJECT_DIR$/shangrila.py" />
         <option value="$PROJECT_DIR$/tools/dou_t.py" />
         <option value="$PROJECT_DIR$/tuniu.py" />
-        <option value="$PROJECT_DIR$/shiguangwang.py" />
+        <option value="$PROJECT_DIR$/IHG.py" />
         <option value="$PROJECT_DIR$/super8.py" />
+        <option value="$PROJECT_DIR$/text/async_code.py" />
+        <option value="$PROJECT_DIR$/text/proxy_document.py" />
+        <option value="$PROJECT_DIR$/jinyiyingshi.py" />
+        <option value="$PROJECT_DIR$/shiguangwang.py" />
       </list>
     </option>
   </component>
@@ -270,10 +336,10 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="731" />
-    <option name="y" value="154" />
-    <option name="width" value="1243" />
-    <option name="height" value="953" />
+    <option name="x" value="590" />
+    <option name="y" value="62" />
+    <option name="width" value="1258" />
+    <option name="height" value="971" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="1" id="Add" />
@@ -283,7 +349,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -294,20 +359,22 @@
             <path>
               <item name="spiders_three" type="b2602c69:ProjectViewProjectNode" />
               <item name="spiders_three" type="462c0819:PsiDirectoryNode" />
-              <item name="cookie_bag" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="spiders_three" type="b2602c69:ProjectViewProjectNode" />
               <item name="spiders_three" type="462c0819:PsiDirectoryNode" />
-              <item name="tools" type="462c0819:PsiDirectoryNode" />
+              <item name="text" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file://E:/code/spiders_three/jinyiyingshi.py" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../supere" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -331,30 +398,8 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.super8">
-    <configuration name="dou_t" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="spiders_two" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tools" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/tools/dou_t.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="shangrila" type="PythonConfigurationType" factoryName="Python" temporary="true">
+  <component name="RunManager" selected="Python.async_code">
+    <configuration name="IHG" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="spiders_two" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -367,7 +412,73 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/shangrila.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/IHG.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="async_code" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="spiders_two" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/text" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/text/async_code.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="jinyiyingshi" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="spiders_two" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/jinyiyingshi.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="proxy_document" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="spiders_two" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/text" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/text/proxy_document.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -398,64 +509,20 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="super8" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="spiders_two" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/super8.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="tuniu" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="spiders_two" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/tuniu.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <list>
-      <item itemvalue="Python.shangrila" />
-      <item itemvalue="Python.dou_t" />
+      <item itemvalue="Python.IHG" />
+      <item itemvalue="Python.jinyiyingshi" />
+      <item itemvalue="Python.async_code" />
+      <item itemvalue="Python.proxy_document" />
       <item itemvalue="Python.shiguangwang" />
-      <item itemvalue="Python.tuniu" />
-      <item itemvalue="Python.super8" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.super8" />
+        <item itemvalue="Python.async_code" />
         <item itemvalue="Python.shiguangwang" />
-        <item itemvalue="Python.tuniu" />
-        <item itemvalue="Python.dou_t" />
-        <item itemvalue="Python.shangrila" />
+        <item itemvalue="Python.jinyiyingshi" />
+        <item itemvalue="Python.proxy_document" />
+        <item itemvalue="Python.IHG" />
       </list>
     </recent_temporary>
   </component>
@@ -473,16 +540,16 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="731" y="154" width="1243" height="953" extended-state="0" />
+    <frame x="590" y="62" width="1258" height="971" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49923196" visible="true" weight="0.20033813" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49923196" visible="true" weight="0.2111853" />
       <window_info id="Structure" order="1" sideWeight="0.50076807" side_tool="true" weight="0.107977994" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.36263737" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.39881656" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32967034" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.33094385" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39836448" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -490,8 +557,8 @@
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="10" weight="0.32897863" />
-      <window_info anchor="bottom" id="Terminal" order="11" weight="0.47310513" />
-      <window_info anchor="bottom" id="Python Console" order="12" weight="0.32941177" />
+      <window_info anchor="bottom" id="Terminal" order="11" weight="0.4513173" />
+      <window_info anchor="bottom" id="Python Console" order="12" weight="0.32827103" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -540,48 +607,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/china_unicom.py" />
-    <entry file="file://$PROJECT_DIR$/text/tests.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="532">
-          <caret line="57" column="11" lean-forward="true" selection-start-line="57" selection-start-column="11" selection-end-line="57" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/text/1.jpg" />
-    <entry file="file://$PROJECT_DIR$/text/full.jpg" />
-    <entry file="file://$PROJECT_DIR$/text/cut.jpg" />
-    <entry file="file://D:/virtu/spiderenv/Lib/site-packages/selenium/webdriver/common/action_chains.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="275">
-          <caret line="246" column="8" selection-start-line="246" selection-start-column="8" selection-end-line="246" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/text/re_test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="282">
-          <caret line="18" column="41" selection-start-line="18" selection-start-column="41" selection-end-line="18" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/text/weichat.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="6" column="14" lean-forward="true" selection-start-line="6" selection-start-column="14" selection-end-line="6" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/text/ver_codes.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="24" column="22" lean-forward="true" selection-start-line="24" selection-start-column="22" selection-end-line="24" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/xiecheng.py" />
-    <entry file="file://$PROJECT_DIR$/tianhong.py" />
-    <entry file="file://$PROJECT_DIR$/quchenshi.py" />
     <entry file="file://$PROJECT_DIR$/tenxun.py" />
     <entry file="file://D:/virtu/spiderenv/Lib/site-packages/selenium/webdriver/remote/errorhandler.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -714,9 +739,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="314">
           <caret line="19" selection-start-line="19" selection-end-line="19" />
-          <folding>
-            <element signature="e#23#41#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -739,16 +761,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tools/dou_t.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1521">
-          <caret line="31" column="19" selection-start-line="31" selection-start-column="19" selection-end-line="31" selection-end-column="19" />
-          <folding>
-            <element signature="e#23#36#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://D:/virtu/spiderenv/Lib/site-packages/OpenSSL/_util.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="142">
@@ -763,9 +775,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/cookie_bag/super8_cook.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret column="565" selection-start-column="565" selection-end-column="565" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/tuniu.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="134">
+        <state relative-caret-position="1725">
           <caret line="99" selection-start-line="99" selection-end-line="99" />
           <folding>
             <marker date="1552551318958" expanded="true" signature="1020:1025" ph="..." />
@@ -776,36 +795,136 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/cookie_bag/super8_cook.txt">
+    <entry file="file://$PROJECT_DIR$/tools/dou_t.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret column="565" selection-start-column="565" selection-end-column="565" />
+        <state relative-caret-position="675">
+          <caret line="31" column="19" selection-start-line="31" selection-start-column="19" selection-end-line="31" selection-end-column="19" />
+          <folding>
+            <element signature="e#23#36#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/shiguangwang.py">
+    <entry file="file://$PROJECT_DIR$/cookie_bag/IHG_cook.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="81">
-          <caret line="43" column="28" selection-start-line="43" selection-start-column="28" selection-end-line="43" selection-end-column="28" />
-          <folding>
-            <element signature="e#88#110#0" expanded="true" />
-            <element signature="e#1256#1954#0" />
-            <element signature="e#1989#2109#0" />
-            <element signature="e#2149#2399#0" />
-            <element signature="e#2401#2423#0" />
-            <element signature="e#2433#3092#0" />
-            <marker date="1552551416108" expanded="true" signature="1050:1055" ph="..." />
-            <marker date="1552551416108" expanded="true" signature="4622:5294" ph="..." />
-          </folding>
+        <state relative-caret-position="-1023" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cookie_bag/jinyi_cook.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/text/IHG_info.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="25">
+          <caret column="151" lean-forward="true" selection-start-column="151" selection-end-column="151" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/text/jinyi_info.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret column="1105" selection-start-column="1105" selection-end-column="1105" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36/Lib/asyncio/tasks.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="178">
+          <caret line="284" column="4" selection-start-line="284" selection-start-column="4" selection-end-line="284" selection-end-column="4" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/super8.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="174">
-          <caret line="98" column="27" selection-start-line="98" selection-start-column="27" selection-end-line="98" selection-end-column="137" />
+        <state relative-caret-position="300">
+          <caret line="93" column="55" lean-forward="true" selection-start-line="93" selection-start-column="55" selection-end-line="93" selection-end-column="55" />
           <folding>
             <element signature="e#88#110#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.PyCharm2018.2/system/python_stubs/-1870057450/builtins.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="263" column="7" lean-forward="true" selection-start-line="262" selection-start-column="5" selection-end-line="263" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/virtu/spiderenv/Lib/site-packages/retrying.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="303">
+          <caret line="82" lean-forward="true" selection-start-line="82" selection-end-line="82" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/virtu/spiderenv/Lib/site-packages/requests/api.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="452">
+          <caret line="76" lean-forward="true" selection-start-line="76" selection-end-line="76" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/shiguangwang.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="280">
+          <caret line="155" lean-forward="true" selection-start-line="155" selection-end-line="155" />
+          <folding>
+            <element signature="e#88#110#0" expanded="true" />
+            <element signature="e#1256#1954#0" />
+            <element signature="e#1989#2109#0" />
+            <element signature="e#2401#2423#0" />
+            <marker date="1552643707247" expanded="true" signature="1050:1055" ph="..." />
+            <marker date="1552643707247" expanded="true" signature="4622:5316" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jinyiyingshi.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="168" column="24" lean-forward="true" selection-start-line="168" selection-start-column="24" selection-end-line="168" selection-end-column="24" />
+          <folding>
+            <element signature="e#88#101#0" expanded="true" />
+            <element signature="e#2614#3892#0" />
+            <marker date="1552642938450" expanded="true" signature="2697:2765" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/text/async_code.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1925">
+          <caret line="82" column="53" lean-forward="true" selection-start-line="82" selection-start-column="53" selection-end-line="82" selection-end-column="53" />
+          <folding>
+            <element signature="e#40#64#0" expanded="true" />
+            <marker date="1552640063858" expanded="true" signature="26:35" ph="..." />
+            <marker date="1552640063858" expanded="true" signature="571:613" ph="..." />
+            <marker date="1552640063858" expanded="true" signature="735:740" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/text/proxy_document.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="16">
+          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
+          <folding>
+            <element signature="e#1#12#0" expanded="true" />
+            <marker date="1552641846310" expanded="true" signature="214:707" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/IHG.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="47" column="26" selection-start-line="47" selection-start-column="26" selection-end-line="47" selection-end-column="70" />
+          <folding>
+            <element signature="e#88#101#0" expanded="true" />
+            <marker date="1552620633064" expanded="true" signature="1049:4950" ph="..." />
+            <marker date="1552620633064" expanded="true" signature="3893:3898" ph="..." />
+            <marker date="1552620633064" expanded="true" signature="3922:3941" ph="..." />
           </folding>
         </state>
       </provider>

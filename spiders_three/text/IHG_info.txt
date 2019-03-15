@@ -1,0 +1,1991 @@
+<!DOCTYPE html>
+    <meta charset="utf-8" /><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" /><meta name="viewport" content="width=device-width,initial-scale=1.0" /><!--[if lte IE 9]><link rel="stylesheet" href="//www.ihg.com/static/uhf/vendor.2019030702.css"><link rel="stylesheet" href="//www.ihg.com/static/uhf/global.2019030702.css"><link rel="stylesheet" href="//www.ihg.com/static/uhf/brands-only/ihg/zh_CN.2019030702.css"><link rel="stylesheet" href="//www.ihg.com/static/uhf/global/rtl/ie9.min.2019030702.css"><![endif]-->
+    <!-- disables zooming on phones and tablets-->
+    <base href="/rewardsclub/cn/zh/account-mgmt/" />
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+    
+    <link rel="stylesheet" href="//www.ihg.com/static/uhf/brands/cn/zh/uhf.min.2019030702.css" />
+    
+    <link rel="manifest" crossorigin="use-credentials" href="https://www.ihg.com/account-mgmt/assets/manifest.json" />
+    <meta name="apple-itunes-app" content="app-id=368217298" />
+
+    
+  
+
+  <!-- APPLICATION - CSS -->
+  
+    <link rel="stylesheet" href="https://www.ihg.com/resources/cn/zh//account-mgmt/dist/bundle/account-ltr.40a196d2.css" />
+    
+    
+  
+
+    <title>IHG® 优悦会奖励计划 | 帐户管理</title>
+    
+  <!-- VENDOR - JS -->
+  <script src="/resources/cn/zh/account-mgmt/dist/bundle/wp-loader.69b7851664c8474c1ab4.min.js"></script>
+  <script src="/resources/cn/zh/account-mgmt/dist/bundle/vendor.b612d5e661b1c3ff8a25.min.js"></script>
+  <script src="/resources/cn/zh/account-mgmt/dist/bundle/app.379b055c71907d22fc60.min.js"></script>
+
+  
+  <body class="spaAccountMgmt smartling-zh">
+    <div id="topOfPage"></div>
+    <header id="uhf_headerWrapper" class="uhf-account-mgmt uhf_headerFooter sl_whiteout"><div class="uhf_header_utility_bar"><!-- Regent specific labels for Wallet form -->
+<!-- (empty currentStyle.travelAdvisoryLink ) && -->
+<input id="UHF_country" type="hidden" value="cn" />
+		<input id="UHF_language" type="hidden" value="zh" />
+		<input id="UHF_brand" type="hidden" value="6c" />
+
+		<div class="darkenContent"></div>
+		<div id="sessionTimeoutCounter" class="sessionWillExpire notificationBar">
+			<div class="container">
+				<div class="row">
+					<div class="sessionWillExpireCol col-xs-12">
+						<span class="sessionWillExpireText">
+							<i class="expireWarningIcon fa fa-exclamation-triangle"></i>
+							由于长时间无操作，您的会话将在<span id="numMinutesLeft" class="minutes bold">5</span><span id="minutesText">分钟内</span>，<span id="numSecondsLeft" class="seconds bold">在</span>0<span id="secondsText">秒后</span>过期。</span>
+						<a id="staySignedInLink" class="sessionWillExpireLink" href="javascript:void(0);">保持登录状态</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<div id="uhf_countryLanguagePushDown" hidden="true">
+			<div id="uhf_countryLanguagePushDownContainer" class="container">
+				<span data-uhf-clp="description">You're currently viewing this site in a different language. Would you like this to make your default language? </span>
+				<span class="buttonContainer">
+                    <button id="uhf_countryLanguagePushDown_yes" data-uhf-clp="pdYes" value="Yes">YES</button>
+                    <button id="uhf_langNotSupported_yes" data-uhf-clp="pdYes" value="Yes" hidden="true">YES</button>
+                    <button id="uhf_countryLanguagePushDown_no" data-uhf-clp="pdNo" value="No">NO</button>
+                </span>
+				<div class="subText" data-uhf-clp="subDescription">You can change your country and language settings in the future by using the selector at the top of the page.</div>
+				<button id="uhf_countryLanguagePushDownClose" value="No"><i class="fa fa-times buttonClose"></i></button>
+			</div>
+		</div>
+
+        <!-- UHF : START of Utility bar markup -->
+			<div class="utilityNavWrapper visible-sm visible-md visible-lg">
+			<div class="utilityNavContainer container">
+				<div class="row">
+					<div class="col-md-12 clearfix">
+						<nav class="utilityNav">
+							<ul class="utilityNav-list u-list clearfix">
+								<li class="utilityNav-list-item u-list-item">
+									<a class="utilityNav-link u-link nav-middle resDirectIcon-link" data-uhf-hook="resDirectNumber" data-uhf-hook-two="mobileResDirectLink" data-uhftrigger="nothing" data-no-replace="content" href="tel:18778343613"><i class="fa fa-phone" style="font-size: 1.3em; vertical-align: middle; padding-right: .3em;"></i></a>
+									<span class="utilityNav-link u-link nav-middle resDirectNum-link" data-uhf-hook="resDirectNumber"></span>
+								</li>
+								<li class="utilityNav-list-item u-list-item">
+
+									<a class="utilityNav-link u-link nav-middle uhfpopup" rel="nofollow" href="//www.ihg.com/hotels/cn/zh/reservation/searchresult/chatFrameSet?brandcode=6c" title="需要帮助？">需要帮助？</a>
+										</li>
+								<li class="utilityNav-list-item u-list-item">
+                                    <a class="utilityNav-link u-link nav-middle " href="//www.ihg.com/hotels/cn/zh/global/customer_care/travel_advisory" title="旅行提示">旅行提示</a>
+								</li>
+
+								<li class="utilityNav-resDir-item utilityNav-list-item u-list-item" data-uhf-hook="resDirectMessage" hidden="true">
+									<span class="utilityNav-message utilityNav-link u-link nav-middle">每分钟 13 便士 + 网费</span>
+									<a href="javascript:void(0);" class="tooltipQuestion hasBlankPopover utilityNav-link nav-middle" tabindex="0" data-content="从英国拨打 0871 开头的电话，话费为每分钟 13 便士。会收取标准网费。使用手机拨打电话，话费会更高。" data-toggle="popover" data-placement="auto" data-trigger="focus" data-animation="true"><i class="fa fa-question-circle"></i></a>      						          						
+								</li>
+							</ul>
+						</nav>
+						<div class="logIn">
+							<div class="utilityNav-list-item u-list-item">
+								<a class="utilityNav-link language u-link nav-middle " id="uhfCountryLanguageLink" data-toggle="popover" data-placement="bottom" data-trigger="click" href="javascript:void(0);">
+									<img class="language-icon nav-middle" alt="language-icon" />
+									<span class="language-text nav-middle"></span>
+									<i class="fa fa-angle-down nav-middle"></i>
+								</a>
+							</div>
+                        	<div class="logIn-anonymous logIn-State">
+                                <a class="logIn-link" data-uhf-hook="signInToggle" href="javascript:void(0);" title="登录">登录</a>
+                                <span>/</span>
+                                <a class="logIn-link" href="//www.ihg.com/rewardsclub/cn/zh/join" data-uhf-hook="joinRewardsClub" title="加入">加入</a>
+                            </div>
+                            <div class="logIn-implicit logIn-State">
+                            	<a class="logIn-link logOut notYou" data-uhf-rememberme="false" href="javascript:void(0);" title="不是您本人？">不是您本人？</a>
+                                <div class="logIn-link-divider"></div>
+                                <a class="logIn-link logIn-block" data-uhf-hook="signInToggle" href="javascript:void(0);">
+                                	<div><span>登录</span></div>
+                                    <div><span class="user-first-name">user first name</span></div>
+                                </a>
+                            </div>
+                            <div class="logIn-explicit logIn-State">
+                            	<a class="logIn-link logOut" data-uhf-rememberme="cookie" href="javascript:void(0);">注销</a>
+                                <div class="logIn-link-divider"></div>
+                                <a class="logIn-link logIn-block" href="//www.ihg.com/rewardsclub/cn/zh/account-mgmt/home">
+                                	<div><span class="user-first-name">user first name</span></div>
+                                    <div><span class="user-points">user points</span> 积分</div>
+                                </a>
+                            </div>
+							<a class="logIn-link logIn-link-logo" data-uhf-hook="walletToggle" href="javascript:void(0);"><img class="logIn-logo rewardsClubLogo" src="//ihg.scene7.com/is/image/ihg/uhf_IHG_Logo_Sign_In_Screen-1?fmt=png-alpha" alt="IHG Rewards Club" /></a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+ 		<!-- UHF : moved hamburger menu to brand nav jsp from here -->
+
+		<!-- UHF: Wallet -->
+		<!-- UHF: Wallet Container -->
+			<div class="wallet walletTransition" data-previousstate="anonymous" data-currentstate="anonymous">
+			<!-- UHF: Wallet - Prompt Sign In -->
+			<!--
+			<div class="wallet-state wallet-logInToContinue wallet-view">
+				<form role="form">
+					<fieldset>
+
+
+					</fieldset>
+				</form>
+			</div>
+			-->
+			<!-- / UHF: Wallet - Prompt Sign In -->
+
+			<!-- UHF: Wallet - Login Shared - Used by Anonymous/Implicit/Succsss(x2) Views -->
+			<div class="wallet-state wallet-login-shared wallet-view">
+
+				<!-- UHF: Sign In form -->
+				<form role="form">
+					<fieldset>
+						<div class="row form-dark-row">
+							<div class="col-xs-11 wallet-head">
+								<div class="form-group wallet-anonymous wallet-logInToContinue wallet-view">
+                                    <span class="titleFont">登录</span>
+								</div>
+								<div class="form-group wallet-implicit wallet-view">
+									<span class="titleFont">登录, <span class="user-first-name"></span></span>
+									<span class="formLink"><a class="notYou logOut" data-uhf-rememberme="false" href="javascript:void(0);">不是您本人？</a></span>
+								</div>
+								<div class="form-group wallet-createPinSuccess wallet-view">
+									<span class="titleFont">登录</span>
+								</div>
+								<div class="form-group wallet-forgotPinSuccess wallet-view">
+									<span class="titleFont">登录</span>
+								</div>
+							</div>
+							<div class="col-sm-1 slideBtnContainer">
+                                <i class="fa fa-caret-right fa-2x slideClosedBtn"></i>
+							</div>
+						</div>
+            <div class="accentLine"></div>
+
+						<div class="row wallet-logInToContinue wallet-view">
+							<div class="col-xs-6 uhfCancelContainer">
+								<div class="form-group cancelPromptLogin uhfCancel">
+									<span class="formLink">
+										<a href="javascript:void(0);"><i class="fa fa-chevron-circle-left"></i>取消</a>
+									</span>
+								</div>
+							</div>
+						</div>
+
+						<div class="row successContainer well wallet-createPinSuccess wallet-view">
+							<div class="col-xs-1 col-xs-1 col-xs-custom messageIconContainer">
+								<div class="form-group">
+									<i class="fa fa-check-circle-o"></i>
+								</div>
+							</div>
+							<div class="col-xs-10 col-xs-percent messageContainer">
+								<div class="form-group">
+                                    <span class="helpInstructionsSuccess">恭喜！您已成功创建密码。使用密码登录IHG<sup>®</sup> Rewards Club 优悦会帐户。</span>
+								</div>
+							</div>
+						</div>
+						<div class="row successContainer well wallet-forgotPinSuccess wallet-view">
+							<div class="col-xs-1 col-xs-1 col-xs-custom messageIconContainer">
+								<div class="form-group">
+									<i class="fa fa-check-circle-o"></i>
+								</div>
+							</div>
+							<div class="col-xs-10 col-xs-percent messageContainer">
+								<div class="form-group">
+									<span class="helpInstructionsSuccess">成功！我们已通过电子邮件把密码发送到
+您与IHG<sup>®</sup> Rewards Club 优悦会帐户相关联的电子邮箱。
+请查看电子邮件获取 密码并登录。</span>
+								</div>
+							</div>
+						</div>
+						<div class="row errorTopMsg errorTopMsgDefault">
+							<div class="col-xs-1 col-xs-1 col-xs-custom messageIconContainer">
+								<div class="form-group">
+									<i class="fa fa-exclamation-circle"></i>
+								</div>
+							</div>
+							<div class="col-xs-10 col-xs-percent messageContainer">
+								<div class="form-group">
+									<div class="errorTopMsgText">
+                                        突发的服务器错误</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="row errorTopMsg errorTopMsgContainer">
+							<div class="col-xs-1 col-xs-1 col-xs-custom messageIconContainer">
+								<div class="form-group">
+									<i class="fa fa-exclamation-circle"></i>
+								</div>
+							</div>
+							<div class="col-xs-10 col-xs-percent messageContainer">
+								<div class="form-group">
+									<div class="errorTopMsgText">
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="row errorTopMsg" data-topmsgerror="sessionExpired">
+							<div class="col-xs-1 col-xs-1 col-xs-custom messageIconContainer">
+								<div class="form-group">
+									<i class="fa fa-exclamation-circle"></i>
+								</div>
+							</div>
+							<div class="col-xs-10 col-xs-percent messageContainer">
+								<div class="form-group">
+									<div class="errorTopMsgText">
+										您的会话已过期。请登录您的账户</div>
+								</div>
+							</div>
+						</div>
+						<div class="row errorTopMsg" data-topmsgerror="logInUserNotFound">
+							<div class="col-xs-1 col-xs-1 col-xs-custom messageIconContainer">
+								<div class="form-group">
+									<i class="fa fa-exclamation-circle"></i>
+								</div>
+							</div>
+							<div class="col-xs-10 col-xs-percent messageContainer">
+								<div class="form-group">
+									<div class="errorTopMsgText">
+										非常抱歉，您输入的会员编号、电子邮件或 PIN 无法一起使用。<br /><br />要重新获取 PIN，请选择“重新获取 PIN。”如果您想获得帮助，请联系我们的<a href="/hotels/cn/zh/customer-care/contact-us">宾客关怀</a>团队，我们将诚挚为您提供协助。</div>
+								</div>
+							</div>
+						</div>
+						<div class="row errorTopMsg" data-topmsgerror="logInDuplicate">
+							<div class="col-xs-1 col-xs-1 col-xs-custom messageIconContainer">
+								<div class="form-group">
+									<i class="fa fa-exclamation-circle"></i>
+								</div>
+							</div>
+							<div class="col-xs-10 col-xs-percent messageContainer">
+								<div class="form-group">
+									<div class="errorTopMsgText">
+										Your email address matches more than one account. Please try again with your IHG® Rewards Club number or contact Customer Care for assistance</div>
+								</div>
+							</div>
+						</div>
+						<div class="row errorTopMsg" data-topmsgerror="loginLocked">
+							<div class="col-xs-1 col-xs-1 col-xs-custom messageIconContainer">
+								<div class="form-group">
+									<i class="fa fa-exclamation-circle"></i>
+								</div>
+							</div>
+							<div class="col-xs-10 col-xs-percent messageContainer">
+								<div class="form-group">
+									<div class="errorTopMsgText">
+										抱歉，您登录账户的尝试未成功，您的账户目前已被锁定。请<a href="/hotels/cn/zh/customer-care/contact-us">联系我们</a>获取协助，从而解锁您的账户。</div>
+								</div>
+							</div>
+						</div>
+						<div class="row errorTopMsg" data-topmsgerror="systemUnavailable">
+							<div class="col-xs-1 col-xs-1 col-xs-custom messageIconContainer">
+								<div class="form-group">
+									<i class="fa fa-exclamation-circle"></i>
+								</div>
+							</div>
+							<div class="col-xs-10 col-xs-percent messageContainer">
+								<div class="form-group">
+									<div class="errorTopMsgText">
+										很抱歉，我们的系统暂时无法使用。请稍后重试或联系<a href="/hotels/cn/zh/customer-care/contact-us">IHG<sup>®</sup>Rewards Club 优悦会客服中心</a>寻求帮助。</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="row wallet-logInToContinue wallet-view">
+							<div class="col-sm-12">
+								<div class="form-group">
+									<span class="joinFont">还不是IHG<sup>®</sup> Rewards Club 优悦会会员？</span>
+								</div>
+							</div>
+						</div>
+						<div class="row wallet-logInToContinue wallet-view">
+							<div class="col-sm-12 text-center">
+								<div class="form-group">
+									<button type="button" class="btn btn-success btnFluid btnWallet joinNow">立即加入</button>
+								</div>
+							</div>
+						</div>
+						<div class="row wallet-logInToContinue wallet-view">
+							<div class="col-sm-12">
+								<div class="form-group">
+									<span class="custom-text text-center">或者</span>
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-sm-12">
+								<div class="form-group">
+									<label for="UHF_username">电子邮件或会员号</label>
+									<input type="text" class="form-control" id="UHF_username" name="username" placeholder="电子邮件或会员号" value="" />
+									<span class="errorMsgFormPin" style="display: none; color: red;">必须输入电子邮箱地址或 IHG<sup>®</sup>优悦会会会员号码。</span>
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-sm-12">
+								<div class="form-group">
+									<label for="UHF_password" class="pin">密码</label>
+									<input type="password" class="form-control" id="UHF_password" name="password" placeholder="输入密码" maxlength="4" size="4" value="" />
+									<span class="errorMsgFormPin" style="display: none; color: red;">请输入个人识别号码。</span>
+									<span class="errorMsgFormPin" id="invPwdPin" style="display: none; color: red;">您的个人识别码必须为4位数。</span>
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-sm-12">
+								<div class="form-group smallfont">
+									<div class="rememberMeContainer checkbox">
+                                        <label><input id="cookieFlag" type="checkbox" checked="checked" name="cookieFlag" />记住我<span class="checkbox-color"></span></label>
+									</div>
+									<!--<div class="forgotPinContainer formLink">
+										<label><a class="forgotPin" href="#0">忘记密码？</a></label>
+									</div> -->
+									<div class="retrievePinContainer formLink">
+										<label><a class="retrievePin" href="//www.ihg.com/hotels/cn/zh/customer-care/forms/retrieve-pin">重新获取 密码</a></label>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-sm-12 text-center">
+								<div class="form-group">
+                                    <button type="button" class="btn btn-primary btnFluid btnWallet signIn" autocomplete="off">登录</button>
+								</div>
+							</div>
+						</div>
+
+						<div class="row wallet-anonymous wallet-view">
+							<div class="col-sm-12 text-center">
+								<div class="form-group">
+									<button type="button" class="createPIN">
+										<p>已在酒店加入IHG<sup>®</sup> Rewards Club 优悦会？</p>
+                                        <span>创建密码</span>
+									</button>
+								</div>
+							</div>
+						</div>
+					</fieldset>
+				</form>
+				<!-- UHF: Join Now form -->
+				<form role="form">
+					<fieldset>
+						<div class="row wallet-anonymous wallet-view">
+							<div class="col-sm-12">
+								<div class="form-group">
+                                    <span class="joinFont">还不是IHG<sup>®</sup> Rewards Club 优悦会会员？</span>
+                                    <span class="formLink"><a href="//www.ihg.com/rewardsclub/cn/zh/join">立即加入</a></span>
+                                    <p>注册方便且免费</p><p>在 5,200 多家酒店赚取积分</p><p>用积分兑换免费房间及更多</p><!-- Extra kimpton karma text on wallet sign in -->
+                                    </div>
+							</div>
+						</div>
+						<div class="row wallet-anonymous wallet-view">
+							<div class="col-sm-12 text-center">
+								<div class="form-group">
+									<button type="button" class="btn btn-success btnFluid btnWallet joinNow">立即加入</button>
+								</div>
+							</div>
+						</div>
+						<div class="row wallet-anonymous wallet-implicit wallet-view">
+							<div class="col-sm-6 gridButtonContainer">
+								<div class="form-group">
+									<a class="gridButton" href="//www.ihg.com/rewardsclub/cn/zh/home" title="了解IHG&lt;sup&gt;®&lt;/sup&gt; Rewards Club 优悦会">
+
+										<div class="rcIconContainer">
+											<div class="learnIcon rcIcon"></div>
+										</div>
+
+										<div class="gridTextContainer">
+												<span class="gridButton-text">
+													了解IHG<sup>®</sup> Rewards Club 优悦会</span>
+											</div>
+										</a>
+								</div>
+							</div>
+							<div class="col-sm-6 gridButtonContainer">
+								<div class="form-group">
+									<a class="gridButton" href="//www.ihg.com/rewardsclub/cn/zh/earn-rewards" title="赢取奖励">
+
+										<div class="rcIconContainer">
+											<div class="earnIcon rcIcon"></div>
+										</div>
+										<div class="gridTextContainer"><span class="gridButton-text">赢取奖励</span></div>
+									</a>
+								</div>
+							</div>
+						</div>
+					    <!-- if condition has been done to modify the order of icons in wallet for kimpton -->
+						<div class="row wallet-anonymous wallet-implicit wallet-view">
+							<div class="col-sm-6 gridButtonContainer">
+								<div class="form-group">
+									<a class="gridButton" href="//www.ihg.com/rewardsclub/cn/zh/redeem-rewards" title="兑换奖励">
+										<div class="rcIconContainer">
+											<div class="redeemIcon rcIcon"></div>
+										</div>
+										<div class="gridTextContainer"><span class="gridButton-text">兑换奖励</span></div>
+									</a>
+								</div>
+							</div>
+							<div class="col-sm-6 gridButtonContainer">
+								<div class="form-group">
+									<a class="gridButton" href="//www.ihg.com/rewardsclub/cn/zh/enjoy-rewards" title="享受福利">
+										<div class="rcIconContainer">
+											<div class="enjoyIcon rcIcon"></div>
+										</div>
+										<div class="gridTextContainer"><span class="gridButton-text">享受福利</span></div>
+									</a>
+								</div>
+							</div>
+						</div>
+						
+												</fieldset>
+				</form>
+
+			</div>
+			<!-- / UHF: Wallet - Login Shared - Used by Anonymous/Implicit/Succsss(x2) Views -->
+
+			<!-- UHF: Wallet - Explicit -->
+			<div class="wallet-state wallet-explicit wallet-view">
+
+				<!-- UHF: Wallet Accordian -->
+				<form role="form">
+					<fieldset>
+						<div class="row form-dark-row">
+							<div class="wallet-head">
+								<script id="walletHead-template" type="text/x-handlebars-template">
+                                    <a class="titleFont memberName" href="//www.ihg.com/rewardsclub/cn/zh/account-mgmt/home">
+									{{walletProfile.firstName}} {{walletProfile.lastName}}
+									</a>
+
+									<div class="logOutContainer">
+  										<a class="logOut" data-uhf-rememberMe="cookie" href="javascript:void(0);">
+                                          注销</a>
+									</div>
+									<div class="memberNumber">
+										<span>会员号：</span>
+										<span>
+										{{walletProfile.priorityClubNumber}}
+										</span>
+									</div>
+								</script>
+							</div>
+							<div class="slideBtnContainer">
+								<i class="fa fa-caret-right fa-2x slideClosedBtn"></i>
+							</div>
+						</div>
+						<div class="accentLine"></div>
+						<div class="memberLevel">
+							<script id="walletMemLevel-template" type="text/x-handlebars-template">
+							<span class="memberLevel-text {{walletProfile.membershipLevel}}">{{walletProfile.memberLevelDisplay}}</span>
+							</script>
+						</div>
+						<div class="pointsBalance walletSlot">
+							<div class="pointsBalanceContainer">
+	                            <a href="//www.ihg.com/rewardsclub/cn/zh/account-mgmt/home">
+									<script id="walletPointsBal-template" type="text/x-handlebars-template">
+									<div
+										class="pie_progress"
+										role="progressbar"
+										data-goal="{{pbAnim data.walletProfile.pointsBalance data.walletProfile.pointsForTopLevel}}"
+										data-goalLocalized="{{data.walletProfile.localizedPointsBalance}}"
+										data-barcolor="{{trackerColor data.walletProfile.membershipLevelCode}}"
+										aria-valuemin="0"
+										aria-valuemax="{{data.walletProfile.pointsForTopLevel}}"
+										aria-valuenow="0">
+                                    	<div class="pie_progress__label">积分余额</div>
+										<div class="pie_progress__number">0</div>
+									</div>
+									<span class="walletSlotCTA"><i class="fa fa-chevron-circle-right "></i></span>
+								</script>
+								</a>
+							</div>
+						</div>
+
+						<!-- Start Copperfield  bdefnall Project Copperfield -->
+						<div id="explicitMsgContainer" class="walletSlot">
+							<div id="rc_wallet_1" class="dynamicMessagingInteract">
+							</div>
+						</div>
+						<!-- End Copperfield -->
+
+						<!-- Start RC 2.0 - Moved Manage Your Account to here -->
+						<div class="walletSlot">
+							<div class="wallet-container container-fluid">
+	                        	<div class="row">
+	                        		<div class="col-xs-12">
+	                        			<div class="manageAccount">
+	                        			<a href="//www.ihg.com/rewardsclub/cn/zh/account-mgmt/home" class="btn btn-primary btnFluid  btnWallet" title="管理帐户">管理帐户</a>
+	                        			</div>
+	                        		</div>
+	                        	</div>
+	                        </div>
+                        </div>
+                        <!-- End RC 2.0 -  Moved Manage Your Account to here -->
+
+                        <div id="upComingResContainer" class="walletSlot">
+							<script id="upComingRes-template" type="text/x-handlebars-template">
+                            <div class="upComingRes" data-uhf-url="{{upComingResURL}}">
+                                <div class="explicit-header">最近的预订</div>
+                                <div class="upComingRes-Messaging">
+									<div class="brandPropertyInfoContainer">
+										<img class="hotelImg" src="{{hotelImg}}" data-uhf-url="{{hotelURL}}">
+										<div class="brandHotelContainer">
+											<img class="propertyLogo" src="{{propertyLogo}}">
+											<div class="hotelName">{{hotelName}}</div>
+										</div>
+									</div>
+
+                                    <div class="resInfo">
+                                        <div class="checkIn">
+                                            <span class="desc">入住日期</span>
+                                            <span class="date">{{checkInDate}}</span>
+                                            <span class="time">@ {{checkInTime}}</span>
+                                        </div>
+
+                                        <div class="checkOut">
+                                            <span class="desc">退房日期</span>
+                                            <span class="date">{{checkOutDate}}</span>
+                                            <span class="time">@ {{checkOutTime}}</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <a class="walletSlotCTA" href="{{upComingResURL}}"><i class="fa fa-chevron-circle-right "></i></a>
+                            </div>
+                            </script>
+                        </div>
+                        <!-- Start EBA -->
+                        <div class="walletSlot">
+                         <!-- not to load "how to earn more points" for kimpton but for other brands, if kimpton wants to display this message then remove if condition check   -->
+                        <div class="ebaContainer container-fluid">
+                        	<script id="walletEBA-template" type="text/x-handlebars-template">
+                            <a href="//www.ihg.com/rewardsclub/cn/zh/account-mgmt/home" class="walletSlotLink">
+                        	<div class="row">
+                                <div class="explicit-header">如何升级到<span class="bold">{{nextLevel}}</span>?</div>
+                        	</div>
+
+							<!-- Start RC 2.0 Changes - Nights/Point section-->
+
+							<div class="row">
+                        		<div class="additionalItems col-xs-12 col-ihg-tablet-3 col-sm-3 col-md-3">
+                        			<div class="ebaPadding">
+	                        			<div class="additionalBlock">
+		                        			<div class="circle {{nextLevelCircle}}">
+		                        				<span class="circleInner">{{nightsToNextLevel}}</span>
+		                        			</div>
+		                       			</div>
+	                        		</div>
+                    				 <p class="additionalText">更多房晚</p>
+                        		</div>
+                        		<div class="youCanAlso col-xs-12 col-ihg-tablet-9 col-sm-9 col-md-9">
+	                        		<div class="ebaPadding-youCanAlso">
+		                        		<div class="youCanALsoElement">
+		                        			<span class="youCanAlsoHeading">您还可以通过以下方式升级到 {{nextLevel}}：</span>
+		                        			<ul class="youCanAlsoList list-unstyled">
+		                        				<li>还需 {{pointsRemainingToNextLevel}} 点积分</li>
+		                        			</ul>
+		                        		</div>
+	                        		</div>
+                        		</div>
+                        	</div>
+
+							<!-- End RC 2.0 Changes -->
+
+							<!-- RC 2.0 - Comment start -->
+							<!-- RC 2.0 - Comment end -->
+
+							<span class="walletSlotCTA"><i class="fa fa-chevron-circle-right "></i></span>
+                        </a>
+						</script>
+                        </div>
+                        
+                                 <!-- LMD for kimpton was supposed to come from interact since GT had no time give it, it will added in code for kimpton for Phase one release Jan 2017, need to remove once we get interact also add JS for interact    -->
+                        </div>
+                        <!-- End EBA -->
+
+
+              <!-- START - US10687 | 2016 GIE: Wallet (Add Offer Component) -->
+              <div id="explicitMsgContainer2" class="offerSlot">
+                <div id="rc_wallet_2"></div>
+              </div>
+              <!-- END - US10687 | 2016 GIE: Wallet (Add Offer Component) -->
+
+                        <div class="walletSlot">
+	                        <div class="wallet-container container-fluid">
+		                        <div class="row wallet-explicit wallet-view">
+									<div class="col-sm-6 gridButtonContainer">
+										<div class="">
+											<a class="gridButton" href="//www.ihg.com/rewardsclub/cn/zh/home" title="了解IHG&lt;sup&gt;®&lt;/sup&gt; Rewards Club 优悦会">
+
+
+												<div class="rcIconContainer">
+													<div class="learnIcon rcIcon"></div>
+												</div>
+                      							
+												<div class="gridTextContainer">
+														<span class="gridButton-text">
+															了解IHG<sup>®</sup> Rewards Club 优悦会</span>
+													</div>
+												</a>
+										</div>
+									</div>
+									<div class="col-sm-6 gridButtonContainer">
+										<div class="">
+											<a class="gridButton" href="//www.ihg.com/rewardsclub/cn/zh/earn-rewards" title="赢取奖励">
+
+												<div class="rcIconContainer">
+													<div class="earnIcon rcIcon"></div>
+												</div>
+												
+												<div class="gridTextContainer">
+												<span class="gridButton-text">赢取奖励</span></div>
+											</a>
+										</div>
+									</div>
+								</div>
+							    <!-- if condition has been done to modify the order of icons in wallet for kimpton -->
+								<div class="row wallet-explicit wallet-view">
+										<div class="col-sm-6 gridButtonContainer">
+											<div class="">
+												<a class="gridButton" href="//www.ihg.com/rewardsclub/cn/zh/redeem-rewards" title="兑换奖励">
+
+
+													<div class="rcIconContainer">
+														<div class="redeemIcon rcIcon"></div>
+													</div>
+
+													<div class="gridTextContainer"><span class="gridButton-text">兑换奖励</span></div>
+												</a>
+											</div>
+										</div>
+										
+										<div class="col-sm-6 gridButtonContainer">
+										<div class="">
+											<a class="gridButton" href="//www.ihg.com/rewardsclub/cn/zh/enjoy-rewards" title="享受福利">
+
+												<div class="rcIconContainer">
+													<div class="enjoyIcon rcIcon"></div>
+												</div>
+												<div class="gridTextContainer"><span class="gridButton-text">享受福利</span></div>
+											</a>
+										</div>
+									</div>
+								   </div>
+								</div>
+						</div>
+
+						</fieldset>
+				</form>
+			</div>
+			<!-- / UHF: Wallet - Explicit -->
+
+			<!-- UHF: Wallet - Create PIN -->
+			<div class="wallet-state wallet-createPin wallet-view">
+
+				<!-- UHF: Create PIN form -->
+				<form role="form">
+					<fieldset>
+						<div class="row form-dark-row">
+							<div class="col-xs-10 wallet-head">
+								<div class="form-group">
+                                <span class="titleFont">创建密码</span>
+								</div>
+							</div>
+							<div class="col-sm-1 slideBtnContainer">
+                                <i class="fa fa-caret-right fa-2x slideClosedBtn"></i>
+							</div>
+						</div>
+            <div class="accentLine"></div>
+						<div class="row">
+							<div class="col-xs-6 uhfCancelContainer">
+								<div class="form-group cancelCreatePin uhfCancel">
+									<span class="formLink">
+										<a href="javascript:void(0);"><i class="fa fa-chevron-circle-left"></i>取消</a>
+									</span>
+								</div>
+							</div>
+							<div class="col-xs-6">
+								<div class="form-group">
+									<span class="helpFont">所有字段均须填写</span>
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-sm-12">
+								<div class="form-group">
+									<span class="helpInstructions">如果您在酒店加入了IHG<sup>®</sup> Rewards Club 优悦会，
+您需要创建一个 4 位数
+密码来登录IHG<sup>®</sup> Rewards Club 优悦会帐户。</span>
+								</div>
+							</div>
+						</div>
+						<div class="row errorTopMsg errorTopMsgDefault">
+							<div class="col-xs-1 col-xs-1 col-xs-custom messageIconContainer">
+								<div class="form-group">
+									<i class="fa fa-exclamation-circle"></i>
+								</div>
+							</div>
+							<div class="col-xs-10 col-xs-percent messageContainer">
+								<div class="form-group">
+									<div class="errorTopMsgText">
+                                            突发的服务器错误</div>
+								</div>
+							</div>
+						</div>
+						<div class="row errorTopMsg errorTopMsgContainer">
+							<div class="col-xs-1 col-xs-1 col-xs-custom messageIconContainer">
+								<div class="form-group">
+									<i class="fa fa-exclamation-circle"></i>
+								</div>
+							</div>
+							<div class="col-xs-10 col-xs-percent messageContainer">
+								<div class="form-group">
+									<div class="errorTopMsgText">
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="row errorTopMsg" data-topmsgerror="sessionExpired">
+							<div class="col-xs-1 col-xs-1 col-xs-custom messageIconContainer">
+								<div class="form-group">
+									<i class="fa fa-exclamation-circle"></i>
+								</div>
+							</div>
+							<div class="col-xs-10 col-xs-percent messageContainer">
+								<div class="form-group">
+									<div class="errorTopMsgText">
+										您的会话已过期。请登录您的账户</div>
+								</div>
+							</div>
+						</div>
+						<div class="row errorTopMsg" data-topmsgerror="unMatchInfo" data-uhf-hook="UnMatchInfoError">
+							<div class="col-xs-1 col-xs-1 col-xs-custom messageIconContainer">
+								<div class="form-group">
+									<i class="fa fa-exclamation-circle"></i>
+								</div>
+							</div>
+							<div class="col-xs-10 col-xs-percent messageContainer">
+								<div class="form-group">
+									<div class="errorTopMsgText">
+										您提供的信息与我们记录的信息不符。  请重试或致电IHG<sup>®</sup> Rewards Club 优悦会宾客关怀中心1-888-897-0089。</div>
+								</div>
+							</div>
+						</div>
+						<div class="row errorTopMsg" data-topmsgerror="hasPin" data-uhf-hook="HasPinError">
+							<div class="col-xs-1 col-xs-1 col-xs-custom messageIconContainer">
+								<div class="form-group">
+									<i class="fa fa-exclamation-circle"></i>
+								</div>
+							</div>
+							<div class="col-xs-10 col-xs-percent messageContainer">
+								<div class="form-group">
+									<div class="errorTopMsgText">
+										您的IHG<sup>®</sup> Rewards Club 优悦会账户与个人识别码相关联。 如果您使用我们的自动电话系统，您的识别码將与其一致。 如果您忘记了个人识别码，我们可以通过电子邮件方式，将其发送到您在IHG<sup>®</sup> Rewards Club 优悦会登记的电子邮件地址。 请联络您最近的<a href="http://www.ichotelsgroup.com/h/d/pc/1/en/c/2/content/dec/pc/0/en/cs/center.html">IHG<sup>®</sup> Rewards Club 优悦会<sup>®</sup>宾客关怀中心</a>以获取协助。</div>
+								</div>
+							</div>
+						</div>
+						<div class="row errorTopMsg" data-topmsgerror="pinsDoesNotMatch" data-uhf-hook="PinDoesNotMatchError">
+							<div class="col-xs-1 col-xs-1 col-xs-custom messageIconContainer">
+								<div class="form-group">
+									<i class="fa fa-exclamation-circle"></i>
+								</div>
+							</div>
+							<div class="col-xs-10 col-xs-percent messageContainer">
+								<div class="form-group">
+									<div class="errorTopMsgText">
+										您两次输入的PIN码不一致。 请重新输入PIN码,确保两次输入的内容完全一致。</div>
+								</div>
+							</div>
+						</div>
+						<div class="row errorTopMsg" data-topmsgerror="blackListedPin" data-uhf-hook="BlackListedPinError">
+							<div class="col-xs-1 col-xs-1 col-xs-custom messageIconContainer">
+								<div class="form-group">
+									<i class="fa fa-exclamation-circle"></i>
+								</div>
+							</div>
+							<div class="col-xs-10 col-xs-percent messageContainer">
+								<div class="form-group">
+									<div class="errorTopMsgText">
+										您的密码不够强。您必须更改您的密码。</div>
+								</div>
+							</div>
+						</div>
+						<div class="row errorTopMsg" data-topmsgerror="notMatchEmail" data-uhf-hook="NotMatchEmailError">
+							<div class="col-xs-1 col-xs-1 col-xs-custom messageIconContainer">
+								<div class="form-group">
+									<i class="fa fa-exclamation-circle"></i>
+								</div>
+							</div>
+							<div class="col-xs-10 col-xs-percent messageContainer">
+								<div class="form-group">
+									<div class="errorTopMsgText">
+										电子邮件地址必须匹配。</div>
+								</div>
+							</div>
+						</div>
+						<div class="row errorTopMsg" data-topmsgerror="systemUnavailable">
+							<div class="col-xs-1 col-xs-1 col-xs-custom messageIconContainer">
+								<div class="form-group">
+									<i class="fa fa-exclamation-circle"></i>
+								</div>
+							</div>
+							<div class="col-xs-10 col-xs-percent messageContainer">
+								<div class="form-group">
+									<div class="errorTopMsgText">
+										很抱歉，我们的系统暂时无法使用。请稍后重试或联系<a href="/hotels/cn/zh/customer-care/contact-us">IHG<sup>®</sup>Rewards Club 优悦会客服中心</a>寻求帮助。</div>
+								</div>
+							</div>
+						</div>
+
+
+						<div class="row">
+							<div class="col-xs-6 col-xs-percent createPin-memberNumberContainer">
+								<div class="form-group">
+                                            <label for="UHF_createPinPcrNumber">会员号：</label>
+									<input type="text" class="form-control" id="UHF_createPinPcrNumber" name="pcrNumber" placeholder="会员号：" value="" />
+									<span class="errorMsgFormPin" style="display: none; color: red;">请输入您的IHG<sup>®</sup> Rewards Club 优悦会会员号码。</span>
+									<span class="errorMsgFormPin" id="invRewClubNum" style="display: none; color: red;">该IHG<sup>®</sup> Rewards Club 优悦会会员号码无效。 请重试，或联系<a href="/hotels/cn/zh/customer-care/contact-us">IHG<sup>®</sup> Rewards Club 优悦会宾客关怀中心</a>获取协助。</span>
+								</div>
+							</div>
+							<div class="col-xs-6 col-xs-percent createPin-zipCodeContainer">
+								<div class="form-group">
+									<label for="UHF_zipCode">邮政编码</label>
+									<input type="text" class="form-control" id="UHF_zipCode" name="zipCode" placeholder="邮政编码" value="" />
+									<span class="errorMsgFormPin" style="display: none; color: red;">请输入您的邮政编码。</span>
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-sm-12">
+								<div class="form-group">
+									<label for="UHF_firstName" class="pin">名字</label>
+									<input type="text" class="form-control" id="UHF_firstName" name="uhf_firstName" placeholder="名字" value="" />
+									<span class="errorMsgFormPin" style="display: none; color: red;">请输入您的名字。</span>
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-sm-12">
+								<div class="form-group">
+									<label for="UHF_lastName" class="pin">姓氏</label>
+									<input type="text" class="form-control" id="UHF_lastName" name="uhf_lastName" placeholder="姓氏" value="" />
+									<span class="errorMsgFormPin" style="display: none; color: red;">请输入您的姓氏。</span>
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-sm-6 createPin-pinContainer">
+								<div class="form-group">
+									<label for="UHF_pinNumber" class="pin">密码</label>
+									<input type="password" class="form-control" id="UHF_pinNumber" name="pin" placeholder="输入密码" maxlength="4" size="4" value="" />
+									<span class="errorMsgFormPin" style="display: none; color: red;">请输入个人识别号码。</span>
+									<span class="errorMsgFormPin" id="badPatt" style="display: none; color: red;">您的个人识别码必须为4位数。</span>
+									<span class="errorMsgFormPin" id="short" style="display: none; color: red;">您的个人识别码必须为4位数。</span>
+								</div>
+							</div>
+							<div class="col-sm-6 createPin-verifyPinContainer">
+								<div class="form-group">
+									<label for="UHF_verifyPin" class="pin">验证密码</label>
+									<input type="password" class="form-control" id="UHF_verifyPin" name="verifyPin" placeholder="输入密码" maxlength="4" size="4" value="" />
+									<span class="errorMsgFormPin" style="display: none; color: red;">请确认您的个人识别号码（密码）。</span>
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-sm-12">
+								<div class="form-group">
+                                    <span class="helpInstructions lighterText">输入的4位数字必须匹配。</span>
+								</div>
+							</div>
+						</div>
+						<div class="row formBottomButton">
+							<div class="col-sm-12 text-center">
+								<div class="form-group">
+                                   <button type="button" class="btn btn-success btnFluid btnWallet createNewPin">创建密码</button>
+								</div>
+							</div>
+						</div>
+					</fieldset>
+				</form>
+
+				<!-- Create Email Dialog -->
+				<div class="modal fade" id="modalCreateEmail" tabindex="-1" role="dialog" data-backdrop="false" aria-hidden="true">
+					<div class="modal-dialog">
+					<div class="modal-content">
+						<div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true"><i class="fa fa-times"></i></span><span class="sr-only">关闭</span></button>
+                            <h4 class="modal-title" id="modalCreateEmailLabel">创建电子邮件</h4>
+						</div>
+						<div class="modal-body">
+							<div class="row errorTopMsg errorTopMsgDefault">
+									<div class="col-xs-1 col-xs-1 col-xs-custom messageIconContainer">
+										<div class="form-group">
+											<i class="fa fa-exclamation-circle"></i>
+										</div>
+									</div>
+									<div class="col-xs-10 col-xs-percent messageContainer">
+										<div class="form-group">
+											<div class="errorTopMsgText">
+												突发的服务器错误</div>
+										</div>
+									</div>
+							</div>
+							<div class="row errorTopMsg errorTopMsgContainer">
+								<div class="col-xs-1 col-xs-1 col-xs-custom messageIconContainer">
+									<div class="form-group">
+										<i class="fa fa-exclamation-circle"></i>
+									</div>
+								</div>
+								<div class="col-xs-10 col-xs-percent messageContainer">
+									<div class="form-group">
+										<div class="errorTopMsgText">
+
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="row errorTopMsg" data-topmsgerror="sessionExpired">
+							<div class="col-xs-1 col-xs-1 col-xs-custom messageIconContainer">
+								<div class="form-group">
+									<i class="fa fa-exclamation-circle"></i>
+								</div>
+							</div>
+							<div class="col-xs-10 col-xs-percent messageContainer">
+								<div class="form-group">
+									<div class="errorTopMsgText">
+										您的会话已过期。请登录您的账户</div>
+								</div>
+							</div>
+						</div>
+						<div class="row errorTopMsg" data-topmsgerror="notMatchEmail" data-uhf-hook="NotMatchEmailError">
+							<div class="col-xs-1 col-xs-1 col-xs-custom messageIconContainer">
+								<div class="form-group">
+									<i class="fa fa-exclamation-circle"></i>
+								</div>
+							</div>
+							<div class="col-xs-10 col-xs-percent messageContainer">
+								<div class="form-group">
+									<div class="errorTopMsgText">
+										电子邮件地址必须匹配。</div>
+								</div>
+							</div>
+						</div>
+						<div class="row errorTopMsg" data-topmsgerror="systemUnavailable">
+							<div class="col-xs-1 col-xs-1 col-xs-custom messageIconContainer">
+								<div class="form-group">
+									<i class="fa fa-exclamation-circle"></i>
+								</div>
+							</div>
+							<div class="col-xs-10 col-xs-percent messageContainer">
+								<div class="form-group">
+									<div class="errorTopMsgText">
+										很抱歉，我们的系统暂时无法使用。请稍后重试或联系<a href="/hotels/cn/zh/customer-care/contact-us">IHG<sup>®</sup>Rewards Club 优悦会客服中心</a>寻求帮助。</div>
+								</div>
+							</div>
+						</div>
+
+							<form role="form">
+							<fieldset>
+								<div class="row">
+									<div class="col-sm-12">
+										<div class="form-group">
+											<label for="UHF_email">电子邮件地址</label>
+											<input type="text" class="form-control" id="UHF_email" name="email" placeholder="电子邮件地址" value="" />
+											<span class="errorMsgFormPin" style="display: none; color: red;">请输入您的电子邮件地址。</span>
+											<span class="errorMsgFormPin" id="invMail" style="display: none; color: red;">您输入的电子邮件地址没有遵循标准的电子邮件格式（example@example.com）。请重新输入电子邮件地址使用的标准格式。</span>
+										</div>
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-sm-12">
+										<div class="form-group">
+											<label for="UHF_verifyEmail">验证电子邮箱地址</label>
+											<input type="text" class="form-control" id="UHF_verifyEmail" name="verifyEmail" placeholder="验证电子邮箱地址" value="" />
+											<span class="errorMsgFormPin" style="display: none; color: red;">请验证您的邮箱地址。</span>
+											<span class="errorMsgFormPin" id="invVerMail" style="display: none; color: red;">您输入的电子邮件地址没有遵循标准的电子邮件格式（example@example.com）。请重新输入电子邮件地址使用的标准格式。</span>
+										</div>
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-sm-12">
+										<div class="form-group">
+											<button type="button" class="btn btn-success btnWalletDlg btnFluid btnWallet createNewEmail">创建电子邮件</button>
+											<button type="button" class="btn btn-default btnWalletDlg btnFluid btnWalletDefault" data-dismiss="modal">关闭</button>
+										</div>
+									</div>
+								</div>
+							</fieldset>
+						</form>
+						</div>
+					</div>
+					</div>
+				</div>
+				<!-- / Create Email Dialog -->
+			</div>
+			<!-- / UHF: Wallet - Create PIN -->
+
+			<!-- UHF: Wallet - Forgot PIN -->
+			<div class="wallet-state wallet-forgotPin wallet-view">
+
+				<!-- UHF: Forgot PIN form -->
+				<form role="form">
+					<fieldset>
+						<div class="row form-dark-row">
+							<div class="col-xs-10 wallet-head">
+								<div class="form-group">
+                                    <span class="titleFont">忘记密码？</span>
+								</div>
+							</div>
+							<div class="col-sm-1 slideBtnContainer">
+								<i class="fa fa-caret-right fa-2x slideClosedBtn"></i>
+							</div>
+						</div>
+            <div class="accentLine"></div>
+						<div class="row">
+							<div class="col-xs-6 uhfCancelContainer">
+								<div class="form-group cancelCreatePin uhfCancel">
+									<span class="formLink">
+                                        <a href="javascript:void(0);"><i class="fa fa-chevron-circle-left"></i>取消</a>
+									</span>
+								</div>
+							</div>
+							<div class="col-xs-6">
+								<div class="form-group">
+                                    <span class="helpFont">所有字段均须填写</span>
+								</div>
+							</div>
+						</div>
+
+						<div class="row errorTopMsg errorTopMsgDefault">
+							<div class="col-xs-1 col-xs-1 col-xs-custom messageIconContainer">
+								<div class="form-group">
+									<i class="fa fa-exclamation-circle"></i>
+								</div>
+							</div>
+							<div class="col-xs-10 col-xs-percent messageContainer">
+								<div class="form-group">
+									<div class="errorTopMsgText">
+										突发的服务器错误</div>
+								</div>
+							</div>
+						</div>
+						<div class="row errorTopMsg errorTopMsgContainer">
+							<div class="col-xs-1 col-xs-1 col-xs-custom messageIconContainer">
+								<div class="form-group">
+									<i class="fa fa-exclamation-circle"></i>
+								</div>
+							</div>
+							<div class="col-xs-10 col-xs-percent messageContainer">
+								<div class="form-group">
+									<div class="errorTopMsgText"></div>
+								</div>
+							</div>
+						</div>
+						<div class="row errorTopMsg" data-topmsgerror="sessionExpired">
+							<div class="col-xs-1 col-xs-1 col-xs-custom messageIconContainer">
+								<div class="form-group">
+									<i class="fa fa-exclamation-circle"></i>
+								</div>
+							</div>
+							<div class="col-xs-10 col-xs-percent messageContainer">
+								<div class="form-group">
+									<div class="errorTopMsgText">
+										您的会话已过期。请登录您的账户</div>
+								</div>
+							</div>
+						</div>
+						<div class="row errorTopMsg" data-topmsgerror="systemUnavailable">
+							<div class="col-xs-1 col-xs-1 col-xs-custom messageIconContainer">
+								<div class="form-group">
+									<i class="fa fa-exclamation-circle"></i>
+								</div>
+							</div>
+							<div class="col-xs-10 col-xs-percent messageContainer">
+								<div class="form-group">
+									<div class="errorTopMsgText">
+										很抱歉，我们的系统暂时无法使用。请稍后重试或联系<a href="/hotels/cn/zh/customer-care/contact-us">IHG<sup>®</sup>Rewards Club 优悦会客服中心</a>寻求帮助。</div>
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-sm-12">
+								<div class="form-group">
+									<label for="UHF_forgotPinPcrNumber">会员号：</label>
+									<input type="text" class="form-control" id="UHF_forgotPinPcrNumber" name="pcrNumber" placeholder="会员号：" value="" />
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-sm-12">
+								<div class="form-group">
+									<label for="UHF_forgotPinEmailAddr">电子邮件地址</label>
+									<input type="text" class="form-control" id="UHF_forgotPinEmailAddr" name="emailAddress" placeholder="电子邮件地址" value="" />
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-sm-12 text-center">
+								<div class="form-group">
+									<button type="button" class="btn btn-success btnFluid btnWallet btnForgotPin">通过电子邮件发送密码</button>
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-sm-12">
+								<div class="form-group">
+									<span class="joinFont">您的个人资料中没有电子邮箱地址？</span>
+                                            <p>与您当地的<span class="paragraphLink"><a href="/hotels/cn/zh/customer-care/contact-us">IHG® Rewards Club 优悦会客服中心</a></span>联系以获取密码
+并通过电子邮箱更新您的账户资料。获得密码后
+您还可以通过以下地址更新您的电子邮箱地址<span class="paragraphLink"><a href="//www.ihg.com/updateemail"> www.ihg.com/updateemail</a></span>。</p>
+                                                                    </div>
+							</div>
+						</div>
+					</fieldset>
+				</form>
+			</div>
+			<!-- / UHF: Wallet - Forgot PIN -->
+		</div>
+		<!-- / UHF: Wallet Container -->
+		<!-- / UHF: Wallet -->
+		<!-- UHF : moved brand nav to brand nav jsp from here -->
+		<!-- UHF : END of Utility bar markup -->
+      </div>
+<!-- UHF : START of Brand navigation bar markup -->
+<!-- START : Only UBE Brand Nav -->                         
+                  <!-- UHF : START of Hamburger menu -->
+<div class="mobileNavManuWrapper hidden-sm hidden-md hidden-lg hidden-xl wrapper-UBE">
+	<div class="mobileNavMenuContainer container">
+		<div class="row">
+			<div class="brandLogo">
+			
+					<a class="brandLogo-link" href="//www.ihg.com/rewardsclub/cn/zh/account-mgmt/home" title="洲际酒店集团">
+									<img class="brandLogo-image" alt="洲际酒店集团" src="//ihg.scene7.com/is/image/ihg/New-RC-Logo?fmt=png-alpha&amp;wid=322" />
+								</a>													
+							</div>
+			<div class="mobileNav ">
+				<a class="mobileNav-link menuCTA" href="javascript:void(0);"><i class="fa fa-bars fa-2x"></i></a>
+			</div>
+			<div class="logIn logIn-mobile ">
+                <div class="logIn-anonymous logIn-State">
+                            <a class="logIn-link" data-uhf-hook="signInToggle" href="javascript:void(0);" title="登录">登录</a>
+                            <span>/</span>
+                            <a class="logIn-link" href="//www.ihg.com/rewardsclub/cn/zh/join" title="加入">加入</a>
+                        </div>
+                        <a class="logIn-link logIn-implicit logIn-State" data-uhf-hook="signInToggle" href="javascript:void(0);" title="登录">
+                            登录<div class="first-name-container"><span class="user-first-name">user first name</span></div>
+                        </a>
+                        <div class="logIn-explicit logIn-State">
+                            <a class="logIn-link logIn-block" href="#">
+                                <div class="first-name-container"><span class="user-first-name">user first name</span></div>
+                                <div><span class="user-points">user points</span> 积分</div>
+                            </a>
+                        </div> 
+                    </div>
+			<div class="mobileNav ">
+				<a class="mobileNav-link mobileResDirectNumber" href="tel:18778343613" data-uhf-hook="resDirectNumber" data-uhf-hook-two="mobileResDirectLink" data-uhftrigger="0871Disc" data-no-replace="content"><i class="fa fa-phone fa-2x"></i></a>
+			</div>
+
+
+	</div>
+	<div class="row">
+		<div class="hidden-sm hidden-md hidden-lg hidden-xl clearfix">
+			<div class="mobileNavContainer">
+			<div class="mobileNavInner mobileNav-hidden">
+			<div class="mobileNavMenu">
+			<!-- START : Hamburger : Mobile Brand nav menu -->
+				<ul class="mobileNavMenu-list list-unstyled">
+					<li class="mobileNavHeading">
+                        <ul class="mobileNavMenu-subList list-unstyled uhfmobilebrandnav">
+                            <li class="mobileNavMenu-list-item">
+                                    <a class="mobileNavLink site-int-link ihgTitle" href="//www.ihg.com/hotels/cn/zh/reservation">IHG</a>
+                                </li>
+                            <li class="mobileNavMenu-list-item">
+	                                     <a class="mobileNavLink site-int-link " href="//www.ihg.com/rewardsclub/cn/zh/account-mgmt/home">我的帐户</a>
+	                                 </li>
+	                        <li class="mobileNavMenu-list-item">
+	                                     <a class="mobileNavLink site-int-link " href="//www.ihg.com/rewardsclub/cn/zh/account-mgmt/staysevents">入住与活动</a>
+	                                 </li>
+	                        <li class="mobileNavMenu-list-item">
+	                                     <a class="mobileNavLink site-int-link " href="//www.ihg.com/rewardsclub/cn/zh/account-mgmt/preferences">喜好设置</a>
+	                                 </li>
+	                        <li class="mobileNavMenu-list-item">
+	                                     <a class="mobileNavLink site-int-link " href="//www.ihg.com/rewardsclub/cn/zh/account-mgmt/points">积分</a>
+	                                 </li>
+	                        <li class="mobileNavMenu-list-item">
+	                                     <a class="mobileNavLink site-int-link " href="//www.ihg.com/rewardsclub/cn/zh/account-mgmt/offers">优惠</a>
+	                                 </li>
+	                        <li class="mobileNavMenu-list-item">
+	                                     <a class="mobileNavLink site-int-link rc signOut" href="#">注销</a>
+	                                 </li>
+	                        <li class="mobileNavMenu-list-item">
+	                                     <a class="mobileNavLink site-int-link rc bookNow" href="//www.ihg.com/hotels/cn/zh/reservation">立即预订</a>
+	                                 </li>
+	                        </ul>
+					</li>
+					<!-- END : Hamburger : Mobile Brand nav menu -->
+					<!-- START : Hamburger : Mobile Hotel Details nav menu -->
+						<!-- END : Hamburger : Mobile Hotel Details nav menu -->			
+				</ul>							
+				<ul class="mobileNavMenu-list list-unstyled">
+					<li>
+						<ul class="mobileNavMenu-subList list-unstyled uhftravel-cc">
+                            <li class="mobileNavMenu-list-item">
+								<a class="mobileNavLink" href="//www.ihg.com/hotels/cn/zh/reservation/searchresult/chatFrameSet?brandcode=6c" title="需要帮助？">需要帮助？</a>
+							</li>
+							<li class="mobileNavMenu-list-item">
+								<a class="mobileNavLink" href="//www.ihg.com/hotels/cn/zh/global/customer_care/travel_advisory" title="旅行提示">旅行提示</a>
+							</li>											
+							<li class="mobileNavMenu-list-item">
+								<a class="mobileNavLink" href="//www.ihg.com/hotels/cn/zh/reservation/ManageYourStay" title="管理预订">管理预订</a>
+							</li>
+                            </ul>						
+						
+					</li>
+				</ul>
+			</div>
+			<div class="mobileNavCL">
+				<a class="language " id="uhfCountryLanguageMobileLink" href="javascript:void(0);"><img class="language-icon" alt="language-icon" /> <span class="language-text"></span> <i class="fa fa-angle-down"></i></a>
+                         <div id="uhfCountryLanguageMobileContainer" class="">
+                     <!-- UHF country/language markup -->
+                             <div id="uhfLocale">
+                                 <div id="uhfLocaleSelection">
+                                     <form id="uhfLocaleSelectionForm" method="post" action="">
+                                         <div id="uhfCountrySelectionContainer">
+                                             <label for="uhfCountrySelection">国家/地区</label>
+                                             <select id="uhfCountrySelection"></select>
+                                         </div>
+                                         <div id="uhfLanguagesSelectionContainer">
+                                             <label for="uhfLanguageSelection">语言</label>
+                                             <select id="uhfLanguageSelection"></select>
+                                         </div>
+                                         <a href="javascript:void(0);" id="uhfCountryLanguageCTA">
+                                             <button type="button" class="buttonSave">保存</button>
+                                             <i class="fa fa-times"></i>
+                                         </a>
+                                     </form>
+                                     <div id="uhfCountryLanguageImageContainer"></div>
+                                 </div>
+                             </div>
+                     <!--  end of country language  -->
+                          </div>
+				</div>
+				</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- UHF : END of Hamburger menu -->
+
+
+<!-- UHF : Desktop : START of brand nav -->
+		<div class="brandLogoNavWrapper visible-sm visible-md visible-lg uhf-walletPushOver primary-nav wrapper-UBE" id="primary-nav">
+			<div class="brandLogoNavContainer container">
+				<div class="row">
+					<div class="col-md-12 clearfix">
+						<div class="brandLogo">
+							<a class="brandLogo-link" href="//www.ihg.com/rewardsclub/cn/zh/account-mgmt/home" title="洲际酒店集团">
+											<img class="brandLogo-image" src="//ihg.scene7.com/is/image/ihg/New-RC-Logo?fmt=png-alpha&amp;wid=322" alt="洲际酒店集团" />
+										</a>									
+									</div>
+						<div class="brandNavContainer visible-sm visible-md visible-lg">
+							<nav class="brandNav">
+								<ul class="brandNav-list u-list clearfix">
+									<li class="brandNav-list-item u-list-item">
+                                                 <a class="brandNav-link u-link site-int-link" href="//www.ihg.com/rewardsclub/cn/zh/account-mgmt/home">我的帐户</a>
+                                             </li>
+                                        <li class="brandNav-list-item u-list-item">
+                                                 <a class="brandNav-link u-link site-int-link" href="//www.ihg.com/rewardsclub/cn/zh/account-mgmt/staysevents">入住与活动</a>
+                                             </li>
+                                        <li class="brandNav-list-item u-list-item">
+                                                 <a class="brandNav-link u-link site-int-link" href="//www.ihg.com/rewardsclub/cn/zh/account-mgmt/preferences">喜好设置</a>
+                                             </li>
+                                        <li class="brandNav-list-item u-list-item">
+                                                 <a class="brandNav-link u-link site-int-link" href="//www.ihg.com/rewardsclub/cn/zh/account-mgmt/points">积分</a>
+                                             </li>
+                                        <li class="brandNav-list-item u-list-item">
+                                                 <a class="brandNav-link u-link site-int-link" href="//www.ihg.com/rewardsclub/cn/zh/account-mgmt/offers">优惠</a>
+                                             </li>
+                                        </ul>
+							</nav>
+							<a class="booknow" href="//www.ihg.com/hotels/cn/zh/reservation"><span>预订</span></a>
+							</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- UHF : Desktop : END of brand nav -->
+	<!-- END : Only UBE Brand Nav -->
+               <!-- UHF : END of Brand navigation bar markup --></header><div id="applicationWrapper" class="uhf-walletPushOver">
+    
+  <div class="account-mgmt">
+
+    <!-- ENSIGHTEN BOOTSTRAP -->
+    <script src="https://www.ihg.com/static/dam/ensighten/ihg/spa/Bootstrap.js"></script>
+
+    <div class="bar-divider"></div>
+
+    <!-- APPLICATION - VIEW -->
+    <div ui-view="" dir="ltr">
+      <div class="pre-view-load">
+        <div class="loading">
+          <i class="fa fa-circle-o-notch fa-5x fa-fw loading-icon" ng-include="'/account-mgmt/assets/svg/font-awesome/circle-o-notch.svg'"></i>
+          <span class="sr-only">加载中...</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- To include templates for UI Bootstrap -->
+    <ng-include src="'/account-mgmt/accountMgmt/components/component-templates/uibootstrap-templates/templates.html'"></ng-include>
+
+    <script>
+      'use strict';
+
+      //BEGIN APPD ADRUM CONFIGURATION
+      window['adrum-start-time'] = new Date().getTime();
+      (function(config) {
+        config.appKey = 'AD-AAB-AAB-DYT';
+        config.adrumExtUrlHttp = '/account-mgmt/vendor/adrum';
+        config.adrumExtUrlHttps = '/account-mgmt/vendor/adrum';
+        config.beaconUrlHttp = 'http://col.eum-appdynamics.com';
+        config.beaconUrlHttps = 'https://col.eum-appdynamics.com';
+        config.xd = {enable: true};
+      })(window['adrum-config'] || (window['adrum-config'] = {}));
+      if ('https:' === document.location.protocol) {
+        document.write(unescape('%3Cscript')
+          + " src=" + '/account-mgmt/vendor/adrum/adrum.js'
+          + " type='text/javascript' charset='UTF-8'"
+          + unescape('%3E%3C/script%3E'));
+      } else {
+        document.write(unescape('%3Cscript')
+          + " src=" + '/account-mgmt/vendor/adrum/adrum.js'
+          + " type='text/javascript' charset='UTF-8'"
+          + unescape('%3E%3C/script%3E'));
+      }
+      // END APPD CONFIGURATION
+
+      /*<![CDATA[*/
+      var AppConfigJson = '{\"appConfig\":{\"default\":{\"appName\":\"AccountMgmt\",\"appVersion\":\"8.11.1\",\"baseURL\":\"/account-mgmt\",\"global\":{\"apiKey\":\"se9ym5iAzaW8pxfBjkmgbuGjJcr3Pj6Y\",\"ssoCookie\":\"X-IHG-SSO-TOKEN\",\"config\":{\"maxRetries\":3,\"interval\":250,\"timeout\":5000}},\"messagesResourcePath\":{\"url\":\"/resources/{country}/{language}/account-mgmt/messages/\"},\"ratingsAndReviews\":{\"BAZAARVOICE_URL\":\"//intercontinental.ugc.bazaarvoice.com\",\"STAGING_BAZAARVOICE_URL\":\"//intercontinental.ugc.bazaarvoice.com/bvstaging\",\"hotelReview\":{\"submissionUrl\":\"https://{_env_}www.ihg.com{_brandpath_}/hotels/{_country_}/{_language_}/stay-mgmt/reviews/{_mnemonic_}/submit-a-review?submissionparams={_hash_}\"},\"writeReview\":{\"path\":\"/2067{_chaincode_}-{_language_}_{_country_}/{_mnemonic_}/writereview.htm\",\"parameters\":{\"user\":\"user\",\"submission\":\"submissionurl\",\"campaign\":\"campaignid\"}}},\"hotelLocationMap\":{\"url\":\"//maps.google.com?daddr={latitude},{longitude}&saddr=\"},\"tierLevelAPI\":{\"url\":\"https://apis.ihg.com/members/v1/memberships/{membershipKey}/tierLevelThresholds\"},\"getMemberProfileAPI\":{\"url\":\"https://apis.ihg.com/members/v2/profiles/me\",\"config\":{\"maxRetries\":3,\"interval\":250,\"timeout\":5000}},\"memberProfileAPI\":{\"url\":\"https://apis.ihg.com/members/v1/profiles/me\"},\"memberCommunicationPreferencesAPI\":{\"url\":\"https://apis.ihg.com/members/v1/profiles/me/communicationPreferences\"},\"memberCommunicationPreferencesOptInAPI\":{\"url\":\"https://apis.ihg.com/members/v1/profiles/me/communicationPreferences/sms/optIn\"},\"memberPinAPI\":{\"url\":\"https://apis.ihg.com/members/v1/profiles/me/pin\"},\"memberEmailsAPI\":{\"url\":\"https://apis.ihg.com/members/v1/profiles/me/emails\"},\"memberPhonesAPI\":{\"url\":\"https://apis.ihg.com/members/v1/profiles/me/phones\"},\"memberAddressesAPI\":{\"url\":\"https://apis.ihg.com/members/v1/profiles/me/addresses\"},\"memberTravelProfileAPI\":{\"url\":\"https://apis.ihg.com/members/v1/profiles/me/travelProfiles\"},\"memberStatusAPI\":{\"url\":\"https://apis.ihg.com/members/v1/status\"},\"memberAccountsAPI\":{\"url\":\"https://apis.ihg.com/members/v1/accounts/me\"},\"reservationsAPI\":{\"url\":\"https://apis.ihg.com/reservations/v1/hotelReservations\",\"config\":{\"maxRetries\":0,\"interval\":250,\"timeout\":25000}},\"paymentOptionsAPI\":{\"url\":\"https://apis.ihg.com/reservations/v1/paymentoptions\"},\"locationCountriesAPI\":{\"url\":\"https://apis.ihg.com/locations/v1/countries\"},\"locationStatesAPI\":{\"url\":\"https://apis.ihg.com/locations/v1/countries/{isoShort}/states\"},\"languagesRegionsAPI\":{\"url\":\"https://apis.ihg.com/members/v1/regions/{regionCode}/languages\"},\"ratesCategoriesAPI\":{\"url\":\"https://apis.ihg.com/rates/v1/categories\"},\"partnersAlliancesAPI\":{\"url\":\"https://apis.ihg.com/members/v1/partners/alliances\"},\"pointsAPI\":{\"url\":\"https://apis.ihg.com/points/v1/purchaseLink\"},\"validationsEmailsAPI\":{\"url\":\"https://apis.ihg.com/validations/v1/emails\",\"config\":{\"maxRetries\":0,\"interval\":250,\"timeout\":3000}},\"stayPreferencesAPI\":{\"url\":\"https://apis.ihg.com/members/v1/profiles/me/stayPreferences\"},\"pastStayDAO\":{\"url\":\"https://apis.ihg.com/members/v1/profiles/me/stays\"},\"stayDAO\":{\"url\":\"https://apis.ihg.com/members/v1/profiles/me/stays/{stayId}?includeFolio=true\"},\"stayListDAO\":{\"url\":\"https://apis.ihg.com/members/v1/profiles/me/stays?searchPeriodStart={startFromDate}\"},\"eventDAO\":{\"url\":\"https://apis.ihg.com/members/v1/profiles/me/events/{eventId}\"},\"eventLegacyDAO\":{\"url\":\"https://apis.ihg.com/channels/gs-json/v1/events\",\"config\":{\"maxRetries\":0,\"interval\":250,\"timeout\":15000}},\"eventListDAO\":{\"url\":\"https://apis.ihg.com/members/v1/profiles/me/events\"},\"hotelDetailDAO\":{\"url\":\"https://apis.ihg.com/hotels/v1/profiles/{hotelMnemonic}/details\"},\"uiSlotsDAO\":{\"url\":\"https://apis.ihg.com/marketing/v1/offers/pslots\"},\"resDirectDAO\":{\"url\":\"https://apis.ihg.com/cro/v1/callcenter\"},\"pointsEstimatorDAO\":{\"url\":\"https://apis.ihg.com/reservations/v1/pointEstimate\"},\"accountActivityDAO\":{\"url\":\"https://apis.ihg.com/members/v1/profiles/me/activities\"},\"stayReviewDAO\":{\"url\":\"https://apis.ihg.com/members/v1/profiles/me/review/hash?stayId={stayId}\"},\"choiceBenefitDAO\":{\"url\":\"https://apis.ihg.com/members/v1/memberships/{memberKey}/choiceBenefits\"},\"earningDetailsDAO\":{\"url\":\"https://apis.ihg.com/members/v1/profiles/me/activities/earningDetails?stayId={stayId}&activityId={activityId}\"},\"hertzRedeemDAO\":{\"url\":\"https://apis.ihg.com/members/v1/memberships/{memberKey}/partnerBenefitRedemption/hz\"},\"partnerBenefitsHertzDAO\":{\"url\":\"https://apis.ihg.com/members/v1/memberships/{memberKey}/partnerBenefits/hz\"},\"choiceBenefitRedemptionDAO\":{\"url\":\" https://apis.ihg.com/members/v1/memberships/{memberKey}/choiceBenefitRedemption\"},\"sendEmailBillDAO\":{\"url\":\"https://apis.ihg.com/communications/v1/hotelBill\"},\"registeredOffersDAO\":{\"url\":\"https://apis.ihg.com/members/v2/profiles/me/registeredOffers\"},\"cardOrderDAO\":{\"url\":\"https://apis.ihg.com/members/v1/profiles/me/cardOrder\"},\"associateDAO\":{\"url\":\"https://apis.ihg.com/channels/direct/reservations/v1/hotelReservations/{reservationId}/association\"},\"retrieveResDAO\":{\"apiKey\":\"se9ym5iAzaW8pxfBjkmgbuGjJcr3Pj6Y\",\"url\":\"https://apis.ihg.com/reservations/v2/hotels/mock\",\"config\":{\"maxRetries\":0,\"interval\":250,\"timeout\":15000}},\"log\":{\"url\":\"https://apis.ihg.com/logging/v1/logEntries\",\"thresholdNumber\":5,\"thresholdTime\":30000,\"level\":\"info\",\"config\":{\"maxRetries\":1,\"interval\":250,\"timeout\":500}},\"resources\":{\"urls\":{\"stayPreferences\":\"/hotels/{country}/{language}/stay-mgmt/stay-preferences/{confirmationNumber}/{lastName}\",\"reservationConfirmation\":\"/hotels/{country}/{language}/reservation/singlereservationsummary?resnum={confirmationNumber}&lastname={lastName}\",\"changeReservation\":\"/hotels/{country}/{language}/stay-mgmt/change-reservation/{confirmationNumber}/{lastName}\",\"cancelReservation\":\"/hotels/{country}/{language}/stay-mgmt/reservation-cancellation/{confirmationNumber}/{lastName}\",\"viewReservation\":\"/hotels/{country}/{language}/pay/reservation-view?confirmationNumber={confirmationNumber}&lastName={lastName}\"}},\"featureToggle\":{\"apiKey\":\"se9ym5iAzaW8pxfBjkmgbuGjJcr3Pj6Y\",\"url\":\"https://apis.ihg.com/channels/direct/feature-toggles/v1/com.ihg.www.account-mgmt\",\"timeout\":2000},\"serviceVirtualizationEnabled\":false,\"shtfURL\":\"https://www.ihg.com\"},\"china\":{\"appName\":\"AccountMgmt\",\"appVersion\":\"8.11.1\",\"baseURL\":\"/account-mgmt\",\"global\":{\"apiKey\":\"pQM1YazQwnWi5AWXmoRoA5FSfW0S9x8A\",\"ssoCookie\":\"X-IHG-SSO-TOKEN\",\"config\":{\"maxRetries\":3,\"interval\":250,\"timeout\":5000}},\"messagesResourcePath\":{\"url\":\"/resources/{country}/{language}/account-mgmt/messages/\"},\"ratingsAndReviews\":{\"BAZAARVOICE_URL\":\"//intercontinental.ugc.bazaarvoice.com\",\"STAGING_BAZAARVOICE_URL\":\"//intercontinental.ugc.bazaarvoice.com/bvstaging\",\"hotelReview\":{\"submissionUrl\":\"https://{_env_}www.ihg.com.cn{_brandpath_}/hotels/{_country_}/{_language_}/{_mnemonic_}/submit-hotel-review?submissionparams={_hash_}\"},\"writeReview\":{\"path\":\"/2067{_chaincode_}-{_language_}_{_country_}/{_mnemonic_}/writereview.htm\",\"parameters\":{\"user\":\"user\",\"submission\":\"submissionurl\",\"campaign\":\"campaignid\"}}},\"hotelLocationMap\":{\"url\":\"//maps.google.com?daddr={latitude},{longitude}&saddr=\"},\"tierLevelAPI\":{\"url\":\"https://apis.ihg.com.cn/members/v1/memberships/{membershipKey}/tierLevelThresholds\"},\"getMemberProfileAPI\":{\"url\":\"https://apis.ihg.com.cn/members/v2/profiles/me\",\"config\":{\"maxRetries\":3,\"interval\":250,\"timeout\":5000}},\"memberProfileAPI\":{\"url\":\"https://apis.ihg.com.cn/members/v1/profiles/me\"},\"memberCommunicationPreferencesAPI\":{\"url\":\"https://apis.ihg.com.cn/members/v1/profiles/me/communicationPreferences\"},\"memberCommunicationPreferencesOptInAPI\":{\"url\":\"https://apis.ihg.com.cn/members/v1/profiles/me/communicationPreferences/sms/optIn\"},\"memberPinAPI\":{\"url\":\"https://apis.ihg.com.cn/members/v1/profiles/me/pin\"},\"memberEmailsAPI\":{\"url\":\"https://apis.ihg.com.cn/members/v1/profiles/me/emails\"},\"memberPhonesAPI\":{\"url\":\"https://apis.ihg.com.cn/members/v1/profiles/me/phones\"},\"memberAddressesAPI\":{\"url\":\"https://apis.ihg.com.cn/members/v1/profiles/me/addresses\"},\"memberTravelProfileAPI\":{\"url\":\"https://apis.ihg.com.cn/members/v1/profiles/me/travelProfiles\"},\"memberStatusAPI\":{\"url\":\"https://apis.ihg.com.cn/members/v1/status\"},\"memberAccountsAPI\":{\"url\":\"https://apis.ihg.com.cn/members/v1/accounts/me\"},\"reservationsAPI\":{\"url\":\"https://apis.ihg.com.cn/reservations/v1/hotelReservations\",\"config\":{\"maxRetries\":0,\"interval\":250,\"timeout\":25000}},\"paymentOptionsAPI\":{\"url\":\"https://apis.ihg.com.cn/reservations/v1/paymentoptions\"},\"locationCountriesAPI\":{\"url\":\"https://apis.ihg.com.cn/locations/v1/countries\"},\"locationStatesAPI\":{\"url\":\"https://apis.ihg.com.cn/locations/v1/countries/{isoShort}/states\"},\"languagesRegionsAPI\":{\"url\":\"https://apis.ihg.com.cn/members/v1/regions/{regionCode}/languages\"},\"ratesCategoriesAPI\":{\"url\":\"https://apis.ihg.com.cn/rates/v1/categories\"},\"partnersAlliancesAPI\":{\"url\":\"https://apis.ihg.com.cn/members/v1/partners/alliances\"},\"pointsAPI\":{\"url\":\"https://apis.ihg.com.cn/points/v1/purchaseLink\"},\"validationsEmailsAPI\":{\"url\":\"https://apis.ihg.com.cn/validations/v1/emails\",\"config\":{\"maxRetries\":0,\"interval\":250,\"timeout\":3000}},\"stayPreferencesAPI\":{\"url\":\"https://apis.ihg.com.cn/members/v1/profiles/me/stayPreferences\"},\"pastStayDAO\":{\"url\":\"https://apis.ihg.com.cn/members/v1/profiles/me/stays\"},\"stayDAO\":{\"url\":\"https://apis.ihg.com.cn/members/v1/profiles/me/stays/{stayId}?includeFolio=true\"},\"stayListDAO\":{\"url\":\"https://apis.ihg.com.cn/members/v1/profiles/me/stays?searchPeriodStart={startFromDate}\"},\"eventDAO\":{\"url\":\"https://apis.ihg.com.cn/members/v1/profiles/me/events/{eventId}\"},\"eventLegacyDAO\":{\"url\":\"https://apis.ihg.com.cn/channels/gs-json/v1/events\",\"config\":{\"maxRetries\":0,\"interval\":250,\"timeout\":15000}},\"eventListDAO\":{\"url\":\"https://apis.ihg.com.cn/members/v1/profiles/me/events\"},\"hotelDetailDAO\":{\"url\":\"https://apis.ihg.com.cn/hotels/v1/profiles/{hotelMnemonic}/details\"},\"uiSlotsDAO\":{\"url\":\"https://apis.ihg.com.cn/marketing/v1/offers/pslots\"},\"resDirectDAO\":{\"url\":\"https://apis.ihg.com.cn/cro/v1/callcenter\"},\"pointsEstimatorDAO\":{\"url\":\"https://apis.ihg.com.cn/reservations/v1/pointEstimate\"},\"accountActivityDAO\":{\"url\":\"https://apis.ihg.com.cn/members/v1/profiles/me/activities\"},\"stayReviewDAO\":{\"url\":\"https://apis.ihg.com.cn/members/v1/profiles/me/review/hash?stayId={stayId}\"},\"choiceBenefitDAO\":{\"url\":\"https://apis.ihg.com.cn/members/v1/memberships/{memberKey}/choiceBenefits\"},\"earningDetailsDAO\":{\"url\":\"https://apis.ihg.com.cn/members/v1/profiles/me/activities/earningDetails?stayId={stayId}&activityId={activityId}\"},\"hertzRedeemDAO\":{\"url\":\"https://apis.ihg.com.cn/members/v1/memberships/{memberKey}/partnerBenefitRedemption/hz\"},\"partnerBenefitsHertzDAO\":{\"url\":\"https://apis.ihg.com.cn/members/v1/memberships/{memberKey}/partnerBenefits/hz\"},\"choiceBenefitRedemptionDAO\":{\"url\":\" https://apis.ihg.com.cn/members/v1/memberships/{memberKey}/choiceBenefitRedemption\"},\"sendEmailBillDAO\":{\"url\":\"https://apis.ihg.com.cn/communications/v1/hotelBill\"},\"registeredOffersDAO\":{\"url\":\"https://apis.ihg.com.cn/members/v2/profiles/me/registeredOffers\"},\"cardOrderDAO\":{\"url\":\"https://apis.ihg.com.cn/members/v1/profiles/me/cardOrder\"},\"associateDAO\":{\"url\":\"https://apis.ihg.com.cn/channels/direct/reservations/v1/hotelReservations/{reservationId}/association\"},\"retrieveResDAO\":{\"apiKey\":\"pQM1YazQwnWi5AWXmoRoA5FSfW0S9x8A\",\"url\":\"https://apis.ihg.com.cn/reservations/v2/hotels/mock\",\"config\":{\"maxRetries\":0,\"interval\":250,\"timeout\":15000}},\"log\":{\"url\":\"https://apis.ihg.com.cn/logging/v1/logEntries\",\"thresholdNumber\":5,\"thresholdTime\":30000,\"level\":\"info\",\"config\":{\"maxRetries\":1,\"interval\":250,\"timeout\":500}},\"resources\":{\"urls\":{\"stayPreferences\":\"/hotels/{country}/{language}/stay-mgmt/stay-preferences/{confirmationNumber}/{lastName}\",\"reservationConfirmation\":\"/hotels/{country}/{language}/reservation/singlereservationsummary?resnum={confirmationNumber}&lastname={lastName}\",\"changeReservation\":\"/hotels/{country}/{language}/stay-mgmt/change-reservation/{confirmationNumber}/{lastName}\",\"cancelReservation\":\"/hotels/{country}/{language}/stay-mgmt/reservation-cancellation/{confirmationNumber}/{lastName}\",\"viewReservation\":\"/hotels/{country}/{language}/pay/reservation-view?confirmationNumber={confirmationNumber}&lastName={lastName}\"}},\"featureToggle\":{\"apiKey\":\"pQM1YazQwnWi5AWXmoRoA5FSfW0S9x8A\",\"url\":\"https://apis.ihg.com.cn/channels/direct/feature-toggles/v1/com.ihg.www.account-mgmt\",\"timeout\":2000},\"serviceVirtualizationEnabled\":false,\"shtfURL\":\"https://www.ihg.com.cn\"}},\"locale\":{\"country\":\"cn\",\"language\":\"zh\",\"localeString\":\"zh-CN\"},\"buildVersion\":\"8.11.1-43\",\"shtfURL\":\"/cn/zh/error_500.html\"}';
+      /*]]>*/
+      var AppConfig;
+      var customAppConfigJson = sessionStorage ? sessionStorage.getItem("customAppConfig-account-mgmt") : null;
+      if (AppConfigJson) {
+        AppConfig = JSON.parse(customAppConfigJson || AppConfigJson);
+        
+        // new format:
+        // if the domain is China, use the china section of appConfig
+        if (AppConfig.appConfig) {
+            if (window.location.hostname.indexOf(".cn") > -1) {
+                for (var prop in AppConfig.appConfig.china) {
+                    AppConfig[prop] = AppConfig.appConfig.china[prop];
+                }
+            } else {
+                for (var prop in AppConfig.appConfig.default) {
+                    AppConfig[prop] = AppConfig.appConfig.default[prop];
+                }
+            }
+        }
+      }
+
+      (function() {
+        try {
+          angular.module('accountMgmtApp')
+            .constant('appConfig', AppConfig)
+            .config(function($animateProvider) {
+              $animateProvider.classNameFilter(/^((?!(no-nganimate)).)*$/);
+            })
+            .run(function($rootScope, appConfig) {
+              $rootScope.appConfig = appConfig;
+            });
+
+            var featureToggleRequestURL = AppConfig.featureToggle.url;
+            var featureToggleRequestTimeout = AppConfig.featureToggle.timeout;
+            var accountMgmtTeamVMCookieName = "account-mgmt";
+            var environmentQueryParam = "?environment=";
+
+            if(featureToggleRequestURL.indexOf(environmentQueryParam)=== -1){
+                var accountMgmtTeamVMCookieValue = getCookie(accountMgmtTeamVMCookieName);
+                if(accountMgmtTeamVMCookieValue != -1){
+                    featureToggleRequestURL= featureToggleRequestURL.concat(environmentQueryParam + accountMgmtTeamVMCookieValue);
+                }
+            }
+
+          angular.element(function() {
+              var customFeatureToggles = sessionStorage ? sessionStorage.getItem('customFeatureToggles-account-mgmt') : null;
+              if (customFeatureToggles) {
+                  window.angularFeaturesConf = JSON.parse(customFeatureToggles);
+                  angular.bootstrap(document, ['accountMgmtApp']);
+                  return;
+              }
+
+              Promise.all([
+                  timeout(featureToggleRequestTimeout, fetch(featureToggleRequestURL, {
+                      method: 'GET',
+                      headers: new Headers({ 'x-ihg-api-key': AppConfig.featureToggle.apiKey })
+                  }), "The requested feature toggle call has reached its timeout threshold.").then(function (response) {
+                      if (!response.ok) {
+                          throw new Error('Error in the fetch operation: Status-' + response.status + ' Message-' + response.statusText + ' RequestUrl-' + featureToggleRequestURL);
+                      }
+                      return response.json();
+                  }).catch(function (error) {
+                      console.log(error.message);
+                      return {};
+                  }),
+                  timeout(featureToggleRequestTimeout, new Promise(function (resolve, reject) {
+                      (function waitForProp() {
+                          if (window['targetFeatureToggles-account-mgmt']) {
+                              return resolve(window['targetFeatureToggles-account-mgmt']);
+                          }
+                          setTimeout(waitForProp, 100);
+                      })();
+                  }), "Target feature flags not located within timeout.").then(function (response) {
+                      return response;
+                  }).catch(function (error) {
+                      // Ignore timeout error
+                      return {};
+                  })]).then(function (values) {
+                      var featureToggles = values[0];
+                      var targetToggles = values[1];
+                      for (var attrname in targetToggles) {
+                          featureToggles[attrname] = targetToggles[attrname];
+                      }
+                      window.angularFeaturesConf = featureToggles;
+                      angular.bootstrap(document, ['accountMgmtApp']);
+                  });
+          });
+        } catch (err) {
+          console.error('SPA Account Management App - angularJS Files not loaded. Err: ' + err);
+          window.location.href = AppConfig.shtfURL;
+        }
+
+          function getCookie(cname) {
+              var name = cname + "=";
+              var decodedCookie = decodeURIComponent(document.cookie);
+              var ca = decodedCookie.split(';');
+              //<![CDATA[
+              for(var i = 0; i < ca.length; i++) {
+                  var c = ca[i];
+                  while (c.charAt(0) == ' ') {
+                      c = c.substring(1);
+                  }
+                  if (c.indexOf(name) == 0) {
+                      return c.substring(name.length, c.length);
+                  }
+              }
+              //]]>
+              return -1;
+          }
+
+          function timeout(ms, promise) {
+              return new Promise(function(resolve, reject) {
+                  setTimeout(function() {
+                      reject(new Error("The requested feature toggle call has reached its timeout threshold."))
+                  }, ms)
+                  promise.then(resolve, reject)
+              })
+          }
+      }());
+    </script>
+  </div>
+
+  <!-- Build Version: 8.11.1-43 -->
+
+    <script src="//www.ihg.com/static/uhf/brands/cn/zh/uhf.min.2019030702.js"></script>
+    </div><!-- UHF: Start of Footer bar-->
+		<footer id="uhf_footerWrapper" class="uhf-account-mgmt uhf_headerFooter sl_whiteout"><div class="footerWrap">
+			<div class="container contentContainer">
+				<!-- container fluid -->
+				<div class="row">				
+					<div class="col-xs-12 col-ihg-tablet-4 col-sm-3 stackingModule socialMedia">
+						<h5 class="brandNav__heading">
+							社交媒体</h5>
+						<ul class="list-inline social">
+                                        <li class="socialElement">                                            	                                            	
+                                            	<a title="Weibo" href="http://weibo.com/priorityclubrewards" target="_blank">
+		                                                        <img class="socialElement__icon //ihg.scene7.com/is/image/ihg/uhf_weibo?fmt=png" src="//ihg.scene7.com/is/image/ihg/uhf_weibo?fmt=png" alt="Weibo" />
+		                                                </a>                                                
+	                                            		
+	                                            	</li>
+                                        </ul>								
+							</div>
+					
+					<div class="hrCol col-xs-12 visible-xs-block">
+						<hr class="footerHr visible-xs-block" />
+					</div>
+					
+					<div class="footer-brandNav col-xs-12 col-ihg-tablet-8 col-sm-9 stackingModule marketingNav">
+						<div class="navColumns">							
+								<div class="colOne">
+									<div class="navHeaders">			
+										<div class="brandNav__heading colOneheader">
+										
+											公司</div>
+									</div>
+										
+										<span class="brandNav__navItem first-xs">
+																			 <a href="//www.ihg.com/ihg/hotels/cn/zh/hd" title="探索酒店">
+																				探索酒店</a>
+																		</span>
+																<span class="brandNav__navItem second-xs">
+																			 <a href="//www.ihg.com/hotels/us/en/hd" title="探索酒店">
+																				探索酒店</a>
+																		</span>
+																<span class="brandNav__navItem first-xs">
+																			 <a href="//www.ihg.com/hotels/us/en/global/support/brands" title="洲际酒店集团全球品牌">
+																				洲际酒店集团全球品牌</a>
+																		</span>
+																<span class="brandNav__navItem second-xs">
+																			 <a href="http://partnerconnect.ihg.com/" title="Partner Connect">
+																				Partner Connect</a>
+																		</span>
+																<span class="brandNav__navItem first-xs">
+																			 <a href="http://www.ihgagent.com/portal/server.pt?open=512&amp;objID=11273&amp;PageID=0&amp;cached=true&amp;mode=2" title="IHG Agent">
+																				IHG Agent</a>
+																		</span>
+																<span class="brandNav__navItem second-xs">
+																		<a class="utilityNav-link u-link nav-middle footer_Customer_Care uhfpopup" href="http://customerservice.ihg.com/ihg/bot.html?isJSEnabled=1&amp;businessArea=Root.IHG" title="需要帮助？">
+                                                                            需要帮助？</a>
+																	</span>
+																</div>
+								<div class="colTwo">
+									<span class="brandNav__navItem first-xs ">
+																	 <a href="//www.roomkey.com/" title="RoomKey.com">
+																		RoomKey.com</a>
+																</span>
+														<span class="brandNav__navItem second-xs ">
+																	 <a href="//www.ihg.com/rewardsclub/us/en/emailoffers/home" title="电子邮件管理">
+																		电子邮件管理</a>
+																</span>
+														<span class="brandNav__navItem first-xs ">
+																	 <a href="//www.ihg.com/armyhotels/hotels/us/en/reservation" title="IHG Army Hotels">
+																		IHG Army Hotels</a>
+																</span>
+														<span class="brandNav__navItem second-xs ">
+																	 <a href="//www.ihg.com/hotels/us/en/global/customer_care/travel_advisory" title="旅行提示">
+																		旅行提示</a>
+																</span>
+														<span class="brandNav__navItem first-xs ">
+																	 <a href="https://www.ihg.com/rewardsclub/us/en/account/memberMaterials" title="Member Materials">
+																		Member Materials</a>
+																</span>
+														</div> <div class="colThree">
+									<span class="brandNav__navItem second-xs">
+																			 	<a href="//www.ihg.com/hotels/cn/zh/global/customer_care/member-tc" title="会员条款与细则">
+																					会员条款与细则</a>
+																			</span>
+																		<a href="https://www.ihg.com/content/cn/zh/customer-care/privacy_statement#3rd-party" rel="nofollow" title="AdChoices">
+                                                                            	AdChoices<img class="adChoiceImage" src="//ihg.scene7.com/is/image/ihg/uhf_AdChoices_12x12?fmt=png-alpha" />
+																			</a>
+                                                                        <span class="brandNav__navItem second-xs">
+																			 	<a href="//www.ihg.com/content/cn/zh/customer-care/tc" title="使用条款">
+																					使用条款</a>
+																			</span>
+																		<span class="brandNav__navItem first-xs">
+																			 	<a href="//www.ihg.com/content/cn/zh/customer-care/privacy_statement.html" title="Privacy Statement and Cookie Usage">
+																					Privacy Statement and Cookie Usage</a>
+																			</span>
+                                                                        <span class="brandNav__navItem second-xs">
+																			 	<a href="//www.ihg.com/content/cn/zh/support/site-map" title="网站地图">
+																					网站地图</a>
+																			</span>
+																		</div> </div>
+						</div>
+						
+					
+					
+					
+					<div class="hrCol col-xs-12 visible-xs-block">
+						<hr class="footerHr visible-xs-block" />
+					</div>					
+				</div>
+			
+				<!-- START : Top Destination -->
+				<div class="row topDestinationsContainer">
+						<div class="stackingModule col-xs-12">
+							<div id="topDestinations" class="topDestinations show-destinationsList">
+								<div id="destinationsToggle" class="destinationsToggle"> 
+									<i id="topDestinationsIcon"></i>
+									<strong>
+										热门目的地</strong>
+								 </div>
+								 <ul id="destinationsList" class="destinationsList list-unstyled list-inline small">							 
+									<li class="destinationElement">
+	                                                 <a href="//www.ihg.com/hotels/us/en/hd/united-states/georgia/atlanta-hotels" title="亚特兰大酒店">亚特兰大酒店</a>
+	                                             </li>
+	                                         <li class="destinationElement">
+	                                                 <a href="//www.ihg.com/hotels/us/en/hd/united-states/illinois/chicago-hotels" title="芝加哥酒店">芝加哥酒店</a>
+	                                             </li>
+	                                         <li class="destinationElement">
+	                                                 <a href="//www.ihg.com/hotels/us/en/hd/united-states/texas/dallas-hotels" title="达拉斯酒店">达拉斯酒店</a>
+	                                             </li>
+	                                         <li class="destinationElement">
+	                                                 <a href="//www.ihg.com/hotels/us/en/hd/united-states/hawaii/honolulu-hotels" title="檀香山酒店">檀香山酒店</a>
+	                                             </li>
+	                                         <li class="destinationElement">
+	                                                 <a href="//www.ihg.com/hotels/us/en/hd/united-states/texas/houston-hotels" title="休斯顿酒店">休斯顿酒店</a>
+	                                             </li>
+	                                         <li class="destinationElement">
+	                                                 <a href="//www.ihg.com/hotels/us/en/hd/united-states/california/los-angeles-hotels" title="洛杉矶酒店">洛杉矶酒店</a>
+	                                             </li>
+	                                         <li class="destinationElement">
+	                                                 <a href="//www.ihg.com/hotels/us/en/hd/united-states/new-york/new-york-city-hotels" title="纽约酒店">纽约酒店</a>
+	                                             </li>
+	                                         <li class="destinationElement">
+	                                                 <a href="//www.ihg.com/hotels/us/en/hd/united-states/florida/orlando-hotels" title="奥兰多酒店">奥兰多酒店</a>
+	                                             </li>
+	                                         <li class="destinationElement">
+	                                                 <a href="//www.ihg.com/hotels/us/en/hd/united-states/california/san-francisco-hotels" title="旧金山酒店">旧金山酒店</a>
+	                                             </li>
+	                                         <li class="destinationElement">
+	                                                 <a href="//www.ihg.com/hotels/us/en/hd/united-states/district-of-columbia/washington-hotels" title="华盛顿特区酒店">华盛顿特区酒店</a>
+	                                             </li>
+	                                         <li class="destinationElement">
+	                                                 <a href="//www.ihg.com/hotels/us/en/hd/united-states/nevada/las-vegas-hotels" title="拉斯维加斯酒店">拉斯维加斯酒店</a>
+	                                             </li>
+	                                         <li class="destinationElement">
+	                                                 <a href="//www.ihg.com/hotels/us/en/hd/united-states/louisiana/new-orleans-hotels" title="新奥尔良酒店">新奥尔良酒店</a>
+	                                             </li>
+	                                         <li class="destinationElement">
+	                                                 <a href="//www.ihg.com/hotels/us/en/hd/united-kingdom/london-hotels" title="伦敦酒店">伦敦酒店</a>
+	                                             </li>
+	                                         <li class="destinationElement">
+	                                                 <a href="//www.ihg.com/hotels/us/en/hd/france/paris-hotels" title="巴黎酒店">巴黎酒店</a>
+	                                             </li>
+	                                         <li class="destinationElement">
+	                                                 <a href="//www.ihg.com/hotels/us/en/hd/united-arab-emirates/dubai-hotels" title="迪拜酒店">迪拜酒店</a>
+	                                             </li>
+	                                         <li class="destinationElement">
+	                                                 <a href="//www.ihg.com/hotels/us/en/hd/australia/sydney-hotels" title="悉尼酒店">悉尼酒店</a>
+	                                             </li>
+	                                         <li class="destinationElement">
+	                                                 <a href="//www.ihg.com/hotels/cn/zh/hd/australia/sydney-hotels" title="悉尼酒店">悉尼酒店</a>
+	                                             </li>
+	                                         <li class="destinationElement">
+	                                                 <a href="//www.ihg.com/hotels/us/en/hd/netherlands/amsterdam-hotels" title="阿姆斯特丹酒店">阿姆斯特丹酒店</a>
+	                                             </li>
+	                                         <li class="destinationElement">
+	                                                 <a href="//www.ihg.com/hotels/us/en/hd/canada/ontario-hotels" title="多伦多酒店">多伦多酒店</a>
+	                                             </li>
+	                                         <li class="destinationElement">
+	                                                 <a href="//www.ihg.com/hotels/us/en/hd/china/shanghai-hotels" title="上海酒店">上海酒店</a>
+	                                             </li>
+	                                         <li class="destinationElement">
+	                                                 <a href="http://blog.ihg.com/" title="IHG 旅行博客">IHG 旅行博客</a>
+	                                             </li>
+	                                         <li class="destinationElement destiationElement--lastChild">
+	                                                 <a href="//www.ihg.com/hotels/cn/zh/hd/united-states/florida/orlando-hotels" title="佛罗里达州奥兰多酒店">佛罗里达州奥兰多酒店</a>
+	                                             </li>
+	                                         </ul>
+							</div>
+						</div>
+					</div>
+				<!-- END : Top Destination -->
+				
+				<!-- START : Resdirect & App -->
+				<div class="row">
+					<div class="col-xs-12 col-ihg-tablet-8 col-sm-9 bpgResDirectWrapper">
+						<div class="stackingModule BPGstackingModule">
+								<span class="drawer-toggle" data-target="#BPGdrawer" data-toggle="drawer">							
+									<img src="//ihg.scene7.com/is/image/ihg/ihg-bpg-sim-chinese-tagline?fmt=png-alpha" alt="最低房价保证" class="footer-bpg" />
+								</span>
+							</div>
+						<div class="resDirectCol stackingModule">
+							
+														
+							<p class="resDirectText">
+							 在线预订或电话预订： <br /> 
+								<a class="resDirectNum" data-uhf-hook="resDirectNumber" href="tel:18778343613">1 877 834 3613</a>
+							</p>							
+							<p class="resDirectDisclaimer" hidden="true" data-uhf-hook="resDirectMessage">
+								<span>每分钟 13 便士 + 网费</span> 									
+								<a href="javascript:void(0);" class="tooltipQuestion hasBlankPopover" tabindex="0" data-content="从英国拨打 0871 开头的电话，话费为每分钟 13 便士。会收取标准网费。使用手机拨打电话，话费会更高。" data-toggle="popover" data-placement="top" data-trigger="focus" data-animation="true">
+									<i class="fa fa-question-circle"></i>
+								</a>
+							</p>
+						</div>						
+					</div>
+					
+				
+					<div class="col-xs-12 col-ihg-tablet-4 col-sm-3 stackingModule ourAppsWrapper">
+						<div class="row">						
+							<div class="col-xs-12 col-ihg-tablet-12 col-sm-12">
+							<div class="ourApps">
+									<div class="row">
+										<div class="col-xs-12 col-ihg-tablet-12 col-sm-12">
+											<a href="http://go.onelink.me/ihg?pid=global_desktop&amp;c=global_desktop_cn_zh_footer&amp;af_web_dp=http%3A%2F%2Fwww.ihg.com%2Fhotels%2Fcn%2Fzh%2Fglobal%2Foffers%2Fmobile&amp;cm_sp=OSMGC-CN-ZH-MAN-Footer-AppDownload" title="Available on the App Store" target="_blank">
+												<img class="iosApp" src="//ihg.scene7.com/is/image/ihg/uhf_ios_badge_zh_cn?fmt=png-alpha" alt="Available on the App Store" />
+											</a>
+											<a href="http://go.onelink.me/ihg?pid=global_desktop&amp;c=global_desktop_cn_zh_footer&amp;af_web_dp=http%3A%2F%2Fwww.ihg.com%2Fhotels%2Fcn%2Fzh%2Fglobal%2Foffers%2Fmobile&amp;cm_sp=OSMGC-CN-ZH-MAN-Footer-AppDownload" title="Android App on Google Play" target="_blank">
+												<img class="androidApp" src="//ihg.scene7.com/is/image/ihg/uhf_android_badge_zh_cn?fmt=png-alpha" alt="Android App on Google Play" />
+											</a>
+											</div>
+									</div>
+									<span class="ourAppsText socialElement__text--ourApps socialElement__text">
+											<b>无论生活引领你往何方</b><br /><a class="coloredLink" href="//www.ihg.com/content/cn/zh/support/mobile">进一步了解</a>我们的免费应用程序和手机网站</span>
+								</div>
+							</div>
+							</div>
+					</div>				
+				</div>
+				
+				<!-- END : Resdirect & App -->
+				
+				<!-- Start BPG Drawer -->	
+				<div class="row">
+						<div class="col-xs-12">
+							<div id="BPGdrawer" class="drawer">
+								<div class="BPGdrawerOuter drawer-outer">
+									<div class="drawer-content">
+										<div class="BPGdrawerModule">
+											<a class="BPGdrawer-close drawer-close" data-dismiss="drawer" aria-label="Close" href="javascript:void(0);" rel="nofollow">
+												<i class="fa fa-times-circle" aria-hidden="true"></i>
+											</a>
+											<div class="BPGdrawer-item">
+												<h5 class="BPGdrawer-heading">放心预订</h5>
+											</div>
+											<div class="BPGdrawer-item">
+													<a href="//www.ihg.com/hotels/cn/zh/global/customer_care/bwc_lp?cm_sp=OSMGL-6C-CN-BPG" class="BPGdrawer-titleLink" rel="nofollow">优惠价格保证</a>
+													<p class="BPGdrawer-copy">我们承诺为您提供在线预订的优惠房价，如您发现其他渠道的更低价，我们将采用该价格，并赠送您 IHG® Rewards Club 优悦会五倍积分，积分上限为 40,000 点。</p>
+												</div>
+											<div class="BPGdrawer-item">
+													<a href="null" class="BPGdrawer-titleLink" rel="nofollow"></a>
+													<p class="BPGdrawer-copy">本优惠价格保证不适用中国大陆、澳门、香港和台湾地区的酒店。</p>
+												</div>
+											<div class="BPGdrawer-item">
+													<a href="//www.ihg.com/hotels/cn/zh/global/customer_care/bwc_lp?cm_sp=OSMGL-6C-CN-BPG" class="BPGdrawer-titleLink" rel="nofollow">在线预订保证</a>
+													<p class="BPGdrawer-copy">我们将保留您的预订。</p>
+												</div>
+											<div class="BPGdrawer-item">
+													<a href="//www.ihg.com/hotels/cn/zh/global/customer_care/bwc_lp?cm_sp=OSMGL-6C-CN-BPG" class="BPGdrawer-titleLink" rel="nofollow">不收预订费！</a>
+													<p class="BPGdrawer-copy">直接通过我们预订客房将不收取任何预订费用。</p>
+												</div>
+											<div class="BPGdrawer-item">
+													<a href="//www.ihg.com/hotels/cn/zh/global/customer_care/bwc_lp?cm_sp=OSMGL-6C-CN-BPG" class="BPGdrawer-titleLink" rel="nofollow">数据隐私和网站安全</a>
+													<p class="BPGdrawer-copy">IHG 认真看待并努力保护您的隐私。我们会对您提供的所有个人信息加密并保证安全。</p>
+												</div>
+											</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				<!-- End BPG Drawer -->		
+				
+			</div>
+		</div>
+		
+		
+		<div id="footer-brandBarModule" class="footer-brandBarModal__backdrop">
+			<div class="footer-brandBarModal__dialog">
+				<div class="footerWrap">
+					<div class="container">
+						<!-- container fluid -->
+						<div class="row">
+							<div class="col-xs-12">
+								<span id="footer-brandBarModal__close" class="footer-brandBarModal__close">
+									<i class="fa fa-close"></i>
+								</span>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-ihg-tablet-12 col-sm-12">
+								<nav class="footer-brandBar">
+									<div class="footer-brandsCol footer-brandBar__col">
+										<div class="footer-brandBarItem-6c footer-brandBarItem">
+											<a class="footer-brandBar-link-6c brandBar-link" href="//www.ihg.com/hotels/cn/zh/reservation" title="点击后将在此浏览器窗口内重新导入洲际酒店集团网站。" data-cookie-trigger="pt">IHG</a>
+										</div>
+
+										<div class="footer-brandBarItems">
+											<div class="footer-brandBarItem-ic footer-brandBarItem">
+													<a class="brandBar-link-ic brandBar-link footer-brandBar-link" data-cookie-trigger="pt" href="//www.ihg.com/intercontinental/hotels/cn/zh/reservation" title="选择后将会重新在此浏览器窗口加载洲际酒店及度假村网站。">选择后将会重新在此浏览器窗口加载洲际酒店及度假村网站。</a>
+                                               </div>                                           
+                                             <div class="footer-brandBarItem-ki footer-brandBarItem">
+													<a class="brandBar-link-ki brandBar-link footer-brandBar-link" data-cookie-trigger="pt" href="//www.ihg.com/kimptonhotels/hotels/cn/zh/reservation" title="选择后会在新的浏览器窗口重新加载 Kimpton®酒店和餐厅网站。">选择后会在新的浏览器窗口重新加载 Kimpton®酒店和餐厅网站。</a>
+                                               </div>                                           
+                                             <div class="footer-brandBarItem-ul footer-brandBarItem">
+													<a class="brandBar-link-ul brandBar-link footer-brandBar-link" data-cookie-trigger="" href="//www.ihg.com/hualuxe/hotels/cn/zh/reservation" title="选择后将会在新浏览器窗口打开华邑酒店及度假村网站。">选择后将会在新浏览器窗口打开华邑酒店及度假村网站。</a>
+                                               </div>                                           
+                                             <div class="footer-brandBarItem-hi footer-brandBarItem">
+													<a class="brandBar-link-hi brandBar-link footer-brandBar-link" data-cookie-trigger="pt" href="//www.ihg.com/holidayinn/hotels/cn/zh/reservation" title="选择后将会重新在此浏览器窗口加载假日酒店网站。">选择后将会重新在此浏览器窗口加载假日酒店网站。</a>
+                                               </div>                                           
+                                             <div class="footer-brandBarItem-ex footer-brandBarItem">
+													<a class="brandBar-link-ex brandBar-link footer-brandBar-link" data-cookie-trigger="pt" href="//www.ihg.com/holidayinnexpress/hotels/cn/zh/reservation" title="选择后将会重新在此浏览器窗口加载智选假日酒店网站。">选择后将会重新在此浏览器窗口加载智选假日酒店网站。</a>
+                                               </div>                                           
+                                             <div class="footer-brandBarItem-va footer-brandBarItem">
+													<a class="brandBar-link-va brandBar-link footer-brandBar-link" data-cookie-trigger="pt" href="//www.ihg.com/avidhotels/hotels/cn/zh/reservation" title="选择后将会重新在此浏览器窗口加载 avid 酒店网站。">选择后将会重新在此浏览器窗口加载 avid 酒店网站。</a>
+                                               </div>                                           
+                                             <div class="footer-brandBarItem-in footer-brandBarItem">
+													<a class="brandBar-link-in brandBar-link footer-brandBar-link" data-cookie-trigger="pt" href="//www.ihg.com/hotelindigo/hotels/cn/zh/reservation" title="选择后将会重新在此浏览器窗口加载英迪格酒店网站。">选择后将会重新在此浏览器窗口加载英迪格酒店网站。</a>
+                                               </div>                                           
+                                             <div class="footer-brandBarItem-vn footer-brandBarItem">
+													<a class="brandBar-link-vn brandBar-link footer-brandBar-link" data-cookie-trigger="pt" href="//www.ihg.com/evenhotels/hotels/cn/zh/reservation" title="选择后将会重新在此浏览器窗口加载 EVEN 酒店网站。">选择后将会重新在此浏览器窗口加载 EVEN 酒店网站。</a>
+                                               </div>                                           
+                                             <div class="footer-brandBarItem-cp footer-brandBarItem">
+													<a class="brandBar-link-cp brandBar-link footer-brandBar-link" data-cookie-trigger="pt" href="//www.ihg.com/crowneplaza/hotels/cn/zh/reservation" title="选择后将会重新在此浏览器窗口加载皇冠假日酒店及度假村网站。">选择后将会重新在此浏览器窗口加载皇冠假日酒店及度假村网站。</a>
+                                               </div>                                           
+                                             <div class="footer-brandBarItem-cv footer-brandBarItem">
+													<a class="brandBar-link-cv brandBar-link footer-brandBar-link" data-cookie-trigger="pt" href="//www.ihg.com/holidayinnclubvacations/hotels/cn/zh/reservation" title="选择后将会重新在此浏览器窗口加载 Holiday Inn Club Vacations 网站。">选择后将会重新在此浏览器窗口加载 Holiday Inn Club Vacations 网站。</a>
+                                               </div>                                           
+                                             <div class="footer-brandBarItem-rs footer-brandBarItem">
+													<a class="brandBar-link-rs brandBar-link footer-brandBar-link" data-cookie-trigger="pt" href="//www.ihg.com/holidayinnresorts/hotels/cn/zh/reservation" title="选择后将会重新在此浏览器窗口加载假日度假酒店网站。">选择后将会重新在此浏览器窗口加载假日度假酒店网站。</a>
+                                               </div>                                           
+                                             <div class="footer-brandBarItem-sb footer-brandBarItem">
+													<a class="brandBar-link-sb brandBar-link footer-brandBar-link" data-cookie-trigger="" href="//www.ihg.com/staybridge/hotels/cn/zh/reservation" title="选择后将会重新在此浏览器窗口加载 Staybridge Suites 网站。">选择后将会重新在此浏览器窗口加载 Staybridge Suites 网站。</a>
+                                               </div>                                           
+                                             <div class="footer-brandBarItem-cw footer-brandBarItem">
+													<a class="brandBar-link-cw brandBar-link footer-brandBar-link" data-cookie-trigger="" href="//www.ihg.com/candlewood/hotels/cn/zh/reservation" title="选择后将会重新在此浏览器窗口加载 Candlewood Suites 网站。">选择后将会重新在此浏览器窗口加载 Candlewood Suites 网站。</a>
+                                               </div>                                           
+                                             <div class="clearfix visible-ihg-tablet-block"></div>
+										</div>
+										<div class="clearfix"></div>
+									</div>
+
+									<div class="footer-rewardsCol footer-brandBar__col">
+                                        <div class="footer-brandBarItem--rewards">
+                                            <a class="footer-brandBar-link--rewards brandBar-link" href="//www.ihg.com/rewardsclub/content/cn/zh/home" title="点击后将在新的浏览器窗口中打开IHG Rewards Club优悦会网站。">Rewards Club</a>
+                                        </div>
+                                    </div>
+									<div class="clearfix"></div>
+								</nav>
+							</div>
+						</div>
+						<div class="row">
+							<div class="visible-xs col-ihg-tablet-12 col-sm-12">
+								<p id="brandBarTagline" class="brandBarTagLine">探索我们的 IHG 品牌家族</p>
+								
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>	
+		
+	
+		<div class="footerWrap">
+			<div class="container lozengeContainer">
+				<div class="row">
+					<div class="col-xs-12">
+						<div class="brandBarLozengeModule">
+							<p id="lozengeTagline" class="lozengeTagLine">探索我们的 IHG 品牌家族</p>
+							<div class="brandBarLozenge">
+								<a href="javascript:void(0);" id="footer-brandBarModalToggle">
+									
+											<img src="//ihg.scene7.com/is/image/ihg/uhf_ihg_logo@2x-1?fmt=png-alpha" class="brandBarLozengeInner" alt="探索我们的 IHG 品牌家族" />														
+											</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="brand-color-bkg">
+			<div class="footerWrap">
+				<div class="container">
+					<div class="row">
+						<div class="col-xs-12">
+							<div class="footer-copyrightBlock">
+								<small class="footer-copyrightText com-domain">© 2019 洲际酒店集团。 版权所有。 多数酒店为独立产权及独立经营。<a class="link-copyright-cn" href="http://www.miibeian.gov.cn/" target="_blank" style="padding-right: 10px;">上海ICP备案号 09027645</a><div class="footer-copyrightText" style="display: inline-block;width: auto;"><a class="link-copyright-cn" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=31011502007301" target="_blank" style="line-height: 2;"><img src="//ihg.scene7.com/is/image/ihg/ihg-psb-registration-logo?wid=23&amp;hei=28&amp;fmt=png-alpha" style="float:left;width: auto;height: 20px;padding-right: 5px;" />沪公网安备31011502007301号</a></div></small>
+								</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+						
+
+		<!-- UHF : FOOTER : START : EU Cookie + extras -->
+		
+		 <div id="dialog-euCookie" class="euCookieContainer">
+	<div class="euCookieContent">
+        <div class="euCookieCloseIcon">
+        	<i class="fa fa-times"></i>
+    	</div>
+	    <div class="euCookieText">
+	        <div class="text parbase LinkMorpher">
+		        <h3>Cookie 用法及设置</h3>
+		            <p>此网站的标准 cookie 政策是允许所有 cookie。这将帮助您获得最优体验。如需继续获得我们最优的网站体验，您不需要做任何更改。如需<a href="/content/gb/en/customer-care/privacy_statement" class="underLine">了解更多关于我们如何使用cookie</a>或更改您的设置，您可随时使用位于任一页面下方的链接。</p>
+		    </div>
+		</div>
+	</div>
+</div>
+<div class="backdrop-transparent uhfSharedDialog modal" id="modal0871Disclaimer" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-body">
+				<p data-uhf-hook="resDirectMessage">从英国拨打 0871 开头的电话，话费为每分钟 13 便士。会收取标准网费。使用手机拨打电话，话费会更高。</p>
+			</div>
+			<div class="modal-footer">
+				<a data-uhf-hook="resDirectNumber" href="tel:18774242449" data-no-replace="content" class="btn btn-primary">致电</a>
+				<button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+			</div>
+		</div>
+	</div>
+</div>
+<div id="dialog-ajaxDefaultError">
+    <div class="ajaxDefaultError-Container">
+        <div class="errorIcon-container">
+            <i class="fa fa-exclamation-circle"></i>
+        </div>
+        <div class="errorMessage-container">
+            <div class="errorMsg">很抱歉，我们的系统暂时无法使用。请稍后重试或联系<a href="/hotels/cn/zh/customer-care/contact-us">IHG<sup>®</sup>Rewards Club 优悦会客服中心</a>寻求帮助。</div>
+        </div>
+    </div>
+</div>
+
+<div id="ssoImagesDiv" hidden="true"></div>
+
+<form id="tpiDivForm" action="" method="POST" hidden="true">
+	<input type="hidden" value="true" name="displayCaptcha" />
+	<input type="hidden" value="" name="fwdest" id="fwdest" />
+</form>
+
+
+
+		
+<!-- UHF : FOOTER : END : EU Cookie + extras -->
+		
+		<!-- UHF : FOOTER : START : Brazillian Consent -->
+		
+		<div class="uhfSharedDialog modal sl_whiteout" id="modalBrazilianConsent" tabindex="-1" role="dialog" aria-labelledby="BrazilianConsent" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+				<div class="brazilConsentHeaderBackground">
+				</div>
+			</div>
+			<div class="modal-body">
+				<p><span class="bold">
+				Você está deixando nosso website da IHG<sup>®</sup> em Português para o Brasil e entrando na versão em Inglês do nosso website para as marcas:</span><br /><br />InterContinental, Holiday Inn® Hotels &amp; Resorts,  Holiday Inn Club Vacations®, Holiday Inn Express® Hotels, Crowne Plaza® Hotels &amp; Resorts, Hotel Indigo®, HUALUXE™ Hotels e Resorts, EVEN™ Hotels, Candlewood Suites®,Staybridge Suites®  e IHG® Rewards Club.</p> 
+				<p>Você gostaria de visita a IHG.com Brasil para continuar em Português?</p>
+			</div>
+			<div class="modal-footer">
+				<a type="button" class="btn btn-primary" href="//www.ihg.com/hotels/pt/pt/reservation">Sim</a>
+				<button type="button" class="btn btn-default" data-dismiss="modal" id="handleCLYes" value="Yes">Não</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<!-- UHF : FOOTER : END : Brazillian Consent -->
+		
+		<!-- UHF : START : FOOTER : Korean consent -->
+		<!-- UHF : END : FOOTER : Korean consent -->
+		
+		
+		</footer>
+		
+
+		
+	
+        
+    <div id="bottomOfPage"></div>
+  <script type="text/javascript">var _cf = _cf || []; _cf.push(['_setFsp', true]); _cf.push(['_setBm', true]); _cf.push(['_setAu', '/assets/9ecb6bdf2016133a0d54f020b4bc']);</script><script type="text/javascript" src="/assets/9ecb6bdf2016133a0d54f020b4bc"></script></body>
+

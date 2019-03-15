@@ -267,7 +267,7 @@ class Vercode(object):
         time.sleep(0.5)
         while distance > 0:
             if distance > 10:
-                # 如果距离大于10，就让他移动快一点
+                # 如果距离大于10，就让其移动快一点
                 # span = random.randint(5, 8)
                 span = random.randint(10, 15)
             else:

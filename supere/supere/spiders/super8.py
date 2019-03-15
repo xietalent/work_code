@@ -38,4 +38,4 @@ class MySpider(Spider):
         filename = '{}.html'.format(domain)
         with open(filename, 'wb') as f:
             f.write(response.body)
-        print('---------------------------------------------------')
+        print('------------------------over---------------------------')

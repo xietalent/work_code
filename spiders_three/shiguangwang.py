@@ -128,13 +128,13 @@ class Mtime(object):
         # WebDriverWait(self.browser,10,0.5).until(EC.element_to_be_clickable((By.CLASS_NAME,"_1W7Vd")))
         # sleep(10)
 
-        self.browser.get("http://vip.mtime.com/")
+        self.browser.get("http://vip.mtime.com/mymtimecoin")
         with open(r'E:\code\spiders_three\cookie_bag\Mtime_cook.txt', 'r', encoding='utf-8') as fp:
             list_cookies = json.loads(fp.read())
             for c in list_cookies:
                 self.browser.add_cookie(c)
-        self.browser.get("http://vip.mtime.com/")
-        WebDriverWait(self.browser, 10, 0.5).until(EC.element_to_be_clickable((By.CLASS_NAME, "_1W7Vd")))
+        self.browser.get("http://vip.mtime.com/mymtimecoin")
+        WebDriverWait(self.browser, 10, 0.5).until(EC.element_to_be_clickable((By.CLASS_NAME, "_201Jn")))
         sleep(5)
 
     def start(self):
@@ -145,7 +145,7 @@ class Mtime(object):
                 WebDriverWait(self.browser,10,0.5).until(EC.element_to_be_clickable((By.ID,'headlogined')))
                 print("登录结束")
                 self.get_cookie()
-                # self.get_cookie()
+                self.get_cookie()
                 break
             except Exception as e:
                 print(e)

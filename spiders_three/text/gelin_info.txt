@@ -1,0 +1,2123 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="renderer" content="webkit" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="keywords" content=",Holiday Inn USA,Days Inn USA,Ramada USA,Super8 USA" />
+    <meta name="description" content=",Holiday Inn USA,Days Inn USA,Ramada USA,Super8 USA" />
+    <meta property="qc:admins" content="247337670461106375" />
+    <meta name="Copyright" content="格林酒店集团" />
+    <script src="/Scripts/sourcecode.js"></script>
+
+    
+
+
+
+
+    <script type="text/javascript">
+
+        var globalCityId = "226";
+        var globalCityText = "上海";
+
+        var globalMyIP = '';
+    </script>
+
+
+
+    <link href="/Content/themes/common?v=cU82fskdV6WE01hdNKA4T0ojE9eN4GiR6XjXj3LveLA1" rel="stylesheet"/>
+
+    <link href="/Content/themes/OAuth2/OAuth?v=cBBnpSvZ-5VdjuNRwyiP5I2SkVb5MmVLEG4asshPM5U1" rel="stylesheet"/>
+
+    <link href="/Content/themes/LoginCommon?v=qwsesFZMslWJQsckd7zsSxBRXPdxBmiDQPG81t24PKM1" rel="stylesheet"/>
+
+    
+    <link href="/Content/themes/user?v=a1cWVzfv7pZUVUlJ8GNGtl0UGiLPZ99My7afQLsHjqM1" rel="stylesheet"/>
+
+
+    <script src="/bundles/layout?v=qaP9fK6NDonrHRO49KEh7R9wO46GiW5sf58yHbRK-zM1"></script>
+
+    <link href="/Style/LayoutMain?v=JvB2JSkPOwgag6v0JQJJdZwh_fO1M-CCSqjQ6Csp2EQ1" rel="stylesheet"/>
+
+
+    <script>
+        var isAndroid = (/android/gi).test(navigator.appVersion);
+        var isIPadDevice = (/ipad/gi).test(navigator.appVersion);
+        var isIDevice = (/iphone/gi).test(navigator.appVersion);
+        var isPlaybook = (/playbook/gi).test(navigator.appVersion);
+        var isTouchPad = (/hp-tablet/gi).test(navigator.appVersion);
+        var isWindowsPhone = (/windows phone/gi).test(navigator.appVersion);
+        var isHasLinux = (/linux/gi).test(navigator.appVersion);
+        var isGecko = (/gecko/gi).test(navigator.appVersion);
+        if (isAndroid || isIDevice || isWindowsPhone || (isHasLinux && isGecko)) {
+            if (window.location.href.indexOf("www.998.com/HotelDetail?hotelCode=") > -1) {
+                window.location.href = "https://i.998.com/search/homeList?hotelcode=" + window.location.href.split("www.998.com/HotelDetail?hotelCode=")[1];
+            } else {
+                window.location.href = 'https://i.998.com';
+            }
+        }
+    </script>
+
+
+
+
+
+    <link href="/Content/Amendment/bootstrap.css" rel="stylesheet" />
+    <link href="/Content/Amendment/bootstrap-responsive.css" rel="stylesheet" />
+    <link href="/Content/Amendment/_layout.css" rel="stylesheet" />
+    <link href="/Content/Amendment/PopBoxDiv.css" rel="stylesheet" />
+
+    <script type="text/javascript" src="/Scripts/Amendment/carousel.js"></script>
+    <script type="text/javascript" src="/Scripts/Amendment/realia.js"></script>
+
+    <script type="text/javascript" src="/Scripts/Amendment/LoadJs.js"></script>
+
+<script src="/Scripts/My97DatePicker/WdatePicker.js?v=X-mRQjA3zm95MfgRN71LjyzqzkzemerUo88nXnosyIw1"></script>
+<link href="/Content/themes/CH_public?v=3UD87jHvObggMLdxpzqwoFOqZoxUqugMSSAJw7m6h4g1" rel="stylesheet"/>
+    <link href="/Content/themes/brand/brand_0.css" rel="stylesheet" />
+    <script src="https://cstaticdun.126.net/load.min.js"></script>
+
+
+
+
+    <!--[if lt IE 9]>
+        <script src="/Scripts/Amendment/html5.js"></script>
+    <![endif]-->
+    <!--start slider -->
+    <!--[if lt IE 9]>
+        <script src="/Scripts/Amendment/css3-mediaqueries.js"></script>
+    <![endif]-->
+    <!--[if lt IE 10]>
+        <script type="text/javascript">
+            /*去除IE8下 密码框的提示*/
+            $(function(){
+                $('input[type="password"]').each(function(){
+                    $(this).removeAttr("placeholder");
+                });
+            });
+            var IsIE8=true;
+        </script>
+    <![endif]-->
+    <!--[if lt IE 9]>
+        <link href="/Content/Amendment/ie8Compatibility.css" rel="stylesheet" />
+    <![endif]-->
+
+    <script type="text/javascript">
+        $(document).ready(function (e) {
+
+            var lang = 'CHS';
+            if (lang == 'CHS') {
+                lang = 'zh-CN';
+            } else {
+                lang = 'en-US';
+            }
+            $.i18n.properties({
+                mode: 'both',
+                cache: false,
+                encoding: 'UTF-8',
+                callback: function () {
+                    $(document).keydown(function (event) {
+                        if (event.keyCode == 13) {
+                            if (window.location.href.indexOf('/Account/Sign') >= 0) {
+                                $('#btnSign').click();
+                            } else if (window.location.href.indexOf('/UserRegister/Signin') >= 0) {
+                                $('#signin_signinBtn').click();
+                            } else {
+                                if ($('#loginSigninWindow').is(':visible')) {
+                                    if ($('#con_one1').is(':visible')) {
+                                        $('#signBtn').click();
+                                    } else if ($('#con_one2').is(':visible')) {
+                                        $('#signinBtn').click();
+                                    }else if($('#con_one_3').is(':visible')){
+                                        $("#btnQuickSign").click();
+                                    }
+                                } else {
+                                }
+                            }
+                        }
+                    });
+                }
+            });
+        });
+    </script>
+
+
+
+
+
+
+
+    <title>会员中心</title>
+
+
+    <style type="text/css">
+        #overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #000;
+            opacity: 0.5;
+            filter: Alpha(Opacity=50);
+            z-index: 9999999999;
+            display: none;
+        }
+
+        /*
+            html #overlay {
+                position: absolute;
+            }
+            */
+        #win {
+            position: absolute;
+            left: 220px;
+            display: none;
+            z-index: 999999999999999;
+        }
+
+        input, textarea {
+            color: #000;
+        }
+
+        .placeholder {
+            color: #666;
+        }
+
+        #btnCode {
+            text-align: center;
+            display: inline-block;
+            cursor: pointer;
+            color: #2A4F67;
+            font-size: 12px;
+            font-weight: bold;
+        }
+
+        .lg_login_code_img {
+            float: none !important; /*样式优先使用*/
+            height: 32px;
+        }
+
+        .up-box-hd {
+            cursor: move;
+        }
+
+        .mainlevel ul {
+            display: none;
+            position: absolute;
+            z-index: 9999;
+            width: 64px;
+            margin: 0px;
+        }
+
+            .mainlevel ul li {
+                list-style: none;
+                display: block;
+                background-color: #2A4F67 !important;
+                margin: 0px !important;
+                width: 100%;
+                text-align: center !important;
+            }
+
+                .mainlevel ul li a {
+                    font-size: 14px !important;
+                    margin: 0px !important;
+                }
+    </style>
+
+
+
+</head>
+<body class="theme_green" id="body">
+    <header>
+        <div class="wrapper">
+            <div class="header_top">
+                <!-- 网站顶部子品牌 -->
+                <div class="childBrand greenWestBrand" onclick="ChangeBrand('40');">
+                    <em><span></span>格林东方酒店：作为集团旗下精品中高端酒店，设计独具东方王气之美，风格独特。地处繁华商圈或成熟高新园区，地理位置优越，交通便利；酒店设置多种房型、配备商务中心、健康餐饮等设施，倡导绿色、健康、高品质生活，大多数房间价格在300元-600元。目前太原、常州、衢州、西双版纳、淮南、马鞍山、日照、郑州等地均有开业或筹建中的格林东方酒店。  </em>
+                </div>
+                <div class="childBrand gmeBrand " onclick="ChangeBrand('20');">
+                    <em><span></span>
+        格美酒店成立于2017年，是格美集团旗下中高端商务酒店，大多数房间价格在280元-350元，旨在为商务旅客提供一个独有情调的静享空间。 “Go with Me”，在充满文化气息与优雅设计的格美酒店，体验专属您的商务空间。
+      </em>
+
+                </div>
+                <div class="childBrand gyaBrand" onclick="ChangeBrand('21');">
+                    <em><span></span>
+        格雅酒店成立于2017年，是格美集团旗下中高端时尚酒店，大多数房间价格在280元-350元，旨在为旅客提供一个彰显个性的时尚俱乐部，一同邂逅属于我们的色彩缤纷的精神家园。
+      </em>
+
+
+                </div>
+                <div class="childBrand vXBrand" onclick="ChangeBrand('22');">
+                    <em>
+                        <span></span>
+        格菲酒店成立于2017年，是格美集团旗下中高端休闲酒店，大多数房间价格在280元-350元。酒店融合了青春潮流和艺术内饰，极具本土文化气息，并以多姿多彩的大堂和艺术设计为我们的旅客创造出一个“Very Relaxing”的空间。
+      
+                    </em>
+
+                </div>
+                <div class="childBrand greenTreeBrand" onclick="ChangeBrand('00');">
+                    <em><span></span>格林豪泰酒店是格林酒店集团旗下中端经典商务酒店品牌，作为中国连锁酒店品牌规模前四强，格林豪泰始终秉承“客人利益永远第一”，致力于提供“超健康、超舒适、超价值、超期望”的酒店产品和服务。酒店配备早餐厅、会议室、商务中心、健身房、书吧等，大多数房间价格在180元-400元之间。	</em>
+                </div>
+                <div class="childBrand greenUnionBrand" onclick="ChangeBrand('30');">
+                    <em><span></span>格盟酒店：是国内第一家不同品位的中高端商务酒店联盟品牌，酒店充分借鉴地方建筑及装修风格，巧妙结合格林豪泰温馨舒适、健康环保的品牌理念，造就了全国格盟酒店品位不同、格调各异的品牌风格，带来多样化入住体验，大多数房间价格在150-400元之间。成为中国独具特色的高性价比酒店连锁品牌。	</em>
+                </div>
+                <div class="childBrand vaticaBrand" onclick="ChangeBrand('50');">
+                    <em><span></span>青皮树酒店：是格林酒店集团旗下的“年轻时尚”酒店产品，倡导绿色、环保、低碳的生活方式，让年轻白领身处城市之中，却能感受到大自然一般的清新入住体验。酒店配备独立卫生间、书桌、床头柜、24小时免费光纤上网、冷热水、独立冷暖空调等，设施齐全，服务周到，大多数房间价格在130-300元之间。目前，泰安、上海、廊坊、天津、泰州、淮安、南京、汕头、呼和浩特等地均有开业或筹建中的青皮树酒店。	</em>
+                </div>
+                <div class="childBrand shellBrand" onclick="ChangeBrand('70');">
+                    <em><span></span>贝壳酒店是背包客、白领、大学生的最佳选择。酒店设计时尚，步入走廊即刻拥有梦幻、抽象的时尚体验，客房更采用不同颜色主题尽现个性化。酒店实现智能化入住，直接线上APP预订、储值返现，更有机会享受手机开门、智能遥控客房设备、通讯设备无线充电、蓝牙音乐等最“潮”体验。  </em>
+                </div>
+                <div class="childBrand abroadBrand">
+                    <em onclick="ChangeBrand('90');"><span></span>
+        国外酒店Overseas Hotel是格林酒店集团重磅推出的国外酒店预订平台，致力于为出境客人提供海量国外酒店信息查询、超值国外酒店预订、实用海外住宿攻略。无论是浪漫的韩国济州岛海景，或是阳光明媚的美国凤凰城，登录格林酒店集团“海外酒店”，来一场充满风情的世界之旅。
+       </em>
+                    <em class="append" onclick="window.location.href='https://www.greentreeinn.com/cn'">美国官网</em>
+                </div>
+
+
+                <style>
+                    #jionTop {
+                        display: none;
+                    }
+                </style>
+                <script type="text/javascript">
+                    function show(obj) {
+                        var XS = document.getElementById(obj);
+                        XS.style.display = "block";
+                    }
+                    function hide(obj) {
+                        var YC = document.getElementById(obj);
+                        YC.style.display = "none";
+                    }
+                </script>
+
+
+                <!-- 网站顶部子品牌右侧位置 -->
+                <div class="layoutHeaderRight">
+                    <div class="header-circle" style="width:50px;" title="帮助中心">
+                        <a href="/Help" target="_blank">帮助中心</a>
+                    </div>
+                    
+                    <div onmouseover="show('jionTop')" onmouseout="    hide('jionTop')" style="text-align: center; height: 40px; width: 20px; line-height: 40px; background-color: #FFF; float: right; cursor: pointer; position: relative;">
+                        <img src="/Images/Amendment/layout/appDown.png" style="height: 50%; width: 100%; " />
+                        <div id="jionTop" style="width: 268px; display: none; position: absolute; height: 140px; right: 18px; top: 14px; z-index: 999999; background-image  :url(/Images/Amendment/layout/jionTop.png)"><p><a href="#">&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;<br />&nbsp;&nbsp;</a></p></div>
+
+                    </div>
+                    <div class="language-switcher" style="float:right;">
+                            <a href="/UserCenter/ChanageLanguage?returnURL=http%3A%2F%2Fwww.998.com%2FUserCenter&amp;lanType=1" lang="en" style="color:#313131;">中文</a>
+                            <span>·</span>
+                            <a class="notNow" href="/UserCenter/ChanageLanguage?returnURL=http%3A%2F%2Fwww.998.com%2FUserCenter&amp;lanType=2">EN</a>
+                    </div>
+                    <div class="header-login" style="display:none">
+                        <a>我的格林</a>&nbsp;
+                        <a href="/Account/Sign">登录</a>&nbsp;
+                        <a href="/UserRegister/Signin">注册</a>
+                    </div>
+
+                </div>
+            </div><!-- /.row -->
+        </div>
+        <!-- 导航 -->
+        <div id="navigation">
+            <a class="hidden-desktop" id="btn-nav" style="float:left;margin-left:10px;"><img src="/Images/Amendment/layout/btn-nav.png" />格林豪泰酒店集团</a>
+            <div class="wrapper">
+                <div class="navigation-wrapper">
+                    <div class="navigation clearfix-normal">
+                        <div style="height: 60px; width: 240px; float: left; line-height:60px;color:#FFF;cursor:pointer;" class="groupLogo" onclick="ChangeBrand('99');">
+                            <img src="/Content/Images/HomePage/logo.png" />
+                        </div>
+
+                        <ul class="nav" style="margin-left:20px;">
+
+
+                            
+                                <li class="active"><a href="/">首页</a></li>
+
+                            
+                                <li class="mainlevelbb">
+                                    <a href="javascript:void(0)">酒店预订</a>
+                                    <div class="divDroplist">
+                                        <div class="divTriangle"></div>
+                                        <ul>
+                                            <li><a href="/HotelList">国内酒店</a></li>
+                                            <li><a href="javascript:void(0)" onclick="ChangeBrand('90')">海外酒店</a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+
+                            
+                                <li><a href="/Selected">优惠精选</a></li>
+                            
+                                <li><a href="http://www.168.com">168商城</a></li>
+                            
+                                <li class="mainlevelbb">
+                                    <a href="javascript:void(0)">会员福利</a>
+                                    <div class="divDroplist">
+                                        <div class="divTriangle"></div>
+                                        <ul>
+                                            <li><a href="/ColorfulMember">成为会员</a></li>
+                                            <li><a href="/Help/list?typeId=ff8db4d3-4a3f-41f0-9574-c6ed036554af">会员手册</a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                            
+                                <li class="mainlevelbb">
+                                    <a href="javascript:void(0)">新闻论坛</a>
+                                    <div class="divDroplist">
+                                        <div class="divTriangle"></div>
+                                        <ul>
+                                            <li><a href="/NewsCenter">新闻中心</a></li>
+                                            <li><a href="/Forum">论坛社区</a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+
+                            
+                                <li><a href="/Join/JoiningGreen">加盟</a></li>
+
+                            
+                            <li><a href="http://998.zhiye.com/" target="_blank">人才</a></li>
+                        </ul><!-- /.nav -->
+
+                        <div style="position:relative">
+                            <div class="header-login">
+                                <a class="Hovergreen">我的格林</a>&nbsp;
+                                    <b>
+                                        <a href="/UserCenter" title="小熊">
+                                            小熊
+                                        </a>
+                                    </b>
+                            </div>
+                            <div tabindex="-1" id="MygreenDiv_hide" class="MygreenDiv hide" style="display: none;">
+
+                                <div>
+                                    <span>
+                                        <a id="MyCredits" class="spec" href="/UserCenter/MyCredits">
+                                            K币：
+0                                        </a>
+                                    </span>
+                                </div>
+                                <div>
+                                    <span>
+                                        <a id="MyCoupon" href="/UserCenter/MyCoupon">
+                                            代金券：
+2                                            张
+                                        </a>
+                                    </span>
+                                </div>
+                                <div>
+                                    <span>
+                                        <a id="MyStoredValue" href="/MyStoredValueCard">
+                                            储值余额：
+0.00                                            元
+                                        </a>
+                                    </span>
+                                </div>
+
+                                <div><span><a href="/UserCenter/MyOrder">我的订单</a></span></div>
+                                <div><span><a href="/UserCenter/MyHotel">我的酒店</a></span></div>
+                                <div><span><a target="_blank" href="/Help/list?typeId=7c27b12f-9cbd-4171-9776-09ad571a6ca8">会员手册</a></span></div>
+
+                                    <div id="userExit" class="exit">
+                                        <a href="/Account/SignOut"><img src="/Content/themes/img/exit.jpg"><span>退出</span></a>
+                                    </div>
+
+                            </div>
+                        </div>
+                    </div><!-- /.navigation -->
+                </div><!-- /.navigation-wrapper -->
+            </div><!-- /.container -->
+
+        </div><!-- /.navigation -->
+    </header>
+    <section>
+        <div id="wrapper">
+            <div id="wrapper-inner">
+                <!-- 导航 -->
+                <!-- CONTENT -->
+                <div class="pageContent">
+                    <div class="wrapper" style="min-height:500px;">
+                        
+<div class="row" style="margin:auto;">
+    <div class="usercenter_container">
+
+        
+        <div  class="span4" style="margin-left:0px;">
+            
+<script src="/Scripts/Amendment/navgoco/jquery.cookie.js"></script>
+<script src="/Scripts/Amendment/navgoco/jquery.cookie.min.js"></script>
+<script src="/Scripts/Amendment/navgoco/jquery.navgoco.js"></script>
+<link href="/Scripts/Amendment/navgoco/jquery.navgoco.css" rel="stylesheet" />
+<link href="/Content/Amendment/UserCenter.css" rel="stylesheet" />
+
+<style type="text/css">
+    .nav_container li, .nav_container a {
+        box-sizing: border-box;
+    }
+    .li_hasId_check {
+        background-color: #2a4f67;
+        color: #f5f5f5 !important;
+    }
+    .lih {
+        background-color: #f0f3eb;
+    }
+</style>
+<!--[if lt IE 9]>
+    <style type="text/css">
+        #saveBtn
+        {
+            margin-left:-75px;
+        }
+        #uploadLink
+        {
+            background:none !important;
+            filter: progid:DXImageTransform.Microsoft.Gradient(startColorstr=#88000000,endColorstr=#88000000) !important;
+        }
+        .container
+        {
+            width:98% !important;
+            min-width:1000px;
+        }
+        .row
+        {
+            width:98%;
+        }
+        .span8
+        {
+            margin-left:20px;
+            width:72%;
+        }
+        .span4{
+            width:23%;
+            margin-left:15px;
+        }
+        #couponCode
+        {
+            max-width:150px;
+        }
+    </style> 
+<![endif]-->
+
+
+
+<div class="nav_container">
+    <ul class="gti_nav" style="border-right: thin dashed #A09C9C;">
+        <li><a style="color: white;" href="/UserCenter">会员中心</a></li>
+        <li>
+            <a href="#" class="lih">订单中心</a>
+            <ul>
+                <li id="MyHotelOrder" data-href="MyOrder"><a href="/UserCenter/MyOrder">酒店订单</a></li>
+                <li id="MyGiftOrder">
+                    <a href="https://www.168.com/member.html">商城订单</a>
+                </li>
+                <li id="ReplaceRoomOrder" data-href="ReplaceRoomOrder">
+                    <a href="/UserCenter/ReplaceRoomOrder">K币换房</a>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <a href="#" class="lih">我的账户</a>
+            <ul>
+                <li id="MyProfile" data-href="MyProfile"><a href="/UserCenter/MyProfile">我的资料</a></li>
+                <li id="MySocial" data-href="MySocial"><a href="/UserCenter/MySocial">社交帐号</a></li>
+                <li id="MyCredits" data-href="MyCredits"><a href="/UserCenter/MyCredits">我的K币</a></li>
+                <li id="MyCoupon" data-href="MyCoupon"><a href="/UserCenter/MyCoupon">我的代金券</a></li>
+                <li id="MyReview" data-href="MyReview"><a href="/UserCenter/MyReview">我的点评</a></li>
+                <li id="MyHotel" data-href="MyHotel"><a href="/UserCenter/MyHotel">我的酒店</a></li>
+                <li id="MyContact" data-href="MyContact"><a href="/UserCenter/MyContact">常住人员管理</a></li>
+                <li id="MyMessage" data-href="MyMessage"><a href="/UserCenter/MyMessage">我的消息</a></li>
+                <li id="MyCash" data-href="MyCash"><a href="/UserCenter/MyCash">我的现金券</a></li>
+                <li id="MyUnionPayCash" data-href="MyUnionPayCash"><a href="/UserCenter/MyUnionPayCash">我的银联现金券</a></li>
+                <li id="MyFreeRoomCoupon" data-href="MyFreeVouchers"><a href="/UserCenter/MyFreeVouchers">我的免房券</a></li>
+                <li id="MyBankCard" data-href="MyBankCard"><a href="/UserCenter/MyBankCard">我的银行卡</a></li>
+                <li id="MyBankCard" data-href="MyStoredValueCard"><a href="/MyStoredValueCard">我的储值</a></li>
+                <li id="ExtractCashRecord" data-href="MyExtractCash"><a href="/UserCenter/MyExtractCash">我的提现记录</a></li>
+                <li id="ExtractCash" data-href="ExtractCash"><a href="/UserCenter/ExtractCash">提现</a></li>
+                <li id="ExchangeMallIcon" data-href="ExchangeMallCoin"><a href="/UserCenter/ExchangeMallCoin">商城预存款兑换</a></li>
+                <li id="ExchangeMallIcon" data-href="MyMallCoin"><a href="/UserCenter/MyMallCoin">商城预存款</a></li>
+                <li id="MyMerchant" data-href="MyMerchantReview"><a href="/UserCenter/MyMerchantReview">我的商户点评</a></li>
+                <li id="MyMerchantReview" data-href="MyMerchant"><a href="/UserCenter/MyMerchant">我收藏的商户</a></li>
+                <li id="CommInvoiceManage" data-href="CommInvoiceManage"><a href="/UserCenter/CommInvoiceManage">发票管理</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="#" class="lih">会员手册</a>
+            <ul>
+                <li id=""><a target="_blank" href="/Help/detaile?typeId=ff8db4d3-4a3f-41f0-9574-c6ed036554af&amp;infoId=07783a5f-6fe6-465a-9001-36adb361079b">会员卡分类</a></li>
+                <li id=""><a target="_blank" href="/Help/detaile?typeId=ff8db4d3-4a3f-41f0-9574-c6ed036554af&amp;infoId=adf7708b-c4b8-41b3-a533-111396d396ff">获取方式</a></li>
+                <li id=""><a target="_blank" href="/Help/detaile?typeId=ff8db4d3-4a3f-41f0-9574-c6ed036554af&amp;infoId=c42332e4-85d9-4ec7-aa13-4dbbbb9e731a">会员待遇</a></li>
+                <li id=""><a target="_blank" href="/Help/detaile?typeId=ff8db4d3-4a3f-41f0-9574-c6ed036554af&amp;infoId=2b75d290-907b-46b8-80de-64b01f7616ab">使用方法</a></li>
+                <li id=""><a target="_blank" href="/Help/detaile?typeId=ff8db4d3-4a3f-41f0-9574-c6ed036554af&amp;infoId=d4c3bea7-8935-46ec-a10b-8783519acda2">K币说明</a></li>
+                <li id=""><a target="_blank" href="/Help/list?typeId=a8c51a9a-681b-4eba-97dc-9ff6023b1727">常用问题</a></li>
+            </ul>
+        </li>
+    </ul>
+
+</div>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('.gti_nav').navgoco({
+            caretHtml: '<i class="some-random-icon-class"></i>',
+            accordion: false,
+            openClass: 'open',
+            save: true,
+            cookie: {
+                name: 'navgoco',
+                expires: true,
+                path: '/'
+            },
+            slide: {
+                duration: 400,
+                easing: 'swing'
+            }
+        });
+    });
+    /*全部展开*/
+    $(".gti_nav").navgoco('toggle', true);
+
+
+
+    //记住选择项
+
+    //显示选择项
+    $(document).ready(function () {
+        var liid = getCookie("ClickLi_datahref");
+        if(liid!="" && liid !=null && typeof(liid)!="undefined")
+        {
+            var href = window.location.href;
+            if(href.indexOf(liid)>=0)//保存的和当前网页显示的一致时，选中当前项
+            {
+                $(".gti_nav li").each(function () {
+                    if ($(this).attr("data-href") == liid)
+                    {
+                        $(this).children("a").addClass("li_hasId_check");
+                    }
+                });
+            }
+        }
+    });
+
+    $(".gti_nav li a").on("click", function () {
+        if ($(this).parent("li").attr("data-href") != "" && $(this).attr("href") != "" && $(this).attr("href") != "#")
+        {
+            SetAllLiIsNoCheck();
+            $(this).addClass("li_hasId_check");
+            //记录id
+            var liid = $(this).parent("li").attr("data-href");
+            setCookie("ClickLi_datahref", liid);
+        }
+    });
+
+    ///清楚所有li的选中状态
+    function SetAllLiIsNoCheck()
+    {
+        $(".gti_nav li a").each(function () {
+            if ($(this).parent("li").attr("data-href") != "" && $(this).attr("href") != "" && $(this).attr("href") != "#") {
+                $(this).removeClass("li_hasId_check");
+            }
+        });
+    }
+
+    function setCookie(name, value) {
+        var Days = 1;//保存半天
+        var exp = new Date();
+        exp.setTime(exp.getTime() + Days * 24 * 60 * 60 * 1000);
+        document.cookie = name + "=" + escape(value) + ";expires=" + exp.toGMTString() + ";path=/";
+    }
+    function getCookie(name) {
+        var arr, reg = new RegExp("(^| )" + name + "=([^;]*)(;|$)");
+        if (arr = document.cookie.match(reg))
+            return unescape(arr[2]);
+        else
+            return null;
+    }
+</script>
+        </div>
+
+        
+        <div class="span8" style=" padding-bottom: 60px;">
+            <div class="m m3" id="userinfo" style="width:100%;overflow:hidden;">
+                <div class="user">
+                    <div class="u-icon picture">
+                        <img  id="userImg" style="border-radius:100%" src="" onerror="this.src='/Images/Amendment/Login/user_default.png'"/>
+                    </div>
+                </div>
+                <!--user-->
+                <div id="i-userinfo">
+                    <div class="username">
+                        <div class="fl ftx-03" id="userinfodisp"><label style="display: inline;"><label style=" display:inline;font-weight:bold;">小熊</label> 阁下</label>，欢迎您！</div>
+                        <div class="extra" id="jdTask"></div>
+                    </div>
+                        <div class="account">
+                            <div id="memberInfo" class="member" style="display:block">
+                                <label style="font-size: 16px;">温馨提示:</label>
+                                
+                                <p>&nbsp;您的证件号尚不齐全，为方便您享受入住优惠、礼品兑换等会员权益，请尽快完善。<a href='/UserCenter/MyProfile'>【立即完善】</a></p>
+                            </div>
+                        </div>
+                    <!--end-->
+                    <div style="width:100%;box-sizing:border-box;">
+                        <div class="cardInfo">
+                            <div class="cinfo_fl">会员号:</div>
+                            <div class="cinfo_fl cardno">1001100010512689</div>
+                        </div>
+                        <div class="cardInfo">
+                            <div class="cinfo_fl">会员级别:</div>
+                            <div class="cinfo_fl" style="width:45%;">
+                                <div class="cinfo_fl" style="line-height: 0;min-height: 60px;padding:0px;">
+                                    <label class="cardno" style="padding-top: 20px;">网上数字卡</label>
+                                   
+                                </div>
+                                                            </div>
+                            <a class="primaryFont" href="/Help/detaile?typeId=ff8db4d3-4a3f-41f0-9574-c6ed036554af&infoId=c42332e4-85d9-4ec7-aa13-4dbbbb9e731a">【查看会员待遇】</a>
+                        </div>
+                                                    <div class="cardInfo" style="border-bottom: thin solid #DDDDDD;">
+                                <div class="cinfo_fl">手机号码:</div>
+                                <div class="cinfo_fl cardno">
+                                    19128324901
+                                </div>
+                                <div class="cinfo_fl" style="width:45%;">
+                                    
+
+                                </div>
+
+
+                                </div>
+                        
+                    </div>
+
+                </div>
+            </div>
+            
+            
+            <div class="m m3" style="width: 99%; overflow: hidden; border-radius: 2px; padding: 10px 0px 10px 14px; margin-bottom: 10px;">
+                <div class="">
+                    <label style="font-size: 16px;">信息提示</label>
+                    <div class="cardInfo">
+                        <div class="cinfo_fl">我的订单:</div>
+                        <div class="cinfo_fl">
+                            <p>您当前有<a class="cardno" href="/UserCenter/MyOrder">0</a>条未入住酒店订单</p>
+                        </div>
+                    </div>
+                    <div class="cardInfo">
+                        <div class="cinfo_fl">我的消息:</div>
+                        <div class="cinfo_fl">
+                            <p>您当前有<a class="cardno" href="/UserCenter/MyMessage">21</a>条未读消息</p>
+                        </div>
+                    </div>
+                    <div class="cardInfo" style="border-bottom: thin solid #DDDDDD;">
+                        <div class="cinfo_fl">我的K币:</div>
+                        <div class="cinfo_fl">
+                            <p>
+                                <label class="cardno" style="display: inline; padding: 0px 20px 0px 0px;">0 </label>
+                                <u style="text-decoration:none;">
+                                    <a class="exch_a exch_1" href="/UserCenter/MyCoupon?tab=one4">换代金券</a>
+                                    <a class="exch_a exch_2" href="/UserCenter/ExchangeMallCoin">换商城预存款去购物</a>
+                                </u>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+                    </div>
+                </div>
+
+                <style type="text/css">
+                    .container_test {
+                        padding-right: 15px;
+                        padding-left: 15px;
+                        margin-right: auto;
+                        margin-left: auto;
+                        box-sizing: border-box;
+                    }
+
+
+
+                    .btnJoin {
+                        height: 40%;
+                        text-align: center;
+                        border: 1px solid #2A4F67;
+                        width: 10%;
+                        color: #2A4F67;
+                        margin: 0 auto;
+                        margin-top: 10px;
+                        min-height: 50px;
+                        line-height: 50px;
+                        font-weight: bold;
+                        border-radius: 0px;
+                        cursor: pointer;
+                    }
+
+                        .btnJoin:hover {
+                            background-color: #2A4F67;
+                            color: #FFF;
+                        }
+
+                    .mid-content a {
+                        cursor: pointer;
+                    }
+
+                    #ui-datepicker-div {
+                        background: none;
+                    }
+
+                    .tdChildNav {
+                        font-size: 0.95em;
+                        text-align: left;
+                        padding-top: 5px;
+                        cursor: pointer;
+                        padding-left: 3px;
+                        line-height: 15px;
+                    }
+
+                        .tdChildNav a {
+                            text-decoration: none;
+                            color: #FFF;
+                        }
+
+                            .tdChildNav a:visited {
+                                text-decoration: none;
+                            }
+
+                        .tdChildNav::outside {
+                            font-weight: normal;
+                        }
+
+                    .tdTitleNav {
+                        font-size: 1.1em;
+                        text-align: left;
+                        cursor: pointer;
+                        font-weight: bold;
+                        line-height: 15px;
+                    }
+
+
+                    #divActivity {
+                        position: relative;
+                        overflow: auto;
+                    }
+
+                        #divActivity li {
+                            list-style: none;
+                        }
+
+                        #divActivity ul li {
+                            float: left;
+                        }
+
+                    .policeInfo {
+                        clear: both;
+                        height: 100%;
+                        width: 80%;
+                        margin: 0 auto;
+                        font-size: 0.93em;
+                        color: #FFF;
+                        padding-top: 20px;
+                        text-align: center;
+                    }
+
+                        .policeInfo a {
+                            color: #FFF;
+                            text-decoration: none;
+                        }
+
+                            .policeInfo a:visited {
+                                color: #FFF;
+                                text-decoration: none;
+                            }
+                </style>
+            </div><!-- /#wrapper-inner -->
+            <div id="footer-wrapper">
+
+            </div>
+
+
+
+        </div><!-- /#wrapper -->
+    </section><!-- /#wrapper-outer -->
+    <!--登录注册页面 -->
+    
+<!---<link rel="stylesheet" href="/Content/Amendment/_foot.css" media="all">->
+<!--[if lt IE 9]>
+    <style type="text/css">
+
+        .footer_bg{
+             width:1000px;
+            margin-left:auto;
+            margin-right:auto;
+        }
+
+    </style>
+<![endif]-->
+
+
+<div style="width: 100%; background-color: #5c5c5c; text-align:left" align="center;">
+    <!--start main -->
+    <footer style="max-width: 1200px; min-width: 1080px; padding: 0 30px; margin:auto; ">
+        <div class="BaseBox">
+            <div style="overflow:hidden">
+
+
+                    <div class="bottomPhone">
+                        <p class="title">格 林 酒 店  只 需 感 受</p>
+                        <p>客服热线：4006-998-998</p>
+                    </div>
+                <div class="bottomAd" style="float: right;">
+                    <ul>
+                            <li id="RightBottomImg"><img src="/Content/Images/HomePage/img_weixin.png"></li>
+                            <li class="lastAd"><img src="/Content/Images/HomePage/img_xcx.png"></li>
+                    </ul>
+                </div>
+                <style>
+                    #RightBottomImg {
+                        margin-right: 50px;
+                    }
+                </style>
+
+
+
+                <div class="bottomList " style="float:right">
+                    <script>
+                        if ("CHS" == "EN")
+                        {
+                            document.getElementsByClassName("bottomList")[0].style.fontSize = "12px";
+                            document.getElementsByClassName("bottomList")[0].style.float = "left";
+                        }
+                    </script>
+                    <ul class="outer">
+                        <li>
+                            <span class="title">酒店预订</span>
+                            <ul>
+                                <li><a href="/HotelList" target="_blank">列表预订</a></li>
+                                <li><a href="/HotelMap" target="_blank">地图预订</a></li>
+                                <li><a href="https://www.greentreeinn.com/en" target="_blank">格林美国</a></li>
+                                <li>&nbsp;</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <span class="title">合作加盟</span>
+                            <ul>
+                                <li><a href="/Join/JoiningGreen" target="_blank">加盟格林</a></li>
+                                <li><a href="/Information/cooperate" target="_blank">商务合作</a></li>
+                                <li><a href="/NewsCenter/DetailNew?id=35a24f2e-8b21-48ea-89d1-66381698c80c" target="_blank">招标信息</a></li>
+                                <li><a href="/NewsCenter/SupplierInfo?id=35a24f2e-8b21-48ea-89d1-66381698c80c" target="_blank">供应商名录</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <span class="title">关于格林</span>
+                            <ul>
+                                <li><a href="/Information/TouchUs" target="_blank">联系我们</a></li>
+                                <li><a href="/Information/defaultu" target="_blank">关于格林</a></li>
+                                <li><a href="/Information/Links" target="_blank">友情链接</a></li>
+                                <li><a href="http://ir.998.com" target="_blank">投资者关系</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <span class="title">格林微博</span>
+                            <ul>
+                                <li><a href="/Information/sina" target="_blank">格林官微</a></li>
+                                <li><a href="/Information/shuguang" target="_blank">曙光微博</a></li>
+                                <li><a href="http://998.com/Help/detaile?typeId=a5e11fd4-deea-4cd0-8cbe-aa64aaa06511&infoId=1706d4ae-2da6-4224-b826-362795d89d1e" target="_blank">投诉建议</a></li>
+                                <li>&nbsp;</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <div class="record">
+                <a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=31010702001346">沪公网安备31010702001346号</a>&nbsp;&nbsp;格林酒店集团版权所有 沪ICP备14035076号
+            </div>
+            <div class="record" style="margin-top:0;">
+                投资有风险,选择需谨慎
+            </div>
+        </div>
+    </footer>
+
+</div>
+
+    <link href="/Content/Less/Pages/HomePage/Footer.less" rel="stylesheet" />
+
+    <div id="payment-overlay" class="payment-overlay" style="display: none;"></div>
+    <div style="width: 1003px; margin: 0 auto" class="ly_popBoxDiv">
+        <div class="up-box w600" style="width: 441px;  left:445px; z-index: 200000000;  background: #fff; position: fixed; top: 80px; display: none" id="loginSigninWindow" dhxbox="1">
+
+
+            <div class="up-box-hd" id="up-box-hd-Login" style=" border-radius: inherit; border-bottom: 1px solid #ddd; color: #fff; font-family: '软雅黑';">
+                <span style="float: left">登录注册</span>
+                <a id="closeLoginSiginW" style="float: right; cursor: pointer; font-size: 24px; color: #FFF; text-decoration: none; margin-top: 3px;">×</a>
+            </div>
+            <div>
+            </div>
+            <form id="quickLoginForm" method="post" style="margin-bottom:0px;">
+
+                <div id="gl_tab_sign">
+
+                    <div class="gl_Menubox_a">
+                        <ul id="tab">
+                            
+                            <li id="one1" style="border-right:0px;border-left:0px;" name="one" class="hover" onclick="setLoginTab('one',1,3)">登录</li>
+                            <li id="one2" name="one" onclick="setLoginTab('one',2,3)">免费注册</li>
+                            
+                        </ul>
+                        
+                    </div>
+                    <div style="margin-top:20px;">
+                        
+                        <div name="con" id="con_one1" class="hover">
+                            
+                            <div class="item_lg">
+                                <span class="lg_span">
+                                    <i class="icon_small_login icon_small_user"></i>
+                                    会员号
+                                </span>
+                                <div class="lg_inputBox">
+                                    <input type="text" class="lg_input" id="userName" placeholder="卡号/手机号/邮箱" autocomplete="off" maxlength="30" />
+                                </div>
+                            </div>
+                            <div id="errUserName" class="base_error" style="display: none"></div>
+                            
+                            <div class="item_lg">
+                                <span class="lg_span">
+                                    <i class="icon_small_login icon_small_password"></i>
+                                    密码
+                                </span>
+                                <div class="lg_inputBox">
+                                    <input type="password" class="lg_input" id="userPass" placeholder="请输入密码" autocomplete="off" maxlength="30" />
+                                </div>
+                            </div>
+                            <div id="errUserPass" class="base_error" style="display: none"></div>
+                            
+                            <div class="item_yzm_outer" id="li_yzm" style="display:none;" data_value="1">
+                                <div class="item_lg item_no_top item_yzm" style="position:relative;">
+                                    <span class="lg_span">
+                                        <i class="icon_small_login icon_small_yzm"></i>
+                                        验证码
+                                    </span>
+                                    <div class="lg_inputBox lg_yzm_input">
+                                        <input type="text" class="lg_input" name="yzm" id="yzm" placeholder="请输入验证码" autocomplete="off" maxlength="4" />
+                                    </div>
+                                    <img id="loginImgCode" title="看不清,换一张" onclick="javascript:getLoginValiCode();" class="lg_login_code_img" style="height: 30px; position: absolute; right: 0px; top: 9.5px;" src="/Account/GetValidateCode" />
+                                </div>
+                            </div>
+                            <div id="errYzm" class="base_error" style="display: none"></div>
+                            <div class="item_lg item_no_top" style="outline: none; border: 0px;margin-top:-10px;">
+                                <div class="rememberMe">
+                                    <input type="checkbox" style="vertical-align:text-bottom;" name="isRemember" id="isRemember">
+                                    <label for="isRemember" style="vertical-align:middle;display:inline;">记住我</label>
+                                    <p style="position:absolute;right:0px;top:0px;"><a href="/Account/FindPassword">忘记密码？</a></p>
+                                </div>
+                            </div>
+                            <div class="item_lg item_no_top item_btn">
+                                <input id="signBtn" type="button" class="ko lg_btnSign" value="登录" />
+                            </div>
+                            
+                            <div style="width:100%;position:relative;overflow:hidden;">
+                                <div class="item_lg item_no_top item_btn item_nonMem" style="float: left; width: 30%; margin: 0px; margin-left: 9%;">
+                                    <p style="margin-top:8px;cursor:pointer;" onclick="setLoginTab('one',3,3)">快捷登录</p>
+                                </div>
+                                
+                                <div class="item_lg item_no_top item_btn item_nonMem" style="float: left; width: 40%; margin: 0px; margin-left: 10%;">
+                                    <p style="margin-top:8px;cursor:pointer;" onclick="this.children[0].click();"><a href="/UserCenter/AnyOneQueryOrder" target="_blank">非会员/协议订单管理</a></p>
+                                </div>
+                            </div>
+                            
+                            <div class="login_entry" style="margin-bottom:10px;margin-top:0px;">
+                                <p style="margin-bottom:0px;">合作网站账号登录</p>
+                                <ul class="account_list_big" id="oauthUiList"></ul>
+                            </div>
+                        </div>
+                        
+                        <div name="con" id="con_one2" style="display: none">
+                            <div class="">
+                                
+                                <div class="item_lg item_no_top">
+                                    <span class="lg_span">
+                                        <i class="icon_small_login icon_small_user"></i>
+                                        姓名
+                                    </span>
+                                    <div class="lg_inputBox">
+                                        <input autocomplete="OFF" class="lg_input" id="Popup_Name" name="Name" placeholder="请输入有效证件的姓名" type="text" value="小熊" />
+                                    </div>
+                                </div>
+                                <div id="Popup_errName" class="base_error" style="display: none"></div>
+
+                                
+                                <div class="item_lg">
+                                    <span class="lg_span">
+                                        <i class="icon_small_login icon_small_lifs"></i>
+                                        联系方式
+                                    </span>
+                                    <div class="lg_inputBox">
+                                        <input autocomplete="OFF" class="lg_input" id="Popup_Contact" name="Popup_Contact" placeholder="请输入手机或邮箱" type="text" value="" />
+                                    </div>
+                                </div>
+                                <div id="Popup_errEmail" class="base_error" style="display: none"></div>
+                                <div id="Popup_errPhone" class="base_error" style="display: none"></div>
+                                
+                                <div class="item_lg">
+                                    <span class="lg_span">
+                                        <i class="icon_small_login icon_small_password"></i>
+                                        密码
+                                    </span>
+                                    <div class="lg_inputBox">
+                                        <input class="lg_input" id="Popup_password" name="password" placeholder="请输入密码" type="password" />
+                                    </div>
+                                </div>
+                                <div id="Popup_errPassword" class="base_error" style="display: none"></div>
+                                
+                                <div class="item_lg">
+                                    <span class="lg_span">
+                                        <i class="icon_small_login icon_small_password"></i>
+                                        确认密码
+                                    </span>
+                                    <div class="lg_inputBox">
+                                        <input type="password" name="rePassword" id="Popup_rePassword" class="lg_input" placeholder=请输入密码 />
+                                    </div>
+                                </div>
+                                <div id="Popup_errRepwd" class="base_error" style="display: none"></div>
+                                
+                                <div class="item_yzm_outer" id="li_yzm" style="" data_value="1">
+                                    <div class="item_lg item_no_top item_yzm" style="position:relative;">
+                                        <span class="lg_span">
+                                            <i class="icon_small_login icon_small_yzm"></i>
+                                            验证码
+                                        </span>
+                                        <div class="lg_inputBox lg_yzm_input">
+                                            <input type="text" class="lg_input" name="ValidateCode" id="Popup_ValidateCode" placeholder="请输入验证码" autocomplete="off" maxlength="4" />
+                                        </div>
+                                        <img id="Popup_imgCode" title="看不清,换一张" onclick="javascript:getLoginValiCode();" class="lg_login_code_img" style="height: 30px; position: absolute; right: 0px; top: 9.5px;" src="/Account/GetValidateCode" />
+                                        
+                                    </div>
+                                </div>
+                                <div id="Popup_errValidateCode" class="base_error" style="display: none"></div>
+                                <input checked="checked" id="Popup_IsCheck" name="Popup_IsCheck" style="margin-left:40px;" type="checkbox" value="true" /><input name="Popup_IsCheck" type="hidden" value="false" />
+                                已认真阅读并同意<a href="/UserRegister/RegServices" target="_blank">《会员服务条款》</a>
+                                <div class="item_lg item_no_top item_btn">
+                                    <input id="signinBtn" type="button" class="ko lg_btnSign" style="margin-top:0px;" value="立即注册" />
+                                </div>
+                            </div>
+                        </div>
+
+                        
+                        <div name="con" style="display:none;" id="con_one3">
+                            
+                            <div class="item_lg item_no_top">
+                                <span class="lg_span">
+                                    <i class="icon_small_login icon_small_user"></i>
+                                    手机号
+                                </span>
+                                <div class="lg_inputBox">
+                                    <input type="text" class="lg_input" id="QLphoneNo" placeholder="请输入手机号码" autocomplete="off" maxlength="30" />
+                                </div>
+                            </div>
+                            
+                            <div class="item_yzm_outer" id="Verification" data_value="1">
+                                <div class="item_lg item_no_top item_yzm" style="position:relative;">
+                                    <span class="lg_span">
+                                        <i class="icon_small_login icon_small_yzm"></i>
+                                        验证码
+                                    </span>
+                                    <div class="lg_inputBox lg_yzm_input">
+                                        <input type="text" class="lg_input" id="qyzm_lay" placeholder="请输入验证码" autocomplete="off" maxlength="4" />
+                                    </div>
+                                    <img id="imgCodeLayout" title="看不清,换一张" onclick="flush('imgCodeLayout');" src="/Account/GetValidateCode" class="lg_login_code_img" style="height: 30px; position: absolute; right: 0px; top: 9.5px;" />
+                                </div>
+                            </div>
+                            
+                            <div class="item_yzm_outer">
+                                <div class="item_lg item_no_top item_yzm" data_value="1" style="position:relative;">
+                                    <span class="lg_span">
+                                        <i class="icon_small_login icon_small_password"></i>
+                                        登录验证码
+                                    </span>
+                                    <div class="lg_inputBox lg_yzm_input">
+                                        <input type="text" id="QLauthCode" class="lg_input" autocomplete="off" placeholder="请输入手机验证码" />
+                                    </div>
+                                    <input type="button" width="120" style=" height: 49px; position: absolute; right: 0; border-top: 0px; border-right: 0; border-bottom: 0;" id="btnCode" title="获取动态密码" value="获取动态密码" />
+                                </div>
+                            </div>
+                            <div class="item_lg item_no_top item_btn">
+                                <input type="button" id="btnQuickSign" checked="checked" class="ko lg_btnSign" style="margin-top:0px;" value="登录" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div id="rightButton" style="right:10px">
+        <ul id="right_ul">
+            <li id="right_qq" class="right_ico" show="qq" hide="tel" style=""></li>
+            <li id="right_tel" class="right_ico" show="tel" hide="qq"></li>
+            <li id="right_tip" class="png">
+
+                <div class="flagShow_p1 flag_tel">
+                    签到:<span>
+                        <a href="javascript:void(0);" id="li_sign" class="antiFont">
+未签到
+                        </a>
+                    </span>
+                </div>
+
+                <div class="flagShow_p1 flag_qq">
+
+                    <div class="bshare-custom">
+                        <div class="bsPromo bsPromo2"></div>
+                        <a title="分享到新浪微博" class="bshare-sinaminiblog"></a>
+                        <a title="分享到微信" class="bshare-weixin"></a>
+                        <a title="分享到QQ空间" class="bshare-qzone"></a>
+                        <a title="分享到腾讯微博" class="bshare-qqmb"></a>
+                        <a title="更多平台" class="bshare-more bshare-more-icon more-style-addthis"></a>
+                        
+
+                    </div>
+                    <script type="text/javascript" charset="utf-8" src="https://static.bshare.cn/b/buttonLite.js#style=-1&amp;uuid=&amp;pophcol=2&amp;lang=zh"></script>
+                    <script type="text/javascript" charset="utf-8" src="https://static.bshare.cn/b/bshareC0.js"></script>
+                </div>
+
+            </li>
+            <li id="backToTop">
+                <a href="javascript:;" onfocus="this.blur();" class="backToTop_a png"></a>
+            </li>
+        </ul>
+    </div>
+
+    <div style="text-align: center; clear: both">
+    </div>
+    <!--alert弹出层-->
+    <div id="alert-overlay" class="alert-overlay" style="display: none;"></div>
+    <div style="width: 1003px; margin: 0 auto">
+
+        <div class="up-box w600" style="border: thin solid #AFAEAE; z-index: 999999999999999999; background: #fff; position: fixed; top: 161px; width: 350px; min-height: 170px; display: none; " id="alertWindow" dhxbox="1">
+
+            <div class="up-box-hd darkFont" style="border-radius: inherit; border-bottom: 1px solid #ddd; font-family: '微软雅黑'; color:#fff">
+                提示
+                <span id="XCloseAlert" style="position: absolute; right: 5%; font-size: 24px;cursor:pointer;">×</span>
+            </div>
+            <span id="alertText" style="margin: 20px 20px; width: 315px; display: inline-block; text-align: left;text-indent:5px;"></span>
+            <p style="width: 315px; text-align: center;">
+                
+                <a href="javascript:void(0);" class="btn92 primaryBg" id="PopBtn_AlertFn" shape="rect" style="display:none;padding: 5px 20px; position: absolute; bottom: 15px; right: 95px; color: white; border-radius:5%; ">确定</a>
+                
+                <a href="javascript:void(0);" class="btn92 primaryBg" id="closeAlertWindow" shape="rect" style="padding: 5px 20px; display: inline-block; position: absolute; bottom: 15px; right: 15px; color: white; border-radius:5%; ">关闭</a>
+            </p>
+        </div>
+    </div>
+
+
+
+    <script type="text/javascript">
+
+        /*文本框得到焦点*/
+        //得到焦点
+        $("input[class=lg_input]").focus(function () {
+            var obj = $(this).parent().parent(".item_lg");
+            if (IsObjEmpty(obj))
+            {
+                obj.addClass("item_lg_active");
+            }
+        });
+        //失去焦点
+        $("input[class=lg_input]").focusout(function () {
+            var obj = $(this).parent().parent(".item_lg");
+            if (IsObjEmpty(obj)) {
+                obj.removeClass("item_lg_active");
+            }
+        });
+        /*点击文本获取文本框的焦点*/
+        $(".lg_span").on("click", function () {
+            var obj = $(this).next().children(".lg_input");
+            if(IsObjEmpty(obj))
+            {
+                obj.focus();
+            }
+        });
+        var IsObjEmpty=function(obj)
+        {
+            if(obj!=null && typeof (obj) != "undefined" && obj!="")
+            {
+                return true;
+            }
+            return false;
+        }
+
+        function GoQuickLogin()
+        {
+            flush('imgCodeLayout');//刷新验证码
+            $("#con_one1").css("display","none");
+            $("#con_one2").css("display","none");
+            $("#con_one_3").show(400);
+            //重写快捷登录的登录事件
+
+        }
+        function AntiSqlValid(oField) {
+            re = /select|update|delete|exec|count|’|"|=|;|>|<|%/i;
+            if (re.test(oField.value)) {
+                $.fn.showAlert("输入非法,请重新输入！");
+                oField.value = "";
+                oField.className = "errInfo";
+                oField.focus();
+                return false;
+            }
+        }
+
+        //登陆成功后的跳转
+        function AfterLogin(logintyle, ActivityType) {
+            switch (logintyle) {
+                case "1"://卡号
+                    if (ActivityType == "0") {
+                        window.location = "/UserRegister/signinValidatePE?activetype=0";
+                    } else {
+                        if ("" !== '') {
+                            window.location = "";
+                        } else {
+                            window.location = "/UserCenter";
+                        }
+                    }
+                    break;
+
+                case "2"://手机
+                    if (ActivityType == "0") {
+                        window.location = "/UserRegister/signinValidatePE?activetype=0";
+                    } else {
+                        if ("" !== '') {
+                            window.location = "";
+                        } else {
+                            window.location = "/UserCenter";
+                        }
+                    }
+
+                    break;
+                case "3"://邮箱
+                    if (ActivityType == "0") {
+                        window.location = "/UserRegister/signinValidatePE?activetype=0";
+                    } else {
+                        if ("" !== '') {
+                            window.location = "";
+                        } else {
+                            window.location = "/UserCenter";
+                        }
+                    }
+
+                    break;
+
+                default:
+                    break;
+            }
+
+        }
+
+    </script>
+
+    <script id="KeyWordTemplate" type="text/html">
+        <div id="popKeyWord_${id}" class="c_address_box" style="display: none">
+            <a class="close" href="javascript:;">×</a>
+            {{if zoneList}}
+            <dl class="key_word_list">
+                <dt>热门商圈</dt>
+                <dd>
+                    {{each zoneList}}<a data-category="zoneId" id="p_keyword_${$value.ID}" data="${$value.Name}" title="${$value.Name}" href="javascript:void(0);">${$value.Name}</a>{{/each}}
+                </dd>
+            </dl>
+            {{/if}}
+
+            {{if slList}}
+            <dl class="key_word_list">
+                
+                <dt>机场车站</dt>
+                <dd>
+                    {{each slList}}<a data-category="slId" id="p_keyword_${$value.ID}" data="${$value.Name}" title="${$value.Name}" href="javascript:void(0);">${$value.Name}</a>{{/each}}
+                </dd>
+            </dl>
+            {{/if}}
+
+            {{if metroList}}
+            <dl class="key_word_list">
+                <dt>地铁</dt>
+                <dd>
+                    {{each metroList}}<a data-category="metroId" id="p_keyword_${$value.ID}" data="${$value.Name}" title="${$value.Name}" href="javascript:void(0);">${$value.Name}</a>{{/each}}
+                </dd>
+            </dl>
+            {{/if}}
+
+            {{if locationList}}
+            <dl class="key_word_list">
+                <dt>行政区</dt>
+                <dd>
+                    {{each locationList}}<a data-category="locationId" id="p_keyword_${$value.ID}" data="${$value.Name}" title="${$value.Name}" href="javascript:void(0);">${$value.Name}</a>{{/each}}
+                </dd>
+            </dl>
+            {{/if}}
+            {{if merchantList}}
+            <dl class="key_word_list">
+                <dt>酒店信息</dt>
+                <dd id="Merchant_Hotel">
+                    {{each merchantList}}<a data-category="locationId" id="p_keyword_${$value.ID}" data="${$value.Name}" title="${$value.Name}" href="javascript:void(0);">${$value.Name}</a><br />{{/each}}
+                </dd>
+            </dl>
+            {{/if}}
+        </div>
+    </script>
+
+    <script id="KeyWordSuggestTemplate" type="text/html">
+        <div id="suggestKeyWord_${id}" class="c_address_boxd">
+            <div class="c_address_title">
+                <p>若需缩小范围，需填更多信息</p>
+                <a class="close" href="javascript:;">×</a>
+            </div>
+
+            {{if mdList}}
+            <div class="sisa">
+                <span>门店</span>
+                {{each mdList}}<a data-category="zdId" id="s_keyword_${$value.ID}" data="${$value.Name}" title="${$value.Name}" href="javascript:void(0);">${$value.Name}</a>{{/each}}
+            </div>
+            {{/if}}
+
+            {{if jcList}}
+            <div class="sisa">
+                <span>机场车站</span>
+                {{each jcList}}<a data-category="zdId" id="s_keyword_${$value.ID}" data="${$value.Name}" title="${$value.Name}" href="javascript:void(0);">${$value.Name}</a>{{/each}}
+            </div>
+            {{/if}}
+
+
+            {{if merchantList}}
+            <div class="sisa">
+                <span>酒店信息</span>
+                {{each merchantList}}
+                <a data-category="otherId" id="s_keyword_${$value.ID}" data="${$value.Name}" title="${$value.Name}" href="javascript:void(0);">${$value.Name}</a>{{/each}}
+            </div>
+            {{/if}}
+
+
+
+
+            {{if otherList}}
+            <div class="sisa">
+                <span>其它</span>
+                {{each otherList}}<a data-category="otherId" id="s_keyword_${$value.ID}" data="${$value.Name}" data-value="${$value.Pointxy}" title="${$value.Name}" href="javascript:void(0);">${$value.Name}</a>{{/each}}
+            </div>
+            {{/if}}
+
+            {{if searchList}}
+            <div class="sisa">
+                <span>搜索</span>
+                {{each searchList}}<a data-category="otherId" id="s_keyword_seach_${$value.ID}" data="${$value.Name}" data-value="${$value.Pointxy}" title="${$value.Name}" href="javascript:void(0);">${$value.Name}</a>{{/each}}
+            </div>
+            {{/if}}
+        </div>
+    </script>
+    
+
+    
+    <script type="text/html" id="CommonListTail">
+        <div class="CommonListTail">
+            <div>
+                <img class="tail_icon" src="${img}">
+            </div>
+            <div class="tail_content">
+                ${title}
+            </div>
+        </div>
+    </script>
+    <script src="/Scripts/blankListTail.js"></script>
+
+    <script type="text/javascript">
+
+
+        $(function(){
+            //弹窗登录可拖拽
+            dragAndDrop("#loginSigninWindow","#up-box-hd-Login");
+            //消息框可拖拽
+            dragAndDrop("#alertWindow",".up-box-hd");
+        });
+
+
+        /*  AnyOneQueryOrder.js中的中文常量 Start  */
+        var AnyOneQueryOrder_Remainder = "剩余";
+        var AnyOneQueryOrder_Second = "秒";
+        var AnyOneQueryOrder_GetVerificationCode = "获取登录验证码";
+        var AnyOneQueryOrder_VerificationCodeSended = "验证码已发送到";
+        var AnyOneQueryOrder_NoteToReceive = "请注意查收";
+        var AnyOneQueryOrder_PhoneNotEmpty = "手机号码不能为空";
+        var AnyOneQueryOrder_VerificationInfoNotEmpty = "手机号不能为空";
+        /*  AnyOneQueryOrder.js中的中文常量 End    */
+        var flagTime = 180;
+
+        function QLsetbuttonText() {
+            if (flagTime > 0) {
+                flagTime--;
+                $("#btnCode").val(AnyOneQueryOrder_Remainder + flagTime + AnyOneQueryOrder_Second);
+                id_of_setinterval = setTimeout(QLsetbuttonText, 1000);
+                $("#btnCode").attr("title", AnyOneQueryOrder_Remainder + flagTime + AnyOneQueryOrder_Second);
+            } else {
+                flagTime = 180;
+                clearTimeout(id_of_setinterval);
+                $("#btnCode").removeAttr("disabled");
+                $("#btnCode").val(AnyOneQueryOrder_GetVerificationCode);
+                $("#btnCode").attr("title", '获取登录验证码');
+
+                $("#qyzm_lay").removeAttr("readonly");//恢复验证码
+                $("#imgCodeLayout").bind("click",function(){flush('imgCodeLayout');});
+                flush('imgCodeLayout');
+            }
+        }
+
+
+        //初始化
+        $(document).ready(function () {
+            //$.navlevel3("li.mainlevel", 0);
+            // 发送手机短信
+            $("#btnCode").click(function () {
+                if ($("#btnCode").attr("disabled") == "disabled")
+                {
+                    return false;
+                }
+                var phoneNo = $.trim($("#QLphoneNo").val());
+                var qyzm_lay = $.trim($("#qyzm_lay").val());
+                //if (!phoneNo.isMobile()) {
+                //    alert("请填写正确的手机号！");
+                //   flush('imgCodeLayout');
+                //    $("#QLphoneNo").focus();
+                //    return;
+                //}
+                if(!fastLoginCheckPhone($("#QLphoneNo"),$("#errQLphoneNo"))){
+                    flush('imgCodeLayout');
+                    $("#QLphoneNo").focus();
+                    return false;
+                }
+                if(!fastLoginCheckValidateCode($("#qyzm_lay"),$("#errQyzm_lay"))){
+                    flush('imgCodeLayout');
+                    $("#qyzm_lay").focus();
+                    return false;
+                }
+                //if (qyzm_lay == "" || qyzm_lay == null)
+                //{
+                //    alert("请输入验证码");
+                //    flush('imgCodeLayout');
+                //    $("#qyzm_lay").focus();
+                //    return;
+                //}
+                if (phoneNo.length > 0) {
+                    $.ajax({
+                        url: '/UserCenter/SMSLoginCode',
+                        data: { mobile: phoneNo,code: qyzm_lay},
+                        dataType: 'Json',
+                        type: 'Post',
+                        success: function (data) {
+                            if (data.result) {
+                                $("#btnCode").attr("disabled", "disabled");
+                                $.fn.showAlert(AnyOneQueryOrder_VerificationCodeSended + phoneNo + AnyOneQueryOrder_NoteToReceive);
+                                // 进行修改 按钮文字
+                                QLsetbuttonText();
+
+                                $("#imgCodeLayout").removeAttr("onclick");
+                                $("#qyzm_lay").attr("readonly", "readonly");//禁用验证码框
+                            } else {
+                                $.fn.showAlert(data.exception);
+                                flush('imgCodeLayout');
+                            }
+                        },
+                        error: function () {
+                            $.fn.showAlert(ServerExceptional_Const);
+                            flush('imgCodeLayout');
+                        }
+                    });
+                } else {
+                    $.fn.showAlert(AnyOneQueryOrder_PhoneNotEmpty);
+                    flush('imgCodeLayout');
+                }
+            });
+            rewriteCloseErrorinfo();
+
+        });
+        
+
+        $(document).ready(function() {
+            $.navlevel3("li.mainlevelbb", 0);
+
+            $('#li_sign').click(function() {
+                
+                li_sign_Click();
+                $('#li_sign').unbind("click");//移除绑定的事件，防止a标签被多次点击
+            });
+
+            /*点击空白关闭左侧菜单*/
+            $(document).mouseup(function(e){
+                var _con = $('navigation-wrapper');   // 设置目标区域
+                if(!_con.is(e.target) && _con.has(e.target).length === 0){ // Mark 1
+                    console.log('dsds')
+                    $('body').removeClass('nav-open');
+                }
+            });
+
+        });
+
+
+
+        function li_sign_Click() {
+            $.ajax({
+                type: "POST",
+                url: '/Account/Signature',
+                success: function (data) {
+                    var Successed = data.Successed;
+                    var IsLogin = data.IsLogin;
+                    var Msg = data.Msg;
+                    if (Successed || (!Successed && IsLogin)) {
+
+                        $.fn.showOkAlert(Msg,"确定",function(){
+                            $('#li_sign').html("已签到");
+                            //window.location.replace();
+                            //签到成功之后跳转首页
+                            window.location="http://"+window.location.host;
+                        });
+
+                    } else {
+                        //如果是在登录页面则不弹出登录框
+                        if(window.location.href.indexOf('/Account/Sign')>=0){
+                            $("#username").focus();
+                        }else if(window.location.href.indexOf('UserRegister/Signin')>=0){
+                            $("#Name").focus();
+                        } else {
+                            var i = 0;
+                            if (i >=3) {
+                                $("#li_yzm").attr('data_value', 0);
+                                $("#li_yzm").css('display', 'block');   //登录输入错误大于3显示验证码
+                                $("#loginImgCode").attr("src","http://"+window.location.host+"/Account/GetValidateCode"+"?time=" + (new Date()).getTime());
+                            }
+                            if (window.location.href.indexOf('/HotelOrder/Index')>=0&&isSp=='false') {
+                                $.fn.ShowPopSign(location.href, 1, '');
+                            }else{
+                                $.fn.ShowPopSign('', 0);
+                            }
+                        }
+
+                    }
+                }
+            });
+        }
+
+
+        //登录js
+        //one 1 2
+        function setLoginTab(name, cursel, n) {
+
+            for (i = 1; i <= n; i++) {
+                var menu = $("#"+name + i);
+                var con = $("#con_" + name + i);
+                if(i==cursel)
+                {
+                    menu.addClass("hover");
+                    con.show();
+                }
+                else{
+                    menu.removeClass("hover");
+                    con.hide();
+                }
+            }
+            //控制验证码请求
+
+            var imgUrl = "/Account/GetValidateCode?time=" + (new Date()).getTime();
+            //var imgUrl ="http://"+window.location.host+"/Account/GetValidateCode" + "?time=" + (new Date()).getTime();
+            if (cursel == 1 && $("#li_yzm").attr('data_value') == 0) {/*登录*/
+                $("#loginImgCode").attr("src", imgUrl);
+            } else  if (cursel == 2) {/*注册*/
+                $("#Popup_imgCode").attr("src", imgUrl);
+
+
+
+                $("#signinBtn").focus();
+            }
+            else if(cursel==3)
+            {
+                $("#imgCodeLayout").attr("src", imgUrl);
+            }
+        }
+
+        $('#closeLoginSiginW').click(function () {
+            $('.payment-overlay').css('display', 'none');
+            $('#loginSigninWindow').css("display", "none");
+            $('#li_sign').click(function() {
+                li_sign_Click();
+                $('#li_sign').unbind("click");
+            });
+        });
+
+        $(document).ready(function () {
+            $("#Popup_imgCode").click(function () {
+                var imgUrl ="http://"+window.location.host+ "/Account/GetValidateCode" +"?time=" + (new Date()).getTime();
+                $("#Popup_imgCode").attr("src", imgUrl);
+            });
+        });
+
+
+        //var backUrl;
+        //$("#signBtn").click(function () {
+        //    backUrl = $('#backUrl').val();
+
+        //    checkLogin(backUrl);
+        //});
+
+        //直接预订
+        $('#directBooking').click(function () {
+            /*
+            backUrl = $('#backUrl').val();
+            parent.document.location.href = backUrl;
+            */
+            $('.payment-overlay').css('display', 'none');
+            $('#loginSigninWindow').css("display", "none");
+        });
+
+
+        $('#closeAlertWindow,#XCloseAlert,#PopBtn_AlertFn').click(function () {
+            $('#alert-overlay').css('display', 'none');
+            $('#alertWindow').css("display", "none");
+            $("#PopBtn_AlertFn").css("display", "none");
+            //去除点击事件
+            $("#PopBtn_AlertFn").unbind("click");
+        });
+        $("#Popup_IsCheck").bind("change",function(){
+            if(this.checked)
+            {
+                $("#signinBtn").css({"background-color":"#2A4F67"});
+                $("#signinBtn").removeAttr("disabled");
+            }
+            else
+            {
+                $("#signinBtn").attr("disabled","disabled");
+                $("#signinBtn").css({background:"gray"});
+            }
+        });
+        $("#signinBtn").click(function () {
+
+            if (Popup_checkRegist()) {
+                $.ajax({
+                    type: "POST",
+                    url: "/UserRegister/SynSigninValidate",
+                    data: {
+                        Name: $("#Popup_Name").val(),
+                        //phone: $("#Popup_phone").val(),
+                        password: $("#Popup_password").val(),
+                        Contact:$("#Popup_Contact").val(),
+                        //Email: $("#Popup_Email").val(),
+                        IsCheck: $("#Popup_IsCheck").val(),
+                        ValidateCode: $.trim($("#Popup_ValidateCode").val())
+                    },
+                    success: function (data) {
+                        if (data.Successed) {
+                            window.location = data.url;//注册成功直接跳转到登录页面
+                        } else {
+                            $("#Popup_password").val("");
+                            $("#Popup_rePassword").val("");
+                            $("#Popup_ValidateCode").focus();
+                            flush("Popup_imgCode");
+                            $.fn.showAlert(data.msg);
+                        }
+                    },
+                    dataType: "JSON"
+                });
+            }
+        });
+
+
+        $(document).ready(function(e) {
+            ReadCookie();
+
+
+            var button_toggle = true;
+            $(".right_ico").on("mouseover", function() {
+                var tip_top;
+                var show = $(this).attr('show');
+                var hide = $(this).attr('hide');
+                tip_top = show == 'tel' ? 65 : 15;
+                button_toggle = false;
+                $("#right_tip").css("top", tip_top).show().find(".flag_" + show).show();
+                $(".flag_" + hide).hide();
+
+            }).on("mouseout", function() {
+                button_toggle = true;
+                hideRightTip();
+            });
+
+
+            $("#right_tip").on("mouseover", function() {
+                button_toggle = false;
+                $(this).show();
+            }).on("mouseout", function() {
+                button_toggle = true;
+                hideRightTip();
+            });
+
+            function hideRightTip() {
+                setTimeout(function() {
+                    if (button_toggle) $("#right_tip").hide();
+                }, 500);
+            }
+
+            $("#backToTop").on("click", function() {
+                var _this = $(this);
+                $('html, body').animate({ scrollTop: 0 }, 500, function() {
+                    _this.hide();
+                });
+            });
+
+            $(window).scroll(function() {
+                var htmlTop = $(document).scrollTop();
+                if (htmlTop > 0) {
+                    $("#backToTop").show();
+                } else {
+                    $("#backToTop").hide();
+                }
+            });
+
+            //弹出对话框的 位置居中;
+
+            $(".w600").each(function(){
+                var golbWidth=$(window).width();
+                var w600Width= $(this).width();
+                var pxLeft=((golbWidth -w600Width) / 2) + "px"
+
+                $(this).css("left",pxLeft);
+
+            });
+
+
+            $('input, textarea').placeholder();
+
+        });
+
+        function clearText() {
+            $("#Popup_Name").val("");
+            $("#Popup_Email").val();
+            $("#Popup_phone").val("");
+            $("#Popup_password1").val("");
+            $("#Popup_rePassword1").val("");
+            $("#Popup_validateCode").val("");
+        }
+
+        function ReadCookie() {
+            $.ajax({
+                type: "POST",
+                url: '/Account/ReadCookie',
+                success: function(data) {
+                    if (data.IsSuccessed) {
+                        $("#userName").val(data.Name);
+                        $("#userPass").val(data.Pwd);
+                        $("#type").val(data.Type);
+                        $("#userPass1").css("display", "none");
+                        $("#userPass").css("display", "inline");
+                        $("#isRemember").attr("checked", data.IsCheck);
+                    }
+                }
+            });
+        }
+
+
+        $(".Hovergreen").click(function (e) {
+            e.stopPropagation();
+            var object = $('#MygreenDiv_hide');
+            var className = object.attr('class');
+            if (className == 'MygreenDiv hide') {
+                $("#MygreenDiv_hide").show();
+                //$(".Hovergreen").css({ "width": "118px"});
+                if(typeof(IsIE8)!="undefined" && IsIE8==true)
+                {
+                    var ElemWidth=$(".navigation-wrapper").width();
+                    var bodyWidth=$("body").width();
+                    $("#MygreenDiv_hide").css({"right":(bodyWidth-ElemWidth)/2+"px","top":$(this).position().top+25});
+                }
+                else{
+                    $("#MygreenDiv_hide").css({"right":0,"top":$(this).position().top+25});
+                }
+
+                object.removeClass().addClass('MygreenDiv on');
+            } else if (className == 'MygreenDiv on') {
+                $("#MygreenDiv_hide").hide();
+                //$(".Hovergreen").css({ "border": "#fff 1px solid", "width": "118px" });
+                object.removeClass().addClass('MygreenDiv hide');
+            }
+        });
+
+        $('body').click(function () {
+            $("#MygreenDiv_hide").hide();
+            //$(".Hovergreen").css({ "border": "#fff 1px solid", "width": "118px" });
+        });
+
+        //输入框重新输入后关闭错误提示
+        function rewriteCloseErrorinfo(){
+            //普通登录会员号
+            $("#userName").keyup(function(){
+                if($(this).val()!="卡号/手机号/邮箱"&&$(this).val().length>0){
+                    errShow($("#errUserName"), false, "");
+                }else{
+                    errShow($("#errUserName"), true, $.i18n.prop('label.register.error.username.null'));
+                    $("#userName").focus();
+                }
+            });
+            //普通登录密码
+            $("#userPass").keyup(function(){
+                if($(this).val().length>0){
+                    errShow($("#errUserPass"), false, "");
+                }else{
+                    errShow($("#errUserPass"), true, $.i18n.prop('label.register.error.password.null'));
+                    $("#userPass").focus();
+                }
+            });
+            //普通登录验证码
+            $("#yzm").keyup(function(){
+                if($(this).val()!="请输入验证码"&&$(this).val().length>0){
+                    errShow($("#errYzm"), false, "");
+                }else{
+                    errShow($("#errYzm"), true, $.i18n.prop('label.register.error.validatecode.null'));
+                    $("#yzm").focus();
+                }
+            });
+            //注册姓名
+            $("#Popup_Name").keyup(function(){
+                Popup_checkName();
+            });
+            //注册联系方式
+            $("#Popup_Contact").keyup(function(){
+                if($(this).val().length>0){
+                    if(isNaN($(this).val())){
+                        errShow($("#Popup_errPhone"), false, "");
+                        Popup_checkEmail();
+                    }
+                    else{
+                        errShow($("#Popup_errEmail"), false, "");
+                        Popup_checkPhone();
+                    }
+                }else{
+                    errShow($("#Popup_errPhone"), false, "");
+                    errShow($("#Popup_errEmail"), false, "");
+                    Popup_checkEmail();
+                }
+
+            });
+            //注册密码
+            $("#Popup_password").keyup(function(){
+                Popup_checkPwd(true);
+            });
+            //注册密码确认
+            $("#Popup_rePassword").keyup(function(){
+                checkPopupRePwd();
+            });
+            //注册验证码
+            $("#Popup_ValidateCode").keyup(function(){
+                Popup_checkValidateCode();
+            });
+            //快捷登录手机号
+            $("#QLphoneNo").keyup(function(){
+                fastLoginCheckPhone($(this),$("#errQLphoneNo"));
+            });
+            //快捷登录验证码
+            $("#qyzm_lay").keyup(function(){
+                fastLoginCheckValidateCode($(this),$("#errQyzm_lay"));
+            });
+            //快捷登录手机验证码
+            $("#QLauthCode").keyup(function(){
+                fastLoginCheckPhonevalidateCode($(this),$("#errQLauthCode"));
+            });
+
+
+
+        }
+
+
+        //检查确认密码框
+        function checkPopupRePwd() {
+            var rePwd = $("#Popup_rePassword").val();
+            if (rePwd.length === 0) {
+                errShow($("#Popup_errRepwd"), true, $.i18n.prop('label.register.error.password.again'));
+                $("#Popup_rePassword").focus();
+                return false;
+            }
+            else if (rePwd !== $("#Popup_password").val()) {
+                errShow($("#Popup_errRepwd"), true, $.i18n.prop('label.register.error.password.inconsistent'));
+                $("#Popup_rePassword").focus();
+                return false;
+            }
+            else {
+                errShow($("#Popup_errRepwd"), false, "");
+                return true;
+            }
+        }
+
+        //检查快捷登录的手机号 return bool
+        function fastLoginCheckPhone(obj,objErr) {
+            var mobile = $.trim(obj.val());
+            if (mobile.length == 0 || mobile == $.i18n.prop('label.register.error.mobile.null')) {
+                errShow(objErr, true, $.i18n.prop('label.register.error.mobile.null'));
+                obj.focus();
+                return false;
+            }
+            else if (mobile.length !== 0 && !checkIsPhone(mobile)) {
+                errShow(objErr, true, $.i18n.prop('label.register.error.mobile'));
+                obj.focus();
+                return false;
+            }
+            else {
+                errShow(objErr, false, "");
+                return true;
+            }
+        }
+
+        //检查快捷登录的验证码是否为空  return bool
+        function fastLoginCheckValidateCode(obj,objErr) {
+            var verifyCode = $.trim(obj.val());
+            if (verifyCode.length === 0) {
+                errShow(objErr, true, $.i18n.prop('label.register.error.validatecode.null'));
+                obj.focus();
+                return false;
+            } else {
+                errShow(objErr, false, "");
+                return true;
+            }
+
+        }
+
+        //检查快捷登录的手机验证码是否为空  return bool
+        function fastLoginCheckPhonevalidateCode(obj,objErr) {
+            var verifyCode = $.trim(obj.val());
+            if (verifyCode.length === 0) {
+                errShow(objErr, true, $.i18n.prop('label.register.error.phoneValicode.null'));
+                obj.focus();
+                return false;
+            } else {
+                errShow(objErr, false, "");
+                return true;
+            }
+
+        }
+
+    </script>
+
+    <script type="text/javascript">
+        $(function(){
+            if(myBrowser()!="IE8"&&myBrowser()!="IE7"&&myBrowser()!="IE6"&&myBrowser()!="IE55"){
+                $(".childBrand").each(function(){
+                    $(this).find("em").css("left",$(this).position().left);
+                });
+                $(".childBrand").hover(function() {
+                    $(this).find("em").animate({opacity: "show", top: "50",left:$(this).position().left+10}, "fast");
+                    $(this).find("em.append").animate({opacity: "show", top: "280",left:$(this).position().left+10}, "fast");
+                }, function() {
+                    $(this).find("em").animate({opacity: "hide", top: "50",left:$(this).position().left+10}, "fast");
+                    $(this).find("em.append").animate({opacity: "hide", top: "280",left:$(this).position().left+10}, "fast");
+                });
+            }else{
+                //$(".childBrand").hover(function() {
+                //    switch($(this).index()){
+                //        case 0:
+                //            $(this).find("em").animate({opacity: "show", top: "50",left:$(this).position().left-150}, "fast");
+                //            break;
+                //        case 1:
+                //            $(this).find("em").animate({opacity: "show", top: "50",left:$(this).position().left-230}, "fast");
+                //            break;
+                //        case 2:
+                //            $(this).find("em").animate({opacity: "show", top: "50",left:$(this).position().left-320}, "fast");
+                //            break;
+                //        case 3:
+                //            $(this).find("em").animate({opacity: "show", top: "50",left:$(this).position().left-410}, "fast");
+                //            break;
+                //        case 4:
+                //            $(this).find("em").animate({opacity: "show", top: "50",left:$(this).position().left-490}, "fast");
+                //            break;
+                //        case 5:
+                //            $(this).find("em").animate({opacity: "show", top: "50",left:$(this).position().left-560}, "fast");
+                //            break;
+                //    }
+
+                //}, function() {
+                //    switch($(this).index()){
+                //        case 0:
+                //            $(this).find("em").animate({opacity: "hide", top: "50",left:$(this).position().left-150}, "fast");
+                //            break;
+                //        case 1:
+                //            $(this).find("em").animate({opacity: "hide", top: "50",left:$(this).position().left-230}, "fast");
+                //            break;
+                //        case 2:
+                //            $(this).find("em").animate({opacity: "hide", top: "50",left:$(this).position().left-320}, "fast");
+                //            break;
+                //        case 3:
+                //            $(this).find("em").animate({opacity: "hide", top: "50",left:$(this).position().left-410}, "fast");
+                //            break;
+                //        case 4:
+                //            $(this).find("em").animate({opacity: "hide", top: "50",left:$(this).position().left-490}, "fast");
+                //            break;
+                //        case 5:
+                //            $(this).find("em").animate({opacity: "hide", top: "50",left:$(this).position().left-560}, "fast");
+                //            break;
+                //    }
+
+                //});
+            }
+        });
+        //品牌切换
+        function ChangeBrand(brandId) {
+            var returnURL = escape("http://www.998.com/UserCenter");
+            var href_brand = '/Home/ChanageBland?returnURL=' + returnURL + '&blandid=' + brandId;
+            if (brandId == 70)
+                window.location.href = "http://www.shellhotel.cn";
+            else
+                window.location.href = href_brand;
+        }
+
+        function myBrowser(){
+            var userAgent = navigator.userAgent; //取得浏览器的userAgent字符串
+            var isOpera = userAgent.indexOf("Opera") > -1; //判断是否Opera浏览器
+            var isIE = userAgent.indexOf("compatible") > -1 && userAgent.indexOf("MSIE") > -1 && !isOpera; //判断是否IE浏览器
+            var isFF = userAgent.indexOf("Firefox") > -1; //判断是否Firefox浏览器
+            var isSafari = userAgent.indexOf("Safari") > -1; //判断是否Safari浏览器
+            if (isIE) {
+                var IE5 = IE55 = IE6 = IE7 = IE8 = false;
+                var reIE = new RegExp("MSIE (\\d+\\.\\d+);");
+                reIE.test(userAgent);
+                var fIEVersion = parseFloat(RegExp["$1"]);
+                IE55 = fIEVersion == 5.5;
+                IE6 = fIEVersion == 6.0;
+                IE7 = fIEVersion == 7.0;
+                IE8 = fIEVersion == 8.0;
+                if (IE55) {
+                    return "IE55";
+                }
+                if (IE6) {
+                    return "IE6";
+                }
+                if (IE7) {
+                    return "IE7";
+                }
+                if (IE8) {
+                    return "IE8";
+                }
+            }//isIE end
+            if (isFF) {
+                return "FF";
+            }
+            if (isOpera) {
+                return "Opera";
+            }
+        }//myBrowser() end
+
+
+    </script>
+
+
+    
+</body>
+
+
+
+</html>
+

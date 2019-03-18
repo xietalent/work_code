@@ -3,14 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="a6802fa5-ea28-4857-bd77-21c70465b5aa" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/../spiders_three/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../spiders_three/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../spiders_three/cookie_bag/Mtime_cook.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../spiders_three/cookie_bag/Mtime_cook.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../spiders_three/imcode.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../spiders_three/ria.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../spiders_three/shiguangwang.py" beforeDir="false" afterPath="$PROJECT_DIR$/../spiders_three/shiguangwang.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../spiders_three/super8.py" beforeDir="false" afterPath="$PROJECT_DIR$/../spiders_three/super8.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../spiders_two/qunar.py" beforeDir="false" afterPath="$PROJECT_DIR$/../spiders_two/qunar.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/supere/spiders/super8.py" beforeDir="false" afterPath="$PROJECT_DIR$/supere/spiders/super8.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../spiders_three/cookie_bag/jinyi_cook.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../spiders_three/cookie_bag/jinyi_cook.txt" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -22,10 +15,11 @@
     <session id="1248717096">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="1" />
+          <entry key="project.closed" value="2" />
+          <entry key="project.open.time.3" value="1" />
           <entry key="project.open.time.5" value="1" />
           <entry key="project.open.time.6" value="1" />
-          <entry key="project.opened" value="2" />
+          <entry key="project.opened" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -57,8 +51,11 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/supere/spiders/super8.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-172">
-              <caret line="10" column="14" lean-forward="true" selection-start-line="10" selection-start-column="14" selection-end-line="10" selection-end-column="14" />
+            <state relative-caret-position="450">
+              <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
+              <folding>
+                <element signature="e#24#37#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -66,7 +63,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/supere/middlewares.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-175">
+            <state relative-caret-position="650">
               <caret line="31" selection-start-line="31" selection-end-line="31" />
               <folding>
                 <element signature="e#169#195#0" expanded="true" />
@@ -95,8 +92,8 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="1">
-    <option name="x" value="513" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="449" />
     <option name="y" value="89" />
     <option name="width" value="1243" />
     <option name="height" value="953" />
@@ -165,10 +162,10 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="513" y="89" width="1243" height="953" extended-state="1" />
+    <frame x="449" y="89" width="1243" height="953" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25359255" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25781912" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -182,7 +179,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="11" visible="true" weight="0.2869353" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="11" visible="true" weight="0.30647132" />
       <window_info anchor="bottom" id="Python Console" order="12" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -222,16 +219,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/supere/middlewares.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-175">
-          <caret line="31" selection-start-line="31" selection-end-line="31" />
-          <folding>
-            <element signature="e#169#195#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://D:/virtu/spiderenv/Lib/site-packages/scrapy/http/request/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="185">
@@ -241,8 +228,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/supere/spiders/super8.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-172">
-          <caret line="10" column="14" lean-forward="true" selection-start-line="10" selection-start-column="14" selection-end-line="10" selection-end-column="14" />
+        <state relative-caret-position="450">
+          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
+          <folding>
+            <element signature="e#24#37#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/supere/middlewares.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="650">
+          <caret line="31" selection-start-line="31" selection-end-line="31" />
+          <folding>
+            <element signature="e#169#195#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

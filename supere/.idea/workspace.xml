@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="a6802fa5-ea28-4857-bd77-21c70465b5aa" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/../spiders_three/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../spiders_three/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../spiders_three/cookie_bag/jinyi_cook.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../spiders_three/cookie_bag/jinyi_cook.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -15,11 +15,11 @@
     <session id="1248717096">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="2" />
+          <entry key="project.closed" value="3" />
           <entry key="project.open.time.3" value="1" />
-          <entry key="project.open.time.5" value="1" />
+          <entry key="project.open.time.5" value="2" />
           <entry key="project.open.time.6" value="1" />
-          <entry key="project.opened" value="3" />
+          <entry key="project.opened" value="4" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -51,11 +51,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/supere/spiders/super8.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="450">
-              <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
-              <folding>
-                <element signature="e#24#37#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="275">
+              <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
             </state>
           </provider>
         </entry>
@@ -93,8 +90,8 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="449" />
-    <option name="y" value="89" />
+    <option name="x" value="503" />
+    <option name="y" value="144" />
     <option name="width" value="1243" />
     <option name="height" value="953" />
   </component>
@@ -104,6 +101,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -126,7 +124,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -162,10 +159,10 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="449" y="89" width="1243" height="953" extended-state="0" />
+    <frame x="503" y="144" width="1243" height="953" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25781912" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.26204565" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -228,11 +225,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/supere/spiders/super8.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
-          <folding>
-            <element signature="e#24#37#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="275">
+          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
         </state>
       </provider>
     </entry>

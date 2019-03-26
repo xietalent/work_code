@@ -96,7 +96,8 @@ x = MyClass()
 
 s = x.f
 print(s)
+print(x.i)
 
-while True:
-    print(s())
+# while True:
+#     print(s())
 

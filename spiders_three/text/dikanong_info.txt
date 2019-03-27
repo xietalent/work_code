@@ -10,7 +10,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
   
-  <script type="text/javascript" src="/vassets/js/dtagent_ICA23jprx_6000500221006.js" data-dtconfig="rid=RID_1727320193|rpid=-623187195|domain=www.decathlon.com.cn|async=1|domain=www.decathlon.com.cn|lastModification=1521554726463|lab=1|tp=500,50,0,1|reportUrl=dynaTraceMonitor|app=decathlon.com.cn|agentUri=/vassets/js/dtagent_ICA23jprx_6000500221006.js"></script><link rel="preconnect" href="https://pixl.decathlon.com.cn">
+  <link rel="preconnect" href="https://pixl.decathlon.com.cn">
   
   <link rel="preload" href="/vassets/fonts/roboto-condensed/RobotoCondensed-Bold-webfont.woff2" as="font" type="font/woff2" crossorigin="anonymous">
   <link rel="preload" href="/vassets/fonts/decathlon-cube/DecathlonCube.woff2" as="font" type="font/woff2" crossorigin="anonymous">
@@ -283,7 +283,7 @@ if (arrayCookie.length > 0 && arrayCookie[0].split('=').length > 0) {
         
     
         
-            order_id : "cn660336051" ,
+            order_id : "cn661071938" ,
         
     
         
@@ -12109,6 +12109,209 @@ user_cookie_categories: cookieCategoriesValue ,
           
 
 
+<div data-entry="cat190015" class="navigation__entry">
+  <header class="navigation__header">
+    <span class="navigation__header__title">健身</span>
+  </header>
+  <div class="navigation__entry--scroll keepscrolling">
+    <div class="navigation__entry--wrapper">
+      <a href="/zh/browse/c0-sports/c1-fitness/_/N-ql2hky" class="navigation__entry__link"
+        
+
+
+  
+    data-type="all-about"
+  
+>
+        
+        <div>
+          
+
+
+
+<img class="js-img-lazy" data-src="https://pixl.decathlon.com.cn/s604789/k$3ec1710a406b778379e3cfbd254f1342/menuThumbnail_fitness.png?f=120x120" src="/assets/images/img-lazy.gif" width="120" height="120" alt="健身" />
+
+
+        </div>
+        
+        <span>探索<span>健身</span></span>
+        <i class="icon icon-arrow1-r" aria-hidden="true"></i>
+      </a>
+      <ul class="navigation__entry__list">
+        
+          <li class="navigation__link">
+            <a href="/zh/browse/c0-sports/c1-fitness/c2-big-equipment/_/N-1lw7lni" 
+
+
+  
+    data-type="subcat"
+  
+>
+              <span>大型器械</span> <i class="icon icon-arrow1-r" aria-hidden="true"></i>
+            </a>
+          </li>
+        
+          <li class="navigation__link">
+            <a href="/zh/browse/c0-sports/c1-fitness/c2-small-equipment/_/N-1fl1h1c" 
+
+
+  
+    data-type="subcat"
+  
+>
+              <span>小型器械</span> <i class="icon icon-arrow1-r" aria-hidden="true"></i>
+            </a>
+          </li>
+        
+          <li class="navigation__link">
+            <a href="/zh/browse/c0-sports/c1-fitness/c2-men-s-fitness/_/N-tbzced" 
+
+
+  
+    data-type="subcat"
+  
+>
+              <span>男士 </span> <i class="icon icon-arrow1-r" aria-hidden="true"></i>
+            </a>
+          </li>
+        
+          <li class="navigation__link">
+            <a href="/zh/browse/c0-sports/c1-fitness/c2-women-fitness/_/N-fnm5kc" 
+
+
+  
+    data-type="subcat"
+  
+>
+              <span>女士</span> <i class="icon icon-arrow1-r" aria-hidden="true"></i>
+            </a>
+          </li>
+        
+          <li class="navigation__link">
+            <a href="/zh/browse/c0-sports/c1-fitness/c2-baby-fitness/_/N-rno66y" 
+
+
+  
+    data-type="subcat"
+  
+>
+              <span>幼童</span> <i class="icon icon-arrow1-r" aria-hidden="true"></i>
+            </a>
+          </li>
+        
+          <li class="navigation__link">
+            <a href="/zh/browse/c0-sports/c1-fitness/c2-kids-fitness/_/N-1jrc3iv" 
+
+
+  
+    data-type="subcat"
+  
+>
+              <span>青少年</span> <i class="icon icon-arrow1-r" aria-hidden="true"></i>
+            </a>
+          </li>
+        
+      </ul>
+      
+      <ul class="navigation__entry__list navigation__entry__sublist">
+        
+        
+      </ul>
+      
+      
+      
+
+
+<div class="associated-content">
+ <p class="associated-content__title">相关运动</p>
+ <ul class="associated-content__list" 
+
+
+  
+    data-type="associated"
+  
+>
+     
+       
+         <li>
+           <a href="/zh/browse/c0-sports/c1-dancing/_/N-18pk710"
+            title="舞蹈"
+            
+
+
+  
+    data-type="asso"
+  
+ >
+           
+
+
+
+<img class="js-img-lazy" data-src="https://pixl.decathlon.com.cn/s568171/k$441b9cf93c2aef052e2fb64aaa25a5a9/menuThumbnail_dance.png?f=120x120" src="/assets/images/img-lazy.gif" width="120" height="120" alt="舞蹈" />
+
+
+           <span>舞蹈</span>
+           </a>
+         </li>
+       
+     
+       
+         <li>
+           <a href="/zh/browse/c0-sports/c1-kids-fitness/_/N-1v8f71e"
+            title="儿童体能"
+            
+
+
+  
+    data-type="asso"
+  
+ >
+           
+
+
+
+<img class="js-img-lazy" data-src="https://pixl.decathlon.com.cn/s610777/k$89ff0ee2fc3786e1e79a1d76dd8ec1fe/MenuThumbnail_fitness_child.png?f=120x120" src="/assets/images/img-lazy.gif" width="120" height="120" alt="儿童体能" />
+
+
+           <span>儿童体能</span>
+           </a>
+         </li>
+       
+     
+       
+         <li>
+           <a href="/zh/browse/c0-sports/c1--/_/N-1hxlsml"
+            title="普拉提"
+            
+
+
+  
+    data-type="asso"
+  
+ >
+           
+
+
+
+<img class="js-img-lazy" data-src="https://pixl.decathlon.com.cn/s604787/k$4de342b2ecfac38874d47643722e575d/MenuThumbnail_Pilates.png?f=120x120" src="/assets/images/img-lazy.gif" width="120" height="120" alt="普拉提" />
+
+
+           <span>普拉提</span>
+           </a>
+         </li>
+       
+     
+ </ul>
+</div>
+      
+    </div>
+  </div>
+</div>
+
+        
+          
+
+
 <div data-entry="pr-cat970149v" class="navigation__entry">
   <header class="navigation__header">
     <span class="navigation__header__title">普拉提</span>
@@ -12349,209 +12552,6 @@ user_cookie_categories: cookieCategoriesValue ,
         
       </ul>
       
-      
-    </div>
-  </div>
-</div>
-
-        
-          
-
-
-<div data-entry="cat190015" class="navigation__entry">
-  <header class="navigation__header">
-    <span class="navigation__header__title">健身</span>
-  </header>
-  <div class="navigation__entry--scroll keepscrolling">
-    <div class="navigation__entry--wrapper">
-      <a href="/zh/browse/c0-sports/c1-fitness/_/N-ql2hky" class="navigation__entry__link"
-        
-
-
-  
-    data-type="all-about"
-  
->
-        
-        <div>
-          
-
-
-
-<img class="js-img-lazy" data-src="https://pixl.decathlon.com.cn/s604789/k$3ec1710a406b778379e3cfbd254f1342/menuThumbnail_fitness.png?f=120x120" src="/assets/images/img-lazy.gif" width="120" height="120" alt="健身" />
-
-
-        </div>
-        
-        <span>探索<span>健身</span></span>
-        <i class="icon icon-arrow1-r" aria-hidden="true"></i>
-      </a>
-      <ul class="navigation__entry__list">
-        
-          <li class="navigation__link">
-            <a href="/zh/browse/c0-sports/c1-fitness/c2-big-equipment/_/N-1lw7lni" 
-
-
-  
-    data-type="subcat"
-  
->
-              <span>大型器械</span> <i class="icon icon-arrow1-r" aria-hidden="true"></i>
-            </a>
-          </li>
-        
-          <li class="navigation__link">
-            <a href="/zh/browse/c0-sports/c1-fitness/c2-small-equipment/_/N-1fl1h1c" 
-
-
-  
-    data-type="subcat"
-  
->
-              <span>小型器械</span> <i class="icon icon-arrow1-r" aria-hidden="true"></i>
-            </a>
-          </li>
-        
-          <li class="navigation__link">
-            <a href="/zh/browse/c0-sports/c1-fitness/c2-men-s-fitness/_/N-tbzced" 
-
-
-  
-    data-type="subcat"
-  
->
-              <span>男士 </span> <i class="icon icon-arrow1-r" aria-hidden="true"></i>
-            </a>
-          </li>
-        
-          <li class="navigation__link">
-            <a href="/zh/browse/c0-sports/c1-fitness/c2-women-fitness/_/N-fnm5kc" 
-
-
-  
-    data-type="subcat"
-  
->
-              <span>女士</span> <i class="icon icon-arrow1-r" aria-hidden="true"></i>
-            </a>
-          </li>
-        
-          <li class="navigation__link">
-            <a href="/zh/browse/c0-sports/c1-fitness/c2-baby-fitness/_/N-rno66y" 
-
-
-  
-    data-type="subcat"
-  
->
-              <span>幼童</span> <i class="icon icon-arrow1-r" aria-hidden="true"></i>
-            </a>
-          </li>
-        
-          <li class="navigation__link">
-            <a href="/zh/browse/c0-sports/c1-fitness/c2-kids-fitness/_/N-1jrc3iv" 
-
-
-  
-    data-type="subcat"
-  
->
-              <span>青少年</span> <i class="icon icon-arrow1-r" aria-hidden="true"></i>
-            </a>
-          </li>
-        
-      </ul>
-      
-      <ul class="navigation__entry__list navigation__entry__sublist">
-        
-        
-      </ul>
-      
-      
-      
-
-
-<div class="associated-content">
- <p class="associated-content__title">相关运动</p>
- <ul class="associated-content__list" 
-
-
-  
-    data-type="associated"
-  
->
-     
-       
-         <li>
-           <a href="/zh/browse/c0-sports/c1-dancing/_/N-18pk710"
-            title="舞蹈"
-            
-
-
-  
-    data-type="asso"
-  
- >
-           
-
-
-
-<img class="js-img-lazy" data-src="https://pixl.decathlon.com.cn/s568171/k$441b9cf93c2aef052e2fb64aaa25a5a9/menuThumbnail_dance.png?f=120x120" src="/assets/images/img-lazy.gif" width="120" height="120" alt="舞蹈" />
-
-
-           <span>舞蹈</span>
-           </a>
-         </li>
-       
-     
-       
-         <li>
-           <a href="/zh/browse/c0-sports/c1-kids-fitness/_/N-1v8f71e"
-            title="儿童体能"
-            
-
-
-  
-    data-type="asso"
-  
- >
-           
-
-
-
-<img class="js-img-lazy" data-src="https://pixl.decathlon.com.cn/s610777/k$89ff0ee2fc3786e1e79a1d76dd8ec1fe/MenuThumbnail_fitness_child.png?f=120x120" src="/assets/images/img-lazy.gif" width="120" height="120" alt="儿童体能" />
-
-
-           <span>儿童体能</span>
-           </a>
-         </li>
-       
-     
-       
-         <li>
-           <a href="/zh/browse/c0-sports/c1--/_/N-1hxlsml"
-            title="普拉提"
-            
-
-
-  
-    data-type="asso"
-  
- >
-           
-
-
-
-<img class="js-img-lazy" data-src="https://pixl.decathlon.com.cn/s604787/k$4de342b2ecfac38874d47643722e575d/MenuThumbnail_Pilates.png?f=120x120" src="/assets/images/img-lazy.gif" width="120" height="120" alt="普拉提" />
-
-
-           <span>普拉提</span>
-           </a>
-         </li>
-       
-     
- </ul>
-</div>
       
     </div>
   </div>
@@ -18181,4 +18181,4 @@ user_cookie_categories: cookieCategoriesValue ,
 
     
 
-<script src="/pepp4_clippers3?time=1553593607"></script><area href="/pepp4_thunder" style="font-size:0px" /></body></html>
+<a href="/pepp4_thunder" style="font-size:0px">s2Qb</a></body></html>

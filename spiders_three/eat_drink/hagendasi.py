@@ -80,7 +80,7 @@ class Hagendasi():
             fp.close()
         sleep(0.5)
 
-    def req_IHG(self):
+    def req_hagendasi(self):
         # 使用cookie模拟登录状态
         with open(r'E:\code\spiders_three\cookie_bag\hagendasi_cook.txt', 'r', encoding='utf-8') as fp:
             list_cookies = json.loads(fp.read())
@@ -142,7 +142,7 @@ class Hagendasi():
         tres1 = round(tres1, 2)
         # print("请求登录耗时:{}".format(tres1))
 
-        # self.req_IHG()
+        # self.req_hagendasi()
         self.account_info()
         t3 = time.time()
         tres2 = t3 - t2

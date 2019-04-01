@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="50c9e39f-b95b-437d-b105-e54caa569b46" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/huazhu.py" beforeDir="false" afterPath="$PROJECT_DIR$/huazhu.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -254,8 +253,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/dianshang/suning_yigou.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="133" column="34" lean-forward="true" selection-start-line="133" selection-start-column="34" selection-end-line="133" selection-end-column="34" />
+            <state relative-caret-position="73">
+              <caret line="123" column="20" lean-forward="true" selection-start-line="123" selection-start-column="20" selection-end-line="123" selection-end-column="20" />
               <folding>
                 <element signature="e#3061#4005#0" />
                 <element signature="e#5449#6770#0" />
@@ -416,7 +415,7 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="1">
     <option name="x" value="615" />
     <option name="y" value="92" />
     <option name="width" value="1242" />
@@ -617,7 +616,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="615" y="92" width="1242" height="987" extended-state="0" />
+    <frame x="615" y="92" width="1242" height="987" extended-state="1" />
     <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49716446" visible="true" weight="0.19458544" />
@@ -1051,8 +1050,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/dianshang/suning_yigou.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="133" column="34" lean-forward="true" selection-start-line="133" selection-start-column="34" selection-end-line="133" selection-end-column="34" />
+        <state relative-caret-position="73">
+          <caret line="123" column="20" lean-forward="true" selection-start-line="123" selection-start-column="20" selection-end-line="123" selection-end-column="20" />
           <folding>
             <element signature="e#3061#4005#0" />
             <element signature="e#5449#6770#0" />

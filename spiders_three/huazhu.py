@@ -31,7 +31,6 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.common.action_chains import ActionChains
 from PIL import Image
 from io import BytesIO
-from PIL import Image
 from urllib import request,response
 from retrying import retry
 # from tools.keybord_DD import DD_input

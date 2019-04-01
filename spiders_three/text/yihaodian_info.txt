@@ -1,0 +1,691 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta name="renderer" content="webkit">
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+<title>我的1号店</title>
+<meta name="Keywords" content="我的1号店">
+<meta name="Description" content="我的1号店">
+<!--css start-->
+<link href="//img.yihaodianimg.com/myyhd/global/css/global_site_base.css?0" rel="stylesheet" type="text/css"/>
+<link href="//img.yihaodianimg.com/myyhd/member/css/myyhdindex.css?0" rel="stylesheet" type="text/css"/>
+<!--css end-->
+<!--js start-->
+<script type="text/javascript">
+var URLPrefix = {"shop":"//shop.yhd.com","busystock":"//gps.yhd.com","cms":"//cms.yhd.com","img":"//image.yihaodian.com","pms":"//pms.yhd.com","my_statics":"//static.yihaodian.com/member","passportmall":"https://passport.1mall.com","shoping_pms":"//pms.yihaodian.com","shoping_shop":"//shop.yhd.com","search":"//search.yhd.com","sitedomain":".yhd.com","tryUrl":"//try.yhd.com","shoping_self":"//www.yhd.com","tracker":"tracker.yhd.com","commentZoneMall":"//e.1mall.com/front-pe","productDetailHost":"//www.yhd.com","central":"//www.yhd.com","search_list":"//search.yhd.com","cartDomain":"//cart.yhd.com","footFriendLink":"//www.yhd.com/friendlink/index.do","centralShop":"//shop.yhd.com","shoping_passport":"https://passport.yhd.com","shoping_my_statics":"//static.yihaodian.com/statics","uploadPostUrl":"//upload.yihaodian.com/upload/UploadAction","shoping_my":"//my.yhd.com","shoping_search":"//search.yhd.com:80","shoping_opposite":"//www.1mall.com","shoping_central":"//www.yhd.com","my":"//my.yhd.com","search_keyword":"//search.yhd.com","mymall":"//my.1mall.com","selfroot":"//www.yhd.com","products_stock":"//gps.yhd.com/busystock","sitedomainmall":".1mall.com","item":"//item.yhd.com/","tuangou":"//www.yhd.com/tuangou/index.do","commentZoneYhd":"//e.yhd.com/front-pe","centralImgDomain":".yihaodianimg.com","productDetailUrl":"//www.yhd.com","passport":"https://passport.yhd.com","statics":"//img.yihaodianimg.com/myyhd","mobile":"http://m.yhd.com","mall":"//www.1mall.com"};
+var headerType="base";
+var imagePath="//img.yihaodianimg.com/myyhd/global/images";
+var currSiteId=1;
+var currSiteType=1;
+var globalEnv="HTPRODUCTION";
+var siteStyle=1;
+var siteFlag=0;
+var isIndex = 0;
+var indexFlag= 0;
+var currProvinceId=1;
+var currVersionNum= "0";
+var lazyLoadImageObjArry = lazyLoadImageObjArry || [];
+var isFixTopNav = true;
+(function(flag) {
+if (flag) {
+window.globalPrismFlag = '1';
+window.globalPrismFeedbackURL = '//cms.yhd.com/cms/view.do?topicId=43';
+window.globalPrismQRName = '';
+window.globalPrismQRTitle = '手机购物更优惠';
+window.globalPrismQRPng = '//img.yihaodianimg.com/front-homepage/index/images/qryhd.png';
+window.globalPrismMemberLink = '//home.yhd.com/myyhdindex/index.do';
+window.globalPrismCartLink = '//cart.yhd.com/cart/cart.do';
+window.globalPrismCouponLink = '//coupon.yhd.com/myCoupon';
+window.globalPrismTopAdvFlag = '1';
+}
+})(false);
+<!--增加一个开关来控制是否显示搜索框下拉,为时才不调用-->
+<!--搜索热词开关-->
+<!--用于控制宽窄屏属性-->
+var isWidescreen=(screen.width>=1280);
+<!--过滤-->
+var SensitiveWords = "京东自有品牌=自有品牌,京东海外直采=海外直采,京东定制=,京东自营=自营,JD超市=,【京东配送】=,京东配送=,【京东超市】=,京东超市=,【京东早教】=,【京东玩具】=,\(免息\)=,\(白条\)=,\(三期免息\)=,\(六期免息\)=,\(九期免息\)=,\(十二期免息\)=,\(二十四期免息\)=,\(3期免息\)=,\(6期免息\)=,\(9期免息\)=,\(12期免息\)=,\(24期免息\)=,\(分期免息\)=,（免息）=,（白条）=,（三期免息）=,（六期免息）=,（九期免息）=,（十二期免息）=,（二十四期免息）=,（3期免息）=,（6期免息）=,（9期免息）=,（12期免息）=,（24期免息）=,（分期免息）=,【免息】=,【白条】=,【三期免息】=,【六期免息】=,【九期免息】=,【十二期免息】=,【二十四期免息】=,【3期免息】=,【6期免息】=,【9期免息】=,【12期免息】=,【24期免息】=,【分期免息】=,三期免息=,六期免息=,九期免息=,十二期免息=,二十四期免息=,3期免息=,6期免息=,9期免息=,12期免息=,24期免息=,分期免息=,免息=,白条=,分期=,【京东包邮】=【包邮】,【京东秒杀】=,（京东定制）=,京东定制=";
+</script>
+<!--js end-->
+</head>
+<body id="comParamId" data-param='{"globalPageCode":"-1","currPageId":"-1"}'>
+<div class="hd_header_wrap">
+<!-- top_bar -->
+<div class="hd_top_bar">
+<div class="wrap clearfix">
+<a href="//www.yhd.com" class="hd_topbar_home">
+<i class="hd_iconfont">&#xe623;</i>
+<span>1号店首页</span>
+</a>
+<div class="hd_indxProvce hd_has_child" id="headerSelectProvince" clstag="pageclick|keycount|global_201709226|1">
+<a class="hd_topbar_city" id="currProvince" href="javascript:void(0);">
+<i class="hd_iconfont">&#xe621;</i>
+<span>送货地址：</span><em></em>
+</a>
+<div class="hd_city_select hd_city_opacity" style="display: none" id="hd_city_select" data-hot="2817,上海市,2&&2816,北京市,1&&1601,广州市,19&&1607,深圳市,19&&904,南京市,12&&1213,杭州市,15&&1381,武汉市,17&&1930,成都市,22&&48131,重庆市,4&&988,苏州市,12&&51035,天津市,3&&1116,合肥市,14&&1233,温州市,15&&984,无锡市,12&&1158,宁波市,15&&978,常州市,12">
+<a href="javascript:;" class="hd_city_close">×</a>
+<div class="hd_cur_city_wrap clearfix">
+<span class="hd_cur_city">搜索城市：</span>
+<div class="hd_city_search">
+<div class="hd_city_input">
+<em class="hd_iconfont"></em>
+<input type="text" placeholder="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;请输入城市名称">
+<span class="hd_citys_close">x</span>
+</div>
+<div class="hd_city_suggest" style="display: none;">
+</div>
+</div>
+</div>
+<!--热门城市-->
+<div class="hd_hot_city_wrap clearfix">
+<em class="hd_hotcity_icon"></em>
+<span class="hd_hot_city">热门城市：</span>
+<div class="hd_hotcity_list clearfix">
+</div>
+</div>
+<!--按字母查找-->
+<div class="hd_letter_search clearfix">
+<p class="hd_letter_tit">按字母查找</p>
+<div class="hd_city_initial clearfix">
+</div>
+</div>
+<div class="hd_city_list" id="hd_city_list_context">
+<ul>
+<li class="clearfix">
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="hd_topbar_right">
+<ul>
+<li id="global_unlogin">
+<div class="hd_unlogin">
+<span class="hd_hi">Hi,请</span>
+<a href="https://passport.yhd.com/passport/login_input.do" class="hd_login_link"
+clstag="pageclick|keycount|global_201709226|2">登录&nbsp;</a>
+<a href="https://passport.yhd.com/passport/register_input.do" class="hd_regist_link"
+clstag="pageclick|keycount|global_201709226|3">&nbsp;注册</a>
+</div>
+</li>
+<li id="global_login" class="hd_has_child" style="display:none" data-type="2017"
+clstag="pageclick|keycount|global_201709226|4">
+<div class="hd_login">
+<span class="hd_hi">Hi,</span>
+<a href="//home.yhd.com/myyhdindex/index.do" target="_blank" class="hd_login_name">__nickName__</a>
+<a href="//vip.yhd.com" target="_blank" class="hd_vip hd_vip__gradeStyle__">__gradeDesc__</a>
+<i class="hd_iconfont">&#xe627;</i>
+</div>
+<div class="hd_user_privilege">
+<a href="javascript:;" class="hd_login_out">退出</a>
+<div class="clearfix">
+</div>
+<div class="hd_privilege_tit"><span>我可尊享<em>5</em>项特权</span></div>
+<div class="hd_privilege_wrap hd_privilege_slide">
+<a href="javascript:;" class="prev_btn hd_iconfont"></a>
+<div class="hd_privilege clearfix">
+<div class="hd_privilege_list" style="left: -60px; margin-left: 0px;">
+</div>
+</div>
+<a href="javascript:;" class="next_btn hd_iconfont"></a>
+</div>
+</div>
+</li>
+<li clstag="pageclick|keycount|global_201709226|5">
+<div class="hd_menu hd_notice" id="hdUserMsg" style="display: none" data-cfg="1">
+<a href="//edm.yhd.com/pcMsg/myMessage.action;" rel="nofollow" target='_blank'>我的消息&nbsp;(<em
+class="hd_has_num">0</em>)</a>
+</div>
+</li>
+<li clstag="pageclick|keycount|global_201709226|6">
+<div class="hd_menu">
+<a href="//home.yhd.com/order/toOrderList.do" target="_blank" rel="nofollow"><i
+class="hd_iconfont">&#xe612;</i>我的订单</a>
+</div>
+</li>
+<li class="hd_has_child" clstag="pageclick|keycount|global_201709226|7">
+<div class="hd_menu">
+<a href="//cms.yhd.com/cms/view.do?topicId=43" target="_blank">客户服务</a>
+<i class="hd_iconfont">&#xe627;</i>
+</div>
+<div class="hd_menu_list">
+<a href="//home.yhd.com/order/toOrderList.do" target="_blank" title="包裹跟踪">包裹跟踪</a>
+<a href="//rma.yhd.com/return/returnApplyList.do" target="_blank" title="在线退换货">在线退换货</a>
+</div>
+</li>
+<li class="hd_has_child">
+<div class="hd_title">
+<a href="javascript:;"><i class="iconfont180315">&#xe62a;</i>APP下载</a>
+</div>
+<div class="hd_qrcode_bg">
+<div class="triangle"></div>
+<p>扫描二维码</p>
+<p>下载1号店APP</p>
+<a href="//app.yhd.com" target="_blank">
+<img src="//img.yihaodianimg.com/front-homepage/index/images/qryhd.png" />
+</a>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<!-- top_main -->
+<div class="mpc_header">
+<div class="wrap clearfix">
+<!-- logo -->
+<a href="javascript:;" class="mpc_header_logo">
+<img src="//d7.yihaodianimg.com/N11/M0B/27/B2/ChEwoVlttKGAS-blAAAUDLWBviU33400.png" width="100%" height="100%" /> 我的个人中心
+</a>
+<!-- nav -->
+<div class="mpc_header_nav">
+<ul class="nav_list clearfix">
+<!-- 当前页面：cur hover页面： active -->
+<li class="nav_item cur">
+<a href="//www.yhd.com" class="item" >首页
+</a>
+</li>
+<li class="nav_item">
+<a href="" class="item" >个人设置
+<i class="my_iconfont arrow_icon">&#xe62f;</i> </a>
+<div class="pull_list_wrap">
+<div class="pull_list">
+<a href="//home.yhd.com/myinfo/index.do" class="pull_list_item" >个人资料</a>
+<a href="//home.yhd.com/safecenter/index.do" class="pull_list_item" >账户安全设置</a>
+<a href="//home.yhd.com/address/addressList.do" class="pull_list_item" >地址管理</a>
+</div>
+</div>
+</li>
+<li class="nav_item">
+<a href="https://8.yhd.com/cfweb/home.action" class="item" >1金融
+</a>
+</li>
+</ul>
+</div> <div class="mpc_header_right simple_header_right clearfix">
+<div class="clearfix">
+<div class="hd_header_search">
+<input type="text" class="enter_box" placeholder="搜全站" id="keyword">
+<i class="my_iconfont search_icon"
+onclick="javascript:searchMeForClick();"></i>
+</div>
+</div>
+</div>
+</div>
+</div></div><!--content start-->
+<body style="background-color: #e9e9e9;">
+<!-- 宽窄屏判断 -->
+<div class="my_personl_center">
+<!-- header -->
+<!-- content -->
+<div class="mpc_cont">
+<div class="wrap clearfix">
+<!-- sideNav -->
+<!-- sideNav -->
+<div class="mpc_cont_sideNav">
+<dl>
+<dt>
+<i class="my_iconfont sidenav_icon">&#xe62b;</i>
+<span>我的交易</span>
+</dt>
+<dd>
+<a onclick="addTrackPositionToCookie('2','Myyhd_New_Left_Menu_Transaction')" href='//home.yhd.com/order/toOrderList.do' target="_blank">1号店订单</a>
+</dd>
+<dd>
+<a onclick="addTrackPositionToCookie('2','Myyhd_New_Left_Menu_Presell')" href='//home.yhd.com/presell/getMyPresellList.do' target="_blank">我的预约</a>
+</dd>
+<dd>
+<a onclick="addTrackPositionToCookie('2','Myyhd_New_Left_Menu_AlwaysBuy')" href='//home.yhd.com/alwaysbuy/getMyAlwaysBuyList.do' target="_blank">常购清单</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<i class="my_iconfont sidenav_icon">&#xe62d;</i>
+<span>会员资料</span>
+</dt>
+<dd>
+<a onclick="addTrackPositionToCookie('2','Myyhd_New_Left_Menu_Member_lianmingka')" href='//vip.yhd.com/card/myVip.do' target="_blank" class="llw">我的联名卡</a>
+</dd>
+<dd>
+<a onclick="addTrackPositionToCookie('2','Myyhd_New_Left_Menu_Member_Ziliao')" href='//home.yhd.com/myinfo/index.do' target="_blank">个人资料</a>
+</dd>
+<dd>
+<a onclick="addTrackPositionToCookie('2','Myyhd_New_Left_Menu_Member_Address')" href='//home.yhd.com/address/addressList.do' target="_blank">地址管理</a>
+</dd>
+<dd>
+<a onclick="addTrackPositionToCookie('2','Myyhd_New_Left_Menu_Member_Safe')" href='//home.yhd.com/safecenter/index.do' target="_blank">安全设置</a>
+</dd>
+<dd>
+<a onclick="addTrackPositionToCookie('2','Myyhd_New_Left_Menu_Member_UserAuth')" href='//home.yhd.com/safecenter/editIdentity.do' target="_blank">实名认证</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<i class="my_iconfont sidenav_icon">&#xe62e;</i>
+<span>我的评论</span>
+</dt>
+<dd>
+<a onclick="addTrackPositionToCookie('2','Myyhd_New_Left_Menu_Transaction_Common')" href='//item.yhd.com/comment/getCanCommentDetail.do' target="_blank">评论商品</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<i class="my_iconfont sidenav_icon">&#xe62a;</i>
+<span>我的资产</span>
+</dt>
+<dd>
+<a onclick="addTrackPositionToCookie('2','Myyhd_New_Left_Menu_TotalAccount_Gold')" href='//home.yhd.com/myyhdgold/index.do' target="_blank">我的金币</a>
+</dd>
+<dd>
+<a onclick="addTrackPositionToCookie('2','Myyhd_New_Left_Menu_TotalAccount_Coupon')" href='//coupon.yhd.com/myCoupon/' target="_blank">我的优惠券</a>
+</dd>
+<dd>
+<a onclick="addTrackPositionToCookie('2','Myyhd_New_Left_Menu_TotalAccount_Card')" href='//vip.yhd.com/pc/giftcard/toMyGiftCard.do' target="_blank">我的礼品卡</a>
+</dd>
+<dd>
+<a onclick="addTrackPositionToCookie('2','Myyhd_New_Left_Menu_TotalAccount_Zhye')" href='//home.yhd.com/myyhdbalance/index.do' target="_blank">我的余额</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<i class="iconfont sidenav_icon smallicon">&#xe611;</i>
+<span>我的关注</span>
+</dt>
+<dd>
+<a onclick="addTrackPositionToCookie('2','Myyhd_New_Left_Menu_Follow_Product')" href='//home.yhd.com/follow/getFollowProductList.do' target="_blank">关注商品</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<i class="my_iconfont sidenav_icon">&#xe62c;</i>
+<span>我的服务</span>
+</dt>
+<dd>
+<a onclick="addTrackPositionToCookie('2','Myyhd_New_Left_Menu_OnLineHelp_Invoice')" href='//home.yhd.com/myinvoice/qualification.do' target="_blank">发票中心</a>
+</dd>
+<dd>
+<a onclick="addTrackPositionToCookie('2','Myyhd_New_Left_Menu_OnLineHelp_Return')" href='//rma.yhd.com/return/returnApplyList.do' target="_blank">在线退换货</a>
+</dd>
+</dl>
+</div>
+<script type="text/javascript" src="//img.yihaodianimg.com/myyhd/member/js/jquery.min.js"></script>
+<script type="text/javascript" src="//home.yhd.com/statics/member/index/js/leftmenu.js"></script>
+<!-- <script type="text/javascript" src="//img.yihaodianimg.com/myyhd/member/index/js/leftmenu.js"></script> -->
+<!-- main -->
+<div class="mpc_cont_main">
+<!-- userInfo -->
+<!--
+新晋会员 myIndex_user_new
+白银会员 myIndex_user_silver
+黄金会员 myIndex_user_gold
+铂金会员 myIndex_user_platinum
+钻石会员 myIndex_user_jewel
+1号之星 myIndex_user_star
+-->
+<div class="myIndex_user_info myIndex_user_new clearfix">
+<!-- base info -->
+<div class="user_base">
+<!-- 头像 -->
+<a target="_blank" href="//home.yhd.com/myinfo/index.do" class="private_userpic">
+<img class="pic" src="/statics/member/images/defaultUserPic.jpg" width="74" height="74">
+</a>
+<!-- 用户名 -->
+<div class="private_username">
+<a target="_blank" href="//home.yhd.com/myinfo/index.do">你好！秋葵炒鸡蛋</a>
+</div>
+<!-- 用户标签 -->
+<div class="private_userlabels">
+<div class="labels_list clearfix">
+<a target="_blank" href="//vip.yhd.com" class="labels rank_labels">新晋会员</a>
+</div>
+</div>
+<!-- 会员特权 -->
+<div class="private_userPrivilege">
+<a target="_blank" href="//vip.yhd.com/memberv2/showRightDesc.do" class="userPrivilege_text">3个会员特权<i class="my_iconfont icon_arrow">&#xe67a;</i></a>
+</div>
+</div>
+<!-- account info -->
+<div class="user_account">
+<div class="user_account_top clearfix">
+<!-- 金币 -->
+<div class="user_account_coin">
+<div class="line"></div>
+<div class="user_account_num">
+<a href="//home.yhd.com/myyhdgold/index.do" class="num" target="_blank"><i class="my_iconfont icon_labels">&#xe626;</i>0</a>
+</div>
+<div class="user_account_title">
+<a href="//home.yhd.com/myyhdgold/index.do" target="_blank" >金币</a>
+</div>
+<a href="//coin.yhd.com" target="_blank" class="user_account_links">金币商城<i class="my_iconfont icon_arrow">&#xe67a;</i></a>
+</div>
+<!-- 抵用券 -->
+<div class="user_account_coupon">
+<div class="user_account_num">
+<a href="//coupon.yhd.com/myCoupon" target="_blank" class="num"><i class="my_iconfont icon_labels">&#xe625;</i>0</a>
+</div>
+<div class="user_account_title">
+<a href="//coupon.yhd.com/myCoupon" target="_blank">优惠券</a>
+</div>
+<a target="_blank" href="//coupon.yhd.com/couponCenter/home" class="user_account_links">领券中心<i class="my_iconfont icon_arrow">&#xe67a;</i></a>
+</div>
+<!-- 日历 -->
+<div class="user_account_canlendar">
+<!-- 日期 -->
+<div class="user_account_date clearfix">
+<div class="fl date">2019-04-01</div>
+<div class="fr week">星期一</div>
+</div>
+<!-- 签到按钮 -->
+<div class="sign_desk">
+<!-- 防止点击两次签到 -->
+<input type="hidden" id="doubleClick" value="1"/>
+<a href="javascript:;" class="sign_in ">
+<!-- <i class="my_iconfont icon_labels">&#xe677;</i> -->
+<span>
+立即签到
+</span>
+<em></em>
+</a>
+<!-- 签到日历-20170519-S -->
+<div class="sign_box" style="display: none;">
+<i class="icon arrow"></i>
+<div class="tips">
+<span class="tips_text">已连续1天签到</span>
+<span class="tips_num"></span>
+</div>
+<div class="date_blank">
+<ul class="contrast clearfix">
+<li class="list "> <!-- cur表示已签到 -->
+<p class="date">4.01</p>
+<p class="coin">+2</p>
+<i class="icon draw"></i>
+</li>
+<li class="list ">
+<p class="date">4.02</p>
+<p class="coin">+2</p>
+<i class="icon draw"></i>
+</li>
+<li class="list ">
+<p class="date">4.03</p>
+<p class="coin">+6</p>
+<i class="icon draw"></i>
+<div class="box">
+<i class="icon triangle"></i>
+<span>连续3天签到可获得额外奖励</span>
+</div>
+</li>
+</ul>
+<!-- progress -->
+<div class="progress clearfix">
+<span class="step step_01 "> <!-- cur表示已签到 -->
+<i class="dot"></i>
+</span>
+<span class="step step_02 ">
+<i class="dot"></i>
+</span>
+<span class="step step_03 ">
+<i class="dot"></i>
+</span>
+</div>
+</div>
+</div>
+<!-- 签到日历-20170519-E -->
+</div>
+<!-- 签到提示 -->
+<div class="user_sign_tips">连续3天签到可获得额外奖励</div>
+</div>
+</div>
+<div class="user_account_bottom clearfix">
+<div class="user_account_property clearfix">
+<div class="property_title">
+<span class="title">更多资产<i class="my_iconfont icon_arrow">&#xe679;</i></span>
+</div>
+<!-- 礼品卡 -->
+<div class="user_account_gift">
+<a target="_blank" href="//b2beam.yhd.com/gift-cards/displayGiftCardAddMoney.do">礼品卡余额：<em class="yen">&yen;</em><b>0</b></a>
+</div>
+<!-- 账户余额 -->
+<div class="user_account_balance">
+<a target="_blank" href="//home.yhd.com/myyhdbalance/index.do">账户余额：<em class="yen">&yen;</em><b>0</b></a>
+</div>
+</div>
+<!-- 账号安全 低：low 中：middle 高：up -->
+<div class="user_account_safe low clearfix">
+<label class="title">账户安全：</label>
+<div class="progress_bar">
+<span class="progress" style="width:100%"></span>
+</div>
+<span class="safe_rank">高</span>
+<a target="_blank" href="//home.yhd.com/safecenter/index.do" class="my_iconfont icon_set">&#xe628;</a>
+</div>
+</div>
+</div>
+</div>
+<!-- my main cont -->
+<div class="myIndex_main_cont clearfix">
+<!-- about my -->
+<div class="mmc_about">
+<!-- orders -->
+<div class="mmc_about_orders">
+<!-- tab titles -->
+<div class="mao_orders_title clearfix">
+<a href="//home.yhd.com/myyhdindex/index.do?orderState=4096" class="title cur">最近订单</a>
+<!--
+-->
+<a target="_blank" href="//home.yhd.com/order/toOrderList.do" class="all_orders">全部订单<em>&gt;</em></a>
+</div>
+<!-- tab content -->
+<div class="mao_orders_cont">
+<!-- 最近订单 -->
+<div class="orders_cont_info" style="display: block">
+<ul class="orders_list clearfix">
+<div class="orders_list_empty clearfix">
+<div class="empty_pic">
+<img src="../statics/member/index/images/orderEmptyBg.png" width="100%" height="100%">
+</div>
+<div class="empty_tips">
+<div class="empty_tips_title">您还没有订单</div>
+<div class="empty_tips_text">好货这么多，快去买买买！</div>
+</div>
+</div>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- 返回顶部 -->
+<div class="prism_to_top">
+<a href="#" class="my_iconfont back_top">&#xe602;</a>
+</div>
+<!-- 弹框-加购成功 -->
+<div class="dialog_pop dialog_pop_cartSuccess">
+<div class="dialog_pop_wrap">
+<!--弹框标题-->
+<div class="dialog_pop_title">
+<!--关闭事件：pop_close -->
+<a href="javascript:;" class="my_iconfont pop_close close_btn">&#xe61e;</a>
+</div>
+<!--弹框内容-->
+<div class="dialog_pop_con">
+<!-- 提示icon -->
+<div class="my_iconfont cart_success_icon">&#xe63d;</div>
+<!-- 提示信息 -->
+<div class="cart_success_tips">已成功加入购物车</div>
+</div>
+<!--弹框按钮-->
+<div class="dialog_pop_btn">
+<a href="javascript:;" class="white_btn pop_close">继续购物</a>
+<a href="javascript:;" class="red_btn pop_close">查看购物车</a>
+</div>
+</div>
+</div>
+<!-- 弹框-签到失败 -->
+<div class="dialog_pop dialog_pop_signFail">
+<div class="dialog_pop_wrap">
+<!--弹框标题-->
+<div class="dialog_pop_title">
+<!--关闭事件：pop_close -->
+<a href="javascript:;" id="gbanniu" class="my_iconfont pop_close close_btn">&#xe61e;</a>
+</div>
+<!--弹框内容-->
+<div class="dialog_pop_con">
+<!-- 提示icon -->
+<div class="my_iconfont sign_fail_icon">&#xe637;</div>
+<!-- 提示信息 -->
+<div class="sign_fail_tips">对不起，签到失败了</div>
+</div>
+<!--弹框按钮-->
+<div class="dialog_pop_btn">
+<a href="javascript:;" class="red_btn" id="yesiknow">知道了</a>
+</div>
+</div>
+</div>
+<script>
+$(document).ready(function(){
+$("#yesiknow").click(function(){
+$("#gbanniu")[0].click();
+})
+})
+function govippage(){
+window.location.href="//vip.yhd.com/card/myVip.do";
+}
+</script>
+<script type="text/javascript">
+var jaq = jaq || [];
+jaq.push(['account', 'JA2017_111805']); //站点编号
+jaq.push(['domain', 'yhd.com']); //站点域名
+(function () {
+var ja = document.createElement('script');
+ja.type = 'text/javascript';
+ja.async = true;
+ja.src = '//wl.jd.com/joya.js';
+var s = document.getElementsByTagName('script')[0];
+s.parentNode.insertBefore(ja, s);
+})();
+</script>
+<!--content end-->
+<div class="ft_wrap">
+<div id="globalBottomBrowseRelated" data-recordTracker="1"></div>
+<div class="wrap ft_footer_service clearfix" id="footerIcon" data-tpa="YHD_GLOBAl_FOOTERICON">
+<a target="_blank">
+<img alt="" src="//d8.yihaodianimg.com/N05/M0B/39/F3/CgQI0lWskgmADBnsAAAPZvcSh3E68900.jpg"/>
+<b>正品保障</b>
+<span>正品行货 放心选购</span>
+</a>
+<a target="_blank">
+<img alt="" src="//d6.yihaodianimg.com/N05/M09/96/23/ChEbulWsk4iADa_aAAAM544hHN818600.jpg"/>
+<b>满86包邮</b>
+<span>满86元 免运费</span>
+</a>
+<a target="_blank">
+<img alt="" src="//d9.yihaodianimg.com/N07/M00/2D/8B/CgQIz1WslI-Adao3AAAN5b_ut2I80100.jpg"/>
+<b>售后无忧</b>
+<span>7天无理由退货</span>
+</a>
+<a target="_blank">
+<img alt="" src="//d8.yihaodianimg.com/N09/M06/08/C8/ChEi11WsyiyALBbiAAAN9lEEK5M33200.jpg"/>
+<b>准时送达</b>
+<span>收货时间由你做主</span>
+</a>
+</div>
+<div class="wrap ft_service_link clearfix">
+<div id="bottomHelpLinkId" class="ft_help_list clearfix" data-tpa="YHD_GLOBAl_FOOTER_HELP">
+<dl>
+<dt>新手入门</dt>
+<dd><a href="//cms.yhd.com/cms/view.do?topicId=12" target="_blank">购物流程</a></dd>
+<dd><a href="//cms.yhd.com/cms/view.do?topicId=17" target="_blank">会员制度</a></dd>
+<dd><a href="//cms.yhd.com/cms/view.do?topicId=38" target="_blank">订单查询</a></dd>
+<dd><a href="//cms.yhd.com/cms/view.do?topicId=10" target="_blank">服务协议及隐私说明</a></dd>
+<dd><a href="//seo.yhd.com/sitelink/sitemap.html" target="_blank">网站地图</a></dd>
+</dl>
+<dl>
+<dt>支付方式</dt>
+<dd><a href="//cms.yhd.com/cms/view.do?topicId=25" target="_blank">货到付款</a></dd>
+<dd><a href="//cms.yhd.com/cms/view.do?topicId=26" target="_blank">网上支付</a></dd>
+<dd><a href="//cms.yhd.com/cms/view.do?topicId=28" target="_blank">礼品卡支付</a></dd>
+<dd><a href="//cms.yhd.com/cms/view.do?topicId=29" target="_blank">其它支付</a></dd>
+</dl>
+<dl>
+<dt>配送服务</dt>
+<dd><a href="//cms.yhd.com/cms/view.do?topicId=21" target="_blank">配送进度查询</a></dd>
+<dd><a href="//cms.yhd.com/cms/view.do?topicId=20" target="_blank">商品验货与签收</a></dd>
+</dl>
+<dl>
+<dt>售后保障</dt>
+<dd><a href="//cms.yhd.com/cms/view.do?topicId=31" target="_blank">退换货政策</a></dd>
+<dd><a href="//cms.yhd.com/cms/view.do?topicId=36" target="_blank">发票制度</a></dd>
+<dd><a href="//cms.yhd.com/cms/view.do?topicId=43" target="_blank">帮助中心</a></dd>
+</dl>
+</div>
+<!--footer 二维码 begin -->
+<div class="ft_code_wrap clearfix" data-tpa="YHD_GLOBAl_HEADER_MOBILE" id="footerQRcode">
+<div class="ft_mobile_code clearfix">
+<p>APP更优惠</p>
+<a href="//app.yhd.com" target="_blank">
+<img src="//img.yihaodianimg.com/front-homepage/index/images/qryhd.png?1=1" alt="APP更优惠二维码"/>
+</a>
+</div>
+<div class="ft_mobile_code clearfix">
+<p>加微信查订单</p>
+<img src="//img30.360buyimg.com/img/jfs/t15403/130/239695202/5772/891e9fb1/5a2798bbN479da3df.jpg" alt="加微信查订单二维码"/>
+</div>
+</div>
+</div><div id="footer">
+<p class="ft_footer_link">
+</p>
+<p class="ft_footer_link">
+<a href="http://www.miibeian.gov.cn/" target="_blank">沪ICP备16050468号</a>
+|
+<a href="//cms.yhd.com/cms/view.do?topicId=16" target="_blank">经营证照</a>
+|
+<a href="//d9.yihaodianimg.com/N10/M05/00/A9/ChEi2lkQGRaAfaeeAAIhVwT2TYo18400.jpg" target="_blank">互联网药品信息服务资格证(沪)-经营性-2017-0006</a>
+|
+<a target="_blank">违法和不良信息举报电话：0527-88100253</a>
+|
+<a href="//d9.yihaodianimg.com/N11/M04/76/1C/ChEwoVnfFfeAfzKUAAg9urXNqaA12000.jpg" target="_blank">沪B2-20170039</a>
+|
+<a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=31010502002939" target="_blank">沪公网安备 31010502002939号</a>
+|
+<a href="//seo.yhd.com/sitelink/sitelink.html" target="_blank">友情链接</a>
+|
+<a href="//cms.yhd.com/cms/view.do?topicId=105" target="_blank">出版物经营许可证</a>
+|
+<a href="//img30.360buyimg.com/img/jfs/t1/6492/18/11106/1876411/5c239337Ef050b204/c78bc70077a34bf2.jpg" target="_blank">增值电信业务经营许可证</a>
+</p>
+<p>Copyright© 1号店网上超市 2007-2019，All Rights Reserved</p>
+<small id="footerbanner2LazyLoad" class="ft_pic_link">
+<a href="http://net.china.com.cn/index.htm" target="_blank" >
+<img alt="" src="//d9.yihaodianimg.com/N01/M0A/95/FD/CgQCr1PQy1CAF7vaAABDexsiEYM24800.jpg">
+</a>
+<a href="http://shwg.dianping.com/index.html" target="_blank" >
+<img alt="" src="//d9.yihaodianimg.com/N08/M06/6C/9C/ChEi1VcfPl2AC1T8AAANFrEfJlw97300.jpg">
+</a>
+<a href="http://www.shjbzx.cn" target="_blank" >
+<img alt="" src="//d6.yihaodianimg.com/N10/M09/0E/1F/ChEi2lh171KAJrGlAAALl_uZt0E75600.jpg">
+</a>
+<a href="https://search.szfw.org/cert/l/CX20150608010268010812" target="_blank" >
+<img alt="" src="//d9.yihaodianimg.com/N08/M01/C7/7E/ChEi1FYXHcOAVk_WAAAL2r2-yfo10200.jpg">
+</a>
+<a href="https://ss.knet.cn/verifyseal.dll?sn=e13050631010040492h5mq000000&ct=df&a=1&pa=500267" target="_blank" >
+<img alt="" src="//d9.yihaodianimg.com/N01/M03/A0/40/CgQCrlPYTqCASlHXAAAd82JE0eA31000.png">
+</a>
+<a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=31010502002939" target="_blank" >
+<img alt="" src="//img30.360buyimg.com/img/jfs/t16534/130/1965976230/19256/c267b386/5a706bb1Ne3eec0dd.png">
+</a>
+</small>
+</div></div><!--js start-->
+<!--无页面级头部js时, 全局头部js下移-->
+<script type="text/javascript" src="//img.yihaodianimg.com/myyhd/global/js/global_base_top.js?0" charset="utf-8"></script>
+<script type="text/javascript" src="//img.yihaodianimg.com/myyhd/member/js/myyhdindex.js?0" charset="utf-8"></script>
+<script type="text/javascript" src="//st.360buyimg.com/sso/synccookiepc.js?0" charset="utf-8"></script>
+</body>
+</html>

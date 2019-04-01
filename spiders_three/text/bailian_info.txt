@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<!-- new common in localhost -->
+<script>
+var domain = {
+		main : "http://www.bl.com",
+		help : "http://help.bl.com",
+		passport : "https://passport.bl.com",
+		reg : "https://reg.bl.com",
+		my : "https://my.bl.com",
+		cart : "http://cart.bl.com",
+		fashion : "http://fashion.bl.com",
+		life : "http://life.bl.com",
+		product : "http://product.bl.com",
+		search : "http://search.bl.com",
+		qiang : "http://qiang.bl.com",
+		tuan : "http://tuan.bl.com",
+		order : "http://channel.bl.com",
+		js : "//res12.iblimg.com/respc-1",
+		image : "//res12.iblimg.com/respc-1",
+		chongzhi : "http://chongzhi.bl.com",
+		jiaofei : "http://jiaofei.bl.com",
+		coupon : "http://coupon.bl.com",
+		trade : "http://trade.bl.com",
+		promotion : "http://promotion.bl.com",
+		payment : "https://payment.bl.com",
+		cookie: ".bl.com",
+		dc1: "http://dc1.bl.com",
+		dt1: "http://dt1.bl.com",
+		httpsImg : "https://res12.iblimg.com/respc-1",
+		safe : "https://safe.bl.com",
+		s: "http://s.bl.com",
+		global : "http://global.bl.com",
+		dc2: "http://dc2.bl.com",
+		chexian: "http://bx.bl.com",
+		blk:"http://blk.bl.com"
+	};
+	
+	var jsonPageInfo = {
+		"pageId" : "",
+		"categoryId" : "",
+		"searchTerm" : "",
+		"searchResult" : "",
+		"exportAttributes" : ""
+	};
+
+	var pageInfoJson = "{\"categoryId\":\"PC_User\",\"exportAttributes\":\"\",\"id\":\"ym-27\",\"pageId\":\"PC_我的积分\",\"searchResult\":\"\",\"searchTerm\":\"\",\"url\":\"ym/memberPointList\"}";
+	if (pageInfoJson) {
+		jsonPageInfo = eval("(" + pageInfoJson + ")");
+	}
+</script><html lang="zh-CN">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" >
+	<meta name="renderer" content="webkit">
+	
+	<meta name="keyw
+	ords" content="">
+	<meta name="description" content="">
+	<title>我的积分-我的百联</title>
+	<link rel="stylesheet" type="text/css" href="https://res14.iblimg.com/respc-1/resources/v3.0/css/base.css">
+	<link rel="stylesheet" type="text/css" href="https://res15.iblimg.com/respc-1/resources/v3.0/css/loginhead.css">
+	<link rel="stylesheet" type="text/css" href="https://res12.iblimg.com/respc-1/resources/v3.0/css/mylayout.css">
+	<link rel="stylesheet" type="text/css" href="https://res13.iblimg.com/respc-1/resources/v4.1/css/mypoints.css">
+	<link rel="stylesheet" type="text/css" href="https://res14.iblimg.com/respc-1/resources/v3.0/css/jquery-ui.css">
+	<link rel="stylesheet" type="text/css" href="https://res15.iblimg.com/respc-1/resources/v4.2/widget/footer1200/footer1200.css"/>
+	<link rel="stylesheet" type="text/css" href="https://res12.iblimg.com/respc-1/resources/v4.2/widget/tools1200/tools1200.css"/>
+		<style type="text/css">
+		.rule-table .table-line .remark {
+		    color: #333;
+		    font-family: "Microsoft YaHei";
+		    height: 78px;
+		    line-height: 22px;
+		    padding-top: 13px;
+		}
+		</style>
+</head>
+<body class="w960 login-body">
+	<!-- tools -->
+<div class="tools">
+    <div class="wrap">
+    	<div class="bl-name" title="百联集团旗下全渠道电商平台"><div class="txt">百联集团旗下全渠道电商平台</div><b></b></div>
+        <div class="tools-left">
+            <div class="tools-leftfont"><a href="javascript:void(0);"><span>网站导航</span><i></i></a></div>
+            <span class="left-span"></span>
+            <div class="divshow left-show">
+                <div class="left-show-dl">
+                    <dl>
+                    	<dd><a target="_blank" href="http://www.bailiangroup.cn/">百联集团官网</a></dd>
+                        <dd><a target="_blank" href="http://www.safepass.cn/">安付宝网</a></dd>
+                        <dd><a target="_blank" href="http://www.dyyy.com.cn/">第一医药</a></dd>
+                        <dd><a target="_blank" href="https://www.okcard.com/clogin">OK会员卡专区</a></dd>
+                    </dl>
+                </div>
+            </div>
+        </div>
+        <div class="tools-info">
+			<s style="display:none"> •</s>
+			<a href="https://my.bl.com/message/mynews.html"  target="_blank" class="red-font">消息</a>
+		</div>
+        <div class="tools-right">
+            <ul>
+                <li id="user_not_login" class="box">
+                	<div>
+	                	<a href="javascript:void(0);" class="login-button"><i></i><span>请登录</span></a>
+	                	<a id="headerReg" href="javascript:void(0);" class="registered">注册</a>
+                	</div>
+                    <b></b>
+                </li>
+				<li style="display: none" class="box-tols" id="user_login_in">
+					<a href="https://my.bl.com/ym/nl/toIndex.html" target="_blank">
+						<i>Hi，</i>
+						<span id="member_name"></span>
+					</a>
+					<a href="https://passport.bl.com/loginDisplay.html?type=logout">退出</a>
+					<b></b>
+				</li>
+                <li><div class="tools-leftfont"><a target="_blank" href="https://my.bl.com/ym/orderList.html">我的订单</a></div><b></b></li>
+                <li>
+                    <div class="tools-leftfont"><a target="_blank" href="https://my.bl.com"><span>我的百联</span><i></i></a></div>
+                    <span class="left-span"></span>
+                    <b></b>
+                    <div class="divshow hdiv">
+                        <dl>
+                            <dd><a target="_blank" href="https://my.bl.com/ym/orderList.html">我的订单</a></dd>
+                            <dd><a target="_blank" href="https://my.bl.com/ym/commentList.html">我的评价</a></dd>
+                            <dd><a target="_blank" href="https://my.bl.com/ym/nl/memberPointList.html">我的积分</a></dd>
+                            <dd><a target="_blank" href="https://my.bl.com/favorite/myFavorite.html">我的收藏</a></dd>
+                            <dd><a target="_blank" href="https://my.bl.com/center/series/myCoupon.html">我的优惠券</a></dd>
+                        </dl>
+                    </div>
+                </li>
+                <li>
+                    <div class="tools-leftfont"><a target="_blank" href="http://jiaofei.bl.com"><span>充值缴费</span><i></i></a></div>
+                    <span class="left-span"></span>
+                    <b></b>
+                    <div class="divshow pay">
+                        <dl class="pay-dl">
+                        	<dd>
+                                <div class="pay-title">水电煤缴费</div>
+                                <div class="pay-head">
+                                    <a target="_blank" onclick="clickButton('缴费首页',null,null,'首页top','PC_Fees',null);" href="http://jiaofei.bl.com">缴费首页</a>
+                                    <a target="_blank" onclick="clickButton('水费缴费',null,null,'首页top','PC_Fees',null);" href="http://jiaofei.bl.com/syf/pubfeepage.html?type=sf">水费缴费</a>
+                                    <a target="_blank" onclick="clickButton('电费缴费',null,null,'首页top','PC_Fees',null);" href="http://jiaofei.bl.com/syf/pubfeepage.html?type=dl">电费缴费</a>
+                                    <a target="_blank" onclick="clickButton('燃气缴费',null,null,'首页top','PC_Fees',null);" href="http://jiaofei.bl.com/syf/pubfeepage.html?type=mq">燃气缴费</a>
+                                </div>
+                            </dd>
+                            <dd>
+                                <div class="pay-title">手机充值</div>
+                                <div class="pay-head">
+                                    <a target="_blank" onclick="clickButton('手机充值',null,null,'首页top','PC_Fees',null);" href="http://chongzhi.bl.com/cz/czpage.html">手机充值</a>
+                                    <a target="_blank" onclick="clickButton('流量充值',null,null,'首页top','PC_Fees',null);" href="http://chongzhi.bl.com/cardll/cardllpage.html">流量充值</a>
+                                    <a target="_blank" onclick="clickButton('更多充值',null,null,'首页top','PC_Fees',null);" href="http://chongzhi.bl.com/cz/lbczpage.html">更多充值</a>
+                                </div>
+                            </dd>
+                            <dd>
+                                <div class="pay-title">其他缴费</div>
+                                <div class="pay-head">
+                                <a target="_blank" onclick="clickButton('固话/宽带充值',null,null,'首页top','PC_Fees',null);" href="http://jiaofei.bl.com/other/otherfee.html?type=tel">固话/宽带充值</a>
+                                    <a target="_blank" onclick="clickButton('铁通缴费',null,null,'首页top','PC_Fees',null);" href="http://jiaofei.bl.com/other/otherfee.html?type=tt">铁通缴费</a>
+                                    <a target="_blank" onclick="clickButton('有线电视缴费',null,null,'首页top','PC_Fees',null);" href="http://jiaofei.bl.com/other/otherfee.html?type=ds">有线电视缴费</a>
+                                </div>
+                            </dd>
+                            <dd>
+                                <div class="pay-title">游戏点卡</div>
+                                <div class="pay-head">
+                                    <a target="_blank" onclick="clickButton('腾讯Q币充值',null,null,'首页top','PC_Fees',null);" href="http://chongzhi.bl.com/game/gamerechange.html?version=v1">腾讯Q币充值</a>
+                                    <a target="_blank" onclick="clickButton('盛大点券充值',null,null,'首页top','PC_Fees',null);" href="http://chongzhi.bl.com/game/capassgame.html?dsplb=01108&dsphh=364009">盛大点券充值</a>
+                                    <a target="_blank" onclick="clickButton('更多游戏',null,null,'首页top','PC_Fees',null);" href="http://chongzhi.bl.com/game/gameshoplist.html">更多游戏</a>
+                                </div>
+                            </dd>
+                            
+                            </dl>
+                    </div>
+                </li>
+                <li>
+                    <div class="tools-leftfont"><a href="javascript:void(0);"><span>客户服务</span><i></i></a></div>
+                    <span class="left-span"></span>
+                    <b></b>
+                    <div class="divshow hdiv">
+                        <dl>
+                            <dd><a  href="javascript:void(0);" class="c_ntkf">在线客服</a></dd>
+                            <dd><a target="_blank" href="http://help.bl.com/helpCentersv7.html">帮助中心</a></dd>
+                        </dl>
+                    </div>
+                </li>
+                <li>
+                    <div class="tools-leftfont"><a href="javascript:void(0);"><span>掌上百联</span><i></i></a></div>
+                    <span class="left-span"></span>
+                    <b></b>
+                    <div class="divshow palm">
+
+
+                            <div class="palm-item">
+                                        <span class="palm-item-img"><img src="//img23.iblimg.com/market-2/images/activity/1807592795.jpg" width="100" height="100"></span>
+                                        <div class="palm-item-line"><apan class="palm-item-title">i百联微信</apan></div>
+                                        <div class="palm-item-line"><apan class="palm-item-message">扫一扫关注</apan></div>
+                                        </div>
+                                <div class="palm-item">
+                                        <span class="palm-item-img"><img src="//img22.iblimg.com/market-2/images/activity/1849148942.png" width="100" height="100"></span>
+                                        <div class="palm-item-line"><apan class="palm-item-title">i百联APP</apan></div>
+                                        <div class="palm-item-line"><apan class="palm-item-message">手机购物更方便</apan></div>
+                                        </div>
+                                </div>
+                    </li>
+                <li>
+                    <div class="tools-leftfont"><a target="_blank" href="http://cart.bl.com"><span>购物车</span></a></div>
+                    <b></b>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<link rel="stylesheet" type="text/css" href="https://res13.iblimg.com/respc-1/resources/v3.0/widget/redsearch/redsearch.css">
+<div class="ibrilliance-nav">
+    <div class="wrap">
+        <div class="ibrilliance-nav-logo">
+            <div class="ibrilliance-logo"><a href="http://www.bl.com"><img src="https://res12.iblimg.com/respc-1/resources/v3.0/css/i/ibrilliance-logo.png" height="40"></a></div>
+            <div class="ibrilliance-name">
+                <div class="ibrilliance-logo-title" >我的百联</div>
+            </div>
+        </div>
+        <div class="ibrilliance-nav-ul">
+            <ul>
+                <li class=""><a href="https://my.bl.com/ym/nl/toIndex.html">首页</a></li>
+                <li>
+                	<div class="gl">
+	                	<a href="javascript:;">设置<i></i></a>
+	                	<dl>
+		                	<dd>
+		                		<a href="https://my.bl.com/ym/nl/toPersonalEdit.html">个人资料</a>
+		                	</dd>
+		                	<dd>
+		                		<a href="https://my.bl.com/ym/nl/toSetReceiving.html">收货地址</a>
+		                	</dd>
+		                	<dd>
+		                		<a href="https://my.bl.com/ym/nl/securityCenter.html">安全中心</a>
+		                	</dd>
+	                	</dl>
+	                </div>
+	            </li>
+	           <li class=""><a href="https://my.bl.com/ym/nl/toVipClub.html">百联通会员俱乐部</a></li> 
+                 <!-- <li><a href="###">消息</a></li> -->
+            </ul>
+        </div>
+        <div class="ibrilliance-search">
+            <div class="ibrilliance-search-input">
+                <div class="search-1"><input type="text" placeholder="请输入搜索条件" id="header_search_mybailian_input"></div>
+                <div class="search-2"><button type="button" id="header_search_mybailian_Btu"></button></div>
+                <div class="search-show rw310">
+                	<div class="search-show-ul file-search-show">
+                    	<dl>
+
+                        </dl>
+                    </div>
+                    <div>
+	                    <dl class="search-show-ul file-search-ul">
+	  
+	                    </dl>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="wrap">
+	<div class="crumbs">
+    <a class="big-tag" href="https://my.bl.com/ym/nl/toIndex.html">我的百联</a> 
+    <span class="tag"> <s>〉</s> 我的积分</span>
+    </div><div class="left-side">
+    <div class="nav">
+        <dl>
+            <dt><s>•</s>我的交易</dt>
+            <dd class=""><a href="https://my.bl.com/ym/orderList.html">全部订单</a></dd>
+            <dd class=""><a href="https://my.bl.com/ym/offlineOrder.html">线下交易记录</a></dd>
+          <dd class=""><a href="https://my.bl.com/ym/orderList.html?orderType=666">保险订单</a></dd>
+            <dd class=""><a href="https://my.bl.com/ym/orderList.html?orderType=4">生鲜订单</a></dd>
+            <dd class=""><a href="https://my.bl.com/ym/orderList.html?orderType=20,21,22">水电煤订单</a></dd>
+            <span id="idDyyy"></span>
+            <dd class=""><a href="https://my.bl.com/ym/commentList.html">我的评价</a></dd>
+            <dd class=""><a href="https://my.bl.com/return/returnGoodsList.html">售后服务</a></dd>
+        </dl>
+    </div>
+    <div class="nav">
+        <div class="top-line"></div>
+        <dl>
+            <dt><s>•</s>我的钱包</dt>
+            <dd class=""><a href="https://my.bl.com/ym/mybalance.html">我的余额</a></dd>
+            <dd class="select"><a href="https://my.bl.com/ym/nl/memberPointList.html">我的积分</a></dd>
+         	<dd class=""><a href="https://my.bl.com/center/series/myCoupon.html">电子卡券</a></dd>  
+		    <input type="hidden" value=""/>
+		    <dd class=""><a href="https://my.bl.com/ym/howstages.html">兜来花</a></dd>
+			<dd class=""><a href="https://my.bl.com/ym/getBindList.html">银行卡</a></dd>
+        </dl>		
+    </div>
+    <div class="nav">
+        <div class="top-line"></div>
+        <dl>
+            <dt><s>•</s>我的收藏</dt>
+            <dd class=""><a href="https://my.bl.com/favorite/myFavorite.html">收藏的商品</a></dd>
+            <dd class=""><a href="https://my.bl.com/collectShop/queryMpFavoriteShop.html">关注的店铺</a></dd>
+            <!-- <dd class=""><a href="###">到货通知</a></dd> -->
+        </dl>
+    </div>
+
+    <div class="nav">
+        <div class="top-line"></div>
+        <dl>
+            <dt><s>•</s>我的信息</dt>
+            <dd class=""><a href="https://my.bl.com/ym/nl/toPersonalEdit.html">个人资料</a></dd>
+            <dd class=""><a href="https://my.bl.com/ym/nl/toSetReceiving.html">收货地址</a></dd>
+            <dd class=""><a href="https://my.bl.com/ym/nl/memberRights.html">会员权益</a></dd>
+            <dd class=""><a href="https://my.bl.com/ym/nl/securityCenter.html">安全中心</a></dd>
+            <dd class=""><a href="http://jiaofei.bl.com/syf/pubfeesublist.html">缴费订阅</a></dd>
+            <dd class=" "><a href="https://my.bl.com/ym/myinvoice.html">我的发票</a></dd>
+            <dd class=""><a href="https://my.bl.com/ym/getVatQualPage.html">增票资质</a></dd>
+      		<dd class=""><a href="https://my.bl.com/cbcard/hasNotCard.html">联名卡</a></dd>
+        </dl>
+    </div>
+    <div class="nav">
+        <div class="top-line"></div>
+        <dl>
+        	<dt><s>•</s>客服中心</dt>
+        	<dd class=""><a href="http://help.bl.com/helpCentersv7.html" target="_blank">帮助中心</a></dd>
+        	<dd class="">
+                <a href="javascript:void(0);" onclick="NTKF.im_openInPageChat('bm_1000_1522426708583')">在线客服</a>
+            </dd>
+           </dl>
+    </div>
+    </div><div class="right-side">
+		<div class="border-line"><div class="black-line"></div></div>
+	  	<div class="title">我的积分
+	  		<!-- <a class="points-rule" href="javascript:void(0);">了解积分规则<i></i></a> -->
+	  	</div>
+	  	<div class="rule-message">
+	  		<div class="now">
+	  			<div class="txt">可用积分总额</div>
+	  			<div class="number"><span>0</span><em></em></div>
+	  		</div>
+	  		<div class="update">
+  				<div class="txt"><span>我的成长值</span><em title=""></em></div>
+  				<div class="number">
+  				<span>0</span>
+				</div>
+  			</div>
+	  		<div class="overdue">
+	  			<div class="txt"><span>即将过期积分</span><em title=""></em></div>
+					<div class="number"><span>
+					0</span><em></em></div>
+ 					<div class="date"></div>
+	  		</div>
+	  	</div>
+	  	<div class="rule-tool">
+	  		<ul class="tab">
+	  			<li val="0">全部积分记录</li>
+	  			<li val="1">积分获取<s></s></li>
+	  			<li val="2">积分消耗<s></s></li>
+				<li val="3">成长值明细<s></s></li>
+	  		</ul>
+	  		<div class="date">
+	  			<input class="Wdate vegeSeleDate" id="endDate" placeholder="请选择日期" readonly="readonly">
+	  			<div class="to">至</div>
+	  			<input class="Wdate vegeSeleDate" id="startDate" placeholder="请选择日期" readonly="readonly">
+	  			<div class="from">选择日期范围：</div>  			
+	  		</div>
+	  	</div>
+		<!-- 异步加载table列表中的订单数据 -->
+	  	<div class="rule-table">
+
+		</div>
+		<!-- 翻页功能 -->
+	   <div class="page-line" >
+			<div id="pager" class="line">
+
+			</div>
+	   </div>
+	</div>
+</div>
+<div id="footer" class="footer">
+    <div class="helpnav clearfix">
+        <div class="wrap">
+        <div class="footer-center">
+            <div class="helpnav-list">
+                <div class="helpnav-title">
+                    <i class="footic1"></i>
+                  新手入门
+              </div>
+                <ul>
+                     <li><a href="http://help.bl.com/articleDetailed.html?articleId=261&&categoryType=help" target="_blank">购物流程</a></li>
+                     <li><a href="http://help.bl.com/articleDetailed.html?articleId=262&&categoryType=help" target="_blank">会员介绍</a></li>
+                     <li><a href="http://help.bl.com/articleDetailed.html?articleId=263&&categoryType=help" target="_blank">常见问题</a></li>
+                     <li><a href="http://help.bl.com/articleDetailed.html?articleId=264&&categoryType=help" target="_blank">发票说明</a></li>
+                     <li><a href="http://help.bl.com/articleDetailed.html?articleId=265&&categoryType=help" target="_blank">联系客服</a></li>
+                </ul>
+            </div>
+            <div class="helpnav-list">
+                <div class="helpnav-title">
+                    <i class="footic2"></i>
+                    配送服务
+                </div>
+                <ul>
+                    <li><a href="http://help.bl.com/articleDetailed.html?articleId=275&&categoryType=help" target="_blank">配送范围及运费</a></li>
+                    <li><a href="http://help.bl.com/articleDetailed.html?articleId=278&&categoryType=help" target="_blank">配送进度查询</a></li>
+                    <li><a href="http://help.bl.com/articleDetailed.html?articleId=276&&categoryType=help" target="_blank">自提服务</a></li>
+                    <li><a href="http://help.bl.com/articleDetailed.html?articleId=277&&categoryType=help" target="_blank">商品验货与签收</a></li>
+                </ul>
+            </div>
+            <div class="helpnav-list">
+                <div class="helpnav-title">
+                    <i class="footic3"></i>
+                    支付方式
+                </div>
+                <ul>
+                    <li><a href="http://help.bl.com/articleDetailed.html?articleId=279&&categoryType=help" target="_blank">货到付款</a></li>
+                    <li><a href="http://help.bl.com/articleDetailed.html?articleId=280&&categoryType=help" target="_blank">在线支付</a></li>
+                </ul>
+            </div>
+            <div class="helpnav-list">
+                <div class="helpnav-title">
+                    <i class="footic4"></i>
+                    售后服务
+                </div>
+                <ul>
+                     <li><a href="http://help.bl.com/articleDetailed.html?articleId=281&&categoryType=help" target="_blank">退换货政策</a></li>
+                     <li><a href="http://help.bl.com/articleDetailed.html?articleId=282&&categoryType=help" target="_blank">退换货流程</a></li>
+                     <li><a href="http://help.bl.com/articleDetailed.html?articleId=283&&categoryType=help" target="_blank">退款说明</a></li>
+                </ul>
+            </div>
+            <div class="helpnav-list">
+                <div class="helpnav-title">
+                    <i class="footic5"></i>
+                    商家支持
+                </div>
+                <ul>
+					<li><a href="http://help.bl.com/toHelpCenter/queryCategoryId.html?categoryId=382&&categoryType=help" target="_blank">商家入驻</a></li>
+                    <li><a href="http://help.bl.com/toHelpCenter/queryCategoryId.html?categoryId=401&&categoryType=help" target="_blank">商家规则</a></li>
+                    <li><a href="http://help.bl.com/toHelpCenter/queryCategoryId.html?categoryId=345&&categoryType=help" target="_blank">商家常见问题</a></li>
+                </ul>
+            </div>
+        </div>
+        </div>
+    </div>
+       <div class="bottom-nav">
+        <div>
+            <a target="_blank" href="http://help.bl.com/articleDetailed.html?articleId=285&&categoryType=about">关于我们</a>
+            <span>|</span>
+            <a target="_blank" href="http://help.bl.com/articleDetailed.html?articleId=286&&categoryType=about">联系我们</a>
+            <span>|</span>
+            <a target="_blank" href="http://help.bl.com/articleDetailed.html?articleId=287&&categoryType=about">加盟合作</a>
+            <span>|</span>
+            <a target="_blank" href="http://help.bl.com/articleDetailed.html?articleId=288&&categoryType=about">诚征英才</a>
+            <span>|</span>
+            <a target="_blank" href="http://help.bl.com/articleDetailed.html?articleId=289&&categoryType=about">友情链接</a>
+            <span>|</span>
+            <a target="_blank" href="http://www.bl.com/newretail.html">新零售合作</a>
+		</div>
+        <div class="copyright">百联集团有限公司旗下 上海百联全渠道电子商务有限公司版权所有 <span>|</span>  客服电话：400-900-8800  <span>|</span> 沪ICP备15028847号</div>
+        <a target="_blank" href="//res13.iblimg.com/respc-1/resources/v4.0/img/yaopingzigezheng.png" class="drug-message">互联网药品信息服务资质证书编号：沪-（非营业性）-2016-0044</a><br>
+        <a target="_blank" href="http://promotion.bl.com/nc/PC_HDGL20180705000005986_6252.html" class="drug-message">全渠道增值电信业务经营许可证</a>
+        <div class="police">
+        	<a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=31010102002366" target="_blank">
+            <img src="//res14.iblimg.com/respc-1/resources/v4.0/css/i/gongan.png">
+            <span style="">沪公网安备  31010102002366号</span>
+          </a>
+          <a href="http://shwg.dianping.com" target="_blank">
+            <img src="//res15.iblimg.com/respc-1/resources/v4.1/widget/footer1200/i/wangjing.png">
+            <span style="">网购大家评</span>
+          </a>
+          <a href="http://218.242.124.22:8081/businessCheck/verifKey.do?showType=extShow&amp;serial=9031000020160729145737000001099658-SAIC_SHOW_310000-20160406145114141192&amp;signData=MEYCIQCUhx+ulQL4t9jJgfgCH1oeTxexuWOVww3Hel3/UlRyLQIhAO2fVtZDl0EkYb0p/3M50cXqe694wDQoJNuUKNdQNOWf" target="_blank">
+            <img src="//res12.iblimg.com/respc-1/resources/v4.1/widget/footer1200/i/gongs.png" width="20" height="21">
+            <span style="">上海工商</span>
+          </a>
+          <a target="_blank" href="http://promotion.bl.com/nc/PC_HDGL20170407000001552_1592.html">
+            <img src="//res13.iblimg.com/respc-1/resources/v4.1/widget/footer1200/i/zhizhao.png">
+            <span style="">经营执照</span>
+          </a>
+        </div>
+       </div>
+</div>
+<script type="text/javascript" src="https://res14.iblimg.com/respc-1/resources/v4.2/unit/jquery-1.8.2.min.js"></script>
+<script type="text/javascript" src="https://res15.iblimg.com/respc-1/resources/v4.2/unit/bl.js?version=1551798414543&timestap=1554110041103"></script>
+<script type="text/javascript">
+	var selectVal = "";
+	if(selectVal && selectVal == "3"){
+        $("ul.tab").find("li").eq(3).addClass("select");
+    }else{
+        $("ul.tab").find("li").eq(0).addClass("select");
+	}
+</script>
+<script type="text/javascript" src="https://res12.iblimg.com/respc-1/resources/v4.2/unit/jquery.json-2.2.js"></script>
+<script type="text/javascript" src="https://res13.iblimg.com/respc-1/resources/v4.2/unit/lib.js" ></script>
+<script type="text/javascript" src="https://res14.iblimg.com/respc-1/resources/v3.0/js/commons/menu.js?version=1551798414543&timestap=1554110041103" ></script>
+<script type="text/javascript" src="https://res15.iblimg.com/respc-1/resources/v4.2/js/member/tools.js?version=1551798414543" ></script>
+<script type="text/javascript" src="https://res12.iblimg.com/respc-1/resources/v4.2/js/member/autoComplete.js?version=1551798414543"></script>
+<script type="text/javascript" src="https://res13.iblimg.com/respc-1/resources/v4.2/unit/jquery-ui.js" ></script>
+<script type="text/javascript" src="https://res14.iblimg.com/respc-1/resources/v4.2/unit/jquery.alerts.js" ></script>
+<script type="text/javascript" src="https://res15.iblimg.com/respc-1/resources/v3.0/js/commons/jquery/jquery-blePager.min.js?version=1551798414543&timestap=1554110041103"></script>
+<script type="text/javascript" src="https://res12.iblimg.com/respc-1/resources/v4.2/unit/jquery.poshytip.min.js"></script>
+<script type="text/javascript" src="https://res13.iblimg.com/respc-1/resources/v4.0/js/commons/jquery/jquery.flexslider.min.js?version=1551798414543&timestamp=1554110041103">"></script>
+<script type="text/javascript" src="https://res14.iblimg.com/respc-1/resources/v3.0/js/member/memberPointList.js?version=1551798414543&timestap=1554110041103"></script>
+<script type="text/javascript" src="https://res15.iblimg.com/respc-1/resources/v4.2/js/coremetrics/pageInit.js?version=1551798414543&timestap=1554110041103"></script>
+<script type="text/javascript" src="https://res12.iblimg.com/respc-1/resources/v4.2/js/coremetrics/pageInfo.js?version=1551798414543&timestap=1554110041103"></script>
+</body>
+</html>

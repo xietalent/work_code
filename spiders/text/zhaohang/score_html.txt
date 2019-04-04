@@ -11,7 +11,7 @@
 
     <script src="../../Base/doc/Scripts/FuncTrigger.js" type="text/JavaScript"></script>
 
-    <script src="../../Base/doc/Scripts/pro/jquery-1.7.1.min.js" type="text/JavaScript"></script>
+    <script src="../../Base/doc/Scripts/pro/jquery-1.12.3.min.js" type="text/JavaScript"></script>
 
 
     <script type="text/JavaScript">
@@ -72,7 +72,7 @@
 <div>
 <input name="__EVENTTARGET" id="__EVENTTARGET" type="hidden" value="">
 <input name="__EVENTARGUMENT" id="__EVENTARGUMENT" type="hidden" value="">
-<input name="__VIEWSTATE" id="__VIEWSTATE" type="hidden" value="ZCBIGmf8ly81+B3omooXCq5NsWsBhKjLYeqUxKJ2JidwiFOlyj0AtJY0UNqTY63crYmMNx8ObQTp1hfJEu/7NP8TFT74bJ2tlBMXxb72kBqDFAxjan3uzMb1kPmoDznDxxG4yb7LC/aE39nFsBl1YOvXxWzEMS0m7lURG8q9PNHDNDqfx8QkRsQzXyoBD0yZBWeWlDWOddRhl0yyutNNJQ==">
+<input name="__VIEWSTATE" id="__VIEWSTATE" type="hidden" value="j6znGLgd98JpdA9UvYFnTF3AG4M4jhALPuYrkDXEqh+BlqXR8P1BSCMWd+cQo9R802fo5RKkl0GO2OT+l7BiuC0JhktJTQ8xk13OYkw06ufndtKR/tDvn1PtNMqgflOG8GlQcxfVkZZkG85UN8x+eNLgZmlpaFk2NiIfVXOmOHJm+k3/3rTxxashaRz6PqOHYPvDWIInD/TewnqDRY9urQ==">
 </div>
 
 <script type="text/javascript">
@@ -92,15 +92,15 @@ function __doPostBack(eventTarget, eventArgument) {
 </script>
 
 
-<script src="/CmbBank_CreditCard_Customer/WebResource.axd?d=pynGkmcFUV13He1Qd6_TZHz0EX6Kvr0xqylSuDg1El9NJRQRZzNjmCJSblRFRWe_DWjt6Osc4bxQoqcTqDqXxw2&amp;t=636681351620000000" type="text/javascript"></script>
+<script src="/CmbBank_CreditCard_Customer/WebResource.axd?d=pynGkmcFUV13He1Qd6_TZO2jqVa4sZKLLdqtQaBDlT7UAHCnvf_lV9vd_u7VbUearLdepEhJMnOEtNcMdutB6g2&amp;t=636681351620000000" type="text/javascript"></script>
 
 
-<script src="/CmbBank_CreditCard_Customer/ScriptResource.axd?d=KDcvk8zP61z0MxvzzDZlk2ZJ5gJNsXrdSwugk2ZTVH-wpqHDBiNg7wFUTcvwOv35XYGzLnOlbWjZm6DYj9AYZ4YTI1mTnD10PnpyxNU4HOrVSXCgo0gLxfLba6gfR79C2jb7rR9WdKFkEivTI72gxghBss8jJqEqzsEvLN4oSFw1&amp;t=545ba255" type="text/javascript"></script>
-<script src="/CmbBank_CreditCard_Customer/ScriptResource.axd?d=N6fscxOt4BWGsMuWESKnfQjezUeGCZZZMGxv7gYvcrwrPZsnWNgKnoHWTyn7sJLCYoq4qscZMAT32UT90KXg6JwCC80frVDiiwDbcvo8zOTXjYLB_1fS85XbCxlPwqlO8AWfA99C6oTllJYjrJyRk6aDSvCd74SxD2XbITmuwaUZarBpRokKDzrmfzVUKTiq0&amp;t=545ba255" type="text/javascript"></script>
+<script src="/CmbBank_CreditCard_Customer/ScriptResource.axd?d=KDcvk8zP61z0MxvzzDZlkwgBrerp8BKbzucwj40LxE7Yt_mSMMXfQ8zQMn7OWogCgAdeYIzoZctIKYCEZG-2UhaZh_kxB20Sw2TfIvmWC5jO9wwoORxHc0z2mDRHcDTHvdu4cFND-Xe4fvaYIt9KC9lu9I1oiTGLYLOS9ioAoZs1&amp;t=545ba255" type="text/javascript"></script>
+<script src="/CmbBank_CreditCard_Customer/ScriptResource.axd?d=N6fscxOt4BWGsMuWESKnfeN4UvYROndhjTP1ldPQhBHg0IdW78FFjd4_j92w-oaupOcbEkD-jHyvWMYv2Y5ZRYkkemlBzOrdEUnGDMbZIgosky-Ln41zaBMxpHw0LgcbnRz_8axLDC7lbddiX3w4aA-6gQ4Ohn42J0BTxmzIme_NAQGS2CkBGrinZj9m_6Qj0&amp;t=545ba255" type="text/javascript"></script>
 <div>
 
 	<input name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" type="hidden" value="DF1B2FAF">
-	<input name="__EVENTVALIDATION" id="__EVENTVALIDATION" type="hidden" value="kWrqfC8l/s9E8ldhKW3MdPxaecXtn6ZfWsBOZQEjBdgtEl1kwMz9/9VTn4u83O3Zoo9+t2pgsOJjz6kwnrcLAIQ46Eob0rGPN3uHKqajSJe6/1HjMmS0A4XmiMfAJunSFkDiQCXkUOj/f3wQ/ne0jC0b/nSwm5eljstW7ELLOGU=">
+	<input name="__EVENTVALIDATION" id="__EVENTVALIDATION" type="hidden" value="8oeSmxEmGSKE1SFvnOp5ZeaHrgmrNuwrEz/wJrxl3XF1SOOi4MxrZxc3SwjcQFG2YpVRw7rYr/jXTDx06D0Nt8Qu1pRs0zk9/Z5o2bXGV9B6w5g5EfAe+jVnnmJZSq49pRk/WYaZs8yAohn1DvzMwDMUBeU6l50gPORs9GFxOKw=">
 </div>
 
         <div class="page-title">
@@ -128,7 +128,7 @@ Sys.WebForms.PageRequestManager._initialize('ScriptManager1', 'psm_QueryCurPoint
 		<tbody><tr align="center" class="dgHeader" valign="middle" style="white-space: nowrap;">
 			<th class="dgHeader" scope="col">积分名称</th><th class="dgHeader" scope="col">积分管理模式</th><th class="dgHeader" scope="col">当期刷卡积分</th><th class="dgHeader" scope="col">当期调整积分</th><th class="dgHeader" scope="col">当期奖励积分</th><th class="dgHeader" scope="col">当期新增积分</th><th class="dgHeader" scope="col">当期兑换积分</th><th class="dgHeader" scope="col">当前可用积分</th><th class="dgHeader" scope="col">最近即将失效积分</th><th class="dgHeader" scope="col">失效日期</th>
 		</tr><tr>
-			<td align="center" style="white-space: nowrap;">积分</td><td align="center" style="white-space: nowrap;">&nbsp;</td><td align="center" style="white-space: nowrap;">0</td><td align="center" style="white-space: nowrap;">0</td><td align="center" style="white-space: nowrap;">0</td><td align="center" style="white-space: nowrap;">0</td><td align="center" style="white-space: nowrap;">0</td><td align="center" style="white-space: nowrap;">1,104</td><td align="center" style="white-space: nowrap;">0</td><td align="center" style="white-space: nowrap;">0000-00-00</td>
+			<td align="center" style="white-space: nowrap;">积分</td><td align="center" style="white-space: nowrap;">&nbsp;</td><td align="center" style="white-space: nowrap;">0</td><td align="center" style="white-space: nowrap;">0</td><td align="center" style="white-space: nowrap;">0</td><td align="center" style="white-space: nowrap;">0</td><td align="center" style="white-space: nowrap;">0</td><td align="center" style="white-space: nowrap;">2,176</td><td align="center" style="white-space: nowrap;">0</td><td align="center" style="white-space: nowrap;">0000-00-00</td>
 		</tr>
 	</tbody></table>
                         
@@ -149,7 +149,7 @@ Sys.WebForms.PageRequestManager._initialize('ScriptManager1', 'psm_QueryCurPoint
 
 
             <div style="height: 1px;">
-                <input name="ClientNo" id="ClientNo" type="hidden" value="5C25DBDF56772338330174794E1E4FD0811102358706732000000564">
+                <input name="ClientNo" id="ClientNo" type="hidden" value="4266F7C76935130C21C10F17D74C9E59190017861375177700000853">
                 <input name="FunctionName" id="FunctionName" type="hidden" value="积分管理 > 积分查询">
                 <input name="AvailPoint" id="AvailPoint" type="hidden">
             </div>     

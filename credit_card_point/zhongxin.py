@@ -1,3 +1,9 @@
+# Licensed to the Software Freedom Conservancy (SFC) under one
+# -*- coding: utf-8 -*-
+
+import pymysql
+import time
+
 from selenium import webdriver
 from logging import getLogger
 from aip import AipOcr
@@ -11,8 +17,6 @@ from urllib import request
 from PIL import Image
 from threading import Thread
 
-import pymysql
-import time
 
 class Zhongxin_I():
     def __init__(self,timeout=None):
@@ -91,7 +95,6 @@ class Zhongxin_I():
         ver_code = input("请输入手机验证码:")
         self.browser.find_element_by_id('valicode').send_keys(ver_code)
         sleep(0.5)
-
 
         #next
         self.browser.find_element_by_id('checkcode').click()
@@ -248,10 +251,7 @@ class Mysql_input(object):
         self.cursor.close()
         self.conn.close()
 
-async def my_point():
-    point = "100"
 
-    return point
 
 if __name__ == '__main__':
     t1 = time.clock()

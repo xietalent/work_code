@@ -36,8 +36,10 @@ class abc_bank(object):
         # 输入用户名,密码
         username, passwd = self.user_info()
         # 验证码
-        img_code = self.get_img()
-        sleep(1)
+        # img_code = self.get_img()
+        imgs = Read_image(self.browser)
+        img_code = imgs.get_image()
+        sleep(0.1)
         # 传入
         self.browser.find_element_by_id("username").send_keys(username)
 
@@ -47,7 +49,7 @@ class abc_bank(object):
         # self.browser.find_element_by_id("username").send_keys(passwd)
 
         self.browser.find_element_by_id("code").send_keys(img_code)
-        sleep(0.5)
+        sleep(0.1)
         #登陆
         self.browser.find_element_by_id("logo").click()
         sleep(1)
@@ -308,16 +310,16 @@ class abc_bank(object):
         # passwd = "465465464"
         self.browser.find_element_by_id("username").click()
         # 填写账号密码
-        sleep(1)
+        sleep(0.1)
         uname = DD_input()
-        sleep(1)
+        sleep(0.1)
         uname.dd_table()
-        sleep(1)
+        sleep(0.1)
         uname = DD_input()
         uname.dd(passwd)
-        sleep(0.5)
+        sleep(0.1)
         uname.dd_table()
-        sleep(0.2)
+        sleep(0.1)
         uname.dd_enter()
 
     def get_img(self):
@@ -346,7 +348,6 @@ class abc_bank(object):
             location = self.browser.find_element_by_id("vCode").location
             self.browser.save_screenshot("./images/abcbank/login_imcode.png")
             page_snap_obj = Image.open("./images/abcbank/login_imcode.png")
-
             size = self.browser.find_element_by_id("vCode").size
             left = location['x']
             top = location['y']
@@ -355,9 +356,9 @@ class abc_bank(object):
             imgages = page_snap_obj.crop((left, top, right, bottom))
 
             # 获取到验证码截图
-            imgages.save("./images/abcbank/cb_imcode.png")
+            imgages.save("./images/abc_bank/abc_imcode.png")
             # imgages.show()
-            sleep(1)
+            sleep(0.1)
 
             # 添加机器识别
             # 获取图片后,进行识别,如果识别后数字的长度不为3,则更换验证码,重新截图
@@ -443,6 +444,92 @@ class abc_bank(object):
         print("查询借记卡明细耗时:{}s".format(tres5))
         print("查询存款信息耗时:{}s".format(tres6))
 
+class Read_image():
+    def __init__(self,browser,timeout=None):
+        self.browser = browser
+        self.timeout = timeout
+
+    def get_image(self):
+        image_format_list = [".jpg", ".png", ".bmp", ".jpeg", ".tiff", ".psd", ".swf", ".svg", ".tga", ".pcd", ".jfif",".webp", ".Png-8", ".png-24"]
+        try:
+            #获取验证码截图
+            location =self.browser.find_element_by_id("vCode").location
+            self.browser.save_screenshot("./images/abc_bank/abc_login.png")
+            page_snap_obj = Image.open("./images/abc_bank/abc_login.png")
+
+            #定位验证码位置
+            size = self.browser.find_element_by_id("vCode").size
+            left = location['x']
+            top = location['y']
+            right = location['x'] + size['width']
+            bottom = location['y'] + size['height']
+            images = page_snap_obj.crop((left,top,right,bottom))
+
+            # 灰度化处理,去除干扰
+            images = images.convert('L')
+            # 杂点清除掉。只保留黑的和白的。返回像素对象
+            data = images.load()
+            w, h = images.size
+            for i in range(w):
+                for j in range(h):
+                    # if data[i, j] > 140:
+                    if data[i, j] > 160:
+                        data[i, j] = 255  # 纯白
+                    else:
+                        data[i, j] = 0  # 纯黑
+
+            images.save("./images/abc_bank/abc_imgcode.png")  #保存验证码
+            # images.show()
+            # result =
+            # self.read_p_pytesser(images)  #本地验证码
+            result = self.read_p_aip(images)    #百度AIP
+            return result
+        except:
+            print("获取图片验证码失败")
+            pass
+
+    def read_p_aip(self,images):
+        # 你的 APPID AK SK
+        APP_ID = '15193395'
+        API_KEY = 'HWeCszHYYnbWxcVGFLosY0KS'
+        SECRET_KEY = 'FoXrkDDgoqL3gi2ynmnhtm8bjiSiiIe6'
+
+        client = AipOcr(APP_ID, API_KEY, SECRET_KEY)
+
+        #读取图片
+        def get_file_content(filePath):
+            with open(filePath, 'rb') as fp:
+                return fp.read()
+
+        # 调用通用文字识别（高精度版）
+        # client.basicAccurate(image)
+
+        #如果有可选参数添加
+        options = {}
+        options["recognize_granularity"] = "big"
+        options["language_type"] = "CHN_ENG"
+        options["detect_direction"] = "true"
+        options["detect_language"] = "true"
+        options["vertexes_location"] = "true"
+        options["probability"] = "true"
+
+        # 保存处理后图片
+        images.save(r'images\abc_bank\clean_captcha.png')
+        image2 = get_file_content(r"images\abc_bank\clean_captcha.png")
+
+        # 带参数调用通用文字识别(高精度版)
+        resul = client.basicAccurate(image2, options)
+        result = resul["words_result"][0]["words"]
+        result = result.replace('.', '').replace(' ', '')
+        print("该图片的识别结果为:{}".format(result))
+        return result
+
+    def read_p_pytesser(self,images):
+        result = pytesseract.pytesseract.image_to_string(images)
+        print(type(result))
+        result = result.replace('.','').replace(' ','')
+        print(result)  # 查看识别结果
+        return result
 
 class Mysql_input(object):
     def __init__(self, host="47.97.217.36", user="root", password="root", database="user", port=3306, charset="utf8"):
@@ -482,7 +569,6 @@ class Mysql_input(object):
     def close(self):
         self.cursor.close()
         self.conn.close()
-
 
 if __name__ == '__main__':
     res = abc_bank()

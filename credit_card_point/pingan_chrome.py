@@ -3,7 +3,9 @@
 import time
 import pymysql
 import lxml
+import os
 
+from threading import Thread
 from selenium import webdriver
 from logging import getLogger
 from aip import AipOcr
@@ -75,8 +77,7 @@ class Pingan_C():
         # sleep(0.2)
         # images.show()
 
-
-        sleep(3)
+        sleep(0.1)
         # location = self.browser.find_element_by_id("imgCode").location
         # self.browser.save_screenshot("./images/pingan/pingan_login1.png")
 
@@ -88,36 +89,33 @@ class Pingan_C():
         sleep(0.2)
         print("密码")
 
-        # self.browser.find_element_by_class_name("pa_ui_keyboard_close pa_ui_keyboard_key").click()
-        # sleep(1)
-        # print("ok")
+        read = Read_image(self.browser)
+        read.read_img_name()
 
-        # self.browser.find_element_by_id('j_password').send_keys(passwd)
         # 获取验证码
-        location = self.browser.find_element_by_id("validateImg").location
-        self.browser.save_screenshot("./images/pingan/pingan_login.png")
-        page_snap_obj = Image.open("./images/pingan/pingan_login.png")
-
-        size = self.browser.find_element_by_id("validateImg").size
-        left = location['x']+50
-        top = location['y']+170
-        right = location['x'] + size['width']+55
-        bottom = location['y'] + size['height']+200
-
-        images = page_snap_obj.crop((left, top, right, bottom))
+        # location = self.browser.find_element_by_id("validateImg").location
+        # self.browser.save_screenshot("./images/pingan/pingan_login.png")
+        # page_snap_obj = Image.open("./images/pingan/pingan_login.png")
+        #
+        # size = self.browser.find_element_by_id("validateImg").size
+        # left = location['x']+50
+        # top = location['y']+170
+        # right = location['x'] + size['width']+55
+        # bottom = location['y'] + size['height']+200
+        #
+        # images = page_snap_obj.crop((left, top, right, bottom))
+        # # sleep(1)
+        # # images.save("imcode.png")
+        # # image1 = images.save("./static/img/imgcode.png")
+        # images.save("./images/pingan/pingan_imgcode.png")
+        # # sleep(0.2)
+        # images.show()
         # sleep(1)
-        # images.save("imcode.png")
-        # image1 = images.save("./static/img/imgcode.png")
-        images.save("./images/pingan/pingan_imgcode.png")
-        # sleep(0.2)
-        images.show()
-        sleep(1)
-
-
-        #验证码
-        ver_code = input("请输入验证码:")
-        self.browser.find_element_by_id('check_code').send_keys(ver_code)
-        self.browser.find_element_by_id('loginlink').click()
+        #
+        # #验证码
+        # ver_code = input("请输入验证码:")
+        # self.browser.find_element_by_id('check_code').send_keys(ver_code)
+        # self.browser.find_element_by_id('loginlink').click()
         tb = time.time()
 
         tc = tb-ta
@@ -148,13 +146,10 @@ class Pingan_C():
 
         #next
         # sleep(15)
-        sleep(18)
+        sleep(1)
         # self.browser.switch_to.frame("body")
 
         try:
-            # self.browser.switch_to.frame("header")
-            # sleep(0.5)
-            # self.browser.switch_to.default_content()
             sleep(0.5)
             self.browser.switch_to.frame("body1")
         except:
@@ -183,10 +178,10 @@ class Pingan_C():
             # 可用额度
             able_credit = div.xpath(".//div[@class='pa_con01_c']//p[1]/span/text()")[0].strip()
             # # 信用额度
-            credits = div.xpath(".//div[@class='pa_con01_c']//p[2]/span/text()")[0].strip()
+            credit = div.xpath(".//div[@class='pa_con01_c']//p[2]/span/text()")[0].strip()
             # # 本期账单日
             # current_billing_data = div.xpath('//div[2]/div[2]/div[1]/div[1]/p[1]/b/text()')
-            current_billing_data = div.xpath(".//div[contains(@class,'pa_con02_ltime')]//p[1]/b/text()")[0].strip()
+            current_billing_date = div.xpath(".//div[contains(@class,'pa_con02_ltime')]//p[1]/b/text()")[0].strip()
             # #本期还款日
             current_repayment_date = div.xpath(".//div[contains(@class,'pa_con02_ltime')]//p[2]/b/text()")[0].strip()
             # #本期应还额
@@ -198,10 +193,38 @@ class Pingan_C():
             # #本期剩余最低应还额
             remainder_minimum_return =div.xpath(".//div[contains(@class,'pa_con02_ltext')]/table/tbody/tr[4]/td[2]/text()")[0].strip()
 
+            item["username"] = username
+            item["able_credit"] = able_credit
+            item["credit"] = credit
+            item["current_billing_date"] = current_billing_date
+            item["current_repayment_date"] = current_repayment_date
+            item["new_balance"] =new_balance
+            item["minimum_return"] = minimum_return
+            item["remainder"] = remainder
+            item["remainder_minimum_return"] = remainder_minimum_return
+            items.append(item)
+            print(items)
+
+            # username=item["username"]
+            # able_credit=item["able_credit"]
+            # credit=item["credit"]
+            # current_billing_date=item["current_billing_date"]
+            # current_repayment_date=item["current_repayment_date"]
+            # new_balance=item["new_balance"]
+            # minimum_return=item["minimum_return"]
+            # remainder=item["remainder"]
+            # remainder_minimum_return=item["remainder_minimum_return"]
+            #连接数据库
+            sql_conn = Mysql_input()
+            # sql_conn.set_data(username,able_credit,credit,current_billing_date,current_repayment_date,new_balance,minimum_return,remainder,remainder_minimum_return)
+            th2 = Thread(target=sql_conn.set_data, args=(username,able_credit,credit,current_billing_date,
+                                                         current_repayment_date,new_balance,minimum_return,remainder,remainder_minimum_return))
+            th2.start()
+
             print("用户名:{}".format(username))
             print("可用额度:{}".format(able_credit))
-            print("信用额度:{}".format(credits))
-            print("本期账单日:{}".format(current_billing_data))
+            print("信用额度:{}".format(credit))
+            print("本期账单日:{}".format(current_billing_date))
             print("本期还款日{}".format(current_repayment_date))
             print("本期应还额:{}".format(new_balance))
             print("本期最低应还:{}".format(minimum_return))
@@ -330,6 +353,164 @@ class Pingan_C():
         t11 = round(t11,2)
         print("携程积分页耗时:{}".format(t11))
 
+class Read_image():
+    def __init__(self,browser,timeout=None):
+        self.timeout = timeout
+        self.browser = browser
+
+    def read_img_name(self):
+        image_format_list = [".jpg", ".png", ".bmp", ".jpeg", ".tiff", ".psd", ".swf", ".svg", ".tga", ".pcd", ".jfif",".webp", ".Png-8", ".png-24"]
+        try:
+            location = self.browser.find_element_by_id("validateImg").location
+            self.browser.save_screenshot("./images/pingan/pingan_login.png")
+            page_snap_obj = Image.open("./images/pingan/pingan_login.png")
+
+            size = self.browser.find_element_by_id("validateImg").size
+            left = location['x'] + 50
+            top = location['y'] + 170
+            right = location['x'] + size['width'] + 55
+            bottom = location['y'] + size['height'] + 200
+
+            images = page_snap_obj.crop((left, top, right, bottom))
+
+            images.save("./images/pingan/pingan_imgcode.png")
+            # sleep(0.2)
+            images.show()
+            sleep(0.1)
+
+            all_image = os.listdir(r".\images\pingan")
+            for im_name in all_image:
+                # 辨别是否是图片格式
+                a, b = os.path.splitext(im_name)
+                if b in image_format_list:
+                    image0 = im_name
+                    print(image0)
+                    image1 = r".\images\pingan\{}".format(image0)
+                    image = Image.open(image1)
+                    try:
+                        self.read_p(image0, image)
+                    except:
+                        break
+                    finally:
+                        pass
+                    # 添加至已完成list
+                    # self.completed_list.append(image0)
+                else:
+                    pass
+            # print(self.completed_list)
+        except:
+            pass
+
+    def read_p(self, image0, image):
+        # 你的 APPID AK SK
+        APP_ID = '15193395'
+        API_KEY = 'HWeCszHYYnbWxcVGFLosY0KS'
+        SECRET_KEY = 'FoXrkDDgoqL3gi2ynmnhtm8bjiSiiIe6'
+
+        client = AipOcr(APP_ID, API_KEY, SECRET_KEY)
+
+        """ 读取图片 """
+
+        def get_file_content(filePath):
+            with open(filePath, 'rb') as fp:
+                return fp.read()
+
+        # 调用通用文字识别（高精度版）
+        # client.basicAccurate(image)
+
+        """ 如果有可选参数 """
+        # options = {
+        #     "detect_direction":"true",
+        #     "probability":"true"
+        # }
+        options = {}
+        options["recognize_granularity"] = "big"
+        options["language_type"] = "CHN_ENG"
+        options["detect_direction"] = "true"
+        options["detect_language"] = "true"
+        options["vertexes_location"] = "true"
+        options["probability"] = "true"
+
+        # 灰度化
+        image = image.convert('L')
+        # 杂点清除掉。只保留黑的和白的。返回像素对象
+        data = image.load()
+        w, h = image.size
+        for i in range(w):
+            for j in range(h):
+                if data[i, j] > 180:
+                    data[i, j] = 255  # 纯白
+                else:
+                    data[i, j] = 0  # 纯黑
+
+        # s = input("是否显示处理后图片:")
+        s = "否"
+        if s == "是":
+            image.show()
+            # sleep(5)
+            # image.close()
+        else:
+            pass
+        #保存处理后图片
+        image.save(r'images\pingan\clean_captcha.png')
+        image2 = get_file_content(r"images\pingan\clean_captcha.png")
+
+        # 带参数调用通用文字识别(高精度版)
+        result = client.basicAccurate(image2, options)
+        res = result["words_result"]
+        # print("识别结果为:")
+        s2 = image0.split("\\")[-1]
+        s3 = s2.split('.')[0]
+
+        # 写入文件
+        # for res1 in res:
+        #     with open(r'识别结果\{}.txt'.format(s3), "a", ) as fp:
+        #         fp.write(res1["words"])
+        #         fp.close()
+        print("该图片的识别结果为:" + result["words_result"][0]["words"])
+        # 验证码
+        ver_code = input("请输入验证码:")
+        self.browser.find_element_by_id('check_code').send_keys(ver_code)
+        self.browser.find_element_by_id('loginlink').click()
+
+class Mysql_input(object):
+    def __init__(self, host="47.97.217.36", user="root", password="root", database="bank", port=3306, charset="utf8"):
+        self.host = host
+        self.user = user
+        self.password = password
+        self.database = database
+        self.port = port
+        self.charset = charset
+
+    def connect(self):
+        self.conn = pymysql.connect(host=self.host, user=self.user, password=self.password, database=self.database,port=self.port, charset=self.charset)
+        self.cursor = self.conn.cursor()
+
+    def get_data(self):
+        self.connect()
+        sql_2 = "select * from pingan_bank order by id DESC limit 1;"
+        self.cursor.execute(sql_2)
+        res = self.cursor.fetchone()
+        return res
+
+    def set_data(self,username,able_credit,credit,current_billing_date,current_repayment_date,new_balance, minimum_return,remainder,remainder_minimum_return):
+        self.connect()
+        try:
+            # sql_1 = "INSERT INTO card_score VALUES(null,'{}','{}');".format(my_integral, bill)
+            sql_1 = "INSERT INTO pingan_bank VALUES(null,'{}','{}','{}','{}','{}','{}','{}','{}','{}');".format(username, able_credit, credit, current_billing_date, current_repayment_date,new_balance, minimum_return,remainder,remainder_minimum_return)
+            self.cursor.execute(sql_1)
+            self.conn.commit()
+            print("添加成功")
+            res = self.cursor.fetchall()
+            if res != None:
+                self.close()
+                return res
+        except:
+            self.conn.rollback()
+
+    def close(self):
+        self.cursor.close()
+        self.conn.close()
 
 
 if __name__ == '__main__':
@@ -340,3 +521,10 @@ if __name__ == '__main__':
     print("z最终耗时:{}".format(t2))
     del pingan
 
+    # sql_1 = Mysql_input()
+    # sql_1.set_data("陈慧聪 ","¥-8,238.26","¥-8,238.26","123","123","123","123","123","123")
+
+    # read = Read_image()
+    # read.read_img_name()
+
+# [{'username': '陈慧聪', 'able_credit': '¥-8,238.26', 'credit': '¥22,000.00', 'current_billing_date': '2019.03.17', 'current_repayment_date': '2019.04.05', 'new_balance': '¥30,638.33', 'minimum_return': '¥9,852.33', 'remainder': '¥0.00', 'remainder_minimum_return': '¥0.00'}]

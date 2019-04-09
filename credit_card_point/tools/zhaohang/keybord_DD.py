@@ -22,7 +22,7 @@ class DD_input(object):
     def down_up(self,code):
         # 进行一组按键。
         dd_dll.DD_key(self.vk[code], 1)
-        # sleep(0.2)
+        sleep(0.1)
         dd_dll.DD_key(self.vk[code], 2)
 
     def dd(self,key):
@@ -33,14 +33,14 @@ class DD_input(object):
                 # 按下抬起
                 #按下shift
                 dd_dll.DD_key(500, 1)
-                # time.sleep(0.1)
+                time.sleep(0.1)
                 self.down_up(i.lower())
                 dd_dll.DD_key(500, 2)
 
             elif i in '~!@#$%^&*()_+{}|:"<>?':
                 # 如果是需要这样按键的字符。
                 dd_dll.DD_key(500, 1)
-                # time.sleep(0.1)
+                time.sleep(0.1)
                 self.down_up(self.vk2[i])
                 dd_dll.DD_key(500, 2)
             else:
@@ -49,19 +49,19 @@ class DD_input(object):
     #table
     def dd_table(self):
         dd_dll.DD_key(300, 1)
-        # time.sleep(0.1)
+        time.sleep(0.1)
         dd_dll.DD_key(300, 2)
 
     #enter
     def dd_enter(self):
         dd_dll.DD_key(313, 1)
-        # time.sleep(0.1)
+        time.sleep(0.1)
         dd_dll.DD_key(313, 2)
 
     #空格
     def dd_spacebar(self):
         dd_dll.DD_key(603,1)
-        # sleep(0.1)
+        sleep(0.1)
         dd_dll.DD_key(603,2)
 
     # input("按任意键继续...")
